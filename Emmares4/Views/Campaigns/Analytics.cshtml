@@ -1,0 +1,130 @@
+﻿@model Emmares4.Models.AnalyticsViewModel;
+
+@{
+    ViewData["Title"] = "Analytics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section cls { class="gray-main-content" }
+
+@section Scripts {
+    <script>
+        $(".GaugeMeter").gaugeMeter();
+        
+        $(function () {
+            drawChartView();
+            drawChartCampaignsHitsView();
+        });
+
+    </script>
+}
+
+<h1 class="sr-only">Analytics</h1>
+@if (Model.IsProviderSet)
+{
+    <div class="dashboard-section">
+        <div class="row">
+            <div class="col-md-4 dashBoardHeaderBox">
+                <div class="panel black-box">
+                    <div class="panel-content">
+                        <h2 class="heading"><i class="fas fa-chart-bar"></i> YOUR BALANCE</h2>
+                        <div class="circle" style="color: grey; height: 180px;
+                                            width: 180px;
+                                            background:transparent;
+                                            border-radius: 90px 90px 0 0;
+                                            border-radius: 50%;
+                                            display: inline-block;
+                                            background-color: #191f28;
+                                            border: 8px solid #c38833;
+                                            text-align: center;
+                                            font-size: 60px;
+                                            padding: 40px 0px 0px 0px;
+                                            border-bottom-color: #191f28;">
+                            <span style="color:grey">@Model.BalanceFullPart</span>
+                            <span style="font-size: 15px; display: block; padding-top: 15px;">EMA tokens</span>
+                        </div>
+                        @*<div class="centerboxText">
+                                <h2>@Model.BalanceFullPart  </h2>
+                                <p>EMA tokens</p>
+                            </div>*@
+                    </div>
+                    <div class="panel-footer text-center">
+                        <a href="javascript:;">
+                            Deposit EMA Tokens <span>
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 dashBoardHeaderBox meterbox">
+                <div class="panel black-box">
+                    <div class="panel-content">
+                        <h2 class="heading"><i class="fas fa-chart-bar"></i> REWARD POOL STATUS</h2>
+                        <div class="metter-cotnainer">
+                            <div class="GaugeMeter gaugeMeter" id="PreviewGaugeMeter_2" data-percent="@Model.RewardPoolStatus"
+                                 data-size="200" data-theme="#990000"
+                                 data-back="RGBa(38,38,38,0.2)" data-color="RGBa(196,138,54,1)"
+                                 data-animate_gauge_colors="1" data-animate_text_colors="1" data-width="10"
+                                 data-label="Hero Member" data-style="Arch" data-label_color="#eeeeee"
+                                 data-id="PreviewGaugeMeter_2" style="width: 200px;">
+                                <span style="line-height: 200px; font-size: 42px; color: rgb(255, 255, 255);">
+                                    <span>Level 5</span>
+                                    <img src="" alt="Crown Image" title="Crown Image" />
+                                </span>
+                                <b style="font-size: 15.3846px; line-height: 276.923px; color: rgb(255, 255, 255);">
+                                    EMA
+                                    tokens
+                                </b>
+                                <canvas width="200" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer text-center">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 dashBoardHeaderBox hovertextwhite">
+                <div class="panel black-box">
+                    <div class="panel-content">
+                        <h2 class="heading"><i class="far fa-star"></i>STANDINGS <br /><span>Entertainment</span></h2>
+                        <ul class="list-unstyled list">
+                            @{ int counter = 1;
+                                foreach (var item in Model.Standings)
+                                {
+                                    <li><span class="outer"><span class="inner">@counter</span></span>@item.Item1 <span class="pull-right">@item.Item3</span></li>
+                                    counter++;
+                                }
+                            }
+                        </ul>
+                    </div>
+                    @*<div class="panel-footer">
+                            <a href="javascript:;">
+                                View list <span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-section chart-wrapper">
+        <div class="chartEmails">
+            @Html.Partial("_chartView", Model.ChartData)
+        </div>
+    </div>
+    <div class="dashboard-section chart-wrapper-2">
+        <div class="chartCampaignHits">
+            @Html.Partial("_chartCampaignsHitsView", Model.ChartDataDisplays)
+        </div>
+    </div>
+        }
+        else
+        {
+        <div>
+            <h3>Provider not set</h3>
+            <p>Please set your provider name from account settings.</p>
+        </div>
+
+        }

@@ -1,0 +1,28 @@
+﻿PUT /emmares_statistics HTTP/1.0
+Content-Type: application/json
+Content-Length: 554
+
+{
+    "mappings": {
+        "_doc": {
+            "properties": {
+                "campaign_id" : {
+                    "type": "keyword"
+                },
+                "date_added" : {
+                    "type": "date"
+                },
+                "rating" : {
+                    "type": "long"
+                },
+                "reward" : {
+                    "type": "double"
+                },
+                "user_id" : {
+                    "type": "keyword"
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,13 @@
+GET /emmares_campaigns/_search HTTP/1.0
+Content-Type: application/json
+Content-Length: 128
+
+{
+   "query": {
+       "match" : {
+           "content": {
+               "query" : "zombi"
+           }
+       }
+   }
+}

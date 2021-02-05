@@ -1,0 +1,94 @@
+﻿@using System.Collections.Generic
+@using System.Linq
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@model LoginViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+
+<style type="text/css">
+    /* Popup container */
+    .popup {
+        position: fixed;
+        left: 30%;
+        top: 25%;
+        cursor: pointer;
+    }
+</style>
+
+
+<div class="register-loginbox">
+    <h2>Welcome.</h2>
+    <form asp-route-returnurl="@ViewData["ReturnUrl"]" runat="server" id="basic-form1" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @*<form id="basic-form1" method="post" novalidate="">*@
+        <div class="form-group">
+            <input asp-for="Email" class="form-control field" placeholder="Email Address" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+            @*<input type="email" class="form-control field" placeholder="Email Address">*@
+        </div>
+        
+
+        <div class="form-group">
+            <input asp-for="Password" class="form-control field" placeholder="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+            @*<input type="password" class="form-control field" placeholder="Password">*@
+        </div>
+        <div class="form-group">
+            <label class="stylish-checkbox">
+                @Html.DisplayNameFor(m => m.RememberMe)
+                <input asp-for="RememberMe" />
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        @*<div class="form-group">
+                <label class="stylish-checkbox">
+                    @Html.DisplayNameFor(m => m.IsMarketeer)
+                    <input asp-for="IsMarketeer" />
+                    <span class="checkmark"></span>
+                </label>
+            </div>*@
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary" style=" background: linear-gradient(to left, #c28630 30%, #e6bc77);
+    border-radius: 25px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 15px;">
+                <strong>Login</strong> to dashboard
+            </button>
+
+        </div>
+    </form>
+
+</div>
+<span style="display: none" class="popup" id="emmaresPopup"><a href="https://emmares.io"><img src="~/images/Pop-up-com-io.jpg" /></a></span>
+<div class="bottomline-signup">
+    <ul class="list-unstyled">
+        <li><a asp-action="ForgotPassword" asp-route-returnUrl="@ViewData["ReturnUrl"]"><u>Lost your password?</u></a></li>
+        <li>
+            <a asp-action="Register" asp-route-returnUrl="@ViewData["ReturnUrl"]"><u>Sign up</u></a>
+        </li>
+    </ul>
+</div>
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+    <!--<script type="text/javascript">
+        $(document).ready(function () {
+            var isshow = localStorage.getItem('emmaresFirstLoadCookie');
+            if (isshow == null) {
+                localStorage.setItem('emmaresFirstLoadCookie', 1);
+                $("#emmaresPopup").show("fast");
+            }
+        });
+
+        $(document).on("click", function () {
+            $("#emmaresPopup").hide();
+            console.log("on click");
+        });
+    </script>-->
+    
+
+}

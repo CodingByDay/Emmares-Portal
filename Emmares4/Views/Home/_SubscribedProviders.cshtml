@@ -1,0 +1,29 @@
+﻿@model Emmares4.Models.HomeViewModels.MySubscriptionViewModel
+
+<h2 class="heading padding-l-0">@Model.Favorite<p class="yellowtag">PROVIDERS</p></h2>
+<div class="pre-scrollable">
+    <ul class="list-unstyled list large favioratelist ">
+        @foreach (var item in Model.InterestProviders)
+        {
+        <li>
+            @if (item.IsSubscribed)
+            {
+                <strong>@item.Provider<span class="pull-right">@item.AverageRatingStr</span></strong>
+                <span class="pull-right right-delete-action1">
+                    <a href='@Url.Action("Unsubscribe", "Home")?ProviderID=@item.ProviderID&FieldOfInterestID=@item.FieldOfInterestID'><img src="~/images/out.svg" alt="s"></a>
+                </span>
+            }
+            else
+            {
+                @item.Provider<span class="pull-right">@item.AverageRatingStr</span>
+                <span class="pull-right right-delete-action1">
+                    <a href='@Url.Action("Subscribe", "Home")?ProviderID=@item.ProviderID&FieldOfInterestID=@item.FieldOfInterestID'><img src="~/images/in.svg" alt="s"></a>
+                </span>
+            }
+        </li>
+        }
+    </ul>
+</div>
+<div class="text-center" style="margin-top: 20px;">
+    <i class="fas fa-chevron-down"></i>
+</div>

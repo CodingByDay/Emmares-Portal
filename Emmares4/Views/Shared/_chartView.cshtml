@@ -1,0 +1,133 @@
+﻿@using Emmares4.Models.HomeViewModels;
+@model Emmares4.Models.HomeViewModels.ChartViewModel
+
+
+<script>
+    function drawChartView() {
+                var data = {
+            labels:  @Json.Serialize(Model.XLables),
+            series: [
+                    @Json.Serialize(Model.Values),
+            ]
+        };
+
+        var options = {
+
+            low: 0,
+            high: 5,
+            showArea: true,
+            showPoint: false,
+               height: "300px",
+            axisX: {
+                offset:40,
+                labelInterpolationFnc: function (value, index) {
+                    return index % 2 === 0 ? value : null;
+                }
+            },
+            axisY: {
+                offset: 20,
+            }
+        };
+
+        var responsiveOptions = [
+            ['screen and (min-width: 340px)', {
+                axisX: {
+                    labelInterpolationFnc: function (value, index) {
+                        return index % 2 === 0 ?value : null;
+                    },
+                    axisY: { showGrid: false, onlyInteger: true}
+                }
+            }],
+            ['screen and (min-width: 940px)', {
+                axisX: {
+                    labelInterpolationFnc: function (value, index) {
+                        return index % 1 === 0 ? value : null;
+                    }
+                },
+                axisY: { showGrid: false, onlyInteger: true}
+            }]
+        ];
+
+        var chart = new Chartist.Line('.ct-chart', data, options, responsiveOptions);
+
+         $(window).on('resize', function () {
+          window.location.reload(false);
+      });
+        }
+
+        function GetChart(ct) {
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetChart")?chartType=" + ct + "&view=_chartView&sql_file_data=Marketeer_GetChartData&sql_file_stats=Marketeer_GetChartStats",
+                success: function (response) {
+                    var dvItems = $(".chart-wrapper");
+                    dvItems.empty();
+                    dvItems.html(response);
+                    drawChartView();
+                }
+            });
+        }
+</script>
+<style>
+    .ct-label.ct-horizontal {
+        white-space: nowrap;
+        max-width: 5px;
+    }
+</style>
+<div class="row">
+    <div class="col-sm-10">
+        <div class="panel black-box">
+            <div class="panel-content">
+                <div class="row flex-row">
+                    <div class="col-md-9 col-sm-7 left">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2 class="heading dis-inline">
+                                    <i class="fas fa-chart-line"></i>RATING STATISTICS
+                                </h2>
+                                <span class="avgscore-title">
+                                    <i class="fas fa-chevron-left"></i>Avg score<i class="fas fa-chevron-right"></i>
+                                </span>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="chart-select-option">
+                                    <ul class="list-inline">
+                                        <li @(Model.Interval == ChartInterval.Year ? "class=active" : "")><a href='javascript:GetChart(3);'>Year</a></li>
+                                        <li @(Model.Interval == ChartInterval.Month ? "class=active" : "")><a href='javascript:GetChart(2);'>Month</a></li>
+                                        <li @(Model.Interval == ChartInterval.Week ? "class=active" : "")><a href='javascript:GetChart(1);'>Week</a></li>
+                                        <li @(Model.Interval == ChartInterval.Daily ? "class=active" : "")><a href='javascript:GetChart(0);'>Daily</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="demo-line-chart" class="ct-chart"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 right">
+                        <div class="threebox-wrapper">
+                            <div class="threebox">
+                                <h3>@Model.ItemsToDisplay["RatedEmails"]</h3>
+                                <p>Rated emails</p>
+                            </div>
+                            <div class="threebox">
+                                <h3>@Model.ItemsToDisplay["AverageScore"]</h3>
+                                <p>Average Score</p>
+                            </div>
+                            <div class="threebox">
+                                @if (Model.ItemsToDisplay.ContainsKey("CommunityMatch") == false)
+                                {
+                                <h3>@Model.ItemsToDisplay["Evaluators"]</h3>
+                                    <p>Evaluators</p>
+                                }
+                                else
+                                {
+                                    <h3>@Model.ItemsToDisplay["CommunityMatch"]%</h3>
+                                    <p>Community match</p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

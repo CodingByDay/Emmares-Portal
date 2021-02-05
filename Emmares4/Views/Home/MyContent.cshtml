@@ -1,0 +1,312 @@
+﻿@using Emmares4.Models.HomeViewModels;
+
+@model Emmares4.Models.HomeViewModels.MyContentViewModel
+@{
+    ViewData["Title"] = "MyContent";
+}
+@*<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.themes.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.themes.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.themes.min.css" rel="stylesheet" />
+
+
+*@
+
+@section Scripts {
+    <style type="text/css">
+        table.dataTable thead th {
+            border-bottom: 0;
+        }
+        img.eye {
+            cursor: pointer;
+            height: 25px;       /* TODO: Set to dynamic based on text size, if relevant. Or just remove to have the default size, though I feel it's slightly too big. */
+            width: 25px;
+        }
+    </style>
+
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>*@
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js "></script>
+    <script src="https://code.jquery.com/jquery-1.1.2.js"></script>
+
+   
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+        var providerList;
+        $(document).ready(function () {
+            providerList = $('#providerList').DataTable({
+                serverSide: true,
+                processing: true,
+                bLengthChange: false,
+                searching: false,
+                bPaginate: true,
+                bInfo: false,
+                responsive: true,
+                ajax: {
+                    url: '@Url.Action("GetProviders", "Home")',
+                    type: "POST",
+                    data: function (d) {
+                        d.Popularity = $("#popularityFilter").val();
+                        d.ContentType = $("#ContentTypeFilter").val();
+                        d.Interval = $("#IntervalFilter").val();
+                        d.Region = $("#RegionFilter").val();
+                        d.FieldOfInterest = $("#FieldOfInterestFilter").val();
+                        d.keyword = $("#keyWordsInput").val();
+                    },
+                },
+                rowId: 'ProviderID',
+                "fnRowCallback": function (row, data, index) {
+                    if (data.IsSubscribed) {
+                        $(row).css("font-weight", "bold");
+                    }
+                },
+                columns: [
+                    {
+                        "render": function (data, type, full, meta)
+                        {
+                            if (full.Starred) {
+                                var starUrl = '@Url.Content("~/images/star.png")';
+                                return '<img class="str" src="' + starUrl + '">';
+                            } else {
+                                return "&nbsp;";
+                            }
+                        }
+                    },
+                    { data: "Provider", title: "PROVIDER" , width:"20%" },
+                    { data: "FieldOfInterest", title: "FIELD OF INTEREST", width: "20%" },
+                    { data: "Campaign", title: "CAMPAIGN NAME", width: "20%" },
+                    {
+                        "render": function (data, type, full, meta)
+                        {
+                            if(full.HasNewsletter != 0)
+                                return '<a href="@Url.Action("Newsletter", "Home")?id=' + full.CampaignID + '" target = "_blank"><img class="eye" src="' + '@Url.Content("~/images/eye.png")' + '" onclick="ShowNewsletter(full.CampaignID)" /></a>';
+                            else
+                                return '';  // If newsletter does not exist.
+                        }
+                    },
+                    { data: "AverageRatingStr", title: "RATING", width: "20%" },
+                    {
+                        "render": function (data, type, full, meta)
+                        {
+                            if (full.IsSubscribed) {
+                                return '<a href="@Url.Action("Unsubscribe", "Home")?ProviderID=' + full.ProviderID + '&FieldOfInterestID=' + full.FieldOfInterestID + '"><img src="' + '@Url.Content("~/images/out.svg")' + '" alt="s"></a>';
+                            } else {
+                                return '<a href="@Url.Action("Subscribe", "Home")?ProviderID=' + full.ProviderID + '&FieldOfInterestID=' + full.FieldOfInterestID + '"><img src="' + '@Url.Content("~/images/in.svg")' + '" alt="s"></a>';
+                            }
+                        }
+                    },
+                ]
+            });
+        });
+
+        function ShowNewsletter(newsletter) {
+            var w = window.open("/Home/Newsletter?id=" + newsletter);
+        }
+
+        function GetSubscriptions(el) {
+            var te = $(el).text();
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("MySubscriptions", "Home")?favorite=" + te,
+                success: function (response) {
+                    window.location.reload(true);
+                }
+            });
+        }
+
+        function Subscribe(el) {
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("Subscribe", "Home")?ProviderID=" + el,
+                success: function (response) {
+                    alert(response);
+                    var dvItems = $("#SubscribedProviders .big");
+                    alert(dvItems);
+                    dvItems.empty();
+                    dvItems.html(response);
+                }
+            });
+        }
+
+        function DeleteField(el) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("DeleteField", "Home")?ContentTypeID=" + el,
+                success: function (response) {
+                    var dvItems = $("#favoriteFieldsInterest .panel");
+                    dvItems.empty();
+                    dvItems.html(response);
+                }
+            });
+        }
+
+        function AddField() {
+            var te = $('#FieldOfInterestID').val();
+            if (te != null && te != '0') {
+                $.ajax({
+                    type: "GET",
+                    url: "@Url.Action("AddField", "Home")?FieldOfInterestID=" + te,
+                    success: function (response) {
+                        var dvItems = $("#favoriteFieldsInterest .panel");
+                        dvItems.empty();
+                        dvItems.html(response);
+                    }
+                });
+            }
+        }
+
+        var action = null;
+        function Filter() {
+            if (action != null) { clearTimeout(action); }
+            action = setTimeout(function () {
+                providerList.draw();
+            }, 250);            
+        }
+
+        $(function () {
+            var te = $('#keyWordsInput').val();
+            var availableTags = new Array();
+       $.ajax({
+           type: "GET",
+           url: "@Url.Action("searchResponse", "Home")",
+           success: function (response) {
+               var js = JSON.parse(response);
+               $.each(js, function (i, obj) {
+                   var x = obj.keyword;
+                           
+                           
+                            availableTags.push(x);
+                        });
+                    }
+            });
+            $("#keyWordsInput").autocomplete({
+               
+                source: availableTags
+               
+            });
+        });
+
+    </script>
+}
+
+<h1 class="sr-only">MyContents</h1>
+<div class="dashboard-section">
+    <div class="section-heading clearfix">
+        <h2 class="section-title">My Content</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-6" id="favoriteFieldsInterest">
+                    <div class="panel white-box">
+                        @Html.Partial("_favorites", Model.FavoritesVM)
+                    </div>
+                    <span class="rightsideicon"><i class="fas fa-chevron-right"></i></span>
+                </div>
+
+                <div class="col-md-6" id="entertainmentBox">
+                    <div class="panel white-box">
+                        <div class="panel-content">
+                            @Html.Partial("_SubscribedProviders", Model.SubscriptionsVM)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" id="exploreBox">
+                    <div class="pannel-wrapper">
+                        <h2 class="heading padding-l-0 dis-inline-block">EXPLORE</h2>
+                        <div class="navmenu pull-right">
+                            <ul class="list-inline tab">
+                                <!--
+    <li>
+        <select id="popularityFilter" class="form-control" asp-items="ViewBag.Popularity" onchange="Filter()">
+            <option value="">Best rated</option>
+        </select>
+    </li>
+    <li>
+        <select id="FieldOfInterestFilter" class="form-control" asp-items="ViewBag.FieldOfInterestID" onchange="Filter()">
+            <option value="">All Fields</option>
+        </select>
+    </li>
+    <li>
+        <select id="IntervalFilter" class="form-control" asp-items="ViewBag.Interval" onchange="Filter()">
+            <option value="">All Time</option>
+        </select>
+    </li>
+    <li>
+        <select id="RegionFilter" class="form-control" asp-items="ViewBag.RegionID" onchange="Filter()">
+            <option value="">Worldwide</option>
+        </select>
+    </li>
+    <li>
+        <select id="ContentTypeFilter" class="form-control" asp-items="ViewBag.ContentTypeID" onchange="Filter()">
+            <option value="">All Types</option>
+        </select>
+    </li>
+        -->
+                                <li>
+                                    <label for="keyWordsInput"></label>
+                                    <div class="srin"> <span class="src">Search:&nbsp;&nbsp;</span><input id="keyWordsInput" name="keyWordsInput" class="form-control" asp-items="ViewBag.keyword" asp-for="keyword" onkeydown="Filter()" onselect="Filter()" placeholder="Search" /></div>
+                                </li>
+                            </ul>
+                            <div class="dropdown">
+                                <div aria-labelledby="dropdownMenuButton">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel white-box">
+                        <div class="panel-content">
+                            <div class="table-responsive">
+                                <table class="table" id="providerList"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel white-box rightside-whitebox">
+                <div id="SubscribedProviders" class="panel-content">
+                    <h2 class="heading padding-l-0">
+                        SUBSCRIBED PROVIDERS
+                        <p class="yellowtag">BY RATING</p>
+                    </h2>
+                    <div class="pre-scrollable big">
+                        @foreach (var item in Model.SubscriptionsVM.MySubscriptions)
+                        {
+                            <div class="panel panel-default" style="padding:0;border: none !important;">
+                                @item.Provider<span style="float:right">
+                                    <span style="margin-right:10px">
+                                        @item.AverageRatingStr
+                                    </span>
+                                </span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var openLinks = [];
+    setTimeout(function () {
+        while (openLinks.length > 0) {
+            var url = openLinks.pop();
+            window.open(url, '_blank');
+        }
+    }, 1000);
+</script>
+@foreach (var url in Model.OpenLinks)
+{
+    <script>
+        openLinks.push('@url');
+    </script>
+}

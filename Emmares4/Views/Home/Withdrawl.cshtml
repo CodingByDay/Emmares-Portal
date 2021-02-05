@@ -1,0 +1,63 @@
+﻿@model Emmares4.Models.HomeViewModels.WithdrawlViewModel
+
+@{
+    ViewData["Title"] = "Withdrawl";
+    
+}
+
+<h1 class="sr-only">Dashboard</h1>
+<div class="dashboard-section">
+    <div class="section-heading clearfix">
+        <h2 class="section-title">EMA Withdraw</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="panel white-box">
+                <div class="panel-content">
+                    <h4 class="form-title">
+                        Transfer EMA tokens to your ERC-20 compatible Ethereum wallet address. You
+                        have <strong>@Model.Balance EMA</strong> available.
+                    </h4>
+                    <form id="basic-form" method="post" novalidate="">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label>Destination ERC-20 compatible Ethereum wallet address</label>
+                                    <input asp-for="Address" class="form-control" readonly placeholder="Please, set your ERC-20 compatible Ethereum wallet in Account Settings" />
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label>Validation</label>
+                                    <img onerror="this.style.display='none'" style="margin:10px" src=@("https://blockies.shipchain.io/" + Model.Address + ".png") />
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Amount (EMA)</label>
+                                    <input asp-for="Balance" class="form-control" readonly />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label>Address Label (Optional)</label>
+                                    <input type="email" class="form-control" placeholder="Address Label">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="FakeWithdrawal()">Withdraw</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function FakeWithdrawal() {
+        alert('Sorry, this is only MVP. EMA tokens are fake, so no withdrawal is possible at the moment.');
+    }
+</script>

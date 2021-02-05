@@ -1,0 +1,175 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Web;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using System.IO;
+using System.Reflection;
+using Emmares4.Helpers;
+
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+namespace Emmares4
+{
+
+    public class teststrings
+    {
+        public string ena { get; set; }
+        public string dve { get; set; }
+        public decimal tri { get; set; }
+    }
+    [Route("[controller]/[action]")]
+    public class SearchAPI : Controller
+    {
+        const string elastichost = "http://172.17.1.88:9200";
+
+        // GET: api/<controller>
+        [HttpGet]
+        /* public IEnumerable<string> Get()
+         {
+             // return new string[] { "value1", "value2" };
+             return "did not match any documents";
+         }*/
+
+        public string Get()
+        {
+            return "Search did not find any results.";
+        }
+
+        // GET api/<controller>/5
+        [HttpGet("{id}")]
+        // [Route("api/Test/{id}")]
+        public string Get(string id)
+        {
+
+            /*HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("elastichost + /emmares_search_test/_search?q=test");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));*/
+
+            WebClient wc = new WebClient();
+            try
+            {
+                return wc.DownloadString(elastichost + "/emmares_search_test/_search?q=" + HttpUtility.UrlEncode(id));
+            } //+ "&filter_path=hits.hits._source"
+            catch { return "Do not use \", (, ), : and other special characters"; }
+
+            /*
+            async Task<teststrings> GetProductAsync(string path)
+            {
+                teststrings teststr1 = null;
+                HttpResponseMessage response = await client.GetAsync(path);
+                if (response.IsSuccessStatusCode)
+                {
+                    teststr1 = await response.Content.ReadAsAsync<teststrings>();
+                }
+                return teststr1;
+            }*/
+
+
+            //return "value";
+        }
+        [HttpGet("{id}")]
+        public string get_search(string id)
+        {
+            /*WebClient wc = new WebClient(); //to dela
+            try
+            {
+                return wc.DownloadString(elastichost + "/emmares_search_test/_search?q=" + HttpUtility.UrlEncode(id) + "&filter_path=hits");
+            } 
+            catch { return "Do not use \", (, ), : and other special characters"; }/* //to dela*/
+
+            //var httpWebRequest = (HttpWebRequest)WebRequest.Create(elastichost + "/emmares_search_test/_search");
+            //httpWebRequest.ContentType = "application/json";
+            // httpWebRequest.Method = "POST";
+
+            // using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            // {
+
+
+            string json = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fuzziness\": \"AUTO\"}}}";
+            string jsonfields = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fields\": [\"excerpt\", \"preview\"],\"fuzziness\": \"AUTO\"}}}";
+
+            //streamWriter.Write(json);
+            // streamWriter.Flush();
+            // streamWriter.Close();
+
+            WebClient wc = new WebClient();
+            wc.Headers.Add("Content-Type", "application/json");
+            try
+            {
+                return wc.UploadString(elastichost + "/emmares_search_test/_search?", json);
+            }
+            catch
+            {
+                return "Error";
+            }
+            //}
+
+
+            /* var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse(); 
+             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+             {
+                 var result = streamReader.ReadToEnd();
+                 return result;
+             }*/
+
+        }
+
+        // POST api/<controller>
+        [HttpPost]
+        public void Post([FromBody]string value)
+        {
+        }
+
+        // PUT api/<controller>/5
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody]string value)
+        {
+        }
+
+        // DELETE api/<controller>/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+        }
+
+        [HttpGet("{id}")]
+        public ContentResult Get_File(string id)
+        {
+            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var logPath = Path.Combine(path, @"App_Data\pages\");
+            string html_page = System.IO.File.ReadAllText(logPath + id + ".html");
+
+            return new ContentResult
+            {
+                ContentType = "text/html; charset=utf-8",
+                StatusCode = (int)HttpStatusCode.OK,
+                Content = html_page
+            };
+
+        }
+
+        [HttpGet]//("{CampaignID}, {Sender_Email}")]
+        public string SaveToDB(string CampaignID, string Sender_Email)
+        {
+            DBWriter.Write("insert into Maping_Campaign_Sender (CampaignID, Sender_Email) values (@CampaignID, @Sender_Email)", (p) =>
+            {
+                p.Add(DBParameter.String("CampaignID", CampaignID));
+                p.Add(DBParameter.String("Sender_Email", Sender_Email));
+
+            });
+
+            return "OK";
+
+        }
+
+        
+
+    }
+}

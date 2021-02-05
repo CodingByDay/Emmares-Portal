@@ -1,0 +1,120 @@
+﻿@model IEnumerable<Emmares4.Models.CampaignViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section cls { class="gray-main-content" }
+
+@section Scripts {
+    <script>
+        function GetDetails() {
+
+        }
+    </script>
+}
+
+<h1 class="sr-only">Campaigns</h1>
+<div class="dashboard-section">
+    <div class="section-heading clearfix">
+        <h2 class="section-title">Campaigns</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-12 id=" exploreBox"">
+            @*<a asp-action="Create">Create New</a>*@
+            
+            <a asp-action="Create" class="btn btn-primary theme-btn"><span><i class="fas fa-plus"></i></span> New Campaign</a>
+            <div class="panel white-box scrollable-panel">
+                <div class="panel-content">
+                    <div class="table-responsive comapaintable">
+                        <table class="table table-fixed">
+                            <thead>
+                                <tr>
+                                    <th width="15%">
+                                        <!--@Html.DisplayNameFor(model => model.Name)-->
+                                        Name
+                                    </th>
+                                    <th width="14%">
+                                        <!--@Html.DisplayNameFor(model => model.FieldOfInterest)-->
+                                        Field Of Interest
+                                    </th>
+                                    <th width="8%">
+                                        <!--@Html.DisplayNameFor(model => model.Region)-->
+                                        Region
+                                    </th>
+                                    <th width="8%">
+                                        <!--@Html.DisplayNameFor(model => model.ContentType)-->
+                                        Content Type
+                                    </th>
+                                    <th width="9%">
+                                        <!--@Html.DisplayNameFor(model => model.Recipients)-->
+                                        Recipients
+                                    </th>
+                                    <th width="8%">
+                                        <!--@Html.DisplayNameFor(model => model.Budget)-->
+                                        Budget
+                                    </th>
+                                    <th width="11%">
+                                        <!--@Html.DisplayNameFor(model => model.Remaining)-->
+                                        Remaining
+                                    </th>
+                                    <th width="10%">
+                                        <!--@Html.DisplayNameFor(model => model.AddedOn)-->
+                                        Added On
+                                    </th>
+                                    <th width="9%">
+                                        <!--@Html.DisplayNameFor(model => model.Hits)-->
+                                        Hits
+                                    </th>
+                                    <th width="8%">
+                                        
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                        {
+                                            var id = new { item.ID };
+                                <tr>
+                                    <td width="15%">
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                    </td>
+                                    <td width="14%">
+                                        @Html.DisplayFor(modelItem => item.FieldOfInterest)
+                                    </td>
+                                    <td width="8%">
+                                        @Html.DisplayFor(modelItem => item.Region)
+                                    </td>
+                                    <td width="8%">
+                                        @Html.DisplayFor(modelItem => item.ContentType)
+                                    </td>
+                                    <td width="9%">
+                                        @Html.DisplayFor(modelItem => item.Recipients)
+                                    </td>
+                                    <td width="8%">
+                                        @Html.DisplayFor(modelItem => item.Budget)
+                                    </td>
+                                    <td width="11%">
+                                        @Html.DisplayFor(modelItem => item.Remaining)
+                                    </td>
+                                    <td width="10%">
+                                        @item.AddedOn.ToShortDateString()
+                                    </td>
+                                    <td width="9%">
+                                        @Html.DisplayFor(modelItem => item.Hits)
+                                    </td>
+                                    <td width="8%">
+                                        <a href="Details?ID=@(item.ID)"><i class="fas fa-edit"></i></a>
+                                        <a style="margin-left:15px;" href="Delete?ID=@(item.ID)"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
+                                </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

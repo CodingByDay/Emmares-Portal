@@ -1,0 +1,305 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <meta name="description" content="Emmares" />
+    <meta name="keywords" content="Emmares" />
+    <meta name="robots" content="index, follow" />
+    <!--[if lt IE 7]>
+      <style media="screen" type="text/css">
+         #container {
+         height:100%;
+         }
+      </style>
+      <![endif]-->
+    <title>EMMARES</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <link rel="stylesheet" href="lib/Layout/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        // var ime = "";
+
+        function goonresults() {
+            var linktosearchresults = "/resultspageadmin.html?q=" + (document.getElementById("searchString3").value);
+            window.location.href = linktosearchresults;
+        }
+
+        function entersearchininput() {
+            var searchq = window.location.search.split("?q=")[1];
+            if (searchq != undefined) {
+                //searchq = searchq.replace(/%20/g, " ");
+                //searchq = searchq.replace(/'+'/g, " ");
+                //searchq = searchq.replace(/%20/g, " ");
+               // searchq = decodeURI(searchq);
+                document.getElementById("searchString3").value = searchq;
+            }
+
+            GetAPI();
+        }
+        if (window.attachEvent) {
+            window.attachEvent('onload', entersearchininput);
+        } else {
+            if (window.onload) {
+                var curronload = window.onload;
+                var newonload = function (evt) {
+                    curronload(evt);
+                    entersearchininput(evt);
+                };
+                window.onload = newonload;
+            } else {
+                window.onload = entersearchininput;
+            }
+        }
+
+        function validURL(str) {
+            var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+                '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+                '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+                '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+                '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+                '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+            return !!pattern.test(str);
+        }
+
+        function updateoptin() {
+            alert("update optin");
+        }
+
+        function updateoptout() {
+            alert("update optout");
+        }
+
+        function updateaffiliate() {
+            alert("update affiliate");
+        }
+
+
+        function GetAPI() {
+
+            const http2 = new XMLHttpRequest();
+            console.log(searchq);
+            var get_search2 = "/SearchAPI/get_search/" + searchq; //encodeURIComponent(document.getElementById("searchString3").value.replace("%20", " "));
+            http2.open("GET", get_search2);
+            http2.send();
+            http2.onload = () => {
+                //console.log(http2.responseText);
+                var name = document.getElementsByClassName("results_names");
+                var fromaddr = document.getElementsByClassName("addrFrom");
+                var desccampaign = document.getElementsByClassName("campaignDesc");
+                var ratingResult = document.getElementsByClassName("ratingResult");
+                var optinlinkclass = document.getElementsByClassName("optinlinkclass");
+
+
+                // x[0].innerHTML = http2.responseText;
+                //ime = http2.responseText
+                //alert(ime)
+                var x = JSON.parse(http2.responseText);
+
+                // x.hits[0].name
+                // console.log(x.hits.hits[0]._source.subject)
+                // console.log(x.hits.hits[0]._source.html)
+                // name[0].innerHTML = x.hits.hits[0]._source.subject;
+                // fromaddr[0].innerHTML = x.hits.hits[0]._source.addrfrom;
+                // desccampaign[0].innerHTML = "
+                //  <xmp>" + x.hits.hits[0]._source.excerpt + "</xmp>";
+                // desccampaign[0].innerHTML = x.hits.hits[0]._source.excerpt;
+                //optinlinkclass[0].href = x.hits.hits[0]._source.optin;
+
+
+                $(".result_div").remove();
+                if (x.hits.total == 1)
+                    $(".results_div").append("<div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='totalresultsclass'>" + x.hits.total + " result </div></div></div>");
+                else
+                    $(".results_div").append("<div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='totalresultsclass'>" + x.hits.total + " results </div></div></div>");
+
+                var adminedit = "<div><input type='text' name='optin' value='test' style='color:black'><br><input type='button' value='UPDATE OPTIN' style='color:black' onclick='updateoptin();'><input type='text' name='optout'><br><input type='button' value='UPDATE OPTOUT' style='color:black' onclick='updateoptout();'><input type='text' name='affiliate'><br><input type='button' value='UPDATE AFFILIATE' onclick='updateaffiliate();'></div>";
+
+                for (var p = 1; p <= x.hits.total; p++) {
+                    if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
+                        if (x.hits.hits[p - 1]._source.score == 0.0)
+                            var resulttemplate = "<div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + x.hits.hits[p - 1]._source.subject + " _id: " + x.hits.hits[p - 1]._id + adminedit + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href='/pages/" + x.hits.hits[p - 1]._source.messageid + ".html' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + x.hits.hits[p - 1]._source.excerpt + "</div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div>";
+                        else
+                            var resulttemplate = "<div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + x.hits.hits[p - 1]._source.subject + " _id: " + x.hits.hits[p - 1]._id + adminedit + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href='/pages/" + x.hits.hits[p - 1]._source.messageid + ".html' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + x.hits.hits[p - 1]._source.excerpt + "</div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div>";
+                    }
+                    else {
+                        if (x.hits.hits[p - 1]._source.score == 0.0)
+                            var resulttemplate = "<a href='/pages/" + x.hits.hits[p - 1]._source.messageid + ".html' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + x.hits.hits[p - 1]._source.subject + " _id: " + x.hits.hits[p - 1]._id + "<a href='/pages/" + x.hits.hits[p - 1]._source.messageid + ".html' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + x.hits.hits[p - 1]._source.excerpt + "</div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                        else
+                            var resulttemplate = "<a href='/pages/" + x.hits.hits[p - 1]._source.messageid + ".html' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + x.hits.hits[p - 1]._source.subject + " _id: " + x.hits.hits[p - 1]._id + "<a href='/pages/" + x.hits.hits[p - 1]._source.messageid + ".html' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + x.hits.hits[p - 1]._source.excerpt + "</div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                    }
+                    $(".results_div").append(resulttemplate);
+                }
+
+
+            }
+            $("#searchString3").focus();
+            var input = document.getElementById("searchString3");
+            input.addEventListener("keyup", function (event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    goonresults();
+                }
+            });
+
+            /*const http = new XMLHttpRequest()
+            //http.open("GET", "/SearchAPI/get('test')")
+            http.open("GET", "http://172.17.1.88:9200/emmares_search_test/_search?q=test")
+
+            //http.setRequestHeader("Content-Type", "application/json")
+            http.send()
+            http.onload = () => console.log(http.responseText)*/
+        }
+
+
+
+/**/</script>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="header">
+            <!-- Header start -->
+
+            <ul>
+
+                <!--<div style="color: gray;">
+                    <li style="margin-left: 0px; margin-right: 0px;"><i class="far fa-user"></i></li>
+                    <li style="margin-left: 0px margin-right: 0px;;">John Doe</li>
+                    <li style="margin-left: 0px; margin-right: 0px;"><i class="fas fa-angle-down"></i></li>
+                </div>-->
+                <div style="float: right; font-weight: 900; display:inline;">
+                    <li><a class="header_links" href="/Account/Login">LOG IN</a></li>
+                    <li><a class="header_links" href="/Account/Register">SIGN UP</a></li>
+                    <li><a class="header_links" href="">PRICING</a></li>
+                </div>
+            </ul>
+
+            <!-- Header end -->
+        </div>
+        <div id="body">
+            <!-- Body start -->
+            <a style="max-height: 50px;" href="searchpage.html"><img src="images/Emmares_logo.png" alt="EMMARES" class="logo_left"></img></a>
+            <div class="container">
+
+                <div id="searchBox" class="form-group col-sm-5">
+                    <!-- <label for="exampleInputEmail1">What are you looking for</label> -->
+
+                    <input type="text" class="form-control" id="searchString3" style="border-radius: 100px; height: 50px;" aria-describedby="searchHelp" placeholder="What are you looking for?">
+                    <button onclick="goonresults();" id="submitButton" type="submit" class="btn btn-primary">Go</button>
+                    <small id="searchHelp" class="form-text text-muted"></small>
+                </div>
+
+                <!-- <label for="exampleInputEmail1">What are you looking for</label> -->
+                <div class="col-sm-12 results_div">
+                    <!--<div class="col-sm-12">
+                        <div class="resultHeading col-sm-10">
+                            <div class="counter">1</div>name0<p class="results_names">Name</p>Name2
+                            <button type="submit" style="color:black; font-weight:900;" class="btn btn-primary previewButton">Act now</button>
+                            <br>
+                            <p class="addrFrom">@LoremIpsum</p>
+                            <div class="campaignDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt facilisis orci, id egestas nulla. Fusce at mauris id arcu scelerisque malesuada varius vel sapien. Duis hendrerit bibendum hendrerit.</div>
+
+                        </div>
+                        <div class="resultWra">
+                            <div class="ratingResult">4.52</div>
+                            <div type="submit" class="btn btn-primary subscribeButton"><a class="optinlinkclass" style="text-decoration: none; color:white" href="http://www.google.com">Subscribe</a></div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="resultHeading col-sm-10">
+                            <div class="counter">2</div>Lorem ipsum
+                            <a href="http://www.googe.com" type="submit" style="color:black; font-weight:900;" class="btn btn-primary previewButton">Preview</a>
+                            <br>
+                            <p class="addrFrom">@LoremIpsum</p>
+                            <div class="campaignDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt facilisis orci, id egestas nulla. Fusce at mauris id arcu scelerisque malesuada varius vel sapien. Duis hendrerit bibendum hendrerit.</div>
+                        </div>
+                        <div class="resultWra">
+                            <div class="ratingResult">4.47</div>
+                            <button type="submit" class="btn btn-primary subscribeButton">Subscribe</button>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="resultHeading col-sm-10">
+                            <div class="counter">3</div>Lorem ipsum
+                            <button type="submit" style="color:black; font-weight:900;" class="btn btn-primary previewButton">Preview</button>
+                            <br>
+                            <p class="addrFrom">@LoremIpsum</p>
+                            <div class="campaignDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt facilisis orci, id egestas nulla. Fusce at mauris id arcu scelerisque malesuada varius vel sapien. Duis hendrerit bibendum hendrerit.</div>
+                        </div>
+                        <div class="resultWra">
+                            <div class="ratingResult">4.42</div>
+                            <button class="btn btn-primary subscribeButton">Subscribe</button>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="resultHeading col-sm-10">
+                            <div class="counter">4</div>Lorem ipsum
+                            <button type="submit" style="color:black; font-weight:900;" class="btn btn-primary previewButton">Preview</button>
+                            <br>
+                            <p class="addrFrom">@LoremIpsum</p>
+                            <div class="campaignDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt facilisis orci, id egestas nulla. Fusce at mauris id arcu scelerisque malesuada varius vel sapien. Duis hendrerit bibendum hendrerit.</div>
+                        </div>
+                        <div class="resultWra">
+                            <div class="ratingResult">4.38</div>
+                            <button type="submit" class="btn btn-primary subscribeButton">Subscribe</button>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="resultHeading col-sm-10">
+                            <div class="counter">5</div>Lorem ipsum
+                            <button type="submit" style="color:black; font-weight:900;" class="btn btn-primary previewButton">Preview</button>
+                            <br>
+                            <p class="addrFrom">@LoremIpsum</p>
+                            <div class="campaignDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt facilisis orci, id egestas nulla. Fusce at mauris id arcu scelerisque malesuada varius vel sapien. Duis hendrerit bibendum hendrerit.</div>
+                        </div>
+                        <div class="resultWra">
+                            <div class="ratingResult">4.29</div>
+                            <button type="submit" class="btn btn-primary subscribeButton">Subscribe</button>
+                        </div>
+                        <br>
+                    </div>-->
+
+                </div>
+
+
+
+            </div>
+
+            <!-- Body end -->
+        </div>
+        <div id="footer">
+            <!-- Footer start -->
+            <ul>
+                <li><a class="link" href="https://www.facebook.com/emmares.io"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a class="link" href="https://www.linkedin.com/company/emmaresio"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a class="link" href="https://twitter.com/emmares_io"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="link" href="https://medium.com/emmares"><i class="fab fa-medium-m"></i></a></li>
+                <li><a class="link" href="https://t.me/emmares"><i class="fab fa-telegram-plane"></i></a></li>
+                <li>|</li>
+                <li><a class="link" href="">About</a></li>
+                <li><a class="link" href="">Pricing</a></li>
+                <div class="footer-copyright text-right py-3" style="margin-right:30px; color: gray;">© Emmares 2018</div>
+            </ul>
+            <!-- Footer end -->
+        </div>
+    </div>
+</body>
+
+</html>

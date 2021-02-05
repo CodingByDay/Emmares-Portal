@@ -1,0 +1,203 @@
+﻿@model Emmares4.Models.Campaign
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script src="~/js/clipboard.min.js"></script>
+    <script>
+        var clipboard = new Clipboard('#copyCode');
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+            alert('Copied to clipboard. Now, paste the code into your mailing...');
+        });
+
+        var clipboard = new Clipboard('#copyCode1');
+        clipboard.on('success', function (e) {
+            e.clearSelection();
+            alert('Copied to clipboard. Now, paste the snippet into your mailing...');
+        });
+
+
+        function UpdateSuggestedTokens() {
+            var valu = $('#txt-input').val();
+            valu = 1 / 100 * valu
+            $('#Sugtokens').text(Math.round(valu * 100) / 100);
+        }
+
+        $('#txt-input').on('input', function () {
+            UpdateSuggestedTokens();
+        });
+
+        $(document).ready(function () {
+            UpdateSuggestedTokens();
+        });
+
+        function CheckLinksFor(id) {
+            var val = $('#' + id).val();
+            if (val == '') {
+                $('#' + id + 'Err').text('');
+            } else if (val.startsWith("http://") || val.startsWith("https://")) {
+                $('#' + id + 'Err').text('Checking URL, please wait...');
+                $.get('/Campaigns/Check?url=' + encodeURIComponent(val), function (result) {
+                    if (result == "Valid") {
+                        $('#' + id + 'Err').text('');
+                    } else {
+                        $('#' + id + 'Err').text('This URL does not appear to bo valid! Please, check again...');
+                    }
+                }).fail(function() {
+                    $('#' + id + 'Err').text('This URL does not appear to bo valid! Please, check again...');
+                });
+            } else {
+                $('#' + id + 'Err').text('This link is not OK. Should start with http:// or https:// !');
+            }
+        }
+    </script>
+}
+
+@section cls { class="gray-main-content" }
+<h1 class="sr-only">Dashboard</h1>
+<div class="dashboard-section">
+    <div class="section-heading clearfix">
+        <h2 class="section-title">Campaigns</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-12" id="exploreBox">
+            <div class="panel white-box scrollable-panel">
+                <form asp-action="Export" asp-route-id=@Model.ID id="basic-form" method="post" novalidate="" class="add-compionform">
+                   
+                    <button id="exportCsv" type="submit" class="btn btn-primary btn-xs">Export Csv</button>
+                    </form>
+
+
+                    <div class="panel-content">
+                        <h4 class="formtitle">Edit Campaign</h4>
+                        <form asp-action="Edit" asp-route-id=@Model.ID id="basic-form" method="post" novalidate="" class="add-compionform">
+                            <div class="row flex-row margin-bottom-15">
+                                <div class="col-sm-4">
+                                    <div class="formbox-right" id="formdiv">
+                                        <p>Edit email campaign</p>
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <div class="form-group">
+                                            <label asp-for="Name" class="control-label"></label>
+                                            <input asp-for="Name" class="form-control" />
+                                            <span asp-validation-for="Name" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Publisher" class="control-label"></label>
+                                            <input asp-for="Publisher.Name" class="form-control" readonly />
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="FieldOfInterestID" class="control-label"></label>
+                                            <select asp-for="FieldOfInterestID" class="form-control" asp-items="ViewBag.FieldOfInterestID">
+                                                <option value="">-- Select Field of interest --</option>
+                                            </select>
+                                            <span asp-validation-for="FieldOfInterestID" class="text-danger" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="RegionID" class="control-label"></label>
+                                            <select asp-for="RegionID" class="form-control" asp-items="ViewBag.RegionID">
+                                                <option value="">-- Select Region --</option>
+                                            </select>
+                                            <span asp-validation-for="RegionID" class="text-danger" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="ContentTypeID" class="control-label"></label>
+                                            <select asp-for="ContentTypeID" class="form-control" asp-items="ViewBag.ContentTypeID">
+                                                <option value="">-- Select Content Type --</option>
+                                            </select>
+                                            <span asp-validation-for="ContentTypeID" class="text-danger" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Recipients" class="control-label"></label>
+                                            <input asp-for="Recipients" class="form-control" id="txt-input" />
+                                            <span asp-validation-for="Recipients" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <hr class="visible-xs">
+                                </div>
+                                <div class="col-sm-4 border-l-r">
+                                    <div class="formbox">
+                                        <p>Select your rewarding budget.</p>
+                                        <div class="form-group">
+                                            <label>Suggested budget: </label>
+                                            <h5 style="color: #666;">
+                                                <span id="Sugtokens">0</span>
+                                                EMA
+                                            </h5>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Budget" class="control-label"></label>
+                                            <input asp-for="Budget" readonly class="form-control" />
+                                            <span asp-validation-for="Budget" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="AvailableBalance" class="control-label"></label>
+                                            <input asp-for="AvailableBalance" class="form-control" readonly />
+                                            <span asp-validation-for="AvailableBalance" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Keywords: </label>
+                                            <input asp-for="inputKeyWords" class="form-control" readonly/>
+                                        </div>
+                                    </div>
+                                    <hr class="visible-xs">
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="formbox">
+                                        <div class="form-group">
+                                            <label asp-for="OptInLink" class="control-label"></label>
+                                            <input asp-for="OptInLink" class="form-control" onblur="CheckLinksFor('optInLink');" id="optInLink" />
+                                            <span asp-validation-for="OptInLink" class="text-danger" id="optInLinkErr"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="OptOutLink" class="control-label"></label>
+                                            <input asp-for="OptOutLink" class="form-control" onblur="CheckLinksFor('optOutLink');" id="optOutLink" />
+                                            <span asp-validation-for="OptOutLink" class="text-danger" id="optOutLinkErr"></span>
+                                        </div>
+                                        <p align="justify">
+                                            For higher conversions, enable users to see what you are sending out before they opt in to your campaign. Send your newsletter to preview@emmares.com and don't forget to include EMMARES footer.
+                                        </p>
+                                        <hr />
+                                    </div>
+                                    <div class="form-group">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <h3 style="margin-top: 20px; margin-bottom:20px; text-align:center">Copy rendered snippet or raw html into your mailing</h3>
+                                <div class="col-sm-6 snippetHtml">
+                                    <span id="snippetRender"> @Html.Raw(Model.Snippet)</span>
+                                    <div class="snBtn">
+                                        <button id="copyCode1" type="button" class="btn btn-primary btn-xs" data-clipboard-target="#snippetRender">Copy snippet</button>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6  snippetDiv">
+                                    <label asp-for="Snippet" class="control-label"></label>
+                                    <textarea id="snippetCode" class="form-control">@Html.DisplayFor(model => model.Snippet)</textarea>
+                                    <span asp-validation-for="Snippet" class="text-danger"></span>
+                                    <div class="snvBt">
+                                        <button id="copyCode" type="button" class="btn btn-primary btn-xs" data-clipboard-target="#snippetCode">Copy code</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="addcontainform-btn">
+                                <button id="savebtn" type="submit" class="camp btn btn-primary">Save</button>
+                            </div>
+                        </form>
+
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+

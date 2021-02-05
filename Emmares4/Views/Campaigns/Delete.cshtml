@@ -1,0 +1,52 @@
+﻿@model Emmares4.Models.Campaign
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure to delete Campaign @Html.DisplayFor(model => model.Name)?</h3>
+<div>
+ <!--   <h4>Campaign</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Publisher)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Publisher)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Recipients)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Recipients)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Budget)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Budget)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Snippet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Snippet)
+        </dd>
+    </dl>-->
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" /><br /><br />
+        <input type="submit" value="Delete" class="btn btn-primary theme-btn" />
+        <a asp-action="Index" class="btn btn-primary theme-btn"> Back to Campaigns</a>
+    </form>
+</div>

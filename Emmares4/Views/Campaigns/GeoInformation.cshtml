@@ -1,0 +1,121 @@
+﻿@model Emmares4.Models.GeoInformationViewModel;
+@inject IJsonHelper Json;
+
+@{
+    ViewData["Title"] = "GeoInformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section cls { class="gray-main-content" }
+
+<div class="row" style="display:inline">
+    <div class="col-md-4" id="ddCampaign">
+        Campaigns:  @Html.DropDownListFor(x => Model.SelectedCampaign, new SelectList(Model.ListCampaigns, "Value", "Text"), new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SelectedCampaign, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-md-4" id="ddStart">
+        Start Date: @Html.DropDownListFor(x => Model.SelectedStartDate, new SelectList(Model.ListStartDates, "Value", "Text"), new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SelectedStartDate, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-md-4" id="ddEnd">
+        End Date:   @Html.DropDownListFor(x => Model.SelectedEndDate, new SelectList(Model.ListEndDates, "Value", "Text"), new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SelectedEndDate, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-md-4">
+        <input type="submit" id="buttonShow" value="Show" />
+    </div>
+</div>
+
+<div><b>Campaign Hits</b></div>
+<div id="tableHits">
+    <table class="table table-bordered table-responsive table-hover">
+        <tr>
+            <th>Country</th>
+            <th>Number of visits</th>
+        </tr>
+        <tbody id="table_data">
+            @foreach (var c in Model.CitiesCount)
+            {
+                <tr>
+                    <td>@c.Key</td>
+                    <td>@c.Value</td>
+                </tr>
+            }
+        </tbody>
+</table>
+</div>
+
+@section Scripts{
+    <script type="text/javascript">
+        $('#buttonShow').click(function () {
+            console.log("Refresh started");
+            $("#table_data > tr").remove();
+
+            var date = $("#ddStart :selected").text().split('/');   // js parses american format.
+            var startDate = new Date(date[2], date[1], date[0]);
+            date = $('#ddEnd :selected').text().split('/');
+            var endDate = new Date(date[2], date[1], date[0]);
+
+            if (startDate.getTime() > endDate.getTime()) {
+                window.alert("Start date is higher than end date!")
+                return;
+            }
+            
+            var model = JSON.parse('@Html.Raw(Json.Serialize(Model.GeoInformation))');
+
+            var data = new Array();  // map
+            //console.log(model.length);
+            //console.log(model);
+            for (i = 0; i < model.length; i++) {    // Loop through all hits
+                //console.log(data);
+                date = model[i][3].split('/');      // Get date of the current hit
+                var currentDate = new Date(date[2], date[1], date[0]);
+                //console.log("Iteration: " + i);
+                //console.log(model[i][0] + " == " + $("#ddCampaign :selected").text());
+                //console.log(model[i][0] == $("#ddCampaign :selected").text());
+                //console.log(currentDate.getTime() <= endDate.getTime());
+                //console.log(currentDate.getTime() >= startDate.getTime());
+                if (currentDate.getTime() <= endDate.getTime() &&
+                    currentDate.getTime() >= startDate.getTime()) { // Displaying all campaigns.
+                    if ("All" == $("#ddCampaign :selected").text() || model[i][0] == $("#ddCampaign :selected").text()) // Add together visits for a specific campaign or all of them.
+                        addEntry(data, model[i][2]);
+                }
+            }
+            //console.log(typeof (data));
+            
+            data.sort(function (a, b) {
+                return b.Count - a.Count;
+            });
+            //console.log("Sorted Data:");
+            //console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                addRow(data[i]);
+            }
+            //console.log("Refresh ended");
+        });
+
+        function addEntry(data_table, country) {
+            if (!data_table.some(function (el) { return el.Country == country; })) // If the key doesn't exist yet, create it.
+                data_table.push({ Country: country, Count: 0 });
+            data_table.find(function (el) { return el.Country == country; })
+            data_table[data_table.findIndex(el => el.Country == country)].Count++;
+        }
+
+        function addRow(entry) {
+            tabBody = document.getElementById("table_data");
+            row = document.createElement("tr");
+            cell1 = document.createElement("td");
+            cell2 = document.createElement("td");
+            node1 = document.createTextNode(entry.Country);
+            node2 = document.createTextNode(entry.Count);
+            cell1.appendChild(node1);
+            cell2.appendChild(node2);
+            row.appendChild(cell1);
+            row.appendChild(cell2);
+            tabBody.appendChild(row);
+
+            /* using jQuery
+            $("table_data").after("<tr><td>" + entry.Country + "</td><td>" + entry.Count + "</td></tr>");
+            */
+        }
+    </script>
+}

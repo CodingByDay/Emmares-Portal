@@ -1,0 +1,412 @@
+﻿@using System.Collections.Generic
+@using System.Linq
+@using System.IO
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@inject UserManager<ApplicationUser> userManager
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EMMARES MVP</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="~/lib/gatitaa/metisMenu.css" rel="stylesheet" />
+    <link href="~/lib/gatitaa/chartist.min.css" rel="stylesheet" />
+    <link href="~/lib/gatitaa/chartist-plugin-tooltip.css" rel="stylesheet" />
+    <link href="~/lib/gatitaa/toastr.min.css" rel="stylesheet" />
+    <link href="~/lib/gatitaa/main.css" rel="stylesheet" />
+    <link href="~/lib/gatitaa/meter.css" rel="stylesheet" />
+    <link href="~/lib/gatitaa/custom.css" rel="stylesheet" />
+    <link href="~/lib/gatitaa/custom-media.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108056731-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108056731-3');
+
+/**/</script>
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- LEFT SIDEBAR -->
+        <div id="left-sidebar" class="sidebar @(User.IsInRole("Marketeer") && ViewContext.RouteData.Values["Controller"].ToString() == "Campaigns" ? "gray-sidebar" : "")">
+            <button type="button" class="btn btn-xs btn-link btn-toggle-fullwidth">
+                <span class="sr-only">Toggle Fullwidth</span>
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="sidebar-scroll">
+                <div class="sidebar-logo">
+                    <img src="~/images/logo_1.svg" alt="sidebarlogo">
+                </div>
+                <div class="user-account">
+                    @{var u1 = await userManager.GetUserAsync(User); var id = $"{u1.Id}{".jpg"}"; string exactPath = System.IO.Path.GetFullPath("wwwroot/images/" + id); id = File.Exists(exactPath) ? id : "user.png"; string time = DateTime.Now.ToString("hh:mm:ss");}
+
+                    <span class="user-border-wrap"><img src="~/images/@id?@time" class="img-responsive img-circle user-photo" alt="User Profile Picture"></span>
+                    <div>
+                        <h3 class="username-title"><strong>@{var u = await userManager.GetUserAsync(User); var name = $"{u.FirstName} {u.LastName}";} @name</strong></h3>
+                        @if (User.IsInRole("Marketeer"))
+                        {
+                            string url = "", text = "";
+                            if (ViewContext.RouteData.Values["Controller"].ToString() == "Home")
+                            {
+                                url = "/Campaigns/Index"; //Url.Action("Index", "Campaigns");
+                                text = "Switch to Marketeer";
+                            }
+                            else
+                            {
+                                url = "/Home/Dashboard"; // Url.Action("Dashboard", "Home");
+                                text = "Switch to Recipient";
+                            }
+
+                            <div><a href="@url">@text</a></div>
+                        }
+                    </div>
+                </div>
+
+                <nav id="left-sidebar-nav" class="sidebar-nav">
+                    <ul id="main-menu" class="metismenu">
+
+                        @if (User.IsInRole("Marketeer") && ViewContext.RouteData.Values["Controller"].ToString() == "Campaigns")
+                        {
+                            <li class='@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "ok") || @(ViewContext.RouteData.Values["Action"].ToString() == "Create" ? "active" : "ok")'>
+                                <a asp-area="" asp-controller="Campaigns" asp-action="Index">
+                                    <span class="no-hover"><img src="~/images/icon_content_0.svg" alt=""></span>
+                                    <span class="on-hover"><img src="~/images/icon_content_1.svg" alt=""></span>
+                                    <span>Campaigns</span>
+                                    <span class="pull-right menurighticon"><i class="fas fa-chevron-right"></i></span>
+                                </a>
+                            </li>
+                            <!--<li class='@(ViewContext.RouteData.Values["Action"].ToString() == "Emails" ? "active" : "ok")'>
+                                <a asp-area="" asp-controller="Campaigns" asp-action="Emails">
+                                    <span class="no-hover"><img src="~/images/icon_rate_0.svg" alt=""></span>
+                                    <span class="on-hover"><img src="~/images/icon_rate_1.svg" alt=""></span>
+                                    <span>Emails</span> <span class="pull-right menurighticon">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </li>-->
+                            <li class='@(ViewContext.RouteData.Values["Action"].ToString() == "Analytics" ? "active" : "ok")'>
+                                <a asp-area="" asp-controller="Campaigns" asp-action="Analytics">
+                                    <span class="no-hover"><img src="~/images/icon_rate_0.svg" alt=""></span>
+                                    <span class="on-hover"><img src="~/images/icon_rate_1.svg" alt=""></span>
+                                    <span>Analytics</span> <span class="pull-right menurighticon">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class='@(ViewContext.RouteData.Values["Action"].ToString() == "GeoInformation" ? "active" : "ok")'>
+                                <a asp-area="" asp-controller="Campaigns" asp-action="GeoInformation">
+                                    <span class="no-hover"><img src="~/images/icon_rate_0.svg" alt=""></span>
+                                    <span class="on-hover"><img src="~/images/icon_rate_1.svg" alt=""></span>
+                                    <span>GeoInformation</span> <span class="pull-right menurighticon">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class='@(ViewContext.RouteData.Values["Action"].ToString() == "AccountSettings" ? "active" : "ok")'>
+                                <a asp-area="" asp-controller="Campaigns" asp-action="AccountSettings">
+                                    <span class="no-hover"><img src="~/images/icon_acc_0.svg" alt=""></span>
+                                    <span class="on-hover"><img src="~/images/icon_acc_1.svg" alt=""></span>
+                                    <span>Account Settings</span> <span class="pull-right menurighticon">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class='@(ViewContext.RouteData.Values["Action"].ToString() == "Dashboard" ? "active" : "ok")'>
+                                <a asp-area="" asp-controller="Home" asp-action="Dashboard">
+                                    <span class="no-hover"><img src="~/images/icon_dash_0.svg" alt="" /></span>
+                                    <span class="on-hover"><img src="~/images/icon_dash_1.svg" alt="" /></span>
+                                    <span>Dashboard</span>
+                                    <span class="pull-right menurighticon"><i class="fas fa-chevron-right"></i></span>
+                                </a>
+                            </li>
+                            <li class='@(ViewContext.RouteData.Values["Action"].ToString() == "MyContent" ? "active" : "ok") || @(ViewContext.RouteData.Values["Action"].ToString() == "Subscribe" ? "active" : "ok") || @(ViewContext.RouteData.Values["Action"].ToString() == "Unsubscribe" ? "active" : "ok")'>
+                                <a asp-area="" asp-controller="Home" asp-action="MyContent">
+                                    <span class="no-hover"><img src="~/images/icon_content_0.svg" alt="" /></span>
+                                    <span class="on-hover"><img src="~/images/icon_content_1.svg" alt="" /></span>
+                                    <span>My Content</span>
+                                    <span class="pull-right menurighticon"><i class="fas fa-chevron-right"></i></span>
+                                </a>
+                            </li>
+                            <li class='@(ViewContext.RouteData.Values["Action"].ToString() == "Achievements" ? "active" : "ok")'>
+                                <a asp-area="" asp-controller="Home" asp-action="Achievements">
+                                    <span class="no-hover"><img src="~/images/icon_achi_0.svg" alt=""></span>
+                                    <span class="on-hover"><img src="~/images/icon_achi_1.svg" alt=""></span>
+                                    <span>Achievements</span> <span class="pull-right menurighticon">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class='@(ViewContext.RouteData.Values["Action"].ToString() == "Withdrawl" ? "active" : "ok")'>
+                                <a asp-area="" asp-controller="Home" asp-action="Withdrawl">
+                                    <span class="no-hover"><img src="~/images/icon_with_0.svg" alt=""></span>
+                                    <span class="on-hover"><img src="~/images/icon_with_1.svg" alt=""></span>
+                                    <span>Withdrawal</span> <span class="pull-right menurighticon">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class='@(ViewContext.RouteData.Values["Action"].ToString() == "AccountSettings" ? "active" : "ok")'>
+                                <a asp-area="" asp-controller="Home" asp-action="AccountSettings">
+                                    <span class="no-hover"><img src="~/images/icon_acc_0.svg" alt=""></span>
+                                    <span class="on-hover"><img src="~/images/icon_acc_1.svg" alt=""></span>
+                                    <span>Account Settings</span> <span class="pull-right menurighticon">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+
+
+                        }
+                        <li class="signout">
+                            <a asp-area="" asp-controller="Account" method="post" asp-action="Logout">
+                                <span class="no-hover"><img src="~/images/icon_out_0.svg" alt=""></span>
+                                <span class="on-hover"><img src="~/images/icon_out_1.svg" alt=""></span>
+                                <span>Sign Out</span>
+                            </a>
+
+                            @*@await Html.PartialAsync("_LoginPartial")*@
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- END LEFT SIDEBAR -->
+        <!-- MAIN CONTENT -->
+        <div id="main-content" @RenderSection("cls", required: false)>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="text-right heading-right-text">
+                            <!--EMA <span>$0.24874</span> USD (+1.29%)-->
+                            <button class="btn btn-buy-sell" onclick="FakeEMAs()" title="Click here to get free fake EMA tokens!">Buy/Sell EMA</button>
+                        </p>
+                    </div>
+                </div>
+                <div class="visible-xs visible-sm" style="height: 15px; clear: both;"></div>
+
+                <div class="small-screen-setting-wrapper">
+                    <div class="small-screen-header visible-xs">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="brand-logo-small"><img src="~/images/logo_1.svg" alt=""></div>
+                                <div class="menu-right-icon btn-toggle-fullwidth"><i class="fas fa-bars"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    @*mobile menu*@
+                    <div class="small-screen-profileset visible-xs">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                @if (User.IsInRole("Marketeer"))
+                                {
+                                    <ul class="list-unstyled">
+                                        <li class="dropdown listmenu-suttle">
+                                            <a asp-area="" asp-controller="Campaigns" asp-action="Index" class="dropdown-toggle" data-toggle="dropdown">
+
+                                                @if (ViewContext.RouteData.Values["Action"].ToString() == "Index")
+                                                {
+                                                    <img src="~/images/icon_content_1.svg" alt="" class="listiconimg1" />
+                                                }
+                                                else if (ViewContext.RouteData.Values["Action"].ToString() == "Analytics")
+                                                {
+                                                    <img src="~/images/icon_rate_1.svg" alt="" class="listiconimg1" />
+                                                }
+                                                else if (ViewContext.RouteData.Values["Action"].ToString() == "AccountSettings")
+                                                {
+                                                    <img src="~/images/icon_achi_1.svg" alt="" class="listiconimg1" />
+                                                }
+
+                                                <span>
+                                                    @(ViewContext.RouteData.Values["Action"].ToString())
+                                                </span>
+                                                <span class="pull-right menurighticon"><i class="fas fa-chevron-down"></i></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a asp-area="" asp-controller="Campaigns" asp-action="Index">
+                                                        <img src="~/images/icon_content_0.svg" alt="" class="listiconimg1" />
+                                                        Campaigns
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a asp-area="" asp-controller="Campaigns" asp-action="Analytics">
+                                                        <img src="~/images/icon_rate_0.svg" alt="" class="listiconimg1" />
+                                                        Analytics
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a asp-area="" asp-controller="Campaigns" asp-action="AccountSettings">
+                                                        <img src="~/images/icon_achi_0.svg" alt="" class="listiconimg1" />
+                                                        Account Settings
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a asp-area="" asp-controller="Account" method="post" asp-action="Logout">
+                                                        <img src="~/images/icon_out_0.svg" alt="" class="listiconimg1" />
+                                                        Sign Out
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                }
+                                else
+                                {
+                                    <ul class="list-unstyled">
+                                        <li class="dropdown listmenu-suttle">
+                                            <a asp-area="" asp-controller="Home" asp-action="Dashboard" class="dropdown-toggle" data-toggle="dropdown">
+                                                @*<img src="~/images/icon_dash_1.svg" alt="" class="listiconimg1" />*@
+                                                @if (ViewContext.RouteData.Values["Action"].ToString() == "Dashboard")
+                                                {
+                                                    <img src="~/images/icon_dash_1.svg" alt="" class="listiconimg1" />
+                                                }
+                                                else if (ViewContext.RouteData.Values["Action"].ToString() == "MyContent")
+                                                {
+                                                    <img src="~/images/icon_content_1.svg" alt="" class="listiconimg1" />
+                                                }
+                                                else if (ViewContext.RouteData.Values["Action"].ToString() == "Achievements")
+                                                {
+                                                    <img src="~/images/icon_achi_1.svg" alt="" class="listiconimg1" />
+                                                }
+                                                else if (ViewContext.RouteData.Values["Action"].ToString() == "withdrawl")
+                                                {
+                                                    <img src="~/images/icon_with_1.svg" alt="" class="listiconimg1" />
+                                                }
+                                                else if (ViewContext.RouteData.Values["Action"].ToString() == "AccountSettings")
+                                                {
+                                                    <img src="~/images/icon_acc_1.svg" alt="" class="listiconimg1" />
+                                                }
+
+                                                <span>
+                                                    @(ViewContext.RouteData.Values["Action"].ToString())
+                                                </span>
+                                                <span class="pull-right menurighticon"><i class="fas fa-chevron-down"></i></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a asp-area="" asp-controller="Home" asp-action="Dashboard">
+                                                        <img src="~/images/icon_dash_0.svg" alt="" class="listiconimg1" />
+
+                                                        Dashboard
+
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a asp-area="" asp-controller="Home" asp-action="MyContent">
+                                                        <img src="~/images/icon_content_0.svg" alt="" class="listiconimg1" />
+                                                        My Content
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a asp-area="" asp-controller="Home" asp-action="Achievements">
+                                                        <img src="~/images/icon_achi_0.svg" alt="" class="listiconimg1" />
+                                                        Achivements
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a asp-area="" asp-controller="Home" asp-action="withdrawl">
+                                                        <img src="~/images/icon_with_0.svg" alt="" class="listiconimg1" />
+                                                        Withdrawal
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a asp-area="" asp-controller="Home" asp-action="AccountSettings">
+                                                        <img src="~/images/icon_acc_0.svg" alt="" class="listiconimg1" />
+                                                        Account Setting
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a asp-area="" asp-controller="Account" method="post" asp-action="Logout">
+                                                        <img src="~/images/icon_out_0.svg" alt="" class="listiconimg1" />
+                                                        Sign Out
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                }
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="list-inline verti-middle profile-small-user">
+                                    <li>
+                                        @if (User.IsInRole("Marketeer"))
+                                        {
+                                            <h4 style="color:Black;"><strong>@name</strong></h4>
+                                        }
+                                        else
+                                        {
+                                            <h4 style="color:White;"><strong>@name</strong></h4>
+                                        }
+                                        @*<h4>John Doe</h4><small>Company</small>*@
+                                    </li>
+
+                                    <li><span class="profile-image-wrap-small"><img src="~/images/@id" alt="" class="userphoto"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="all-page-content">
+                    @RenderBody()
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="container body-content">
+
+                    <footer>
+                        <p>&copy; 2018 - EMA Limited Capital Group</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <!-- END MAIN CONTENT -->
+    </div>
+
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/metisMenu.js"></script>
+    <script src="~/js/jquery.slimscroll.min.js"></script>
+    <script src="~/js/jquery.sparkline.min.js"></script>
+    <script src="~/js/common.js"></script>
+    <script src="~/js/GaugeMeter.js"></script>
+    <script src="~/js/chartist.min.js"></script>
+    @*<script src="~/js/chartist-plugin-tooltip.min.js"></script>*@
+    <script src="~/js/chartist-plugin-axistitle.min.js"></script>
+    <script src="~/js/toastr.js"></script>
+
+    @RenderSection("Scripts", required: false)
+    @RenderSection("kudo", required: false)
+
+    <script>
+        function FakeEMAs() {
+            $.get('@Url.Content("~/Campaigns/FakeEMAs")', function (result) {
+                if (result == "Increased") {
+                    alert('Your EMA balance have been increased by 100 tokens. Enjoy!');
+                    window.location.reload(true);
+                } else {
+                    alert('Can not increase your EMA balance: ' + result);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

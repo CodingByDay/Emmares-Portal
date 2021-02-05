@@ -1,0 +1,117 @@
+﻿@using Emmares4.Models.HomeViewModels;
+@model Emmares4.Models.HomeViewModels.ChartViewModel
+
+
+<script>
+    function drawChartCampaignsHitsView() {
+                var data = {
+            labels:  @Json.Serialize(Model.XLables),
+            series: [
+                    @Json.Serialize(Model.Values),
+            ]
+        };
+
+        var options = {
+
+            low: 0,
+            high: @Model.Values.Max()+1,  // Scale the y axis in accordance to the maximum displayable value
+            showArea: true,
+            showPoint: false,
+               height: "300px",
+            axisX: {
+                offset:40,
+                labelInterpolationFnc: function (value, index) {
+                    return index % 2 === 0 ? value : null;
+                }
+            },
+            axisY: {
+                offset: 50,
+            }
+        };
+
+        var responsiveOptions = [
+            ['screen and (min-width: 340px)', {
+                axisX: {
+                    labelInterpolationFnc: function (value, index) {
+                        return index % 2 === 0 ?value : null;
+                    },
+                    axisY: { showGrid: false, onlyInteger: true}
+                }
+            }],
+            ['screen and (min-width: 940px)', {
+                axisX: {
+                    labelInterpolationFnc: function (value, index) {
+                        return index % 1 === 0 ? value : null;
+                    }
+                },
+                axisY: { showGrid: false, onlyInteger: true}
+            }]
+        ];
+
+        var chart = new Chartist.Bar('.ct-chart-2', data, options, responsiveOptions);
+
+         $(window).on('resize', function () {
+          window.location.reload(false);
+      });
+        }
+
+        function GetChartCampaignsHits(ct) {
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetChart")?chartType=" + ct + "&view=_chartCampaignsHitsView&sql_file_data=GetChartCampaignsHitsData&sql_file_stats=GetChartCampaignsHitsStats",
+                success: function (response) {
+                    var dvItems = $(".chart-wrapper-2");
+                    dvItems.empty();
+                    dvItems.html(response);
+                    drawChartCampaignsHitsView();
+                }
+            });
+        }
+</script>
+<style>
+    .ct-label.ct-horizontal {
+        white-space: nowrap;
+        max-width: 5px;
+    }
+</style>
+<div class="row">
+    <div class="col-sm-10">
+        <div class="panel black-box">
+            <div class="panel-content">
+                <div class="row flex-row">
+                    <div class="col-md-9 col-sm-7 left">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2 class="heading dis-inline">
+                                    <i class="fas fa-chart-line"></i>CAMPAIGN HITS
+                                </h2>
+                                <span class="avgscore-title">
+                                    <i class="fas fa-chevron-left"></i>Hits<i class="fas fa-chevron-right"></i>
+                                </span>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="chart-select-option">
+                                    <ul class="list-inline">
+                                        <li @(Model.Interval == ChartInterval.Year ? "class=active" : "")><a href='javascript:GetChartCampaignsHits(3);'>Year</a></li>
+                                        <li @(Model.Interval == ChartInterval.Month ? "class=active" : "")><a href='javascript:GetChartCampaignsHits(2);'>Month</a></li>
+                                        <li @(Model.Interval == ChartInterval.Week ? "class=active" : "")><a href='javascript:GetChartCampaignsHits(1);'>Week</a></li>
+                                        <li @(Model.Interval == ChartInterval.Daily ? "class=active" : "")><a href='javascript:GetChartCampaignsHits(0);'>Daily</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="demo-bar-chart" class="ct-chart-2"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 right">
+                        <div class="threebox-wrapper">
+                            <div class="threebox">
+                                <h3>@Model.ItemsToDisplay["TotalHits"]</h3>
+                                <p>Total Hits</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

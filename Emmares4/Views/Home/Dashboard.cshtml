@@ -1,0 +1,86 @@
+﻿@using Emmares4.Models.HomeViewModels;
+
+@model Emmares4.Models.HomeViewModels.DashboardViewModel
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section cls { class="dashborad-page" }
+
+@section Scripts {
+    <script>
+        $(".GaugeMeter").gaugeMeter();
+
+        $(function () {
+            drawChartView();
+        });
+    </script>
+}
+
+
+<h1 class="sr-only">Dashboard</h1>
+
+<div class="dashboard-section">
+    <div class="row">
+        <div class="col-md-4 dashBoardHeaderBox">
+            <div class="panel black-box">
+                <div class="panel-content">
+                    <h2 class="heading"><i class="fas fa-chart-bar"></i> YOUR BALANCE</h2>
+                    <div class="metter-cotnainer">
+                        <div class="circle" style="color: grey; height: 180px;
+                                            width: 180px;
+                                            background:transparent;
+                                            border-radius: 90px 90px 0 0;
+                                            border-radius: 50%;
+                                            display: inline-block;
+                                            background-color: #191f28;
+                                            border: 8px solid #c38833;
+                                            text-align: center;
+                                            font-size: 60px;
+                                            padding: 40px 0px 0px 0px;
+                                            border-bottom-color: #191f28;">
+                            <span style="color:grey">@Model.BalanceFullPart<sup style="color: grey; font-size: 20px">@Model.BalancePartialPart</sup></span>
+                            <span style="font-size: 15px; display: block; padding-top: 15px;">EMA tokens</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer text-center">
+                    <a asp-area="" asp-controller="Home" asp-action="Withdrawl">
+                        Transfer to Ethereum Wallet <span>
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 dashBoardHeaderBox">
+            <div class="panel black-box">
+                <div class="panel-content">
+                    <h2 class="heading"><i class="far fa-star"></i>FAVOURITE CONTENT</h2>
+                    <ul class="list-unstyled list">
+                        @{
+                            int counter = 1;
+                            foreach (var item in Model.FavouriteFields.Take(5))
+                            {
+                                <li><span class="outer"><span class="inner">@counter</span></span>@item</li>
+                                counter++;
+                            }
+                        }
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <a asp-area="" asp-controller="Home" asp-action="MyContent">
+                        View list <span>
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dashboard-section chart-wrapper">
+    @Html.Partial("_chartView", Model.ChartData)
+</div>

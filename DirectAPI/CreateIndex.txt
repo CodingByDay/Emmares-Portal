@@ -1,0 +1,34 @@
+PUT /test2 HTTP/1.0
+Content-Type: application/json
+Content-Length: 787
+
+{
+    "settings": {
+        "index" : {
+            "analysis" : {
+                "analyzer" : {
+                    "synonym" : {
+                        "tokenizer" : "standard",
+                        "filter" : ["lowercase", "synonym"]
+                    }
+                },
+                "filter" : {
+                    "synonym" : {
+                        "type" : "synonym",
+                        "synonyms" : ["laptop => notebook", "good => cool"]
+                    }
+                }
+            }
+        }
+    },
+    "mappings": {
+        "_doc": {
+            "properties": {
+                "message": { 
+                    "type": "text",
+                    "analyzer": "synonym"
+              }
+            }
+        }
+    }
+}

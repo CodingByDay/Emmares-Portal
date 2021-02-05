@@ -1,0 +1,141 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <meta name="description" content="Emmares" />
+    <meta name="keywords" content="Emmares" />
+    <meta name="robots" content="index, follow" />
+    <!--[if lt IE 7]>
+      <style media="screen" type="text/css">
+         #container {
+         height:100%;
+         }
+      </style>
+      <![endif]-->
+    <title>EMMARES</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <link rel="stylesheet" href="lib/Layout/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script>
+ 
+        function goonresults() {
+            var linktosearchresults = "https://localhost:44345/resultspage.html?q=" + (document.getElementById("searchString").value);
+            window.location.href = linktosearchresults;
+
+        }
+
+
+        function enterinput() {
+            $("#searchString").focus();
+            var input = document.getElementById("searchString");
+            input.addEventListener("keyup", function (event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    goonresults();
+                }
+            });
+        }
+        window.onload = enterinput;
+
+/**/</script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <!-- Header start -->
+
+            <ul>
+                <!--<div style="color: gray;">
+                    <li style="margin-left: 0px; margin-right: 0px;"><i class="far fa-user"></i></li>
+                    <li style="margin-left: 0px margin-right: 0px;;">John Doe</li>
+                    <li style="margin-left: 0px; margin-right: 0px;"><i class="fas fa-angle-down"></i></li>
+                </div>-->
+                <div style="float: right; font-weight: 900; display:inline;">
+                    <li><a class="header_links" href="/Account/Login">LOG IN</a></li>
+                    <li><a class="header_links" href="/Account/Register">SIGN UP</a></li>
+                    <li><a class="header_links" href="">PRICING</a></li>
+                </div>
+            </ul>
+
+            <!-- Header end -->
+        </div>
+        <div id="body">
+            <!-- Body start -->
+            <div class="container">
+                <img src="images/Emmares_logo.png" alt="EMMARES" class="logo">
+                <div class="front_header">
+                    <p>Search for the future of email marketing.</p>
+                </div>
+                <!--<form>-->
+                <div class="col-sm-8 wrapp">
+                    <div class="col-sm-8 wrapp">
+                        <!-- <label for="exampleInputEmail1">What are you looking for</label> -->
+                        <input type="text" class="form-control" id="searchString" aria-describedby="searchHelp" placeholder="Find your new favourite email campaign">
+
+                        <button onclick="goonresults();" id="submitButton" type="submit" class="btn btn-primary">Go</button>
+                        <!--<a href="resultspage.html" id="submitButton" type="submit" class="btn btn-primary">Go</a>-->
+
+                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+
+                    <br>
+                    <div align="center" class="categories" style="display: flex; justify-content:center; align-items:center; width: 60%; margin-left:auto; margin-right:auto;">
+                        <div align="center" class="float-left">
+                            <p><a class="link" href="resultspage.html?q=Business">Business</a></p>
+                            <p><a class="link" href="resultspage.html?q=Finance">Finance</a></p>
+                        </div>
+                        <div align="center" class="float-left">
+                            <p><a class="link" href="resultspage.html?q=News">News</a></p>
+                            <p><a class="link" href="resultspage.html?q=Technology">Technology</a></p>
+                        </div>
+                        <div align="center" class="float-left">
+                            <p><a class="link" href="resultspage.html?q=Entertainment">Entertainment</a></p>
+                            <p><a class="link" href="resultspage.html?q=Sports">Sports</a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 wrapp" style="display: flex; justify-content:center; align-items:center; width: 60%; margin-left:auto; margin-right:auto;">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="/Account/Login"><button type="submit" class="btn btn-primary signButton">Sign In</button></a>
+                        <a href="/Account/Register"><button type="submit" class="btn btn-primary signButton">Sign Up</button></a>
+                    </div>
+                </div>
+
+                <!--</form> -->
+            </div>
+            <!-- Body end -->
+        </div>
+        <div id="footer">
+            <!-- Footer start -->
+            <ul>
+                <li><a class="link" href="https://www.facebook.com/emmares.io"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a class="link" href="https://www.linkedin.com/company/emmaresio"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a class="link" href="https://twitter.com/emmares_io"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="link" href="https://medium.com/emmares"><i class="fab fa-medium-m"></i></a></li>
+                <li><a class="link" href="https://t.me/emmares"><i class="fab fa-telegram-plane"></i></a></li>
+                <li>|</li>
+                <li><a class="link" href="">About</a></li>
+                <li><a class="link" href="">Pricing</a></li>
+                <div class="footer-copyright text-right py-3" style="margin-right:30px; color: gray;">© Emmares 2018</div>
+            </ul>
+            <!-- Footer end -->
+        </div>
+    </div>
+</body>
+
+</html>

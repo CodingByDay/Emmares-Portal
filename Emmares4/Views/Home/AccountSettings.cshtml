@@ -1,0 +1,233 @@
+﻿@using System.Web
+@using System.IO
+
+@model Emmares4.Models.HomeViewModels.AccountSettingsViewModel
+@{
+    ViewData["Title"] = "AccountSettings";
+
+}
+<style type="text/css">
+    .inputfile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+        .inputfile + label {
+            max-width: 80%;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+            display: inline-block;
+            overflow: hidden;
+            padding: 0.625rem 1.25rem;
+        }
+</style>
+<h1 class="sr-only">Dashboard</h1>
+<div class="dashboard-section" id="accountSettingsBox">
+    <div class="section-heading clearfix">
+        <h2 class="section-title">Account Settings</h2>
+    </div>
+
+    <div class="panel white-box">
+        <div class="panel-content">
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne" data-toggle="collapse"
+                         data-target="#collapseOne" aria-expanded="true"
+                         aria-controls="collapseOne">
+                        <h5 class="mb-0">
+                            YOUR PROFILE
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse in" aria-labelledby="headingOne"
+                         data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="row flex-row">
+
+                                <div class="col-md-2 profileborder-right text-center">
+                                    @{string exactPath = System.IO.Path.GetFullPath("wwwroot/images/" + Model.UserImage); var id = File.Exists(exactPath) ? Model.UserImage : "user.png"; string time = DateTime.Now.ToString("hh:mm:ss");}
+                                    <img src="~/images/@id?@time"
+                                         class="img-circle profileimg">
+                                    <div>
+
+                                        <form method="post" enctype="multipart/form-data" id="form" action="~/Home/UploadImage">
+                                            @if (Model.StatusMessage == "uploadForm")
+                                            {<div asp-validation-summary="ModelOnly" class="text-danger"></div>}
+                                            <div class="box">
+                                                <input type="file" accept="image/*" name="file" id="file" class="inputfile inputfile-3">
+
+                                                <label for="file"><span>Change..</span></label>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-9 profile-details">
+                                    <form id="basic-form" method="post" novalidate="">
+                                        @if (Model.StatusMessage == "inputForm")
+                                        {<div asp-validation-summary="ModelOnly" class="text-danger"></div>}
+
+                                        <div class="row">
+                                            <h4>General Info</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>First Name</label>
+                                                    <input asp-for="FirstName" style="        color: #ccc" class="form-control" readonly/> 
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Second Name</label>
+                                                    <input asp-for="LastName" style="        color: #ccc" class="form-control" readonly/> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Email Address</label>
+                                                    <input asp-for="Email" style="        color: #ccc" class="form-control" readonly />
+                                                </div>
+                                            </div>
+                                            @*<div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Provider</label>
+                                                    <input asp-for="PublisherName" class="form-control" />
+                                                </div>
+                                            </div>*@
+                                        </div>
+                                        <div class="saperator-15"></div>
+
+                                        <div class="row margin-top-15">
+                                            <h4>Change Password</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Current Password</label>
+                                                    <input type="password" class="form-control" name="OldPassword"
+                                                           required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>New Password</label>
+                                                    <input type="password" class="form-control" name="NewPassword"
+                                                           required="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-offset-6">
+                                                <div class="form-group">
+                                                    <label>Confirm New Password</label>
+                                                    <input type="password" class="form-control" name="ConfirmPassword"
+                                                           required="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <button type="submit" class="btn btn-primary" style="        background: linear-gradient(to left, #c28630 30%, #e6bc77);
+        border-radius: 25px;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 300;
+        border: none;
+        margin-top: 30px;
+        margin-bottom: 30px;">
+                                            Update
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="wallet-form" novalidate="">
+        <div class="panel white-box">
+            <div class="panel-content">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header collapsed" id="headingTwo" data-toggle="collapse"
+                             data-target="#collapseTwo" aria-expanded="false"
+                             aria-controls="collapseTwo">
+                            <h5 class="mb-0">
+
+                                WALLET DETAILS
+
+                                <!--<span class="pull-right"><i class="fas fa-sort-down"></i></span>-->
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                             data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label>Enter ERC-20 compatible Ethereum wallet address: </label>
+                                            <input asp-for="WalletAddress" type="text" class="form-control" name="WalletAddress">
+                                            <br />
+                                            <label>Validation</label>
+                                            <img onerror="this.style.display='none'" style="margin: 10px" src=@("https://blockies.shipchain.io/" + Model.WalletAddress + ".png" ) />
+                                            <span asp-validation-for="WalletAddress" class="text-danger"></span>
+
+                                            <br>
+                                            <button type="button" class="btn btn-primary" style="        background: linear-gradient(to left, #c28630 30%, #e6bc77);
+        border-radius: 25px;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 300;
+        border: none;
+        margin-top: 30px;
+        margin-bottom: 30px;" onclick="UpdateWallet()">
+                                                Update
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial");
+<script type="text/javascript">
+
+        document.getElementById("file").onchange = function () {
+            document.getElementById("form").submit();
+        };
+
+        function UpdateWallet() {
+            var wa = $('#WalletAddress').val();
+            var data = { "WalletAddress": wa };
+            $.post('@Url.Content("~/Home/UpdateWallet")', data, function (result) {
+                alert(result);
+            });
+            setTimeout(myFunction, 4000);
+        };
+
+        function myFunction() {
+            location.reload();
+        };
+</script>
+}

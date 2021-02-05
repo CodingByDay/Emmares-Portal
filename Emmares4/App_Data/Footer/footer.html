@@ -1,0 +1,120 @@
+
+<style>
+.footerWrapper{
+background-color: #f9f9f9;
+max-width: 900px;
+
+min-width: 500px;
+margin: auto;
+padding-left: 50px;
+padding-right: 50px;
+padding-bottom: 30px;
+}
+.footerHeader{
+  vertical-align: top;
+  font-weight: 800;
+  padding-top: 13px;
+  color: #868686;
+
+}
+.footerHeaderTr {
+  vertical-align: top;
+}
+.footerSubtitle {
+  text-align: center;
+  color: #bdbdbd;
+  font-weight: 400;
+  padding-top: 10px;
+}
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+a {
+text-decoration: none;
+}
+.rating > a {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > a:hover:before,
+.rating > a:hover ~ a:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.rating > a:active:before,
+.rating > a:active ~ a:before {
+   content: "\2605";
+   position: absolute;
+}
+    .rating a {
+        text-decoration: none !important;
+    }
+.s1, .s2, .s3, .s4, .s5 {
+  font-size: 40px;
+  text-decoration: none !important;
+  color: #868686;
+}
+
+.instructions {
+  color: #bdbdbd;
+    text-decoration: underline;
+}
+
+.footerBottom{
+  width: 100%;
+  margin-top: 20px;
+  color: #bdbdbd;
+}
+
+.emm {
+  font-size: 30px;
+  vertical-align: top;
+}
+    .t1, .footerBottom {
+ width: 90%; 
+ margin: auto; 
+    }
+    .footerWrapper .footerBottom td {
+    padding-bottom: 20px; 
+    }
+
+    .inst {
+    font-size: 10px !important; 
+    }
+</style>
+
+<!--EmmaresCID={{cid}}-->
+<table class="footerWrapper"><tr class="footerHeaderTr"><td class="footerHeader">
+  <table align="center" class="t1">
+    <tr><td align="center" class="footerHeader">
+      Help us revolutionise email marketing.
+    </td></tr>
+    <tr><td align="center" class="footerSubtitle">
+      Evaluate the quality of the content above. Initial evaluators will be rewarded in EMA tokens.
+    </td></tr>
+  </table>
+  <table class="stars" align="center" id="Emmarescid###{{cid}}###">
+    <tr>
+      <td class="rating" align="center">
+        <a href="{{baseUrl}}Account/Stars?stars=5&cid={{cid}}" target="_blank" class="s5">&#x2606;</a>
+        <a href="{{baseUrl}}Account/Stars?stars=4&cid={{cid}}" target="_blank" class="s4">&#x2606;</a>
+        <a href="{{baseUrl}}Account/Stars?stars=3&cid={{cid}}" target="_blank" class="s3">&#x2606;</a>
+        <a href="{{baseUrl}}Account/Stars?stars=2&cid={{cid}}" target="_blank" class="s2">&#x2606;</a>
+        <a href="{{baseUrl}}Account/Stars?stars=1&cid={{cid}}" target="_blank" class="s1">&#x2606;</a>
+      </td>
+    </tr>
+  </table>
+  <table class="footerBottom">
+    <tr>
+        <td class="inst" align="left">If you don't have ethereum wallet follow&nbsp;<a class="instructions" href="#">these</a> instructions</td>
+      <td class="emm" align="right">EMMARES</td>
+    </tr>
+  </table>
+</td></tr>
+</table>
+
+

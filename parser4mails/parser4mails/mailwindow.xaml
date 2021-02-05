@@ -1,0 +1,45 @@
+﻿<Window x:Class="parser4mails.mailwindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:parser4mails"
+        mc:Ignorable="d"
+        Title="Preview" Height="700" Width="1080">
+    <Grid Margin="0,0,68,35">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="372*"/>
+            <ColumnDefinition Width="589*"/>
+        </Grid.ColumnDefinitions>
+        <WebBrowser Name="preview_browser" HorizontalAlignment="Left" Height="auto" MinHeight="450" Margin="25,99,0,0" VerticalAlignment="Top" Width="644" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label Name="zadeva_label" Content="Zadeva" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="296"/>
+        <Label Name="email_label" Content="Email" HorizontalAlignment="Left" Margin="317,100,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="38"/>
+        <Label Name="optin_label" Content="Opt in" HorizontalAlignment="Left" Margin="317,190,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="42" Visibility="Hidden"/>
+        <Label Name="optout_label" Content="Opt out" HorizontalAlignment="Left" Margin="317,280,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="50" Visibility="Hidden"/>
+        <Label Name="affiliate_label" Content="Affiliate" HorizontalAlignment="Left" Margin="317,354,0,0" VerticalAlignment="Top" Grid.Column="2" Height="26" Width="50" Visibility="Hidden"/>
+        <TextBox  Name="email_tbox" HorizontalAlignment="Left" Height="24" Margin="317,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Grid.Column="2"/>
+        <TextBox Name="optin_tbox" HorizontalAlignment="Left" Height="22" Margin="317,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Grid.Column="2" Visibility="Hidden"/>
+        <TextBox Name="optout_tbox" HorizontalAlignment="Left" Height="24" Margin="317,300,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Grid.Column="2" Visibility="Hidden"/>
+        <TextBox Name="affiliate_tbox" HorizontalAlignment="Left" Height="24" Margin="317,380,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Grid.Column="2" Visibility="Hidden"/>
+        <Button Name="email_btn" Content="Whitelist" HorizontalAlignment="Left" Margin="402,154,0,0" VerticalAlignment="Top" Width="101" Grid.Column="2" Height="20" Click="Email_btn_Click" />
+        <Button Name="optin_btn" Content="Add to Whitelist" HorizontalAlignment="Left" Margin="402,244,0,0" VerticalAlignment="Top" Width="101" Grid.Column="2" Height="20" Click="Optin_btn_Click" Visibility="Hidden"/>
+        <Button Name="optout_btn" Content="Add to Whitelist" HorizontalAlignment="Left" Margin="402,328,0,0" VerticalAlignment="Top" Width="101" Grid.Column="2" Height="20" Click="Optout_btn_Click" Visibility="Hidden"/>
+        <Button Name="affiliate_btn" Content="Add to Whitelist" HorizontalAlignment="Left" Margin="402,408,0,0" VerticalAlignment="Top" Width="101" Grid.Column="2" Height="20" Click="Affiliate_btn_Click" Visibility="Hidden"/>
+        <Button Name="objavi_btn" Content="Objavi ta email in vse naslednje" HorizontalAlignment="Left" VerticalAlignment="Top" Width="184" Margin="353,542,0,0" Height="32" Grid.Column="2" Click="Objavi_btn_Click" Visibility="Hidden"/>
+        <Button Name="izbriši_btn" Content="Izbriši obdelan email s POP3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="184" Margin="353,579,0,0" Height="32" Grid.Column="2" Click="Izbrisi_btn_Click" />
+        <RichTextBox Name="richtb" Grid.Column="1" HorizontalAlignment="Left" Height="58" Margin="25,36,0,0" VerticalAlignment="Top" Width="926" Grid.ColumnSpan="2">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button Name="blacklist_btn" Grid.ColumnSpan="2" Content="Blacklist" HorizontalAlignment="Left" Margin="10,494,0,0" VerticalAlignment="Top" Width="53" Height="32" RenderTransformOrigin="0.585,4.39" Click="Blacklist_btn_Click_1"/>
+        <Label Name="duration_label" Content="Duration in days (click Add for next emails)" Grid.Column="2" HorizontalAlignment="Left" Margin="317,445,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <TextBox Name="duration_tbox" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="317,471,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Visibility="Hidden"/>
+        <Button Name="duration_btn" Content="Add to Whitelist" Grid.Column="2" HorizontalAlignment="Left" Margin="402,499,0,0" VerticalAlignment="Top" Width="101" Click="Duration_btn_Click" Visibility="Hidden"/>
+
+
+    </Grid>
+</Window>

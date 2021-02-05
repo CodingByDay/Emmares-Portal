@@ -1,0 +1,37 @@
+PUT /emmares_campaigns HTTP/1.0
+Content-Type: application/json
+Content-Length: {{len}}
+
+{
+    "settings": {
+        "index" : {
+            "analysis" : {
+                "analyzer" : {
+                    "synonym" : {
+                        "tokenizer" : "standard",
+                        "filter" : ["lowercase", "synonym"]
+                    }
+                },
+                "filter" : {
+                    "synonym" : {
+                        "type" : "synonym",
+                        "synonyms_path" : "./synonyms.txt"
+                    }
+                }
+            }
+        }
+    },
+    "mappings": {
+        "_doc": {
+            "properties": {
+                "campaign_id" : {
+                    "type": "keyword"
+                },
+                "content": { 
+                    "type": "text",
+                    "analyzer": "synonym"
+                }
+            }
+        }
+    }
+}

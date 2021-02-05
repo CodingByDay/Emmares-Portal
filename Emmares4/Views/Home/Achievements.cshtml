@@ -1,0 +1,113 @@
+﻿@model Emmares4.Models.HomeViewModels.AchievementsViewModel
+@{
+    ViewData["Title"] = "Achievements";
+
+}
+@section Scripts {
+    <script>
+        $(".GaugeMeter").gaugeMeter();
+    </script>
+
+}
+
+<h1 class="sr-only">Dashboard</h1>
+<div class="dashboard-section achivement-boxes-wrapper">
+    <div class="section-heading clearfix">
+        <h2 class="section-title">Achievements</h2>
+    </div>
+
+    <div class="row margin-bottom-15">
+        <div class="col-md-4">
+            <div class="panel black-box">
+                <div class="panel-content">
+                    <h2 class="heading padding-l-0"><img src="~/images/icon_dash_1.svg" alt="" class="listiconimg1" />ACTIVITY</h2>
+                    <div class="metter-cotnainer">
+
+                        <div class="circle" style="    color: grey;
+    height: 180px;
+    width: 180px;
+    background: transparent;
+    border-radius: 90px 90px 0 0;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #191f28;
+    border: 8px solid #c38833;
+    text-align: center;
+     font-size: 0px;
+    padding: 25px 0px 0px 0px;
+    border-bottom-color: #191f28;">
+
+                            <span style="font-size:15px">Level @Model.Level</span>
+                            <br>
+                            <img src="~/images/icon_crown.svg" style="width: 83px;" alt="Crown Image" title="Crown Image" />
+                            <span style="font-size: 15px; display: block; padding-top: 7px;">Hero Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel">
+                <div class="panel-content">
+                    <h2 class="heading padding-l-0"><img src="~/images/icon_dash_1.svg" alt="" class="listiconimg1" />EARNED ALL TIME</h2>
+                    <div class="metter-cotnainer">
+                      
+                        <div class="circle" style="color: grey; height: 180px;
+                                            width: 180px;
+                                            background:transparent;
+                                            border-radius: 90px 90px 0 0;
+                                            border-radius: 50%;
+                                            display: inline-block;
+                                            background-color: white;
+                                            border: 8px solid #c38833;
+                                            text-align: center;
+                                            font-size: 60px;
+                                            padding: 40px 0px 0px 0px;
+                                            border-bottom-color: white;">
+                            <span style="color:grey">@Model.BalanceFullPart<sup style="color: grey; font-size: 20px">@Model.BalancePartialPart</sup></span>
+                            <span style="font-size: 15px; display: block; padding-top: 7px;">EMA Tokens</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel">
+                <div class="panel-content">
+                    <h2 class="heading padding-l-0"><img src="~/images/icon_dash_1.svg" alt="" class="listiconimg1" />RATED ALL TIME</h2>
+                    <div class="metter-cotnainer">
+                        @*<div class="GaugeMeter gaugeMeter" id="PreviewGaugeMeter_2" data-percent="@Model.RatedEmails"
+                                 data-size="200" data-theme="#990000"
+                                 data-back="RGBa(38,38,38,0.2)" data-color="RGBa(196,138,54,1)"
+                                 data-animate_gauge_colors="1" data-animate_text_colors="1" data-width="10"
+                                 data-style="Arch" data-label_color="#eeeeee"
+                                 data-id="PreviewGaugeMeter_2" style="width: 200px;">
+                                <span style="line-height: 200px; font-size: 44px; color: rgb(255, 255, 255);">
+                                    <span>Level 5</span>
+                                    <img src="" alt="Crown Image" title="Crown Image" />
+                                </span>
+                                <b style="font-size: 15.3846px; line-height: 276.923px; color: rgba(0, 0, 0, .8);">Rated emails</b>
+                                <canvas width="200" height="200"></canvas>
+                            </div>*@
+                        <div class="circle" style="color: grey; height: 180px;
+                                            width: 180px;
+                                            background:transparent;
+                                            border-radius: 90px 90px 0 0;
+                                            border-radius: 50%;
+                                            display: inline-block;
+                                            background-color: white;
+                                            border: 8px solid #c38833;
+                                            text-align: center;
+                                            font-size: 60px;
+                                            padding: 40px 0px 0px 0px;
+                                            border-bottom-color: white;">
+                            <span style="color:grey">@Model.RatedEmails</span>
+                            <span style="font-size: 15px; display: block; padding-top: 7px;">Rated Emails</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

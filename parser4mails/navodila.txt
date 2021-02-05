@@ -1,0 +1,20 @@
+Navodila za parser4emails
+
+Program parser4emails.exe zaženemo na strežniku, saj shranjuje html datoteke v mapo za prikaz predogleda emaila.
+
+To je C:\inetpub\wwwroot\App_Data\pages
+V primeru da datoteka ne more biti objavljena se shrani v C:\inetpub\wwwroot\App_Data\errors
+
+Program se poveže na pop3 poštni strežnik in obdela elektronsko pošto. 
+Pošiljatelji, ki pošljejo email se delijo na tiste, ki smo jih že obdelali in tiste, ki jih še nismo. 
+Èe je pošiljatelj obdelan je lahko v eni izmed dveh kategorij, Whitelist in Blacklist. 
+Èe še ni obdelan, imamo na izbiro, da potrdimo naroènino in ga za tem dodamo na Whitelisto. 
+Druga možnost je, da email dodamo na Blacklisto. 
+Èe še ne vemo, kam bi ga uvrstili, lahko ta email zapremo in ga obdelamo kasneje ali pa ga izbrišemo in poèakamo na nov email. 
+Ko je email dodan na Whitelisto, lahko dodamo optin, optout in affiliate link in èas trajanja, po katerem želimo izbrisati email. 
+Ko smo to naredili lahko ta email objavimo in ko pridejo novi emaili od istega pošiljatelja se bodo tudi ti avtomatsko objavili, s temi nastavitvami. 
+Èe emaila še ne želimo objaviti, lahko email izbrišemo in poèakamo na nov email. 
+Nastavitve bodo ostale shranjene in ob novem mailu lahko nastavimo, da se novi emaili avtomatsko objavijo.
+
+Èe ne želimo veè obdelovati emaile odpremo Upravitelja opravil (Ctrl + Shift + Esc), 
+pri procesih izberemo aplikacijo parser4emails in kliknemo spodaj na End Task.
