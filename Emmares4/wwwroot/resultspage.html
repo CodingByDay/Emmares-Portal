@@ -62,9 +62,6 @@
         }
         //
 
-
-
-
         function goonresults() {
             var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString2").value);
             window.location.href = linktosearchresults;
@@ -107,11 +104,49 @@
             return !!pattern.test(str);
         }
 
+        var state = {
+            'querySet': x, // dataset
+            'page': 1,
+            'rows': 10
 
+        }
+
+        function pagination(querySet, page, rows) {
+            var trimStart = (page - 1) * rows;
+            var trimEnd = trimStart + rows;
+            var trimmed = quearySet.slice(trimStart, trimEnd);
+
+            var pages = Math.ceil(querySet.length / rows);
+
+            return {
+                'querySet': trimmed,
+                'pages': pages
+            }
+
+        }
+
+        // function pageButtons(pages) {
+        //    var wrapper = document.getElementById('pagination-wrapper');
+        //    wrapper.innerHTML = ''
+
+        //    for (var page = 1; page <= pages; page++) {
+        //        wrapper.innerHTML += '<button value=${page} class="page btn btn-sm btn-info">${page}</button>'
+        //    }
+
+        //    $('.page').on('click', function () {
+        //        $('#body').find('.col-sm-12 results_div').empty()
+
+        //        state.page = $(this).val();
+
+        //        GetAPI();
+        //    })
+
+        //}
 
         function GetAPI() {
             // console.log("start");
-            //
+            //<div class="col-sm-12 results_div"> $('#mydiv').find('.myclass');
+            var table = $('#body').find('.col-sm-12 results_div');
             var img = document.createElement("img");
             img.id = "loading";
             img.style.margin = "0 auto";
@@ -147,7 +182,7 @@
 
                 // x[0].innerHTML = http2.responseText;
                 var x = JSON.parse(http2.responseText);
-
+                var data = pagination(state.querySet, state.page, state.rows); // page dataset use bellow
                 // x.hits[0].name
                 // console.log(x.hits.hits[0]._source.subject)
                 // console.log(x.hits.hits[0]._source.html)
@@ -190,7 +225,7 @@
                             totalres = 10;
                         else
                             totalres = x.hits.total;
-                        for (var p = 1; p <= totalres; p++) {
+                        for (var p = 1; p <= totalres; p++) { // here is where pagination goes.
                             if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
                                 if (x.hits.hits[p - 1]._source.score == 0.0)
                                     var resulttemplate = "<a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style = 'color:white; text-decoration: none;' > <div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' target='_blank' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
@@ -320,6 +355,11 @@
 
                 </div>
 
+                <!-- Pagination html -->
+                <div class="container">
+
+                    <div id="pagination-wrapper"></div>
+                </div>
 
 
             </div>

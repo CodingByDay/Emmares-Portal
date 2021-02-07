@@ -44,7 +44,7 @@ namespace Emmares4.Extensions
             _config = configParams.ToDictionary(k => k.Key, v => v.Value.First().Trim());
             _type = typeof(T);
 
-            //This associates class properties with corresponding datatable configuration options
+            // This associates class properties with corresponding datatable configuration options
             Properties = (from param in _config
                             join prop in _type.GetProperties() on param.Value equals prop.Name
                             where Regex.IsMatch(param.Key, Constants.COLUMN_PROPERTY_PATTERN)
