@@ -90,11 +90,11 @@ namespace Emmares4
 
             // using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             // {
-
-
+            
+          
             string json = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fuzziness\": \"AUTO\"}}}";
             string jsonfields = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fields\": [\"excerpt\", \"preview\"],\"fuzziness\": \"AUTO\"}}}";
-
+           // "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fuzziness\": \"AUTO\"}}}";
             //streamWriter.Write(json);
             // streamWriter.Flush();
             // streamWriter.Close();
@@ -103,7 +103,7 @@ namespace Emmares4
             wc.Headers.Add("Content-Type", "application/json");
             try
             {
-                return wc.UploadString(elastichost + "/emmares_search_test/_search?", json);
+                return wc.UploadString(elastichost + "/emmares_search_test/_search?size=10000", json); // fixed size of the return...
             }
             catch
             {

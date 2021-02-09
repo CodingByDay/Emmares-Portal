@@ -19,8 +19,10 @@
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
-
     <!--<link rel="stylesheet" href="lib/Layout/style.css">-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css" rel="stylesheet" />
+
 
     <script>
         var isMobile = false; //initiate as false
@@ -44,7 +46,8 @@
     </style>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css" rel="stylesheet" />
 
 
     <script>
@@ -104,28 +107,23 @@
             return !!pattern.test(str);
         }
 
-        var state = {
-            'querySet': x, // dataset
-            'page': 1,
-            'rows': 10
 
-        }
 
-        function pagination(querySet, page, rows) {
-            var trimStart = (page - 1) * rows;
-            var trimEnd = trimStart + rows;
-            var trimmed = quearySet.slice(trimStart, trimEnd);
+        //function pagination(querySet, page, rows) {
+        //    var trimStart = (page - 1) * rows;
+        //    var trimEnd = trimStart + rows;
+        //    var trimmed = querySet.slice(trimStart, trimEnd);
 
-            var pages = Math.ceil(querySet.length / rows);
+        //    var pages = Math.ceil(querySet.length / rows);
+        //    pageButtons(pages);
+        //    return {
+        //        'querySet': trimmed,
+        //        'pages': pages
+        //    }
 
-            return {
-                'querySet': trimmed,
-                'pages': pages
-            }
+        //}
 
-        }
-
-        // function pageButtons(pages) {
+        //function pageButtons(pages) {
         //    var wrapper = document.getElementById('pagination-wrapper');
         //    wrapper.innerHTML = ''
 
@@ -134,8 +132,7 @@
         //    }
 
         //    $('.page').on('click', function () {
-        //        $('#body').find('.col-sm-12 results_div').empty()
-
+        //        $('#body').find('.col-sm-12 results_div')
         //        state.page = $(this).val();
 
         //        GetAPI();
@@ -143,7 +140,7 @@
 
         //}
 
-        function GetAPI() {
+        function GetAPI(page = 1) {
             // console.log("start");
             //<div class="col-sm-12 results_div"> $('#mydiv').find('.myclass');
             var table = $('#body').find('.col-sm-12 results_div');
@@ -169,7 +166,7 @@
             http2.open("GET", get_search2);
             http2.send();
             http2.onload = () => {
-                //console.log(http2.responseText);
+                
                 var name = document.getElementsByClassName("results_names");
                 var fromaddr = document.getElementsByClassName("addrFrom");
                 var desccampaign = document.getElementsByClassName("campaignDesc");
@@ -182,7 +179,15 @@
 
                 // x[0].innerHTML = http2.responseText;
                 var x = JSON.parse(http2.responseText);
-                var data = pagination(state.querySet, state.page, state.rows); // page dataset use bellow
+                console.log(x);
+                //var state = {
+                //    'querySet': http2.responseText, // dataset
+                //    'page': 1,
+                //    'rows': 10
+
+                //}
+                //   var data = pagination(state.querySet, state.page, state.rows); // page dataset use bellow
+
                 // x.hits[0].name
                 // console.log(x.hits.hits[0]._source.subject)
                 // console.log(x.hits.hits[0]._source.html)
@@ -193,12 +198,13 @@
                 // desccampaign[0].innerHTML = x.hits.hits[0]._source.excerpt;
                 //optinlinkclass[0].href = x.hits.hits[0]._source.optin;
 
+               
 
                 $(".result_div").remove();
 
                 if (x.hits.total == 1) {
                     $(".results_div").append("<div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='totalresultsclass'>" + x.hits.total + " result </div></div></div>");
-                    for (var p = 1; p <= x.hits.total; p++) {
+                    for (var p = ((page - 1) * 10) + 1; p <= x.hits.total*page; p++) {
                         if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
                             if (x.hits.hits[p - 1]._source.score == 0.0)
                                 var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style = 'color:white; text-decoration: none;' > <div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
@@ -225,7 +231,7 @@
                             totalres = 10;
                         else
                             totalres = x.hits.total;
-                        for (var p = 1; p <= totalres; p++) { // here is where pagination goes.
+                        for (var p = ((page - 1)*10) + 1; p <= totalres*page; p++) { // here is where pagination goes.
                             if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
                                 if (x.hits.hits[p - 1]._source.score == 0.0)
                                     var resulttemplate = "<a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style = 'color:white; text-decoration: none;' > <div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' target='_blank' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
@@ -238,7 +244,7 @@
                                     var resulttemplate = "<a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div> <div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
                             }
                             $(".results_div").append(resulttemplate);
-                            console.log(resulttemplate);
+                            console.log(totalres);
                         }
                     }
 
@@ -258,15 +264,30 @@
 
             /*const http = new XMLHttpRequest()
             //http.open("GET", "/SearchAPI/get('test')")
-            http.open("GET", "http://172.17.1.88:9200/emmares_search_test/_search?q=test")
+            http.open("GET", "http://172.17.1.88:9200/
+            
+            
+          /_search?q=test")
 
             //http.setRequestHeader("Content-Type", "application/json")
             http.send()
             http.onload = () => console.log(http.responseText)*/
 
         }
-
+     
         var googleapilink = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCl_HnMB0IemD7RU40Egwk4dfslKog3ifw&cx=007543547403231751187:ezirirggxb4&q=" + window.location.href.split("?q=")[1] + "&callback=hndlr";
+
+
+        function next() {
+            var final = GetAPI.page + 1;
+            GetAPI(final);
+        }
+
+        function last() {
+            var final = GetAPI.page -1;
+            GetAPI(final);
+
+        }
 
         function showgoogle() {
             $.getScript(googleapilink, function () {
@@ -359,6 +380,8 @@
                 <div class="container">
 
                     <div id="pagination-wrapper"></div>
+                    <button onclick="next();" id="next">Naslednja</button>
+                    <button onclick="last();" id="last">Prejsnja</button>
                 </div>
 
 
