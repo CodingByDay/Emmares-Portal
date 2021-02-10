@@ -14,6 +14,34 @@
       </style>
       <![endif]-->
     <title>EMMARES</title>
+    <style>
+        #next, #last {
+            height: auto;
+            display: inline-block;
+            background-color: gray;
+            border-radius: 10px;
+            border: 4px double #cccccc;
+            color: #eeeeee;
+            text-align: center;
+            font-size: 22px;
+            padding: 20px;
+            width: 100px;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+            #next:hover, #last:hover {
+                background-color: #000;
+            
+            }
+             
+          
+
+</style>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -141,7 +169,7 @@
         //}
 
         function GetAPI(page = 1) {
-           
+
             // console.log("start");
             //<div class="col-sm-12 results_div"> $('#mydiv').find('.myclass');
             var table = $('#body').find('.col-sm-12 results_div');
@@ -167,7 +195,7 @@
             http2.open("GET", get_search2);
             http2.send();
             http2.onload = () => {
-                
+
                 var name = document.getElementsByClassName("results_names");
                 var fromaddr = document.getElementsByClassName("addrFrom");
                 var desccampaign = document.getElementsByClassName("campaignDesc");
@@ -199,7 +227,7 @@
                 // desccampaign[0].innerHTML = x.hits.hits[0]._source.excerpt;
                 //optinlinkclass[0].href = x.hits.hits[0]._source.optin;
 
-               
+
 
                 $(".result_div").remove();
 
@@ -232,7 +260,7 @@
                             totalres = 10;
                         else
                             totalres = x.hits.total;
-                        for (var p = ((page - 1)*10) + 1; p <= totalres*page; p++) { // here is where pagination goes.
+                        for (var p = ((page - 1) * 10) + 1; p <= totalres * page; p++) { // here is where pagination goes.
                             if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
                                 if (x.hits.hits[p - 1]._source.score == 0.0)
                                     var resulttemplate = "<a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style = 'color:white; text-decoration: none;' > <div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' target='_blank' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
@@ -266,8 +294,8 @@
             /*const http = new XMLHttpRequest()
             //http.open("GET", "/SearchAPI/get('test')")
             http.open("GET", "http://172.17.1.88:9200/
-            
-            
+
+
           /_search?q=test")
 
             //http.setRequestHeader("Content-Type", "application/json")
@@ -275,7 +303,7 @@
             http.onload = () => console.log(http.responseText)*/
 
         }
-     
+
         var googleapilink = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCl_HnMB0IemD7RU40Egwk4dfslKog3ifw&cx=007543547403231751187:ezirirggxb4&q=" + window.location.href.split("?q=")[1] + "&callback=hndlr";
 
         var page = 1
@@ -379,12 +407,12 @@
 
                 </div>
 
-                <!-- Pagination html -->
+                <!-- Pagination html --> 
                 <div class="container">
 
                     <div id="pagination-wrapper"></div>
-                    <button onclick="next();" id="next">Naslednja</button>
-                    <button onclick="last();" id="last">Prejsnja</button>
+                    <button onclick="last();" id="last">Last</button>
+                    <button onclick="next();" id="next">Next</button>
                 </div>
 
 
