@@ -103,7 +103,7 @@ namespace Emmares4
             wc.Headers.Add("Content-Type", "application/json");
             try
             {
-                return wc.UploadString(elastichost + "/emmares_search_test/_search?size=10000", json); // fixed size of the return...
+                return wc.UploadString(elastichost + "/emmares_search_test/_search?size=80", json); // fixed size of the return...
             }
             catch
             {
