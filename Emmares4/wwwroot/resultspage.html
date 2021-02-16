@@ -33,14 +33,12 @@
             /* Add a grey background color on mouse-over */
             .pagination a:hover:not(.active) {
                 background-color: #ddd;
-            } 
-             .align {
+            }
 
-                 text-align: center;
-             }
-          
-
-</style>
+        .align {
+            text-align: center;
+        }
+    </style>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -49,7 +47,23 @@
     <!--<link rel="stylesheet" href="lib/Layout/style.css">-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css" rel="stylesheet" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108056731-3"></script>
+
+    <script>
+
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+
+
+
+        gtag('config', 'UA-108056731-3');
+
+    </script>
 
     <script>
         var isMobile = false; //initiate as false
@@ -88,7 +102,7 @@
                 // in production code, item.htmlTitle should have the HTML entities escaped.
                 contentgoogle += "<br>" + "<a target='_blank' href='" + item.link + "'>" + item.title + "</a>" + "<br>" + item.snippet + "<br>" + "<a target='_blank' href='" + item.link + "'>" + item.link + "</a>" + "<br><br>";
             }
-    //
+            //
         }
         //
 
