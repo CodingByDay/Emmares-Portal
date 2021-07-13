@@ -434,7 +434,6 @@
 
 
                 $(".grid-item").remove();
-              
                 $(".result_div").remove();
 
                 if (x.hits.total == 1) {
@@ -774,6 +773,8 @@
                 });
         }
         function AsignValue() {
+
+            view = getCookie("view");
             if (view == "grid") {
 
                 return true;
@@ -785,24 +786,18 @@
         }
         document.addEventListener("DOMContentLoaded", function () {
             const checkbox = document.getElementById('ch')
-
+            // Invert the values.
             checkbox.addEventListener('change', (event) => {
 
-                if (checkbox.checked == true) {
-                    setCookie("view", "grid", 5);
-
-                } else {
-                    setCookie("view", "normal", 5);
-
-                }
+                GridLayout();
             })
         });
         function GridLayout() {
             // Working change function.
             grid = AsignValue();
-
+            console.log(grid);
             grid = !grid;
-
+            console.log(grid);
             if (grid == true) {
 
                 GetAPIGrid(page = page);
