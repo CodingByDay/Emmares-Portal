@@ -95,6 +95,12 @@
             position: absolute !important;
             left: 7% !important;
             top: 250px !important;
+
+        }
+
+        .col-sm-12.grid_div {
+            flex:auto!important;
+            left: 50px!important;
         }
         input:focus + .slider {
             box-shadow: 0 0 1px #2196F3;
@@ -106,20 +112,33 @@
             transform: translateX(26px);
         }
 
-        img:before {
-            content: ' '!important;
-            display: block!important;
-            position: absolute!important;
-            height: 200px!important;
-            width: 400px!important;
-            background-image: url(http://localhost:8080/default.jpg)!important;
+        .btn.btn-primary.subscribeButton {
+            margin-top: 10px!important;
+            position:absolute!important;
+            bottom:0!important;
+            left:0!important;
         }
 
-
+        img:before {
+            content: ' ' !important;
+            display: block !important;
+            position: absolute !important;
+            height: 200px !important;
+            width: 400px !important;
+            background-image: url(http://localhost:8080/default.jpg) !important;
+        }
+        .optinlinkclass {
+            position: relative!important;
+            bottom: 0px!important;
+        }
+        .grid_div {
+            margin: auto !important;
+        }
         .grid-item {
-            
-            grid-row: span 1!important;
-            grid-column: span 1!important;
+            grid-row: span 1 !important;
+            grid-column: span 1 !important;
+            position: relative !important;
+            bottom: 0px !important;
         }
         /* Rounded sliders */
         .slider.round {
@@ -603,14 +622,14 @@
                             console.log(debug);
                             if (x.hits.hits[p - 1]._source.score == 0.0)
                               
-                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style = 'color:white; text-decoration: none;' > <div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1]  + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style = 'color:white; text-decoration: none;' > <div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1]  + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
                             else
-                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1]  + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1]  + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
                         } else {
                             if (x.hits.hits[p - 1]._source.score == 0.0)
-                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1]  + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1]  + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
                             else
-                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
                         }
                         $(".grid_div").append(resulttemplate);
                     }
@@ -631,14 +650,14 @@
                             var image = '<img id="img" src="http://localhost:8080/' + x.hits.hits[p - 1]._source.messageid + '.jpg" width="400" height="200">';
                             if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
                                 if (x.hits.hits[p - 1]._source.score == 0.0)
-                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " ... click to see more. " + x.hits.hits[p - 1]._source.score + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
+                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " <h4>Click to see more.</h4>" + "<br><br>" + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
                                 else
-                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " ... click to see more. " + x.hits.hits[p - 1]._source.score + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
+                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + "<h4>Click to see more.</h4>" + "<br><br>"  + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
                             } else {
                                 if (x.hits.hits[p - 1]._source.score == 0.0)
-                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " ... click to see more. " + x.hits.hits[p - 1]._source.score + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
+                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + "<h4>Click to see more.</h4>" + "<br><br>"  + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
                                 else
-                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='counter'>" + p + image + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div> <div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a></div>";
+                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='counter'>" + p + image + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + "<h4>Click to see more.</h4></div></div><div class='resultWra'><div class='ratingResult'>" +  "</div><br><br> <div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a></div>";
                             }
                             $(".grid_div").append(resulttemplate);
                             console.log(resulttemplate);
