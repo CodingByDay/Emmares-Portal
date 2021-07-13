@@ -46,16 +46,17 @@ namespace Emmares4
         public string Get(string id)
         {
 
-            /*HttpClient client = new HttpClient();
+            /* HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("elastichost + /emmares_search_test/_search?q=test");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));*/
+            new MediaTypeWithQualityHeaderValue("application/json")); */
 
             WebClient wc = new WebClient();
             try
             {
                 return wc.DownloadString(elastichost + "/emmares_search_test/_search?q=" + HttpUtility.UrlEncode(id));
+                
             } //+ "&filter_path=hits.hits._source"
             catch { return "Do not use \", (, ), : and other special characters"; }
 
@@ -82,7 +83,7 @@ namespace Emmares4
             {
                 return wc.DownloadString(elastichost + "/emmares_search_test/_search?q=" + HttpUtility.UrlEncode(id) + "&filter_path=hits");
             } 
-            catch { return "Do not use \", (, ), : and other special characters"; }/* //to dela*/
+            catch { return "Do not use \", (, ), : and other special characters"; }/* // to dela */
 
             //var httpWebRequest = (HttpWebRequest)WebRequest.Create(elastichost + "/emmares_search_test/_search");
             //httpWebRequest.ContentType = "application/json";
@@ -103,14 +104,15 @@ namespace Emmares4
             wc.Headers.Add("Content-Type", "application/json");
             try
             {
-                return wc.UploadString(elastichost + "/emmares_search_test/_search?size=80", json); // fixed size of the return...
+                return wc.UploadString(elastichost + "/emmares_search_test/_search?size=50", json); // fixed size of the return...
+              
             }
             catch
             {
                 return "Error";
             }
             //}
-
+           
 
             /* var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse(); 
              using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
