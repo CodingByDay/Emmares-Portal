@@ -419,7 +419,7 @@
                 //    'page': 1,
                 //    'rows': 10
 
-                //}
+                // }
                 //   var data = pagination(state.querySet, state.page, state.rows); // page dataset use bellow
 
                 // x.hits[0].name
@@ -540,14 +540,17 @@
 
             
             const http2 = new XMLHttpRequest();
+
             // alert("p " + decodeURI(document.getElementById("searchString2").value))
             // console.log(decodeURIComponent(document.getElementById("searchString2").value.replace("%20", " ")));
+
             if (sessionStorage.getItem("country") != null)
                 var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(document.getElementById("searchString2").value + sessionStorage.getItem("country"));
             else
                 var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(document.getElementById("searchString2").value);
 
             // alert(get_search2);
+
             http2.open("GET", get_search2);
             http2.send();
             http2.onload = () => {
@@ -559,6 +562,7 @@
                 var optinlinkclass = document.getElementsByClassName("optinlinkclass");
 
                 // Regular expressions for parsing. Removing special characters, removing links, finding the matched word.
+
                 const regExpressionSpecialCharacters = /[^a-zA-Z ]/g;
                 const regExpressionLongWords = /\b\w{13,}\b/g; // more than 13 characters in a word.
 
@@ -663,7 +667,7 @@
             http.open("GET", "http://172.17.1.88:9200/
 
 
-          /_search?q=test")
+            /_search?q=test")
 
             //http.setRequestHeader("Content-Type", "application/json")
             http.send()
@@ -671,26 +675,19 @@
 
         }
 
-
-
-      
-
         var googleapilink = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCl_HnMB0IemD7RU40Egwk4dfslKog3ifw&cx=007543547403231751187:ezirirggxb4&q=" + window.location.href.split("?q=")[1] + "&callback=hndlr";
 
         var page = 1
 
         function next() {
             
-            page++
+            page++;
 
-     
+            view = AsignValue();
 
             if (view == "grid") {
 
                 GetAPIGrid(page = page);
-
-     
-
             }
 
             else {
@@ -702,8 +699,10 @@
 
         function last() {
 
-            page--
-        
+            page--;
+
+            view = AsignValue();
+
             if (view == "grid") {
 
                 GetAPIGrid(page = page);
@@ -743,12 +742,12 @@
 
             });
         }
-      //  ChangeTheCheckBoxValue();
+        // ChangeTheCheckBoxValue();
      
 
 
 
-        /**/</script>
+        /**/ </script>
 
 
 
@@ -762,8 +761,11 @@
             return crypto.subtle.digest(algo, strBuf)
                 .then(hash => {
                     window.hash = hash;
+
                     // here hash is an arrayBuffer,
+
                     // so we'll connvert it to its hex version
+
                     let result = '';
                     const view = new DataView(hash);
                     for (let i = 0; i < hash.byteLength; i += 4) {
@@ -775,6 +777,7 @@
         function AsignValue() {
 
             view = getCookie("view");
+
             if (view == "grid") {
 
                 return true;
