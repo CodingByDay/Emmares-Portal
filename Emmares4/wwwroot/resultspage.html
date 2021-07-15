@@ -25,11 +25,12 @@
     <style>
         /* The switch - the box around the slider */
 
-        html, body {
+        /*html, body {
             zoom: 0.8!important;
             -moz-transform: scale(0.95);
-        }
+        } */
         .switch {
+
             position: relative;
             display: inline-block;
             width: 60px;
@@ -544,12 +545,6 @@
             // Removing a set of matched dom elements from the DOM.
 
 
-
-
-
-
-
-
             // console.log("start");
             //<div class="col-sm-12 results_div"> $('#mydiv').find('.myclass');
             var table = $('#body').find('.col-sm-12 results_div');
@@ -709,7 +704,7 @@
 
             view = AsignValue();
 
-            if (view == "grid") {
+            if (view == true) {
 
                 GetAPIGrid(page = page);
             }
@@ -727,7 +722,7 @@
 
             view = AsignValue();
 
-            if (view == "grid") {
+            if (view == true) {
 
                 GetAPIGrid(page = page);
             }
@@ -743,8 +738,8 @@
 
 
             page++;
-
-            if (view == "grid") {
+            view = AsignValue();
+            if (view == true) {
 
                 GetAPIGrid(page = page);
 
@@ -798,6 +793,7 @@
                     return " " + result;
                 });
         }
+     
         function AsignValue() {
 
             view = getCookie("view");
@@ -814,10 +810,18 @@
         document.addEventListener("DOMContentLoaded", function () {
             const checkbox = document.getElementById('ch')
             // Invert the values.
+            var view = AsignValue();
+            if (view = true) {
+                checkbox.checked = true;
+            } else {
+                checkbox.checked = false;
+            }
             checkbox.addEventListener('change', (event) => {
 
                 GridLayout();
             })
+
+
         });
         function GridLayout() {
             // Working change function.
@@ -871,6 +875,22 @@
             h.parentNode.insertBefore(script1, h);
         }
 
+
+        document.addEventListener("DOMContentLoaded", function () {
+            ChangeValue();
+        
+        });
+
+
+        function ChangeValue() {
+            const checkbox = document.getElementById('ch');
+
+            var view = AsignValue();
+            if (view == grid) {
+                checkbox.checked = true;
+            } else { checkbox.checked = false; }
+
+        }
 
 
         /**/</script>

@@ -17,11 +17,15 @@ using System.Data.Common;
 
 using Emmares4.Helpers;
 using Emmares4.Elastic;
+using Microsoft.Extensions.Logging;
 
 namespace Emmares4
 {
     public class Startup
     {
+
+
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -33,6 +37,9 @@ namespace Emmares4
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+     
+            services.AddDirectoryBrowser();
+           
             Log.Write("ConfigureServices start");
 
             DBConnection.Set(DbConnection.ConnectionString);
@@ -70,6 +77,12 @@ namespace Emmares4
 
             Log.Write("ConfigureServices end");
         }
+
+
+
+
+
+      
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -113,7 +126,38 @@ namespace Emmares4
 
             Paths.ContentRootDir = env.ContentRootPath;
 
-            Log.Write("Configure end");
+            Log.Write("Configuring static files.");
+
+            app.UseStaticFiles();
+
+            app.UseStaticFiles(new StaticFileOptions()
+
+            {
+
+             FileProvider = new PhysicalFileProvider(
+
+             Path.Combine(Directory.GetCurrentDirectory(),
+
+             @"App_Data/images")),
+
+             RequestPath = new PathString("/static")
+
+
+            });
+
+            Log.Write("Configuring static directory browsing.");
+
+            app.UseDirectoryBrowser(new DirectoryBrowserOptions()
+            {
+                FileProvider = new PhysicalFileProvider(
+
+             Path.Combine(Directory.GetCurrentDirectory(),
+
+
+             @"App_Data/images")),
+
+            });
+
         }
     }
 }
