@@ -85,8 +85,11 @@ namespace Emmares4
       
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            
+
             Log.Write("Configure start");
 
             if (env.IsDevelopment())
@@ -101,16 +104,22 @@ namespace Emmares4
             }
 
             // set up default static page
+
             // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-2.1
             DefaultFilesOptions options = new DefaultFilesOptions();
+
             options.DefaultFileNames.Clear();
+
             options.DefaultFileNames.Add("searchpage.html");
+
             app.UseDefaultFiles(options);
+
             app.UseStaticFiles();
+
             app.UseStaticFiles(new StaticFileOptions()
             {
                 FileProvider = new PhysicalFileProvider(
-             Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
+                Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
                 RequestPath = new PathString("/lib")
             });
 
@@ -126,37 +135,7 @@ namespace Emmares4
 
             Paths.ContentRootDir = env.ContentRootPath;
 
-            Log.Write("Configuring static files.");
-
-            app.UseStaticFiles();
-
-            app.UseStaticFiles(new StaticFileOptions()
-
-            {
-
-             FileProvider = new PhysicalFileProvider(
-
-             Path.Combine(Directory.GetCurrentDirectory(),
-
-             @"App_Data/images")),
-
-             RequestPath = new PathString("/static")
-
-
-            });
-
-            Log.Write("Configuring static directory browsing.");
-
-            app.UseDirectoryBrowser(new DirectoryBrowserOptions()
-            {
-                FileProvider = new PhysicalFileProvider(
-
-             Path.Combine(Directory.GetCurrentDirectory(),
-
-
-             @"App_Data/images")),
-
-            });
+            Log.Write("Configuring static files.");         
 
         }
     }

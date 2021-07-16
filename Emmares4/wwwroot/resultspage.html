@@ -23,250 +23,242 @@
       <![endif]-->
     <title>EMMARES</title>
     <style>
-           /* The switch - the box around the slider */
+        /* The switch - the box around the slider */
 
-           html, body {
-               zoom: 0.8 !important;
-               -moz-transform: scale(0.95);
-           }
+    html, body {
+            zoom: 0.8!important;
+            -moz-transform: scale(0.95);
+        }
 
-           .switch {
-               overflow: hidden;
-               display: inline-block;
-               width: 8em;
-               background: #222;
-               padding: 0.125em;
-               color: black;
-               cursor: pointer;
-           }
+        .switch {
+            overflow: hidden;
+            display: inline-block;
+            width: 8em;
+            background: #222;
+            padding: 0.125em;
+            color: black;
+            cursor: pointer;
+        }
 
-               .switch input {
-                   position: absolute;
-                   visibility: hidden;
-               }
+            .switch input {
+                position: absolute;
+                visibility: hidden;
+            }
 
-               .switch span {
-                   position: relative;
-                   left: 0%;
-                   display: block;
-                   text-transform: uppercase;
-                   /**
-        * Holo doesn't have any transition, but
-        * it's added here for demo purposes
-        */
-                   -webkit-transition: left 200ms ease-out;
-                   -moz-transition: left 200ms ease-out;
-                   -o-transition: left 200ms ease-out;
-                   transition: left 200ms ease-out;
-               }
+            .switch span {
+                position: relative;
+                left: 0%;
+                display: block;
+                text-transform: uppercase;
+                /**
+     * Holo doesn't have any transition, but
+     * it's added here for demo purposes
+     */
+                -webkit-transition: left 200ms ease-out;
+                -moz-transition: left 200ms ease-out;
+                -o-transition: left 200ms ease-out;
+                transition: left 200ms ease-out;
+            }
 
-               .switch :checked + span {
-                   left: 50%;
-               }
+            .switch :checked + span {
+                left: 50%;
+            }
 
-               /* Default unchecked state */
-               .switch span:before {
-                   content: attr(data-unchecked);
-                   display: block;
-                   width: 50%;
-                   background-color: ghostwhite;
-                   border-radius: 0.15em;
-                   box-shadow: inset 0 0.1em 0 rgba(255, 255, 255, 0.3);
-                   color: #b3b3b3;
-               }
+            /* Default unchecked state */
+            .switch span:before {
+                content: attr(data-unchecked);
+                display: block;
+                width: 50%;
+                background-color: ghostwhite;
+                border-radius: 0.15em;
+                box-shadow: inset 0 0.1em 0 rgba(255, 255, 255, 0.3);
+                color: #b3b3b3;
+            }
 
-               /* Checked state */
-               .switch :checked + span:before {
-                   content: attr(data-checked);
-                   background-color: #0099CC;
-               }
-
-
-           /* Base styles */
-           html {
-               font: 100%/1.5 'Roboto', sans-serif;
-               padding-top: 3em;
-               background-color: #0e1012;
-               color: #b3b3b3;
-               text-align: left !important;
-           }
-
-           h1 {
-               font-weight: 100;
-           }
+            /* Checked state */
+            .switch :checked + span:before {
+                content: attr(data-checked);
+                background-color: #0099CC;
+            }
 
 
+        /* Base styles */
+        html {
+            font: 100%/1.5 'Roboto', sans-serif;
+            padding-top: 3em;
+            background-color: #0e1012;
+            color: #b3b3b3;
+            text-align: left!important;
+        }
+
+        h1 {
+            font-weight: 100;
+        }
 
 
 
 
-           .switch {
-               position: relative;
-               display: inline-block;
-               width: 120px;
-               height: 30px;
-               top: 30px !important;
-               float: left !important;
-               margin-left: 740px;
-           }
-
-               /* Hide default HTML checkbox */
-               .switch input {
-                   opacity: 0;
-                   width: 0;
-                   height: 0;
-               }
-
-           .totalresultsclassGrid {
-               font-size: 15px !important;
-               color: #ffffff !important;
-               font-weight: normal !important;
-               line-height: 1.6 !important;
-               text-align: justify !important;
-               position: absolute;
-               top: -150px;
-               right: 300px !important;
-           }
-           /* The slider */
-           .slider {
-               position: absolute;
-               cursor: pointer;
-               top: 0;
-               left: 0;
-               right: 0;
-               bottom: 0;
-               background-color: #ccc;
-               -webkit-transition: .4s;
-               transition: .4s;
-           }
-
-               .slider:before {
-                   position: absolute;
-                   content: "";
-                   height: 26px;
-                   width: 26px;
-                   left: 4px;
-                   bottom: 4px;
-                   background-color: white;
-                   -webkit-transition: .4s;
-                   transition: .4s;
-               }
-
-           input:checked + .slider {
-               background-color: #2196F3;
-           }
-
-           .center {
-               margin: auto;
-               align-items: center;
-               align-content: center;
-               align-self: center;
-           }
-
-           .grid_div {
-               align-content: center !important;
-               margin: auto !important;
-               display: grid !important;
-               grid-auto-columns: max-content !important;
-               grid-auto-flow: dense !important;
-               grid-auto-rows: minmax(100px, auto) !important;
-               grid-gap: 25px !important;
-               grid-template-columns: repeat(5, 1fr) !important;
-               max-width: 800px !important;
-               width: 100% !important;
-               position: absolute !important;
-               left: 7% !important;
-               top: 250px !important;
-           }
 
 
-           input:focus + .slider {
-               box-shadow: 0 0 1px #2196F3;
-           }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 120px;
+            height: 30px;
+            top:30px!important;
+            float: left !important;
+            margin-left: 740px;
+        }
 
-           input:checked + .slider:before {
-               -webkit-transform: translateX(26px);
-               -ms-transform: translateX(26px);
-               transform: translateX(26px);
-           }
+            /* Hide default HTML checkbox */
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+        .totalresultsclassGrid {
+            font-size: 15px !important;
+            color: #ffffff !important;
+            font-weight: normal !important;
+            line-height: 1.6 !important;
+            text-align: justify !important;
+            position: absolute;
+            top: -150px;
+            right: 300px!important;
+        }
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
 
-           .btn.btn-primary.subscribeButton {
-               margin-top: 10px !important;
-               position: absolute !important;
-               bottom: 0 !important;
-               left: 50% !important;
-           }
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+   
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        .center {
+            margin: auto;
+            align-items: center;
+            align-content: center;
+            align-self: center;
+        }
+        .grid_div {
+            align-content: center !important;
+            margin: auto !important;
+            display: grid !important;
+            grid-auto-columns: max-content !important;
+            grid-auto-flow: dense !important;
+            grid-auto-rows: minmax(100px, auto) !important;
+            grid-gap: 25px !important;
+            grid-template-columns: repeat(5, 1fr) !important;
+            max-width: 800px !important;
+            width: 100% !important;
+            position: absolute !important;
+            left: 7% !important;
+            top: 250px !important;
 
-           img:before {
-               content: ' ' !important;
-               display: block !important;
-               position: absolute !important;
-               height: 200px !important;
-               width: 400px !important;
-               background-image: url(http://localhost:8080/default.jpg) !important;
-           }
+        }
 
-           .optinlinkclass {
-               position: relative !important;
-               bottom: 0px !important;
-           }
+    
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+      
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
 
-           .grid_div {
-               margin: auto !important;
-           }
+        .btn.btn-primary.subscribeButton {
+            margin-top: 10px!important;
+            position:absolute!important;
+            bottom:0!important;
+            left:50%!important;
+        }
 
-           .grid-item {
-               grid-row: span 1 !important;
-               grid-column: span 1 !important;
-               position: relative !important;
-               bottom: 0px !important;
-           }
-           /* Rounded sliders */
-           .slider.round {
-               border-radius: 34px;
-           }
+        img:before {
+            content: ' ' !important;
+            display: block !important;
+            position: absolute !important;
+            height: 200px !important;
+            width: 400px !important;
+            background-image: url(http://10.100.100.152:8080/default.jpg) !important;
+        }
+        .optinlinkclass {
+            position: relative!important;
+            bottom: 0px!important;
+        }
+        .grid_div {
+            margin: auto !important;
+        }
+        .grid-item {
+            grid-row: span 1 !important;
+            grid-column: span 1 !important;
+            position: relative !important;
+            bottom: 0px !important;
+        }
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
 
-               .slider.round:before {
-                   border-radius: 50%;
-               }
-           /* Pagination links */
-           .pagination a {
-               color: black;
-               float: left;
-               padding: 8px 16px;
-               text-decoration: none;
-               transition: background-color .3s;
-           }
+            .slider.round:before {
+                border-radius: 50%;
+            }
+        /* Pagination links */
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
 
-               /* Style the active/current link */
-               .pagination a.active {
-                   background-color: dodgerblue;
-                   color: white;
-               }
+            /* Style the active/current link */
+            .pagination a.active {
+                background-color: dodgerblue;
+                color: white;
+            }
 
-               /* Add a grey background color on mouse-over */
-               .pagination a:hover:not(.active) {
-                   background-color: #ddd;
-               }
-
-           .results {
-               overflow: auto;
-               position: fixed;
-               top: 100px;
-               bottom: 0;
-               right: 0;
-               width: 500px;
-               border: 3px solid #73AD;
-               resize: both;
-           }
-
-           .align {
-               text-align: center;
-           }
-
-           .switch {
-               float: right;
-           }
+            /* Add a grey background color on mouse-over */
+            .pagination a:hover:not(.active) {
+                background-color: #ddd;
+            }
+        .results {
+            overflow: auto;
+            position:fixed;
+            top: 100px;
+            bottom: 0;
+            right: 0;
+            width: 500px;
+            border: 3px solid #73AD;
+            resize:both;  
+        }
+        .align {
+            text-align: center;
+        }
+        .switch {
+            float: right;
+        }
     </style>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -345,7 +337,7 @@
             for (; i < l; i++) {
                 var t = img[i];
                 if (t.naturalWidth === 0) {
-                    //this image is broken
+                    // this image is broken
                     t.src = url;
                 }
             }
@@ -354,7 +346,7 @@
 
 
         window.onload = function () {
-            fixBrokenImages('http://localhost:8080/default.jpg');
+            fixBrokenImages('/images/default.jpg');
         }
         var contentgoogle = "";
 
@@ -397,8 +389,8 @@
 
             // Setting a cookie
             // Two options: normal and grid.
-
-            view = getCookie("view");
+        
+           view = getCookie("view");
 
 
             if (view != "grid") {
@@ -407,13 +399,7 @@
                 GetAPIGrid(page = page);
             }
 
-
-
-
-
-
-
-
+            
         }
         if (window.attachEvent) {
             window.attachEvent('onload', entersearchininput);
@@ -472,14 +458,16 @@
         //    })
 
         //}
+
         function myFunction() {
             var image = document.getElementById("img");
-            image.src = "http://localhost:8080/default.jpg";
+            image.src = "/images/default.jpg";
         }
         function GetAPI(page = 1) {
 
             // console.log("start");
             //<div class="col-sm-12 results_div"> $('#mydiv').find('.myclass');
+
             var table = $('#body').find('.col-sm-12 results_div');
             var img = document.createElement("img");
             img.id = "loading";
@@ -490,10 +478,11 @@
             img.alt = "Loading - please wait";
             document.body.appendChild(img);
 
-
+            
             const http2 = new XMLHttpRequest();
             // alert("p " + decodeURI(document.getElementById("searchString2").value))
             // console.log(decodeURIComponent(document.getElementById("searchString2").value.replace("%20", " ")));
+
             if (sessionStorage.getItem("country") != null)
                 var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(document.getElementById("searchString2").value + sessionStorage.getItem("country"));
             else
@@ -598,7 +587,7 @@
                     goonresults();
                 }
             });
-
+            
             /* const http = new XMLHttpRequest()
             // http.open("GET", "/SearchAPI/get('test')")
             http.open("GET", "http://172.17.1.88:9200/
@@ -635,7 +624,7 @@
             img.alt = "Loading - please wait";
             document.body.appendChild(img);
 
-
+            
             const http2 = new XMLHttpRequest();
 
             // alert("p " + decodeURI(document.getElementById("searchString2").value))
@@ -685,7 +674,7 @@
                 // optinlinkclass[0].href = x.hits.hits[0]._source.optin;
 
 
-
+              
                 $(".result_div").remove();
                 $(".grid-item").remove();
 
@@ -699,13 +688,13 @@
                             var debug = "<img src='C:\inetpub\wwwroot\App_Data\images" + x.hits.hits[p - 1]._source.messageid + ".jpg width='700' height='400'>";
                             console.log(debug);
                             if (x.hits.hits[p - 1]._source.score == 0.0)
-
-                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style = 'color:white; text-decoration: none;' > <div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                              
+                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style = 'color:white; text-decoration: none;' > <div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1]  + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
                             else
-                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1]  + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
                         } else {
                             if (x.hits.hits[p - 1]._source.score == 0.0)
-                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1]  + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
                             else
                                 var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
                         }
@@ -722,20 +711,22 @@
                         var totalres; // all results on page
                         if (x.hits.total > 10)
                             totalres = 10;
+                        
                         else
                             totalres = x.hits.total;
                         for (var p = ((page - 1) * 10) + 1; p <= totalres * page; p++) { // here is where pagination goes.
-                            var image = '<img id="img" src="http://10.100.100.152:8080/' + x.hits.hits[p - 1]._source.messageid + '.jpg" width="400" height="200">';
+                            var image = '<img id="img" src="/images/' + x.hits.hits[p - 1]._source.messageid + '.jpg" width="400" height="200">';
+                            console.log(image);
                             if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
                                 if (x.hits.hits[p - 1]._source.score == 0.0)
                                     var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " <h4>Click to see more.</h4>" + "<br><br>" + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
                                 else
-                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + "<h4>Click to see more.</h4>" + "<br><br>" + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
+                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + "<h4>Click to see more.</h4>" + "<br><br>"  + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
                             } else {
                                 if (x.hits.hits[p - 1]._source.score == 0.0)
-                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + "<h4>Click to see more.</h4>" + "<br><br>" + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
+                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + "<h4>Click to see more.</h4>" + "<br><br>"  + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
                                 else
-                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='counter'>" + p + image + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + "<h4>Click to see more.</h4></div></div><div class='resultWra'><div class='ratingResult'>" + "</div><br><br> <div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a></div>";
+                                    var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='counter'>" + p + image + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + "<h4>Click to see more.</h4></div></div><div class='resultWra'><div class='ratingResult'>" +  "</div><br><br> <div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a></div>";
                             }
                             $(".grid_div").append(resulttemplate);
                             console.log(resulttemplate);
@@ -758,7 +749,7 @@
             });
 
 
-
+       
             /* const http = new XMLHttpRequest()
             // http.open("GET", "/SearchAPI/get('test')")
             http.open("GET", "http://172.17.1.88:9200/
@@ -777,7 +768,7 @@
         var page = 1
 
         function next() {
-
+            
             page++;
 
             view = AsignValue();
@@ -840,28 +831,14 @@
             });
         }
         // ChangeTheCheckBoxValue();
+     
 
 
 
+        /**/ </script>
 
-        /**/</script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-    <script>
-        window.cookieconsent.initialise({
-            "palette": {
-                "popup": {
-                    "background": "#eaf7f7",
-                    "text": "#5c7291"
-                },
-                "button": {
-                    "background": "#56cbdb",
-                    "text": "#ffffff"
-                }
-            }
-        });
-    </script>
 </head>
 
 <body>
