@@ -40,8 +40,28 @@ namespace Emmares4
             return "Search did not find any results.";
         }
 
-        // GET api/<controller>/5
-        [HttpGet("{id}")]
+
+
+        // POST /log/map
+
+        // {
+
+        // "keyword": "Zeus",
+  
+        // "time":"2015-01-01",
+  
+        // "location":"Olymp"
+
+        // }
+
+
+
+
+
+
+
+    // GET api/<controller>/5
+    [HttpGet("{id}")]
         // [Route("api/Test/{id}")]
         public string Get(string id)
         {
@@ -78,7 +98,7 @@ namespace Emmares4
         [HttpGet("{id}")]
         public string get_search(string id)
         {
-            /*WebClient wc = new WebClient(); //to dela
+            /* WebClient wc = new WebClient(); // to dela
             try
             {
                 return wc.DownloadString(elastichost + "/emmares_search_test/_search?q=" + HttpUtility.UrlEncode(id) + "&filter_path=hits");
@@ -104,8 +124,9 @@ namespace Emmares4
             wc.Headers.Add("Content-Type", "application/json");
             try
             {
+                var test = Log(id);
+
                 return wc.UploadString(elastichost + "/emmares_search_test/_search?size=50", json); // fixed size of the return...
-              
             }
             catch
             {
@@ -120,8 +141,50 @@ namespace Emmares4
                  var result = streamReader.ReadToEnd();
                  return result;
              }*/
-
+            
         }
+
+        /// <summary>
+        /// Posts a elastic search request to log the keyword value.
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <returns></returns>
+        
+        private bool Log(string keyword)
+        {
+
+
+
+            string country = Request.Cookies["country"];
+            string search_value = Request.Cookies["searchString"];
+            // GetGeoLocation()
+            // For now Slovenia.
+            string jsonbody = "{ \"time\" : \"" + DateTime.UtcNow.Date + "\", \"location\" : \"" + country + "\", \"keyword\" : \"" + search_value + "\" }";
+
+            WebClient wc = new WebClient();
+            wc.Headers.Add("Content-Type", "application/json");
+            try
+
+            {
+
+                var debug = wc.UploadString(elastichost + "/log/map/_doc", jsonbody); // fixed size of the return...
+
+                return true;
+
+            }
+            catch
+
+            {
+                return false;
+            }
+        }
+
+        /// This is the Log method for the search. Index is log, mapping is map.
+
+
+
+
+
 
         // POST api/<controller>
         [HttpPost]
