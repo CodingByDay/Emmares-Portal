@@ -37,30 +37,26 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script>
 
+
+
+        /**
+         * 
+         * Tracking module.
+         * */
         function goonresults() {
             var searchString = document.getElementById("searchString").value; // Gettting the search string.
-            console.log("Go on");
-
+            console.log(`The search string is ${searchString}`);
             // Part of the code partaining to the geo location.
-
             $.getJSON('https://api.ipify.org?format=json', function (data) {
-
                 var address = data.ip; // Use this service to get the ip of the client visiting emmares.com.
-
-                console.log(address);
-
                 // https://freegeoip.app/json/195.95.161.11
-
                 // GeoLocation = GetLocationFromIP('https://freegeoip.app/json/195.95.161.11')
-
                 $.getJSON(`https://freegeoip.app/json/${address}`, function (data) { // Must use back ticks for interpolation here.
-
-                    console.log("Inside second function");
-
-                    console.log(data.country_name);
                     setCookie('searchString', searchString, 365);
                     setCookie('country', data.country_name, 365);
                     console.log(`The search string is ${searchString}`);
+                    var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString").value);
+                    window.location.href = linktosearchresults;
                 });
             });
 
@@ -68,9 +64,9 @@
              // window.location.
              console.log(`The country is: ${getCookie('country')}`); // Cookie setting works.            
 
-             var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString").value);
 
-             window.location.href = linktosearchresults;
+
+         
 
 
         }

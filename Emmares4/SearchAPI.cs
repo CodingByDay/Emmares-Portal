@@ -155,30 +155,20 @@ namespace Emmares4
         
         private bool Log(string keyword)
         {
-
             string country = Request.Cookies["country"];
-
             string search_value = Request.Cookies["searchString"];
-
             // GetGeoLocation()
-
             // For now Slovenia.
-
             DateTime dateTime = DateTime.UtcNow.Date;
-
             var justDate = dateTime.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
-
             string jsonbody = "{ \"time\" : \"" + justDate + "\", \"location\" : \"" + country + "\", \"keyword\" : \"" + search_value + "\" }";
-
+            // Here is a problem. Actually what happens is that searched value cookie does not change for some reason.
             WebClient wc = new WebClient();
-
             wc.Headers.Add("Content-Type", "application/json");
-
             try
             {
                 var debug = wc.UploadString(elastichost + "/log/map", jsonbody); // fixed size of the return...[address/index/mapping/id]
                 return true;
-
             }
             catch
             {
