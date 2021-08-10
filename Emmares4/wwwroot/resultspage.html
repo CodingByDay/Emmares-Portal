@@ -23,6 +23,14 @@
       <![endif]-->
     <title>EMMARES</title>
     <style>
+
+
+
+
+        .footer {
+            position: absolute!important;
+            bottom: 5px!important;
+        }
         /* The switch - the box around the slider */
         .loading {
             width: 150px;
@@ -506,8 +514,8 @@
 
 
 
-        // Scroll event for the pagination actually the infinite scroll.
-
+        // Infinite scroll.
+        
         pageGRID = 1;
         window.addEventListener('scroll', () => {
             view = AsignValue();
@@ -516,13 +524,17 @@
 
             if (scrollTop + clientHeight > scrollHeight - 5) {
                 if (view == true) {
+
                     console.log(pageGRID);
                     GetAPIGrid(pageGRID);
                     pageGRID++;
+
                 } else {
+
                     console.log(page);
                     GetAPI(page);
                     page++;
+
                 }
             }
 
