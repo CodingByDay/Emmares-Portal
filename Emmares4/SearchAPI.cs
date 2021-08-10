@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.IO;
 using System.Reflection;
 using Emmares4.Helpers;
+using System.Globalization;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -18,10 +19,17 @@ namespace Emmares4
 
     public class teststrings
     {
+
         public string ena { get; set; }
         public string dve { get; set; }
         public decimal tri { get; set; }
+
     }
+
+
+
+
+
     [Route("[controller]/[action]")]
     public class SearchAPI : Controller
     {
@@ -53,11 +61,6 @@ namespace Emmares4
         // "location":"Olymp"
 
         // }
-
-
-
-
-
 
 
     // GET api/<controller>/5
@@ -153,33 +156,37 @@ namespace Emmares4
         private bool Log(string keyword)
         {
 
-
-
             string country = Request.Cookies["country"];
+
             string search_value = Request.Cookies["searchString"];
+
             // GetGeoLocation()
+
             // For now Slovenia.
-            string jsonbody = "{ \"time\" : \"" + DateTime.UtcNow.Date + "\", \"location\" : \"" + country + "\", \"keyword\" : \"" + search_value + "\" }";
+
+            DateTime dateTime = DateTime.UtcNow.Date;
+
+            var justDate = dateTime.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+
+            string jsonbody = "{ \"time\" : \"" + justDate + "\", \"location\" : \"" + country + "\", \"keyword\" : \"" + search_value + "\" }";
 
             WebClient wc = new WebClient();
+
             wc.Headers.Add("Content-Type", "application/json");
+
             try
-
             {
-
-                var debug = wc.UploadString(elastichost + "/log/map/_doc", jsonbody); // fixed size of the return...
-
+                var debug = wc.UploadString(elastichost + "/log/map", jsonbody); // fixed size of the return...[address/index/mapping/id]
                 return true;
 
             }
             catch
-
             {
                 return false;
             }
         }
 
-        /// This is the Log method for the search. Index is log, mapping is map.
+        /// 
 
 
 
