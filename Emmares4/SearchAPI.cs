@@ -148,11 +148,10 @@ namespace Emmares4
         }
 
         /// <summary>
-        /// Posts a elastic search request to log the keyword value.
+        /// Logs: GeoLocation, keyword, and date of the event.
         /// </summary>
         /// <param name="keyword"></param>
         /// <returns></returns>
-        
         private bool Log(string keyword)
         {
 
