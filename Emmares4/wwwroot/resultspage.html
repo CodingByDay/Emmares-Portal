@@ -362,11 +362,16 @@
 
 
     <script>
+   
+
         function setCookie(name, value, exp_days) {
 
             var d = new Date();
+
             d.setTime(d.getTime() + (exp_days * 24 * 60 * 60 * 1000));
+
             var expires = "expires=" + d.toGMTString();
+
             document.cookie = name + "=" + value + ";" + expires + ";path=/";
 
         }
@@ -396,7 +401,6 @@
                     t.src = url;
                 }
             }
-            console.log(img.length);
         }
 
 
@@ -520,21 +524,26 @@
         // Infinite scroll.
         
         pageGRID = 1;
-        window.addEventListener('scroll', () => {
-            view = AsignValue();
-           
-            const { scrollHeight, scrollTop, clientHeight } = document.documentElement;
 
+        window.addEventListener('scroll', () => {
+            //
+            view = AsignValue();
+            //
+            const { scrollHeight, scrollTop, clientHeight } = document.documentElement;
+            //
+            //
+            //
+            //
+            //
             if (scrollTop + clientHeight > scrollHeight - 5) {
                 if (view == true) {
 
-                    console.log(pageGRID);
                     GetAPIGrid(pageGRID);
+                    console.log(pageGRID);
                     pageGRID++;
 
                 } else {
 
-                    console.log(page);
                     GetAPI(page);
                     page++;
 
@@ -542,7 +551,7 @@
             }
 
 
-
+            //
         });
 
 
@@ -555,8 +564,7 @@
 
         function GetAPI(page) {
 
-            console.log(page);
-
+         
 
             // console.log("start");
             //<div class="col-sm-12 results_div"> $('#mydiv').find('.myclass');
@@ -624,7 +632,7 @@
          
 
                 if (x.hits.total == 1) {
-                    $(".results_div").append("<div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='totalresultsclass'>" + x.hits.total + " result </div></div></div>");
+                //    $(".results_div").append("<div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='totalresultsclass'>" + x.hits.total + " result </div></div></div>");
                     for (var p = ((page - 1) * 10) + 1; p <= x.hits.total; p++) {
                         if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
                             if (x.hits.hits[p - 1]._source.score == 0.0)
@@ -646,7 +654,7 @@
                         //  $(".results_div").append("<div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='totalresultsclass'>" + x.hits.total + " results for emails, search on web: <br><br><div id='contentgoogle'>" + contentgoogle + "</div> </div></div></div>");
                         showgoogle();
                     } else {
-                        $(".results_div").append("<div class='col-sm-10 result_div'> <div class='resultHeading col-sm-9'><div class='totalresultsclass'>" + x.hits.total + " results </div></div></div > ");
+                      //  $(".results_div").append("<div class='col-sm-10 result_div'> <div class='resultHeading col-sm-9'><div class='totalresultsclass'>" + x.hits.total + " results </div></div></div > ");
                         var totalres; // all results on page
                         if (x.hits.total > 10)
                             totalres = 10;
@@ -667,7 +675,6 @@
                             }
 
                             $(".results_div").append(resulttemplate);
-                            console.log(totalres);
                         }
                     }
 
@@ -700,14 +707,13 @@
         var time = 0;
 
         /**
-         * / Page equals to previous pagination. Now we need to do the grid layout specific stuff.
-         * @param page
+         * / Grid layout API call.
+         * @param pagegrid
          */
-        function GetAPIGrid(page) {
-
+        function GetAPIGrid(pagegrid) {
             // Removing a set of matched dom elements from the DOM.
-
-            console.log(page);
+            $("#footer").remove();
+            //console.log(page);
             // console.log("start");
             //<div class="col-sm-12 results_div"> $('#mydiv').find('.myclass');
             var table = $('#body').find('.col-sm-12 results_div');
@@ -770,19 +776,19 @@
                 // optinlinkclass[0].href = x.hits.hits[0]._source.optin;
 
 
-              
                 $(".result_div").remove();
                
 
 
                 if (x.hits.total == 1) {
-                    $(".results_div").append("<div class='totalresultsclassGrid'>" + x.hits.total + " result </div></div>");
-                    for (var p = ((page - 1) * 10) + 1; p <= x.hits.total; p++) {
-                        //var image = '<img src="C:\Users\emmaresmvp\Desktop\emares\Emmares\Emmares4\App_Data\images' + x.hits.hits[p - 1]._source.messageid + '.jpg width="700" height="400">';
-                        console.log(image);
+                  //  $(".results_div").append("<div class='totalresultsclassGrid'>" + x.hits.total + " result </div></div>");
+                    for (var p = ((pagegrid - 1) * 10) + 1; p <= x.hits.total; p++) {
+                        console.log(`Value is ${p}`);
+
+                        // var image = '<img src="C:\Users\emmaresmvp\Desktop\emares\Emmares\Emmares4\App_Data\images' + x.hits.hits[p - 1]._source.messageid + '.jpg width="700" height="400">';
                         if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
                             var debug = "<img src='C:\inetpub\wwwroot\App_Data\images" + x.hits.hits[p - 1]._source.messageid + ".jpg width='700' height='400'>";
-                            console.log(debug);
+                            
                             if (x.hits.hits[p - 1]._source.score == 0.0)                            
                                 var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style = 'color:white; text-decoration: none;' > <div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 300) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1]  + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
                             else
@@ -802,16 +808,16 @@
                         //  $(".results_div").append("<div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='totalresultsclass'>" + x.hits.total + " results for emails, search on web: <br><br><div id='contentgoogle'>" + contentgoogle + "</div> </div></div></div>");
                         showgoogle();
                     } else {
-                        $(".grid_div").append("<div class='totalresultsclassGrid'>" + x.hits.total + " results </div></div></div>");
+                    //    $(".grid_div").append("<div class='totalresultsclassGrid'>" + x.hits.total + " results </div></div></div>");
                         var totalres; // all results on page
                         if (x.hits.total > 10)
                             totalres = 10;
                         
                         else
                             totalres = x.hits.total;
-                        for (var p = ((page - 1) * 10) + 1; p <= totalres * page; p++) { // here is where pagination goes.
+                        for (var p = ((pagegrid - 1) * 10) + 1; p <= totalres * pagegrid; p++) { // here is where pagination goes.
                              var image = '<img id="img" src="/images/' + x.hits.hits[p - 1]._source.messageid + '.jpg" width="400" height="200">';
-				            console.log(image);
+                            console.log(`Value is ${p}`);
                             if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
                                 if (x.hits.hits[p - 1]._source.score == 0.0)
                                     var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " <h4>Click to see more.</h4>" + "<br><br>" + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
@@ -824,7 +830,6 @@
                                     var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='counter'>" + p + image + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + "<h4>Click to see more.</h4></div></div><div class='resultWra'><div class='ratingResult'>" +  "</div><br><br> <div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a></div>";
                             }
                             $(".grid_div").append(resulttemplate);
-                            console.log(resulttemplate);
                         }
 
                     }
@@ -855,8 +860,9 @@
             //http.setRequestHeader("Content-Type", "application/json")
             http.send()
             http.onload = () => console.log(http.responseText) */
+           // var footer = "<div id='footer'><ul><li><a class='link' href='https://www.facebook.com/emmares.io'><i class='fab fa-facebook-f'></i></a></li>li><a class='link' href='https://www.linkedin.com/company/emmaresio'><i class='fab fa-linkedin-in'></i></a></li><li><a class='link' href='https://twitter.com/emmares_io'><i class='fab fa-twitter'></i></a></li><li><a class='link' href='https://medium.com/emmares'><i class='fab fa-medium-m'></i></a></li><li><a class='link' href='https://t.me/emmares'><i class='fab fa-telegram-plane'></i></a></li><li>|</li><li><a class='link' href=''>About</a></li><li><a class='link' href=''>Pricing</a></li><div class='footer-copyright text-right py-3' style='margin-right:30px; color: gray;'>© Emmares 2018</div></ul></div >"; 
 
-
+          //  $("body").append(footer);
         }
 
         var googleapilink = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCl_HnMB0IemD7RU40Egwk4dfslKog3ifw&cx=007543547403231751187:ezirirggxb4&q=" + window.location.href.split("?q=")[1] + "&callback=hndlr";
@@ -973,42 +979,69 @@
                 return false;
             }
         }
+
         document.addEventListener("DOMContentLoaded", function () {
-            const checkbox = document.getElementById('ch')
+
+            const checkbox = document.getElementById('ch');
+
             // Invert the values.
+
             var view = AsignValue();
+
             if (view == true) {
+
                 checkbox.checked = true;
+
             } else {
+
                 checkbox.checked = false;
+
             }
+
+
+
+
             checkbox.addEventListener('change', (event) => {
 
+                // ///////////////////////////////////////////////
+                //
+                //
+                // 
+                // Reseting the values after the changing the view.
+                page = 1;
+                pageGRID = 1;
+                // Change the layout. ////////////////////////////
                 GridLayout();
             })
 
 
         });
+
+
+        pageGRID = 0;
         function GridLayout() {
+
             // Working change function.
+
             grid = AsignValue();
             console.log(grid);
-            grid = !grid;
-            console.log(grid);
+            grid = !grid; // Change the value
+            // console.log(grid);
             if (grid == true) {
 
-                GetAPIGrid(page = page);
+                GetAPIGrid(pageGRID);
 
                 setCookie("view", "grid", 5);
 
-                console.log("Grid layout");
+                // console.log("Grid layout");
 
             } else {
+
                 GetAPI(page = page);
 
                 setCookie("view", "normal", 5);
 
-                console.log("Normal layout");
+                //console.log("Normal layout");
 
             }
         }
@@ -1111,31 +1144,17 @@
 
                 </div>
 
-               
 
-                <!-- Pagination html -->
-               
+
+                <!-- Pagination -->
+
 
 
             </div>
 
                 <!-- Body end -->
             </div>
-        <div id="footer">
-            <!-- Footer start -->
-            <ul>
-                <li><a class="link" href="https://www.facebook.com/emmares.io"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a class="link" href="https://www.linkedin.com/company/emmaresio"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a class="link" href="https://twitter.com/emmares_io"><i class="fab fa-twitter"></i></a></li>
-                <li><a class="link" href="https://medium.com/emmares"><i class="fab fa-medium-m"></i></a></li>
-                <li><a class="link" href="https://t.me/emmares"><i class="fab fa-telegram-plane"></i></a></li>
-                <li>|</li>
-                <li><a class="link" href="">About</a></li>
-                <li><a class="link" href="">Pricing</a></li>
-                <div class="footer-copyright text-right py-3" style="margin-right:30px; color: gray;">© Emmares 2018</div>
-            </ul>
-            <!-- Footer end -->
-        </div>
+       
     </div>
 </body>
 
