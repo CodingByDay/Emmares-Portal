@@ -45,8 +45,11 @@
          * */
         function goonresults() {
             var searchString = document.getElementById("searchString").value; // Gettting the search string.
+
             console.log(`The search string is ${searchString}`);
+
             // Part of the code partaining to the geo location.
+
             $.getJSON('https://api.ipify.org?format=json', function (data) {
                 var address = data.ip; // Use this service to get the ip of the client visiting emmares.com.
                 // https://freegeoip.app/json/195.95.161.11

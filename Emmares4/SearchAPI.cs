@@ -155,8 +155,13 @@ namespace Emmares4
         
         private bool Log(string keyword)
         {
+
+            // Keyword contains the keyword and the ID, using static helper class.
+
+            var search_value = ApiHelper.GetUntilOrEmpty(keyword, " ");
+            var key = keyword;
             string country = Request.Cookies["country"];
-            string search_value = Request.Cookies["searchString"];
+            // string search_value = Request.Cookies["searchString"];
             // GetGeoLocation()
             // For now Slovenia.
             DateTime dateTime = DateTime.UtcNow.Date;
