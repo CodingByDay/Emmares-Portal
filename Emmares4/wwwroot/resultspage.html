@@ -18,13 +18,7 @@
     <meta name="keywords" content="Emmares" />
     <meta name="robots" content="index, follow" />
 
-    <!--[if lt IE 7]>
-      <style media="screen" type="text/css">
-         #container {
-         height:100%;
-         }
-      </style>
-      <![endif]-->
+ 
 
     <title>EMMARES</title>
 
@@ -98,6 +92,7 @@
                 left: 0%;
                 display: block;
                 text-transform: uppercase;
+
                 /**
      * Holo doesn't have any transition, but
      * it's added here for demo purposes
@@ -202,12 +197,14 @@
         input:checked + .slider {
             background-color: #2196F3;
         }
+
         .center {
             margin: auto;
             align-items: center;
             align-content: center;
             align-self: center;
         }
+
         .grid_div {
             align-content: center !important;
             margin: auto !important;
@@ -251,19 +248,23 @@
             width: 400px !important;
             background-image: url(http://10.100.100.152:8080/default.jpg) !important;
         }
+
         .optinlinkclass {
             position: relative!important;
             bottom: 0px!important;
         }
+
         .grid_div {
             margin: auto !important;
         }
+
         .grid-item {
             grid-row: span 1 !important;
             grid-column: span 1 !important;
             position: relative !important;
             bottom: 0px !important;
         }
+
         /* Rounded sliders */
         .slider.round {
             border-radius: 34px;
@@ -272,6 +273,7 @@
             .slider.round:before {
                 border-radius: 50%;
             }
+
         /* Pagination links */
         .pagination a {
             color: black;
@@ -291,6 +293,7 @@
             .pagination a:hover:not(.active) {
                 background-color: #ddd;
             }
+
         .results {
             overflow: auto;
             position:fixed;
@@ -300,6 +303,7 @@
             width: 500px;
             border: 3px solid #73AD;
             resize:both;  
+
         }
         .align {
             text-align: center;
@@ -444,34 +448,45 @@
             // if preference is for the normal view show normal view otherwise show grid view.
 
             // Setting a cookie
+
             // Two options: normal and grid.
         
            view = getCookie("view");
 
 
             if (view != "grid") {
+                // Initial setup.
                 GetAPI(page);
+                pageGRID++;
                 page++;
 
             } else {
 
                 GetAPIGrid(pageGRID);
                 pageGRID++;
+                page++;
+
             }
 
             
         }
         if (window.attachEvent) {
+
             window.attachEvent('onload', entersearchininput);
+
         } else {
+
             if (window.onload) {
                 var curronload = window.onload;
                 var newonload = function (evt) {
                     curronload(evt);
                     entersearchininput(evt);
                 };
+
                 window.onload = newonload;
+
             } else {
+
                 window.onload = entersearchininput;
             }
         }
@@ -488,49 +503,14 @@
 
 
 
-        //function pagination(querySet, page, rows) {
-        //    var trimStart = (page - 1) * rows;
-        //    var trimEnd = trimStart + rows;
-        //    var trimmed = querySet.slice(trimStart, trimEnd);
-
-        //    var pages = Math.ceil(querySet.length / rows);
-        //    pageButtons(pages);
-        //    return {
-        //        'querySet': trimmed,
-        //        'pages': pages
-        //    }
-
-        //}
-
-        //function pageButtons(pages) {
-        //    var wrapper = document.getElementById('pagination-wrapper');
-        //    wrapper.innerHTML = ''
-
-        //    for (var page = 1; page <= pages; page++) {
-        //        wrapper.innerHTML += '<button value=${page} class="page btn btn-sm btn-info">${page}</button>'
-        //    }
-
-        //    $('.page').on('click', function () {
-        //        $('#body').find('.col-sm-12 results_div')
-        //        state.page = $(this).val();
-
-        //        GetAPI();
-        //    })
-
-        //    }
-
-
-
-        // Infinite scroll.
         
-        pageGRID = 1;
 
-        // flag for disabling calling the API more then once before the execution is complete. isActive boolean.
+        // Flag for disabling calling the API more then once before the execution is complete. isActive boolean.
 
         var isActive = false;
         var requestNumber = 1;
+
         // Change the value once the GET API is completed.
-        /* Change to false once it starts, change to true once its done. */
 
         window.addEventListener('scroll', () => {
             
@@ -539,7 +519,7 @@
             const { scrollHeight, scrollTop, clientHeight } = document.documentElement;
 
             //
-            // If you want to tweak this. The less the right side of the equation is the less sensitive the event becomes.
+            // If you want to tweak this, smaller the right side of the equation is the less sensitive the event becomes.
             //
             
             if (!isActive && scrollTop + clientHeight > scrollHeight - 3) {
@@ -550,7 +530,6 @@
                 if (view == true) {
 
                     GetAPIGrid(pageGRID);
-                    console.log(pageGRID);
                     pageGRID++;
 
                 } else {
@@ -572,12 +551,6 @@
 
         function GetAPI(page) {
 
-           
-            requestNumber++;
-
-                // console.log("start");
-                //<div class="col-sm-12 results_div"> $('#mydiv').find('.myclass');
-
                 var table = $('#body').find('.col-sm-12 results_div');
                 var img = document.createElement("img");
                 img.id = "loading";
@@ -590,15 +563,17 @@
 
 
                 const http2 = new XMLHttpRequest();
-                // alert("p " + decodeURI(document.getElementById("searchString2").value))
-                // console.log(decodeURIComponent(document.getElementById("searchString2").value.replace("%20", " ")));
 
-                if (sessionStorage.getItem("country") != null)
+
+            if (sessionStorage.getItem("country") != null)
+
                     var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(document.getElementById("searchString2").value + sessionStorage.getItem("country"));
                 else
+
                     var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(document.getElementById("searchString2").value);
 
-                //alert(get_search2);
+                // alert(get_search2);
+
                 http2.open("GET", get_search2);
                 http2.send();
                 http2.onload = () => {
@@ -612,37 +587,17 @@
                     var optinlinkclass = document.getElementsByClassName("optinlinkclass");
 
                     // Regular expressions for parsing. Removing special characters, removing links, finding the matched word.
+
                     const regExpressionSpecialCharacters = /[^a-zA-Z ]/g;
                     const regExpressionLongWords = /\b\w{13,}\b/g; // more than 13 characters in a word.
 
-                    // x[0].innerHTML = http2.responseText;
                     var x = JSON.parse(http2.responseText);
-                    // console.log(x);
-                    // var state = {
-                    //    'querySet': http2.responseText, // dataset
-                    //    'page': 1,
-                    //    'rows': 10
-
-                    // }
-                    //   var data = pagination(state.querySet, state.page, state.rows); // page dataset use bellow
-
-                    // x.hits[0].name
-                    // console.log(x.hits.hits[0]._source.subject)
-                    // console.log(x.hits.hits[0]._source.html)
-                    // name[0].innerHTML = x.hits.hits[0]._source.subject;
-                    // fromaddr[0].innerHTML = x.hits.hits[0]._source.addrfrom;
-                    // desccampaign[0].innerHTML = "
-                    //  <xmp>" + x.hits.hits[0]._source.excerpt + "</xmp>";
-                    // desccampaign[0].innerHTML = x.hits.hits[0]._source.excerpt;
-                    // optinlinkclass[0].href = x.hits.hits[0]._source.optin;
-
 
                     $(".grid-item").remove();
 
 
                     if (x.hits.total == 1) {
 
-                        //$(".results_div").append("<div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='totalresultsclass'>" + x.hits.total + " result </div></div></div>");
 
                         for (var p = ((page - 1) * 10) + 1; p <= x.hits.total; p++) {
                             if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
@@ -663,10 +618,9 @@
 
 
                         if (x.hits.total == 0) {
-                            //  $(".results_div").append("<div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='totalresultsclass'>" + x.hits.total + " results for emails, search on web: <br><br><div id='contentgoogle'>" + contentgoogle + "</div> </div></div></div>");
                             showgoogle();
                         } else {
-                            //  $(".results_div").append("<div class='col-sm-10 result_div'> <div class='resultHeading col-sm-9'><div class='totalresultsclass'>" + x.hits.total + " results </div></div></div > ");
+
                             var totalres; // all results on page
                             if (x.hits.total > 10)
                                 totalres = 10;
@@ -713,23 +667,6 @@
                     }
                 });
 
-                /* const http = new XMLHttpRequest()
-                // http.open("GET", "/SearchAPI/get('test')")
-                http.open("GET", "http://172.17.1.88:9200/
-    
-    
-                 /_search?q=test")
-    
-                //http.setRequestHeader("Content-Type", "application/json")
-                http.send()
-                http.onload = () => console.log(http.responseText)*/
-
-
-        
-
-
-           // requestNumber--;
-
 
         }
 
@@ -740,15 +677,11 @@
          * @param pagegrid
          */
         function GetAPIGrid(pagegrid) {
-          
-                isActive = true;
+            var p = ((pagegrid - 1) * 10) + 1;
+            console.log(`VALUE IS ${pagegrid}`);
 
-
-                // Removing a set of matched dom elements from the DOM.
                 $("#footer").remove();
-                //console.log(page);
-                // console.log("start");
-                //<div class="col-sm-12 results_div"> $('#mydiv').find('.myclass');
+
                 var table = $('#body').find('.col-sm-12 results_div');
                 var img = document.createElement("img");
                 img.id = "loading";
@@ -761,10 +694,6 @@
 
 
                 const http2 = new XMLHttpRequest();
-
-                // alert("p " + decodeURI(document.getElementById("searchString2").value))
-                // console.log(decodeURIComponent(document.getElementById("searchString2").value.replace("%20", " ")));
-
                 if (sessionStorage.getItem("country") != null)
                     var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(document.getElementById("searchString2").value + sessionStorage.getItem("country"));
                 else
@@ -789,34 +718,14 @@
 
                     // x[0].innerHTML = http2.responseText;
                     var x = JSON.parse(http2.responseText);
-                    // console.log(x);
-                    // var state = {
-                    //    'querySet': http2.responseText, // dataset
-                    //    'page': 1,
-                    //    'rows': 10
-
-                    // }
-                    //   var data = pagination(state.querySet, state.page, state.rows); // page dataset use bellow
-
-                    // x.hits[0].name
-                    // console.log(x.hits.hits[0]._source.subject)
-                    // console.log(x.hits.hits[0]._source.html)
-                    // name[0].innerHTML = x.hits.hits[0]._source.subject;
-                    // fromaddr[0].innerHTML = x.hits.hits[0]._source.addrfrom;
-                    // desccampaign[0].innerHTML = "
-                    // <xmp>" + x.hits.hits[0]._source.excerpt + "</xmp>";
-                    // desccampaign[0].innerHTML = x.hits.hits[0]._source.excerpt;
-                    // optinlinkclass[0].href = x.hits.hits[0]._source.optin;
 
 
                     $(".result_div").remove();
 
 
-
                     if (x.hits.total == 1) {
                         //  $(".results_div").append("<div class='totalresultsclassGrid'>" + x.hits.total + " result </div></div>");
                         for (var p = ((pagegrid - 1) * 10) + 1; p <= x.hits.total; p++) {
-                            console.log(`Value is ${p}`);
 
                             // var image = '<img src="C:\Users\emmaresmvp\Desktop\emares\Emmares\Emmares4\App_Data\images' + x.hits.hits[p - 1]._source.messageid + '.jpg width="700" height="400">';
                             if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
@@ -850,7 +759,7 @@
                                 totalres = x.hits.total;
                             for (var p = ((pagegrid - 1) * 10) + 1; p <= totalres * pagegrid; p++) { // here is where pagination goes.
                                 var image = '<img id="img" src="/images/' + x.hits.hits[p - 1]._source.messageid + '.jpg" width="400" height="200">';
-                                console.log(`Value is ${p}`);
+                                console.log(`Value is aaaaaaaaaaaaaaaaaa${p}`);
                                 if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
                                     if (x.hits.hits[p - 1]._source.score == 0.0)
                                         var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " <h4>Click to see more.</h4>" + "<br><br>" + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
@@ -870,6 +779,7 @@
                     }
 
                     var image_loading = document.getElementById('loading');
+                    
                     image_loading.parentNode.removeChild(image_loading);
 
 
@@ -888,30 +798,6 @@
                 });
 
 
-
-                /* const http = new XMLHttpRequest()
-                // http.open("GET", "/SearchAPI/get('test')")
-                http.open("GET", "http://172.17.1.88:9200/
-    
-    
-                /_search?q=test")
-    
-                //http.setRequestHeader("Content-Type", "application/json")
-                http.send()
-                http.onload = () => console.log(http.responseText) */
-
-
-
-
-
-
-                // Removed footer for estetic reasons.
-                //// var footer = "<div id='footer'><ul><li><a class='link' href='https://www.facebook.com/emmares.io'><i class='fab fa-facebook-f'></i></a></li>li><a class='link' href='https://www.linkedin.com/company/emmaresio'><i class='fab fa-linkedin-in'></i></a></li><li><a class='link' href='https://twitter.com/emmares_io'><i class='fab fa-twitter'></i></a></li><li><a class='link' href='https://medium.com/emmares'><i class='fab fa-medium-m'></i></a></li><li><a class='link' href='https://t.me/emmares'><i class='fab fa-telegram-plane'></i></a></li><li>|</li><li><a class='link' href=''>About</a></li><li><a class='link' href=''>Pricing</a></li><div class='footer-copyright text-right py-3' style='margin-right:30px; color: gray;'>© Emmares 2018</div></ul></div >"; 
-
-                //  $("body").append(footer);
-
-
-                // Test 23.8.2021
             
 
         }
@@ -920,6 +806,7 @@
 
         var page = 1;
 
+        var pageGRID = 1;
 
         function next() {
             
@@ -979,17 +866,13 @@
 
         function showgoogle() {
             $.getScript(googleapilink, function () {
-                // alert(contentgoogle);
                 $(".results_div").append("<div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='totalresultsclass'> 0 results for emails!, search on web: <br><br><div id='contentgoogle'>" + contentgoogle + "</div> </div></div></div>");
 
             });
         }
-        // ChangeTheCheckBoxValue();
-     
 
-
-
-        /**/ </script>
+   
+</script>
 
 
 
@@ -1004,9 +887,9 @@
                 .then(hash => {
                     window.hash = hash;
 
-                    // here hash is an arrayBuffer,
+                    // Hash is an arrayBuffer,
 
-                    // so we'll connvert it to its hex version
+                    // So we'll connvert it to its hex version
 
                     let result = '';
                     const view = new DataView(hash);
@@ -1049,19 +932,11 @@
 
             }
 
-
-
-
             checkbox.addEventListener('change', (event) => {
-
-                // ///////////////////////////////////////////////
-                //
-                //
-                // 
                 // Reseting the values after the changing the view.
                 page = 1;
                 pageGRID = 1;
-                // Change the layout. ////////////////////////////
+                // Change the layout. 
                 GridLayout();
             })
 
@@ -1069,33 +944,31 @@
         });
 
 
-        pageGRID = 0;
+
+
+        
         function GridLayout() {
-
-            // Working change function.
-
             grid = AsignValue();
             console.log(grid);
             grid = !grid; // Change the value
-            // console.log(grid);
+
             if (grid == true) {
 
                 GetAPIGrid(pageGRID);
-
+                pageGRID++;
                 setCookie("view", "grid", 5);
 
-                // console.log("Grid layout");
+
 
             } else {
 
                 GetAPI(page = page);
-
+                page++;
                 setCookie("view", "normal", 5);
-
-                //console.log("Normal layout");
 
             }
         }
+
         function getCookie(name) {
             var cname = name + "=";
             var decodedCookie = decodeURIComponent(document.cookie);
@@ -1111,12 +984,15 @@
             }
             return "";
         }
+
         function callback(data) {
             getHash(data.country_name)
                 .then(hash => {
                     sessionStorage.setItem("country", hash);
                 });
         }
+
+
         if (sessionStorage.getItem("country") == null) {
             var script1 = document.createElement('script');
             script1.type = 'text/javascript';
@@ -1143,7 +1019,7 @@
         }
 
 
-        /**/</script>
+        </script>
 
     <div id="container">
         <div id="header">
@@ -1155,11 +1031,6 @@
 
             <ul>
 
-                <!--<div style="color: gray;">
-            <li style="margin-left: 0px; margin-right: 0px;"><i class="far fa-user"></i></li>
-            <li style="margin-left: 0px margin-right: 0px;;">John Doe</li>
-            <li style="margin-left: 0px; margin-right: 0px;"><i class="fas fa-angle-down"></i></li>
-        </div>-->
                 <div style="float: right; font-weight: 900; display:inline;">
                     <li><a class="header_links" href="/Account/Login">LOG IN</a></li>
                     <li><a class="header_links" href="/Account/Register">SIGN UP</a></li>
