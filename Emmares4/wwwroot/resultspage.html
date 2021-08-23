@@ -23,10 +23,12 @@
     <title>EMMARES</title>
 
     <style>
-
+        .col-sm-12 {
+            width: 140%!important;
+        }
         .footer {
-            position: absolute!important;
-            bottom: 5px!important;
+            position: absolute !important;
+            bottom: 5px !important;
         }
         /* The switch - the box around the slider */
         .loading {
@@ -70,7 +72,21 @@
                 transform: translateY(0);
             }
         }
- 
+
+
+        .buttons {
+            display: flex;
+        }
+
+            .buttons div {
+                margin: 0px 10px;
+                color: #fffffa;
+                cursor: pointer;
+            }
+
+                .buttons div > * {
+                    pointer-events: none;
+                }
 
         .switch {
             overflow: hidden;
@@ -109,7 +125,7 @@
 
             /* Default unchecked state */
             .switch span:before {
-                content: attr(data-unchecked);
+                
                 display: block;
                 width: 50%;
                 background-color: ghostwhite;
@@ -137,11 +153,9 @@
         h1 {
             font-weight: 100;
         }
-
-
-
-
-
+        .buttons {
+            display: flex;
+        }
 
         .switch {
             position: relative;
@@ -159,6 +173,8 @@
                 width: 0;
                 height: 0;
             }
+
+
         .totalresultsclassGrid {
             font-size: 15px !important;
             color: #ffffff !important;
@@ -181,6 +197,8 @@
             -webkit-transition: .4s;
             transition: .4s;
         }
+
+      
 
             .slider:before {
                 position: absolute;
@@ -381,16 +399,7 @@
         }
 
         function ChangeTheCheckBoxValue() {
-            var element = document.getElementById("ch");
-
-            if (grid == true) {
-
-                element.checked = true
-
-            } else {
-
-                element.checked = false;
-            }
+         
 
         }
 
@@ -455,16 +464,23 @@
 
 
             if (view != "grid") {
+
                 // Initial setup.
+
+                $('.list').css('background-color', 'rgba(126, 179, 0, 0.5)');
+                document.getElementById("gridView").removeAttribute("style");
                 GetAPI(page);
                 pageGRID++;
                 page++;
+               
 
             } else {
-
+                $('.grid').css('background-color', 'rgba(126, 179, 0, 0.5)');
+                document.getElementById("listView").removeAttribute("style");
                 GetAPIGrid(pageGRID);
                 pageGRID++;
                 page++;
+             
 
             }
 
@@ -502,8 +518,8 @@
         }
 
 
+  
 
-        
 
         // Flag for disabling calling the API more then once before the execution is complete. isActive boolean.
 
@@ -512,15 +528,34 @@
 
         // Change the value once the GET API is completed.
 
+        $(document).ready(function () {
+            $("#listView").click(function () {
+                $('.list').css('background-color', 'rgba(126, 179, 0, 0.5)');
+                document.getElementById("gridView").removeAttribute("style");
+
+                toggle();
+            });
+        });
+
+        $(document).ready(function () {
+            $("#gridView").click(function () {
+                $('.grid').css('background-color', 'rgba(126, 179, 0, 0.5)');
+                document.getElementById("listView").removeAttribute("style");
+
+                toggle();
+
+            });
+        });
+
         window.addEventListener('scroll', () => {
             
             view = AsignValue();
             
             const { scrollHeight, scrollTop, clientHeight } = document.documentElement;
 
-            //
+            
             // If you want to tweak this, smaller the right side of the equation is the less sensitive the event becomes.
-            //
+            
             
             if (!isActive && scrollTop + clientHeight > scrollHeight - 3) {
          
@@ -677,8 +712,8 @@
          * @param pagegrid
          */
         function GetAPIGrid(pagegrid) {
+
             var p = ((pagegrid - 1) * 10) + 1;
-            console.log(`VALUE IS ${pagegrid}`);
 
                 $("#footer").remove();
 
@@ -695,6 +730,7 @@
 
                 const http2 = new XMLHttpRequest();
                 if (sessionStorage.getItem("country") != null)
+
                     var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(document.getElementById("searchString2").value + sessionStorage.getItem("country"));
                 else
                     var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(document.getElementById("searchString2").value);
@@ -702,7 +738,9 @@
                 // alert(get_search2);
 
                 http2.open("GET", get_search2);
-                http2.send();
+
+            http2.send();
+
                 http2.onload = () => {
 
                     var name = document.getElementsByClassName("results_names");
@@ -729,7 +767,7 @@
 
                             // var image = '<img src="C:\Users\emmaresmvp\Desktop\emares\Emmares\Emmares4\App_Data\images' + x.hits.hits[p - 1]._source.messageid + '.jpg width="700" height="400">';
                             if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
-                                var debug = "<img src='C:\inetpub\wwwroot\App_Data\images" + x.hits.hits[p - 1]._source.messageid + ".jpg width='700' height='400'>";
+
 
                                 if (x.hits.hits[p - 1]._source.score == 0.0)
                                     var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style = 'color:white; text-decoration: none;' > <div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 300) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
@@ -758,8 +796,7 @@
                             else
                                 totalres = x.hits.total;
                             for (var p = ((pagegrid - 1) * 10) + 1; p <= totalres * pagegrid; p++) { // here is where pagination goes.
-                                var image = '<img id="img" src="/images/' + x.hits.hits[p - 1]._source.messageid + '.jpg" width="400" height="200">';
-                                console.log(`Value is aaaaaaaaaaaaaaaaaa${p}`);
+                                var image = '<img id="img" src="/images/' + x.hits.hits[p - 1]._source.messageid + '.jpg" width="300" height="200">';
                                 if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
                                     if (x.hits.hits[p - 1]._source.score == 0.0)
                                         var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " <h4>Click to see more.</h4>" + "<br><br>" + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
@@ -914,34 +951,18 @@
             }
         }
 
-        document.addEventListener("DOMContentLoaded", function () {
+        function toggle() {
 
-            const checkbox = document.getElementById('ch');
-
-            // Invert the values.
-
-            var view = AsignValue();
-
-            if (view == true) {
-
-                checkbox.checked = true;
-
-            } else {
-
-                checkbox.checked = false;
-
-            }
-
-            checkbox.addEventListener('change', (event) => {
                 // Reseting the values after the changing the view.
+
                 page = 1;
                 pageGRID = 1;
                 // Change the layout. 
                 GridLayout();
-            })
+            
 
 
-        });
+        }
 
 
 
@@ -957,6 +978,8 @@
                 GetAPIGrid(pageGRID);
                 pageGRID++;
                 setCookie("view", "grid", 5);
+                $('#gridLayout').css("background-color", "blue");
+                $('#listLayout').css("background-color", "none");
 
 
 
@@ -965,7 +988,8 @@
                 GetAPI(page = page);
                 page++;
                 setCookie("view", "normal", 5);
-
+                $('#listLayout').css("background-color", "blue");
+                $('#gridLayout').css("background-color", "none");
             }
         }
 
@@ -1009,12 +1033,7 @@
 
 
         function ChangeValue() {
-            const checkbox = document.getElementById('ch');
-
-            var view = AsignValue();
-            if (view == true) {
-                checkbox.checked = true;
-            } else { checkbox.checked = false; }
+         
 
         }
 
@@ -1024,14 +1043,22 @@
     <div id="container">
         <div id="header">
             <!-- Header start -->
-            <label class="switch">
-                <input type="checkbox" id="ch">
-                <span data-unchecked="Text" data-checked="Grid"></span>
-            </label>
 
+          
+
+          
+
+           
             <ul>
 
                 <div style="float: right; font-weight: 900; display:inline;">
+                    <!-- The grid & list view buttons.. -->
+                    <li>
+                        <div class="buttons">
+                            <div class="list" id="listView"><i class="fa fa-list fa-2x"></i></div>
+                            <div class="grid" id="gridView"><i class="fa fa-th-large fa-2x"></i></div>
+                        </div>
+                    </li>
                     <li><a class="header_links" href="/Account/Login">LOG IN</a></li>
                     <li><a class="header_links" href="/Account/Register">SIGN UP</a></li>
                     <li><a class="header_links" href="">PRICING</a></li>
