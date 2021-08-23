@@ -129,7 +129,7 @@ namespace Emmares4
             {
                 var test = Log(id);
 
-                return wc.UploadString(elastichost + "/emmares_search_test/_search?size=50", json); // fixed size of the return...
+                return wc.UploadString(elastichost + "/emmares_search_test/_search?size=100", json); // fixed size of the return...
             }
             catch
             {
