@@ -55,7 +55,7 @@
                 $.getJSON(`https://freegeoip.app/json/${address}`, function (data) { // Must use back ticks for interpolation here.
                     setCookie('searchString', searchString, 365);
                     setCookie('country', data.country_name, 365);
-                    var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString").value);
+                    var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString").value + "/page=page");
                     window.location.href = linktosearchresults;
                 });
             });

@@ -102,10 +102,17 @@ namespace Emmares4
         public string get_search(string id, string page)
 
         {
-
+            
             string[] separated = page.Split(' ');
-            var realpage = separated[0];
-           
+            var pagewithextension = separated[0];
+            var pagewithoutequals = pagewithextension.Split("=")[1];
+            if(pagewithoutequals == "page")
+            {
+                pagewithoutequals = "0";
+            } else
+            {
+                pagewithoutequals = pagewithoutequals;
+            }
             /* WebClient wc = new WebClient(); // to dela
             try
             {
@@ -172,7 +179,7 @@ namespace Emmares4
             {
                 var test = Log(id);
 
-                return wc.UploadString(elastichost + "/emmares_search_test/_search?size=10", jsonfields); // fixed size of the return...
+                return wc.UploadString(elastichost + $"/emmares_search_test/_search?size=10&&from={pagewithoutequals}", jsonfields); // fixed size of the return...
             }
             catch
             {
