@@ -63,8 +63,8 @@ namespace Emmares4
         // }
 
 
-    // GET api/<controller>/5
-    [HttpGet("{id}")]
+        // GET api/<controller>/5
+        [HttpGet("{id}")]
         // [Route("api/Test/{id}")]
         public string Get(string id)
         {
@@ -98,9 +98,14 @@ namespace Emmares4
 
             //return "value";
         }
-        [HttpGet("{id}")]
-        public string get_search(string id)
+        [HttpGet("{id}/{page}")]
+        public string get_search(string id, string page)
+
         {
+
+            string[] separated = page.Split(' ');
+            var realpage = separated[0];
+           
             /* WebClient wc = new WebClient(); // to dela
             try
             {
@@ -114,9 +119,47 @@ namespace Emmares4
 
             // using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             // {
-            
-          
+    //        {
+
+    //            "query" : {
+    //                "bool" : {
+    //                    "must" : {
+    //                        "query_string": {
+    //                            "query": "grcija"
+    //                        }
+    //                    },
+    //            "should" : [
+    //               {
+    //                        "range" : {
+    //                            "date" : {
+    //                                "boost" : 5,
+    //          "gte" : "2021-07-01"
+    //                            }
+    //                        }
+    //                    },
+    //           {
+    //                        "range" : {
+    //                            "date" : {
+    //                                "boost" : 4,
+    //          "gte" : "2021-05-01"
+    //                            }
+    //                        }
+    //                    },
+    //           {
+    //                        "range" : {
+    //                            "date" : {
+    //                                "boost" : 3,
+    //          "gte" : "2021-03-01"
+    //                            }
+    //                        }
+    //                    }
+    //  ]
+    //}
+    //            }
+    //        }
+
             string json = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fuzziness\": \"AUTO\"}}}";
+            string jsonPriority = "{\"query\": {\"bool\" : {\"must\" : {\"query_string\" : {\"query\"  :\"" + id + "\",\"should\": [\"range\" : {\"date\" : {\"boost\" :\"" + 4 + "\", \"gte\" :\"" + "2021-03-01\"}}}";
             string jsonfields = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fields\": [\"excerpt\", \"preview\"],\"fuzziness\": \"AUTO\"}}}";
            // "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fuzziness\": \"AUTO\"}}}";
             //streamWriter.Write(json);
@@ -129,7 +172,7 @@ namespace Emmares4
             {
                 var test = Log(id);
 
-                return wc.UploadString(elastichost + "/emmares_search_test/_search?size=100", json); // fixed size of the return...
+                return wc.UploadString(elastichost + "/emmares_search_test/_search?size=10", jsonfields); // fixed size of the return...
             }
             catch
             {
@@ -146,6 +189,51 @@ namespace Emmares4
              }*/
             
         }
+
+
+
+
+        [HttpGet("{id}/{page}")]
+        public string get_search_page(string id, string page)
+        {
+           
+            string json = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fuzziness\": \"AUTO\"}}}";
+            string jsonPriority = "{\"query\": {\"bool\" : {\"must\" : {\"query_string\" : {\"query\"  :\"" + id + "\",\"should\": [\"range\" : {\"date\" : {\"boost\" :\"" + 4 + "\", \"gte\" :\"" + "2021-03-01\"}}}";
+            string jsonfields = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fields\": [\"excerpt\", \"preview\"],\"fuzziness\": \"AUTO\"}}}";
+            // "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fuzziness\": \"AUTO\"}}}";
+            //streamWriter.Write(json);
+            // streamWriter.Flush();
+            // streamWriter.Close();
+
+            WebClient wc = new WebClient();
+            wc.Headers.Add("Content-Type", "application/json");
+            try
+            {
+                var test = Log(id);
+
+                return wc.UploadString(elastichost + $"/emmares_search_test/_search?size=10&&from={page}", jsonfields); // fixed size of the return...
+            }
+            catch
+            {
+                return "Error";
+            }
+            //}
+
+
+            /* var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse(); 
+             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+             {
+                 var result = streamReader.ReadToEnd();
+                 return result;
+             }*/
+
+        }
+
+
+
+
+
+
 
         /// <summary>
         /// Logs: GeoLocation, keyword, and date of the event.

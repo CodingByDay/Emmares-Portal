@@ -3,14 +3,7 @@
 <html lang="en">
 
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108056731-3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-108056731-3');
-    </script>
+   
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
     <meta name="description" content="Emmares" />
     <meta name="keywords" content="Emmares" />
@@ -43,16 +36,22 @@
          * 
          * Tracking module.
          * */
+
         function goonresults() {
             var searchString = document.getElementById("searchString").value; // Gettting the search string.
 
 
             // Part of the code partaining to the geo location and tracking module.
 
+
+            // Check if the user uses ad block.
             $.getJSON('https://api.ipify.org?format=json', function (data) {
                 var address = data.ip; // Use this service to get the ip of the client visiting emmares.com.
+
                 // https://freegeoip.app/json/195.95.161.11
+
                 // GeoLocation = GetLocationFromIP('https://freegeoip.app/json/195.95.161.11')
+
                 $.getJSON(`https://freegeoip.app/json/${address}`, function (data) { // Must use back ticks for interpolation here.
                     setCookie('searchString', searchString, 365);
                     setCookie('country', data.country_name, 365);
@@ -111,6 +110,48 @@
         //
         //
 
+
+        //{
+        //    "size" : 10,
+        //        "query" : {
+        //        "bool" : {
+        //            "must" : {
+        //                "query_string": {
+        //                    "query": "test"
+        //                }
+        //            },
+        //            "should" : [
+        //                {
+        //                    "range": {
+        //                        "date": {
+        //                            "boost": 5,
+        //                            "gte": "2021-07-01"
+        //                        }
+        //                    }
+        //                },
+        //                {
+        //                    "range": {
+        //                        "date": {
+        //                            "boost": 4,
+        //                            "gte": "2021-05-01"
+        //                        }
+        //                    }
+        //                },
+        //                {
+        //                    "range": {
+        //                        "date": {
+        //                            "boost": 3,
+        //                            "gte": "2021-03-01"
+        //                        }
+        //                    }
+        //                }
+        //            ]
+        //        }
+        //    }
+        //}
+
+
+
         setCookie("view", "normal");
 
 
@@ -121,6 +162,7 @@
             var input = document.getElementById("searchString");
             input.addEventListener("keyup", function (event) {
                 if (event.keyCode === 13) {
+                   
                     event.preventDefault();
                     goonresults();
                 }

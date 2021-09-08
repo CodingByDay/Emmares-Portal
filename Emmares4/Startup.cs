@@ -130,7 +130,8 @@ namespace Emmares4
                 routes.MapRoute(
 
                     name: "default",
-                    template: "{controller=Home}/{action=Dashboard}/{id?}");
+
+                    template: "{controller=Home}/{action=Dashboard}/{id?}/{page?}");
             });
 
             Paths.ContentRootDir = env.ContentRootPath;

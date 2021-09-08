@@ -3,15 +3,7 @@
 <html lang="en">
 
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108056731-3"></script>
-    <script>
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-108056731-3');
-    </script>
+  
 
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
     <meta name="description" content="Emmares" />
@@ -23,6 +15,11 @@
     <title>EMMARES</title>
 
     <style>
+
+        #img {
+            vertical-align: middle!important;
+        }
+
         .col-sm-12 {
             width: 140%!important;
         }
@@ -75,6 +72,7 @@
 
 
         .buttons {
+
             display: flex;
         }
 
@@ -88,7 +86,9 @@
                     pointer-events: none;
                 }
 
+
         .switch {
+
             overflow: hidden;
             display: inline-block;
             width: 8em;
@@ -418,8 +418,11 @@
 
 
         window.onload = function () {
+
             fixBrokenImages('/images/default.jpg');
         }
+
+
         var contentgoogle = "";
 
         function hndlr(response) {
@@ -434,23 +437,39 @@
         
 
         function goonresults() {
+            var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString").value);
+             window.location.href = linktosearchresults;
+        }
+
+        function goonresultspaginate() {
             var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString2").value);
             window.location.href = linktosearchresults;
         }
-
-
 
    
 
 
         function entersearchininput() {
             var searchq = window.location.search.split("?q=")[1];
+
+            var split = searchq.split("/")[0];
+
+            alert(`The value is: ${split}`)
+
             if (searchq !== undefined) {
-                //searchq = searchq.replace(/%20/g, " ");
-                //searchq = searchq.replace(/'+'/g, " ");
-                //searchq = searchq.replace(/%20/g, " ");
+
+                // searchq = searchq.replace(/%20/g, " ");
+
+                // searchq = searchq.replace(/'+'/g, " ");
+
+                // searchq = searchq.replace(/%20/g, " ");
+                
                 searchq = decodeURI(searchq);
-                document.getElementById("searchString2").value = searchq;
+
+                document.getElementById("searchString2").value = split;
+
+
+                setCookie("string", searchq, 365);
             }
 
 
@@ -469,7 +488,7 @@
 
                 $('.list').css('background-color', 'rgba(126, 179, 0, 0.5)');
                 document.getElementById("gridView").removeAttribute("style");
-                GetAPI(page);
+                GetAPIpaged();
                 pageGRID++;
                 page++;
                
@@ -582,6 +601,128 @@
             image.src = "images/default.jpg";
         }
 
+
+
+        function GetAPIpaged() {
+
+            var table = $('#body').find('.col-sm-12 results_div');
+            var img = document.createElement("img");
+            img.id = "loading";
+            img.style.margin = "0 auto";
+
+            img.style.display = "block";
+            img.src = "images/ajax-loader.gif";
+            img.alt = "Loading - please wait";
+            document.body.appendChild(img);
+
+
+            const http2 = new XMLHttpRequest();
+
+            var searchstring = getCookie("string");
+            if (sessionStorage.getItem("country") != null)
+
+                var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(searchstring + sessionStorage.getItem("country"));
+            else
+
+                var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(searchstring);
+
+            // alert(get_search2);
+
+            http2.open("GET", get_search2);
+            http2.send();
+            http2.onload = () => {
+
+
+
+                var name = document.getElementsByClassName("results_names");
+                var fromaddr = document.getElementsByClassName("addrFrom");
+                var desccampaign = document.getElementsByClassName("campaignDesc");
+                var ratingResult = document.getElementsByClassName("ratingResult");
+                var optinlinkclass = document.getElementsByClassName("optinlinkclass");
+
+                // Regular expressions for parsing. Removing special characters, removing links, finding the matched word.
+
+                const regExpressionSpecialCharacters = /[^a-zA-ZčćČĆšŠđĐžŽ. ]/g;
+                const regExpressionLongWords = /\b\w{13,}\b/g; // more than 13 characters in a word.
+
+                var x = JSON.parse(http2.responseText);
+
+                console.log(http2.responseText);
+
+                $(".grid-item").remove();
+
+
+                if (x.hits.total == 1) {
+
+
+                    for (var p = 1; p <= x.hits.total; p++) {
+                        if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
+                            if (x.hits.hits[p - 1]._source.score == 0.0)
+                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style = 'color:white; text-decoration: none;' > <div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 200) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'><br><br></div> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                            else
+                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 200) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div><br><br> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                        } else {
+                            if (x.hits.hits[p - 1]._source.score == 0.0)
+                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 200) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div<br><br> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                            else
+                                var resulttemplate = "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 200) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400) + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div><br><br> <div type='submit' class='btn btn-primary subscribeButton'><a class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                        }
+                        $(".results_div").append(resulttemplate);
+                    }
+
+                } else {
+
+
+                    if (x.hits.total == 0) {
+                        showgoogle();
+                    } else {
+
+                        var totalres; // all results on page
+                        if (x.hits.total > 10)
+                            totalres = 10;
+                        else
+                            totalres = x.hits.total;
+
+                        for (var p = 1; p <= totalres; p++) { // Here is where pagination goes.
+                            if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
+                                if (x.hits.hits[p - 1]._source.score == 0.0)
+                                    var resulttemplate = "<a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style = 'color:white; text-decoration: none;' > <div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 200) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' target='_blank' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <br><br><div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                                else
+                                    var resulttemplate = "<a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 200) + "<a href='" + x.hits.hits[p - 1]._source.affiliatelink + "' type='submit' style='color:black; font-weight:900; margin:5px' target='_blank' class='btn btn-primary previewButton'>Open Link</a><a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div><br><br> <div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                            } else {
+                                if (x.hits.hits[p - 1]._source.score == 0.0)
+                                    var resulttemplate = "<a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 200) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'></div> <br><br><div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                                else
+                                    var resulttemplate = "<a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'><div class='col-sm-10 result_div'><div class='resultHeading col-sm-9'><div class='counter'>" + p + "</div>" + (x.hits.hits[p - 1]._source.subject).substr(0, 200) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p><div class='campaignDesc'>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 400).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " ... click to see more. </div></div><div class='resultWra'><div class='ratingResult'>" + x.hits.hits[p - 1]._source.score + "</div><br><br> <div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div></div><br></div></div></a>";
+                            }
+
+                            $(".results_div").append(resulttemplate);
+                        }
+                    }
+
+                }
+
+                var image_loading = document.getElementById('loading');
+                image_loading.parentNode.removeChild(image_loading);
+
+
+
+                isActive = false;
+
+
+            }
+
+            $("#searchString2").focus();
+            var input = document.getElementById("searchString2");
+            input.addEventListener("keyup", function (event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    goonresults();
+                }
+            });
+
+
+        }
         
 
         function GetAPI(page) {
@@ -599,13 +740,13 @@
 
                 const http2 = new XMLHttpRequest();
 
-
+            var searchstring = getCookie("string");
             if (sessionStorage.getItem("country") != null)
 
-                    var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(document.getElementById("searchString2").value + sessionStorage.getItem("country"));
+                    var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(searchstring + sessionStorage.getItem("country"));
                 else
 
-                    var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(document.getElementById("searchString2").value);
+                    var get_search2 = "/SearchAPI/get_search/" + decodeURIComponent(searchstring);
 
                 // alert(get_search2);
 
@@ -623,10 +764,12 @@
 
                     // Regular expressions for parsing. Removing special characters, removing links, finding the matched word.
 
-                    const regExpressionSpecialCharacters = /[^a-zA-Z ]/g;
+                    const regExpressionSpecialCharacters = /[^a-zA-ZčćČĆšŠđĐžŽ. ]/g;
                     const regExpressionLongWords = /\b\w{13,}\b/g; // more than 13 characters in a word.
 
                     var x = JSON.parse(http2.responseText);
+
+                    console.log(http2.responseText);
 
                     $(".grid-item").remove();
 
@@ -707,6 +850,8 @@
 
         var time = 0;
 
+      
+        
         /**
          * / Grid layout API call.
          * @param pagegrid
@@ -796,8 +941,9 @@
                             else
                                 totalres = x.hits.total;
                             for (var p = ((pagegrid - 1) * 10) + 1; p <= totalres * pagegrid; p++) { // here is where pagination goes.
-                                var image = '<img id="img" src="/images/' + x.hits.hits[p - 1]._source.messageid + '.jpg" width="300" height="200">';
-                                if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
+                                //var image = '<iframe id="img" src="https://emmares.com/SearchAPI/Get_File/' + x.hits.hits[p - 1]._source.messageid + '" width="300" height="200" style=""></iframe>';
+
+                                var image = '<img id="img" src="/images/' + x.hits.hits[p - 1]._source.messageid + '.jpg" width="400" height="200">';                                if (validURL(x.hits.hits[p - 1]._source.affiliatelink)) {
                                     if (x.hits.hits[p - 1]._source.score == 0.0)
                                         var resulttemplate = "<div class='grid-item'><a target='_blank' href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' style='color:white; text-decoration: none;'>" + p + image + (x.hits.hits[p - 1]._source.subject).substr(0, 60) + "<a href = '/SearchAPI/Get_File/" + x.hits.hits[p - 1]._source.messageid + "' target='_blank' style='color:white; text-decoration: none;'><br><p class='addrFrom'> @" + x.hits.hits[p - 1]._source.addrfrom.split("@")[1] + "</p>" + (x.hits.hits[p - 1]._source.excerpt).substr(0, 200).replace(regExpressionSpecialCharacters, "").replace(regExpressionLongWords, '') + " <h4>Click to see more.</h4>" + "<br><br>" + "<div type='submit' class='btn btn-primary subscribeButton'><a target='_blank' class='optinlinkclass' style='text-decoration: none; color:white' href='" + x.hits.hits[p - 1]._source.optin + "'>Subscribe</a></div>";
                                     else
@@ -814,6 +960,9 @@
                         }
 
                     }
+                    var myIframe = document.getElementById('img');
+
+                    myIframe.contentWindow.scrollTo(0, document.body.scrollHeight / 2);
 
                     var image_loading = document.getElementById('loading');
                     
@@ -834,7 +983,7 @@
                     }
                 });
 
-
+           
             
 
         }
