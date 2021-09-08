@@ -167,7 +167,7 @@ namespace Emmares4
 
             string json = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fuzziness\": \"AUTO\"}}}";
             string jsonPriority = "{\"query\": {\"bool\" : {\"must\" : {\"query_string\" : {\"query\"  :\"" + id + "\",\"should\": [\"range\" : {\"date\" : {\"boost\" :\"" + 4 + "\", \"gte\" :\"" + "2021-03-01\"}}}";
-            string jsonfields = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fields\": [\"excerpt\", \"preview\"],\"fuzziness\": \"AUTO\"}}}";
+            string jsonfields = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fields\": [\"excerpt\"],\"fuzziness\": \"AUTO\"}}}";
            // "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fuzziness\": \"AUTO\"}}}";
             //streamWriter.Write(json);
             // streamWriter.Flush();
@@ -179,7 +179,7 @@ namespace Emmares4
             {
                 var test = Log(id);
 
-                return wc.UploadString(elastichost + $"/emmares_search_test/_search?size=10&&from={pagewithoutequals}", jsonfields); // fixed size of the return...
+                return wc.UploadString(elastichost + $"/emmares_search_test/_search?size=6&&from={pagewithoutequals}", jsonfields); // fixed size of the return...
             }
             catch
             {
