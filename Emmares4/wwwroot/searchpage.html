@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-   
+
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
     <meta name="description" content="Emmares" />
     <meta name="keywords" content="Emmares" />
@@ -22,6 +22,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <!--<link rel="stylesheet" href="lib/Layout/style.css">-->
+    <script src="/js/prebid-ads.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <style>
 
@@ -33,7 +34,7 @@
 
 
         /**
-         * 
+         *
          * Tracking module.
          * */
 
@@ -43,29 +44,36 @@
 
             // Part of the code partaining to the geo location and tracking module.
 
+            if (window.canRunAds === undefined) {
+                // adblocker detected, show fallback
+                var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString").value + "/page=page");
+                window.location.href = linktosearchresults;
 
-            // Check if the user uses ad block.
-            $.getJSON('https://api.ipify.org?format=json', function (data) {
-                var address = data.ip; // Use this service to get the ip of the client visiting emmares.com.
+            } else {
 
-                // https://freegeoip.app/json/195.95.161.11
+                // Check if the user uses ad block.
+                $.getJSON('https://api.ipify.org?format=json', function (data) {
+                    var address = data.ip; // Use this service to get the ip of the client visiting emmares.com.
 
-                // GeoLocation = GetLocationFromIP('https://freegeoip.app/json/195.95.161.11')
+                    // https://freegeoip.app/json/195.95.161.11
 
-                $.getJSON(`https://freegeoip.app/json/${address}`, function (data) { // Must use back ticks for interpolation here.
-                    setCookie('searchString', searchString, 365);
-                    setCookie('country', data.country_name, 365);
-                    var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString").value + "/page=page");
-                    window.location.href = linktosearchresults;
+                    // GeoLocation = GetLocationFromIP('https://freegeoip.app/json/195.95.161.11')
+
+                    $.getJSON(`https://freegeoip.app/json/${address}`, function (data) { // Must use back ticks for interpolation here.
+                        setCookie('searchString', searchString, 365);
+                        setCookie('country', data.country_name, 365);
+                        var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString").value + "/page=page");
+                        window.location.href = linktosearchresults;
+                    });
                 });
-            });
-
-
-            
+            }
 
 
 
-         
+
+
+
+
 
 
         }
@@ -162,7 +170,7 @@
             var input = document.getElementById("searchString");
             input.addEventListener("keyup", function (event) {
                 if (event.keyCode === 13) {
-                   
+
                     event.preventDefault();
                     goonresults();
                 }
@@ -170,7 +178,7 @@
         }
         window.onload = enterinput;
 
-        </script>
+    </script>
 
     <script>
         var isMobile = false; // Initiate as false
