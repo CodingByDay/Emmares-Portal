@@ -263,7 +263,7 @@
             position: absolute !important;
             height: 200px !important;
             width: 400px !important;
-            background-image: url(http://10.100.100.152:8080/default.jpg) !important;
+            background-image: url(https://emmares.com/images/default.jpg) !important;
         }
 
         .optinlinkclass {
@@ -341,7 +341,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css" rel="stylesheet" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108056731-3"></script>
 
     <script>
 
@@ -358,7 +357,31 @@
     </script>
 
     <script>
+        $(document).ready(function () {
+            file = "https://www.googletagmanager.com/gtag/js?id=UA-108056731-3"
+            var track = getCookie("tracking")
+            if (track == "yes") {
+                loadjscssfile(file, "js")
+            } else {
+            }
+        })
+       
 
+        function loadjscssfile(filename, filetype) {
+            if (filetype == "js") { //if filename is a external JavaScript file
+                var fileref = document.createElement('script')
+                fileref.setAttribute("type", "text/javascript")
+                fileref.setAttribute("src", filename)
+            }
+            else if (filetype == "css") { //if filename is an external CSS file
+                var fileref = document.createElement("link")
+                fileref.setAttribute("rel", "stylesheet")
+                fileref.setAttribute("type", "text/css")
+                fileref.setAttribute("href", filename)
+            }
+            if (typeof fileref != "undefined")
+                document.getElementsByTagName("head")[0].appendChild(fileref)
+        }
         var isMobile = false; // Initiate as false
         // Device detection
         if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -1003,13 +1026,17 @@
                 });
         }
 
-
-        if (sessionStorage.getItem("country") == null) {
-            var script1 = document.createElement('script');
-            script1.type = 'text/javascript';
-            script1.src = 'https://geoip-db.com/jsonp';
-            var h = document.getElementsByTagName('script')[0];
-            h.parentNode.insertBefore(script1, h);
+        var tracking = getCookie("tracking");
+        if (tracking == "yes") {
+            if (sessionStorage.getItem("country") == null) {
+                var script1 = document.createElement('script');
+                script1.type = 'text/javascript';
+                script1.src = 'https://geoip-db.com/jsonp';
+                var h = document.getElementsByTagName('script')[0];
+                h.parentNode.insertBefore(script1, h);
+            }
+        } else {
+            console.log("You have choosen not to be tracked.")
         }
 
 

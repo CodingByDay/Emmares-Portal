@@ -22,7 +22,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <!--<link rel="stylesheet" href="lib/Layout/style.css">-->
-    <script src="/js/prebid-ads.js"></script>
+    <script src="js/ads-prebid.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <style>
 
@@ -32,7 +32,15 @@
     <script>
 
 
-
+        window.onload = function () {
+            setTimeout(function () {
+                if (typeof (window.google_jobrunner) === "undefined") {
+                    console.log("ad blocker installed");
+                } else {
+                    console.log("no ad blocking found.");
+                }
+            }, 10000);
+        };
         /**
          *
          * Tracking module.
@@ -45,13 +53,12 @@
             // Part of the code partaining to the geo location and tracking module.
 
             if (window.canRunAds === undefined) {
-                // adblocker detected, show fallback
+                setCookie("tracking", "no", 365);
                 var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString").value + "/page=page");
                 window.location.href = linktosearchresults;
 
             } else {
-
-                // Check if the user uses ad block.
+                setCookie("tracking", "yes", 365);
                 $.getJSON('https://api.ipify.org?format=json', function (data) {
                     var address = data.ip; // Use this service to get the ip of the client visiting emmares.com.
 

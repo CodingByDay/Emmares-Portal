@@ -177,7 +177,7 @@ namespace Emmares4
             wc.Headers.Add("Content-Type", "application/json");
             try
             {
-                var test = Log(id);
+                //var test = Log(id);
 
                 return wc.UploadString(elastichost + $"/emmares_search_test/_search?size=6&&from={pagewithoutequals}", jsonfields); // fixed size of the return...
             }
