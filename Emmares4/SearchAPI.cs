@@ -98,21 +98,15 @@ namespace Emmares4
 
             //return "value";
         }
-        [HttpGet("{id}/{page}")]
-        public string get_search(string id, string page)
+        [HttpGet]
+        public string get_search([FromQuery]string q, [FromQuery]string page, [FromQuery] string isTextOnly)
 
         {
+
+            var query = HttpContext.Request.Query;
+
             
-            string[] separated = page.Split(' ');
-            var pagewithextension = separated[0];
-            var pagewithoutequals = pagewithextension.Split("=")[1];
-            if(pagewithoutequals == "page")
-            {
-                pagewithoutequals = "0";
-            } else
-            {
-                pagewithoutequals = pagewithoutequals;
-            }
+
             /* WebClient wc = new WebClient(); // to dela
             try
             {
@@ -126,49 +120,52 @@ namespace Emmares4
 
             // using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             // {
-    //        {
+            //        {
 
-    //            "query" : {
-    //                "bool" : {
-    //                    "must" : {
-    //                        "query_string": {
-    //                            "query": "grcija"
-    //                        }
-    //                    },
-    //            "should" : [
-    //               {
-    //                        "range" : {
-    //                            "date" : {
-    //                                "boost" : 5,
-    //          "gte" : "2021-07-01"
-    //                            }
-    //                        }
-    //                    },
-    //           {
-    //                        "range" : {
-    //                            "date" : {
-    //                                "boost" : 4,
-    //          "gte" : "2021-05-01"
-    //                            }
-    //                        }
-    //                    },
-    //           {
-    //                        "range" : {
-    //                            "date" : {
-    //                                "boost" : 3,
-    //          "gte" : "2021-03-01"
-    //                            }
-    //                        }
-    //                    }
-    //  ]
-    //}
-    //            }
-    //        }
+            //            "query" : {
+            //                "bool" : {
+            //                    "must" : {
+            //                        "query_string": {
+            //                            "query": "grcija"
+            //                        }
+            //                    },
+            //            "should" : [
+            //               {
+            //                        "range" : {
+            //                            "date" : {
+            //                                "boost" : 5,
+            //          "gte" : "2021-07-01"
+            //                            }
+            //                        }
+            //                    },
+            //           {
+            //                        "range" : {
+            //                            "date" : {
+            //                                "boost" : 4,
+            //          "gte" : "2021-05-01"
+            //                            }
+            //                        }
+            //                    },
+            //           {
+            //                        "range" : {
+            //                            "date" : {
+            //                                "boost" : 3,
+            //          "gte" : "2021-03-01"
+            //                            }
+            //                        }
+            //                    }
+            //  ]
+            //}
+            //            }
+            //        }
 
-            string json = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fuzziness\": \"AUTO\"}}}";
-            string jsonPriority = "{\"query\": {\"bool\" : {\"must\" : {\"query_string\" : {\"query\"  :\"" + id + "\",\"should\": [\"range\" : {\"date\" : {\"boost\" :\"" + 4 + "\", \"gte\" :\"" + "2021-03-01\"}}}";
-            string jsonfields = "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fields\": [\"excerpt\"],\"fuzziness\": \"AUTO\"}}}";
-           // "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fuzziness\": \"AUTO\"}}}";
+
+            string json = "{\"query\": {\"multi_match\" : {\"query\" : \"" + q + "\",\"fuzziness\": \"AUTO\"}}}";
+            string jsonPriority = "{\"query\": {\"bool\" : {\"must\" : {\"query_string\" : {\"query\"  :\"" + q + "\",\"should\": [\"range\" : {\"date\" : {\"boost\" :\"" + 4 + "\", \"gte\" :\"" + "2021-03-01\"}}}";
+            string jsonfields = "{\"query\": {\"multi_match\" : {\"query\" : \"" + q + "\",\"fields\": [\"excerpt\"],\"fuzziness\": \"AUTO\"}}}";
+            string jsonfieldstextsearch = "{\"query\": {\"multi_match\" : {\"query\" : \"" + q + "\",\"fields\": [\"excerpt\"],\"fuzziness\": \"AUTO\"}}, \"_source\": { \"exclude\": [\"thumbnail\"] }}";
+
+            // "{\"query\": {\"multi_match\" : {\"query\" : \"" + id + "\",\"fuzziness\": \"AUTO\"}}}";
             //streamWriter.Write(json);
             // streamWriter.Flush();
             // streamWriter.Close();
@@ -178,8 +175,14 @@ namespace Emmares4
             try
             {
                 //var test = Log(id);
+                if (isTextOnly == "true")
+                {
+                    return wc.UploadString(elastichost + $"/emmares_search_test/_search?size=6&&from={page}", jsonfieldstextsearch); // fixed size of the return...
+                } else
+                {
+                    return wc.UploadString(elastichost + $"/emmares_search_test/_search?size=6&&from={page}", jsonfields); // fixed size of the return...
 
-                return wc.UploadString(elastichost + $"/emmares_search_test/_search?size=6&&from={pagewithoutequals}", jsonfields); // fixed size of the return...
+                }
             }
             catch
             {
@@ -249,7 +252,6 @@ namespace Emmares4
         /// <returns></returns>
         private bool Log(string keyword)
         {
-
             // Keyword contains the keyword and the ID, using static helper class.
 
             var search_value = ApiHelper.GetUntilOrEmpty(keyword, " ");

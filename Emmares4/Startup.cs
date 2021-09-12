@@ -18,6 +18,8 @@ using System.Data.Common;
 using Emmares4.Helpers;
 using Emmares4.Elastic;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Rewrite;
+using System;
 
 namespace Emmares4
 {
@@ -111,6 +113,7 @@ namespace Emmares4
             options.DefaultFileNames.Clear();
 
             options.DefaultFileNames.Add("searchpage.html");
+            
 
             app.UseDefaultFiles(options);
 
@@ -131,13 +134,21 @@ namespace Emmares4
 
                     name: "default",
 
-                    template: "{controller=Home}/{action=Dashboard}/{id?}/{page?}");
+                    template: "{controller=SearchaAPI}/{action=get_search}/{q?}");
+
+
             });
+
+      
 
             Paths.ContentRootDir = env.ContentRootPath;
 
             Log.Write("Configuring static files.");         
 
         }
+
+
+     
+
     }
 }

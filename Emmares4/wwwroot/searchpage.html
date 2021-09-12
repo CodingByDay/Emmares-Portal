@@ -1,10 +1,12 @@
-﻿
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sl">
 
 <head>
+    <meta charset="utf-8" />
 
-    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+
+
     <meta name="description" content="Emmares" />
     <meta name="keywords" content="Emmares" />
     <meta name="robots" content="index, follow" />
@@ -54,8 +56,9 @@
 
             if (window.canRunAds === undefined) {
                 setCookie("tracking", "no", 365);
-                var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString").value + "/page=page");
-                window.location.href = linktosearchresults;
+                var linktosearchresults = "/resultspage.html?q=" + searchString;
+                encURL = encodeURI(linktosearchresults)
+                window.location.href = encURL;
 
             } else {
                 setCookie("tracking", "yes", 365);
@@ -67,10 +70,11 @@
                     // GeoLocation = GetLocationFromIP('https://freegeoip.app/json/195.95.161.11')
 
                     $.getJSON(`https://freegeoip.app/json/${address}`, function (data) { // Must use back ticks for interpolation here.
-                        setCookie('searchString', searchString, 365);
                         setCookie('country', data.country_name, 365);
-                        var linktosearchresults = "/resultspage.html?q=" + (document.getElementById("searchString").value + "/page=page");
-                        window.location.href = linktosearchresults;
+                 
+                        var linktosearchresults = "/resultspage.html?q=" + searchString;
+                        encURL = encodeURI(linktosearchresults)
+                        window.location.href = encURL;
                     });
                 });
             }
@@ -271,9 +275,9 @@
             <li><a class="link" href="https://medium.com/emmares"><i class="fab fa-medium-m"></i></a></li>
             <li><a class="link" href="https://t.me/emmares"><i class="fab fa-telegram-plane"></i></a></li>
             <!--<li>|</li><li><a class="link" href="">About</a></li><li><a class="link" href="">Pricing</a></li>-->
-            <div style="margin-bottom:10px; color: gray; text-align: right; padding-top: 5px;">©&nbsp;Emmares&nbsp;2018&nbsp;</div>
+            <div style="margin-bottom:10px; color: gray; text-align: right; padding-top: 5px;">?&nbsp;Emmares&nbsp;2018&nbsp;</div>
         </ul>
-    </div
+    </div>
 </body>
 
 </html>
