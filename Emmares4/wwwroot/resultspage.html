@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-    <meta charset="utf-8" />
-    
-    
-    
-    
-    
-    
-    
-    
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+
+
+
+
+
     <meta name="keywords" content="Emmares" />
     <meta name="robots" content="index, follow" />
 
@@ -19,318 +19,318 @@
 
     <style>
 
-           #img {
-               vertical-align: middle !important;
-           }
+        #img {
+            vertical-align: middle !important;
+        }
 
-           .col-sm-12 {
-               width: 140% !important;
-           }
+        .col-sm-12 {
+            width: 140% !important;
+        }
 
-           .footer {
-               position: absolute !important;
-               bottom: 5px !important;
-           }
-           /* The switch - the box around the slider */
-           .loading {
-               width: 150px;
-               height: 70px;
-               margin-bottom: 30px;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-           }
+        .footer {
+            position: absolute !important;
+            bottom: 5px !important;
+        }
+        /* The switch - the box around the slider */
+        .loading {
+            width: 150px;
+            height: 70px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-           .ball {
-               width: 30px;
-               height: 30px;
-               border-radius: 50%;
-               background: black;
-               margin: 0 10px;
-           }
+        .ball {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: black;
+            margin: 0 10px;
+        }
 
-           .first {
-               animation: slide 2s ease-in-out infinite;
-               animation-delay: .1s;
-           }
+        .first {
+            animation: slide 2s ease-in-out infinite;
+            animation-delay: .1s;
+        }
 
-           .second {
-               animation: slide 2s ease-in-out infinite;
-               animation-delay: .5s;
-           }
+        .second {
+            animation: slide 2s ease-in-out infinite;
+            animation-delay: .5s;
+        }
 
-           .third {
-               animation: slide 2s ease-in-out infinite;
-               animation-delay: 1s;
-           }
+        .third {
+            animation: slide 2s ease-in-out infinite;
+            animation-delay: 1s;
+        }
 
-           @keyframes slide {
-               from {
-                   transform: translateY(-30px);
-               }
+        @keyframes slide {
+            from {
+                transform: translateY(-30px);
+            }
 
-               to {
-                   transform: translateY(0);
-               }
-           }
-
-
-           .buttons {
-               display: flex;
-           }
-
-               .buttons div {
-                   margin: 0px 10px;
-                   color: #fffffa;
-                   cursor: pointer;
-               }
-
-                   .buttons div > * {
-                       pointer-events: none;
-                   }
+            to {
+                transform: translateY(0);
+            }
+        }
 
 
-           .switch {
-               overflow: hidden;
-               display: inline-block;
-               width: 8em;
-               background: #222;
-               padding: 0.125em;
-               color: black;
-               cursor: pointer;
-           }
+        .buttons {
+            display: flex;
+        }
 
-               .switch input {
-                   position: absolute;
-                   visibility: hidden;
-               }
+            .buttons div {
+                margin: 0px 10px;
+                color: #fffffa;
+                cursor: pointer;
+            }
 
-               .switch span {
-                   position: relative;
-                   left: 0%;
-                   display: block;
-                   text-transform: uppercase;
-                   /**
+                .buttons div > * {
+                    pointer-events: none;
+                }
+
+
+        .switch {
+            overflow: hidden;
+            display: inline-block;
+            width: 8em;
+            background: #222;
+            padding: 0.125em;
+            color: black;
+            cursor: pointer;
+        }
+
+            .switch input {
+                position: absolute;
+                visibility: hidden;
+            }
+
+            .switch span {
+                position: relative;
+                left: 0%;
+                display: block;
+                text-transform: uppercase;
+                /**
         * Holo doesn't have any transition, but
         * it's added here for demo purposes
         */
-                   -webkit-transition: left 200ms ease-out;
-                   -moz-transition: left 200ms ease-out;
-                   -o-transition: left 200ms ease-out;
-                   transition: left 200ms ease-out;
-               }
+                -webkit-transition: left 200ms ease-out;
+                -moz-transition: left 200ms ease-out;
+                -o-transition: left 200ms ease-out;
+                transition: left 200ms ease-out;
+            }
 
-               .switch :checked + span {
-                   left: 50%;
-               }
+            .switch :checked + span {
+                left: 50%;
+            }
 
-               /* Default unchecked state */
-               .switch span:before {
-                   display: block;
-                   width: 50%;
-                   background-color: ghostwhite;
-                   border-radius: 0.15em;
-                   box-shadow: inset 0 0.1em 0 rgba(255, 255, 255, 0.3);
-                   color: #b3b3b3;
-               }
+            /* Default unchecked state */
+            .switch span:before {
+                display: block;
+                width: 50%;
+                background-color: ghostwhite;
+                border-radius: 0.15em;
+                box-shadow: inset 0 0.1em 0 rgba(255, 255, 255, 0.3);
+                color: #b3b3b3;
+            }
 
-               /* Checked state */
-               .switch :checked + span:before {
-                   content: attr(data-checked);
-                   background-color: #0099CC;
-               }
-
-
-           /* Base styles */
-           html {
-               font: 100%/1.5 'Roboto', sans-serif;
-               padding-top: 3em;
-               background-color: #0e1012;
-               color: #b3b3b3;
-               text-align: left !important;
-           }
-
-           h1 {
-               font-weight: 100;
-           }
-
-           .buttons {
-               display: flex;
-           }
-
-           .switch {
-               position: relative;
-               display: inline-block;
-               width: 120px;
-               height: 30px;
-               top: 30px !important;
-               float: left !important;
-               margin-left: 740px;
-           }
-
-               /* Hide default HTML checkbox */
-               .switch input {
-                   opacity: 0;
-                   width: 0;
-                   height: 0;
-               }
+            /* Checked state */
+            .switch :checked + span:before {
+                content: attr(data-checked);
+                background-color: #0099CC;
+            }
 
 
-           .totalresultsclassGrid {
-               font-size: 15px !important;
-               color: #ffffff !important;
-               font-weight: normal !important;
-               line-height: 1.6 !important;
-               text-align: justify !important;
-               position: absolute;
-               top: -150px;
-               right: 300px !important;
-           }
-           /* The slider */
-           .slider {
-               position: absolute;
-               cursor: pointer;
-               top: 0;
-               left: 0;
-               right: 0;
-               bottom: 0;
-               background-color: #ccc;
-               -webkit-transition: .4s;
-               transition: .4s;
-           }
+        /* Base styles */
+        html {
+            font: 100%/1.5 'Roboto', sans-serif;
+            padding-top: 3em;
+            background-color: #0e1012;
+            color: #b3b3b3;
+            text-align: left !important;
+        }
+
+        h1 {
+            font-weight: 100;
+        }
+
+        .buttons {
+            display: flex;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 120px;
+            height: 30px;
+            top: 30px !important;
+            float: left !important;
+            margin-left: 740px;
+        }
+
+            /* Hide default HTML checkbox */
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+
+        .totalresultsclassGrid {
+            font-size: 15px !important;
+            color: #ffffff !important;
+            font-weight: normal !important;
+            line-height: 1.6 !important;
+            text-align: justify !important;
+            position: absolute;
+            top: -150px;
+            right: 300px !important;
+        }
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
 
 
 
-               .slider:before {
-                   position: absolute;
-                   content: "";
-                   height: 26px;
-                   width: 26px;
-                   left: 4px;
-                   bottom: 4px;
-                   background-color: white;
-                   -webkit-transition: .4s;
-                   transition: .4s;
-               }
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
 
-           input:checked + .slider {
-               background-color: #2196F3;
-           }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
 
-           .center {
-               margin: auto;
-               align-items: center;
-               align-content: center;
-               align-self: center;
-           }
+        .center {
+            margin: auto;
+            align-items: center;
+            align-content: center;
+            align-self: center;
+        }
 
-           .grid_div {
-               align-content: center !important;
-               margin: auto !important;
-               display: grid !important;
-               grid-auto-columns: max-content !important;
-               grid-auto-flow: dense !important;
-               grid-auto-rows: minmax(100px, auto) !important;
-               grid-gap: 25px !important;
-               grid-template-columns: repeat(3, 1fr) !important;
-               max-width: 70% !important;
-               width: 70% !important;
-               position: absolute !important;
-               left: 12% !important;
-               top: 250px !important;
-           }
+        .grid_div {
+            align-content: center !important;
+            margin: auto !important;
+            display: grid !important;
+            grid-auto-columns: max-content !important;
+            grid-auto-flow: dense !important;
+            grid-auto-rows: minmax(100px, auto) !important;
+            grid-gap: 25px !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            max-width: 70% !important;
+            width: 70% !important;
+            position: absolute !important;
+            left: 12% !important;
+            top: 250px !important;
+        }
 
 
-           input:focus + .slider {
-               box-shadow: 0 0 1px #2196F3;
-           }
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
 
-           input:checked + .slider:before {
-               -webkit-transform: translateX(26px);
-               -ms-transform: translateX(26px);
-               transform: translateX(26px);
-           }
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
 
-           .btn.btn-primary.subscribeButton {
-               margin-top: 10px !important;
-               position: absolute !important;
-               bottom: 0 !important;
-           }
+        .btn.btn-primary.subscribeButton {
+            margin-top: 10px !important;
+            position: absolute !important;
+            bottom: 0 !important;
+        }
 
-           img:before {
-               content: ' ' !important;
-               display: block !important;
-               position: absolute !important;
-               height: 200px !important;
-               width: 400px !important;
-               background-image: url(https://emmares.com/images/default.jpg) !important;
-           }
+        img:before {
+            content: ' ' !important;
+            display: block !important;
+            position: absolute !important;
+            height: 200px !important;
+            width: 400px !important;
+            background-image: url(https://emmares.com/images/default.jpg) !important;
+        }
 
-           .optinlinkclass {
-               position: relative !important;
-               bottom: 0px !important;
-           }
+        .optinlinkclass {
+            position: relative !important;
+            bottom: 0px !important;
+        }
 
-           .grid_div {
-               margin: auto !important;
-           }
+        .grid_div {
+            margin: auto !important;
+        }
 
-           .grid-item {
-               grid-row: span 1 !important;
-               grid-column: span 1 !important;
-               position: relative !important;
-               bottom: 0px !important;
-               min-height: 350px !important;
-               max-width: 300px !important;
-           }
+        .grid-item {
+            grid-row: span 1 !important;
+            grid-column: span 1 !important;
+            position: relative !important;
+            bottom: 0px !important;
+            min-height: 350px !important;
+            max-width: 300px !important;
+        }
 
-           /* Rounded sliders */
-           .slider.round {
-               border-radius: 34px;
-           }
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
 
-               .slider.round:before {
-                   border-radius: 50%;
-               }
+            .slider.round:before {
+                border-radius: 50%;
+            }
 
-           /* Pagination links */
-           .pagination a {
-               color: black;
-               float: left;
-               padding: 8px 16px;
-               text-decoration: none;
-               transition: background-color .3s;
-           }
+        /* Pagination links */
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
 
-               /* Style the active/current link */
-               .pagination a.active {
-                   background-color: dodgerblue;
-                   color: white;
-               }
+            /* Style the active/current link */
+            .pagination a.active {
+                background-color: dodgerblue;
+                color: white;
+            }
 
-               /* Add a grey background color on mouse-over */
-               .pagination a:hover:not(.active) {
-                   background-color: #ddd;
-               }
+            /* Add a grey background color on mouse-over */
+            .pagination a:hover:not(.active) {
+                background-color: #ddd;
+            }
 
-           .results {
-               overflow: auto;
-               position: fixed;
-               top: 100px;
-               bottom: 0;
-               right: 0;
-               width: 500px;
-               border: 3px solid #73AD;
-               resize: both;
-           }
+        .results {
+            overflow: auto;
+            position: fixed;
+            top: 100px;
+            bottom: 0;
+            right: 0;
+            width: 500px;
+            border: 3px solid #73AD;
+            resize: both;
+        }
 
-           .align {
-               text-align: center;
-           }
+        .align {
+            text-align: center;
+        }
 
-           .switch {
-               float: right;
-           }
+        .switch {
+            float: right;
+        }
     </style>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -483,17 +483,18 @@
 
             if (searchq !== undefined) {
 
-                 //searchq = searchq.replace(/%20/g, " ");
+                //searchq = searchq.replace(/%20/g, " ");
 
-                 //searchq = searchq.replace(/'+'/g, " ");
+                //searchq = searchq.replace(/'+'/g, " ");
 
-                 //searchq = searchq.replace(/%20/g, " ");
+                //searchq = searchq.replace(/%20/g, " ");
 
-             //   searchq = unescape(searchq);
+                //   searchq = unescape(searchq);
 
                 document.getElementById("searchString2").value = decodeURIComponent(searchq);
 
 
+                //setCookie("string", searchq, 365);
             }
 
 
@@ -550,9 +551,9 @@
                     window.onload = entersearchininput;
                 }
             }
-            
+
         });
-       
+
 
         function validURL(str) {
             var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
@@ -646,10 +647,10 @@
 
             const http2 = new XMLHttpRequest();
 
-           
 
-           
-            var get_search2 = "/SearchAPI/get_search/?q=" + document.getElementById("searchString2").value + `&page=${page}&isTextOnly=true`;
+
+
+            var get_search2 = "/SearchAPI/get_search/?q=" + document.getElementById("searchString2").value + `&page=${page}`;
 
             var search = decodeURI(get_search2);
             // alert(get_search2);
@@ -669,7 +670,7 @@
 
                 // Regular expressions for parsing. Removing special characters, removing links, finding the matched word.
 
-                const regExpressionSpecialCharacters = /[^a-zA-Zďż˝ďż˝ďż˝Ćšďż˝ďż˝Đžďż˝., ]/g;
+                const regExpressionSpecialCharacters = /^[ A-Za-z0-9_@./#&+-]*$/g;
                 const regExpressionLongWords = /\b\w{13,}\b/g; // more than 13 characters in a word.
 
                 var x = JSON.parse(http2.responseText);
@@ -793,7 +794,7 @@
 
 
 
-            var get_search2 = "/SearchAPI/get_search/?q=" + document.getElementById("searchString2").value + `&page=${page}&isTextOnly=false`;
+            var get_search2 = "/SearchAPI/get_search/?q=" + document.getElementById("searchString2").value + `&page=${page}`;
 
             var search = decodeURI(get_search2);
             // alert(get_search2);
@@ -812,9 +813,8 @@
 
                 // Regular expressions for parsing. Removing special characters, removing links, finding the matched word.
 
-                const regExpressionSpecialCharacters = /[^a-zA-Zďż˝ďż˝ďż˝ďż˝ďż˝ďż˝ďż˝ďż˝., ]/g;
+                const regExpressionSpecialCharacters = "/^[ A-Za-z0-9_@./#&+-]*$/g";
                 const regExpressionLongWords = /\b\w{13,}\b/g; // more than 13 characters in a word.
-
                 // x[0].innerHTML = http2.responseText;
                 var x = JSON.parse(http2.responseText);
 
@@ -1049,53 +1049,56 @@
 
 
     </script>
-
     <div id="container">
-        <div id="header">
+        <div id="header" class="row">
             <!-- Header start -->
+            <div class="logo-header col-md-4">
+                <a style="max-height: 50px;" href="searchpage.html"><img src="images/Emmares_logo.png" alt="EMMARES" class="logo_left"></a>
+            </div>
+            <div class="col-md-12">
+                <ul>
 
-
-
-
-
-
-            <ul>
-
-                <div style="float: right; font-weight: 900; display:inline;">
-                    <!-- The grid & list view buttons.. -->
-                    <li>
-                        <div class="buttons">
-                            <div class="list" id="listView"><i class="fa fa-list fa-2x"></i></div>
-                            <div class="grid" id="gridView"><i class="fa fa-th-large fa-2x"></i></div>
-                        </div>
-                    </li>
-                    <li><a class="header_links" href="/Account/Login">LOG IN</a></li>
-                    <li><a class="header_links" href="/Account/Register">SIGN UP</a></li>
-                    <li><a class="header_links" href="">PRICING</a></li>
-                </div>
-            </ul>
-
+                    <div style="float: right; font-weight: 900; display:inline;">
+                        <!-- The grid & list view buttons.. -->
+                        <li>
+                            <div class="buttons">
+                                <div class="list" id="listView"><i class="fa fa-list fa-2x"></i></div>
+                                <div class="grid" id="gridView"><i class="fa fa-th-large fa-2x"></i></div>
+                            </div>
+                        </li>
+                        <!--<li><a class="header_links" href="/Account/Login">LOG IN</a></li>
+                        <li><a class="header_links" href="/Account/Register">SIGN UP</a></li>
+                        <li><a class="header_links" href="">PRICING</a></li>-->
+                    </div>
+                </ul>
+            </div>
             <!-- Header end -->
         </div>
         <div id="body">
             <!-- Body start -->
-            <a style="max-height: 50px;" href="searchpage.html"><img src="images/Emmares_logo.png" alt="EMMARES" class="logo_left"></a>
+
             <div class="container">
 
-                <div id="searchBox" class="form-group col-sm-5">
-                    <!-- <label for="exampleInputEmail1">What are you looking for. </label> -->
+                <div class="searchContainer">
+                    <div class="logo-mobile"><a style="max-height: 50px;" href="searchpage.html"><img src="images/Emmares_logo.png" alt="EMMARES" class="logo_mobile"></a></div>
+                    <div id="searchBox" class="form-group col-sm-5">
 
-                    <input type="text" class="form-control" id="searchString2" aria-describedby="searchHelp" placeholder="What are you looking for?">
-                    <button onclick="goonresults();" id="submitButton" type="submit" class="btn btn-primary">Go</button>
-                    <small id="searchHelp" class="form-text text-muted"></small>
+                        <!-- <label for="exampleInputEmail1">What are you looking for. </label> -->
+
+                        <input type="text" class="form-control" id="searchString2" aria-describedby="searchHelp" placeholder="What are you looking for?">
+                        <button onclick="goonresults();" id="submitButton" type="submit" class="btn btn-primary">Go</button>
+                        <small id="searchHelp" class="form-text text-muted"></small>
+                    </div>
                 </div>
 
                 <!-- <label for="exampleInputEmail1">What are you looking for. </label> -->
+
                 <div class="col-sm-12 results_div">
 
 
 
                 </div>
+
                 <!-- Here is the special grid view -->
 
                 <div class="col-sm-12 grid_div">

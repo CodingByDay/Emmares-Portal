@@ -1,0 +1,861 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        /*FONTS*/
+
+        @media screen {
+            @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 300;
+                src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v13/22JRxvfANxSmnAhzbFH8PgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v13/MDadn8DQ_3oT6kvnUq_2r_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            @font-face {
+                font-family: 'Lato';
+                font-style: bold;
+                font-weight: 700;
+                src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v13/MgNNr5y1C_tIEuLEmicLmwLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            @font-face {
+                font-family: 'Lato';
+                font-style: italic;
+                font-weight: 700;
+                src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v13/HkF_qI1x_noxlxhrhMQYEJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            @font-face {
+                font-family: 'Lato';
+                font-style: italic;
+                font-weight: 300;
+                src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v13/2HG_tEPiQ4Z6795cGfdivJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            @font-face {
+                font-family: 'Neuton';
+                font-style: normal;
+                font-weight: 300;
+                src: local('Neuton Light'), local('Neuton-Light'), url(https://fonts.gstatic.com/s/neuton/v10/Q7Fajoru_szZ8E8kkCnTxpBw1xU1rKptJj_0jans920.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            @font-face {
+                font-family: 'Neuton';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Neuton Bold'), local('Neuton-Bold'), url(https://fonts.gstatic.com/s/neuton/v10/MK-qWv3o5LiGs6rxlk2eu5Bw1xU1rKptJj_0jans920.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            @font-face {
+                font-family: 'Neuton';
+                font-style: italic;
+                font-weight: 400;
+                src: local('Neuton Italic'), local('Neuton-Italic'), url(https://fonts.gstatic.com/s/neuton/v10/MZZLPHJyYM2BWjeqYVWFb3YhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            @font-face {
+                font-family: 'Spectral';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Spectral Bold'), local('Spectral-Bold'), url(https://fonts.gstatic.com/s/spectral/v4/ikQ0BlpNWErxSAqAt-baG4gp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+            @font-face {
+                font-family: 'Spectral';
+                font-style: italic;
+                font-weight: 700;
+                src: local('Spectral Bold Italic'), local('Spectral-BoldItalic'), url(https://fonts.gstatic.com/s/spectral/v4/v9WvdY1ll-vjpGHSRxsAIWaVI6zN22yiurzcBKxPjFE.woff2) format('woff2');
+                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+            }
+
+        }
+
+        /* CLIENT-SPECIFIC STYLES */
+
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* RESET STYLES */
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        /* iOS BLUE LINKS */
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* MOBILE STYLES */
+
+        @media screen and (max-width: 600px) {
+            .img-max {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .max-width {
+                max-width: 100% !important;
+            }
+
+            .mobile-wrapper {
+                width: 85% !important;
+                max-width: 85% !important;
+            }
+
+            .mobile-padding {
+                padding-left: 5% !important;
+                padding-right: 5% !important;
+            }
+        }
+
+        /* ANDROID CENTER FIX */
+
+        div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+        }
+    </style>
+</head>
+
+<body style="margin: 0 !important; padding: 0; !important background-color: #ffffff;" bgcolor="#ffffff">
+
+    <!-- HIDDEN PREHEADER TEXT -->
+    <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Lato', Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+        Latest from Science News
+    </div>
+
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="center" valign="top" width="100%" background="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/837995a2-5f14-4cf0-8423-9d9d1700da31.jpg" bgcolor="#0E2C47" style="background: #0E2C47, url('http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/837995a2-5f14-4cf0-8423-9d9d1700da31.jpg'); background-size: contain; background-repeat:repeat;padding: 10px 10px 20px 10px;" class="mobile-padding">
+                <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+            <tr>
+            <td align="center" valign="top" width="600">
+            <![endif]-->
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                    <tr>
+                        <td align="center" valign="top">
+                            <a href="http://view.societyforscience-email.com/?qs=31aa2c6fc94be243fb84238525dfbbca5968ef8c7778499889301bba3d9862e24164c8027802c1da6cc7392d14f5ee7648c2ce78b1a01db85a957bb0f842ee7d35addbd1150ad73b9fbdeecdc5cfc62b" style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif;color: #b7bdc9; font-weight: 300; font-size: 11px;">View in browser</a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td align="center" valign="top" style="padding: 15px 0 5px 0;">
+                            <a href="http://click.societyforscience-email.com/?qs=c091f4503a9fa6eab40cc5f8324c3c86170bbfc73a9ce2f4670a1e588fb3b9ed906447a4d31d40b303375a58578e6a0318e1aee8d43cd544">
+                        	<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/adde459c-6425-4b64-96f1-04dde6fd26f6.png" width="275" border="0" style="display: block;">
+                        </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="top" style="padding: 0; font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                            <h1 style="font-size: 32px; color: #ffffff;font-weight:300;-webkit-margin-before:3px; -webkit-margin-after: 3px;">Latest Headlines</h1>
+                            <p style="color: #b7bdc9; font-size: 18px; line-height: 26px; margin: 0;">
+                                06/24/2021 </p>
+                        </td>
+                    </tr>
+                </table>
+                <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="100%" valign="top" width="100%" bgcolor="#eeeeee" style="padding: 50px 15px;" class="mobile-padding">
+                <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+            <tr>
+            <td align="center" valign="top" width="600">
+            <![endif]-->
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                    <!-- BEGINNING of RSS for ARTICLES with IMAGES -->
+                     
+
+
+			
+                    <!-- END of RSS LOGIC and DEFINITIONS for ARTICLES with IMAGES -->
+
+
+                    <tr>
+                        <td align="center" valign="top" style="padding: 0 0 25px 0; font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 3px 3px 0 0;">
+                                        <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8950baab44062d76f38ea2e8ed1f8df7a6b0f63dee0ff4c46a53d1c57505e16ad777ca116b75678e26896daf2f61710351347b7634e2878fb"><img src="https://www.sciencenews.org/wp-content/uploads/2021/06/062321_ti_covid-myocarditis_feat-330x186.jpg" width="600" height="auto" alt="newsletter image" style="display: block;max-height:460px; max-width:600px; width:100%; border-radius: 3px 3px 0 0; font-family: sans-serif; font-size: 16px; color: #777777;" class="img-max"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 0 0 3px 3px; padding: 25px;">
+                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td align="left" style="font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:12px; line-height:15px;font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px!important; -webkit-margin-before: 0; -webkit-margin-after: 0;">
+                                                      
+                                                    </div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8950baab44062d76f38ea2e8ed1f8df7a6b0f63dee0ff4c46a53d1c57505e16ad777ca116b75678e26896daf2f61710351347b7634e2878fb" style="text-decoration: none; color: #1f4363;">
+                                                        <h2 style="font-family: 'Spectral', Georgia, Times New Roman, serif;font-size: 28px; line-height: 32px; color: #1f4363; margin: 0;padding: 0!important;">The benefits of COVID-19 mRNA vaccines outweigh the risk of rare heart inflammation</h2>
+                                                    </a>
+
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:12px;line-height:15px;font-weight: 300; color: #777777;padding: 0 0 10px 0!important; -webkit-margin-before: 0; -webkit-margin-after: 0;">
+                                                        Jun 23 2021 7:28 PM
+                                                    </div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif;color: #1f4363; font-size: 18px; line-height: 27px; margin: 0;padding: 0!important;">
+                                                        A CDC group says the benefits of the Pfizer and Moderna shots outweigh the risk of myocarditis and pericarditis in adolescents and young adults.  </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="padding: 30px 0 0 0;">
+                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td align="center" style="border-radius: 26px;" bgcolor="#355673">
+                                                                <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8950baab44062d76f38ea2e8ed1f8df7a6b0f63dee0ff4c46a53d1c57505e16ad777ca116b75678e26896daf2f61710351347b7634e2878fb" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; color: #ffffff; text-decoration: none; border-radius: 26px; background-color: #355673; padding: 14px 26px; border: 1px solid #355673; display: block;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/3b8748b6-2083-4d1f-a7b8-18e8ff3a90dc.png" height="12px" width="12px" style="height: 12px;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+
+
+			
+                    <!-- END of RSS LOGIC and DEFINITIONS for ARTICLES with IMAGES -->
+
+
+                    <tr>
+                        <td align="center" valign="top" style="padding: 0 0 25px 0; font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 3px 3px 0 0;">
+                                        <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8e130b2404398f2369221ae985655c6b684c20f1fea427a97bf9b303021e5db45495612a4857675b04276bcf42a4b78950758ba857d0b3944"><img src="https://www.sciencenews.org/wp-content/uploads/2021/06/062321_JC_mountain-cat_feat-330x186.jpg" width="600" height="auto" alt="newsletter image" style="display: block;max-height:460px; max-width:600px; width:100%; border-radius: 3px 3px 0 0; font-family: sans-serif; font-size: 16px; color: #777777;" class="img-max"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 0 0 3px 3px; padding: 25px;">
+                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td align="left" style="font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:12px; line-height:15px;font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px!important; -webkit-margin-before: 0; -webkit-margin-after: 0;">
+                                                      
+                                                    </div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8e130b2404398f2369221ae985655c6b684c20f1fea427a97bf9b303021e5db45495612a4857675b04276bcf42a4b78950758ba857d0b3944" style="text-decoration: none; color: #1f4363;">
+                                                        <h2 style="font-family: 'Spectral', Georgia, Times New Roman, serif;font-size: 28px; line-height: 32px; color: #1f4363; margin: 0;padding: 0!important;">Chinese mountain cats swap DNA with domestic cats, but aren't their ancestors</h2>
+                                                    </a>
+
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:12px;line-height:15px;font-weight: 300; color: #777777;padding: 0 0 10px 0!important; -webkit-margin-before: 0; -webkit-margin-after: 0;">
+                                                        Jun 23 2021 2:00 PM
+                                                    </div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif;color: #1f4363; font-size: 18px; line-height: 27px; margin: 0;padding: 0!important;">
+                                                        DNA suggests little-studied Chinese mountain cats have been rendezvousing with pet cats on the Qinghai-Tibetan Plateau since the 1950s.  </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="padding: 30px 0 0 0;">
+                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td align="center" style="border-radius: 26px;" bgcolor="#355673">
+                                                                <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8e130b2404398f2369221ae985655c6b684c20f1fea427a97bf9b303021e5db45495612a4857675b04276bcf42a4b78950758ba857d0b3944" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; color: #ffffff; text-decoration: none; border-radius: 26px; background-color: #355673; padding: 14px 26px; border: 1px solid #355673; display: block;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/3b8748b6-2083-4d1f-a7b8-18e8ff3a90dc.png" height="12px" width="12px" style="height: 12px;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+
+
+			
+                    <!-- END of RSS LOGIC and DEFINITIONS for ARTICLES with IMAGES -->
+
+
+                    <tr>
+                        <td align="center" valign="top" style="padding: 0 0 25px 0; font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 3px 3px 0 0;">
+                                        <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8e8f327cdde4a78792857a53acac3674fe985d34405d1e1e10971c81b78cde2327737b9e68e062f48ce4e4d760d74e1dc4e828fb7a903b893"><img src="https://www.sciencenews.org/wp-content/uploads/2021/06/062221_bl_covid-symphony_feat-330x186.jpg" width="600" height="auto" alt="newsletter image" style="display: block;max-height:460px; max-width:600px; width:100%; border-radius: 3px 3px 0 0; font-family: sans-serif; font-size: 16px; color: #777777;" class="img-max"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 0 0 3px 3px; padding: 25px;">
+                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td align="left" style="font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:12px; line-height:15px;font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px!important; -webkit-margin-before: 0; -webkit-margin-after: 0;">
+                                                      
+                                                    </div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8e8f327cdde4a78792857a53acac3674fe985d34405d1e1e10971c81b78cde2327737b9e68e062f48ce4e4d760d74e1dc4e828fb7a903b893" style="text-decoration: none; color: #1f4363;">
+                                                        <h2 style="font-family: 'Spectral', Georgia, Times New Roman, serif;font-size: 28px; line-height: 32px; color: #1f4363; margin: 0;padding: 0!important;">How relocating musicians can reduce COVID-19 risk at concerts</h2>
+                                                    </a>
+
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:12px;line-height:15px;font-weight: 300; color: #777777;padding: 0 0 10px 0!important; -webkit-margin-before: 0; -webkit-margin-after: 0;">
+                                                        Jun 23 2021 2:00 PM
+                                                    </div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif;color: #1f4363; font-size: 18px; line-height: 27px; margin: 0;padding: 0!important;">
+                                                        Based on simulations of how air flows across a stage, the Utah Symphony rearranged where its musicians sit and boosted ventilation. </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="padding: 30px 0 0 0;">
+                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td align="center" style="border-radius: 26px;" bgcolor="#355673">
+                                                                <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8e8f327cdde4a78792857a53acac3674fe985d34405d1e1e10971c81b78cde2327737b9e68e062f48ce4e4d760d74e1dc4e828fb7a903b893" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; color: #ffffff; text-decoration: none; border-radius: 26px; background-color: #355673; padding: 14px 26px; border: 1px solid #355673; display: block;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/3b8748b6-2083-4d1f-a7b8-18e8ff3a90dc.png" height="12px" width="12px" style="height: 12px;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+
+                    <!-- END of RSS LOOP for FIRST ARTICLES with IMAGES -->
+
+
+                <div style="text-align: center;">
+ &nbsp;&nbsp;   <div style="text-align: center;">
+ &nbsp;&nbsp; 
+
+ <!-- AD SPACE -->
+                   <tr>
+                        <td align="center" valign="top">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" style="">
+                                        <h2 style="font-family: 'Spectral', Georgia, Times New Roman, serif;font-size: 28px; line-height: 32px; color: #c64308; margin: 0;padding: 0!important;"> <i>Science News</i> is a nonprofit.</h2>
+					<p style="font-family: 'Neuton', Georgia, Times New Roman, serif;color: #c64308; font-size: 18px; line-height: 27px; margin: 0;padding: 0!important;"> We depend on 					our readers to support our journalism. You can help by subscribing for as little as $25.</p>
+					<br>
+					
+                                       
+                                         
+                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td align="center" style="border-radius: 26px;" bgcolor="#c64308">
+                                                                <a href="http://click.societyforscience-email.com/?qs=75928cc85d359b40f5f54f933565e531ae6d9f3c272280050b9197f1a5aada922eeb7ffacfe9e1e5441404ca30943bc14468997ee2160ed5" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; color: #ffffff; text-decoration: none; border-radius: 26px; background-color: #c64308; padding: 14px 26px; border: 1px solid #c64308; display: block;">SUBSCRIBE NOW</a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+					<br>
+                                    </td>
+                                </tr>
+                    <!-- END AD SPACE -->
+                    
+                       <!-- BEGINNING of RSS for ARTICLES with IMAGES CONT'D-->
+                        
+
+
+			
+
+
+<!-- END of RSS LOGIC and DEFINITIONS for ARTICLES with IMAGES CONT'D-->
+
+                    <tr>
+                        <td align="center" valign="top" style="padding: 25px 0 0 0; font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>	
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 3px 3px 0 0;">
+                                        <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8799f3d536ef7353cf7905090ab0db7efd922f62c099e424fe7258a1bd51619a84bfe48ca4066769cbdfd6f77fff55d8d9e59936ca02be8d6"><img src="https://www.sciencenews.org/wp-content/uploads/2021/06/062221_lg_earth-from-space_feat-330x186.jpg" width="600" height="auto" alt="newsletter image" style="display: block;max-height:460px; max-width:600px; width:100%; border-radius: 3px 3px 0 0; font-family: sans-serif; font-size: 16px; color: #777777;" class="img-max"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 0 0 3px 3px; padding: 25px;">
+                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td align="left" style="font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:12px; line-height:15px;font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px!important; -webkit-margin-before: 0; -webkit-margin-after: 0;">
+                                                      
+                                                    </div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8799f3d536ef7353cf7905090ab0db7efd922f62c099e424fe7258a1bd51619a84bfe48ca4066769cbdfd6f77fff55d8d9e59936ca02be8d6" style="text-decoration: none; color: #1f4363;"><h2 style="font-family: 'Spectral', Georgia, Times New Roman, serif;font-size: 28px; line-height: 32px; color: #1f4363; margin: 0;padding: 0!important;">Any aliens orbiting these 2,000 stars could spot Earth crossing the sun</h2></a>
+                                                    
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:12px;line-height:15px;font-weight: 300; color: #777777;padding: 0 0 10px 0!important; -webkit-margin-before: 0; -webkit-margin-after: 0;">
+                                                        Jun 23 2021 11:00 AM
+                                                    </div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif;color: #1f4363; font-size: 18px; line-height: 27px; margin: 0;padding: 0!important;">
+                                                        Alien astronomers in those star systems could discover Earth the way we find exoplanets: by watching for a dip in starlight.  </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="padding: 30px 0 0 0;">
+                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td align="center" style="border-radius: 26px;" bgcolor="#355673">
+                                                                <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8799f3d536ef7353cf7905090ab0db7efd922f62c099e424fe7258a1bd51619a84bfe48ca4066769cbdfd6f77fff55d8d9e59936ca02be8d6" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; color: #ffffff; text-decoration: none; border-radius: 26px; background-color: #355673; padding: 14px 26px; border: 1px solid #355673; display: block;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/3b8748b6-2083-4d1f-a7b8-18e8ff3a90dc.png" height="12px" width="12px" style="height: 12px;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+			
+
+
+			
+
+
+<!-- END of RSS LOGIC and DEFINITIONS for ARTICLES with IMAGES CONT'D-->
+
+                    <tr>
+                        <td align="center" valign="top" style="padding: 25px 0 0 0; font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>	
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 3px 3px 0 0;">
+                                        <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b85199b328062e6430c808f96301ec7e6a7ee1410be08bf2fa05287b88b8137d47ae542e5aa056360178eca5825d9ad801f3fdf961d650210f"><img src="https://www.sciencenews.org/wp-content/uploads/2021/06/061821_PP_india-fungus_feat-330x186.jpg" width="600" height="auto" alt="newsletter image" style="display: block;max-height:460px; max-width:600px; width:100%; border-radius: 3px 3px 0 0; font-family: sans-serif; font-size: 16px; color: #777777;" class="img-max"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 0 0 3px 3px; padding: 25px;">
+                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td align="left" style="font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:12px; line-height:15px;font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px!important; -webkit-margin-before: 0; -webkit-margin-after: 0;">
+                                                      
+                                                    </div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b85199b328062e6430c808f96301ec7e6a7ee1410be08bf2fa05287b88b8137d47ae542e5aa056360178eca5825d9ad801f3fdf961d650210f" style="text-decoration: none; color: #1f4363;"><h2 style="font-family: 'Spectral', Georgia, Times New Roman, serif;font-size: 28px; line-height: 32px; color: #1f4363; margin: 0;padding: 0!important;">How COVID-19 created a perfect storm for a deadly fungal infection in India</h2></a>
+                                                    
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:12px;line-height:15px;font-weight: 300; color: #777777;padding: 0 0 10px 0!important; -webkit-margin-before: 0; -webkit-margin-after: 0;">
+                                                        Jun 23 2021 6:00 AM
+                                                    </div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif;color: #1f4363; font-size: 18px; line-height: 27px; margin: 0;padding: 0!important;">
+                                                        Amid the chaos of the COVID-19 pandemic, numbers of rare but dangerous “black fungus” infections have skyrocketed in the country.  </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="padding: 30px 0 0 0;">
+                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td align="center" style="border-radius: 26px;" bgcolor="#355673">
+                                                                <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b85199b328062e6430c808f96301ec7e6a7ee1410be08bf2fa05287b88b8137d47ae542e5aa056360178eca5825d9ad801f3fdf961d650210f" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; color: #ffffff; text-decoration: none; border-radius: 26px; background-color: #355673; padding: 14px 26px; border: 1px solid #355673; display: block;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/3b8748b6-2083-4d1f-a7b8-18e8ff3a90dc.png" height="12px" width="12px" style="height: 12px;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+			
+
+
+			
+
+
+<!-- END of RSS LOGIC and DEFINITIONS for ARTICLES with IMAGES CONT'D-->
+
+                    <tr>
+                        <td align="center" valign="top" style="padding: 25px 0 0 0; font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>	
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 3px 3px 0 0;">
+                                        <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b81d6d925caec7829c4c68efaaaa62e7efc3c942eae2c31a1a3cc6cd35c68ed72f0f0ae90ec46e3c4a2714bbaedc75a5c8d7ec94f506f0464e"><img src="https://www.sciencenews.org/wp-content/uploads/2021/06/062121_jc_cosmic-filaments_feat-330x186.jpg" width="600" height="auto" alt="newsletter image" style="display: block;max-height:460px; max-width:600px; width:100%; border-radius: 3px 3px 0 0; font-family: sans-serif; font-size: 16px; color: #777777;" class="img-max"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" style="border-radius: 0 0 3px 3px; padding: 25px;">
+                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td align="left" style="font-family: 'Lato', Helvetica, Arial, sans-serif;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:12px; line-height:15px;font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px!important; -webkit-margin-before: 0; -webkit-margin-after: 0;">
+                                                      
+                                                    </div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b81d6d925caec7829c4c68efaaaa62e7efc3c942eae2c31a1a3cc6cd35c68ed72f0f0ae90ec46e3c4a2714bbaedc75a5c8d7ec94f506f0464e" style="text-decoration: none; color: #1f4363;"><h2 style="font-family: 'Spectral', Georgia, Times New Roman, serif;font-size: 28px; line-height: 32px; color: #1f4363; margin: 0;padding: 0!important;">Cosmic filaments may be the biggest spinning objects in space</h2></a>
+                                                    
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:12px;line-height:15px;font-weight: 300; color: #777777;padding: 0 0 10px 0!important; -webkit-margin-before: 0; -webkit-margin-after: 0;">
+                                                        Jun 22 2021 12:27 PM
+                                                    </div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif;color: #1f4363; font-size: 18px; line-height: 27px; margin: 0;padding: 0!important;">
+                                                        Filaments of dark matter and galaxies, which can stretch millions of light-years, might help astronomers figure out the origins of cosmic spin.  </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="padding: 30px 0 0 0;">
+                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td align="center" style="border-radius: 26px;" bgcolor="#355673">
+                                                                <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b81d6d925caec7829c4c68efaaaa62e7efc3c942eae2c31a1a3cc6cd35c68ed72f0f0ae90ec46e3c4a2714bbaedc75a5c8d7ec94f506f0464e" target="_blank" style="font-size: 16px; font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: 400; color: #ffffff; text-decoration: none; border-radius: 26px; background-color: #355673; padding: 14px 26px; border: 1px solid #355673; display: block;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/3b8748b6-2083-4d1f-a7b8-18e8ff3a90dc.png" height="12px" width="12px" style="height: 12px;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+			
+		
+                        <!-- END of RSS LOOP for ARTICLES with IMAGES CONT'D -->
+
+<div style="text-align: center;">
+ &nbsp;&nbsp;   <div style="text-align: center;">
+ &nbsp;&nbsp; 
+
+<!-- AD SPACE -->
+                    <tr>
+                        <td align="center" valign="top">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" bgcolor="#f1f4f8" style="">
+                                        <a href="http://click.societyforscience-email.com/?qs=75928cc85d359b400c1781c06fd82f01aa222bf3afa651e9894e40b7359b12c7c2383391e42ca476f2511489d6d7de0fb304f8ae65c9fa9a"><img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/5/centennial-MAR_028_21_A_600x150_px_2.jpg" width="600" style="width: 100%"></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- END AD SPACE -->
+                    <tr>
+
+                        <td align="center" valign="top" style="padding: 25px 0; font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif;" bgcolor="#eeeeee">
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+                                <tr>
+                                    <td align="left" bgcolor="#ffffff" style="border-radius: 3px;font-family: 'Neuton', Georgia, Times New Roman, serif;padding: 25px;">
+                                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+
+
+                                            <tr>
+                                                <td align="left" style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; color: #1f4363; padding-bottom: 20px">
+                                                    <div style="font-size: 32px; line-height:38px; color: #1f4363; -webkit-margin-before:0px; -webkit-margin-after: 0px; font-weight:300;">More Recent Headlines</div>
+                                                </td>
+                                            </tr>
+
+
+                                            <!-- BEGINNING of RSS for ARTICLES w/o IMAGES USING SAME RSS FEED -->
+
+
+                                            
+
+
+
+
+                                            <tr>
+                                                <td style="padding-bottom: 20px;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:11px; line-height:14px; font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px; -webkit-margin-before: 0; -webkit-margin-after: 0;"></div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8fa10969472ffbcc8faeb9785f4b3a1c76d478b6e0c5a770905ae10c26f05d5bad4b1c839b312f0d6f6b2ddf7c4b26749cb278e923870d16f" style="text-decoration: none;">
+                                                        <span style="font-family: 'Spectral', Georgia, Times New Roman, serif; font-size: 22px; font-weight:700; color: #1f4363; padding:0;margin: 0; line-height: 26px;">‘Fathom' seeks to unravel humpback whales' soulful songs</span>
+                                                    </a>
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:10px; line-height:12px; font-weight: 300; color: #777777; text-transform: uppercase; -webkit-margin-before: 0; -webkit-margin-after: 0;padding-bottom: 5px;">Jun 22 2021 11:49 AM</div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif; color: #1f4363; font-size: 16px; line-height: 20px; margin: 0;">
+                                                        The film ‘Fathom' on Apple TV+ follows the quest of researchers on the ocean's surface to decipher the eerie symphony of humpback whale calls below.  </p><a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8fa10969472ffbcc8faeb9785f4b3a1c76d478b6e0c5a770905ae10c26f05d5bad4b1c839b312f0d6f6b2ddf7c4b26749cb278e923870d16f" style="text-decoration: none;font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; text-transform: uppercase; color: #1f4363; font-size: 14px; line-height: 17px;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/8180b593-9fcc-4b2c-8fd9-89cf2add967b.png" height="10px" width="10px" style="height:10px; margin-top: 8px;"></a>
+                                                </td>
+                                            </tr>
+
+
+                                            
+
+
+
+
+                                            <tr>
+                                                <td style="padding-bottom: 20px;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:11px; line-height:14px; font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px; -webkit-margin-before: 0; -webkit-margin-after: 0;"></div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8ecf58812c6de1aec557481862e290b818646814eccb1a331df1e048b935dc092e169e6d4d58362e5a304c4a41b32e37d7c44378a20a77c25" style="text-decoration: none;">
+                                                        <span style="font-family: 'Spectral', Georgia, Times New Roman, serif; font-size: 22px; font-weight:700; color: #1f4363; padding:0;margin: 0; line-height: 26px;">Mathematician J. Ernest Wilkins Jr. was a Manhattan Project standout despite racism</span>
+                                                    </a>
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:10px; line-height:12px; font-weight: 300; color: #777777; text-transform: uppercase; -webkit-margin-before: 0; -webkit-margin-after: 0;padding-bottom: 5px;">Jun 22 2021 6:00 AM</div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif; color: #1f4363; font-size: 16px; line-height: 20px; margin: 0;">
+                                                        Black scientist J. Ernest Wilkins Jr. made nuclear physics calculations that helped build an atomic bomb. </p><a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8ecf58812c6de1aec557481862e290b818646814eccb1a331df1e048b935dc092e169e6d4d58362e5a304c4a41b32e37d7c44378a20a77c25" style="text-decoration: none;font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; text-transform: uppercase; color: #1f4363; font-size: 14px; line-height: 17px;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/8180b593-9fcc-4b2c-8fd9-89cf2add967b.png" height="10px" width="10px" style="height:10px; margin-top: 8px;"></a>
+                                                </td>
+                                            </tr>
+
+
+                                            
+
+
+
+
+                                            <tr>
+                                                <td style="padding-bottom: 20px;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:11px; line-height:14px; font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px; -webkit-margin-before: 0; -webkit-margin-after: 0;"></div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b87da073ac2eb039b356d318953f63b829f31fd53762f2c2cb3a18b028c6ca9d57a51cdb7cbd14bb11fdc7b91f2b313ebd9c8a7b363e707ab9" style="text-decoration: none;">
+                                                        <span style="font-family: 'Spectral', Georgia, Times New Roman, serif; font-size: 22px; font-weight:700; color: #1f4363; padding:0;margin: 0; line-height: 26px;">50 years ago, UFO sightings in the United States went bust</span>
+                                                    </a>
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:10px; line-height:12px; font-weight: 300; color: #777777; text-transform: uppercase; -webkit-margin-before: 0; -webkit-margin-after: 0;padding-bottom: 5px;">Jun 21 2021 10:59 AM</div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif; color: #1f4363; font-size: 16px; line-height: 20px; margin: 0;">
+                                                        In 1971, reports of unidentified flying objects were on the decline. Fifty years later, sightings have spiked thanks in part to pandemic lockdowns.  </p><a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b87da073ac2eb039b356d318953f63b829f31fd53762f2c2cb3a18b028c6ca9d57a51cdb7cbd14bb11fdc7b91f2b313ebd9c8a7b363e707ab9" style="text-decoration: none;font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; text-transform: uppercase; color: #1f4363; font-size: 14px; line-height: 17px;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/8180b593-9fcc-4b2c-8fd9-89cf2add967b.png" height="10px" width="10px" style="height:10px; margin-top: 8px;"></a>
+                                                </td>
+                                            </tr>
+
+
+                                            
+
+
+
+
+                                            <tr>
+                                                <td style="padding-bottom: 20px;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:11px; line-height:14px; font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px; -webkit-margin-before: 0; -webkit-margin-after: 0;"></div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8e2f67593341c9cd261c1b5b3742a815ba59250a54c8ae73363031d1f0c3a7c76a5b1b2e3b359d97fda5e73dfb9b7305baa01e9b6ddd60e3d" style="text-decoration: none;">
+                                                        <span style="font-family: 'Spectral', Georgia, Times New Roman, serif; font-size: 22px; font-weight:700; color: #1f4363; padding:0;margin: 0; line-height: 26px;">New images clarify how glasswing butterflies make their wings transparent</span>
+                                                    </a>
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:10px; line-height:12px; font-weight: 300; color: #777777; text-transform: uppercase; -webkit-margin-before: 0; -webkit-margin-after: 0;padding-bottom: 5px;">Jun 21 2021 6:00 AM</div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif; color: #1f4363; font-size: 16px; line-height: 20px; margin: 0;">
+                                                        Close-up views of glasswing butterflies reveal the secrets behind the insect's see-through wings: sparse, spindly scales and a waxy coating. </p><a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8e2f67593341c9cd261c1b5b3742a815ba59250a54c8ae73363031d1f0c3a7c76a5b1b2e3b359d97fda5e73dfb9b7305baa01e9b6ddd60e3d" style="text-decoration: none;font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; text-transform: uppercase; color: #1f4363; font-size: 14px; line-height: 17px;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/8180b593-9fcc-4b2c-8fd9-89cf2add967b.png" height="10px" width="10px" style="height:10px; margin-top: 8px;"></a>
+                                                </td>
+                                            </tr>
+
+
+                                            
+
+
+
+
+                                            <tr>
+                                                <td style="padding-bottom: 20px;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:11px; line-height:14px; font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px; -webkit-margin-before: 0; -webkit-margin-after: 0;"></div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b810bdac4bb9dacb45f1ef751c5bb7192772039d52cf742ff09da64552b33ad16f9a90db7cc2681e5de54b6b2435fad2b4f07b9ef0021df842" style="text-decoration: none;">
+                                                        <span style="font-family: 'Spectral', Georgia, Times New Roman, serif; font-size: 22px; font-weight:700; color: #1f4363; padding:0;margin: 0; line-height: 26px;">A satellite's view of a deadly 2019 eruption could improve volcano monitoring</span>
+                                                    </a>
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:10px; line-height:12px; font-weight: 300; color: #777777; text-transform: uppercase; -webkit-margin-before: 0; -webkit-margin-after: 0;padding-bottom: 5px;">Jun 18 2021 2:00 PM</div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif; color: #1f4363; font-size: 16px; line-height: 20px; margin: 0;">
+                                                        Monitoring volcanoes from space could enhance scientists' understanding of, and ability to predict, even small eruptions.  </p><a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b810bdac4bb9dacb45f1ef751c5bb7192772039d52cf742ff09da64552b33ad16f9a90db7cc2681e5de54b6b2435fad2b4f07b9ef0021df842" style="text-decoration: none;font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; text-transform: uppercase; color: #1f4363; font-size: 14px; line-height: 17px;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/8180b593-9fcc-4b2c-8fd9-89cf2add967b.png" height="10px" width="10px" style="height:10px; margin-top: 8px;"></a>
+                                                </td>
+                                            </tr>
+
+
+                                            
+
+
+
+
+                                            <tr>
+                                                <td style="padding-bottom: 20px;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:11px; line-height:14px; font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px; -webkit-margin-before: 0; -webkit-margin-after: 0;"></div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8e0a3f2f0513d8ffc2ba374d00d91c89669b2413393cb7f3db0ca6adceba5931411a1683a6fa8f506bea86f42f9909f54b77357875db173da" style="text-decoration: none;">
+                                                        <span style="font-family: 'Spectral', Georgia, Times New Roman, serif; font-size: 22px; font-weight:700; color: #1f4363; padding:0;margin: 0; line-height: 26px;">Controlling nerve cells with light opened new ways to study the brain</span>
+                                                    </a>
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:10px; line-height:12px; font-weight: 300; color: #777777; text-transform: uppercase; -webkit-margin-before: 0; -webkit-margin-after: 0;padding-bottom: 5px;">Jun 18 2021 9:00 AM</div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif; color: #1f4363; font-size: 16px; line-height: 20px; margin: 0;">
+                                                        A method called optogenetics offers insights into memory, perception and addiction. </p><a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8e0a3f2f0513d8ffc2ba374d00d91c89669b2413393cb7f3db0ca6adceba5931411a1683a6fa8f506bea86f42f9909f54b77357875db173da" style="text-decoration: none;font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; text-transform: uppercase; color: #1f4363; font-size: 14px; line-height: 17px;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/8180b593-9fcc-4b2c-8fd9-89cf2add967b.png" height="10px" width="10px" style="height:10px; margin-top: 8px;"></a>
+                                                </td>
+                                            </tr>
+
+
+                                            
+
+
+
+
+                                            <tr>
+                                                <td style="padding-bottom: 20px;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:11px; line-height:14px; font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px; -webkit-margin-before: 0; -webkit-margin-after: 0;"></div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8a85e19f989609bf7f032b0c32a186c6030b06402b9a1b510a4574c1f46dc35b9f6e56c442c253e82080cf22e02d15d93a8dffcb5d6e451de" style="text-decoration: none;">
+                                                        <span style="font-family: 'Spectral', Georgia, Times New Roman, serif; font-size: 22px; font-weight:700; color: #1f4363; padding:0;margin: 0; line-height: 26px;">How one medical team is bringing COVID-19 vaccines to hard-to-reach Hispanic communities</span>
+                                                    </a>
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:10px; line-height:12px; font-weight: 300; color: #777777; text-transform: uppercase; -webkit-margin-before: 0; -webkit-margin-after: 0;padding-bottom: 5px;">Jun 18 2021 6:00 AM</div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif; color: #1f4363; font-size: 16px; line-height: 20px; margin: 0;">
+                                                        Unidos Contra COVID's Spanish-speaking volunteers go to where Philadelphia's Hispanic people gather, giving shots and addressing concerns one-on-one.  </p><a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8a85e19f989609bf7f032b0c32a186c6030b06402b9a1b510a4574c1f46dc35b9f6e56c442c253e82080cf22e02d15d93a8dffcb5d6e451de" style="text-decoration: none;font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; text-transform: uppercase; color: #1f4363; font-size: 14px; line-height: 17px;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/8180b593-9fcc-4b2c-8fd9-89cf2add967b.png" height="10px" width="10px" style="height:10px; margin-top: 8px;"></a>
+                                                </td>
+                                            </tr>
+
+
+                                            
+
+
+
+
+                                            <tr>
+                                                <td style="padding-bottom: 20px;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:11px; line-height:14px; font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px; -webkit-margin-before: 0; -webkit-margin-after: 0;"></div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8056b594a2f92c73eefec775ace81abc293b74a52787296d83dbea282d44ddcce72b62857c37301928fcc9e3c6fb99d1a78aa039fecfdfee4" style="text-decoration: none;">
+                                                        <span style="font-family: 'Spectral', Georgia, Times New Roman, serif; font-size: 22px; font-weight:700; color: #1f4363; padding:0;margin: 0; line-height: 26px;">Physicists used LIGO's mirrors to approach a quantum limit</span>
+                                                    </a>
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:10px; line-height:12px; font-weight: 300; color: #777777; text-transform: uppercase; -webkit-margin-before: 0; -webkit-margin-after: 0;padding-bottom: 5px;">Jun 17 2021 2:00 PM</div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif; color: #1f4363; font-size: 16px; line-height: 20px; margin: 0;">
+                                                        Using LIGO's laser beams to reduce jiggling rather than detect gravitational waves, scientists have gotten closer to the realm of quantum mechanics. </p><a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b8056b594a2f92c73eefec775ace81abc293b74a52787296d83dbea282d44ddcce72b62857c37301928fcc9e3c6fb99d1a78aa039fecfdfee4" style="text-decoration: none;font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; text-transform: uppercase; color: #1f4363; font-size: 14px; line-height: 17px;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/8180b593-9fcc-4b2c-8fd9-89cf2add967b.png" height="10px" width="10px" style="height:10px; margin-top: 8px;"></a>
+                                                </td>
+                                            </tr>
+
+
+                                            
+
+
+
+
+                                            <tr>
+                                                <td style="padding-bottom: 20px;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:11px; line-height:14px; font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px; -webkit-margin-before: 0; -webkit-margin-after: 0;"></div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b83bdad714397ca57223f098658ccdcbabb6b19d07647a77960db5f637db35b51516e84fa3decd259006e93ccdc88417f7cec6fdc9d531c1ac" style="text-decoration: none;">
+                                                        <span style="font-family: 'Spectral', Georgia, Times New Roman, serif; font-size: 22px; font-weight:700; color: #1f4363; padding:0;margin: 0; line-height: 26px;">Collapse may not always be inevitable for marine ice cliffs</span>
+                                                    </a>
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:10px; line-height:12px; font-weight: 300; color: #777777; text-transform: uppercase; -webkit-margin-before: 0; -webkit-margin-after: 0;padding-bottom: 5px;">Jun 17 2021 2:00 PM</div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif; color: #1f4363; font-size: 16px; line-height: 20px; margin: 0;">
+                                                        Runaway collapse of ice cliffs could dramatically boost sea level. But these cliffs may not be so vulnerable, new simulations suggest.  </p><a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b83bdad714397ca57223f098658ccdcbabb6b19d07647a77960db5f637db35b51516e84fa3decd259006e93ccdc88417f7cec6fdc9d531c1ac" style="text-decoration: none;font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; text-transform: uppercase; color: #1f4363; font-size: 14px; line-height: 17px;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/8180b593-9fcc-4b2c-8fd9-89cf2add967b.png" height="10px" width="10px" style="height:10px; margin-top: 8px;"></a>
+                                                </td>
+                                            </tr>
+
+
+                                            
+
+
+
+
+                                            <tr>
+                                                <td style="padding-bottom: 20px;">
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:11px; line-height:14px; font-weight: 300; color: #c64308; text-transform: uppercase; letter-spacing: .05em; padding: 2px; -webkit-margin-before: 0; -webkit-margin-after: 0;"></div>
+                                                    <a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b872cf1725a96618cd205f295d4cdcfff0d816e47982cc3c2ff4c839f1aab6c14b094c76c1b9410c21f5358556f5c509b062a80e90bdfcfb61" style="text-decoration: none;">
+                                                        <span style="font-family: 'Spectral', Georgia, Times New Roman, serif; font-size: 22px; font-weight:700; color: #1f4363; padding:0;margin: 0; line-height: 26px;">A new book uses stories from tsunami survivors to decode deadly waves</span>
+                                                    </a>
+                                                    <div style="font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; font-size:10px; line-height:12px; font-weight: 300; color: #777777; text-transform: uppercase; -webkit-margin-before: 0; -webkit-margin-after: 0;padding-bottom: 5px;">Jun 17 2021 7:00 AM</div>
+                                                    <p style="font-family: 'Neuton', Georgia, Times New Roman, serif; color: #1f4363; font-size: 16px; line-height: 20px; margin: 0;">
+                                                        In ‘Tsunami: The World's Greatest Waves,' two scientists chronical hundreds of eyewitness accounts to show the human cost of life at the water's edge. </p><a href="http://click.societyforscience-email.com/?qs=45befd7a8a6146b872cf1725a96618cd205f295d4cdcfff0d816e47982cc3c2ff4c839f1aab6c14b094c76c1b9410c21f5358556f5c509b062a80e90bdfcfb61" style="text-decoration: none;font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; text-transform: uppercase; color: #1f4363; font-size: 14px; line-height: 17px;">READ MORE&nbsp;&nbsp;<img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/1/8180b593-9fcc-4b2c-8fd9-89cf2add967b.png" height="10px" width="10px" style="height:10px; margin-top: 8px;"></a>
+                                                </td>
+                                            </tr>
+
+
+                                            
+
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </div></div></table>
+                <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="100%" valign="top" width="100%" bgcolor="#f1f4f8" style="padding: 0 15px 40px 15px;">
+                <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+            <tr>
+            <td align="center" valign="top" width="600">
+            <![endif]-->
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                    <tr>
+                        <td align="center" valign="top" style="padding: 30px 0 10px 0;">
+                            <a href="http://click.societyforscience-email.com/?qs=75928cc85d359b40791785391fc9b3f7420429df1adf9b7c1c233bb51a7ac7b11457ae160ddd8a28e0305790d1fdc1aa9705ec616b1d153b"><img src="http://image.societyforscience-email.com/lib/fe811372726301747c/m/4/SN_Society_Nameplate-new.png" width="225" border="0" style="display: block;"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table width="160px" align="center" valign="top">
+                                <tr>
+                                    <td style="padding: 10px; display: inline!important;">
+                                        <a href="http://click.societyforscience-email.com/?qs=75928cc85d359b4044253c339829bede613bef3a3ed842440b00398dd5652cca35035d64716af50d6175994a25a999f38af43c85e0bbdeb2" style="text-decoration: none;!important">
+                                            <img src="http://image.s4.exct.net/lib/fe911573736c007d7d/m/2/1a560d12-c8d7-40cb-9e90-9df36933fdfa.png" alt="facebook" style="display: inline!important; width: 30px!important;height: 30px!important;" width="30" height="30">
+                                        </a>
+                                    </td>
+                                    <td style="padding: 10px; display: inline!important;">
+                                        <a href="http://click.societyforscience-email.com/?qs=75928cc85d359b4038ef6976f37c161a2ea2287ad1c6500a2ddb9c9a1239ca29f8baa73c1adfbdf9e4f8510148865e0a01c8e0b4adce8eed" style="text-decoration: none;!important">
+                                            <img src="http://image.s4.exct.net/lib/fe911573736c007d7d/m/2/a3b47106-a80a-401f-8435-6b6398001c4f.png" alt="twitter" style="display: inline!important; width: 30px!important;height: 30px!important;" width="30" height="30">
+                                        </a>
+                                    </td>
+                                    <td style="padding: 10px; display: inline!important;">
+                                        <a href="http://click.societyforscience-email.com/?qs=75928cc85d359b40106c21e465ec8485ee7feb097b745b3300dd85d5f64fdfbdb921e4992f6c9e94a9cc1aff133e4049a04f004f5253c078" style="text-decoration: none;!important">
+                                            <img src="http://image.s4.exct.net/lib/fe911573736c007d7d/m/2/287abafd-6473-47a9-b05b-30526dc265fd.png" alt="youtube" style="display: inline!important; width: 30px!important;height: 30px!important;" width="30" height="30">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="top" style="padding: 0; font-family: 'Lato', Trebuchet MS, Lucida Grande, Helvetica, Arial, sans-serif; color: #777777;">
+                            <p style="font-size: 14px; line-height: 20px;">
+                                This email was sent by: <b>Society for Science</b><br>1719 N Street NW Washington, DC, 20036, US
+
+                                <br><br>
+
+                                <a href="http://click.societyforscience-email.com/profile_center.aspx?qs=3e84792f6eba9479949112fa140b97d39fb70e2626a555218eb30baeb536940419ca05fe522c1b2fc23f5b703fa1f386258aea7340a07d5900e5a6128c1ab78186e8645d3e565c1b" style="color: #777777; display:none" target="_blank">Update Profile</a> <span style="display:none"> &nbsp; &bull; &nbsp;</span>
+                                <a href="http://click.societyforscience-email.com/  &nbsp; &bull; &nbsp;
+                                <a href="http://click.societyforscience-email.com/unsub_center.aspx?qs=3e84792f6eba9479d7eeda37f738c9ebc911d1f38a02c4bedb49b9b7ab390db2139d205f24a39697bc09bb3406a21e9f8798f32cb3fddca81711c7de325ec39824beff2fb4958f31" style="color: #777777;" target="_blank"> </a>&nbsp; &bull; &nbsp;
+                                <a href="http://click.societyforscience-email.com/?qs=75928cc85d359b403eb5d3ce0c1b48f350de00f321e09eb26f01ae5b1b906ddcee8030f5d1d55b5743a009e1d54624dd4a01be3aeb27f7a3" style="color: #777777;" target="_blank">Privacy Policy</a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+            </td>
+        </tr>
+
+    </div></div></table>
+    <img src="http://click.societyforscience-email.com/open.aspx?ffcb10-fec2177473660275-fe2e1672776d0774761572-fe811372726301747c-ff6a157374-fe2c157573660275771772-fefc157975640d&d=70160&bmt=0" width="1" height="1" alt="">
+<style data-ignore-inlining="">@media (prefers-color-scheme: dark) { #_t::before {content:url('https://j1x6erhc.emltrk.com/v2/j1x6erhc?rd&d=');}} @media (prefers-color-scheme: light) { #_t::before {content:url('https://j1x6erhc.emltrk.com/v2/j1x6erhc?rl&d=');}} @media print{ #_t {background-image:url('https://j1x6erhc.emltrk.com/v2/j1x6erhc?p&d=');}} div.OutlookMessageHeader {background-image:url('https://j1x6erhc.emltrk.com/v2/j1x6erhc?f&d=')} table.moz-email-headers-table {background-image:url('https://j1x6erhc.emltrk.com/v2/j1x6erhc?f&d=')} blockquote #_t {background-image:url('https://j1x6erhc.emltrk.com/v2/j1x6erhc?f&d=')} #MailContainerBody #_t
+ {background-image:url('https://j1x6erhc.emltrk.com/v2/j1x6erhc?f&d=')}</style><div id="_t"></div>
+<img src="https://j1x6erhc.emltrk.com/v2/j1x6erhc?d=" width="1" height="1" border="0" alt="">
+</td></tr></table></body>
+
+</html>
+

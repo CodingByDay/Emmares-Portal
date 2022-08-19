@@ -1,0 +1,801 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<!--[if (gte mso 9)|(IE)]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"/><![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+/* Reset Styles */
+#outlook a {padding:0;}
+body {width: 100% !important;-webkit-text-size-adjust: none; -ms-text-size-adjust: none;
+margin: 0;padding: 0;}
+.ReadMsgBody {width: 100%;}
+.ExternalClass {width: 100%;}
+.backgroundTable {margin: 0 auto;padding: 0;width: 100% !important;}
+table td {border-collapse: collapse;}
+.ExternalClass * {line-height: 115%;}
+th img {margin:0 auto !important;}
+th {margin:0 !important; font-weight:normal;}
+.gmail-fix {display:none; display:none!important;}
+div, button {vertical-align:top; margin:0}
+
+/* Link Fixes */
+a[x-apple-data-detectors] {color: inherit !important;
+text-decoration: none !important;font-size: inherit !important;
+font-family: inherit !important;font-weight: inherit !important;
+line-height: inherit !important;}
+
+/* All Your Font Jazz */
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+/* General Styles */
+.container {width: 100% !important;overflow: hidden;}
+.hide {display: none !important;}
+.display-ib {display: inline-block;}
+.display-b {display: block;}
+.full-width {width: 100% !important;height: auto;}
+.half-width {width: 50% !important;height: auto;}
+.float-l {float: left;}
+.float-r {float: right;}
+.height-auto {height: auto !important;}
+.wrapper {width: 100% !important;}
+.stack {width:100% !important; display:block !important;}
+.mobile-individual-logos-wrapper { display:block !important; width: 100% !important; height: auto !important; padding: 10px 0px 0px 0px !important;}
+
+.responsive-img { width: 100% !important; height: auto !important;}
+.category-img { width: 40% !important; height: auto !important;}
+
+.margin-center { margin: 0 auto !important;}
+
+/* Images */
+.full-img img {width: 100% !important;height: auto;}
+.forty-img img {width: 50% !important;height: auto;}
+.mobile-logo-fourty img {width: 40% !important;height: auto;}
+.mobile-logo-fifty img {width: 50% !important;height: auto;}
+.mobile-logo-sixty img {width: 60% !important;height: auto;}
+.mobile-logo-seventy img {width: 70% !important;height: auto;}
+
+/* Buttons */
+.full-btn {width: 100% !important;height: auto;border-left: 0 none !important;
+    border-right: 0 none !important;padding-left: 0 !important;padding-right: 0 !important;}
+.mobile-btn {font-size: 21px !important; padding: 10px 20px !important; width: auto !important; line-height:25px !important; text-align:center !important}
+.mobile-btn-inside {font-size: 21px !important; padding: 15px 25px !important; width: auto !important; line-height:25px !important; text-align:center !important}
+
+/* Text */
+.center, .center img {text-align: center !important;margin: 0 auto;float: none;}
+.left {text-align: left !important;}
+.right {text-align:right !important;}
+
+.align-center {text-align:center !important; margin: 0 auto;}
+
+.copy-14 {font-size: 14px !important;}
+.copy-16 {font-size: 16px !important;}
+.copy-18 {font-size: 18px !important;}
+.copy-20 {font-size: 20px !important;}
+.copy-21 {font-size: 21px !important;}
+.copy-24 {font-size: 24px !important;}
+.copy-28 {font-size: 28px !important;}
+
+.lh-25 {line-height: 25px !important}
+.lh-28 {line-height: 28px !important}
+.lh-30 {line-height: 30px !important}
+.lh-35 {line-height: 35px !important}
+.lh-40 {line-height: 40px !important}
+
+.headline {font-size: 24px !important; line-height:30px !important; font-weight: bold !important}
+.subtext {font-size: 21px !important; line-height:28px !important;}
+.subtext-small {font-size: 15px !important; line-height:18px !important;}
+
+.two-col-headline {display: block !important; width: 100% !important; padding: 10px 0px 0px 0px !important; font-size: 25px !important; line-height: 30px !important; height: auto !important; text-align: center !important}
+
+.two-col-subtext {display: block !important; width: 100% !important; padding: 10px 0px 0px 0px !important; font-size: 21px !important; line-height: 28px !important; height: auto !important; text-align: center !important}
+
+/* Borders */
+.border-t {border-top: 1px solid #cccccc;}
+.border-b {border-bottom: 1px solid #cccccc;}
+.border-0 {border: 0 none !important;}
+.border-t-0 {border-top: 0 none !important;}
+.border-r-0 {border-right: 0 none !important;}
+.border-b-0 {border-bottom: 0 none !important;}
+.border-l-0 {border-left: 0 none !important;}
+.border-r-0 {border-right: 0 none !important;}
+
+/* Padding */
+.pad-lr-10 {padding-left: 10px !important;padding-right: 10px !important;}
+.pad-lr-20 {padding-left: 20px !important;padding-right: 20px !important;}
+.pad-0 {padding: 0 !important;}
+.pad-l-0 {padding-left: 0 !important;}
+.pad-r-0 {padding-right: 0 !important;}
+.pad-t-0 {padding-top: 0 !important;}
+.pad-t-10 {padding-top: 10px !important;}
+.pad-t-20 {padding-top: 20px !important;}
+.pad-t-30 {padding-top: 30px !important;}
+.pad-t-80 {padding-top: 80px !important;}
+.pad-b-0 {padding-bottom: 0 !important;}
+.pad-b-10 {padding-bottom: 10px !important;}
+.pad-b-20 {padding-bottom: 20px !important;}
+.pad-b-30 {padding-bottom: 30px !important;}
+.pad-tb-20 {padding: 20px 0 !important;}
+
+/* Margin */
+.mar-b-30 {margin-bottom: 30px !important;}
+
+/* Mobile Show */
+.mobile-show, .mobile-show tbody, .mobile-show tr, .mobile-show td {width: 100% !important;
+max-height: inherit !important;overflow: visible !important;display: block !important;
+float: none !important;}
+.mobile-show table {display: table !important;width:100% !important;}
+.mobile-show tbody {display: table !important;}
+.mobile-show tr {display: table-row !important;}
+.mobile-show td {display: table-cell !important;}
+
+/* Footer Nav */
+.footer-nav, .footer-nav tbody, .footer-nav tr, .footer-nav td {width: 100% !important;max-height: inherit !important;
+overflow: visible !important;display: block !important;float: none !important;}
+.footer-nav table {display: table !important;width:100% !important;}
+.footer-nav tbody {display: table !important;}
+.footer-nav tr {display: table-row !important;}
+.footer-nav td {display: table-cell !important;}
+
+.footer-nav a {
+    display: block !important;
+    width: 100%;
+	border-right: none !important;
+	border-left: none !important;
+    padding: 14px 0 !important;
+    font-size: 21px !important;
+}
+
+/* Reset Styles */
+body {margin:0 auto !important;}
+div[style*="margin: 16px 0"] {margin:0 auto !important;}
+/********* SOLUTION STYLES **********/
+/******* SOLUTION STYLES END ********/
+/********** CUSTOM STYLES ***********/
+/******** CUSTOM STYLES END *********/
+}
+</style>
+<!--[if gte mso 9]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+</head>
+<body>
+<div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;">Expert advice for before and after your purchases</div>
+<div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="pad-0" align="center" style="padding:0 10px;">
+<table class="container" width="600" align="center" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 600px">
+<tr>
+<td align="center">
+<!-- Header -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+	<tbody>
+		<tr>
+			<td align="center" style="padding:20px 0px">
+			<!-- Logo Group -->
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+				<tbody>
+					<tr>
+						<th align="center" style="font-weight:normal;">
+						<!-- Logo -->
+						<table width="600" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width:600px;">
+							<tbody>
+								<tr>
+									<td align="center">
+									<a href="http://enews.mail.abt.com/q/-FgS9VU9nob0XdA2xHzRHOT05qMDeHbAeQNZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIy1hKRIlve4pLC_gEveZSVs89dSQ" title="Abt" target="_blank" style="white-space: nowrap;">
+									<img align="center" src="https://content.abt.com/media/newsletter/images/abt_logo1.png" alt="Abt" width="90" border="0" style="display:block; margin: 0 auto; max-width: 120px;">
+									</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Nav -->
+<table class="hide" width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+	<tbody>
+		<tr>
+			<td align="center">
+			<table align="center" cellpadding="0" cellspacing="0" border="0" role="presentation">
+				<tbody>
+					<tr>
+						<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:0px;">
+						<a href="http://enews.mail.abt.com/q/tCK_AbpFNin0XHTrU84rNHSnNAbT6JwP2vuZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIM6QJ-8DjeayLtmLXGN58NbTehCg" title="TVs And Electronics" target="_blank">
+						<img src="https://content.abt.com/media/newsletter/images/headernav_tvs5.jpg" alt="TVs And Electronics" width="150" height="35" border="0" style="display:block">
+						</a>
+						</td>
+						<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:0px;">
+						<a href="http://enews.mail.abt.com/q/6XdJXDXsoZ20XLPMZb95_wdhsS9ehVf40ypZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIOHuavjHrcoBL-slebAs_APzx-mQ" title="Appliances" target="_blank">
+						<img src="https://content.abt.com/media/newsletter/images/headernav_appliances2.jpg" alt="Appliances" width="150" border="0" style="display:block">
+						</a>
+						</td>
+						<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:0px;">
+						<a href="http://enews.mail.abt.com/q/GmAW7Orz4YO0Xf1nI916t2ib0mR4Cxhxwq5ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOISS-ZYqfqdqOLpj4V5VoOIek0qmg" title="Home & Fitness" target="_blank">
+						<img src="https://content.abt.com/media/newsletter/images/headernav_home2.jpg" alt="Home &amp; Fitness" width="150" border="0" style="display:block">
+						</a>
+						</td>
+						<td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:0px;">
+						<a href="http://enews.mail.abt.com/q/lZvMHuZBhpy0X0CffL5LJOKK4hlY2hrU-LlZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIC94hz3rTcYCLJdTPBOHRbbw_bIg" title="Exclusive Savings" target="_blank">
+						<img src="https://content.abt.com/media/newsletter/images/headernav_exclusivesavings1.jpg" alt="Exclusive Savings" width="150" border="0" style="display:block">
+						</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Header END -->
+<!-- Content -->
+<table>
+<tbody>
+<tr>
+<td height="60" style="height:60px;">
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Header Start -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td align="center">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="headline" style="font-family: Nunito Sans, open-sans, sans-serif; font-size:18px; font-weight: bold; color:#000000; text-align:center; padding-bottom:5px; text-transform:uppercase;">Did you know?
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Header End -->
+<!-- Header Start -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td align="center">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td>
+<hr class="hide" align="left" width="100%">
+</td>
+<td width="60%" class="full-width copy-21 lh-25" style="font-family: Nunito Sans, open-sans, sans-serif; font-size:18px; font-weight: normal; color:#1c70bf; text-align:center; padding:0px 10px; line-height:25px; text-transform:uppercase;">We Have Tips And Buying Gui des
+</td>
+<td>
+<hr class="hide" align="right" width="100%">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Header End -->
+<!-- 2 Col Products Start -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td width="48%" align="left" class="full-img" style="padding: 10px 0px 0px 0px">
+<a href="http://enews.mail.abt.com/q/dIqS1fMwZba0XuGfPleAJ3KBIhKfL9d9_dsZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI9pfTiB9ieLILgwbfoJ_6fXvKS0A" title="Buying Guides" target="_blank" style="white-space: nowrap;">
+<img src="https://content.abt.com/media/newsletter/images/welcome3_bgs.jpg" alt="Buying Guides" width="290" border="0" style="display:block">
+</a>
+</td>
+<td width="20" style="width:20px;"></td>
+<td width="48%" align="left" class="full-img" style="padding: 10px 0px 0px 0px">
+<a href="http://enews.mail.abt.com/q/VLJx90Awe6M0XPU9XmIN0mip_ver0tXqvoiZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI5z0ZHTVkeLpLHyc8tgpBcc-M4Gg" title="Tips and How Tos" target="_blank" style="white-space: nowrap;">
+<img src="https://content.abt.com/media/newsletter/images/welcome3_tips.jpg" alt="Tips and How Tos" width="290" border="0" style="display:block">
+</a>
+</td>
+</tr>
+<tr>
+<td class="subtext-small" valign="top" style="font-family: Nunito Sans, open-sans, sans-serif; font-size:14px; font-weight: normal; color:#000000; text-align:center; padding: 5px 0px 5px 0px; text-transform: uppercase;">
+<a href="http://enews.mail.abt.com/q/Ch9BRe_cgbi0XkPPWqZ3njdLQoXWWnG43qFZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIXIRsoGKVeJNLO_gvHnO8aH1iBbw" title="Buying Guides" target="_blank" style="text-decoration:none; color: #000000;">
+Buying Guides
+</a>
+</td>
+<td width="20" style="width:20px;">
+</td>
+<td class="subtext-small" valign="top" style="font-family: Nunito Sans, open-sans, sans-serif; font-size:14px; font-weight: normal; color:#000000; text-align:center; padding: 5px 0px 5px 0px; text-transform: uppercase;">
+<a href="http://enews.mail.abt.com/q/Pf06mJGac-B0XaR3ddSX7jVCqmVnf8nLNisZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIe1bSDMnieKjLbppZ6p73Zkn9T0Q" title="Tips and How Tos" target="_blank" style="text-decoration:none; color: #000000;">
+Tips &amp; How To's
+</a>
+</td>
+</tr>
+</table>
+<!-- 2 Col Products End -->
+<!-- 2 Col Products Start -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td width="48%" align="left" class="full-img" style="padding: 20px 0px 0px 0px">
+<a href="http://enews.mail.abt.com/q/5BX8CxyJswE0Xbz5_Ql6zFltM8t4nN9pE5CZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIF9MW-sMXcqDLqf3_Q9SM0sRPWFQ" title="The Abt Blog" target="_blank" style="white-space: nowrap;">
+<img src="https://content.abt.com/media/newsletter/images/welcome3_blog.jpg" alt="The Abt Blog" width="290" border="0" style="display:block">
+</a>
+</td>
+<td width="20" style="width:20px;"></td>
+<td width="48%" align="left" class="full-img" style="padding: 20px 0px 0px 0px">
+<a href="http://enews.mail.abt.com/q/2tmJzeC2DkC0XUjZ0RbNil2Q0gB1hFzj0N6ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIW_gUFHb3dZNL7ukSG94I4yV_9Fw" title="Abt YouTube Channel" target="_blank" style="white-space: nowrap;">
+<img src="https://content.abt.com/media/newsletter/images/welcome3_youtube.jpg" alt="Abt YouTube Channel" width="290" border="0" style="display:block">
+</a>
+</td>
+</tr>
+<tr>
+<td class="subtext-small" valign="top" style="font-family: Nunito Sans, open-sans, sans-serif; font-size:14px; font-weight: normal; color:#000000; text-align:center; padding: 5px 0px 5px 0px; text-transform: uppercase;">
+<a href="http://enews.mail.abt.com/q/ppjnBMrSbHP0XYBQjGzcSrpIku9I7J-gcY2ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIi3QeD0kVfINLp_4Z8VE3EEY9xHQ" title="The Abt Blog" target="_blank" style="text-decoration:none; color: #000000;">
+The Abt Blog
+</a>
+</td>
+<td width="20" style="width:20px;">
+</td>
+<td class="subtext-small" valign="top" style="font-family: Nunito Sans, open-sans, sans-serif; font-size:14px; font-weight: normal; color:#000000; text-align:center; padding: 5px 0px 5px 0px; text-transform: uppercase;">
+<a href="http://enews.mail.abt.com/q/94SzPID8cpO0XvN02abHje9x_4RkC80wMGUZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI_8z6QfOdfp5LY-gpFr350kPvJ-Q" title="Abt YouTube Channel" target="_blank" style="text-decoration:none; color: #000000;">
+Abt YouTube Channel
+</a>
+</td>
+</tr>
+</table>
+<!-- 2 Col Products End -->
+<table>
+<tbody>
+<tr>
+<td height="30" style="height:30px;">
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Header Start -->
+<table bgcolor="#f5f5f5" class="pad-t-0 pad-lr-10" width="600" cellpadding="0" cellspacing="0" border="0" role="presentation" style="background-color: #f5f5f5;">
+<tr>
+<td width="600" bgcolor="#f5f5f5" align="center" style="padding: 20px 0px 20px 0px; background-color: #f5f5f5;">
+<table bgcolor="#f5f5f5" width="600" align="center" cellpadding="0" cellspacing="0" border="0" role="presentation" style="background-color: #f5f5f5;">
+<tr>
+<td width="600" bgcolor="#f5f5f5" class="subtext" style="font-family: Nunito Sans, Century Gothic, open-sans, sans-serif; font-size:15px; font-weight: normal; color:#000000; text-align:center; line-height:24px; background-color: #f5f5f5;">Your $25 off $250 promo code*: <span style="color:#1c70bf">25NLB4WF9</span><br>
+<span style="font-weight:400; font-size:14px; color: #000000;">Code expires on 4/16/2021 6:48:43 AM. <a target="_blank" style="color:#1c70bf; text-decoration:none;" href="http://enews.mail.abt.com/q/CgvPj_Y0M6Y0XwnZX-Z3iy2VWhQjBoznpIhZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOINfz2ptstfodLEHcdS_KKjbDH59Q">Exclusions apply</a>.</span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Header End -->
+
+<table>
+<tbody>
+<tr>
+<td height="30" style="height:30px;">
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Logos START -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<td style="font-size:0px;">
+<table class="full-width" width="300" align="left" cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:300px; height: 50px">
+<tbody>
+<tr>
+<td width="50%" align="center" valign="middle">
+<!-- Frigidaire -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<td class="mobile-logo-seventy" align="center" valign="top" style="padding:20px 10px 5xp 10px;">
+<a href="http://enews.mail.abt.com/q/_ewUBmsoiVa0XwQfvF2TJmK7XqjSv9eZpysZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOInqW_Y__OcL4LUYbcHWnbGoZqgvA" title="Bose" target="_blank" style="white-space: nowrap;">
+<img class="mobile-logo-seventy" src="https://content.abt.com/media/newsletter/images/welcome_bose_logo.png" alt="Bose" width="140" border="0" style="display:block;">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="50%" align="center" valign="middle">
+<!-- LG -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<td class="mobile-logo-fifty" align="center" valign="top" style="padding:20px 10px 5xp 10px;">
+<a href="http://enews.mail.abt.com/q/uuaoKGPKCXB0Xq9c9WULUsuCPqd6yFf7Mh4ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIXxJF0UCGcp0LM05lBTyjjwVsXRg" title="Maytag" target="_blank" style="white-space: nowrap;">
+<img class="mobile-logo-fifty" src="https://content.abt.com/media/newsletter/images/welcome_maytag_logo.png" alt="Maytag" width="110" border="0" style="display:block;">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="full-width" width="300" align="right" cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:300px; height: 50px;">
+<tbody>
+<tr>
+<td class="pad-t-10" width="50%" align="center" valign="middle">
+<!-- Microsoft -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<td class="mobile-logo-seventy" align="center" valign="top" style="padding:20px 10px 5xp 10px;">
+<a href="http://enews.mail.abt.com/q/FqiLau2Hb7_0XbMUV4wD-SF-NMOHCXB3riDZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIWncUA2NCcaOL6TvC8Kg12qV5yFw" title="Tempur-Pedic" target="_blank" style="white-space: nowrap;">
+<img class="pad-t-10 mobile-logo-seventy" src="https://content.abt.com/media/newsletter/images/welcome_tempurpedic_logo1.png" alt="Tempur-Pedic" width="140" border="0" style="display:block;">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class="pad-t-10" width="50%" align="center" valign="middle">
+<!-- Sony -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<td class="mobile-logo-sixty" align="center" valign="top" style="padding:20px 10px 5xp 10px;">
+<a href="http://enews.mail.abt.com/q/El146UNPDUf0XsW5WfYQzMlYhKHleVrL8sTZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI_kZth2Boer0LgQtVqaC-S1PpDbg" title="Whirlpool" target="_blank" style="white-space: nowrap;">
+<img class="pad-t-10 mobile-logo-sixty" src="https://content.abt.com/media/newsletter/images/welcome_whirlpool_logo.png" alt="Whirlpool" width="120" border="0" style="display:block;">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Logos END -->
+<!-- Button Start -->
+<table width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td style="padding:20px 0px 0px 0px;">
+<table border="0" cellpadding="0" cellspacing="0" align="center">
+<tbody>
+<tr>
+<td class="mobile-btn" align="center" width="150">
+<a href="http://enews.mail.abt.com/q/p1uyZYaHSqK0XJEsEhw7W4jElsaRgMARBXQZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIqZF_LTRxeLsLbx1ivRiVwvK2UfA" class="mobile-btn-inside" style="padding: 10px 6px;width:150px;display: block;text-decoration: none;border:0;text-align: center;font-weight: normal;font-size: 14px;font-family: Nunito Sans, Century Gothic, open-sans, sans-serif; color: #ffffff;background: #1c70bf; line-height:16px; text-transform:uppercase;" target="_blank">Shop All Brands
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<!-- Button End -->
+<!-- Kitchen Packages Start -->
+<table class="wrapper" align="center" width="600" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td rowspan="3" width="300" valign="top" class="stack" style="padding:60px 0px 0px 0px">
+<a href="http://enews.mail.abt.com/q/abFw3R8cAJP0X_1BrzEAxQuukVMe9rqqbolZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOImaV4hgDRfqVLGyMAnlZcs8J2gew" title="How Abt Got Started" target="_blank" style="white-space: nowrap;">
+<img src="https://content.abt.com/media/newsletter/images/welcome3_history.jpg" class="responsive-img" alt="How Abt Got Started" width="300" border="0" style="display:block">
+</a>
+</td>
+<td width="310" valign="bottom" class="two-col-headline" style="font-family: Nunito Sans, open-sans, sans-serif; font-size:16px; color:#000000; text-align:left; line-height:22px; font-weight:bold; padding: 50px 20px 0px 20px;">
+<a href="http://enews.mail.abt.com/q/n8rV4NxpDBe0X1-6WBmnU9YCTI9LZvWfwuLZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOISQtv4dm3eICLc-12m9oeCn00ObA" title="Kitchen Appliance Packages" target="_blank" style="color:#000000; text-decoration:none;">How Abt Got Started
+</a>
+</td>
+</tr>
+<tr>
+<td class="pad-lr-10">
+<table class="wrapper" width="310" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<td width="310" valign="top" class="two-col-subtext" style="font-family: Nunito Sans, open-sans, sans-serif; font-size:15px; color:#000000; text-align:left; line-height:20px; font-weight:normal; padding: 0px 20px 0px 20px;">
+<a href="http://enews.mail.abt.com/q/ZcEiBo-5Il70XM-1u4FMJxhyFgOJuyKrt8-ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIyhcQRVf-eanLyBfIts3OKRM4SEw" title="How Abt Got Started" target="_blank" style="color:#4f4f4f; text-decoration:none;">In 1936, Jewel Abt&#8212;an Austrian immigrant&#8212;used her $800 life savings to start a small radio shop with her husband David in Chicago's Logan Square neighborhood.
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table class="align-center pad-l-0" border="0" cellpadding="0" cellspacing="0" style="text-align: left;">
+<tr>
+<td class="pad-l-0" valign="top" style="padding: 0px 0px 0px 20px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="mobile-btn" align="center" bgcolor="#ffffff" width="120">
+<a href="http://enews.mail.abt.com/q/yRkF7hDHGIU0XTrVqjh3EyfZsuiGBzT5BDKZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIetUxmHPDe74LTGl-cB20bDn7QMg" class="mobile-btn-inside" style="padding: 10px 8px;width:120px;display: block;text-decoration: none;border:0;text-align: center;font-weight: normal;font-size: 14px;font-family: Nunito Sans, open-sans, sans-serif; color: #ffffff;line-height:16px; text-transform:uppercase; background-color: #1c70bf;" target="_blank">Learn More
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Kitchen Packages End -->
+<!-- Cameras Start -->
+<table dir="rtl" class="wrapper" align="center" width="600" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td dir="ltr" rowspan="3" width="300" valign="top" class="stack" style="padding:60px 0px 0px 0px">
+<a href="http://enews.mail.abt.com/q/Syh7YQf9XCW0XI3GNXXP3sjRhlWGabOO0fnZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI2BpiKHc9drEL3e3I1lTDrTNwfYQ" title="Life Today" target="_blank" style="white-space: nowrap;">
+<img src="https://content.abt.com/media/newsletter/images/welcome3_today.jpg" class="responsive-img" alt="Life Today" width="300" border="0" style="display:block">
+</a>
+</td>
+<td dir="ltr" width="310" valign="bottom" class="two-col-headline" style="font-family: Nunito Sans, open-sans, sans-serif; font-size:16px; color:#000000; text-align:right; line-height:22px; font-weight:bold; padding: 50px 20px 0px 20px;">
+<a href="http://enews.mail.abt.com/q/f549pR5IXlM0XO79ehVM0fi7eyGzgnXe52KZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIqvSslMGEcqtLYRbbliUwb-a7xrw" title="Life Today" target="_blank" style="color:#000000; text-decoration:none;">Life Today
+</a>
+</td>
+</tr>
+<tr>
+<td class="pad-lr-10">
+<table class="wrapper" width="310" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tbody>
+<tr>
+<td dir="ltr" width="310" valign="top" class="two-col-subtext" style="font-family: Nunito Sans, open-sans, sans-serif; font-size:15px; color:#000000; text-align:right; line-height:20px; font-weight:normal; padding: 0px 20px 0px 20px;">
+<a href="http://enews.mail.abt.com/q/5WOR5ic1Pc70XRa7tqv5HxJQ7fkdkB55MZBZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI2oZlfn95fZWL089wnWCk3Wd6DZg" title="Life Today" target="_blank" style="color:#4f4f4f; text-decoration:none;">Housing a 100,000 sq. ft showroom, a 7,500 gallon saltwater aquarium, and a dancing fountain show, a visit to our Glenview, IL location is more than just a store, it&#8217;s an experience.
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table class="align-center" border="0" cellpadding="0" cellspacing="0" style="text-align:right;">
+<tr>
+<td class="pad-r-0" valign="top" dir="ltr" style="padding: 0px 20px 0px 0px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="mobile-btn" align="center" bgcolor="#ffffff" width="120">
+<a href="http://enews.mail.abt.com/q/dCdXPVQzsLY0XlrZMkakit2ReJ73AduG071ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIceXWwUZ5e4VLm-Eg1wcftBnXg1Q" class="mobile-btn-inside" style="padding: 10px 8px;width:120px;display: block;text-decoration: none;border:0;text-align: center;font-weight: normal;font-size: 14px;font-family: Nunito Sans, open-sans, sans-serif; color: #ffffff;line-height:16px; text-transform:uppercase; background-color: #1c70bf;" target="_blank">Learn More
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- Cameras End -->
+
+
+<table>
+<tbody>
+<tr>
+<td height="60" style="height:60px;">
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Start Header Text -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+<tr>
+<td class="pad-lr-20" style="font-family: Nunito Sans, Open Sans, Arial, sans-serif; font-size:18px; line-height: 21px; color:#000000; text-align:center; padding: 0px 0px 0px 0px;"> Products You Might Be Interested In
+</td>
+</tr>
+</table>
+<!-- End Header Text -->
+<table width="0" height="640" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+<tbody>
+<tr>
+<td width="600" height="310">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+<tbody>
+<tr>
+<td width="68" height="310">
+<img src="https://recs.listrakbi.com/image/66740c7d-0775-4a94-8d53-7eebeb78dd6b/5f2b7b32-0647-4d74-b1b5-4014d517a098/5af24184-51e9-4fd8-be82-126887def907/0/0/68/310/email/" width="68" height="310" border="0" alt="Product" style="display:block;">
+</td>
+<td width="200" height="310">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+<tbody>
+<tr>
+<td width="200" height="310">
+<a href="http://enews.mail.abt.com/q/9SagirTEZcr0Xl2begtq162dG6VoqTkxidEZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIOS01l_k-d48LIP_f6vC2W8D0oNg" target="_blank" title="Product">
+<img src="https://recs.listrakbi.com/image/66740c7d-0775-4a94-8d53-7eebeb78dd6b/5f2b7b32-0647-4d74-b1b5-4014d517a098/5af24184-51e9-4fd8-be82-126887def907/68/0/200/310/email/" width="200" height="310" border="0" alt="Product" style="display:block;">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="74" height="310">
+<img src="https://recs.listrakbi.com/image/66740c7d-0775-4a94-8d53-7eebeb78dd6b/5f2b7b32-0647-4d74-b1b5-4014d517a098/5af24184-51e9-4fd8-be82-126887def907/268/0/74/310/email/" width="74" height="310" border="0" alt="Product" style="display:block;">
+</td>
+<td width="200" height="310">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+<tbody>
+<tr>
+<td width="200" height="310">
+<a href="http://enews.mail.abt.com/q/T7eLIvIAn290X0ei2TS14NQTBY6C1tFta_JZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIo5Gb3sHWcZfLWOJtu7OksWqeUmA" target="_blank" title="Product">
+<img src="https://recs.listrakbi.com/image/66740c7d-0775-4a94-8d53-7eebeb78dd6b/5f2b7b32-0647-4d74-b1b5-4014d517a098/5af24184-51e9-4fd8-be82-126887def907/342/0/200/310/email/" width="200" height="310" border="0" alt="Product" style="display:block;">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="58" height="310">
+<img src="https://recs.listrakbi.com/image/66740c7d-0775-4a94-8d53-7eebeb78dd6b/5f2b7b32-0647-4d74-b1b5-4014d517a098/5af24184-51e9-4fd8-be82-126887def907/542/0/58/310/email/" width="58" height="310" border="0" alt="Product" style="display:block;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td width="600" height="20">
+<img src="https://recs.listrakbi.com/image/66740c7d-0775-4a94-8d53-7eebeb78dd6b/5f2b7b32-0647-4d74-b1b5-4014d517a098/5af24184-51e9-4fd8-be82-126887def907/0/310/600/20/email/" width="600" height="20" border="0" alt="Product" style="display:block;">
+</td>
+</tr>
+<tr>
+<td width="600" height="310">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+<tbody>
+<tr>
+<td width="68" height="310">
+<img src="https://recs.listrakbi.com/image/66740c7d-0775-4a94-8d53-7eebeb78dd6b/5f2b7b32-0647-4d74-b1b5-4014d517a098/5af24184-51e9-4fd8-be82-126887def907/0/330/68/310/email/" width="68" height="310" border="0" alt="Product" style="display:block;">
+</td>
+<td width="200" height="310">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+<tbody>
+<tr>
+<td width="200" height="310">
+<a href="http://enews.mail.abt.com/q/SjPIbnu2ZyO0X7et98E3wUPwmU18FXa1srXZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOINU56TjxAdLjLObeS5cf3UyjFLeQ" target="_blank" title="Product">
+<img src="https://recs.listrakbi.com/image/66740c7d-0775-4a94-8d53-7eebeb78dd6b/5f2b7b32-0647-4d74-b1b5-4014d517a098/5af24184-51e9-4fd8-be82-126887def907/68/330/200/310/email/" width="200" height="310" border="0" alt="Product" style="display:block;">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="74" height="310">
+<img src="https://recs.listrakbi.com/image/66740c7d-0775-4a94-8d53-7eebeb78dd6b/5f2b7b32-0647-4d74-b1b5-4014d517a098/5af24184-51e9-4fd8-be82-126887def907/268/330/74/310/email/" width="74" height="310" border="0" alt="Product" style="display:block;">
+</td>
+<td width="200" height="310">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+<tbody>
+<tr>
+<td width="200" height="310">
+<a href="http://enews.mail.abt.com/q/Y_sqr3zCIiq0X8rTACVcIhhJ_YZhIVw_r1uZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIuc8nlnqOfqyL6FCHgLNo81b3KJA" target="_blank" title="Product">
+<img src="https://recs.listrakbi.com/image/66740c7d-0775-4a94-8d53-7eebeb78dd6b/5f2b7b32-0647-4d74-b1b5-4014d517a098/5af24184-51e9-4fd8-be82-126887def907/342/330/200/310/email/" width="200" height="310" border="0" alt="Product" style="display:block;">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="58" height="310">
+<img src="https://recs.listrakbi.com/image/66740c7d-0775-4a94-8d53-7eebeb78dd6b/5f2b7b32-0647-4d74-b1b5-4014d517a098/5af24184-51e9-4fd8-be82-126887def907/542/330/58/310/email/" width="58" height="310" border="0" alt="Product" style="display:block;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- Content END -->
+<table>
+<tbody>
+<tr>
+<td height="60" style="height:60px;">
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Footer -->
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+<style>
+	p {font-family: 'Nunito Sans', sans-serif;}
+</style>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+	<tbody>
+		<tr>
+			<td align="center">
+			<!-- Mobile Navigation -->
+			<table class="footer-nav" width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+				<tbody>
+					<tr style="mso-hide:all; width:0; max-height:0; overflow:hidden; display:none; float:left;">
+						<td align="center">
+						<table align="center" cellpadding="0" cellspacing="0" border="0" role="presentation">
+							<tbody>
+								<tr style="mso-hide:all; width:0; max-height:0; overflow:hidden; display:none; float:left;">
+									<td align="center" style="font-family: Nunito Sans, Open Sans, Arial, sans-serif; font-size:0px;">
+									<a href="http://enews.mail.abt.com/q/gUEXdHnr3Z40XpDKJiN-kn8mUN5GAilsPrUZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIEeQkGfrOeZLLn9HVy3sSVbRXhJw" title="TVs and Electronics" target="_blank" style="font-size:14px; color:#8d8d8d; text-decoration:none; display:inline-block; white-space:nowrap; padding:15px; border-top: 1px solid rgb(235,235,235); box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">TVs &amp; Electronics</a>
+									<a href="http://enews.mail.abt.com/q/YddKWCn_Tja0XYUuo4sLRKNAswLQVGgXNckZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIHNCyb0pVcr-LDfOKkgU1f_xjVsQ" title="Appliances" target="_blank" style="font-size:14px; color:#8d8d8d; text-decoration:none; display:inline-block; white-space:nowrap; padding:15px; border-top: 1px solid rgb(235,235,235); box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">Appliances</a>
+									<a href="http://enews.mail.abt.com/q/usiDvFly8OJ0X9hs9SgBWgjldPLvAxVr1TnZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI6QwX3O70dZsLcv9QE0IdKYu0JFA" title="home And Fitness" target="_blank" style="font-size:14px; color:#8d8d8d; text-decoration:none; display:inline-block; white-space:nowrap; padding:15px; border-top: 1px solid rgb(235,235,235); box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">Home &amp; Fitness</a>
+									<a href="http://enews.mail.abt.com/q/T0_277-9AeW0XxmKKCjfkp85dNNnXXDvWlyZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIl2lyItUndKFLOymCzDeJJ_pNscQ" title="Weekly Specials" target="_blank" style="font-size:14px; color:#8d8d8d; text-decoration:none; display:inline-block; white-space:nowrap; padding:15px; border-top: 1px solid rgb(235,235,235); border-bottom: 1px solid rgb(235,235,235); box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">Weekly Specials</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- Mobile Navigation END -->
+			<!-- Social -->
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+				<tbody>
+					<tr>
+						<td align="center" style="padding:12px 0;">
+						<table class="full-width" align="center" cellpadding="0" cellspacing="0" border="0" role="presentation">
+							<tbody>
+								<tr>
+									<td align="center" style="padding:8px;"><a href="http://enews.mail.abt.com/q/yteGnXJrphR0XspLRszBEdHDXi3SBffmLonZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIgckYR77ZeY4LIVlAj7ZpgAYXMGw" title="Facebook" target="_blank"><img src="https://content.abt.com/media/newsletter/images/fb_icon.png" alt="Facebook" width="30" border="0" style="display:block;"></a></td>
+									<td align="center" style="padding:8px;"><a href="http://enews.mail.abt.com/q/fHaQBE0hK-y0XIr4gbI_V7Kmmq9c1zojY9iZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIjffDYlrkcYiLe_FmapqvW8onywA" title="Instagram" target="_blank"><img src="https://content.abt.com/media/newsletter/images/ig_icon.png" alt="Instagram" width="30" border="0" style="display:block;"></a></td>
+									<td align="center" style="padding:8px;"><a href="http://enews.mail.abt.com/q/wbmbYodIOKM0XNUnWc84t7iK8oQg7_sCi80ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI6COUwDklfpTLO3SIM9Dge6-wmlw" title="Pinterest" target="_blank"><img src="https://content.abt.com/media/newsletter/images/pinterest_icon.png" alt="Pinterest" width="30" border="0" style="display:block;"></a></td>
+									<td align="center" style="padding:8px;"><a href="http://enews.mail.abt.com/q/1JGF8uWBFWE0X-f9QfVt0Ui9pyCIbZBqQdQZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIGDNJacwqeJ7LVO8rlPGLHKhw2Sg" title="Twitter" target="_blank"><img src="https://content.abt.com/media/newsletter/images/twitter_icon.png" alt="Twitter" width="30" height="26" border="0" style="display:block;"></a></td>
+									<td align="center" style="padding:8px;"><a href="http://enews.mail.abt.com/q/i4AbuOSTtsC0Xv0A_rtZH4SdOaCZn_IO4tZZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIoowglDhUcrHLopEs2vU7kxaaJIw" title="YouTube" target="_blank"><img src="https://content.abt.com/media/newsletter/images/youtube_icon.png" alt="YouTube" width="30" height="26" border="0" style="display:block;"></a></td>
+									<td align="center" style="padding:8px;"><a href="http://enews.mail.abt.com/q/_IrfPdKcKIV0XenNN-3Lmn6HC_JZshZo91sZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIn0c8Vqipfb7L_Yr2z-Li8xJtCPw" title="The Bolt" target="_blank"><img src="https://content.abt.com/media/newsletter/images/blog_icon.png" alt="The Bolt" width="30" border="0" style="display:block;"></a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- Social END -->
+			<!-- Footer Text -->
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+				<tbody>
+					<tr>
+						<td align="center" style="font-family: Nunito Sans, Open Sans, Arial, sans-serif; font-size: 11px; font-weight: 400; color:#9e9e9e; padding-top: 16px;">
+						<a href="http://enews.mail.abt.com/q/8Kz3LiNXSKvSmYjbUdvppKvnsD-42ai2awMrmNOJtTgqlXrBGIb73fiq7" title="  | <a href="http://enews.mail.abt.com/q/7a3TWTIN_Zi_uwhTEwfCHZiQmxY_d5CAkIz0K-AVScFLbN0QjaUby4pLj" title="View In Browser" target="_blank" style="white-space: nowrap;color:#1c70bf;">View in browser</a>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="font-family: Nunito Sans, Open Sans, Arial, sans-serif; font-size: 11px; font-weight: 400; color:#9e9e9e; padding: 20px;">
+						Abt Electronics | <a href="http://enews.mail.abt.com/q/UsMw0fO795g0XEEHiucfPLLlVzHBjutusM5ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOItqpx21IDcKcL5uaJrWrsYWbKvcg" title="Contact Us" target="_blank" style="color:#9e9e9e;text-decoration:none;">1200 N. Milwaukee Ave., Glenview, IL&nbsp;60025</a> | <a href="tel:1-800-249-9376" title="Contact Us" target="_blank" style="color:#9e9e9e;text-decoration:none;">800.249.9376</a><br>
+						&copy;2021 Abt Electronics - All rights reserved | <a href="http://enews.mail.abt.com/q/5jN26GX05VP0XSOQqVQUSUpU18bqsfoQ0I7ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIxY_9bCzNdIxLzZBJ5wBd2ccGK_g" title="Privacy Policy" target="_blank" style="white-space: nowrap;color:#1c70bf;text-decoration:underline;">Privacy policy</a>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="font-family: Nunito Sans, Open Sans, Arial, sans-serif; font-size: 11px; font-weight: 400; color:#9e9e9e; padding: 0px 60px 20px 60px;">*The $25 promo code is not applicable with other promotions, bundles, packages, coupons, or on previous orders. Other <a target="_blank" style="color:#1c70bf;" href="http://enews.mail.abt.com/q/JJHmS3NMcwM0XAmnebEatJi15_ZFaV6ITvBZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIEZM_Ejp5e4_Lpd0Sdwj-1vhWWPA">exclusions apply</a> on brands and categories.<br>
+						To continue to receive Abt emails in your inbox, please add &ldquo;<a href="mailTo:Abt@mail.abt.com" title="Email" target="_blank" style="color:#9e9e9e;text-decoration: none;">Abt@mail.abt.com</a>&rdquo; to your address book.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- Footer Text END -->
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- Footer END -->
+</td>
+</tr>
+</table>
+<!-- Gmail Fix-->
+<table class="hide gmail-fix" width="600" align="center" cellpadding="0" cellspacing="0" border="0" role="presentation" style=" width:600px; min-width:600px; max-width:600px;">
+<tr>
+<td><img src="https://mediacdn.espssl.com/1/Shared/2014/LCS/Boilerplate/spacer.gif" width="600" height="20" border="0" style="display:block; width:600px; min-width:600px; max-width:600px;"></td>
+</tr>
+</table>
+<div class="gmail-fix" style="white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+<!-- Gmail Fix END -->
+</td>
+</tr>
+</table>
+<img src="http://enews.mail.abt.com/q/DDF-f79clP7NuhxppV0o5gJEJNtHOK4Juc" alt="" width="20" height="1"></body>
+</html>

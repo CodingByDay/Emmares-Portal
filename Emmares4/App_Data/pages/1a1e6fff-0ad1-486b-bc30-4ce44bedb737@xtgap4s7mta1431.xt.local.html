@@ -1,0 +1,655 @@
+﻿
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" style="background-color:#f5f5f5">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Variety Tech Watch</title>
+  <style type="text/css">
+		/*body {margin: 0; padding: 0; min-width: 100%!important;}*/
+
+		/* --------------------------------------------
+			 FOR DESKTOP DEVICES.
+		-------------------------------------------- */
+		img {
+			max-width: 100%;
+		}
+
+    .center {
+      display: block !important;
+      max-width: 700px !important;
+      min-width: 640px !important;
+      margin: 0 auto !important;
+      clear: both !important;
+      padding-top: 5px;
+      box-sizing: border-box;
+    }
+
+		/* --------------------------------------------
+			 FOR MOBILE DEVICES,
+			 MAKE THE MAIN TEXT 25% LARGER
+		-------------------------------------------- */
+		@media only screen and (max-width: 728px) {
+
+			.center {
+				max-width: 100% !important;
+				min-width: 375px !important;
+				padding-left: 10px;
+				padding-right: 10px;
+        padding-top: 10px;
+			}
+
+			.small-12 {
+				width: 100% !important;
+				display: inline-block !important;
+				padding: 0 !important;
+			}
+
+      .feature-h1{
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+      .feature-h1-centered{
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+      .headline{
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+      .h5-3col{
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+      .cta{
+        font-size: 20px !important;
+        line-height: 24px !important;
+        padding-bottom: 10px !important;
+      }
+      .deck{
+        font-size: 22px !important;
+        line-height: 28px !important;
+      }
+
+      .story {
+        padding-top: 15px !important;
+      }
+      .logo {
+        padding-top: 20px !important;
+      }
+      .row {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+		}
+	</style>
+
+  <style>
+
+      html {
+        min-height: 100%;
+        background: #f3f3f3
+      }
+
+
+    @media only screen and (max-width:728px) {
+      table.body img {
+        width: auto;
+        height: auto
+      }
+      table.body center {
+        min-width: 0 !important
+      }
+      table.body .container {
+        width: 95% !important
+      }
+      table.body .columns {
+        height: auto !important;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 20px !important;
+        padding-right: 20px !important
+      }
+      th.small-3 {
+        display: inline-block !important;
+        width: 25% !important
+      }
+      th.small-6 {
+        display: inline-block !important;
+        width: 50% !important
+      }
+      th.small-12 {
+        display: inline-block !important;
+        width: 100% !important
+      }
+
+      table.body .columns.first {
+        padding-bottom: 5px !important
+      }
+      table.body .columns.pad-bottom {
+        padding-bottom: 20px !important
+      }
+
+      table.header.header--stacked h1 {
+        font-size: 30px !important
+      }
+
+      h1::not('.header-title') {
+        font-size: 22px !important
+      }
+      h2 {
+        font-size: 18px !important
+      }
+      table.body .large-12 h1,
+      table.body .large-6 h2 {
+        margin-top: 5px !important
+      }
+
+      table.container table.row.stack-mobile th.columns.last {
+        padding-top: 0 !important
+      }
+
+      .cta .magazine {
+        max-width: 80% !important
+      }
+    }
+  </style>
+  <style>
+  .header-stacked-title-inverse{
+    font-family: 'Graphik', sans-serif;
+    color: #ADE636 !important;
+  }
+  .date{
+    color: #FFF !important;
+  }
+  .feature-h1{
+    font-family: 'Graphik', sans-serif;
+    color: #000000 !important;
+    font-weight:500;
+    margin-top:10px;
+  }
+  .feature-h1-centered{
+    font-family: 'Graphik', sans-serif;
+    color: #000000 !important;
+    font-weight:500;
+    margin-top:10px;
+  }
+  .headline{
+    font-family: 'Graphik', sans-serif;
+    color: #000000 !important;
+    font-weight:500;
+  }
+  .h5-3col{
+    font-family: 'Graphik', sans-serif;
+    color: #000000 !important;
+    font-weight:500;
+  }
+  .cta{
+    font-family: 'Graphik', sans-serif;
+    color: #257dca !important;
+    font-weight:400;
+    padding-bottom:25px;
+  }
+  .magazine{
+    margin-top:15px;
+    margin-bottom:15px;
+  }
+  </style>
+
+  <style>
+  @font-face{
+  	font-family:Graphik;
+  	src:url(https://s2.wp.com/wp-content/themes/vip/pmc-variety-2017/assets/build/fonts/Graphik-Bold-Web.woff2) format("woff2");
+  	font-weight:500;
+  	font-style: bold;
+  }
+  @font-face{
+  	font-family:Graphik;
+  	src:url(https://s2.wp.com/wp-content/themes/vip/pmc-variety-2017/assets/build/fonts/Graphik-Medium-Web.woff2) format("woff2");
+  	font-weight:400;
+  	font-style: normal;
+  }
+  @font-face{
+  	font-family:Graphik;
+  	src:url(https://s2.wp.com/wp-content/themes/vip/pmc-variety-2017/assets/build/fonts/Graphik-Regular-Web.woff2) format("woff2");
+  	font-weight:200;
+  	font-style: normal;
+  }
+  </style>
+</head>
+
+<body style="-moz-box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-box-sizing:border-box;-webkit-text-size-adjust:100%;Margin:0;background-color:#f5f5f5;box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;min-width:100%;padding:0;text-align:left;width:100%!important"><span class="preheader" style="color:#f3f3f3;display:none!important;font-size:1px;line-height:1px;max-height:0;max-width:0;mso-hide:all!important;opacity:0;overflow:hidden;visibility:hidden"></span>
+  <table class="body" style="Margin:0;background:#f3f3f3;background-color:#f5f5f5;border-collapse:collapse;border-spacing:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;height:100%;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:top;width:100%">
+    <tr style="padding:0;text-align:left;vertical-align:top">
+      <td class="center" align="center" valign="top" style="-moz-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;hyphens:none;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+        <center data-parsed="" style="min-width:700px;width:100%">
+          <!-- Max Width for Outlook Fix -->
+          <!--[if mso]>
+                    <table height="100%" cellpadding="0" cellspacing="0" border="0" style="padding:0px;margin:0px;">
+            			    <tr><td colspan="3" style="padding:0px;margin:0px;font-size:20px;height:20px;" height="20">&nbsp;</td></tr>
+            			    <tr>
+            		        <td style="padding:0px;margin:0px;">&nbsp;</td>
+            		        <td style="padding:0px;margin:0px;" width="700">
+            <![endif]-->
+            <table align="center" class="container float-center" style="Margin:0 auto;background:0 0;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:700px;max-width:700px">
+              <tbody>
+                <tr style="padding:0;text-align:left;vertical-align:top">
+                  <td style="-moz-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;hyphens:none;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                    
+                    <!--[if gte mso 9 ]>
+                    <table align="center" border="0" cellspacing="0" cellpadding="0" width="700" style="max-width:700px">
+                    	<tr>
+                    		<td align="center" valign="top" width="700" style="max-width:700px">
+                    <![endif]-->
+                    <table class="row ad" style="background:#fff;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%;max-width:700px">
+                      <tbody>
+                        <tr style="padding:0;text-align:center;vertical-align:top">
+                          <th class="pad-bottom small-12 large-12 first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0 auto;padding:0;text-align:center;width:660px">
+                            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%;max-width:700px">
+                              <tr style="padding:0;text-align:center;vertical-align:top">
+                                <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:center;width:700px;max-width:700px"><a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fd12c6559433c104e12f6c99a259fefd525482efa92ab28938aa04e01ba9ad781dfaa146c77dc807a9ab77e7a8aa0bc4b" style="Margin:0;color:#2D2CA2;display:inline-block;font-family:Helvetica,Arial,sans-serif;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"><img src="
+http://ab166489.adbutler-meson.com/adserve/;ID=166489;size=728x90;setID=328135;type=img;uid=18358854c3ffcc567a7e875781aa3ba74319a9" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:700px;outline:0;text-decoration:none;max-height:180px;"></a></th>
+                                <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0;padding:0!important;text-align:center;visibility:hidden;width:0"></th>
+                          </tr>
+                          </table>
+                          </th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!--[if gte mso 9 ]>
+                    		</td>
+                    	</tr>
+                    </table>
+                    <![endif]-->
+                    
+                  <!-- Header Stacked -->
+                  <table class="row header-meta" style="background:0 0;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                    <tbody>
+                      <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th class="small-6 large-6 first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:5px;padding-left:0px;padding-right:0px;padding-top:5px;text-align:left;width:320px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left">
+                                <p class="text-left" style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:12px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:left"><a href="https://view.email.variety.com/?qs=81f146995224c2049847f475ac422ae89968af770f52ecd67cc1c81fb8827e6efa56cf9d1d196f7b62dec572258a6b9047f32663343c53bd976eae25b358d74053e950967a0eb9d3" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:12px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">View on web</a></p>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                        <th class="small-6 large-6 last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:5px;padding-left:0px;padding-right:0px;padding-top:5px;text-align:left;width:320px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left">
+                                <p class="text-right" style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:12px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:right"><a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fdf822151e893ac16313361f5490e16c17e051e87416ee2e3d9c5faed1c4902ea68a911ba19e5c37269450f85ae6cb497" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:12px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">New reader? Subscribe</a></p>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="row header header--stacked header-bg-inverse" style="background:#fff;background-color:#000;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                    <tbody>
+                      <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:0;padding-left:20px;padding-right:20px;padding-top:20px;text-align:left;width:660px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:center"><a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fb722b2fdf41aaa3c7bfde792ba7da1da3fe0c04a28507344b313c5009568b98a497852ada9c4642b2977761f6197bceb" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"><img class="logo" width="209" height="60" src="http://image.email.variety.com/lib/fe9613727467027977/m/2/949450ef-e41d-47d9-9eec-d5af0ef33fe7.png" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;margin:0 auto;max-width:50%;outline:0;text-decoration:none;width:auto"></a>
+                                <h1 class="header-stacked-title-inverse" style="Margin:0;Margin-bottom:5px;color:#ADE636!important;font-family:'Graphik',sans-serif;font-size:34px;letter-spacing:0.25px;font-weight:400;line-height:38px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;word-wrap:normal">Tech News</h1>
+                                  <h4 class="date" style="Margin:0;Margin-bottom:5px;color:#FFF!important;font-family:Helvetica;font-size:14px;font-weight:lighter;line-height:19.6px;margin:0;margin-bottom:15px;margin-top:10px;padding:0;text-align:center;text-transform:uppercase;word-wrap:normal">December 18, 2019</h4></th>
+                              <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- Feature Story -->
+                  <table class="row" style="background:#fff;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                    <tbody>
+                      <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th class="story feature-img-text pad-bottom small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:20px;padding-right:20px;padding-top:20px;text-align:left;width:660px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left">  <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9ff403bc9eb81c56b4106be30b0bc3f5c004088af36eb7c4eeadd40e473e1eaa91b28f076a0319c7b7cb47eefa1e00ead0" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"><img width="660" height="370" src="https://pmcvariety.files.wordpress.com/2019/12/disney-plus-tablet.png?w=660&h=370&crop=1" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;height:auto;margin-bottom:15px;max-width:100%;outline:0;text-decoration:none;width:100%"></a>
+                                <h1 style="Margin:0;Margin-bottom:5px;color:inherit;font-family:Helvetica,Arial,sans-serif;font-size:22px;font-weight:300;line-height:1.4;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal"><a class="feature-h1" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9ff403bc9eb81c56b4106be30b0bc3f5c004088af36eb7c4eeadd40e473e1eaa91b28f076a0319c7b7cb47eefa1e00ead0" title="Disney Plus Signed Up 24 Million U.S. Subscribers in November and Took Bite Out of Netflix, Analysts Estimate" style="Margin:0;color:#000!important;font-family:'Graphik', sans-serif;font-size:22px;font-weight:500;line-height:26.4px;margin:0;padding:0;text-align:left;text-decoration:none">Disney Plus Signed Up 24 Million U.S. Subscribers in November and Took Bite Out of Netflix, Analysts Estimate</a></h1>
+                                  <p class="deck" style="Margin:0;Margin-bottom:10px;color:#323232!important;font-family:'Graphik', sans-serif;font-size:14px;font-weight:300;line-height:21px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+						Disney Plus signed up 24 million U.S. subscribers in November, and the strong debut is boosting Netflix cancellations, analysts estim &#8230;</p>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:16px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:left"><span class="byline" style="color:#000!important;font-family:Georgia;font-size:13px;font-style:italic;line-height:18.2px;text-align:center">By Todd Spangler &#8226;</span> <a class="cta" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9ff403bc9eb81c56b4106be30b0bc3f5c004088af36eb7c4eeadd40e473e1eaa91b28f076a0319c7b7cb47eefa1e00ead0" style="Margin:0;color:#257dca!important;font-family:'Graphik', sans-serif;font-size:10px;font-weight:300;line-height:18.2px;margin:0;padding:0;text-align:left;text-decoration:none;text-transform:uppercase">Read More</a></p>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:16px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:left"></p>
+                              </th>
+                              <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                            </tr>
+                          </table>
+                        </th></tr>
+                    </tbody>
+                  </table>
+                  <!-- Text Left 50% - Image Right 50% -->
+                  <table class="row stack-mobile story-horizontal" style="background:#fff;border-collapse:collapse;border-spacing:0;direction:rtl;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                    <tbody>
+                      
+                      <tr style="padding:0;text-align:left;vertical-align:top;border-top: #f5f5f5 1px solid;direction:ltr;">
+                        <th class="story small-12 large-6 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:0px;padding-right:20px;padding-top:20px;text-align:left;vertical-align:middle;width:310px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:middle">  <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fd41f1430d6f6f364dad4b60d3a882f81ac0ad73ddfe84a895d03cff544fa9ad147114e03c0c61bf8b0adba3ba576b813" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"><img width="325" height="183" src="https://pmcvariety.files.wordpress.com/2019/07/netflix.jpg?w=660&h=370&crop=1" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;height:auto;max-width:100%;outline:0;text-decoration:none;width:100%"></a></th>
+                            </tr>
+                          </table>
+                        </th>
+                        <th class="story small-12 large-6 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:20px;padding-right:30px;padding-top:20px;text-align:left;vertical-align:middle;width:295px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:middle">
+                                <h2 style="Margin:0;Margin-bottom:5px;color:inherit;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:300;line-height:1.4;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal"><a class="headline" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fd41f1430d6f6f364dad4b60d3a882f81ac0ad73ddfe84a895d03cff544fa9ad147114e03c0c61bf8b0adba3ba576b813" title="Netflix Breaks Down Results by Region, Showing Strong Asia-Pacific, Europe Growth" style="Margin:0;color:#000!important;font-family:'Graphik', sans-serif;font-size:18px;font-weight:500;line-height:21px;margin:0;padding:0;text-align:left;text-decoration:none">Netflix Breaks Down Results by Region, Showing Strong Asia-Pacific, Europe Growth</a></h2>
+                                  <p class="deck" style="Margin:0;Margin-bottom:10px;color:#323232!important;font-family:'Graphik', sans-serif;font-size:14px;font-weight:300;line-height:21px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+						Netflix disclosed operating results by region for the first time, showing solid growth in Europe and Asia-Pacific.						 </p>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:16px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:left"><a class="cta" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fd41f1430d6f6f364dad4b60d3a882f81ac0ad73ddfe84a895d03cff544fa9ad147114e03c0c61bf8b0adba3ba576b813" style="Margin:0;color:#257dca!important;font-family:'Graphik', sans-serif;font-size:10px;font-weight:300;line-height:18.2px;margin:0;padding:0;text-align:left;text-decoration:none;text-transform:uppercase">Read More</a></p>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                      <tr style="padding:0;text-align:left;vertical-align:top;border-top: #f5f5f5 1px solid;direction:ltr;">
+                        <th class="story small-12 large-6 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:0px;padding-right:20px;padding-top:20px;text-align:left;vertical-align:middle;width:310px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:middle">  <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f2dea92c4eb430ab637585856dd3773eccf127e8bffcfd69a8fc4c9de0f8251851e584ccc48f85fe8ad01346997ea60a6" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"><img width="325" height="183" src="https://pmcvariety.files.wordpress.com/2019/12/geoff-keighley-the-game-awards.jpg?w=660&h=370&crop=1" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;height:auto;max-width:100%;outline:0;text-decoration:none;width:100%"></a></th>
+                            </tr>
+                          </table>
+                        </th>
+                        <th class="story small-12 large-6 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:20px;padding-right:30px;padding-top:20px;text-align:left;vertical-align:middle;width:295px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:middle">
+                                <h2 style="Margin:0;Margin-bottom:5px;color:inherit;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:300;line-height:1.4;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal"><a class="headline" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f2dea92c4eb430ab637585856dd3773eccf127e8bffcfd69a8fc4c9de0f8251851e584ccc48f85fe8ad01346997ea60a6" title="Geoff Keighley Looks to The Game Awards' Future as 2019 Show Delivers Record Numbers" style="Margin:0;color:#000!important;font-family:'Graphik', sans-serif;font-size:18px;font-weight:500;line-height:21px;margin:0;padding:0;text-align:left;text-decoration:none">Geoff Keighley Looks to The Game Awards' Future as 2019 Show Delivers Record Numbers</a></h2>
+                                  <p class="deck" style="Margin:0;Margin-bottom:10px;color:#323232!important;font-family:'Graphik', sans-serif;font-size:14px;font-weight:300;line-height:21px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+						The Game Awards executive producer and host Geoff Keighley talks 2019's viewership numbers and if the show will ever move to broadcas &#8230;</p>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:16px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:left"><a class="cta" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f2dea92c4eb430ab637585856dd3773eccf127e8bffcfd69a8fc4c9de0f8251851e584ccc48f85fe8ad01346997ea60a6" style="Margin:0;color:#257dca!important;font-family:'Graphik', sans-serif;font-size:10px;font-weight:300;line-height:18.2px;margin:0;padding:0;text-align:left;text-decoration:none;text-transform:uppercase">Read More</a></p>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                      <tr style="padding:0;text-align:left;vertical-align:top;border-top: #f5f5f5 1px solid;direction:ltr;">
+                        <th class="story small-12 large-6 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:0px;padding-right:20px;padding-top:20px;text-align:left;vertical-align:middle;width:310px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:middle">  <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f19ede3483aaed5073c45aaaaad78281d3b5cb386048fc31a54118b16d8b2d2720e4cecc1d6f59f82985bef47f6307306" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"><img width="325" height="183" src="https://pmcvariety.files.wordpress.com/2019/12/zach-khan-apple-podcast.png?w=660&h=370&crop=1" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;height:auto;max-width:100%;outline:0;text-decoration:none;width:100%"></a></th>
+                            </tr>
+                          </table>
+                        </th>
+                        <th class="story small-12 large-6 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:20px;padding-right:30px;padding-top:20px;text-align:left;vertical-align:middle;width:295px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:middle">
+                                <h2 style="Margin:0;Margin-bottom:5px;color:inherit;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:300;line-height:1.4;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal"><a class="headline" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f19ede3483aaed5073c45aaaaad78281d3b5cb386048fc31a54118b16d8b2d2720e4cecc1d6f59f82985bef47f6307306" title="Apple Hires Ex-Vox Media Marketer Zach Kahn to Head Podcast PR (EXCLUSIVE)" style="Margin:0;color:#000!important;font-family:'Graphik', sans-serif;font-size:18px;font-weight:500;line-height:21px;margin:0;padding:0;text-align:left;text-decoration:none">Apple Hires Ex-Vox Media Marketer Zach Kahn to Head Podcast PR (EXCLUSIVE)</a></h2>
+                                  <p class="deck" style="Margin:0;Margin-bottom:10px;color:#323232!important;font-family:'Graphik', sans-serif;font-size:14px;font-weight:300;line-height:21px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+						Apple hired Zach Kahn, formerly with Vox Media, to head up public-relations for the podcast team.						 </p>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:16px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:left"><a class="cta" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f19ede3483aaed5073c45aaaaad78281d3b5cb386048fc31a54118b16d8b2d2720e4cecc1d6f59f82985bef47f6307306" style="Margin:0;color:#257dca!important;font-family:'Graphik', sans-serif;font-size:10px;font-weight:300;line-height:18.2px;margin:0;padding:0;text-align:left;text-decoration:none;text-transform:uppercase">Read More</a></p>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                      <tr style="padding:0;text-align:left;vertical-align:top;border-top: #f5f5f5 1px solid;direction:ltr;">
+                        <th class="story small-12 large-6 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:0px;padding-right:20px;padding-top:20px;text-align:left;vertical-align:middle;width:310px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:middle">  <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f1857f907e2427d5eddb45a944e73a543557f3cad7011af162c89ddead4d469760caa6ed1db0006f4d552ec65b61dddf5" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"><img width="325" height="183" src="https://pmcvariety.files.wordpress.com/2019/09/amazon-echo.png?w=660&h=370&crop=1" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;height:auto;max-width:100%;outline:0;text-decoration:none;width:100%"></a></th>
+                            </tr>
+                          </table>
+                        </th>
+                        <th class="story small-12 large-6 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:20px;padding-right:30px;padding-top:20px;text-align:left;vertical-align:middle;width:295px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:middle">
+                                <h2 style="Margin:0;Margin-bottom:5px;color:inherit;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:300;line-height:1.4;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal"><a class="headline" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f1857f907e2427d5eddb45a944e73a543557f3cad7011af162c89ddead4d469760caa6ed1db0006f4d552ec65b61dddf5" title="Luminary Becomes First Podcast Service to Sell  </h2>
+                                  <p class="deck" style="Margin:0;Margin-bottom:10px;color:#323232!important;font-family:'Graphik', sans-serif;font-size:14px;font-weight:300;line-height:21px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+						The skill allows consumers to subscribe to Luminary with a voice command.						 </p>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:16px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:left"><a class="cta" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f1857f907e2427d5eddb45a944e73a543557f3cad7011af162c89ddead4d469760caa6ed1db0006f4d552ec65b61dddf5" style="Margin:0;color:#257dca!important;font-family:'Graphik', sans-serif;font-size:10px;font-weight:300;line-height:18.2px;margin:0;padding:0;text-align:left;text-decoration:none;text-transform:uppercase">Read More</a></p>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                      <tr style="padding:0;text-align:left;vertical-align:top;border-top: #f5f5f5 1px solid;direction:ltr;">
+                        <th class="story small-12 large-6 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:0px;padding-right:20px;padding-top:20px;text-align:left;vertical-align:middle;width:310px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:middle">  <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f617ee91efb1be80aac774e8e8dfe340a1e37e73232e9cd72d67897c54b21fc15e0b2dbda533eca13668fedc0110bac97" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"><img width="325" height="183" src="https://pmcvariety.files.wordpress.com/2019/12/1837242_1553712215_1831020-1551361587-1795896-1538563412-technicolor-logo_565x424p.jpg?w=660&h=370&crop=1" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;height:auto;max-width:100%;outline:0;text-decoration:none;width:100%"></a></th>
+                            </tr>
+                          </table>
+                        </th>
+                        <th class="story small-12 large-6 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:20px;padding-right:30px;padding-top:20px;text-align:left;vertical-align:middle;width:295px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:middle">
+                                <h2 style="Margin:0;Margin-bottom:5px;color:inherit;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:300;line-height:1.4;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal"><a class="headline" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f617ee91efb1be80aac774e8e8dfe340a1e37e73232e9cd72d67897c54b21fc15e0b2dbda533eca13668fedc0110bac97" title="Technicolor and Its Former CEO, Frederic Rose, Indicted on Fraud Charges in France" style="Margin:0;color:#000!important;font-family:'Graphik', sans-serif;font-size:18px;font-weight:500;line-height:21px;margin:0;padding:0;text-align:left;text-decoration:none">Technicolor and Its Former CEO, Frederic Rose, Indicted on Fraud Charges in France</a></h2>
+                                  <p class="deck" style="Margin:0;Margin-bottom:10px;color:#323232!important;font-family:'Graphik', sans-serif;font-size:14px;font-weight:300;line-height:21px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+						Technicolor and its former CEO, Frederic Rose, have been indicted in France on charges of fraud and breach of trust.						 </p>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:16px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:left"><a class="cta" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f617ee91efb1be80aac774e8e8dfe340a1e37e73232e9cd72d67897c54b21fc15e0b2dbda533eca13668fedc0110bac97" style="Margin:0;color:#257dca!important;font-family:'Graphik', sans-serif;font-size:10px;font-weight:300;line-height:18.2px;margin:0;padding:0;text-align:left;text-decoration:none;text-transform:uppercase">Read More</a></p>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                      <tr style="padding:0;text-align:left;vertical-align:top;border-top: #f5f5f5 1px solid;direction:ltr;">
+                        <th class="story small-12 large-6 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:0px;padding-right:20px;padding-top:20px;text-align:left;vertical-align:middle;width:310px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:middle">  <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f6e98c4e5207ac2e879e11202838bc5bf35cfe1a13b33deb788e1836d53bfb4240fc9b5cd4c3ddb59bcc9ef461952fb55" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"><img width="325" height="183" src="https://pmcvariety.files.wordpress.com/2019/12/shutterstock_editorial_5262979c.jpg?w=660&h=370&crop=1" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;height:auto;max-width:100%;outline:0;text-decoration:none;width:100%"></a></th>
+                            </tr>
+                          </table>
+                        </th>
+                        <th class="story small-12 large-6 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:20px;padding-right:30px;padding-top:20px;text-align:left;vertical-align:middle;width:295px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:middle">
+                                <h2 style="Margin:0;Margin-bottom:5px;color:inherit;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:300;line-height:1.4;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal"><a class="headline" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f6e98c4e5207ac2e879e11202838bc5bf35cfe1a13b33deb788e1836d53bfb4240fc9b5cd4c3ddb59bcc9ef461952fb55" title="PewDiePie Announces He's Taking a Break From YouTube in 2020" style="Margin:0;color:#000!important;font-family:'Graphik', sans-serif;font-size:18px;font-weight:500;line-height:21px;margin:0;padding:0;text-align:left;text-decoration:none">PewDiePie Announces He's Taking a Break From YouTube in 2020</a></h2>
+                                  <p class="deck" style="Margin:0;Margin-bottom:10px;color:#323232!important;font-family:'Graphik', sans-serif;font-size:14px;font-weight:300;line-height:21px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+						PewDiePie, YouTube's most watched creator, announced in a video that he would be taking a break from the platform in 2020.						 </p>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:16px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:left"><a class="cta" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f6e98c4e5207ac2e879e11202838bc5bf35cfe1a13b33deb788e1836d53bfb4240fc9b5cd4c3ddb59bcc9ef461952fb55" style="Margin:0;color:#257dca!important;font-family:'Graphik', sans-serif;font-size:10px;font-weight:300;line-height:18.2px;margin:0;padding:0;text-align:left;text-decoration:none;text-transform:uppercase">Read More</a></p>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- Spacer -->
+                  <table class="row spacer" style="background:0 0;border-collapse:collapse;border-spacing:0;display:table;height:30px;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                    <tbody>
+                      <tr style="padding:0;text-align:left;vertical-align:top"></tr>
+                    </tbody>
+                  </table>
+                  <!-- Section Title -->
+                  <table class="row section-title border" style="background:#fff;border-collapse:collapse;border-spacing:0;color:#0a0a0a!important;display:table;font-family:'Graphik',sans-serif;font-size:28px;line-height:39.2px;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                    <tbody>
+                      <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:25px;padding-left:20px;padding-right:20px;padding-top:20px;text-align:left;width:660px">
+                          <table style="border-collapse:collapse;border-spacing:0;border-top:1px solid #000;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;padding-bottom:0;padding-top:15px;text-align:left">
+                                <h1 class="section-title" style="Margin:0;Margin-bottom:5px;color:#0a0a0a!important;font-family:'Graphik',sans-serif;font-size:28px;font-weight:500;line-height:39.2px;margin:0;margin-bottom:0;padding:0;text-align:left;word-wrap:normal">In Depth</h1></th>
+                              <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0!important;padding-bottom:0;padding-top:15px;text-align:left;visibility:hidden;width:0"></th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- Two Column side by side stories -->
+                  <table class="row col-2" style="background:#fff;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                    <tbody>
+                      <tr style="padding:0;text-align:left;vertical-align:top;border-top: #f5f5f5 1px solid;">
+                        <th class="story story-tag pad-bottom small-12 large-6 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:20px;padding-right:20px;padding-top:20px;text-align:left;width:310px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left">  <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9faccf193eea0bb211cefb5c5e06a65748b994f8149123951841ae38c5b0df0a16048ee2755d816552585ac360f40173ea" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"><img src="https://pmcvariety.files.wordpress.com/2019/12/anti-gone-sundance.jpg?w=660&h=370&crop=1" alt="Sundance: 2020 New Frontier Program Features Underwater VR, Chomsky A.I." width="304" height="170" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;height:auto;margin-bottom:10px;max-width:100%;outline:0;text-decoration:none;width:100%"></a>
+                                <h2 style="Margin:0;Margin-bottom:5px;color:inherit;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:300;line-height:1.4;margin:0;margin-bottom:10px;margin-top:5px;padding:0;text-align:left;word-wrap:normal"><a class="headline" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9faccf193eea0bb211cefb5c5e06a65748b994f8149123951841ae38c5b0df0a16048ee2755d816552585ac360f40173ea" title="Sundance: 2020 New Frontier Program Features Underwater VR, Chomsky A.I." style="Margin:0;color:#000!important;font-family:'Graphik',sans-serif;font-size:18px;font-weight:500;line-height:21px;margin:0;padding:0;text-align:left;text-decoration:none">Sundance: 2020 New Frontier Program Features Underwater VR, Chomsky A.I.</a></h2>
+                                  <p class="deck" style="Margin:0;Margin-bottom:10px;color:#323232!important;font-family:'Graphik',sans-serif;font-size:14px;font-weight:300;line-height:21px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+						Read the full lineup of virtual reality, artificial intelligence and new media projects selected to play at the 2020 Sundance Film Fe &#8230;</p>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:16px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:left"><a class="cta" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9faccf193eea0bb211cefb5c5e06a65748b994f8149123951841ae38c5b0df0a16048ee2755d816552585ac360f40173ea" style="Margin:0;color:#257dca!important;font-family:'Graphik',sans-serif;font-size:10px;font-weight:300;line-height:18.2px;margin:0;padding:0;text-align:left;text-decoration:none;text-transform:uppercase">Read More</a></p>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                        <th class="story story-tag pad-bottom small-12 large-6 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:20px;padding-right:20px;padding-top:20px;text-align:left;width:310px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left">  <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fcc04cbed59da92fb9d3949b30d2e1af061fec6fe0e3e5efa6238bef0973d8e768639237b0fb72c1da0475dfff9e4901a" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"><img src="https://pmcvariety.files.wordpress.com/2019/04/netflix-tv-screen.jpg?w=660&h=370&crop=1" alt="Netflix Released More Originals in 2019 Than the Entire TV Industry Did in 2005" width="304" height="170" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;height:auto;margin-bottom:10px;max-width:100%;outline:0;text-decoration:none;width:100%"></a>
+                                <h2 style="Margin:0;Margin-bottom:5px;color:inherit;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:300;line-height:1.4;margin:0;margin-bottom:10px;margin-top:5px;padding:0;text-align:left;word-wrap:normal"><a class="headline" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fcc04cbed59da92fb9d3949b30d2e1af061fec6fe0e3e5efa6238bef0973d8e768639237b0fb72c1da0475dfff9e4901a" title="Netflix Released More Originals in 2019 Than the Entire TV Industry Did in 2005" style="Margin:0;color:#000!important;font-family:'Graphik',sans-serif;font-size:18px;font-weight:500;line-height:21px;margin:0;padding:0;text-align:left;text-decoration:none">Netflix Released More Originals in 2019 Than the Entire TV Industry Did in 2005</a></h2>
+                                  <p class="deck" style="Margin:0;Margin-bottom:10px;color:#323232!important;font-family:'Graphik',sans-serif;font-size:14px;font-weight:300;line-height:21px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+						Netflix averaged just over one new original TV program or movie for every day of 2019.&nbsp; The streaming giant released 371 new TV  &#8230;</p>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:16px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:left"><a class="cta" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fcc04cbed59da92fb9d3949b30d2e1af061fec6fe0e3e5efa6238bef0973d8e768639237b0fb72c1da0475dfff9e4901a" style="Margin:0;color:#257dca!important;font-family:'Graphik',sans-serif;font-size:10px;font-weight:300;line-height:18.2px;margin:0;padding:0;text-align:left;text-decoration:none;text-transform:uppercase">Read More</a></p>
+                              </th>
+                            </tr>
+                          </table>
+                        </th></tr>
+                    </tbody>
+                  </table>
+                  <!-- Spacer -->
+                  <table class="row spacer" style="background:0 0;border-collapse:collapse;border-spacing:0;display:table;height:30px;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                    <tbody>
+                      <tr style="padding:0;text-align:left;vertical-align:top"></tr>
+                    </tbody>
+                  </table>
+                  <!-- Two Column - Color Block + Photo -->
+                  <table class="wrapper color-block-bg color-block" align="center" style="background-color:#ADE636;border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:middle">
+                      <td class="wrapper-inner" style="-moz-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;hyphens:none;line-height:1.4;margin:0;padding:30px;text-align:left;vertical-align:top;word-wrap:break-word">
+                        <table class="row" style="background:0 0;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                          <tbody>
+                            <tr style="padding:0;text-align:left;vertical-align:middle">
+                              <th class="story block--img small-12 large-6 first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;text-align:left;width:320px">
+                                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                  <tr style="padding:0;text-align:left;vertical-align:middle">
+                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left">  <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f1820c0820c19d12dadb6ab528588de975260e005a440522e819cfe972ae6e2b7d4ddb6c7503748650be7b2e42a0b0f22" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:300;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"> </a></th>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th class="story small-12 large-6 last" bgcolor="#FFFFFF" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;text-align:left;width:320px">
+                                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                  <tr style="padding:0;text-align:left;vertical-align:middle">
+                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;padding-bottom:25px;padding-left:25px;padding-right:25px;padding-top:25px;text-align:left">
+                                      <h1 style="Margin:0;Margin-bottom:5px;color:inherit;font-family:Helvetica,Arial,sans-serif;font-size:22px;font-weight:300;line-height:1.4;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal"><a class="feature-h1" href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f1820c0820c19d12dadb6ab528588de975260e005a440522e819cfe972ae6e2b7d4ddb6c7503748650be7b2e42a0b0f22" title="Why YouTube and Facebook Aren't Fighting the Hot War for  </h1>
+                                      <p class="deck" style="Margin:0;Margin-bottom:10px;color:#323232!important;font-family:'Graphik',sans-serif;font-size:14px;font-weight:300;line-height:21px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+						YouTube and Facebook have focused their original entertainment strategies around massive ad businesses -- not fighting for subscripti &#8230;</p>
+                                    </th>
+                                  </tr>
+                                </table>
+                              </th></tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- Spacer -->
+                  <table class="row spacer" style="background:0 0;border-collapse:collapse;border-spacing:0;display:table;height:30px;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                    <tbody>
+                      <tr style="padding:0;text-align:left;vertical-align:top"></tr>
+                    </tbody>
+                  </table>
+                  <!-- Footer -->
+                  <table bgcolor="#000000" class="wrapper footer" align="center" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                      <td class="wrapper-inner" style="-moz-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;hyphens:none;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                        <table class="row" style="background:0 0;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                          <tbody>
+                            <tr style="padding:0;text-align:left;vertical-align:middle">
+                              <th class="logo small-6 large-6 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:20px;padding-right:0px;padding-top:20px;text-align:left;width:320px">
+                                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                  <tr style="padding:0;text-align:left;vertical-align:middle">
+                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left"><a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fb722b2fdf41aaa3c7bfde792ba7da1da3fe0c04a28507344b313c5009568b98a497852ada9c4642b2977761f6197bceb" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none"><img width="125" height="36" src="http://image.email.variety.com/lib/fe9613727467027977/m/2/949450ef-e41d-47d9-9eec-d5af0ef33fe7.png" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:125px;outline:0;text-decoration:none;width:auto"></a></th>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th class="icon small-2 large-2 columns" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;height:25px;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:10px;padding-right:10px;padding-top:20px;text-align:left;width:25px">
+                                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                  <tr style="padding:0;text-align:left;vertical-align:middle">
+                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left"><a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f07164e064089fd5ed6acea485c7b1fdd26e1d99c3956e92d30e04a5d60f3e1477beddc14b6a77e8dab6994256daf7a8a" style="Margin:0;border:1px solid #2F2F2F;border-radius:50%;color:#2D2CA2;display:block;font-family:Helvetica,Arial,sans-serif;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none;width:35px"><img height="34" width="34" src="http://image.email.variety.com/lib/fe9613727467027977/m/1/footer_social_facebook.png" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a></th>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th class="icon small-2 large-2 columns" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;height:25px;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:10px;padding-right:10px;padding-top:20px;text-align:left;width:25px">
+                                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                  <tr style="padding:0;text-align:left;vertical-align:middle">
+                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left"><a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f3f051b11f401edcbd42817c14d6276ae05af17135f27943561d176422e2e4092d95776d0143dc3a91144fba07c0a9ed5" style="Margin:0;border:1px solid #2F2F2F;border-radius:50%;color:#2D2CA2;display:block;font-family:Helvetica,Arial,sans-serif;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none;width:35px"><img height="34" width="34" src="http://image.email.variety.com/lib/fe9613727467027977/m/1/footer_social_twitter.png" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a></th>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th class="icon small-2 large-2 columns" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;height:25px;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:10px;padding-right:10px;padding-top:20px;text-align:left;width:25px">
+                                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                  <tr style="padding:0;text-align:left;vertical-align:middle">
+                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left"><a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f2adb8d0b5914bef1d7cdf55120faaf4bad5987c15f6d4ca1cbe89ae4b6f7eb848a7c668f57bd1781c060f1b159258a3c" style="Margin:0;border:1px solid #2F2F2F;border-radius:50%;color:#2D2CA2;display:block;font-family:Helvetica,Arial,sans-serif;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none;width:35px"><img height="34" width="34" src="http://image.email.variety.com/lib/fe9613727467027977/m/1/footer_social_instagram.png" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a></th>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th class="icon small-2 large-2 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;height:25px;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:10px;padding-right:20px;padding-top:20px;text-align:left;width:25px">
+                                <table style="border-collapse:collapse;border-spacing:0;max-width:36px;padding:0;text-align:left;vertical-align:top;width:100%">
+                                  <tr style="padding:0;text-align:left;vertical-align:middle">
+                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left"><a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fe755f9b18dfe97a45ece0720f7d7f43383e0b94e23132d3bb0cb41e88eb0caa6f65c079b3ca68fa7a8b422ef65426eb0" style="Margin:0;border:1px solid #2F2F2F;border-radius:50%;color:#2D2CA2;display:block;font-family:Helvetica,Arial,sans-serif;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none;width:35px"><img height="34" width="34" src="http://image.email.variety.com/lib/fe9613727467027977/m/1/footer_social_youtube.png" alt="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a></th>
+                                  </tr>
+                                </table>
+                              </th>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- Footer Legal Copy -->
+                  <table class="row footer-copy" style="background:0 0;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                    <tbody>
+                      <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:20px;padding-right:20px;padding-top:20px;text-align:left;width:660px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;padding-top:0;text-align:left">
+                                <p style="Margin:0;Margin-bottom:10px;color:grey;font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:300;line-height:16px;margin:0;margin-bottom:0;padding:0;text-align:center">This email was sent to  by Variety. Please add email@email.variety.com to your address book to ensure delivery to your inbox.</p>
+                                <p style="Margin:0;Margin-bottom:10px;color:grey;font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:300;line-height:16px;margin:0;margin-bottom:0;padding:0;text-align:center">Visit the <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fdf822151e893ac16313361f5490e16c17e051e87416ee2e3d9c5faed1c4902ea68a911ba19e5c37269450f85ae6cb497" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">Preferences Center</a>                                  to update your profile and customize what email alerts and newsletters you receive.</p>
+                                <p style="Margin:0;Margin-bottom:10px;color:grey;font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:300;line-height:16px;margin:0;margin-bottom:0;padding:0;text-align:center">Copyright &#169; 2019 Variety Media, LLC, a subsidiary of Penske Business Media, LLC.</p>
+                                <p style="Margin:0;Margin-bottom:10px;color:grey;font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:300;line-height:16px;margin:0;margin-bottom:0;padding:0;text-align:center">11175 Santa Monica Boulevard Los Angeles, CA, 90025</p><br>
+                                <p style="Margin:0;Margin-bottom:10px;color:grey;font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:300;line-height:16px;margin:0;margin-bottom:0;padding:0;text-align:center"><a href="https://view.email.variety.com/?qs=81f146995224c2049847f475ac422ae89968af770f52ecd67cc1c81fb8827e6efa56cf9d1d196f7b62dec572258a6b9047f32663343c53bd976eae25b358d74053e950967a0eb9d3" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">View in Browser</a> |
+                                  <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fee9df5db137d80dffdff416d2c7cda777d21763b316014bcefc804bb136a222e73872e456724db0572b4421e62862960" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">Privacy Policy</a>                                  | <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f2b03e784cf86c26df6c18817fd2c390812bee03a9980a0c9d5328c27b4299a14b542ac01088855e204a08ca7a2b0a27e" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">Your Privacy Rights</a>                                  | 
+<a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fc0cfdc3dbecfa0d37c4307e87f61e40b00861ac6e1a35046cb48e06fd398bf41c135a91d302f2dd33c2eae4e2b454764" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">Ad Choices</a>                                  | <a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9f48063c3a4368f7ee2a479b04387f7b7c3b31d076389a637e37ac9063e5c70aeb13359a4ff1ae998cfc8327ff85f49ddf" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">Terms of Use</a>                                  | 
+<a href="https://click.email.variety.com/?qs=dbcb2c2fdcd76d9fdf822151e893ac16313361f5490e16c17e051e87416ee2e3d9c5faed1c4902ea68a911ba19e5c37269450f85ae6cb497" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none"> </a></p>
+                                <div style="display:none"><a href="https://click.email.variety.com/profile_center.aspx?qs=bc9d098d48d51001a71b5a36dbef856405b1bfa73f0fdf6a8da3ec4632379d273cc13da57e519755adcb7afc8a14fea856e39400ecf4e673db90a136fe7883e5" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">Update Profile</a></div>
+                              </th>
+                              <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0!important;padding-top:0;text-align:left;visibility:hidden;width:0"></th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--[if mso]>
+            	        </td>
+            	        <td style="padding:0px;margin:0px;">&nbsp;</td>
+            	    </tr>
+            	    <tr><td colspan="3" style="padding:0px;margin:0px;font-size:20px;height:20px;" height="20">&nbsp;</td></tr>
+            	</table>
+            	<![endif]--></td>
+              </tr>
+            </tbody>
+          </table>
+        </center>
+      </td>
+    </tr>
+  </table>
+  <!-- prevent Gmail on iOS font size manipulation -->
+  <div style="display:none;white-space:nowrap;font:15px courier;line-height:0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+</body>
+
+</html>
+<img src="https://click.email.variety.com/open.aspx?ffcb10-febe157876610c75-fe561272726c00747410-fe9613727467027977-ff9c1671-fe911373706d057875-ff64167571" width="1" height="1">
+

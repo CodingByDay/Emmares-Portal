@@ -1,0 +1,787 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if gte mso 9]>
+<style id="ol-styles">
+/* OUTLOOK-SPECIFIC STYLES */
+li {
+text-indent: -1em;
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+ul, ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+sup {
+font-size: 85% !important;
+}
+sub {
+font-size: 85% !important;
+}
+</style>
+<![endif]-->
+<style id="template-styles-head" data-premailer="ignore">
+.footer-main-width {
+width: 610px!important;
+max-width: 610px;
+}
+table {
+border-collapse: collapse;
+table-layout: fixed;
+}
+.bgimage {
+table-layout: auto;
+}
+.preheader-container {
+color: transparent;
+display: none;
+font-size: 1px;
+line-height: 1px;
+max-height: 0px;
+max-width: 0px;
+opacity: 0;
+overflow: hidden;
+}
+/* LIST AND p STYLE OVERRIDES */
+.editor-text p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+.editor-text ul,
+.editor-text ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+.editor-text li {
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+/* ==================================================
+CLIENT/BROWSER SPECIFIC OVERRIDES
+================================================== */
+/* IE: correctly scale images with w/h attbs */
+img {
+-ms-interpolation-mode: bicubic;
+}
+/* Text Link Style Reset */
+a {
+text-decoration: underline;
+}
+/* iOS: Autolink styles inherited */
+a[x-apple-data-detectors] {
+text-decoration: underline !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+color: inherit !important;
+}
+/* FF/Chrome: Smooth font rendering */
+.editor-text, .MainTextFullWidth {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+/* Gmail/Web viewport fix */
+u + .body .template-body {
+width: 610px;
+}
+@media only screen and (max-width:480px) {
+u + .body .template-body {
+width: 100% !important;
+}
+}
+/* Office365/Outlook.com image reset */
+[office365] button, [office365] .divider-base div, [office365] .spacer-base div, [office365] .editor-image div { display: block !important; }
+</style>
+<style>@media only screen and (max-width:480px) {
+table {
+border-collapse: collapse;
+}
+.main-width {
+width: 100% !important;
+}
+.mobile-hidden {
+display: none !important;
+}
+td.OneColumnMobile {
+display: block !important;
+}
+.OneColumnMobile {
+width: 100% !important;
+}
+td.editor-col .editor-text {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-button-container {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-social td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .block-margin {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col td.block-margin .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.editor-button td > table tr > td {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-button td > table tr > td td {
+padding: 9px 15px 10px 15px !important;
+}
+.layout {
+padding: 15px 9px 15px 9px !important;
+}
+.layout-container-border {
+padding: 0px 0px 0px 0px !important;
+}
+.layout-container {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-image img {
+width: auto !important; margin-left: auto !important; margin-right: auto !important;
+}
+.editor-image .image-cell {
+padding-bottom: 15px !important;
+}
+.editor-text {
+font-size: 16px !important;
+}
+.section-headline-text {
+font-size: 24px !important;
+}
+.headline-text {
+font-size: 24px !important;
+}
+.subheadline-text {
+font-size: 20px !important;
+}
+.feature {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.layout-outer {
+padding: 0px 20px !important;
+}
+.feature-heading-text {
+font-size: 20px !important;
+}
+.feature-text {
+font-size: 16px !important;
+}
+.split.editor-col {
+margin-top: 0px !important;
+}
+.split.editor-col ~ .split.editor-col {
+margin-top: 10px !important;
+}
+.split-layout-margin {
+padding: 0px 20px !important;
+}
+.article {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.article-heading-text {
+font-size: 20px !important;
+}
+.article-text {
+font-size: 16px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.cpn-heading-text {
+font-size: 28px !important;
+}
+.editor-cpn-heading-text {
+font-size: 28px !important;
+}
+td.col-divided .editor-col {
+border-right: 0px solid #C0C0C0 !important; border-bottom: 1px solid #C0C0C0 !important;
+}
+td.col-divided td.editor-col:last-of-type {
+border-bottom: 0 !important;
+}
+.col-divided {
+padding: 0 20px !important;
+}
+td.col-divided .editor-col .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .block-margin {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.action-block .poll-answer {
+width: 100% !important; display: block !important;
+}
+.action-block .poll-button {
+width: 100% !important;
+}
+div.MobileFooter {
+font-size: 11px !important;
+}
+td.FooterMobile {
+padding: 0px 10px 0px 10px !important;
+}
+td.MainCenter {
+width: 100% !important;
+}
+table.MainSide {
+display: none !important;
+}
+img.MainSide {
+display: none !important;
+}
+td.MainSide {
+display: none !important;
+}
+.rsvp-button-inner {
+padding: 0px 0px 10px 0px !important;
+}
+.rsvp-button-outer {
+width: 100% !important; max-width: 100% !important;
+}
+.action-block .poll-answer {
+width: 100% !important; display: block !important;
+}
+.action-block .poll-button {
+width: 100% !important;
+}
+div.MobileFooter {
+font-size: 11px !important;
+}
+td.FooterMobile {
+padding: 0px 10px 0px 10px !important;
+}
+td.MainCenter {
+width: 100% !important;
+}
+table.MainSide {
+display: none !important;
+}
+img.MainSide {
+display: none !important;
+}
+td.MainSide {
+display: none !important;
+}
+.rsvp-button-inner {
+padding: 0px 0px 10px 0px !important;
+}
+.rsvp-button-outer {
+width: 100% !important; max-width: 100% !important;
+}
+.footer-main-width {
+width: 100% !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-column {
+display: block !important;
+}
+.footer-mobile-stack {
+display: block !important;
+}
+.footer-mobile-stack-padding {
+padding-top: 3px;
+}
+}
+@media only screen and (max-width:320px) {
+.layout {
+padding: 0px 0px 0px 0px !important;
+}
+}
+@media screen {
+@font-face {
+font-family: ''; font-style: normal; font-weight: 400; src: local(''), local(''), url() format(''); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+}
+</style>
+</head>
+<body class="body" align="center" style="width: 100%; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #000000; margin: 0px; padding: 0px;" bgcolor="#000000">
+<table class="template-body" border="0" cellpadding="0" cellspacing="0" style="text-align: center; min-width: 100%;" width="100%">
+<tr>
+<td class="preheader-container">
+<div>
+<div id="preheader" style="display: none; font-size: 1px; color: transparent; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+<span data-entity-ref="preheader">An article about overcoming anything life tosses your way.</span>
+</div>
+<img src="http://r20.rs6.net/on.jsp?ca=d1c6cb7c-f42d-4377-a0e3-53eec2dfd08b&a=1101306328783&c=f3930636-98f9-11e9-bbe7-d4ae52754055&ch=f3943862-98f9-11e9-bbe7-d4ae52754055" alt="">
+</div>
+</td>
+</tr>
+<tr>
+<td class="template-shell-container" align="center">
+<div class="bgcolor" style="background-color: #000000;">
+<table class="bgimage" width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #000000;" bgcolor="#000000">
+<tbody>
+<tr>
+<td align="center">
+<table class="main-width" width="610" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 610px;">
+<tbody>
+<tr>
+<td class="layout" align="center" valign="top" style="padding: 15px 5px;">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="layout-container-border" align="center" valign="top" style="background-color: #C0C0C0; padding: 0px;" bgcolor="#C0C0C0">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #C0C0C0;" bgcolor="#C0C0C0">
+<tbody>
+<tr>
+<td class="layout-container" align="center" valign="top" style="background-color: #FFFFFF; padding: 0;" bgcolor="#FFFFFF">
+<div class="">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="logo editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image logo-container content-image editor-image-vspace-on" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 10px; padding-bottom: 10px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=0019mb4ASfBTBunAaUSocZU5EW2rWHHl5VLnMIhNisaL76gJlifHqu4EIiyNmVhOy0JsV0hhkcTn01jzVO_Aaobhu1ufYrN6y_t_sP-q_XbqcBXjsr7JWhai21vGjLifVxyk_4bUgVxnXRvx-A5UPCNdQ==&c=VjRTyqIlhgLWqxyySSyOPZjR0dMg2TTjZARKnbU3sJJbEnv3zONT3g==&ch=L6irGRqzXWPHN45i-Q7oEKvu-po9mZRmrxkDVkLscPdnnGV_OlVGhw==">
+<img alt="https://mlsvc01-prod.s3.amazonaws.com/fc6f8fa6001/68374a37-1b9e-4097-92ac-687389d60339.jpg" class="" style="display: block; height: auto; max-width: 100%;" width="215" border="0" hspace="0" vspace="0" src="https://mlsvc01-prod.s3.amazonaws.com/fc6f8fa6001/68374a37-1b9e-4097-92ac-687389d60339.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="headline editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text headline-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 28px; color: #777777; text-align: center; display: block; word-wrap: break-word; line-height: 1.2; font-weight: bold; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div><span style="font-size: 22px;">Explore your Literary Imagination</span></div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="center-text section-headline about editor-col OneColumnMobile" width="100%" align="left" valign="top" style="background-color: #777777; text-align: center;" bgcolor="#777777">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text center-text section-headline about-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; text-align: center; display: block; word-wrap: break-word; line-height: 1.2; background-color: #777777; padding: 10px 20px;" bgcolor="#777777">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div>A new article from Literary Traveler</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image editor-image  editor-image-vspace-on" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 10px; padding-bottom: 10px;">
+<div class="publish-container">  <img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="371" border="0" hspace="0" vspace="0" src="https://www.literarytraveler.com/wp-content/uploads/2020/01/IMG_0321-scaled.jpg">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="spacer editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-spacer">
+<table class="editor-spacer" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-container" align="center" valign="top">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-base" style="padding-bottom: 10px; height: 1px; line-height: 1px;" width="100%" align="center" valign="top">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="spacer editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-spacer">
+<table class="editor-spacer" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-container" align="center" valign="top">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-base" style="padding-bottom: 10px; height: 1px; line-height: 1px;" width="100%" align="center" valign="top">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="feature editor-col OneColumnMobile" width="100%" align="left" valign="top" style="background-color: #FFFFFF;" bgcolor="#FFFFFF">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text feature-heading-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 18px; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; font-weight: bold; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div style="text-align: center;" align="center">Relax, Energize and Inspire your Creative Side with a stay at San Miguel de Allende&#x2019;s Casa Delphine by Antoinette Weil</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text feature-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 16px; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div>Are you looking to escape to someplace beautiful and creative? Then you might want to consider <a href="http://r20.rs6.net/tn.jsp?f=0019mb4ASfBTBunAaUSocZU5EW2rWHHl5VLnMIhNisaL76gJlifHqu4EIiyNmVhOy0JzhwGs-Hff2sDjR-9L6lMPsIp_gqKyQs4rdE_aM80JZ6r8VOPR5BmpOWUXgabtivPzpJxgS9E8IF2LpfeBDOyyeEyrmz2j1qpSLAUlaUNCbkKq-1jq66UP7SZFlRTx71BjNoN7cHCZgh6g1V8Q07sebHMXXBl-xMbiDquaJ0KQDF2WRYlDyBGA78kmzebN-_JhxQjFNSPTFwmmlEXwPnd3GA2YIP_sxsFq0yIPmJMdtz0d7KD5sf-EA==&c=VjRTyqIlhgLWqxyySSyOPZjR0dMg2TTjZARKnbU3sJJbEnv3zONT3g==&ch=L6irGRqzXWPHN45i-Q7oEKvu-po9mZRmrxkDVkLscPdnnGV_OlVGhw==" target="_blank" style="font-weight: normal; font-style: normal; text-decoration: underline;">Casa Delphine in San Miguel de Allende</a>. Join longtime LT contributor Antoinette Weill <a href="http://r20.rs6.net/tn.jsp?f=0019mb4ASfBTBunAaUSocZU5EW2rWHHl5VLnMIhNisaL76gJlifHqu4EIiyNmVhOy0JjmqPkO4yhGNyDw4Q6av6ck8qp35wFt3xa-86EWyMMvBAkkmbRk0h5Nf_aPRNuQyBE9jiyMRAUNSpI9nnZoPdLO34Pjv_DjRf&c=VjRTyqIlhgLWqxyySSyOPZjR0dMg2TTjZARKnbU3sJJbEnv3zONT3g==&ch=L6irGRqzXWPHN45i-Q7oEKvu-po9mZRmrxkDVkLscPdnnGV_OlVGhw==" target="_blank" style="font-weight: normal; font-style: normal; text-decoration: underline;">@theawheel</a> on her creative escape to this beautiful new boutique hotel in Mexico.&#xa0;</div>
+<div><br></div>
+<div>Somewhere in between three and four hours north of Mexico City&#x2019;s traffic-filled roads and people-filled squares, sits San Miguel de Allende. Colonial architecture in warm hues and cobblestone streets that wind and slope into steep hills, creating surprise vistas around every corner. It is a welcome retreat from the bustle of the city, but San Miguel has become a destination for visitors separate and all its own. Named the number one city in the world by Travel + Leisure two years in a row, this small respite cannot be mistaken for a secret spot. Still somehow, even with the word out, the town has managed to maintain its character and quaint charm. With much to see, do, and discover it is possible for each visitor to this special place to have a completely unique experience.&#xa0;</div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="spacer editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-spacer">
+<table class="editor-spacer" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-container" align="center" valign="top">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-base" style="padding-bottom: 10px; height: 1px; line-height: 1px;" width="100%" align="center" valign="top">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="article editor-col OneColumnMobile" width="40%" align="left" valign="top">
+<div><div class="column-resize-bar">
+<span class="line"></span>
+<span class="grabber"></span>
+</div></div>
+<div class="gl-contains-image">
+<table class="editor-image content-image editor-image-vspace-on editor-image-hspace-on" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="left" valign="top" style="padding: 10px 10px 10px 20px;">
+<div class="publish-container">  <img alt="" class="" style="display: block; height: auto; max-width: 100%;" width="185" border="0" hspace="0" vspace="0" src="https://www.literarytraveler.com/wp-content/uploads/2020/01/IMG_0292-scaled.jpg">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class="article editor-col OneColumnMobile" width="60%" align="left" valign="top">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text article-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 16px; color: #000000; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div>I spent my three days in San Miguel de Allende at luxury boutique hotel, Casa Delphine. Opened just last Spring, it may be the new kid in this vibrant tourist&#x2014;nay, visitor&#x2019;s&#x2014;market. But with thoughtful design, its rich and cozy feel, and creative mindset, Casa Delphine is on the fast track to becoming a sought-after destination for creative souls and wanderers looking for more than a place to rest their heads. Read <a href="http://r20.rs6.net/tn.jsp?f=0019mb4ASfBTBunAaUSocZU5EW2rWHHl5VLnMIhNisaL76gJlifHqu4EIiyNmVhOy0JzhwGs-Hff2sDjR-9L6lMPsIp_gqKyQs4rdE_aM80JZ6r8VOPR5BmpOWUXgabtivPzpJxgS9E8IF2LpfeBDOyyeEyrmz2j1qpSLAUlaUNCbkKq-1jq66UP7SZFlRTx71BjNoN7cHCZgh6g1V8Q07sebHMXXBl-xMbiDquaJ0KQDF2WRYlDyBGA78kmzebN-_JhxQjFNSPTFwmmlEXwPnd3GA2YIP_sxsFq0yIPmJMdtz0d7KD5sf-EA==&c=VjRTyqIlhgLWqxyySSyOPZjR0dMg2TTjZARKnbU3sJJbEnv3zONT3g==&ch=L6irGRqzXWPHN45i-Q7oEKvu-po9mZRmrxkDVkLscPdnnGV_OlVGhw==" target="_blank" style="font-weight: bold; font-style: normal; text-decoration: underline;">more.</a>
+</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="spacer editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-spacer">
+<table class="editor-spacer" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-container" align="center" valign="top">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-base" style="padding-bottom: 10px; height: 1px; line-height: 1px;" width="100%" align="center" valign="top">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="social editor-col OneColumnMobile" width="100%" align="left" valign="top" style="background-color: #000000;" bgcolor="#000000">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text social-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; text-align: center; display: block; word-wrap: break-word; line-height: 1.2; text-decoration: none; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div>Company Name | Phone | Address | Website</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="gl-contains-social-button">
+<table class="editor-social" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; min-width: 100%;">
+<tbody>
+<tr>
+<td class=" social-container social-container" align="center" style="padding: 0px 20px 10px;">
+<div class="galileo-ap-content-editor" style="">
+<a href="http://r20.rs6.net/tn.jsp?f=0019mb4ASfBTBunAaUSocZU5EW2rWHHl5VLnMIhNisaL76gJlifHqu4EIiyNmVhOy0JuH851Isl3L9160b1_ogmCd6zCx4m7qv3CD0wCw1qIWilEuagHy1K-mi-w4yPuyNxEcy32gsre4SU1wScFzo_xPcgeUp08CHyDR72UCANN98=&c=VjRTyqIlhgLWqxyySSyOPZjR0dMg2TTjZARKnbU3sJJbEnv3zONT3g==&ch=L6irGRqzXWPHN45i-Q7oEKvu-po9mZRmrxkDVkLscPdnnGV_OlVGhw==" style="display: inline-block; text-decoration: none;">
+<img alt="Facebook" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/facebook-visit-default-circle.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=0019mb4ASfBTBunAaUSocZU5EW2rWHHl5VLnMIhNisaL76gJlifHqu4EPLKzcCPqUDF1bLYcbPqnRDvPuI4-bXbQxYDOhyLbKL1OWjIHWFVdGHHT08YMzarJOnWailTljuN1EwKVEtGQ2LBt254I3BfAI0tPmmE-LuH&c=VjRTyqIlhgLWqxyySSyOPZjR0dMg2TTjZARKnbU3sJJbEnv3zONT3g==&ch=L6irGRqzXWPHN45i-Q7oEKvu-po9mZRmrxkDVkLscPdnnGV_OlVGhw==" style="display: inline-block; text-decoration: none;">
+<img alt="Twitter" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/twitter-visit-default-circle.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=0019mb4ASfBTBunAaUSocZU5EW2rWHHl5VLnMIhNisaL76gJlifHqu4EIiyNmVhOy0JDCrIxi9_4ff4NR_Hhn9dBrpcgkgjLlCMV1IKa1fK0f_RQxZ8dQN4p_lVXjSbxzU-cS-pqbfyunlEwgzOO2xtLQ1N9BrHt-jhkm_m4OWk1fc=&c=VjRTyqIlhgLWqxyySSyOPZjR0dMg2TTjZARKnbU3sJJbEnv3zONT3g==&ch=L6irGRqzXWPHN45i-Q7oEKvu-po9mZRmrxkDVkLscPdnnGV_OlVGhw==" style="display: inline-block; text-decoration: none;">
+<img alt="Instagram" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/instagram-visit-default-circle.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=0019mb4ASfBTBunAaUSocZU5EW2rWHHl5VLnMIhNisaL76gJlifHqu4EIiyNmVhOy0J8MBGoZ-mYDxkAOp9jzofpQLwqVP4rI51C8Ii5a9-JekgZeBKKWeoxlqm02_PJ85KrPsSk9G282FPUXCtjzaRCJQuMhwUFOjYjGUGrtMO5Q5Dctcn55GaHw==&c=VjRTyqIlhgLWqxyySSyOPZjR0dMg2TTjZARKnbU3sJJbEnv3zONT3g==&ch=L6irGRqzXWPHN45i-Q7oEKvu-po9mZRmrxkDVkLscPdnnGV_OlVGhw==" style="display: inline-block; text-decoration: none;">
+<img alt="LinkedIn" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/linkedin-visit-default-circle.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=0019mb4ASfBTBunAaUSocZU5EW2rWHHl5VLnMIhNisaL76gJlifHqu4EDS-fgBz01oe1y0vIf9duOrvlCzYapVMz7MoFJtQmUmiMkZYbI5OtJkFTdXZSMXpLEg2Az9apFA8dPF9mHEUisYUsb1ifpU34qHMFclwYOHS5hgFrRQO8YI=&c=VjRTyqIlhgLWqxyySSyOPZjR0dMg2TTjZARKnbU3sJJbEnv3zONT3g==&ch=L6irGRqzXWPHN45i-Q7oEKvu-po9mZRmrxkDVkLscPdnnGV_OlVGhw==" style="display: inline-block; text-decoration: none;">
+<img alt="YouTube" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/youtube-visit-default-circle.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<table class="footer-container" width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff; margin-left: auto; margin-right: auto; table-layout: auto !important" bgcolor="#ffffff">
+  <tr>
+    <td width="100%" align="center" valign="top" style="width: 100%;">
+      <div class="footer-max-main-width" align="center" style="margin-left: auto; margin-right: auto; max-width: 100%;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="footer-layout" align="center" valign="top" style="padding: 16px 0px;">
+              <table class="footer-main-width" style="width: 580px;" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                    
+                    <span class="footer-column">Literary Traveler<span class="footer-mobile-hidden"> | </span></span><span class="footer-column">PO Box 1254<span class="footer-mobile-hidden">, </span></span><span class="footer-column"></span><span class="footer-column"></span><span class="footer-column">West Concord, MA 01742-2968</span><span class="footer-column"></span>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-row" align="center" valign="top" style="padding: 10px 0px;">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          <a href="https://visitor.constantcontact.com/do?p=un&m=001yp30wpRnfPKB3T7lpFyoag%3D&ch=f3943862-98f9-11e9-bbe7-d4ae52754055&ca=d1c6cb7c-f42d-4377-a0e3-53eec2dfd08b" style="color: #5d5d5d"> </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          <a href="https://visitor.constantcontact.com/do?p=oo&m=001yp30wpRnfPKB3T7lpFyoag%3D&ch=f3943862-98f9-11e9-bbe7-d4ae52754055&ca=d1c6cb7c-f42d-4377-a0e3-53eec2dfd08b" style="color: #5d5d5d">Update Profile</a> |
+                          
+                          <a class="footer-about-provider" href="http://www.constantcontact.com/legal/about-constant-contact" style="color: #5d5d5d">About Constant Contact</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          Sent by
+                          
+                          <a href="mailto:francis@literarytraveler.com" style="color: #5d5d5d; text-decoration: none">francis@literarytraveler.com</a>
+                          
+
+                          
+                          
+                          <span class="footer-column">in collaboration with</span>
+                          
+                          
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                    
+                    
+                    <table width="240" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td align="center" valign="top" style="padding: 0px 0px 3px 10px;">
+                          <a href="http://www.constantcontact.com/index.jsp?cc=nge&rmc=VF19_3GE" style="color: #5d5d5d; text-decoration: none">
+                            <img alt="Trusted Email from Constant Contact - Try it FREE today." width="211" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/ui/images1/logo_ctct_2x.png"></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-cta-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 9px;">
+                          <a href="http://www.constantcontact.com/index.jsp?cc=nge&rmc=VF19_3GE" style="color: #5d5d5d; text-decoration: none">Try email marketing for free today!</a>
+                        </td>
+                      </tr>
+                    </table>
+                    
+                    
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table></body>
+</html>

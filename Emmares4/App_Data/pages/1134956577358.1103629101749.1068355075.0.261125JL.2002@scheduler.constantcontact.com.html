@@ -1,0 +1,591 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if gte mso 9]>
+<style id="ol-styles">
+/* OUTLOOK-SPECIFIC STYLES */
+li {
+text-indent: -1em;
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+ul, ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+sup {
+font-size: 85% !important;
+}
+sub {
+font-size: 85% !important;
+}
+</style>
+<![endif]-->
+<style id="template-styles-head" data-premailer="ignore">
+.footer-main-width {
+width: 612px!important;
+max-width: 612px;
+}
+table {
+border-collapse: collapse;
+table-layout: fixed;
+}
+.bgimage {
+table-layout: auto;
+}
+.preheader-container {
+color: transparent;
+display: none;
+font-size: 1px;
+line-height: 1px;
+max-height: 0px;
+max-width: 0px;
+opacity: 0;
+overflow: hidden;
+}
+/* LIST AND p STYLE OVERRIDES */
+.editor-text p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+.editor-text ul,
+.editor-text ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+.editor-text li {
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+/* ==================================================
+CLIENT/BROWSER SPECIFIC OVERRIDES
+================================================== */
+/* IE: correctly scale images with w/h attbs */
+img {
+-ms-interpolation-mode: bicubic;
+}
+/* Text Link Style Reset */
+a {
+text-decoration: underline;
+}
+/* iOS: Autolink styles inherited */
+a[x-apple-data-detectors] {
+text-decoration: underline !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+color: inherit !important;
+}
+/* FF/Chrome: Smooth font rendering */
+.editor-text, .MainTextFullWidth {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+/* Gmail/Web viewport fix */
+u + .body .template-body {
+width: 612px;
+}
+@media only screen and (max-width:480px) {
+u + .body .template-body {
+width: 100% !important;
+}
+}
+/* Office365/Outlook.com image reset */
+[office365] button, [office365] .divider-base div, [office365] .spacer-base div, [office365] .editor-image div { display: block !important; }
+</style>
+<style>@media only screen and (max-width:480px) {
+table {
+border-collapse: collapse;
+}
+.main-width {
+width: 100% !important;
+}
+.mobile-hidden {
+display: none !important;
+}
+td.OneColumnMobile {
+display: block !important;
+}
+.OneColumnMobile {
+width: 100% !important;
+}
+td.editor-col .editor-text {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-button-container {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-social td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .block-margin {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col td.block-margin .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.editor-button td > table tr > td {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-button td > table tr > td td {
+padding: 9px 15px 10px 15px !important;
+}
+.layout {
+padding: 15px 9px 15px 9px !important;
+}
+.layout-container-border {
+padding: 1px 1px 1px 1px !important;
+}
+.layout-container {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-image img {
+width: auto !important; margin-left: auto !important; margin-right: auto !important;
+}
+.editor-image .image-cell {
+padding-bottom: 15px !important;
+}
+.editor-text {
+font-size: 16px !important;
+}
+.editor-divider {
+padding: 10px 0px 10px 0px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.editor-spacer td.spacer-height {
+padding-bottom: 9px !important;
+}
+.section-headline-text {
+font-size: 24px !important;
+}
+.headline-text {
+font-size: 24px !important;
+}
+.subheadline-text {
+font-size: 20px !important;
+}
+.feature {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.layout-outer {
+padding: 0px 20px !important;
+}
+.feature-heading-text {
+font-size: 20px !important;
+}
+.feature-text {
+font-size: 16px !important;
+}
+.split.editor-col {
+margin-top: 0px !important;
+}
+.split.editor-col ~ .split.editor-col {
+margin-top: 10px !important;
+}
+.split-layout-margin {
+padding: 0px 20px !important;
+}
+.article {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.article-heading-text {
+font-size: 20px !important;
+}
+.article-text {
+font-size: 16px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.cpn-heading-text {
+font-size: 28px !important;
+}
+.editor-cpn-heading-text {
+font-size: 28px !important;
+}
+td.col-divided .editor-col {
+border-right: 0px solid #FFFFFF !important; border-bottom: 1px solid #FFFFFF !important;
+}
+td.col-divided td.editor-col:last-of-type {
+border-bottom: 0 !important;
+}
+.col-divided {
+padding: 0 20px !important;
+}
+td.col-divided .editor-col .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .block-margin {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.action-block .poll-answer {
+width: 100% !important; display: block !important;
+}
+.action-block .poll-button {
+width: 100% !important;
+}
+div.MobileFooter {
+font-size: 11px !important;
+}
+td.FooterMobile {
+padding: 0px 10px 0px 10px !important;
+}
+td.MainCenter {
+width: 100% !important;
+}
+table.MainSide {
+display: none !important;
+}
+img.MainSide {
+display: none !important;
+}
+td.MainSide {
+display: none !important;
+}
+.rsvp-button-inner {
+padding: 0px 0px 10px 0px !important;
+}
+.rsvp-button-outer {
+width: 100% !important; max-width: 100% !important;
+}
+.footer-main-width {
+width: 100% !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-column {
+display: block !important;
+}
+.footer-mobile-stack {
+display: block !important;
+}
+.footer-mobile-stack-padding {
+padding-top: 3px;
+}
+}
+@media only screen and (max-width:320px) {
+.layout {
+padding: 0px 0px 0px 0px !important;
+}
+}
+@media screen {
+@font-face {
+font-family: ''; font-style: normal; font-weight: 400; src: local(''), local(''), url() format(''); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+}
+</style>
+</head>
+<body class="body" align="center" style="width: 100%; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #FFFFFF; margin: 0px; padding: 0px;" bgcolor="#FFFFFF">
+<table class="template-body" border="0" cellpadding="0" cellspacing="0" style="text-align: center; min-width: 100%;" width="100%">
+<tr>
+<td class="preheader-container">
+<div>
+<div id="preheader" style="display: none; font-size: 1px; color: transparent; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+<span data-entity-ref="preheader">Movie News, fast</span>
+</div>
+<img src="http://r20.rs6.net/on.jsp?ca=f6dd91de-ff11-41f2-af21-653da73af85d&a=1103629101749&c=02e35956-d6fd-11e9-b48b-d4ae5292c4bc&ch=02e491e0-d6fd-11e9-b48b-d4ae5292c4bc" alt="">
+</div>
+</td>
+</tr>
+<tr>
+<td class="template-shell-container" align="center">
+<div class="bgcolor" style="background-color: #FFFFFF;">
+<table class="bgimage" width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF;" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td align="center">
+<table class="main-width" width="612" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 612px;">
+<tbody>
+<tr>
+<td class="layout" align="center" valign="top" style="padding: 15px 5px;">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="layout-container-border" align="center" valign="top" style="background-color: #FFFFFF; padding: 1px;" bgcolor="#FFFFFF">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF;" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td class="layout-container" align="center" valign="top" style="background-color: #FFFFFF; padding: 0px;" bgcolor="#FFFFFF">
+<div class="">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="editor-logo editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image logo-container" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=00176-8bpOY0Zax5NT68Z9enIlmvbZylAVpIWqgOb_zUjCTgQBqGNPnTvTESDAhTMGQ5BKlDMYI32FOE83C4pB2ySdhBsl7R_nY69wvarVcvO2Hq5VtH2VJUqbJi4Lh4iOvMFhQ1BLeyxwmlSMuXdiszw==&c=CLLYNyc2fHvw_oKc-LTfAWE19ISBg7taTPQSlbCnPQyWNm4Pf4j1iA==&ch=dD_OQ-KY63sI2IIgGqq2-7gpj8nRG2T0fNpH6VgJxgo0PexrHNmqnQ==">
+<img alt="" class="" style="display: block; height: auto; max-width: 100%;" width="258" border="0" hspace="0" vspace="0" src="https://mlsvc01-prod.s3.amazonaws.com/5baab65f001/ae05622d-6563-4aa6-8b0a-d3f85c8fd1c5.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image editor-image  editor-image-vspace-on" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 10px; padding-bottom: 10px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=00176-8bpOY0Zax5NT68Z9enIlmvbZylAVpIWqgOb_zUjCTgQBqGNPnToNOT1HLz5g7u_IhkT6KTlP9WBulqAB2XzP3_VFxGz9qPySotZEo9_JMP62NXFcCWEYSHKxQqMQ6A5geg6ttpRffreYSSzsVPJcwDMTX-8W5kweaeM4mRjkxUn7ZviqHhizUeUfwHqchlUueP9v0qDDfr6OO-VznfbcAxvJ4yP-xUfY_A8nF9-TibMlyOqO9Mp3Xq8JPCZBp6h5iNBh71jY=&c=CLLYNyc2fHvw_oKc-LTfAWE19ISBg7taTPQSlbCnPQyWNm4Pf4j1iA==&ch=dD_OQ-KY63sI2IIgGqq2-7gpj8nRG2T0fNpH6VgJxgo0PexrHNmqnQ==">
+<img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="563" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/d49cfd8a-b94a-4d56-803f-85557f36f081.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-text">
+<table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text editor-text " align="left" valign="top" style="line-height: 1; font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div>
+<span style="font-size: 14px; color: rgb(34, 34, 34);">In today&#x2019;s </span><a href="http://r20.rs6.net/tn.jsp?f=00176-8bpOY0Zax5NT68Z9enIlmvbZylAVpIWqgOb_zUjCTgQBqGNPnToNOT1HLz5g7u_IhkT6KTlP9WBulqAB2XzP3_VFxGz9qPySotZEo9_JMP62NXFcCWEYSHKxQqMQ6A5geg6ttpRffreYSSzsVPJcwDMTX-8W5kweaeM4mRjkxUn7ZviqHhizUeUfwHqchlUueP9v0qDDfr6OO-VznfbcAxvJ4yP-xUfY_A8nF9-TibMlyOqO9Mp3Xq8JPCZBp6h5iNBh71jY=&c=CLLYNyc2fHvw_oKc-LTfAWE19ISBg7taTPQSlbCnPQyWNm4Pf4j1iA==&ch=dD_OQ-KY63sI2IIgGqq2-7gpj8nRG2T0fNpH6VgJxgo0PexrHNmqnQ==" rel="noopener noreferrer" target="_blank" style="font-size: 14px; color: rgb(34, 34, 34); font-weight: normal; font-style: normal; text-decoration: underline;">Movie News Rundown</a><span style="font-size: 14px; color: rgb(34, 34, 34);">: Amy Seimetz is willing to pay for artistic freedom; a new report says the&#xa0;Muppets&#xa0;have a behind-the-scenes gender problem; and Jerry Bruckheimer remembers Sean Connery being very hands-on during&#xa0;The Rock.</span>
+</div>
+<div><br></div>
+<div>
+<span style="font-size: 14px; color: rgb(34, 34, 34); font-weight: bold;">If You&#x2019;re Thinking of Maybe Leaving the Country for Whatever Reason: </span><span style="font-size: 14px; color: rgb(34, 34, 34);">Here's our list of </span><a href="http://r20.rs6.net/tn.jsp?f=00176-8bpOY0Zax5NT68Z9enIlmvbZylAVpIWqgOb_zUjCTgQBqGNPnToNOT1HLz5g7U9cems1GsO9ZI4j2lik5s9hE8dZL6Y6K8cAumuxrzyISqf49wZrfRnM61jX0EMdYlKFv4O8PoLQV1-DLVfWxEXaMIa1DumKE6hAG5Ci2uXAktKzQr14dcYrPF6i7b--L&c=CLLYNyc2fHvw_oKc-LTfAWE19ISBg7taTPQSlbCnPQyWNm4Pf4j1iA==&ch=dD_OQ-KY63sI2IIgGqq2-7gpj8nRG2T0fNpH6VgJxgo0PexrHNmqnQ==" rel="noopener noreferrer" target="_blank" style="font-size: 14px; color: rgb(34, 34, 34); font-weight: normal; font-style: normal; text-decoration: underline;">the five best international film schools by a beach</a><span style="font-size: 14px; color: rgb(34, 34, 34);">.</span>
+</div>
+<div><br></div>
+<div>
+<span style="font-size: 14px; color: rgb(34, 34, 34); font-weight: bold;">Amy Seimetz:</span><span style="font-size: 14px; color: rgb(34, 34, 34);">&#xa0;The&#xa0;</span><span style="font-size: 14px; color: rgb(34, 34, 34); font-style: italic;">She Dies Tomorrow</span><span style="font-size: 14px; color: rgb(34, 34, 34);">&#xa0;writer-director explains on the latest&#xa0;MovieMaker Interviewspodcast that she self-funded her new horror film so she would be free to break genre conventions. The film is about a woman named Amy who is certain she will die in a day.&#xa0;&#x201c;I didn&#x2019;t want to have to answer questions about what it was going to be,&#x201d; she tells Eric Steuer. &#x201c;I was the only person that I was answering to.&#x201d; You can listen on&#xa0;</span><a href="http://r20.rs6.net/tn.jsp?f=00176-8bpOY0Zax5NT68Z9enIlmvbZylAVpIWqgOb_zUjCTgQBqGNPnTjWVyodN1VIq5iHmgmxsxDFjnHu3W18O7FqXEaF7Vg-07-lwRLyaK3D-XrcVQFN8-3xlGj8VXZESnKC92vZPi0iis-of4_hbFCh8CxlB4Hk9EQLAJDn4XwL4R9SGe3BLXdbvIqGA8QcO1Fx0ICvj7oTdNPo9APyTNnQbyh9ZPnDA&c=CLLYNyc2fHvw_oKc-LTfAWE19ISBg7taTPQSlbCnPQyWNm4Pf4j1iA==&ch=dD_OQ-KY63sI2IIgGqq2-7gpj8nRG2T0fNpH6VgJxgo0PexrHNmqnQ==" rel="noopener noreferrer" target="_blank" style="font-size: 14px; color: rgb(0, 119, 238); font-weight: normal; font-style: normal; text-decoration: underline;">Apple</a><span style="font-size: 14px; color: rgb(34, 34, 34);">&#xa0;or&#xa0;</span><a href="http://r20.rs6.net/tn.jsp?f=00176-8bpOY0Zax5NT68Z9enIlmvbZylAVpIWqgOb_zUjCTgQBqGNPnTjWVyodN1VIqXBQhe7lFn7By3c_w4dWFoNgcj-nuBwofSWpAY7yLffhgLdfVHwNGwwjo5Hszppil99i_nZx6cbz0El1CW7D3_LEssUw5hG8BJx9MjkeP5LZ2j3EqCEjXhUnMiavuARZh&c=CLLYNyc2fHvw_oKc-LTfAWE19ISBg7taTPQSlbCnPQyWNm4Pf4j1iA==&ch=dD_OQ-KY63sI2IIgGqq2-7gpj8nRG2T0fNpH6VgJxgo0PexrHNmqnQ==" rel="noopener noreferrer" target="_blank" style="font-size: 14px; color: rgb(0, 119, 238); font-weight: normal; font-style: normal; text-decoration: underline;">Spotify</a><span style="font-size: 14px; color: rgb(34, 34, 34);">&#xa0;or </span><a href="http://r20.rs6.net/tn.jsp?f=00176-8bpOY0Zax5NT68Z9enIlmvbZylAVpIWqgOb_zUjCTgQBqGNPnToNOT1HLz5g7u_IhkT6KTlP9WBulqAB2XzP3_VFxGz9qPySotZEo9_JMP62NXFcCWEYSHKxQqMQ6A5geg6ttpRffreYSSzsVPJcwDMTX-8W5kweaeM4mRjkxUn7ZviqHhizUeUfwHqchlUueP9v0qDDfr6OO-VznfbcAxvJ4yP-xUfY_A8nF9-TibMlyOqO9Mp3Xq8JPCZBp6h5iNBh71jY=&c=CLLYNyc2fHvw_oKc-LTfAWE19ISBg7taTPQSlbCnPQyWNm4Pf4j1iA==&ch=dD_OQ-KY63sI2IIgGqq2-7gpj8nRG2T0fNpH6VgJxgo0PexrHNmqnQ==" rel="noopener noreferrer" target="_blank" style="font-size: 14px; color: rgb(34, 34, 34); font-weight: normal; font-style: normal; text-decoration: underline;">here</a><span style="font-size: 14px; color: rgb(34, 34, 34);">.</span>
+</div>
+<div><br></div>
+<div>
+<span style="font-size: 14px; color: rgb(34, 34, 34); font-weight: bold;">Even Miss Piggy Is Played by a Man:</span><span style="font-size: 14px; color: rgb(34, 34, 34);">&#xa0;I admit I was initially amused at </span><span style="font-size: 14px; color: rgb(34, 34, 34); font-style: italic;">The Hollywood Reporter</span><span style="font-size: 14px; color: rgb(34, 34, 34);">&#xa0;headline &#x201c;Disney&#x2019;s Muppets Problem: Can the Franchise Reckon With Its Boys&#x2019; Club Culture?&#x201d; But the detailed report cites insiders who say it&#x2019;s almost impossible for female Muppets performers to advance...</span>
+</div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-button">
+<table class="editor-button" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; min-width: 100%;">
+<tbody>
+<tr>
+<td class="editor-button-container editor-button-container " style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: normal; color: #FFFFFF; text-decoration: none; padding: 10px 20px;">
+<table class="galileo-ap-content-editor" style="width: 100%; min-width: 100%;">
+<tbody>
+<tr>
+<td align="center" valign="top" class="MainTextFullWidthTD" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: normal; color: #FFFFFF; text-decoration: none; padding: 0px;">
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: rgb(212, 34, 45); width: initial; moz-border-radius: 5px; border-radius: 5px; border-spacing: 0; min-width: initial; padding: 0; border: none;" bgcolor="D4222D">
+<tbody>
+<tr>
+<td align="center" valign="top" class="MainTextFullWidthTD" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: normal; color: #FFFFFF; text-decoration: none; padding: 9px 15px 10px;">
+<div>
+<div class="MainTextFullWidth"><a href="http://r20.rs6.net/tn.jsp?f=00176-8bpOY0Zax5NT68Z9enIlmvbZylAVpIWqgOb_zUjCTgQBqGNPnToNOT1HLz5g7u_IhkT6KTlP9WBulqAB2XzP3_VFxGz9qPySotZEo9_JMP62NXFcCWEYSHKxQqMQ6A5geg6ttpRffreYSSzsVPJcwDMTX-8W5kweaeM4mRjkxUn7ZviqHhizUeUfwHqchlUueP9v0qDDfr6OO-VznfbcAxvJ4yP-xUfY_A8nF9-TibMlyOqO9Mp3Xq8JPCZBp6h5iNBh71jY=&c=CLLYNyc2fHvw_oKc-LTfAWE19ISBg7taTPQSlbCnPQyWNm4Pf4j1iA==&ch=dD_OQ-KY63sI2IIgGqq2-7gpj8nRG2T0fNpH6VgJxgo0PexrHNmqnQ==" style="font-size: 16px; font-family: Verdana, Geneva, sans-serif; font-weight: bold; color: #FFFFFF; text-decoration: none;">Continue</a></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image editor-image  editor-image-vspace-on" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 10px; padding-bottom: 10px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=00176-8bpOY0Zax5NT68Z9enIlmvbZylAVpIWqgOb_zUjCTgQBqGNPnTguNnX1xkz9eQa8vkPe3GJnLEqk2Ru0fLhli_u5qxlTEjSAB4yBD_PrQQWGlOHpDZbWUWJlbbYZUGw1rhajc9xJbfqmShJ6BqPcrwRuGzL3H&c=CLLYNyc2fHvw_oKc-LTfAWE19ISBg7taTPQSlbCnPQyWNm4Pf4j1iA==&ch=dD_OQ-KY63sI2IIgGqq2-7gpj8nRG2T0fNpH6VgJxgo0PexrHNmqnQ==">
+<img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="568" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/3ed05842-542f-4263-81fc-dfd3402ed8aa.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<table class="footer-container" width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff; margin-left: auto; margin-right: auto; table-layout: auto !important" bgcolor="#ffffff">
+  <tr>
+    <td width="100%" align="center" valign="top" style="width: 100%;">
+      <div class="footer-max-main-width" align="center" style="margin-left: auto; margin-right: auto; max-width: 100%;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="footer-layout" align="center" valign="top" style="padding: 16px 0px;">
+              <table class="footer-main-width" style="width: 580px;" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                    
+                    <span class="footer-column">MovieMaker Magazine<span class="footer-mobile-hidden"> | </span></span><span class="footer-column">P.O. Box 91565<span class="footer-mobile-hidden">, </span></span><span class="footer-column"></span><span class="footer-column"></span><span class="footer-column">Long Beach, CA 90809</span><span class="footer-column"></span>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-row" align="center" valign="top" style="padding: 10px 0px;">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          <a href="https://visitor.constantcontact.com/do?p=un&m=0014I3m3feNbThrdAdxd9WN3Q%3D&ch=02e491e0-d6fd-11e9-b48b-d4ae5292c4bc&ca=f6dd91de-ff11-41f2-af21-653da73af85d" style="color: #5d5d5d"> </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          <a href="https://visitor.constantcontact.com/do?p=oo&m=0014I3m3feNbThrdAdxd9WN3Q%3D&ch=02e491e0-d6fd-11e9-b48b-d4ae5292c4bc&ca=f6dd91de-ff11-41f2-af21-653da73af85d" style="color: #5d5d5d">Update Profile</a> |
+                          
+                          <a class="footer-about-provider" href="http://www.constantcontact.com/legal/service-provider?cc=about-service-provider" style="color: #5d5d5d">About our service provider</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          Sent by
+                          
+                          <a href="mailto:assistant@moviemaker.com" style="color: #5d5d5d; text-decoration: none">assistant@moviemaker.com</a>
+                          
+
+                          
+                          
+                          <span class="footer-column">powered by</span>
+                          
+                          
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                    
+                    
+                    <a href="http://www.constantcontact.com/index.jsp?cc=nge&rmc=VF19_3GE" style="color: #5d5d5d; text-decoration: none">
+                    <img alt="Trusted Email from Constant Contact - Try it FREE today." width="160" border="0" hspace="0" vspace="0" src="https://static.ctctcdn.com/letters/images/CTCTFooter/Logo_Blue_Orange.png">
+                    </a>
+                    <div class="footer-cta-text" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 9px; line-height: 2">
+                    <a href="http://www.constantcontact.com/index.jsp?cc=nge&rmc=VF19_3GE" style="color: #5d5d5d; text-decoration: none">Try email marketing for free today!</a>
+                    </div>
+                    
+                    
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table></body>
+</html>

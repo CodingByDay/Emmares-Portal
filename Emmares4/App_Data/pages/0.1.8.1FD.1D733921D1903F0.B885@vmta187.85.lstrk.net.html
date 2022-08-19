@@ -1,0 +1,880 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<!--[if (gte mso 9)|(IE)]><html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"/><![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+			@import url(https://mediacdn.espssl.com/6635/Shared/Fonts/circular-font.css);
+			@import url(https://mediacdn.espssl.com/6635/Shared/Fonts/didot-light-font.css);
+			/* Reset Styles */
+			#outlook a {padding:0;}
+			body {width: 100% !important;-webkit-text-size-adjust: none; -ms-text-size-adjust: none;
+			margin: 0;padding: 0;}
+			.ReadMsgBody {width: 100%;}
+			.ExternalClass {width: 100%;}
+			.backgroundTable {margin: 0 auto;padding: 0;width: 100% !important;}
+			table td {border-collapse: collapse;}
+			.ExternalClass * {line-height: 115%;}
+			th {margin:0 !important; font-weight:normal;}
+			.gmail-fix {display:none; display:none!important;}
+			div, button {vertical-align:top; margin:0}
+			/* Link Fixes */
+			a[x-apple-data-detectors] {color: inherit !important;
+			text-decoration: none !important;font-size: inherit !important;
+			font-family: inherit !important;font-weight: inherit !important;
+			line-height: inherit !important;}
+			/* Custom Fonts */
+			@media screen and (-webkit-min-device-pixel-ratio:0) {
+			/* Webkit styles */
+			.Circular {font-family: 'Circular Book', sans-serif !important;}
+			.DidotLight {font-family: 'Didot Light', serif !important;}
+			}
+			@-moz-document url-prefix() {
+			/* Firefox styles */
+			.Circular {font-family: 'Circular Book', sans-serif !important;}
+			.DidotLight {font-family: 'Didot Light', serif !important;}
+			}
+			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			/* I.E. styles */
+			.Circular {font-family: 'Circular Book', sans-serif !important;}
+			.DidotLight {font-family: 'Didot Light', serif !important;}
+			}
+			/* Mobile Styles */
+			@media only screen and (max-width:480px) {
+			/* General Styles */
+			.container {width: 100% !important;overflow: hidden;}
+			.hide {display: none !important;}
+			.display-ib {display: inline-block;}
+			.display-b {display: block;}
+			.full-width {width: 100%!important; height: auto;}
+			.half-width {width: 48.5%!important; height: auto;}
+			.float-l {float: left;}
+			.float-r {float: right;}
+			.height-auto {height: auto !important;}
+			.stack th {width:100% !important; display:block !important;}
+			/* Images */
+			.full-img img {width: 100% !important;height: auto;}
+			/* Buttons */
+			.full-btn {width: 100% !important;height: auto;border-left: 0 none !important;
+			border-right: 0 none !important;padding-left: 0 !important;padding-right: 0 !important;}
+			/* Text */
+			.center {text-align: center !important;margin: 0 auto;float: none;}
+			.left {text-align: left !important;}
+			.right {text-align:right !important;}
+			.copy-14 {font-size: 14px !important;}
+			.copy-18 {font-size: 18px !important;}
+			.copy-21 {font-size: 21px !important;}
+			.copy-24 {font-size: 24px !important;}
+			/* Borders */
+			.border-t {border-top: 1px solid #000001;}
+			.border-b {border-bottom: 1px solid #000001;}
+			.border-0 {border: 0 none !important;}
+			.border-t-0 {border-top: 0 none !important;}
+			.border-r-0 {border-right: 0 none !important;}
+			.border-b-0 {border-bottom: 0 none !important;}
+			.border-l-0 {border-left: 0 none !important;}
+			.border-r-0 {border-right: 0 none !important;}
+			/* Padding */
+			.pad-lr-0 {padding-left: 0px !important;padding-right: 0px !important;}
+			.pad-lr-10 {padding-left: 10px !important;padding-right: 10px !important;}
+			.pad-lr-20 {padding-left: 20px !important;padding-right: 20px !important;}
+			.pad-0 {padding: 0 !important;}
+			.pad-l-0 {padding-left: 0 !important;}
+			.pad-r-0 {padding-right: 0 !important;}
+			.pad-t-0 {padding-top: 0 !important;}
+			.pad-t-10 {padding-top: 10px !important;}
+			.pad-t-20 {padding-top: 20px !important;}
+			.pad-t-30 {padding-top: 30px !important;}
+			.pad-t-40 {padding-top: 40px !important;}
+			.pad-b-0 {padding-bottom: 0 !important;}
+			.pad-b-10 {padding-bottom: 10px !important;}
+			.pad-b-20 {padding-bottom: 20px !important;}
+			.pad-b-30 {padding-bottom: 30px !important;}
+			/* Mobile Show */
+			.mobile-show, .mobile-show tbody, .mobile-show tr, .mobile-show td {width: 100% !important;
+			max-height: inherit !important;overflow: visible !important;display: block !important;
+			float: none !important;}
+			.mobile-show table {display: table !important;width:100% !important;}
+			.mobile-show tbody {display: table !important;}
+			.mobile-show tr {display: table-row !important;}
+			.mobile-show td {display: table-cell !important;}
+			.mobileShow img {width: 100% !important;height: auto !important;max-height: inherit !important;
+			overflow: visible !important;display: block !important;float: none !important;}
+			/* Footer Nav */
+			.footer-nav, .footer-nav tbody, .footer-nav tr, .footer-nav td {width: 100% !important;max-height: inherit !important;
+			overflow: visible !important;display: block !important;float: none !important;}
+			.footer-nav table {display: table !important;width:100% !important;}
+			.footer-nav tbody {display: table !important;}
+			.footer-nav tr {display: table-row !important;}
+			.footer-nav td {display: table-cell !important;}
+			.footer-nav a {display: block !important;width:100% !important;border-bottom:1px solid #ffffff !important;
+			padding:20px 0 !important;color:#ffffff !important;background-color:#000001 !important;font-size:15px !important;}
+			/* Reset Styles */
+			body {margin:0 auto !important;}
+			div[style*="margin: 16px 0"] {margin:0 auto !important;}
+			/********* SOLUTION STYLES **********/
+			/******* SOLUTION STYLES END ********/
+			/********** CUSTOM STYLES ***********/
+			.width25 {width: 25% !important;}
+			.imageSquish img {width: 100% !important;}
+			.stack th {width: 100% !important;display: block !important;}
+			.footerLogo img{width: 60% !important;height:auto !important;}
+			.preheaderFooter {font-size: 13px !important;line-height: 18px !important;}
+			/******** CUSTOM STYLES END *********/
+			}
+		</style>
+<!--[if gte mso 9]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+</head>
+<body style="zoom: 100%;">
+<table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed;">
+<tbody>
+<tr>
+<td class="pad-0" align="center" style="padding:0 10px;">
+<table class="container" width="700" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center">
+<!-- Main Content -->
+<table class="container" width="700" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="border-t-0 border-r-0 border-l-0" style="padding:15px 0 0; border:1px solid #000001;">
+<!-- Preheader Text -->
+<table class="hide" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td class="pad-t-15 border-0" style="border-bottom:1px solid #c7c8c9; padding-bottom:15px;" align="center">
+<table class="full-width" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="hide" style="font-family:Arial, Helvetica, sans-serif; font-size:9px; color:#666666; text-align:center; line-height:14px;">Shop Xirena, Machete, Margaux, Bembien, Dr. Barbara Sturm &amp; More <br>
+If you are unable to view the images <span style="white-space:nowrap;">in this email <a href="http://enews.shopbazaar.com/q/760MS9awKefam0hJOxAMbt325Aq-D14a4Ys984OIHbb05VbQ-UWFYuTs0" title="View in browser" target="_blank" style="color:#666666;">click here</a>.<br>
+Every item in this email was selected by a ShopBAZAAR editor. We may earn commission on the items you purchase.</span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Preheader Text End -->
+<!-- SHIPPING -->
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="Circular" align="center" style="font-family: Arial, Helvetia, sans-serif; font-size:13px; line-height:14px; color:#ffffff; background-color: #1a171b; text-align:center; padding-top:10px; padding-bottom:10px;">
+Free Ground Shipping on Orders of $150 or More*</td>
+</tr>
+</tbody>
+</table>
+<!-- SHIPPING -->
+<!-- DOUBLE LINE -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" style="padding:0px 0 5px; border-bottom:0px solid #000001;">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="pad-lr-0" style="padding:0px 10px 0px; border-bottom:0px solid #000001;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- DOUBLE LINE END -->
+<!-- Logo Centered -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td class="pad-t-0 pad-b-20 border-b" style="padding:12px 0 15px;" align="center">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="font-family:Arial, Helvetica, sans-serif; font-size:30px; color:#363636; line-height:44px;">
+<a href="http://enews.shopbazaar.com/q/pT-KvE3HE-y0XV6R4Jb3M86az-XqvMG7RWaZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIoR9utDCadLRLZXhp7HBtnr6McbA" title="Shop BAZAAR" target="_blank" style="color:#363636;"><img src="http://media.shopbazaar.com/6635/WELCOME%20SERIES/LOGO_SBZ_dotCOM.png" alt="Shop BAZAAR" style="display: block;" height="56" border="0" width="298"></a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Logo Centered End -->
+<!-- Desktop Nav - DO NOT DELETE -->
+<table class="hide" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td align="center" style="padding:0 20px 0px;">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td align="center" style="font-family: Times, 'Times New Roman', Georgia, serif; font-size:14px; line-height:20px; color:#000001; text-align:center; padding: 0 0px 20px; border-bottom: 1px solid #000001;"><a href="http://enews.shopbazaar.com/q/RuqSWEs9_AQ0XZhp9qNgmrhHwk41WlNDSUmZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIurosoNkGd6sL8day2PCdi7ri5Lg" title="The Edit" target="_blank" style="color:#000001; text-decoration:none;">New Arrivals</a> &nbsp; &nbsp; <a href="http://enews.shopbazaar.com/q/aiHM5Tov8mq0XaUAT0HTHPSgNA1u5WeX4o3ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI8nmGxzAKcYHLFsYpGiisXh_B6hA" title="The Edit" target="_blank" style="color:#000001; text-decoration:none;">The Edit</a> &nbsp; &nbsp; <a href="http://enews.shopbazaar.com/q/00AYIAW6Pwf0XL0QXKapSlpjwVs-IWxRrd1ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI4ci40f3HfqSLdEyWOz1y3LuPLug" title="DESIGNERS" target="_blank" style="color:#000001; text-decoration:none;">Designers</a> &nbsp; &nbsp; <a href="http://enews.shopbazaar.com/q/cJ9fx6gQWHx0XVBCYX4ZmZ6lwopAxU5WXYgZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIHhJfmkbPf47Ld-Ligizz96RwRXQ" title="CLOTHING" target="_blank" style="color:#000001; text-decoration:none;">Clothing</a> &nbsp; &nbsp; <a href="http://enews.shopbazaar.com/q/0uQraKzY5gU0XLwDSK7Av5d81_1ia_IV5xAZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIqJDnZHYFc4mL77RB7-_uPyKqT5Q" title="SHOES" target="_blank" style="color:#000001; text-decoration:none;">Shoes</a> &nbsp; &nbsp; <a href="http://enews.shopbazaar.com/q/6pOphIG3VoP0XzhQ9XOhSJpvaVarhE9sRuQZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIkkeK0iOVeKCL0g6IUj-If2pBEiA" title="BAGS" target="_blank" style="color:#000001; text-decoration:none;">Bags</a> &nbsp; &nbsp; <a href="http://enews.shopbazaar.com/q/QWEixsyK1fL0XUvwDl-wDaQgD4maxZxOK4gZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI0jLt_NYqfKNLZfrZLpOZAjdAx7w" title="JEWELRY" target="_blank" style="color:#000001; text-decoration:none;">Jewelry</a> &nbsp; &nbsp; <a href="http://enews.shopbazaar.com/q/LCBC_kXjK8L0XNCFEkDrjdGG8X0e__lbGIqZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIMX0xcrHQcbwLk9uULXJRYrDN-Mw" title="BEAUTY" target="_blank" style="color:#000001; text-decoration:none;">Beauty &nbsp; &nbsp; </a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Desktop Nav End -->
+<table width="100%" cellpadding="0" align="center" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" class="border-0 pad-0" style="">
+<!-- Hero -->
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="full-img" align="center" style="padding:20px 0px 0px; border-bottom:0px solid #000001"><a href="#" title="The Hero" target="The Hero"><img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_00.jpg" alt="The Hero" width="700" border="0" style="display:block"></a></td>
+</tr>
+</tbody>
+</table>
+<!-- Hero END -->
+<table class="full-width" width="100%" cellpadding="0" align="center" cellspacing="0" border="0" style="width:100%;">
+<tbody>
+<tr>
+<td class="contentPadding pad-lr-20" align="center" style="font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size:14px; line-height:21px; font-weight:400; color:#363636; text-align:center; padding: 10px 80px 20px;">Our latest edit of bestsellers features classic wardrobe and beauty staples everyone should own. Sleek ballet flats, artisan-crafted basket bags, breezy blouses and dresses, skin-boosting vitamin c serums&mdash;shop these spring must-haves you&rsquo;ll reach for again and again. </td>
+</tr>
+</tbody>
+</table>
+<!-- Copy END -->
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Product Recs -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" style="padding:10px 0 0px; border-bottom:0px solid #000001;">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="pad-lr-0" style="padding:0px 10px 5px; border-bottom:0px solid #000001;">
+<!-- Recs: LTK - WELCOME 3 - MED -->
+<table class="full-width" width="676" cellpadding="0" cellspacing="0" border="0" style="width:676px;">
+<tbody>
+<tr>
+<td class="pad-lr-10" style="font-size:0px; padding-bottom:20px;">
+<table class="full-width center" align="left" width="448" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:448px;">
+<tbody>
+<tr>
+<td style="font-size:0px;">
+<table class="full-width center" width="218" align="left" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:218px;">
+<tbody>
+<tr>
+<td class="full-img">
+<!--product1-->
+<a href="http://enews.shopbazaar.com/q/op9uNLqd8ZE0X8BjofQq65oFK5eLNyxb2bZZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIMEA6ZL2Ac70Luw2_BaYTTMjJDOA" target="_blank" title="Product"><img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_01a.gif" width="218" border="0" alt="Product" style="display:block;"></a>
+<!--/product1-->
+</td>
+</tr>
+</tbody>
+</table>
+<table class="full-width center" width="218" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:218px;">
+<tbody>
+<tr>
+<td class="full-img pad-t-20">
+<!--product2-->
+<a href="http://enews.shopbazaar.com/q/h452bA5Yx-o0XAbyF-2Rqf9ra45IbiQZMrvZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOISCP43JBWdZULBcq_bK8a6Ekog-g" target="_blank" title="Product"><img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_02.jpg" width="218" border="0" alt="Product" style="display:block;"></a>
+<!--/product2-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="full-width center" width="218" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:218px;">
+<tbody>
+<tr>
+<td class="full-img pad-t-20">
+<!--product3-->
+<a href="http://enews.shopbazaar.com/q/j8H0LOJdWJZ0XPeiaB_N4VQBhG9lLXQxUU4ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIyjmiFSrLdKjLIoGzjvNg9rMg6oA" title="Product"><img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_03.jpg" width="218" border="0" alt="Product" style="display:block;"></a>
+<!--/product3-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Recs: LTK - WELCOME 3 - MED END -->
+<!-- Recs: LTK - WELCOME 3 - MED -->
+<table class="full-width" width="676" cellpadding="0" cellspacing="0" border="0" style="width:676px;">
+<tbody>
+<tr>
+<td class="pad-lr-10" style="font-size:0px; padding-bottom:20px;">
+<table class="full-width center" align="left" width="448" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:448px;">
+<tbody>
+<tr>
+<td style="font-size:0px;">
+<table class="full-width center" width="218" align="left" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:218px;">
+<tbody>
+<tr>
+<td class="full-img">
+<!--product1-->
+<a href="http://enews.shopbazaar.com/q/i8yRkKnfcof0XSpv7GhDeFcNwRq7kXOEd6bZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIl_D9EpXqdojLHeVkn-lhRVZXz_w" target="_blank" title="Product"><img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_04.jpg" width="218" border="0" alt="Product" style="display:block;"></a>
+<!--/product1-->
+</td>
+</tr>
+</tbody>
+</table>
+<table class="full-width center" width="218" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:218px;">
+<tbody>
+<tr>
+<td class="full-img pad-t-20">
+<!--product2-->
+<a href="http://enews.shopbazaar.com/q/DA4pz3QbPsq0XhgTsWn9I-h52YJjzKVmtr-ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOISdmNNUgCcI0LHZefvc9VWmkvajw" target="_blank" title="Product"><img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_05.gif" width="218" border="0" alt="Product" style="display:block;"></a>
+<!--/product2-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="full-width center" width="218" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:218px;">
+<tbody>
+<tr>
+<td class="full-img pad-t-20">
+<!--product3-->
+<a href="http://enews.shopbazaar.com/q/YXfY5Wi7lk90XqjG1Ls33ajlcVz15yImq5fZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIBSz5oYrzeYCLmJ3aMTCMfGQcv-w" target="_blank" title="Product"><img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_06.jpg" width="218" border="0" alt="Product" style="display:block;"></a>
+<!--/product3-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Recs: LTK - WELCOME 3 - MED END -->
+<!-- Recs: LTK - WELCOME 3 - MED -->
+<table class="full-width" width="676" cellpadding="0" cellspacing="0" border="0" style="width:676px;">
+<tbody>
+<tr>
+<td class="pad-lr-10" style="font-size:0px; padding-bottom:20px;">
+<table class="full-width center" align="left" width="448" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:448px;">
+<tbody>
+<tr>
+<td style="font-size:0px;">
+<table class="full-width center" width="218" align="left" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:218px;">
+<tbody>
+<tr>
+<td class="full-img">
+<!--product1-->
+<a href="http://enews.shopbazaar.com/q/fVWaMybchyO0X7qOPqcyHo301cfwMCnhDUpZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIROPsQGnEfIJLaOkH09KJRLUbg7g" target="_blank" title="Product"><img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_07.jpg" width="218" border="0" alt="Product" style="display:block;"></a>
+<!--/product1-->
+</td>
+</tr>
+</tbody>
+</table>
+<table class="full-width center" width="218" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:218px;">
+<tbody>
+<tr>
+<td class="full-img pad-t-20">
+<!--product2-->
+<a href="http://enews.shopbazaar.com/q/3c_02c4iODC0XfpAxv5FH5Sv6UMR26KLr1oZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIUJfJbUcQeroLSjG-tcU34aVKUyw" target="_blank" title="Product"><img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_08.jpg" width="218" border="0" alt="Product" style="display:block;"></a>
+<!--/product2-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="full-width center" width="218" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:218px;">
+<tbody>
+<tr>
+<td class="full-img pad-t-20">
+<!--product3-->
+<a href="http://enews.shopbazaar.com/q/F-QzXwvPiIi0XEqP41fgnJdXDaUcXGk6F5KZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOID5Ms8lVtc6SLuh7NBFd67hg2QLg" target="_blank" title="Product"><img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_09.gif" width="218" border="0" alt="Product" style="display:block;"></a>
+<!--/product3-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Recs: LTK - WELCOME 3 - MED END -->
+<!-- Recs: LTK - WELCOME 3 - MED -->
+<table class="full-width" width="676" cellpadding="0" cellspacing="0" border="0" style="width:676px;">
+<tbody>
+<tr>
+<td class="pad-lr-10" style="font-size:0px; padding-bottom:0px;">
+<table class="full-width center" align="left" width="448" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:448px;">
+<tbody>
+<tr>
+<td style="font-size:0px;">
+<table class="full-width center" width="218" align="left" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:218px;">
+<tbody>
+<tr>
+<td class="full-img">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Recs: LTK - WELCOME 3 - MED END -->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Product Recs END -->
+<!-- DOUBLE LINE -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" style="padding:20px 0 5px; border-bottom:1px solid #000001;">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="pad-lr-0" style="padding:0px 10px 0px; border-bottom:1px solid #000001;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- DOUBLE LINE END -->
+<!-- Headline -->
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="pad-t-30" align="center" style="font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-style: italic; font-size:14px; line-height:21px; color:#000001; text-align:center; padding-top:25px;">Style FIle </td>
+</tr>
+<tr>
+<td align="center" class="DidotLight pad-lr-20 copy-35" style="font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size:36px; line-height:36px; color:#000001; text-align:center; font-weight:400; text-transform:uppercase; padding-top:10px;">VERSACE FROM THE VAULTS
+</td>
+</tr>
+</tbody>
+</table>
+<!-- HEadline Copy END -->
+<!-- Headline -->
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="contentPadding pad-lr-20" align="center" style="font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size:14px; line-height:21px; font-weight:400; color:#363636; text-align:center; padding: 10px 80px 10px;">Iconic style stands the test of time. Case in point: <strong>Versace</strong>. The revered powerhouse is known for their sultry silhouettes and reimagines their signature prints from vintage collections for the new season.
+</td>
+</tr>
+</tbody>
+</table>
+<!-- HEadline Copy END -->
+<!-- Product Recs -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="left" style="padding:20px 0 5px; border-bottom:0px solid #000001;">
+<table width="100%" align="left" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="pad-lr-0" style="padding:0px 0px 0px; border-bottom:0px solid #000001;">
+<!-- Recs: LTK - WELCOME 3 -->
+<table class="full-width" width="690" cellpadding="0" cellspacing="0" border="0" style="width:690px;">
+<tbody>
+<tr>
+<td class="pad-lr-0" align="left" style="font-size:0px; padding-bottom:10px;">
+<!--Recs: LTK - WELCOME 3 - LG (product 4)-->
+<table class="full-width" width="334" align="left" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:340px;">
+<tbody>
+<tr>
+<td class="full-img" align="left" valign="top">
+<!--product4-->
+<a href="http://enews.shopbazaar.com/q/Fgk4D6-K9oa0XPA8CKjlQ6RU_sSmDgBGk5fZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIz8N-oX3mcJpLQuVttRzzpsM3AfA" target="_blank" title="Product"> <img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_T1_01.jpg" width="340" border="0" alt="Product" style="display:block;"> </a>
+<!--/product4-->
+</td>
+</tr>
+</tbody>
+</table>
+<!--Recs: LTK - WELCOME 3 - LG (product 4) END-->
+<!-- Recs: LTK - WELCOME 3 - SM (products 5-8) -->
+<table class="full-width" width="334" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:334px;">
+<tbody>
+<tr>
+<td class="half-width full-img pad-t-20" align="left" valign="top">
+<!--product6-->
+<a href="http://enews.shopbazaar.com/q/kOcBWNZ5_R90X-fpXNFvmRh1MCyzWsiMy1zZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIaAfBU5jpdauLyfeGu4p0Pc2oEww" target="_blank"> <img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_T1_02.jpg" width="160" height="" border="0" alt="Product" style="display:block;"> </a>
+<!--/product6-->
+</td>
+<td width="10" style="width:10px;"></td>
+<td class="half-width full-img pad-t-20" align="right" valign="top">
+<!--product5-->
+<a href="http://enews.shopbazaar.com/q/rtWNKVpjKPx0X3UCfsxDm86DIT1fKHmW82jZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIfbo_750bf69LkDWPl86-Dh3-5PQ" target="_blank" title="Product"> <img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_T1_03.jpg" width="160" height="" border="0" alt="Product" style="display:block;"> </a>
+<!--/product5-->
+</td>
+</tr>
+<tr>
+<td class="half-width full-img pad-t-20" align="left" valign="top">
+<!--product8-->
+<a href="http://enews.shopbazaar.com/q/uBxyGFDc7sv0X1y-N0pg85Kz7aNDGFLEvDSZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOId2LFRP8fc6fLpnkkvbsvEynVhxw" target="_blank" title="Product"> <img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_T1_04.jpg" width="160" height="" border="0" alt="Product" style="display:block;"> </a>
+<!--/product8-->
+</td>
+<td width="10" style="width:10px;"></td>
+<td class="half-width full-img pad-t-20" align="right" valign="top">
+<!--product7-->
+<a href="http://enews.shopbazaar.com/q/a1rMKBiIX4E0XbOcEmenUFu21qdPKW076zeZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOImTJHjO_YcoILvas7MvmchTZsxRQ" target="_blank" title="Product"> <img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_T1_05.jpg" width="160" height="" border="0" alt="Product" style="display:block;"> </a>
+<!--/product7-->
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Recs: LTK - WELCOME 3 - SM (products 5-8) END -->
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Recs: LTK - WELCOME 3 END -->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Product Recs END -->
+<!-- Button - CTA -->
+<table width="240" align="center" cellpadding="0" cellspacing="0" border="0" style="width:240px;">
+<tbody>
+<tr>
+<td class="height-auto" height="46" align="center" bgcolor="#1a171b" style="font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size:16px;height:46px"><a href="http://enews.shopbazaar.com/q/OJWbrqraFyH0XJODTrBdvUdCtD4nrNYq5f3ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIfIhn1crGfLUL1BJgq7_VS-n6LZQ" title="Shop Now" target="CTA" class="full-btn" style="color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:15px; background-color: #1a171b; border:1px solid #1a171b; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"><strong style="font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shop Versace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></a> </td>
+</tr>
+</tbody>
+</table>
+<!-- Button - CTA END -->
+<!-- Product Recs -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" style="padding:0px 0 25px; border-bottom:0px solid #000001;">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="pad-lr-0" style="padding:0px 12px 5px; border-bottom:0px solid #000001;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Product Recs END -->
+<!-- DOUBLE LINE -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" style="padding:0px 0 5px; border-bottom:1px solid #000001;">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="pad-lr-0" style="padding:0px 10px 0px; border-bottom:1px solid #000001;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- DOUBLE LINE END -->
+<!-- Headline -->
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="pad-t-30" align="center" style="font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-style: italic; font-size:14px; line-height:21px; color:#000001; text-align:center; padding-top:35px;">Editors&rsquo; Picks </td>
+</tr>
+<tr>
+<td class="DidotLight pad-lr-20 copy-35" style="font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size:35px; mso-line-height-rule:exactly; line-height:34px; color:#000001; text-align:center; font-weight:400; text-transform:uppercase; padding-bottom:0px; padding-top:5px;">SUSTAINABLE FASHION
+</td>
+</tr>
+<tr>
+<td class="contentPadding pad-lr-20" align="center" style="font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size:14px; line-height:21px; font-weight:400; color:#363636; text-align:center; padding: 10px 100px 20px;">A sustainable future relies on smart and well-informed purchases and <strong>Another Tomorrow</strong> is making it effortless with their commitment to environmental welfare and uncompromising production standards. Discover the emerging label and shop our editors&rsquo; top picks!</td>
+</tr>
+</tbody>
+</table>
+<!-- Headline END -->
+<!-- Product Recs -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" style="padding:10px 0 5px; border-bottom:0px solid #000001;">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="pad-lr-0" style="padding:0px 10px 5px; border-bottom:0px solid #000001;">
+<!-- Recs: LTK - WELCOME 3 - SM (product 1-4) -->
+<table class="full-width" width="676" cellpadding="0" cellspacing="0" border="0" style="width:px;">
+<tbody>
+<tr>
+<td class="pad-lr-10" style="font-size:0px; padding-bottom:0px;">
+<table class="full-width" width="334" align="left" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:334px;">
+<tbody>
+<tr>
+<td class="half-width full-img" align="left" valign="top">
+<!--product1-->
+<a href="http://enews.shopbazaar.com/q/MOXE0OQo2yy0Xe5_BnSSWahyE_xj0XC8lg8ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIwJUrn2dhe60LAJl6i-IJpmcKWKQ" title="Product" target="_blank"> <img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_T2_01.jpg" width="160" height="" border="0" alt="Product" style="display:block;"> </a>
+<!--/product1-->
+</td>
+<td width="10" style="width:10px;"></td>
+<td class="half-width full-img" align="right" valign="top">
+<!--product2-->
+<a href="http://enews.shopbazaar.com/q/FYdOqVH9rpa0XRN80CMGQWR7B0MHq7_ChsqZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIz7ItQ4i6farLrka0qr9mwg82xLw" target="_blank"> <img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_T2_02.jpg" width="160" height="" border="0" alt="Product" style="display:block;"> </a>
+<!--/product2-->
+</td>
+</tr>
+</tbody>
+</table>
+<table class="full-width" width="334" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:334px;">
+<tbody>
+<tr>
+<td class="half-width full-img pad-t-20" align="left" valign="top">
+<!--product3-->
+<a href="http://enews.shopbazaar.com/q/vGjE4PNIY6G0X6C-zhqs84KeKauK4OXWvebZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI8BXbuSnce5uLN5XN3FAkc1fIW2Q" title="Product" target="_blank"> <img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_T2_03.jpg" width="160" height="" border="0" alt="Product" style="display:block;"> </a>
+<!--/product3-->
+</td>
+<td width="10" style="width:10px;"></td>
+<td class="half-width full-img pad-t-20" align="right" valign="top">
+<!--product4-->
+<a href="http://enews.shopbazaar.com/q/DfiUDqvy_hm0X7VO05-rHG3l3d61D27Df4PZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIxoWXsOnDcLALcB-iBo1HHK8SGlQ" title="Product" target="_blank"> <img src="https://mediacdn.espssl.com/6635/2021_04/0417_Bestsellers_T2_04.jpg" width="160" height="" border="0" alt="Product" style="display:block;"> </a>
+<!--/product4-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Recs: LTK - WELCOME 3 - SM (products 1-4) END-->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Product Recs END -->
+<!-- Button - CTA -->
+<table width="300" align="center" cellpadding="0" cellspacing="0" border="0" style="width:300px;">
+<tbody>
+<tr>
+<td class="height-auto" height="46" align="center" bgcolor="#1a171b" style="font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif; font-size:16px;height:46px"><a href="http://enews.shopbazaar.com/q/Z5o_wWPmLlB0Xzzf8zEcJhKbwq2xwL4n5W6ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIPGkEwW5dep5LKkpYZxZ_8cD5qBg" title="Shop Now" target="CTA" class="full-btn" style="color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:15px; background-color: #1a171b; border:1px solid #1a171b; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"><strong style="font-weight:normal">&nbsp;&nbsp;&nbsp;&nbsp;Shop On AnotherTomorrow.co&nbsp;&nbsp;&nbsp;&nbsp;</strong></a> </td>
+</tr>
+</tbody>
+</table>
+<!-- Button - CTA -->
+<!-- DOUBLE LINE -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" style="padding:0px 0 35px; border-bottom:0px solid #000001;">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="pad-lr-0" style="padding:0px 10px 0px; border-bottom:0px solid #000001;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- DOUBLE LINE END -->
+<!-- Hero -->
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="full-img" align="center" style="padding:0px 0px 0px; border-bottom:0px solid #000001"><a href="http://enews.shopbazaar.com/q/ZzUKaLVtSvo0XUIHVl0GPbLu-47yajgSmWWZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOITgdQDkk5f44LCWs-HdWpI2UwEUg" title="The Hero" target="The Hero"><img src="https://mediacdn.espssl.com/6635/2020_06/Bannerb.jpg" alt="The Hero" width="700" border="0" style="display:block"></a></td>
+</tr>
+</tbody>
+</table>
+<!-- Hero END -->
+<!-- HIDDEN Mobile Nav -->
+<table class="mobile-show pad-t-20 pad-b-10" style="width:0; max-height:0; overflow:hidden; display:none; float:left;" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr style="mso-hide:all; width:0; max-height:0; overflow:hidden; display:none; float:left;">
+<td class="footer-nav" bgcolor="#000001" style="width:0; max-height:0; overflow:hidden; display:none; float:left; font-family: Times, 'Times New Roman', Georgia, serif; color:#ffffff; text-align:center;"><a href="http://enews.shopbazaar.com/q/5nFQibqjLOC0Xo8hiQmo195R9tqFij7xDy2ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIQZ-JQx-yc4_L1CeMm95o3BkOciw" title="New Arrivals" target="_blank" style="color:#000001; text-decoration:none;">New Arrivals</a><a href="http://enews.shopbazaar.com/q/buP75EIpIsF0XvYsDEbCW8jR2PYd5cJYGbOZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIhCmpGCW6eZVLyaVg8e5EozYYqqw" title="The Edit" target="_blank" style="color:#000001; text-decoration:none;">The Edit</a> <a href="http://enews.shopbazaar.com/q/JgxchFidPNL0XJ1x9OODY1Rt-yhthjTMP7RZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI-5AOsXG3dYoLhDQgk4Reps_mTDA" title="DESIGNERS" target="_blank" style="color:#000001; text-decoration:none;">Designers</a> <a href="http://enews.shopbazaar.com/q/sV2M0WBLshO0XMhtARCMwdPHvWGh0yC3rc4ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIKCrkCWqof42LfJfL3MVzoAiop5g" title="CLOTHING" target="_blank" style="color:#000001; text-decoration:none;">Clothing</a> <a href="http://enews.shopbazaar.com/q/gTm0UeLe4HT0XrHnwegRt_iLWXbOUkPSgItZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIOFrogAWQd6OL3J-zpIBw1pjpZ6g" title="SHOES" target="_blank" style="color:#000001; text-decoration:none;">Shoes</a> <a href="http://enews.shopbazaar.com/q/bLJgrKWEVcb0X2-78Z2dHxJIPugrrpRxWN4ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI3uu-bj1Lf5nLtW6AAwMmiaNzovA" title="BAGS" target="_blank" style="color:#000001; text-decoration:none;">Bags</a> <a href="http://enews.shopbazaar.com/q/rVm29w947nS0XvbOzOUnHU3HJ_er9F4wDkPZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIIby6nRVBcakLjjOhyh6aq4iO_uA" title="JEWELRY" target="_blank" style="color:#000001; text-decoration:none;">Jewelry</a><a href="http://enews.shopbazaar.com/q/IEWyEPnEAYn0XFHWiJYoK5_BNxIVELXmyTOZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI8L4i1mUudYuLdAcqg9BDinfK9IA" title="BEAUTY" target="_blank" style="color:#000001; text-decoration:none;">Beauty</a></td>
+</tr>
+</tbody>
+</table>
+<!-- HIDDEN Mobile Nav END -->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Main Content END -->
+<!-- Footer Section -->
+<!-- Secondary Nav -->
+<table class="full-width" width="700" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="pad-t-10" align="center">
+<table class="stack" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<th class="pad-l-0 pad-r-0 pad-t-10 pad-b-10" style="font-family: Times, 'Times New Roman', Georgia, serif; font-size:14px; line-height:20px; color:#000001; text-align:center; font-style:italic; padding: 20px 40px;"><a href="http://enews.shopbazaar.com/q/j3qWivgonvE0XuIOu7JAHR3gyQIZiXge356ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIuU4RBrlKeLxLXR5md0CoUibtNEw" title="My Account" target="_blank" style="color:#000001; text-decoration:none;">My Account</a></th>
+<th class="pad-l-0 pad-r-0 pad-t-10 pad-b-10" style="font-family: Times, 'Times New Roman', Georgia, serif; font-size:14px; line-height:20px; color:#000001; text-align:center; font-style:italic; padding: 20px 40px;"><a href="http://enews.shopbazaar.com/q/wax2LnnnzbC0XNdAIynSHxSjoaH_LhQxCtkZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIG4hBzJ88fK5LH2vuNJFqS4BmLQw" title="Customer Service" target="_blank" style="color:#000001; text-decoration:none;">Customer Service</a></th>
+<th class="pad-l-0 pad-r-0 pad-t-10 pad-b-10" style="font-family: Times, 'Times New Roman', Georgia, serif; font-size:14px; line-height:20px; color:#000001; text-align:center; font-style:italic; padding: 20px 40px;"><a href="http://enews.shopbazaar.com/q/qBNSP4_4Yi80XBiU_MJV-2FNE1MSPSjSFvXZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIiKGxMPE_fZWLzFK_5cVCi7Iqisw" title="About Us" target="_blank" style="color:#000001; text-decoration:none;">About Us</a></th>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Secondary Nav END -->
+<!-- Logo Centered -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td class="pad-t-0 pad-b-20 border-b" style="padding:12px 0 15px;" align="center">
+<table align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="font-family:Arial, Helvetica, sans-serif; font-size:30px; color:#363636; line-height:44px;">
+<a href="http://enews.shopbazaar.com/q/q3y_hYygkJM0XuJkDu1R8oYILTQHhrhH13BZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIrga6l3gCc4cLTClvkwKl3D6wFuA" title="Shop BAZAAR" target="_blank" style="color:#363636;"><img src="http://media.shopbazaar.com/6635/WELCOME%20SERIES/LOGO_SBZ_dotCOM.png" alt="Shop BAZAAR" style="display: block;" height="56" border="0" width="298"></a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Logo Centered End -->
+<!-- Headline -->
+<table class="full-width" width="700" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="font-family: Times, 'Times New Roman', Georgia, serif; font-size:14px; line-height:20px; color:#000001; text-align:center; font-style:italic; padding-bottom:15px;">Follow Us</td>
+</tr>
+</tbody>
+</table>
+<!-- Headline END -->
+<!-- Social -->
+<table class="full-width" width="700" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td align="center" style="padding-bottom:20px;">
+<table class="stack" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<th class="pad-l-0 pad-r-0 pad-t-10 pad-b-10" align="center" style="font-family: Times, 'Times New Roman', Georgia, serif; font-size:14px; line-height:20px; color:#000001; font-style:italic; padding: 0 12px;">
+<a href="http://enews.shopbazaar.com/q/k-iha3xuLyg0XIP5bOYZzplC6uv_aYG7UpwZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIn83mBOERdJpLKPJ1tk-v9M53O5A" title="INSTAGRAM" target="_blank"><img src="http://media.shopbazaar.com/6635/Shared/ResponTemplate/instagram.png" alt="INSTAGRAM" style="display: block;" height="20" border="0" width="94"></a>
+</th>
+<th class="pad-l-0 pad-r-0 pad-t-10 pad-b-10" align="center" style="font-family: Times, 'Times New Roman', Georgia, serif; font-size:14px; line-height:20px; color:#000001; font-style:italic; padding: 0 12px;">
+<a href="http://enews.shopbazaar.com/q/guO-FjnIVku0XsZFsAryjEGCU2yKFoZbklzZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIly9ODIfbcZtL4C3MCqHbvBpUsTA" title="FACEBOOK" target="_blank"><img src="http://media.shopbazaar.com/6635/Shared/ResponTemplate/facebook.png" alt="FACEBOOK" style="display: block;" height="20" border="0" width="86"></a>
+</th>
+<th class="pad-l-0 pad-r-0 pad-t-10 pad-b-10" align="center" style="font-family: Times, 'Times New Roman', Georgia, serif; font-size:14px; line-height:20px; color:#000001; font-style:italic; padding: 0 12px;">
+<a href="http://enews.shopbazaar.com/q/aaVLVLIEUYd0Xw5WXHMWKU_zcCRmVxQOOyQZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOImOnm6okNfqpLRCQ-zyTAAbprq5A" title="PINTEREST" target="_blank"><img src="http://media.shopbazaar.com/6635/Shared/ResponTemplate/pinterest.png" alt="PINTEREST" style="display: block;" height="20" border="0" width="88"></a>
+</th>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Social END -->
+<!-- Footer -->
+<table class="footer full-width" border="0" cellpadding="0" cellspacing="0" width="700">
+<tbody>
+<tr>
+<td class="preheaderFooter pad-lr-10" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:14px; color:#363636; padding:20px 0; text-align:center;">
+<br>
+* Free shipping is automatically applied at checkout. Valid on orders shipping within the U.S. only.<br>
+<br>
+&copy; 2021 Hearst Communications, Inc.
+<br>
+All Rights Reserved
+<br>
+300 W 57th St., Fl. 19 (sta 1-1) New York,&nbsp;NY&nbsp;10019
+<br>
+<br>
+To ensure that you receive our emails in your inbox, add <a href="mailto:info@email.shop.harpersbazaar.com" target="_blank" style="color:#363636; text-decoration: none;">info@email.shop.harpersbazaar.com</a> to your address book.
+<br>
+This email was sent to <a href="mailto:" target="_blank" style="color:#363636; text-decoration: none;"></a>. <span style="white-space:nowrap;"> Read our complete <a href="http://enews.shopbazaar.com/q/yxb7SOyCRk90XatG0TeC3hjStVHESvIsSnAZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIJqiTAlM7e7NL0vldsTs0zgSSrkQ" title="privacy policy" target="_blank" style="color:#363636;">privacy policy</a>. </span>
+<br>
+<br>
+<a href="http://enews.shopbazaar.com/q/-TC8wSWXMPUWu8ZzOnyAmAce48zO88HWsG-GCt4YSWqCCrmBKr3-GOVE8" title=" 
+<!-- MOBILE Browser Link -->
+<table class="mobileShow mobileAlignCenter full-width" style="width:0; max-height:0; overflow:hidden; display:none; float:left;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr style="width:0; max-height:0; overflow:hidden; display:none; float:left;">
+<td class="pad-t-20" style="width:0; max-height:0; overflow:hidden; display:none; float:left;" align="center"><a href="http://enews.shopbazaar.com/q/J3rsiu3StvE3f6WX3VRVbdG7T9L0E1p3gL1U5LCSH3WrqYbQJJSzueJN6" title="View in browser" target="_blank" style="color:#00a2e4;">View in browser</a></td>
+</tr>
+</tbody>
+</table>
+<!-- MOBILE Browser Link END -->
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Footer End-->
+<!-- Footer Section END -->
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Gmail Fix-->
+<table class="hide gmail-fix" width="700" align="center" cellpadding="0" cellspacing="0" border="0" style=" width:700px; min-width:700px; max-width:700px;">
+<tbody>
+<tr>
+<td><img src="http://mediacdn.espssl.com/1/Shared/2014/LCS/Boilerplate/spacer.gif" width="700" height="20" border="0" style="display: block; min-width: 700px; max-width: 700px;"></td>
+</tr>
+</tbody>
+</table>
+<div class="gmail-fix" style="white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+<!-- Gmail Fix END -->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<img src="http://enews.shopbazaar.com/q/aUb_UeYga4TRMHx8a9kALamrB9UWOgCLZ0" alt="" width="20" height="1"></body>
+</html>
+

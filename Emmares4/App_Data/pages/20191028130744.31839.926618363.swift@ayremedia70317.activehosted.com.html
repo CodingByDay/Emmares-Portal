@@ -1,0 +1,1503 @@
+﻿<!DOCTYPE html><html>
+
+<head>
+    <meta charset="utf-8"><!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width">
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Use the latest (edge) version of IE rendering engine -->
+	<meta name="x-apple-disable-message-reformatting">
+	<!-- Disable auto-scale in iOS 10 Mail entirely -->
+	
+	<!-- The title tag shows in email notifications, like Android 4.4. -->
+
+	<!-- Web Font / @font-face : BEGIN -->
+	<!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+	<!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+	<!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+	<!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+	<!--[if !mso]><!-->
+	<!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+	<!--<![endif]-->
+
+	<!-- Web Font / @font-face : END -->
+
+	<!-- CSS Reset : BEGIN -->
+	<style>
+		/* What it does: Remove spaces around the email design added by some email clients. */
+
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+
+		html,
+		body {
+			margin: 0 auto !important;
+			padding: 0 !important;
+			height: 100% !important;
+			width: 100% !important;
+		}
+
+		/* What it does: Stops email clients resizing small text. */
+
+		* {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+
+		/* What it does: Centers email on Android 4.4 */
+
+		div[style*="margin: 16px 0"] {
+			margin: 0 !important;
+		}
+
+		/* What it does: Stops Outlook from adding extra spacing to tables. */
+
+		table,
+		td {
+			mso-table-lspace: 0pt !important;
+			mso-table-rspace: 0pt !important;
+		}
+
+		/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+
+		table {
+			border-spacing: 0 !important;
+			border-collapse: collapse !important;
+			table-layout: fixed !important;
+			margin: 0 auto !important;
+		}
+
+		table table table {
+			table-layout: auto;
+		}
+
+		/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+
+		a {
+			text-decoration: none;
+		}
+
+		/* What it does: Uses a better rendering method when resizing images in IE. */
+
+		img {
+			-ms-interpolation-mode: bicubic;
+		}
+
+		p{
+			margin: 0px;
+			padding: 0px;
+		}
+		/* What it does: A work-around for email clients meddling in triggered links. */
+
+		*[x-apple-data-detectors],
+		/* iOS */
+
+		.unstyle-auto-detected-links *,
+		.aBn {
+			border-bottom: 0 !important;
+			cursor: default !important;
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+		}
+
+		/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+
+		.a6S {
+			display: none !important;
+			opacity: 0.01 !important;
+		}
+
+		/* If the above doesn't work, add a .g-img class to any image in question. */
+
+		img.g-img+div {
+			display: none !important;
+		}
+
+		/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+
+		/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+		/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+
+		@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+			.email-container {
+				min-width: 320px !important;
+			}
+		}
+
+		/* iPhone 6, 6S, 7, 8, and X */
+
+		@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+			.email-container {
+				min-width: 375px !important;
+			}
+		}
+
+		/* iPhone 6+, 7+, and 8+ */
+
+		@media only screen and (min-device-width: 414px) {
+			.email-container {
+				min-width: 414px !important;
+			}
+		}
+	</style>
+	<!-- CSS Reset : END -->
+	<!-- Reset list spacing because Outlook ignores much of our inline CSS. -->
+	<!--[if mso]>
+	<style type="text/css">
+		ul,
+		ol {
+			margin: 0 !important;
+		}
+		li {
+			margin-left: 30px !important;
+		}
+		li.list-item-first {
+			margin-top: 0 !important;
+		}
+		li.list-item-last {
+			margin-bottom: 10px !important;
+		}
+	</style>
+	<![endif]-->
+
+	<!-- Progressive Enhancements : BEGIN -->
+	<style>
+		/* What it does: Hover styles for buttons */
+
+		.button-td,
+		.button-a {
+			transition: all 100ms ease-in;
+		}
+
+		.button-td-primary:hover,
+		.button-a-primary:hover {
+			background: #03224b !important;
+			border-color: #032c63 !important;
+		}
+
+		.mrightcenter {
+			margin-right: 0px !important;
+		}
+		.casinobg{ background-color: #e9d666; }
+		.businessbg{ background-color: #adb0d8; }
+		.pokerbg{ background-color: #B7AFA8; }
+		.sportsbg{ background-color: #469e92;}
+		.bitcoinbg{ background-color: #7af5f5; }
+		.conferencesbg{ background-color: #7da6d8; }
+
+		/* Media Queries */
+
+		@media screen and (max-width: 600px) {
+
+			.email-container {
+				width: 100% !important;
+				margin: auto !important;
+			}
+
+			/* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+			.fluid {
+				max-width: 100% !important;
+				height: auto !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+
+			/* What it does: Forces table cells into full-width rows. */
+			.stack-column,
+			.stack-column-center {
+				display: block !important;
+				width: 100% !important;
+				max-width: 100% !important;
+				direction: ltr !important;
+			}
+			/* And center justify these ones. */
+			.stack-column-center {
+				text-align: center !important;
+			}
+
+			/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+			.center-on-narrow {
+				text-align: center !important;
+				display: block !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+				float: none !important;
+			}
+			table.center-on-narrow {
+				display: inline-block !important;
+			}
+
+			/* What it does: Adjust typography on small screens to improve readability */
+			.email-container p {
+				font-size: 13px !important;
+				line-height: 120% !important;
+			}
+			.mrightcenter {
+				margin-right: auto !important;
+			}
+			.nopaddingmobile-h{ padding-left: 0px !important; padding-right: 0px !important;}
+			.fullwidthmobile{ width: 100% !important;}
+			.width65{ width: 65% !important;}
+			.padding10v-mobile{ padding-top: 10px; padding-bottom: 10px;}
+		}
+	</style>
+	<!-- Progressive Enhancements : END -->
+
+	<!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+	<!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+</head>
+<!--
+	The email background color (#222222) is defined in three places:
+	1. body tag: for most email clients
+	2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+	3. mso conditional: For Windows 10 Mail
+-->
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #ffffff;" bgcolor="#ffffff">
+	<center style="width: 100%; background-color: #ffffff;">
+		<!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;">
+    <tr>
+    <td>
+    <![endif]-->
+
+		<!-- Visually Hidden Prehea Text : BEGIN -->
+		<div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">Philippine conglomerate Belle Corp. reported that the 50% decline in its lottery sales was a huge factor in the third quarter dip in its profits.</div>
+
+		<!-- Visually Hidden Preheader Text : END -->
+
+		<!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+		<!-- Preview Text Spacing Hack : BEGIN -->
+		<div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+		</div>
+
+		<!-- Preview Text Spacing Hack : END -->
+		<!-- Full Bleed Background Section : BEGIN -->
+		<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #251f21; margin-bottom: 20px !important;">
+			<tr>
+				<td valign="top">
+					<div style="max-width: 600px; margin: auto;" class="email-container">
+						<!--[if mso]>
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+						<tr>
+						<td>
+						<![endif]-->
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" align="center" valign="top">
+							<tr valign="middle">
+								<!-- Column : BEGIN -->
+								<td width="43%" class="stack-column-center">
+									<table role="presentation" cellspacing="0" cellpadding="0" border="0">
+										<tr>
+											<td style="text-align: center" class="padding10v-mobile">
+													<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4634">
+												<img src="https://calvinayre.com/wp-content/uploads/2017/04/logo_CA.jpg" width="250" alt="CalvinAyreNews" border="0" class="fluid" style="height: auto; font-family: sans-serif; font-size: 13px; line-height: 15px; color: #555555;"></a>
+											</td>
+
+										</tr>
+
+									</table>
+
+								</td>
+
+								<!-- Column : END -->
+								<!-- Column : BEGIN -->
+								<td width="57%" class="stack-column-center" style="padding: 10px 0 10px 0;">
+									<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="padding: 10px 0 10px 0;">
+										<tr>
+										  <td style="font-family: sans-serif; font-size: 11px; line-height: 13px; color: #ffffff; padding: 0 10px 10px; text-align: right;" class="center-on-narrow">
+											  <img border="0" src="https://calvinayre.com/wp-content/uploads/2017/04/ls.png" width="13">Keep your head up in failure, <br>
+and your head down in success.<img border="0" src="https://calvinayre.com/wp-content/uploads/2017/04/rs.png" width="13">
+												<br>
+												<span style="font-size:13px; line-height: 20px;">
+													<em>&#8212;Jerry Seinfeld</em>
+												</span>
+										  </td>
+
+										</tr>
+
+									</table>
+
+								</td>
+
+								<!-- Column : END -->
+							</tr>
+
+						</table>
+
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<!-- Column : BEGIN -->
+								<td width="50%" class="stack-column-center">
+									<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+										<tr>
+											<td style="font-family: sans-serif; font-size: 13px; line-height: 20px; color: #e7e7e7; padding: 0 10px 10px; text-align: left;" class="center-on-narrow"><p>28th October 2019</p>
+</td>
+
+										</tr>
+
+									</table>
+
+								</td>
+
+								<!-- Column : END -->
+								<!-- Column : BEGIN -->
+								<td width="50%" class="stack-column-center">
+									<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+										<tr>
+											<td width="32%" class="stack-column-center" style="color: #251f21;"> &nbsp; CalvinAyre Newsletter </td>
+
+											<td class="stack-column-center">
+												<!-- Button : BEGIN -->
+												<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+													<tr>
+														<td class="stack-column-center" style="background: #ffffff;">
+															<table align="center" valign="middle" role="presentation" cellspacing="0" cellpadding="0" border="0" style="background: #ffffff; border: 1px solid #ffffff; font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; padding: 10px 14px; color: #0379bd; display: block;">
+																<tr>
+																	<td style="background: #ffffff;">
+																		SHARE THIS &nbsp;
+																	  <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4670" target="_blank">
+																			<img border="0" src="https://calvinayre.com/wp-content/uploads/2017/05/fsn.jpg" align="top" width="15">
+																	  </a>&nbsp;
+																	  <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4671" target="_blank">
+																			<img border="0" src="https://calvinayre.com/wp-content/uploads/2017/05/tsn2.jpg" align="top" width="15">
+																	  </a>&nbsp;
+																	  <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4672" target="_blank">
+																			<img border="0" src="https://calvinayre.com/wp-content/uploads/2017/05/lisn.jpg" align="top" width="15">
+																	  </a>
+
+																	</td>
+
+																</tr>
+
+															</table>
+
+
+														</td>
+
+													</tr>
+
+												</table>
+
+												<!-- Button : END -->
+											</td>
+
+										</tr>
+
+									</table>
+
+								</td>
+
+								<!-- Column : END -->
+							</tr>
+
+						</table>
+
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-top: 2px solid #888888; margin-top: 5px !important;">
+
+							<tr>
+								<td style="padding: 5px 0 0 0; text-align: center">
+									<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+										<tr>
+											<td style="background: #fff;">
+												<table align="center" valign="middle" role="presentation" cellspacing="0" cellpadding="0" border="0" style="background: #fff; border: 1px solid #fff; font-family: sans-serif; font-size: 14px; line-height: 15px; text-decoration: none; padding: 10px 14px; color: #0379bd; display: block; font-weight: bold;">
+													<tr>
+														<td style="background: #fff;"><a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4638" target="_blank" style="color: #0379bd;">INVITE FRIENDS</a></td>
+
+													</tr>
+
+												</table>
+
+											</td>
+
+										</tr>
+
+									</table>
+
+								</td>
+
+							</tr>
+
+
+						</table>
+
+						<!--[if mso]>
+						</td>
+
+						</tr>
+
+						</table>
+
+						<![endif]-->
+					</div>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+		<!-- Full Bleed Background Section : END -->
+		<!-- Email Body : BEGIN -->
+		<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: 0 auto; background-color: #ffffff;" class="email-container">
+			<!-- Background Image with Text : BEGIN -->
+			<tr>
+				<!-- Bulletproof Background Images c/o https://backgrounds.cm -->	
+				<td><a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4673"><img src="https://calvinayre.com/wp-content/uploads/2019/10/belle-corp-posts-23-percent-loss-in-profit-for-third-quarter-feat.jpg" alt="Belle Corp posts 23 percent loss in profit for third quarter" refused"="" request="" to="" cash="" out"="" usemap="#Map1" style="width:100%;" border="0"></a>
+				</td>
+
+			</tr>
+
+			<!-- Background Image with Text : END -->
+			<!-- Clear Spacer : BEGIN -->
+			<tr>
+				<td aria-hidden="true" height="20" style="font-size: 0px; line-height: 0px;">v
+					
+				</td>
+
+			</tr>
+
+			<!-- Clear Spacer : END -->
+			<tr>
+				<td style="font-family: sans-serif; font-size: 14px; line-height: 20px; color: #555555; text-align: left;" class="stack-column-center" colspan="">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+						<tr>
+
+							<!-- Column : BEGIN -->
+							<td height="20" class="stack-column-center" style="margin-left: 10px;">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+									<tr>
+										<td style="background: #251f21;">
+											<table align="center" valign="middle" role="presentation" cellspacing="0" cellpadding="0" border="0" style="background: #251f21; border: 1px solid #251f21; font-family: sans-serif; font-size: 14px; line-height: 15px; text-decoration: none; padding: 10px 14px; color: #ffffff; display: block; font-weight: bold;">
+												<tr>
+													<td style="background: #251f21;">Down and out</td>
+
+												</tr>
+
+											</table>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+						  <td class="stack-column-center">&nbsp;</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+
+			<!-- 1 Column Text + Button : BEGIN -->
+			<tr>
+				<td style="background-color: #ffffff;">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+						<tr>
+							<td style="padding: 20px 20px 0 20px; font-family: sans-serif; font-size: 13px; line-height: 20px; color: #555555;">
+								<h2 style="margin: 0 0 10px; font-size: 13px; line-height: 130%; color: #333333; font-weight: bold;">The Story</h2>
+								<p>The Philippine conglomerate Belle Corporation announced that their profits for the third quarter has decreased by 22.9% from the same period in 2018. This meant the company was only able to post profits of PHP454.3 million compared to PHP589.3 million from Q3 last year. Aside from the Q3 decline, the company also gave another bad news to its investors: overall revenues for the first nine months of this year have declined 11% compared to the same period in 2018. Belle Corp pinpoints the decline of its lottery sales as the cause of the third quarter revenue dip.
+
+</p>
+
+<p style="margin: 0 0 10px;">&nbsp;</p>
+
+							</td>
+
+						</tr>
+
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			<!-- 1 Column Text + Button : END -->			
+			<!-- Banners : BEGIN -->
+			<tr>
+				<td style="padding: 20px 0; text-align: center">
+					<center>
+					  <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4640" target="_blank"><img src="http://calvinayre.com/wp-content/uploads/2015/10/Venture-Capital-Newsletter.gif" width="234" height="68" border="0">
+					  </a> &nbsp;
+						<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4641" target="_blank"><img border="0" src="https://calvinayre.com/wp-content/uploads/2019/07/buyBSV_234x68.jpg" width="234"></a>
+					</center>
+				</td>
+
+			</tr>
+
+			<!-- Banners : END -->
+			<!-- Thumbnail Left, Text Right : BEGIN -->
+			<tr>
+				<td style="font-family: sans-serif; font-size: 14px; line-height: 20px; color: #555555; text-align: left;" class="stack-column-center" colspan="">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+						<tr>
+
+							<!-- Column : BEGIN -->
+							<td class="stack-column-center" style="margin-left: 10px;">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+									<tr>
+										<td style="background: #251f21;">
+											<table align="center" valign="middle" role="presentation" cellspacing="0" cellpadding="0" border="0" style="background: #251f21; border: 1px solid #251f21; font-family: sans-serif; font-size: 14px; line-height: 15px; text-decoration: none; padding: 10px 14px; color: #ffffff; display: block; font-weight: bold;">
+												<tr>
+													<td style="background: #251f21; text-transform: uppercase;">FROM COINGEEK.COM</td>
+
+												</tr>
+
+											</table>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td class="stack-column-center">&nbsp;</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			<tr>
+				<td dir="ltr" valign="top" width="100%" style="padding: 10px; background-color: #ffffff;">
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<!-- Column : BEGIN -->
+							<td width="33.33%" class="stack-column-center">
+								<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+									<tr>
+										<td dir="ltr" valign="top" style="padding: 0 10px;"><img src="https://calvinayre.com/wp-content/uploads/2019/10/bahamas-central-bank-moves-forward-on-digital-currency-plans.jpg" width="170" height="170" alt="Bahamas central bank moves forward on digital currency plans" border="0" class="center-on-narrow" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 14px; line-height: 15px; color: #555555;">
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td width="66.66%" class="stack-column-center">
+								<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+									<tr>
+									  <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 13px; line-height: 20px; color: #555555; padding: 10px; text-align: left;" class="center-on-narrow">
+											<h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 13px; line-height: 22px; color: #333333; font-weight: bold;"><a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4674" target="_blank" style="text-decoration: none; color: #333333;"><strong>Bahamas central bank moves forward on digital currency plans</strong></a></h2>
+											<p style="margin: 0 0 10px 0;">The onslaught of a recent hurricane has destroyed Bahamas’ banking system, pushing the country’s Central Bank to fast-track its cryptocurrency development.
+
+
+
+
+ 
+</p>
+
+											<!-- Button : BEGIN -->
+											<table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
+												<tr>
+													<td class="button-td button-td-primary" style="border-radius: 4px; background: #0379bd;">
+														<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4674" target="_blank" class="button-a button-a-primary" style="background: #0379bd; border: 1px solid #0379bd; font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; padding: 8px 13px; color: #ffffff; display: block; border-radius: 4px;">Read More</a>
+													</td>
+
+												</tr>
+
+											</table>
+
+											<!-- Button : END -->
+									  </td>
+
+									</tr>
+
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			<!-- Thumbnail Left, Text Right : END -->
+			
+		  <!-- Banners : BEGIN -->
+			<tr>
+				<td style="padding: 20px 0; text-align: center">
+					<center>
+						 <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4643" target="_blank"><img border="0" src="https://calvinayre.com/wp-content/uploads/2019/09/Sports-Betting-USA_234x68.jpg" width="234"></a>
+						&nbsp;
+					  <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4644" target="_blank"><img border="0" src="https://calvinayre.com/wp-content/uploads/2019/08/SIGMA_234X68.png" width="234"></a>
+					</center>
+				</td>
+
+			</tr>
+
+			<!-- Banners : END -->
+			<tr>
+				<td style="font-family: sans-serif; font-size: 14px; line-height: 20px; color: #555555; text-align: left;" class="stack-column-center" colspan="">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+						<tr>
+
+							<!-- Column : BEGIN -->
+							<td class="stack-column-center" style="margin-left: 10px;">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+									<tr>
+										<td style="background: #251f21;">
+											<table align="center" valign="middle" role="presentation" cellspacing="0" cellpadding="0" border="0" style="background: #251f21; border: 1px solid #251f21; font-family: sans-serif; font-size: 14px; line-height: 15px; text-decoration: none; padding: 10px 14px; color: #ffffff; display: block; font-weight: bold;">
+												<tr>
+													<td style="background: #251f21;">GLOBAL ROUND UP</td>
+
+												</tr>
+
+											</table>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td class="stack-column-center">&nbsp;</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			
+			 <!-- GLOBAL ROUND UP ARTICLE : END -->
+			
+				
+				<!-- GLOBAL ROUND UP ARTICLE : BEGIN -->
+		
+			<tr>
+				<td dir="ltr" valign="top" width="100%" style="padding: 10px; background-color: #ffffff;">
+					<table valign="top" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr valign="top">
+							<!-- Column : BEGIN -->
+							<td width="25%" class="stack-column-center">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+									<tr>
+										<td>
+											<table align="center" valign="top" role="presentation" cellspacing="0" cellpadding="0" border="0" style="font-family: sans-serif; font-size: 16px; line-height: 15px; text-decoration: none; padding: 5px 10px; color: #282b2d; display: block; font-weight: bold;">
+												<tr>
+													<td style="text-transform: uppercase;">ASIA</td>
+
+												</tr>
+
+											</table>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			
+			<!-- GLOBAL ROUND UP ARTICLE : START -->
+			<tr>
+				<td dir="ltr" valign="top" width="100%" style="padding: 5px 10px; background-color: #ffffff;">
+					<table valign="top" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr valign="top">
+							<!-- Column : BEGIN -->
+							<td width="25%" class="stack-column-center">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; margin-left: 10px !important;">
+									<tr>
+									  <td class="businessbg">
+											<table class="businessbg" align="center" valign="top" role="presentation" cellspacing="0" cellpadding="0" border="0" style="font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; padding: 5px 10px; color: #ffffff; display: block; font-weight: bold;">
+												<tr>
+													<td class="businessbg">BUSINESS</td>
+
+											  </tr>
+
+											</table>
+
+									  </td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td width="75%" class="stack-column-center">
+
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; margin-left: 10px !important; text-align: left;">
+									<tr>
+									  <td>
+											<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4675" target="_blank" style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 13px; line-height: 22px; color: #333333; font-weight: bold; margin-right: 15px;">Leisure and Resorts World redeems all outstanding preferred shares</a><br>
+										  <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4675" target="_blank" style=" font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; color: #0379bd; display: block;">Read More</a>
+									  </td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+
+			
+			<!-- GLOBAL ROUND UP ARTICLE : END -->
+			
+		  <!-- GLOBAL ROUND UP ARTICLE : BEGIN -->
+		
+			
+			<tr>
+				<td dir="ltr" valign="top" width="100%" style="padding: 10px; background-color: #ffffff;">
+					<table valign="top" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr valign="top">
+							<!-- Column : BEGIN -->
+							<td width="25%" class="stack-column-center">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+									<tr>
+										<td>
+											<table align="center" valign="top" role="presentation" cellspacing="0" cellpadding="0" border="0" style="font-family: sans-serif; font-size: 16px; line-height: 15px; text-decoration: none; padding: 5px 10px; color: #282b2d; display: block; font-weight: bold;">
+												<tr>
+													<td style="text-transform: uppercase;">EUROPE</td>
+
+
+												</tr>
+
+											</table>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			
+			<!-- GLOBAL ROUND UP ARTICLE : START -->
+			<tr>
+				<td dir="ltr" valign="top" width="100%" style="padding: 5px 10px; background-color: #ffffff;">
+					<table valign="top" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr valign="top">
+							<!-- Column : BEGIN -->
+							<td width="25%" class="stack-column-center">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; margin-left: 10px !important;">
+									<tr>
+									  <td class="pokerbg">
+											<table class="pokerbg" align="center" valign="top" role="presentation" cellspacing="0" cellpadding="0" border="0" style="font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; padding: 5px 10px; color: #ffffff; display: block; font-weight: bold;">
+												<tr>
+													<td class="pokerbg">POKER</td>
+
+											  </tr>
+
+											</table>
+
+									  </td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td width="75%" class="stack-column-center">
+
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; margin-left: 10px !important; text-align: left;">
+									<tr>
+									  <td>
+											<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4676" target="_blank" style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 13px; line-height: 22px; color: #333333; font-weight: bold; margin-right: 15px;">Chin Wei Lim wins €100K Diamond High Roller bracelet for €2,172,104</a><br>
+										  <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4676" target="_blank" style=" font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; color: #0379bd; display: block;">Read More</a>
+									  </td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+
+			
+			<!-- GLOBAL ROUND UP ARTICLE : END -->
+			<!-- GLOBAL ROUND UP ARTICLE : START -->
+			<tr>
+				<td dir="ltr" valign="top" width="100%" style="padding: 5px 10px; background-color: #ffffff;">
+					<table valign="top" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr valign="top">
+							<!-- Column : BEGIN -->
+							<td width="25%" class="stack-column-center">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; margin-left: 10px !important;">
+									<tr>
+									  <td class="sportsbg">
+											<table class="sportsbg" align="center" valign="top" role="presentation" cellspacing="0" cellpadding="0" border="0" style="font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; padding: 5px 10px; color: #ffffff; display: block; font-weight: bold;">
+												<tr>
+													<td class="sportsbg">SPORTS</td>
+
+											  </tr>
+
+											</table>
+
+									  </td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td width="75%" class="stack-column-center">
+
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; margin-left: 10px !important; text-align: left;">
+									<tr>
+									  <td>
+											<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4677" target="_blank" style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 13px; line-height: 22px; color: #333333; font-weight: bold; margin-right: 15px;">EPL gameweek #10 review</a><br>
+										  <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4677" target="_blank" style=" font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; color: #0379bd; display: block;">Read More</a>
+									  </td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+
+			
+			<!-- GLOBAL ROUND UP ARTICLE : END -->
+		  <!-- GLOBAL ROUND UP ARTICLE : BEGIN -->
+		
+			<tr>
+				<td dir="ltr" valign="top" width="100%" style="padding: 10px; background-color: #ffffff;">
+					<table valign="top" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr valign="top">
+							<!-- Column : BEGIN -->
+							<td width="25%" class="stack-column-center">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+									<tr>
+										<td>
+											<table align="center" valign="top" role="presentation" cellspacing="0" cellpadding="0" border="0" style="font-family: sans-serif; font-size: 16px; line-height: 15px; text-decoration: none; padding: 5px 10px; color: #282b2d; display: block; font-weight: bold;">
+												<tr>
+													<td style="text-transform: uppercase;">NORTH AMERICA</td>
+
+												</tr>
+
+											</table>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			
+			<!-- GLOBAL ROUND UP ARTICLE : START -->
+			<tr>
+				<td dir="ltr" valign="top" width="100%" style="padding: 5px 10px; background-color: #ffffff;">
+					<table valign="top" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr valign="top">
+							<!-- Column : BEGIN -->
+							<td width="25%" class="stack-column-center">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; margin-left: 10px !important;">
+									<tr>
+									  <td class="casinobg">
+											<table class="casinobg" align="center" valign="top" role="presentation" cellspacing="0" cellpadding="0" border="0" style="font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; padding: 5px 10px; color: #ffffff; display: block; font-weight: bold;">
+												<tr>
+													<td class="casinobg">CASINO</td>
+
+											  </tr>
+
+											</table>
+
+									  </td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td width="75%" class="stack-column-center">
+
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; margin-left: 10px !important; text-align: left;">
+									<tr>
+									  <td>
+											<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4678" target="_blank" style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 13px; line-height: 22px; color: #333333; font-weight: bold; margin-right: 15px;">Kicked out of Cannery Casino, woman drives RV into glass doors</a><br>
+										  <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4678" target="_blank" style=" font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; color: #0379bd; display: block;">Read More</a>
+									  </td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+
+			
+			<!-- GLOBAL ROUND UP ARTICLE : END -->
+			<!-- GLOBAL ROUND UP ARTICLE : START -->
+			<tr>
+				<td dir="ltr" valign="top" width="100%" style="padding: 5px 10px; background-color: #ffffff;">
+					<table valign="top" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr valign="top">
+							<!-- Column : BEGIN -->
+							<td width="25%" class="stack-column-center">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; margin-left: 10px !important;">
+									<tr>
+									  <td class="businessbg">
+											<table class="businessbg" align="center" valign="top" role="presentation" cellspacing="0" cellpadding="0" border="0" style="font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; padding: 5px 10px; color: #ffffff; display: block; font-weight: bold;">
+												<tr>
+													<td class="businessbg">BUSINESS</td>
+
+											  </tr>
+
+											</table>
+
+									  </td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td width="75%" class="stack-column-center">
+
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; margin-left: 10px !important; text-align: left;">
+									<tr>
+									  <td>
+											<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4679" target="_blank" style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 13px; line-height: 22px; color: #333333; font-weight: bold; margin-right: 15px;">New & Improved online gambling still top grower for Loto-Quebec</a><br>
+										  <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4679" target="_blank" style=" font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; color: #0379bd; display: block;">Read More</a>
+									  </td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+
+			
+			<!-- GLOBAL ROUND UP ARTICLE : END -->	
+		
+			
+		  <!-- Clear Spacer : BEGIN -->
+			<tr>
+				<td aria-hidden="true" height="20" style="font-size: 0px; line-height: 0px;">&nbsp;
+					
+				</td>
+
+			</tr>
+
+            <!-- Clear Spacer : END -->
+			<!-- Banners : BEGIN -->
+			<tr>
+				<td style="padding: 20px 0; text-align: center">
+					<center>
+						<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4651" target="_blank"><img border="0" src="https://calvinayre.com/wp-content/uploads/2017/11/Beckys-Affiliated_234x68.jpg" width="234"></a>&nbsp;
+						<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4652" target="_blank"><img border="0" src="https://calvinayre.com/wp-content/uploads/2017/12/Rafis-Markets_234x68.jpg" width="234"></a>
+					</center>
+				</td>
+
+			</tr>
+
+			<!-- Banners : END -->  
+			<!-- Press Release : BEGIN -->
+			<tr>
+				<td style="font-family: sans-serif; font-size: 14px; line-height: 20px; color: #555555; text-align: left;" class="stack-column-center" colspan="">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+						<tr>
+
+						<!-- Column : BEGIN -->
+							<td class="stack-column-center" style="margin-left: 10px;">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+									<tr>
+										<td style="background: #251f21;">
+											<table align="center" valign="middle" role="presentation" cellspacing="0" cellpadding="0" border="0" style="background: #251f21; border: 1px solid #251f21; font-family: sans-serif; font-size: 14px; line-height: 15px; text-decoration: none; padding: 10px 14px; color: #ffffff; display: block; font-weight: bold;">
+												<tr>
+													<td style="background: #251f21;">PRESS RELEASE</td>
+
+												</tr>
+
+											</table>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td class="stack-column-center">&nbsp;</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			<tr>
+				<td dir="ltr" valign="top" width="100%" style="padding: 10px; background-color: #ffffff;">
+					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<!-- Column : BEGIN -->
+							<td class="stack-column-center">
+								<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+									<tr>
+										<td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 13px; line-height: 20px; color: #555555; padding: 10px; text-align: left;" class="center-on-narrow">
+											<h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 13px; line-height: 22px; color: #333333; font-weight: bold;"><a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4680" target="_blank" style="text-decoration: none; color: #333333;">North American operators land SBC Awards shortlist spots</a></h2>
+											<p>FanDuel Group and The Stars Group have earned nominations for the Sportsbook of the Year and marquee online casino categories for SBC Awards 2019, happening in London on 3 December 2019.</p>
+
+<p style="margin: 0 0 10px 0;">&nbsp;</p>
+
+											<!-- Button : BEGIN -->
+											<table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
+												<tr>
+													<td class="button-td button-td-primary" style="border-radius: 4px; background: #0379bd;">
+														<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4680" target="_blank" class="button-a button-a-primary" style="background: #0379bd; border: 1px solid #0379bd; font-family: sans-serif; font-size: 13px; line-height: 15px; text-decoration: none; padding: 8px 13px; color: #ffffff; display: block; border-radius: 4px;">Read More</a>
+													</td>
+
+												</tr>
+
+											</table>
+
+											<!-- Button : END -->
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			<!-- Press Release : END -->
+
+		
+			<!-- Shout out! : BEGIN -->
+			<tr>
+				<td style="font-family: sans-serif; font-size: 14px; line-height: 20px; color: #555555; text-align: left;" class="stack-column-center" colspan="">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+						<tr>
+
+							<!-- Column : BEGIN -->
+							<td class="stack-column-center" style="margin-left: 10px;">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+									<tr>
+										<td style="background: #251f21;">
+											<table align="center" valign="middle" role="presentation" cellspacing="0" cellpadding="0" border="0" style="background: #251f21; border: 1px solid #251f21; font-family: sans-serif; font-size: 14px; line-height: 15px; text-decoration: none; padding: 10px 14px; color: #ffffff; display: block; font-weight: bold;">
+												<tr>
+													<td style="background: #251f21;">SHOUT OUT</td>
+
+												</tr>
+
+											</table>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td class="stack-column-center">&nbsp;</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			<tr>
+				<td style="background-color: #ffffff;">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+						<tr>
+							<td style="padding: 20px; font-family: sans-serif; font-size: 13px; line-height: 20px; color: #555555;"><p style="text-align: justify;">Congratulations to <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4681" target="_blank" style="color: #0379bd; text-decoration: none;">Kahle Burns</a> for winning the €2,500-entry Short Deck event at WSOP Europe! Burns joined the exclusive club of those who won two WSOP events in the same Series.
+
+ </p></td>
+
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			<!-- Hyperlink on text decor <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4655" target="_blank" style="color: #0379bd; text-decoration: none;"> -->
+			<!-- Shout out! : END -->
+			<!-- Share it! : BEGIN -->
+			<tr>
+				<td style="font-family: sans-serif; font-size: 14px; line-height: 20px; color: #555555; text-align: left;" class="stack-column-center" colspan="">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+						<tr>
+
+							<!-- Column : BEGIN -->
+							<td class="stack-column-center" style="margin-left: 10px;">
+								<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+									<tr>
+										<td style="background: #251f21;">
+											<table align="center" valign="middle" role="presentation" cellspacing="0" cellpadding="0" border="0" style="background: #251f21; border: 1px solid #251f21; font-family: sans-serif; font-size: 14px; line-height: 15px; text-decoration: none; padding: 10px 14px; color: #ffffff; display: block; font-weight: bold;">
+												<tr>
+													<td style="background: #251f21;"><span style="color: #0379bd">DAMN IT!</span> <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4638" target="_blank" style="color:#ffffff">SHARE IT</a></td>
+
+												</tr>
+
+											</table>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td class="stack-column-center">&nbsp;</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			<tr>
+				<td style="background-color: #ffffff;">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+						<tr>
+							<td style="padding: 20px; font-family: sans-serif; font-size: 13px; line-height: 20px; color: #555555;">
+								<p>
+									<b>Want to be a guest contributor</b><br>
+									Email <a href="mailto: bill@ayremedia.com" style="color: #0379bd; text-decoration: none;">bill@ayremedia.com</a>
+								</p>
+
+							</td>
+
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+			<!-- Share it! : END -->
+
+	  </table>
+
+		<!-- Email Body : END -->
+
+
+		
+		<!-- Full Bleed Background Section : BEGIN -->
+		<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #251f21;">
+			<tr>
+				<td valign="top">
+					<div style="max-width: 600px; margin: auto;" class="email-container">
+						<!--[if mso]>
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+						<tr>
+						<td>
+						<![endif]-->
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td style="padding: 10px; text-align: left; font-family: sans-serif; font-size: 14px; line-height: 20px; color: #ffffff; text-transform: uppercase">
+									<center class="footer-nav">
+										<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4656" target="_blank" style="padding-top: 5px; padding-bottom: 5px; display: inline-block; color: #fff; text-decoration: none;">Submit PR&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+										<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4657" target="_blank" style="padding-top: 5px; padding-bottom: 5px; display: inline-block; color: #fff; text-decoration: none;">Directory&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+										<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4658" target="_blank" style="padding-top: 5px; padding-bottom: 5px; display: inline-block; color: #fff; text-decoration: none;">Conference&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+										<a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4659" target="_blank" style="padding-top: 5px; padding-bottom: 5px; display: inline-block; color: #fff; text-decoration: none;">Regulations</a>
+									</center>
+								</td>
+
+							</tr>
+
+						</table>
+
+						<!--[if mso]>
+						</td>
+
+						</tr>
+
+						</table>
+
+						<![endif]-->
+					</div>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+		<!-- Full Bleed Background Section : END -->
+		<!-- Email Footer : BEGIN -->
+		<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: 0 auto;" class="email-container">
+            <tr valign="middle">
+				<td valign="middle" style="padding: 10px; background-color: #ffffff;">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+						<tr valign="middle">
+							<!-- Column : BEGIN -->
+							<td width="35%" class="stack-column-center" style="font-family: sans-serif; font-size: 11px; line-height: 110%; color: #888888; text-align: center;">
+                                <span>You are receiving this because you are subscribed to
+                                    <span style="color:#0379bd;">
+                                        <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4660" target="_blank" style="color:#0379bd; text-decoration: none;">CalvinAyre.com</a>
+                                    </span>
+                                </span>
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td width="30%" class="stack-column-center" align="center">
+								<table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+									<tr>
+										<td style="padding: 5px; text-align: center">
+                                            <center class="footer-nav" height="32" style="width: 100%; height: 32px; display: inline-block; text-align: center;" align="center">
+                                                <a class="socialmedia-icon" href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4661" style="width: 32px; height: 32px; display: inline-block;"><img src="https://calvinayre.com/wp-content/uploads/2018/06/newsletter_facebook.png" style="width: 32px; height: 32px;"></a>&nbsp;&nbsp;
+                                                <a class="socialmedia-icon" href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4662" style="width: 32px; height: 32px; display: inline-block;"><img src="https://calvinayre.com/wp-content/uploads/2018/06/newsletter_twitter.png" style="width: 32px; height: 32px;"></a>&nbsp;&nbsp;
+                                                <a class="socialmedia-icon" href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4663" style="width: 32px; height: 32px; display: inline-block;"><img src="https://calvinayre.com/wp-content/uploads/2018/06/newsletter_linkedin.png" style="width: 32px; height: 32px;"></a>
+                                            </center>
+										</td>
+
+									</tr>
+
+
+								</table>
+
+							</td>
+
+							<!-- Column : END -->
+							<!-- Column : BEGIN -->
+							<td width="35%" class="stack-column-center" style="font-family: sans-serif; font-size: 11px; line-height: 15px; text-align: center; color: #888888;">
+                                <span>If you want to unsubscribe click
+                                <a href="https://ayremedia70317.acemlnc.com/proc.php?nl=20&c=312&m=493&s=75a282a53cca54996ccdcc7b167725d7&act=unsub" target="_blank" style="color:#0379bd; text-decoration: none;">here</a>
+                                </span>
+							</td>
+
+							<!-- Column : END -->
+						</tr>
+
+					</table>
+
+				</td>
+
+            </tr>
+
+		</table>
+
+		<!-- Email Footer : END -->
+		<!-- Full Bleed Background Section : BEGIN -->
+		<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #251f21;">
+			<tr>
+				<td valign="top">
+					<div style="max-width: 600px; margin: auto;" class="email-container">
+						<!--[if mso]>
+	                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+	                    <tr>
+	                    <td>
+	                    <![endif]-->
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td style="padding: 10px; text-align: left; font-family: sans-serif; font-size: 11px; line-height: 10px; color: #ffffff;">
+									<center>
+										<p style="margin: 0; font-size: 11px !important;">&copy; 2019
+									  <a href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4634" style="display: inline-block; color: #fff; font-size: 10px; text-decoration: none;">calvinayre.com</a>. All rights reserved. An Ayre Group Property</p>
+
+										<br><br>
+						CalvinAyre.com, 44 Church Street, St. John’s, Antigua and Barbuda
+								  </center>
+								</td>
+
+							</tr>
+
+						</table>
+
+						<!--[if mso]>
+	                    </td>
+
+	                    </tr>
+
+	                    </table>
+
+	                    <![endif]-->
+					</div>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+		<!-- Full Bleed Background Section : END -->
+
+		<!--[if mso | IE]>
+    </td>
+
+    </tr>
+
+    </table>
+
+    <![endif]-->
+	</center>
+<img src="https://ayremedia70317.acemlnc.com/lt.php?nl=20&c=312&m=493&s=75a282a53cca54996ccdcc7b167725d7&l=open" border="0" width="1" height="1" style="display:block;width:1px!important;min-width:1px!importantmax-width:1px!important;height:1px!important;border:0;overflow:hidden;"><br clear="all"></body>
+<map name="Map1">
+  <area shape="rect" coords="96,180,111,195" href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4682" target="_blank">
+  <area shape="rect" coords="113,180,129,195" href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4683" target="_blank">
+  <area shape="rect" coords="132,181,149,197" href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4684" target="_blank">
+  <area shape="rect" coords="94,164,187,179" href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4673" target="_blank">
+  
+  <area shape="rect" coords="92,71,215,90" href="https://ayremedia70317.acemlnc.com/lt.php?s=75a282a53cca54996ccdcc7b167725d7&i=312A493A20A4673" target="_blank">
+</map>
+
+</html>

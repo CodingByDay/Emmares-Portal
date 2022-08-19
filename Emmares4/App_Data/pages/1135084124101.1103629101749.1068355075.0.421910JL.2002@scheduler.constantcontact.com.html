@@ -1,0 +1,888 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if gte mso 9]>
+<style id="ol-styles">
+/* OUTLOOK-SPECIFIC STYLES */
+li {
+text-indent: -1em;
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+ul, ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+sup {
+font-size: 85% !important;
+}
+sub {
+font-size: 85% !important;
+}
+</style>
+<![endif]-->
+<style id="template-styles-head" data-premailer="ignore">
+.footer-main-width {
+width: 630px!important;
+max-width: 630px;
+}
+table {
+border-collapse: collapse;
+table-layout: fixed;
+}
+.bgimage {
+table-layout: auto;
+}
+.preheader-container {
+color: transparent;
+display: none;
+font-size: 1px;
+line-height: 1px;
+max-height: 0px;
+max-width: 0px;
+opacity: 0;
+overflow: hidden;
+}
+/* LIST AND p STYLE OVERRIDES */
+.editor-text p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+.editor-text ul,
+.editor-text ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+.editor-text li {
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+/* ==================================================
+CLIENT/BROWSER SPECIFIC OVERRIDES
+================================================== */
+/* IE: correctly scale images with w/h attbs */
+img {
+-ms-interpolation-mode: bicubic;
+}
+/* Text Link Style Reset */
+a {
+text-decoration: underline;
+}
+/* iOS: Autolink styles inherited */
+a[x-apple-data-detectors] {
+text-decoration: underline !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+color: inherit !important;
+}
+/* FF/Chrome: Smooth font rendering */
+.editor-text, .MainTextFullWidth {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+/* Gmail/Web viewport fix */
+u + .body .template-body {
+width: 630px;
+}
+@media only screen and (max-width:480px) {
+u + .body .template-body {
+width: 100% !important;
+}
+}
+/* Office365/Outlook.com image reset */
+[office365] button, [office365] .divider-base div, [office365] .spacer-base div, [office365] .editor-image div { display: block !important; }
+</style>
+<style>@media only screen and (max-width:480px) {
+table {
+border-collapse: collapse;
+}
+.main-width {
+width: 100% !important;
+}
+.mobile-hidden {
+display: none !important;
+}
+td.OneColumnMobile {
+display: block !important;
+}
+.OneColumnMobile {
+width: 100% !important;
+}
+td.editor-col .editor-text {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-button-container {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-social td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .block-margin {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col td.block-margin .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.editor-button td > table tr > td {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-button td > table tr > td td {
+padding: 9px 15px 10px 15px !important;
+}
+.layout {
+padding: 15px 9px 15px 9px !important;
+}
+.layout-container-border {
+padding: 1px 1px 1px 1px !important;
+}
+.layout-container {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-image img {
+width: auto !important; margin-left: auto !important; margin-right: auto !important;
+}
+.editor-image .image-cell {
+padding-bottom: 15px !important;
+}
+.editor-text {
+font-size: 16px !important;
+}
+.preheader-text {
+font-size: 12px !important;
+}
+.section-headline-text {
+font-size: 24px !important;
+}
+.headline-text {
+font-size: 24px !important;
+}
+.subheadline-text {
+font-size: 20px !important;
+}
+.feature {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.layout-outer {
+padding: 0px 20px !important;
+}
+.feature-heading-text {
+font-size: 20px !important;
+}
+.feature-text {
+font-size: 16px !important;
+}
+.split.editor-col {
+margin-top: 0px !important;
+}
+.split.editor-col ~ .split.editor-col {
+margin-top: 10px !important;
+}
+.split-layout-margin {
+padding: 0px 20px !important;
+}
+.article {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.article-heading-text {
+font-size: 20px !important;
+}
+.article-text {
+font-size: 16px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.cpn-heading-text {
+font-size: 28px !important;
+}
+.editor-cpn-heading-text {
+font-size: 28px !important;
+}
+td.col-divided .editor-col {
+border-right: 0px solid #000000 !important; border-bottom: 1px solid #000000 !important;
+}
+td.col-divided td.editor-col:last-of-type {
+border-bottom: 0 !important;
+}
+.col-divided {
+padding: 0 20px !important;
+}
+td.col-divided .editor-col .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .block-margin {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.action-block .poll-answer {
+width: 100% !important; display: block !important;
+}
+.action-block .poll-button {
+width: 100% !important;
+}
+div.MobileFooter {
+font-size: 11px !important;
+}
+td.FooterMobile {
+padding: 0px 10px 0px 10px !important;
+}
+td.MainCenter {
+width: 100% !important;
+}
+table.MainSide {
+display: none !important;
+}
+img.MainSide {
+display: none !important;
+}
+td.MainSide {
+display: none !important;
+}
+.rsvp-button-inner {
+padding: 0px 0px 10px 0px !important;
+}
+.rsvp-button-outer {
+width: 100% !important; max-width: 100% !important;
+}
+.footer-main-width {
+width: 100% !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-column {
+display: block !important;
+}
+.footer-mobile-stack {
+display: block !important;
+}
+.footer-mobile-stack-padding {
+padding-top: 3px;
+}
+}
+@media only screen and (max-width:320px) {
+.layout {
+padding: 0px 0px 0px 0px !important;
+}
+}
+@media screen {
+@font-face {
+font-family: 'Merriweather'; font-style: normal; font-weight: 400; src: local('Merriweather Regular'), local('Merriweather-Regular'), url(https://fonts.gstatic.com/s/merriweather/v19/u-440qyriQwlOrhSvowK_l5-fCZMdeX3rg.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+}
+</style>
+</head>
+<body class="body" align="center" style="width: 100%; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #FFFFFF; margin: 0px; padding: 0px;" bgcolor="#FFFFFF">
+<table class="template-body" border="0" cellpadding="0" cellspacing="0" style="text-align: center; min-width: 100%;" width="100%">
+<tr>
+<td class="preheader-container">
+<div>
+<div id="preheader" style="display: none; font-size: 1px; color: transparent; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+<span data-entity-ref="preheader">Weekly Newsletter</span>
+</div>
+<img src="http://r20.rs6.net/on.jsp?ca=a72dd79a-776b-4b3f-b357-34f04ffd4980&a=1103629101749&c=02e35956-d6fd-11e9-b48b-d4ae5292c4bc&ch=02e491e0-d6fd-11e9-b48b-d4ae5292c4bc" alt="">
+</div>
+</td>
+</tr>
+<tr>
+<td class="template-shell-container" align="center">
+<div class="bgcolor" style="background-color: #FFFFFF;">
+<table class="bgimage" width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF;" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td align="center">
+<table class="main-width" width="630" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 630px;">
+<tbody>
+<tr>
+<td class="layout" align="center" valign="top" style="padding: 15px 5px;">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="layout-container-border" align="center" valign="top" style="background-color: #000000; padding: 10px;" bgcolor="#000000">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #000000;" bgcolor="#000000">
+<tbody>
+<tr>
+<td class="layout-container" align="center" valign="top" style="background-color: #FFFFFF; padding: 0;" bgcolor="#FFFFFF">
+<div class="">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="editor-logo editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image logo-container" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDnxM9Z1oHzl6q1rkgOZiRzDN2I7ggzHyyxGoabYuwAWdyadbgMJUJjYJPgoCZupCryofv2NIanuEbfZr2WpbfkzZ4hLac5YNnQ==&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==">
+<img alt="" class="" style="display: block; height: auto; max-width: 100%;" width="169" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/9a4bca68-235a-4dd8-be37-48748b15ba46.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-text">
+<table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text editor-text " align="left" valign="top" style="font-family: Verdana,Geneva,sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div style="text-align: center;" align="center"><span style="font-size: 16px; color: rgb(2, 2, 2); font-family: Verdana, Geneva, sans-serif;">December 10, 2020</span></div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top" style="background-color: rgb(255, 255, 255);" bgcolor="FFFFFF">
+<div class="gl-contains-image">
+<table class="editor-image editor-image" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7tzDi6lFh6g79RdURmd9ttcqtOSEwunv6gstKUwEwVHCMiZGNoPCLv5mLmdCBawSkpyWPx6eZeOVAsynEKY4CtfpuPHkDTUlhcNre7I_uC3d_OCwQzhN2HgTd4to0N46QNVhnX-XScv-5UA7hIPtEjeORWr9rMXPQsMcGIxLyfXEoqGOdQHN0fToiYb7OpPfYaxOJ9j1_n9o=&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==">
+<img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="600" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/35c8eb8c-91d6-44c2-a4f4-2fa8a2899065.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top" style="background-color: rgb(255, 255, 255);" bgcolor="FFFFFF">
+<div class="gl-contains-text">
+<table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text editor-text " align="left" valign="top" style="font-family: Verdana,Geneva,sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div style="text-align: center;" align="center">
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7tzDi6lFh6g79RdURmd9ttcqtOSEwunv6gstKUwEwVHCMiZGNoPCLv5mLmdCBawSkpyWPx6eZeOVAsynEKY4CtfpuPHkDTUlhcNre7I_uC3d_OCwQzhN2HgTd4to0N46QNVhnX-XScv-5UA7hIPtEjeORWr9rMXPQsMcGIxLyfXEoqGOdQHN0fToiYb7OpPfYaxOJ9j1_n9o=&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" rel="noopener noreferrer" target="_blank" style="font-size: 16px; color: rgb(26, 25, 26); text-decoration: none; font-weight: bold; font-style: normal;">How Does Legion M Work? Inside the Fan-Focused Backer of </a><a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7tzDi6lFh6g79RdURmd9ttcqtOSEwunv6gstKUwEwVHCMiZGNoPCLv5mLmdCBawSkpyWPx6eZeOVAsynEKY4CtfpuPHkDTUlhcNre7I_uC3d_OCwQzhN2HgTd4to0N46QNVhnX-XScv-5UA7hIPtEjeORWr9rMXPQsMcGIxLyfXEoqGOdQHN0fToiYb7OpPfYaxOJ9j1_n9o=&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" rel="noopener noreferrer" target="_blank" style="font-size: 16px; color: rgb(26, 25, 26); text-decoration: none; font-weight: bold; font-style: italic;">Mandy</a><a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7tzDi6lFh6g79RdURmd9ttcqtOSEwunv6gstKUwEwVHCMiZGNoPCLv5mLmdCBawSkpyWPx6eZeOVAsynEKY4CtfpuPHkDTUlhcNre7I_uC3d_OCwQzhN2HgTd4to0N46QNVhnX-XScv-5UA7hIPtEjeORWr9rMXPQsMcGIxLyfXEoqGOdQHN0fToiYb7OpPfYaxOJ9j1_n9o=&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" rel="noopener noreferrer" target="_blank" style="font-size: 16px; color: rgb(26, 25, 26); text-decoration: none; font-weight: bold; font-style: normal;"> and the New </a><a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7tzDi6lFh6g79RdURmd9ttcqtOSEwunv6gstKUwEwVHCMiZGNoPCLv5mLmdCBawSkpyWPx6eZeOVAsynEKY4CtfpuPHkDTUlhcNre7I_uC3d_OCwQzhN2HgTd4to0N46QNVhnX-XScv-5UA7hIPtEjeORWr9rMXPQsMcGIxLyfXEoqGOdQHN0fToiYb7OpPfYaxOJ9j1_n9o=&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" rel="noopener noreferrer" target="_blank" style="font-size: 16px; color: rgb(26, 25, 26); text-decoration: none; font-weight: bold; font-style: italic;">Archenemy</a>
+</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top" style="background-color: rgb(255, 255, 255);" bgcolor="FFFFFF">
+<div class="gl-contains-image">
+<table class="editor-image editor-image  editor-image-vspace-on" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 10px; padding-bottom: 10px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7M8xhQtf_ZmQJkuXmpXqXQTf5CXQP_A3fyXUhAhLHCkPQAsvWmzJLJbnOOqrw62zL-ag0WAl4c3EMG2NsdBadSaatp7DahrLOYuAq5sRltAPZUjzZ6_WRPdw3xMITgmPnd0Qhmap1K_Y=&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==">
+<img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="600" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/e9d8ac38-75ce-44ae-96da-113068424c57.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="40%" align="" valign="top" style="background-color: rgb(255, 255, 255);" bgcolor="FFFFFF">
+<div><div class="column-resize-bar">
+<span class="line"></span>
+<span class="grabber"></span>
+</div></div>
+<div class="gl-contains-image">
+<table class="editor-image editor-image" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7nQEWGKyPHaMAWvRz8FBl1lrcIn82ATQrhXdhQoZGB_KD_wnuxMYug34_Vte_-ISrss39Vw7YSuAlYcosVz6u2_Up0-5lgXFPaprnXaeF01pbSjfSk5JsPIQPD0djDbZvcDz4rReigANITTmxgCVDTEgN-vVJhvS81TKnnizb48-FAIeQcsV1N6-hCm4fxU9o&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==">
+<img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="240" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/939027e5-e92f-4c3f-929c-2037c11a4aa8.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class=" editor-col OneColumnMobile" width="60%" align="" valign="top" style="background-color: rgb(255, 255, 255);" bgcolor="FFFFFF">
+<div class="gl-contains-text">
+<table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text " align="left" valign="top" style="font-family: Verdana,Geneva,sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div style="text-align: center;" align="center">
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7nQEWGKyPHaMAWvRz8FBl1lrcIn82ATQrhXdhQoZGB_KD_wnuxMYug34_Vte_-ISrss39Vw7YSuAlYcosVz6u2_Up0-5lgXFPaprnXaeF01pbSjfSk5JsPIQPD0djDbZvcDz4rReigANITTmxgCVDTEgN-vVJhvS81TKnnizb48-FAIeQcsV1N6-hCm4fxU9o&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" rel="noopener noreferrer" target="_blank" style="font-size: 14px; color: rgb(4, 4, 4); text-decoration: none; font-style: italic; font-weight: bold;">Lovers Rock</a><a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7nQEWGKyPHaMAWvRz8FBl1lrcIn82ATQrhXdhQoZGB_KD_wnuxMYug34_Vte_-ISrss39Vw7YSuAlYcosVz6u2_Up0-5lgXFPaprnXaeF01pbSjfSk5JsPIQPD0djDbZvcDz4rReigANITTmxgCVDTEgN-vVJhvS81TKnnizb48-FAIeQcsV1N6-hCm4fxU9o&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" rel="noopener noreferrer" target="_blank" style="font-size: 14px; color: rgb(4, 4, 4); text-decoration: none; font-weight: bold; font-style: normal;"> Captures the Silly Games and Complex Politics of a House Party</a>
+</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="40%" align="" valign="top" style="background-color: rgb(255, 255, 255);" bgcolor="FFFFFF">
+<div><div class="column-resize-bar">
+<span class="line"></span>
+<span class="grabber"></span>
+</div></div>
+<div class="gl-contains-image">
+<table class="editor-image editor-image" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7TJFpm-dLF5xAemU7D0MwqamQw3CetlQlBSvk2xJNqHyy8bTVpB4DERlYWPSdTKytrnO7mcuKwex-9iRdRHKFeKopBRiG6Yylv10e4mcn751j_PClz1kKoEnw2K_uRaufq5vwue0HU8HjP7TJpe6-i-GdKezIyaJuiT_XWy5uaBc=&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==">
+<img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="240" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/9e66784f-350c-4630-aa68-6065502938da.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class=" editor-col OneColumnMobile" width="60%" align="" valign="top" style="background-color: rgb(255, 255, 255);" bgcolor="FFFFFF">
+<div class="gl-contains-text">
+<table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text " align="left" valign="top" style="font-family: Verdana,Geneva,sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div style="text-align: center;" align="center"><a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7TJFpm-dLF5xAemU7D0MwqamQw3CetlQlBSvk2xJNqHyy8bTVpB4DERlYWPSdTKytrnO7mcuKwex-9iRdRHKFeKopBRiG6Yylv10e4mcn751j_PClz1kKoEnw2K_uRaufq5vwue0HU8HjP7TJpe6-i-GdKezIyaJuiT_XWy5uaBc=&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" rel="noopener noreferrer" target="_blank" style="font-size: 14px; color: rgb(14, 14, 14); text-decoration: none; font-weight: bold; font-family: Verdana, Geneva, sans-serif; font-style: normal;">64 Died in a Nightclub Fire &#x2014; and a Whole Government Resigned</a></div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="40%" align="" valign="top" style="background-color: rgb(255, 255, 255);" bgcolor="FFFFFF">
+<div><div class="column-resize-bar">
+<span class="line"></span>
+<span class="grabber"></span>
+</div></div>
+<div class="gl-contains-image">
+<table class="editor-image editor-image" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7OJG3SOeKCPs0AIZIs5oxoySyYEmb6-7X2Qc2ekB0QvxxqukTLNZvyFNdbUG7jlEy9Qh0j3ahZQq9e2tcYhbr7_VUBCrwxdk9VZjy13YUT9gRhDvYSeLJacaD-RzPx1q16N_DHq8Xt0H9McXehdkmqnhQtI7h0aICbNqOMeezpi-ysJKICDzeoQ==&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==">
+<img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="240" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/47886e9a-cfc4-46ee-996d-1e218b150f47.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class=" editor-col OneColumnMobile" width="60%" align="" valign="top" style="background-color: rgb(255, 255, 255);" bgcolor="FFFFFF">
+<div class="gl-contains-text">
+<table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text " align="left" valign="top" style="font-family: Verdana,Geneva,sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div style="text-align: center;" align="center"><a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7OJG3SOeKCPs0AIZIs5oxoySyYEmb6-7X2Qc2ekB0QvxxqukTLNZvyFNdbUG7jlEy9Qh0j3ahZQq9e2tcYhbr7_VUBCrwxdk9VZjy13YUT9gRhDvYSeLJacaD-RzPx1q16N_DHq8Xt0H9McXehdkmqnhQtI7h0aICbNqOMeezpi-ysJKICDzeoQ==&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" rel="noopener noreferrer" target="_blank" style="font-size: 14px; color: rgb(14, 14, 14); text-decoration: none; font-weight: bold; font-family: Verdana, Geneva, sans-serif; font-style: normal;">Don DeLillo Meets Alan Pakula, and 4 More Director-Novelist Pairings That Should Have Been</a></div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="40%" align="" valign="top" style="background-color: rgb(255, 255, 255);" bgcolor="FFFFFF">
+<div><div class="column-resize-bar">
+<span class="line"></span>
+<span class="grabber"></span>
+</div></div>
+<div class="gl-contains-image">
+<table class="editor-image editor-image" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7Uf1CHsM6sb6QtbRsNSLc2Nv7fn2OLFz4vjz0p5GY83ODn_9axwwvkN56uS_XYi6MI7DA5Z2HPvTb3EVDjT4pi-9pPC7m4qMylZsUCtsb4ZmNKMfClDhDS0LavOGZVKNib_NLgWTPuIWQzmcUaWnLxg==&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==">
+<img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="240" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/899bf1cd-1b37-4b74-8650-117474503f6d.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class=" editor-col OneColumnMobile" width="60%" align="" valign="top" style="background-color: rgb(255, 255, 255);" bgcolor="FFFFFF">
+<div class="gl-contains-text">
+<table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text " align="left" valign="top" style="font-family: Verdana,Geneva,sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div style="text-align: center;" align="center">
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7Uf1CHsM6sb6QtbRsNSLc2Nv7fn2OLFz4vjz0p5GY83ODn_9axwwvkN56uS_XYi6MI7DA5Z2HPvTb3EVDjT4pi-9pPC7m4qMylZsUCtsb4ZmNKMfClDhDS0LavOGZVKNib_NLgWTPuIWQzmcUaWnLxg==&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" rel="noopener noreferrer" target="_blank" style="font-size: 14px; color: rgb(26, 25, 26); text-decoration: none; font-weight: bold; font-style: normal;">What Godfather Coda Changes About </a><a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7Uf1CHsM6sb6QtbRsNSLc2Nv7fn2OLFz4vjz0p5GY83ODn_9axwwvkN56uS_XYi6MI7DA5Z2HPvTb3EVDjT4pi-9pPC7m4qMylZsUCtsb4ZmNKMfClDhDS0LavOGZVKNib_NLgWTPuIWQzmcUaWnLxg==&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" rel="noopener noreferrer" target="_blank" style="font-size: 14px; color: rgb(26, 25, 26); text-decoration: none; font-weight: bold; font-style: italic;">Godfather III</a>
+</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-divider">
+<table class="editor-divider" width="100%" cellpadding="0" cellspacing="0" border="0" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="" align="center" valign="top">
+<table width="100%" class="galileo-ap-content-editor" style="cursor: default; min-width: 100%;">
+<tbody>
+<tr>
+<td class="divider-base divider-solid" width="100%" align="center" valign="top" style="padding: 9px 0;">
+<table cellpadding="0" cellspacing="0" border="0" align="center" style="height: 1px; width: 94%; min-width: 94%;">
+<tbody>
+<tr>
+<td height="1" align="center" style="border-bottom-style: none; height: 1px; line-height: 1px; padding-bottom: 0px; background-color: #000000;" bgcolor="#000000">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/1101116784221/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-text">
+<table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text editor-text " align="left" valign="top" style="font-family: Verdana,Geneva,sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div style="text-align: center;" align="center">
+<span style="font-size: 14px; color: rgb(26, 25, 26); font-weight: bold; font-style: italic;">Tenet</span><span style="font-size: 14px; color: rgb(26, 25, 26); font-weight: bold;"> Digital Movie Giveaway!</span>
+</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image editor-image  editor-image-vspace-on" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 10px; padding-bottom: 10px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDlIrmBhJLQu7X5mndX_L3QAb2kcMkskeWukgY9XMCsW1fA_rVaPotgc_wsOFCw9CagPWFr-ju9eNxELMGSAiybJFoFd5ZX1tkw==&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==">
+<img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="414" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/ba9f76da-7b3f-48b0-b0e8-9a4430b0c0c4.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top" style="background-color: rgb(0, 0, 0);" bgcolor="000000">
+<div class="gl-contains-button">
+<table class="editor-button" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; min-width: 100%;">
+<tbody>
+<tr>
+<td class="editor-button-container editor-button-container " style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; color: #FFFFFF; text-decoration: none; padding: 10px 20px;">
+<table class="galileo-ap-content-editor" style="width: 100%; min-width: 100%;">
+<tbody>
+<tr>
+<td align="center" valign="top" class="MainTextFullWidthTD" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; color: #FFFFFF; text-decoration: none; padding: 0px;">
+<table border="0" cellpadding="0" cellspacing="0" style="width: initial; border-spacing: 0; background-color: #000000; min-width: initial; padding: 0; border: none;" bgcolor="#000000">
+<tbody>
+<tr>
+<td align="center" valign="top" class="MainTextFullWidthTD" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; color: #FFFFFF; text-decoration: none; padding: 9px 15px 10px;">
+<div>
+<div class="MainTextFullWidth"><a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDq_penVc7nO4sbD_7TqaRlPX3LXWXFmiFanrtXmEnxs1e9ELgZmzSwjWqX1h1Iiu_LwEtZuMgJvSiDEloSshd9przqj6CqMQS_MFH3zoRz9G6rCxr8cg966Pz3coiBPSSA==&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" style="font-family: Verdana, Geneva, sans-serif; font-weight: bold; font-size: 14px; color: #FFFFFF; text-decoration: none;">Click here for a chance to win Tenet digital movie</a></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top" style="background-color: rgb(0, 0, 0);" bgcolor="000000">
+<div class="gl-contains-text">
+<table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text editor-text " align="left" valign="top" style="font-family: Verdana,Geneva,sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div style="text-align: center;" align="center"><br></div>
+<div style="text-align: center;" align="center"><a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDk0_N7HFthztdolQImNyeT_l5LCP0gJ0zmxwlh1UZ7MXiGtcjI9e4Song-DxCR02FZ6Y5oqLP8dbLip_E8ocIG0=&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" rel="noopener noreferrer" target="_blank" style="color: rgb(255, 255, 255); text-decoration: none; font-weight: bold; font-style: normal;">&#xfeff;moviemaker.com</a></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top" style="background-color: rgb(0, 0, 0);" bgcolor="000000">
+<div class="gl-contains-social-button">
+<table class="editor-social" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; min-width: 100%;">
+<tbody>
+<tr>
+<td class=" social-container" align="center" style="padding: 0px 20px 10px;">
+<div class="galileo-ap-content-editor" style="">
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDkBBJ86bxDsGtMRpdO5ytkDPJHcsVpL1fDmZZZ-J3paA55sP2x0VWAy1OK2BCWKtyJDnB5tiXufLFQgCqQZvr5jBj4u2lUqZnX_WpW--aiVC&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" style="display: inline-block; text-decoration: none;">
+<img alt="Twitter" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/twitter-visit-default-speechbubble.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDk0_N7HFthztEY3EX8bV-E_OFwNbQyk2-KAC1htTZdzXGwSt4G6Pw3cgC7Vt3pwm7ny62dH_xUkMBt09vViip51PyEp-ADMMVBjO3zIdHOMm&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" style="display: inline-block; text-decoration: none;">
+<img alt="Facebook" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/facebook-visit-default-speechbubble.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=0018jtSu0JIHyHAbkeuN9T1l7L1TSfZYlzhzkH-AH04-mz15zXGUIwSDrQ1Jkl1tH0RjSO4WU7lMaDlC7UE6Uf01u-qCHqT3PwBUd_rzW8owu76PV3QR_Eycncwwq9xt4K3LwcKzomqJTwtvvDvScUJj_EnFBFYEQ2-r5L2egaFkKM=&c=IpC7mN-Xzjg8PCNxOJqRTCkfZj_VTaoQ1ZJOAPYonzMmZU84t3H_lw==&ch=ZlUVK_nBVtQVKh9FLecVQ-bdy1kYiYBoPp_nBFT_9dh1y4mL_lffZw==" style="display: inline-block; text-decoration: none;">
+<img alt="Instagram" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/instagram-visit-default-speechbubble.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<table class="footer-container" width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff; margin-left: auto; margin-right: auto; table-layout: auto !important" bgcolor="#ffffff">
+  <tr>
+    <td width="100%" align="center" valign="top" style="width: 100%;">
+      <div class="footer-max-main-width" align="center" style="margin-left: auto; margin-right: auto; max-width: 100%;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="footer-layout" align="center" valign="top" style="padding: 16px 0px;">
+              <table class="footer-main-width" style="width: 580px;" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                    
+                    <span class="footer-column">MovieMaker Magazine<span class="footer-mobile-hidden"> | </span></span><span class="footer-column">P.O. Box 91565<span class="footer-mobile-hidden">, </span></span><span class="footer-column"></span><span class="footer-column"></span><span class="footer-column">Long Beach, CA 90809</span><span class="footer-column"></span>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-row" align="center" valign="top" style="padding: 10px 0px;">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          <a href="https://visitor.constantcontact.com/do?p=un&m=0014I3m3feNbThrdAdxd9WN3Q%3D&ch=02e491e0-d6fd-11e9-b48b-d4ae5292c4bc&ca=a72dd79a-776b-4b3f-b357-34f04ffd4980" style="color: #5d5d5d"> </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          <a href="https://visitor.constantcontact.com/do?p=oo&m=0014I3m3feNbThrdAdxd9WN3Q%3D&ch=02e491e0-d6fd-11e9-b48b-d4ae5292c4bc&ca=a72dd79a-776b-4b3f-b357-34f04ffd4980" style="color: #5d5d5d">Update Profile</a> |
+                          
+                          <a class="footer-about-provider" href="http://www.constantcontact.com/legal/service-provider?cc=about-service-provider" style="color: #5d5d5d">About our service provider</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          Sent by
+                          
+                          <a href="mailto:newsletter@moviemaker.com" style="color: #5d5d5d; text-decoration: none">newsletter@moviemaker.com</a>
+                          
+
+                          
+                          
+                          <span class="footer-column">powered by</span>
+                          
+                          
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                    
+                    
+                    <a href="http://www.constantcontact.com/index.jsp?cc=nge&rmc=VF19_3GE" style="color: #5d5d5d; text-decoration: none">
+                    <img alt="Trusted Email from Constant Contact - Try it FREE today." width="160" border="0" hspace="0" vspace="0" src="https://static.ctctcdn.com/letters/images/CTCTFooter/Logo_Blue_Orange.png">
+                    </a>
+                    <div class="footer-cta-text" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 9px; line-height: 2">
+                    <a href="http://www.constantcontact.com/index.jsp?cc=nge&rmc=VF19_3GE" style="color: #5d5d5d; text-decoration: none">Try email marketing for free today!</a>
+                    </div>
+                    
+                    
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table></body>
+</html>

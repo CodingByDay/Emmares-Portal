@@ -1,0 +1,1317 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!--[if gte mso 9]><xml>
+  <o:OfficeDocumentSettings>
+  <o:AllowPNG></o:AllowPNG>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+  </xml><![endif]--><!--[if gt mso 15]>
+  <style type="text/css" media="all">
+  /* Outlook 2016 Height Fix */
+  table, tr, td {border-collapse: collapse;}
+  tr { font-size:0px; line-height:0px; border-collapse: collapse; }
+  </style>
+  <![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="date=no">
+<meta name="format-detection" content="telephone=no">
+<title>Dense Discovery – Issue 69</title>
+<style media="screen" type="text/css">
+			/* ------------ REMOVE START ---------------- */
+			
+			body {
+				margin: 0;
+				padding: 0;
+				-ms-text-size-adjust: 100%;
+				-webkit-text-size-adjust: 100%;
+				font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			}
+			
+			table {
+				border-spacing: 0;
+				mso-table-lspace: 0pt;
+				mso-table-rspace: 0pt;
+			}
+			
+			table td {
+				border-collapse: collapse;
+			}
+			
+			h1 {
+				mso-line-height-rule: exactly;
+				font-size: 21px;
+				font-weight: 600;
+				line-height: 23px;
+				color: #000000;
+				margin: 0;
+				padding: 0;
+			}
+			
+			h2 {
+				mso-line-height-rule: exactly;
+				font-size: 16px;
+				line-height: 23px;
+				font-weight: 600;
+				color: #000000;
+				margin: 0;
+				padding: 0 0 15px 0;
+			}
+			
+			h3,
+			h3 a {
+				mso-line-height-rule: exactly;
+				font-size: 16px;
+				line-height: 23px;
+				font-weight: 400;
+				color: #707070 !important;
+				margin: 0;
+				padding: 0 0 5px 0;
+			}
+			
+			p {
+				font-size: 16px;
+				line-height: 23px;
+				font-weight: 400;
+				color: #000000;
+				padding: 0;
+				Margin: 0;
+				Margin-bottom: 15px;
+			}
+			
+			b,
+			strong {
+				font-weight: 600;
+			}
+			
+			a,
+			a:link,
+			a:visited {
+				color: #000000 !important;
+				text-decoration: underline;
+			}
+			
+			a.h1byline {
+				display: inline-block;
+				font-size: 12px;
+				line-height: 25px;
+				font-weight: 400;
+				float: right;
+				text-decoration: none;
+			}
+			
+			a.btn {
+				display: inline-block;
+				padding: 3px 8px;
+				text-decoration: none !important;
+				text-align: center;
+			}
+			
+			a.btn-grey {
+				background: #afafaf;
+				color: #ffffff !important;
+			}
+			
+			a.btn-black {
+				background: #000000;
+				color: #ffffff !important;
+			}
+			
+			.grey,
+			a.grey {
+				color: #707070 !important;
+			}
+			
+			.small {
+				font-size: 14px;
+				line-height: 19px;
+			}
+			
+			.large {
+				font-size: 21px;
+				line-height: 30px;
+			}
+			
+			.img {
+				display: block;
+				max-height: 900px;
+				max-width: 416px;
+				width: 100%;
+			}
+			
+			.img-line {
+				margin-bottom: 2px;
+			}
+			
+			.box-red {
+				background: #efe2f3;
+			}
+			
+			.box-red h3,
+			.box-red h3 a,
+			.box-red .grey,
+			.box-red .grey a {
+				color: #837089 !important
+			}
+			
+			.box-yellow {
+				background: #f8eccf
+			}
+			
+			.box-yellow .h1byline,
+			.box-yellow h3,
+			.box-yellow h3 a {
+				color: #6d6b57 !important
+			}
+			/* TABLE FORMATTING */
+			
+			.header,
+			.body,
+			.footer {
+				width: 640px;
+				max-width: 640px;
+			}
+			
+			.header {
+				padding-top: 20px;
+			}
+			
+			.footer-logo-top {
+				padding-top: 30px;
+			}
+			
+			.tighten {
+				font-size: 1px;
+				line-height: 1px;
+			}
+			
+			.line {
+				border-bottom: 2px solid #efefef;
+				display: block;
+				height: 2px;
+				margin-bottom: 15px;
+			}
+			
+			.box-yellow .line {
+				border-bottom: 2px solid #e3d9c2;
+				margin-bottom: 5px;
+			}
+			
+			.padt25 {
+				padding-top: 25px
+			}
+			
+			.padt20 {
+				padding-top: 20px
+			}
+			
+			.padt15 {
+				padding-top: 15px
+			}
+			
+			.padt10 {
+				padding-top: 10px
+			}
+			
+			.padt5 {
+				padding-top: 5px
+			}
+			
+			.padr20 {
+				padding-right: 20px
+			}
+			
+			.padr10 {
+				padding-right: 10px
+			}
+			
+			.padb20 {
+				padding-bottom: 20px
+			}
+			
+			.padb15 {
+				padding-bottom: 15px
+			}
+			
+			.padb10 {
+				padding-bottom: 10px
+			}
+			
+			.padb5 {
+				padding-bottom: 5px
+			}
+			
+			.padb0 {
+				padding-bottom: 0
+			}
+			
+			.marb0 {
+				Margin-bottom: 0
+			}
+			
+			.marb5 {
+				Margin-bottom: 5px
+			}
+			
+			.marb10 {
+				Margin-bottom: 10px
+			}
+			
+			.padl20 {
+				padding-left: 20px
+			}
+			
+			.padl10 {
+				padding-left: 10px
+			}
+			
+			.headline {
+				border-bottom: 2px solid #FFFFFF;
+				padding-top: 15px;
+				padding-right: 20px;
+				padding-left: 20px;
+				padding-bottom: 15px;
+			}
+			
+			.spacer {
+				font-size: 1px;
+				line-height: 1;
+				padding-top: 25px;
+			}
+			
+			.share {
+				border: 1px dashed #5f5f5f;
+				background: #f8f8f8;
+				text-align: center;
+				padding: 15px 5px;
+			}
+			
+			.browser {
+				text-align: right;
+			}
+			/* ------------ REMOVE END ---------------- */
+			
+			@media screen and (max-width:599px) {
+				.force-row,
+				.container,
+				.header,
+				.body,
+				.footer {
+					width: 100% !important;
+					max-width: 100% !important;
+				}
+				.padl20 {
+					padding-left: 12px !important
+				}
+				.padr20 {
+					padding-right: 12px !important
+				}
+				.padl10 {
+					padding-left: 12px !important
+				}
+				.padr10 {
+					padding-right: 12px !important
+				}
+				.padt20 {
+					padding-top: 12px !important
+				}
+				.mobt0 {
+					padding-top: 0 !important
+				}
+				.mobb15 {
+					margin-bottom: 15px !important
+				}
+				.headline {
+					padding-left: 12px !important;
+					padding-right: 12px !important;
+				}
+				.large,
+				h1 {
+					font-size: 19px !important;
+					line-height: 27px !important;
+				}
+				.spacer {
+					padding-top: 15px !important;
+				}
+				.browser {
+					display: none !important;
+				}
+				.align-left {
+					text-align: left
+				}
+				a.h1byline {
+					line-height: 12px !important;
+					padding-top: 8px;
+					font-size: 10px !important;
+				}
+			}
+
+		</style>
+<!--[if mso]>
+  <style type="text/css">
+  body, table, td, h1, h2, h3, p {font-family: Arial, sans-serif !important;}
+  </style>
+  <![endif]--><style media="screen" type="text/css">
+			.ios-footer a {
+				color: #aaaaaa !important;
+				text-decoration: underline;
+			}
+			
+			.yshortcuts a {
+				border-bottom: none !important;
+			}
+			
+			.ExternalClass {
+				width: 100%;
+			}
+			
+			.ExternalClass,
+			.ExternalClass p,
+			.ExternalClass span,
+			.ExternalClass font,
+			.ExternalClass td,
+			.ExternalClass div {
+				line-height: 100%;
+			}
+			
+			.ReadMsgBody {
+				width: 100%;
+				background-color: #ebebeb;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic;
+			}
+			
+			a[href^="x-apple-data-detectors:"],
+			a[x-apple-data-detectors] {
+				color: inherit !important;
+				text-decoration: none !important;
+				font-size: inherit !important;
+				font-family: inherit !important;
+				font-weight: inherit !important;
+				line-height: inherit !important;
+			}
+
+		</style>
+</head>
+<body bgcolor="#FFFFFF" style="margin: 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+
+
+
+
+
+
+
+<!-- HEADER -->
+
+<table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="100%"><tbody><tr><td align="center" bgcolor="#c1dbd8" style="border-collapse: collapse;" valign="top">
+
+
+<!-- 600px container -->
+
+<table border="0" cellpadding="0" cellspacing="0" class="header mobt0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 640px;max-width: 640px;padding-top: 20px;" width="640"><tbody>
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr><td width="35%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padb5 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-bottom: 5px;padding-left: 20px;" valign="top">
+
+<p class="marb5" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 5px;">
+Anti-intellectualism has been a constant thread winding its way through our political and cultural life, nurtured by the false notion that democracy means that ‘my ignorance is just as good as your knowledge’.
+</p>
+
+<p class="marb0" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 0;">
+<b style="font-weight: 600;">– Isaac Asimov</b>
+</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td align="right" class="padt20 padr20 padb5 padl10" style="border-collapse: collapse;padding-top: 20px;padding-right: 20px;padding-bottom: 5px;padding-left: 10px;" valign="top">
+
+<p class="marb5" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 5px;">
+<img src="https://www.densediscovery.com/archive/69/head.jpg" alt="❏" width="386" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+</p>
+
+<p class="marb0 mobb15 align-left" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 0;">
+Featured illustrator: <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/6d7e2534-b0a4-4c69-81d5-dbb7d4df8c92/event" style="text-decoration: underline;color: #000000 !important;">Tiago Galo</a>
+</p>
+
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+
+<tr><td align="left" class="tighten" style="border-collapse: collapse;font-size: 1px;line-height: 1px;" valign="bottom">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/e03dd6c2-cd9f-4de2-9744-dd9e001889ba/event" style="text-decoration: underline;color: #000000 !important;"><img src="https://www.densediscovery.com/archive/logo-top.png" height="auto" width="163" alt="Dense Discovery" style="float: left;display: block;-ms-interpolation-mode: bicubic;"></a>
+</td></tr>
+</tbody></table>
+
+
+
+</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+<!-- BODY-->
+
+<table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="100%"><tbody><tr><td align="center" bgcolor="#FFFFFF" style="background-color: #FFFFFF;border-collapse: collapse;" valign="top">
+
+
+
+<!-- 600px container (white background) -->
+
+<table border="0" cellpadding="0" cellspacing="0" class="body" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 640px;max-width: 640px;" width="640"><tbody>
+<tr><td align="left" class="tighten" style="border-collapse: collapse;font-size: 1px;line-height: 1px;" valign="top">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/e03dd6c2-cd9f-4de2-9744-dd9e001889ba/event" style="text-decoration: underline;color: #000000 !important;"><img src="https://www.densediscovery.com/archive/logo-bottom.png" height="auto" width="163" alt="Dense Discovery" style="display: block;-ms-interpolation-mode: bicubic;"></a>
+</td></tr>
+
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+
+
+<!-- INTRO Start -->
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr><td width="50%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">
+Welcome to Issue 69!
+</h1>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="50%" valign="top" class="browser"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row browser" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;text-align: right;" width="320"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p class="small grey" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #707070 !important;padding: 0;margin: 0;margin-bottom: 15px;"><a class="grey" href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/4b63527a-6aba-4d8f-9afc-87943918602d/event" style="text-decoration: underline;color: #707070 !important;">View/share online</a> →</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+
+<tr><td align="left" class="padt20 padl20 padr20 padb10" style="border-collapse: collapse;padding-top: 20px;padding-right: 20px;padding-bottom: 10px;padding-left: 20px;">
+
+<p class="large" style="font-size: 21px;line-height: 30px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+
+“How bad is it really?” The news about the catastrophic bushfires ravaging Australia in the last few months have finally reached friends and family overseas. But the extent of what’s really happening here does not come across in a thirty-second news segment. So I took some time on Sunday to compile an article with some facts and footage to show the real scale of these fires and the impact they had so far on people and the natural world. (Hundreds of fires are still burning, many out of control.)
+<br>
+<br> If you can cope with more bad climate news, <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/68fd0b4a-ecad-466e-b7b0-c1464c3cc49a/event" style="text-decoration: underline;color: #000000 !important;">please take some time to read this</a> and share it with friends. There is a list of actions you can take at the bottom of that article too.
+<br>
+<br> Speaking of help, I’d like to compile a list of climate change action groups and environmental charities that welcome tax-deductible donations in each country around the world. I’ve started <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/1ec57452-ac5a-46fa-b716-d15a9033e7a3/event" style="text-decoration: underline;color: #000000 !important;">a shared document here</a>. Please help me add organisations active in your own country!
+<br>
+<br> I wish I could start the first DD issue of 2020 with more positive news, but it’s been a really difficult few weeks here in Australia – unprecedented, really. While this may not be the most appropriate place to share this sombre call for help, it is the platform I have and so I will make use of it. Thank you for your support! – <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/caceee26-aab0-4b14-9f37-885858acd8be/event" style="text-decoration: underline;color: #000000 !important;">Kai</a>
+
+
+
+</p>
+
+<p class="small grey padt20" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #707070 !important;padding: 0;margin: 0;margin-bottom: 15px;padding-top: 20px;">Dense Discovery is currently read by over 20,000 subscribers. Support us by (1) <a class="grey" href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/9ed85ff3-16b2-41e0-aae6-53b04f2aea5a/event" style="text-decoration: underline;color: #707070 !important;">Sponsoring an issue</a>, (2) <a class="grey" href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/8b0d979a-71a3-434c-9271-d63d12692baf/event" style="text-decoration: underline;color: #707070 !important;">Booking a classified ad</a>, or (3) <a class="grey" href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/4b63527a-6aba-4d8f-9afc-87943918602d/event" style="text-decoration: underline;color: #707070 !important;">Sharing this issue</a> with friends and colleagues.</p>
+
+</td></tr>
+<!-- INTRO End -->
+
+
+
+
+
+
+
+
+<!-- SPONSOR Start  FORMAT B-->
+
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+<tr><td align="left" class="headline box-yellow" style="border-collapse: collapse;background: #f8eccf;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+<h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Easy Visual Design Feedback <a class="h1byline" href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/9ed85ff3-16b2-41e0-aae6-53b04f2aea5a/event" style="text-decoration: none;display: inline-block;font-size: 12px;line-height: 25px;font-weight: 400;float: right;color: #6d6b57 !important;">SPONSOR</a>
+</h1>
+
+</td></tr>
+
+<tr><td align="left" class="box-yellow" style="border-collapse: collapse;background: #f8eccf;">
+
+<!--[if mso]>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr><td width="35%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt20 padr10 padl20 padb5" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-bottom: 5px;padding-left: 20px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+<img src="https://www.densediscovery.com/archive/69/sponsor.jpg" alt="❏" width="194" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 padb5 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-bottom: 5px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">BugHerd helps Devs and Designers get actionable, visual website feedback from clients. Simply put, BugHerd acts like a transparent layer on a website, with a point and click leaving a sticky-note task on the webpage. You’ll get less “the link is broken on this page” and get more contextual feedback like a screenshot, browser and OS info and more, ready to action! <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/def23d5f-a5ac-458a-8193-5a778b5cca9a/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Try BugHerd <em>free</em> for 14 days.</b></a></p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+<!-- SPONSOR End -->
+
+
+
+<!-- DIGITAL Start -->
+
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+<tr><td align="left" class="headline" style="border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+<h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Apps &amp; Sites</h1>
+
+</td></tr>
+
+
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="35%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/731b004b-b802-40c7-9a06-49e49ed0abc9/event" style="text-decoration: underline;color: #000000 !important;">Anchor</a> →</h2>
+
+<h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Lightweight blogging</h3>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Anchor is a simple, themeable blogging platform you can install on your own server. It supports Markdown and HTML to write posts and the whole system comes in at less than 250kb.</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+
+
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="35%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/ea781c64-9fdd-4d56-bd21-dfa9f89301df/event" style="text-decoration: underline;color: #000000 !important;">Twizzle</a> →</h2>
+
+<h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Twitter without the timeline</h3>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Twizzle is a ‘light’ Twitter app for macOS, Windows, and Linux that focuses on messages and tweeting only. You won’t get sucked into the timeline because there is none. </p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr><td width="35%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/e03b7960-3910-43e1-9a04-d496346d30a3/event" style="text-decoration: underline;color: #000000 !important;">Slapdash</a> →</h2>
+
+<h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">File &amp; task manager</h3>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Based on the limited amount of info on their website, it’s hard to say what exactly Slapdash is/does. It looks like a tool to manage files (from places like Dropbox and G Drive) and combine them with tasks on other platforms (like Asana, Github, Slack, etc). You’ll have to sign up for an account to find out more... </p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr><td width="35%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/ad7cfaf2-855a-43c8-99a6-91f16556ab3d/event" style="text-decoration: underline;color: #000000 !important;">Timing</a> →</h2>
+
+<h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Track your screen time</h3>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Timing observes how you use your Mac. It categorises your activities to see how you spent your time. It even automatically recognises blocks of time that belong together.</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+<!-- DIGITAL End -->
+
+
+
+
+<!-- BOX PROJECT Start -->
+
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+<tr><td align="left" class="headline box-red" style="border-collapse: collapse;background: #efe2f3;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+<h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Indie Mag of the Week</h1>
+
+</td></tr>
+
+<tr><td align="left" class="box-red" style="border-collapse: collapse;background: #efe2f3;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="35%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt20 padr10 padb5 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-bottom: 5px;padding-left: 20px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;"><img src="https://www.densediscovery.com/archive/69/mag.jpg" alt="❏" width="290" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;"></p>
+
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt15 padr20 padl10 padb5 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-bottom: 5px;padding-left: 10px;" valign="top">
+
+<h2 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/f73f0a3c-3997-40f6-b94e-d2da67d428db/event" style="text-decoration: underline;color: #000000 !important;">Chickpea</a> →</h2>
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Chickpea is an ad-free, low-waste vegan food and lifestyle quarterly that is centred around anti-consumerism and community.</p>
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+– Latest Issue: <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/5f22d5b9-a338-4d47-beb1-31f66b6bfbc6/event" style="text-decoration: underline;color: #000000 !important;">31</a>
+<br> – Frequency: 4 issues/year
+<br> – Formats: digital &amp; print
+<br> – Origin: USA
+</p>
+
+<p class="small grey" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #837089 !important;padding: 0;margin: 0;margin-bottom: 15px;">Every week we’re giving away five copies to randomly selected DD readers. Keep an eye on your inbox to find out if you’re among them!</p>
+
+
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+
+</td></tr>
+
+
+<!-- BOX PROJECT End -->
+
+
+
+
+<!-- ACCESSORIES Start -->
+
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+<tr><td align="left" class="headline" style="border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+<h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Goods &amp; Accessories <a class="h1byline grey browser" href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/d41baebf-2b9b-462b-ae32-495e5759d83e/event" style="text-decoration: none;text-align: right;display: inline-block;font-size: 12px;line-height: 25px;font-weight: 400;float: right;color: #707070 !important;">CONSUME RESPONSIBLY</a>
+</h1>
+
+</td></tr>
+
+
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="50%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+<img src="https://www.densediscovery.com/archive/69/book.jpg" alt="❏" width="290" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="50%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt15 padr10 padl20 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/061bbbfe-6a28-4c00-91ea-ed25e4b78062/event" style="text-decoration: underline;color: #000000 !important;">Winners Take All</a> →</h2>
+
+<h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">The Elite Charade of Changing the World</h3>
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">I first heard of Anand Giridharadas on a podcast and instantly became interested in what he had to say. I still haven’t read his book but I watched dozens of his speeches online. Ever since the book launched, he’s been on countless talk shows, spoken at global conferences, and even made a case against the existence of billionaires at the <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/03f2c7b9-4799-42f2-aebc-cc9acc309c3d/event" style="text-decoration: underline;color: #000000 !important;">Dutch parliament</a> (Watch the first 10 minutes – an incredible speech that he opens with: “It is an honour to be here in The Hague, the past home of my wife and the future home of President Donald Trump.”) He’s an incredibly smart, funny, and articulate thinker and I can’t wait to finally dig into his book. Read a <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/6a9b0508-2e3d-4ceb-b191-164ada44a232/event" style="text-decoration: underline;color: #000000 !important;">review of the book here</a> or <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/3af1be8c-9778-4c70-ae4d-818e215d5144/event" style="text-decoration: underline;color: #000000 !important;">watch this illustrated summary</a> of its thesis.</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+
+
+
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="50%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+<img src="https://www.densediscovery.com/archive/69/pen.jpg" alt="❏" width="290" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="50%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt15 padr10 padl20 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/6ed5869f-ecf8-4bf9-929d-1762f97899af/event" style="text-decoration: underline;color: #000000 !important;">Bolt Action Pen</a> →</h2>
+
+<h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Machined pen</h3>
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Texas-made, machined, refillable pens that last a lifetime, with a unique feature: “The main piece that makes these pens interesting is the unique bolt action. It’s one fluid motion to advance or retract and, because the surfaces of both the interior part and the inside surface have been carefully machined to be extra smooth, the action feels amazingly satisfying.”</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+
+
+
+<!-- ACCESSORIES End -->
+
+
+
+
+
+<!-- BOX TWEET Start -->
+
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+<tr><td align="left" class="headline" style="background: #d1eaf4;border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+<h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Overheard on Twitter</h1>
+
+</td></tr>
+
+
+<tr>
+<td align="left" class="padt15 padr20 padl20 padb5" style="background: #d1eaf4;border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-bottom: 5px;padding-left: 20px;">
+
+<p class="large" style="font-size: 21px;line-height: 30px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+If you told someone 15 years ago that in the future their computer would have something called ‘airplane mode’, they would be incredibly disappointed by what that actually did.
+</p>
+
+<h2 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;">– <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/2bae4822-7193-472f-985e-fe0859032469/event" style="text-decoration: underline;color: #000000 !important;">@thedavidpowell</a>
+</h2>
+
+</td>
+
+<!-- BOX TWEET End -->
+
+
+
+<!-- PERUSAL Start -->
+</tr>
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+<tr><td align="left" class="headline" style="border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+<h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Food For Thought</h1>
+
+</td></tr>
+
+
+
+
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="35%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/e0e7cb33-b947-4d0d-b78e-d8a2d6af4863/event" style="text-decoration: underline;color: #000000 !important;">Learning About Work Ethic From My High School Driving Instructor</a> →</h2>
+
+<h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Read</h3>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">I really enjoyed this essay about finding fulfilment and pursuing excellence in one’s job: “The car in front of us had slowed down, signaled, pulled over toward the shoulder, and made a smooth right turn into a shopping complex. Bob [the driving instructor] was impressed. ‘See how nicely he positioned that car?’ He explained to the girl that that was exactly how it was done. And then a while later, long after the moment had passed, he said quietly, more to himself than to either of us, ’I really liked the way he did that.’”</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="35%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/506f2e39-1bcc-488c-8af0-d271cb7f896f/event" style="text-decoration: underline;color: #000000 !important;">Global Apathy Toward the Fires in Australia Is a Scary Portent for the Future</a> →</h2>
+
+<h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Read</h3>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">David Wallace-Wells with a sombre, disturbing assessment on how the catastrophic, ongoing fires here in Australia already have a normalising effect on us and how easily we disconnect the suffering of people elsewhere (specifically in poorer countries) from our own lives – largely due to “the desire to look away, to avoid contemplating the scariest aspects of contemporary life or what they portend for our future, the shortsightedness of the media, reluctant to cover climate disasters, at least as climate disasters, and the forces of denial now seemingly embodied as much by Australian prime minister Scott Morrison as they are by Donald Trump or Jair Bolsonaro.” </p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="35%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/36e3348a-2a73-4306-9f41-70bcea90e615/event" style="text-decoration: underline;color: #000000 !important;">The Case for Being a Multi-Hyphenate</a> →</h2>
+
+<h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Read</h3>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">I struggle with developing a broader set of interests and hobbies. This article came as a good reminder to make a greater effort this year: “By becoming well-rounded we also become sharper – and not just sharper but stronger, and able to put more force behind the arrow. Wisdom is fungible. The more you have of it – regardless of where you got it – the more places you can apply it. (...) Mastery, and the specialization it requires, is exhausting. Many talented or promising people burn out before their time.” </p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+
+
+<!-- PERUSAL End -->
+
+
+
+<!-- BOX VISUAL INSP Start -->
+
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+<tr><td align="left" class="headline" style="background: #f2f2f2;border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+<h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Aesthetically Pleasing</h1>
+
+</td></tr>
+
+<tr><td align="left" style="background: #f2f2f2;border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="65%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt20 padr10 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<p class="marb0" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 0;">
+<img src="https://www.densediscovery.com/archive/69/graphic1.jpg" alt="❏" width="386" height="auto" class="img img-line" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;margin-bottom: 2px;">
+<img src="https://www.densediscovery.com/archive/69/graphic2.jpg" alt="❏" width="386" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="35%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">What an impressive and colourful portfolio by Swiss design shop <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/cbbac6e5-2662-4824-a060-f5748c64b811/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Studio Feixen</b></a>.</p>
+
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+<tr><td align="left" style="background: #f2f2f2;border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="65%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt20 padr10 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<p class="marb0" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 0;">
+<img src="https://www.densediscovery.com/archive/69/art1.jpg" alt="❏" width="386" height="auto" class="img img-line" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;margin-bottom: 2px;">
+<img src="https://www.densediscovery.com/archive/69/art2.jpg" alt="❏" width="386" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="35%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">UK artist <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/3f9b9c5b-ce09-4ac3-bee9-540232d43134/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Lisa Lloyd</b></a> creates intricate animal sculptures from nothing but glue and paper.</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+
+
+<tr><td align="left" style="background: #f2f2f2;border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="65%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt20 padr10 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<p class="marb0" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 0;">
+<img src="https://www.densediscovery.com/archive/69/font1.jpg" alt="❏" width="386" height="auto" class="img img-line" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;margin-bottom: 2px;">
+<img src="https://www.densediscovery.com/archive/69/font2.gif" alt="❏" width="386" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="35%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;"><a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/e65498bb-d132-4e3e-9b1c-2558f3787532/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Marlet</b></a> is a beautiful and inspiring set of typographic elements based on a minimal and simplistic approach to elegance.</p>
+
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+
+</td></tr>
+
+
+
+
+<tr><td align="left" class="padb5" style="background: #f2f2f2;border-collapse: collapse;padding-bottom: 5px;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="65%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt20 padr10 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+<img src="https://www.densediscovery.com/archive/69/vid1.jpg" alt="❏" width="386" height="auto" class="img img-line" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;margin-bottom: 2px;">
+<img src="https://www.densediscovery.com/archive/69/vid2.jpg" alt="❏" width="386" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="35%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">One of them isn’t real: illusion artist <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/64ef11a4-a007-46ab-91f7-4fe29b07f4d6/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Howard Lee</b></a> draws photorealistic objects to trick the eye.</p>
+
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+
+
+<!-- BOX VISUAL INSP End -->
+
+
+
+<!-- CLASSIFIEDS Start -->
+
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+<tr><td align="left" class="headline" style="border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+<h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Classifieds</h1>
+
+</td></tr>
+
+
+
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="75%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="448"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;"><a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/e111356e-b966-4ad9-a1fa-d361bc33abe2/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Get Freedom</b></a> to block apps &amp; websites that distract you when you’re working or want to engage with life beyond pixels. Syncs across all your devices – Mac, Windows, iOS and Android.</p>
+
+<div class="line" style="border-bottom: 2px solid #efefef;display: block;height: 2px;margin-bottom: 15px;"><br></div>
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;"><a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/d66a9592-939a-46a8-9a54-b8d7df8a2bdb/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Cognitive</b></a> can custom-build a powerful multi-user database system with FileMaker software when no ‘off-the-shelf’ package will work for your unique business needs. (Mac/Win/iOS)</p>
+
+<div class="line" style="border-bottom: 2px solid #efefef;display: block;height: 2px;margin-bottom: 15px;"><br></div>
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Desmos wants to help all students learn math and love learning math. And we’re hiring! <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/7330d94b-6b9f-47e6-b05f-05d7eaa0d185/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Join us.</b></a></p>
+
+<div class="line" style="border-bottom: 2px solid #efefef;display: block;height: 2px;margin-bottom: 15px;"><br></div>
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;"><a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/e6c19284-4225-48b2-9ce4-f7d343e0c45e/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Merch Notes</b></a> is an on-demand product description writing service for ecommerce shops.</p>
+
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="25%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="180"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p class="grey" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #707070 !important;padding: 0;margin: 0;margin-bottom: 15px;">Classifieds are paid ads that support DD and are seen by over 20,000 subscribers each week.</p>
+
+<p class="padb5" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;padding-bottom: 5px;"><a class="btn btn-grey" href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/8b0d979a-71a3-434c-9271-d63d12692baf/event" style="text-decoration: none !important;display: inline-block;padding: 3px 8px;text-align: center;background: #afafaf;color: #ffffff !important;"><b style="font-weight: 600;">Book yours →</b></a> </p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+<!-- CLASSIFIEDS End -->
+
+<!-- BOX GIF Start -->
+
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+<tr><td align="left" class="headline" style="background: #def1ef;border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+<h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">The Week in a GIF</h1>
+
+</td></tr>
+
+
+<tr><td align="left" style="background: #def1ef;border-collapse: collapse;">
+
+<!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="65%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt20 padr10 padb5 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-bottom: 5px;padding-left: 20px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+<img src="https://www.densediscovery.com/archive/69/gif.gif" alt="❏" width="386" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td><td width="35%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr20 padb5  padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-bottom: 5px;padding-left: 10px;" valign="top">
+
+<p class="marb5" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 5px;">Email us the URL to your favourite GIF and we might feature it here in a future issue.</p>
+
+<p class="small" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;"><a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/572790dd-112f-4a1e-8040-5eff2ac2215f/event" style="text-decoration: underline;color: #000000 !important;">new@densediscovery.com</a></p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+
+</td></tr>
+
+
+<!-- BOX GIF End -->
+
+
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+</tbody></table>
+<!--/600px container -->
+
+
+
+
+</td></tr></tbody></table>
+<!--/100% background wrapper-->
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+
+<table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="100%"><tbody><tr><td align="center" bgcolor="#555555" style="background-color: #f2f2f2;border-collapse: collapse;" valign="top">
+
+
+<!-- 600px container -->
+
+<table border="0" cellpadding="0" cellspacing="0" class="footer" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 640px;max-width: 640px;" width="640"><tbody>
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+<tr><td align="left" style="border-collapse: collapse;">
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="100%"><tbody><tr><td class="padt20 padr20 padl20" style="text-align: center;border-collapse: collapse;padding-top: 20px;padding-right: 20px;padding-left: 20px;" valign="top">
+
+<h1 class="padb15" style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;padding-bottom: 15px;">Enjoyed this issue? Share it: </h1>
+
+<p class="share" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 15px 5px;margin: 0;margin-bottom: 15px;border: 1px dashed #5f5f5f;background: #f8f8f8;text-align: center;">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/4b63527a-6aba-4d8f-9afc-87943918602d/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">www.densediscovery.com/issues/69</b></a>
+</p>
+
+<a class="small" href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/cffbd01d-788d-4b3b-842c-6422ac0740c5/event" style="text-decoration: underline;font-size: 14px;line-height: 19px;color: #000000 !important;">Share on Twitter</a> →   
+
+<a class="small" href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/12cd8d53-8a4b-4838-887b-4e3d22feeb36/event" style="text-decoration: underline;font-size: 14px;line-height: 19px;color: #000000 !important;">Forward via email</a> →
+
+
+</td></tr></tbody></table>
+
+</td></tr>
+
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+<tr><td align="left" style="border-collapse: collapse;">
+
+<!--[if mso]>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr><td width="65%" valign="top"><![endif]-->
+
+<table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt20 padr20 padb5 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 20px;padding-bottom: 5px;padding-left: 20px;" valign="top">
+
+
+<p class="small" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Dense Discovery recognises that we’re in a <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/7ec8820c-31ca-4d54-bf78-0aea97100ba9/event" style="text-decoration: underline;color: #000000 !important;">climate emergency</a>. Besides encouraging individual action to <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/d997d81f-8cb6-4acf-97b6-aa47df64b79f/event" style="text-decoration: underline;color: #000000 !important;">fight climate change</a> and to <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/d41baebf-2b9b-462b-ae32-495e5759d83e/event" style="text-decoration: underline;color: #000000 !important;">consume more responsibly</a>, we’re proudly supporting the work of environmental advocacy and action groups like the <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/4f3abbb4-d2a6-4516-a73e-e27ef518ec97/event" style="text-decoration: underline;color: #000000 !important;">Rainforest Trust</a>, a <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/923b3cf7-80ff-4540-8883-016525c8d816/event" style="text-decoration: underline;color: #000000 !important;">four-star</a> charity that directs 100% of their donations to conservation action. Make a tax-deductible donation: <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/f2833c5c-2baa-48c6-b594-c59d947c528b/event" style="text-decoration: underline;color: #000000 !important;">US</a>, <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/f54eab2f-abbd-4287-955f-e4855ee18838/event" style="text-decoration: underline;color: #000000 !important;">UK</a>, <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/1a0a60e5-c8a5-41e4-88a3-7a6645b8f8e6/event" style="text-decoration: underline;color: #000000 !important;">AU</a>, <a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/aba6e50a-b40d-4f53-9fc0-c7b3ee543721/event" style="text-decoration: underline;color: #000000 !important;">CA</a> </p>
+
+<p class="small" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Our office is located in Fitzroy, Melbourne, the traditional lands of the Wurundjeri people. We acknowledge that sovereignty was never ceded and pay our respects to elders past, present, and emerging.</p>
+
+
+
+</td></tr></tbody></table>
+
+
+<!--[if mso]></td><td width="35%" valign="top"><![endif]-->
+
+<table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt20 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 20px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+<a href="http://click.densediscovery.com/ 
+<br>
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/1c5e4dc6-eb72-4dbd-b04a-513e440952ad/event" style="text-decoration: underline;color: #000000 !important;">Browse older issues</a>
+</p>
+
+<p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/9ed85ff3-16b2-41e0-aae6-53b04f2aea5a/event" style="text-decoration: underline;color: #000000 !important;">Sponsor an issue</a>
+<br>
+<a href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/8b0d979a-71a3-434c-9271-d63d12692baf/event" style="text-decoration: underline;color: #000000 !important;">Book a classified ad</a>
+</p>
+
+<p class="small grey" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #707070 !important;padding: 0;margin: 0;margin-bottom: 15px;">Published by:
+<br><a class="grey" href="http://click.densediscovery.com/click/d3f42365-ec8f-41cf-a858-165cb5448ed5/caceee26-aab0-4b14-9f37-885858acd8be/event" style="text-decoration: underline;color: #707070 !important;">Kai Brach</a>
+<br>Offscreen Media
+<br>149a Brunswick St
+<br> Fitzroy VIC 3065
+<br> Australia</p>
+
+</td></tr></tbody></table>
+
+<!--[if mso]></td></tr></table><![endif]-->
+
+</td></tr>
+
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+</tbody></table>
+
+
+
+</td></tr></tbody></table>
+
+
+
+<div><img src="http://click.densediscovery.com/open/d3f42365-ec8f-41cf-a858-165cb5448ed5/event" alt="_t" width="1" height="1"></div>
+</body>
+</html>

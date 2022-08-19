@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" style="background-color:#f5f5f5">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Variety Live Media</title>
+  <style type="text/css">
+  /*body {margin: 0; padding: 0; min-width: 100%!important;}*/
+
+  /* --------------------------------------------
+    FOR DESKTOP DEVICES.
+  -------------------------------------------- */
+  img {
+   max-width: 100%;
+  }
+
+    .center {
+      display: block !important;
+      max-width: 700px !important;
+      min-width: 640px !important;
+      margin: 0 auto !important;
+      clear: both !important;
+      padding-top: 5px;
+      box-sizing: border-box;
+    }
+
+  /* --------------------------------------------
+    FOR MOBILE DEVICES,
+    MAKE THE MAIN TEXT 25% LARGER
+  -------------------------------------------- */
+  @media only screen and (max-width: 700px) {
+    
+    .container {
+        width:100% !important;
+      }
+    
+    img {
+        max-width:100% !important;
+        height:auto !important;
+        max-height:auto !important;
+      }
+    
+    .responsive-td {
+        width:100% !important;
+        display:block !important;
+        padding:0 !important;
+      }
+
+   .center {
+    max-width: 100% !important;
+    min-width: 375px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+        padding-top: 10px;
+   }
+
+   .small-12 {
+    width: 100% !important;
+    display: inline-block !important;
+    padding: 0 !important;
+   }
+
+      .feature-h1{
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+      .feature-h1-centered{
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+      .headline{
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+      .h5-3col{
+        font-size: 28px !important;
+        line-height: 36px !important;
+      }
+      .cta{
+        font-size: 20px !important;
+        line-height: 24px !important;
+        padding-bottom: 10px !important;
+      }
+      .deck{
+        font-size: 22px !important;
+        line-height: 28px !important;
+      }
+
+      .story {
+        padding-top: 15px !important;
+      }
+      .logo {
+        padding-top: 10px !important;
+      }
+      .date {
+        padding-bottom: 10px !important;
+      }
+      .row {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+    .mobile-hidden {
+        display:none !important;
+      }
+    }
+  </style>
+
+  <style>
+
+      html {
+        min-height: 100%;
+        background: #f3f3f3
+      }
+
+
+    @media only screen and (max-width:700px) {
+      table.body img {
+        width: auto;
+        height: auto
+      }
+      table.body center {
+        min-width: 0 !important
+      }
+      table.body .container {
+        width: 100% !important
+      }
+      table.body .columns {
+        height: auto !important;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 20px !important;
+        padding-right: 20px !important
+      }
+      th.small-3 {
+        display: inline-block !important;
+        width: 25% !important
+      }
+      th.small-6 {
+        display: inline-block !important;
+        width: 50% !important
+      }
+      th.small-12 {
+        display: inline-block !important;
+        width: 100% !important
+      }
+
+      table.body .columns.first {
+        padding-bottom: 5px !important
+      }
+      table.body .columns.pad-bottom {
+        padding-bottom: 20px !important
+      }
+
+      table.header.header--stacked h1 {
+        font-size: 30px !important
+      }
+
+      h1::not('.header-title') {
+        font-size: 22px !important
+      }
+      h2 {
+        font-size: 18px !important
+      }
+      table.body .large-12 h1,
+      table.body .large-6 h2 {
+        margin-top: 5px !important
+      }
+
+      table.container table.row.stack-mobile th.columns.last {
+        padding-top: 0 !important
+      }
+
+      .cta .magazine {
+        max-width: 80% !important
+      }
+    }
+  </style>
+  <style>
+  .header-stacked-title-inverse{
+    font-family: 'Graphik', sans-serif;
+    color: #fae325 !important;
+  }
+  .date{
+    color: #FFF !important;
+  }
+  .feature-h1{
+    font-family: 'Graphik', sans-serif;
+    color: #000000 !important;
+    font-weight:500;
+    margin-top:10px;
+  }
+  .feature-h1-centered{
+    font-family: 'Graphik', sans-serif;
+    color: #000000 !important;
+    font-weight:500;
+    margin-top:10px;
+  }
+  .headline{
+    font-family: 'Graphik', sans-serif;
+    color: #000000 !important;
+    font-weight:500;
+  }
+  .h5-3col{
+    font-family: 'Graphik', sans-serif;
+    color: #000000 !important;
+    font-weight:500;
+  }
+  .cta{
+    font-family: 'Graphik', sans-serif;
+    color: #257dca !important;
+    font-weight:400;
+    padding-bottom:25px;
+  }
+  .magazine{
+    margin-top:15px;
+    margin-bottom:15px;
+  }
+  </style>
+
+  <style>
+  @font-face{
+   font-family:Graphik;
+   src:url(https://s2.wp.com/wp-content/themes/vip/pmc-variety-2017/assets/build/fonts/Graphik-Bold-Web.woff2) format("woff2");
+   font-weight:500;
+   font-style: bold;
+  }
+  @font-face{
+   font-family:Graphik;
+   src:url(https://s2.wp.com/wp-content/themes/vip/pmc-variety-2017/assets/build/fonts/Graphik-Medium-Web.woff2) format("woff2");
+   font-weight:400;
+   font-style: normal;
+  }
+  @font-face{
+   font-family:Graphik;
+   src:url(https://s2.wp.com/wp-content/themes/vip/pmc-variety-2017/assets/build/fonts/Graphik-Regular-Web.woff2) format("woff2");
+   font-weight:200;
+   font-style: normal;
+  }
+  </style>
+</head>
+
+<body style="-moz-box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-box-sizing:border-box;-webkit-text-size-adjust:100%;Margin:0;background-color:#f5f5f5;box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;min-width:100%;padding:0;text-align:left;width:100%!important"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Secure the pre-sale rate today. </div>
+  <table class="body" style="Margin:0;background:#f3f3f3;background-color:#f5f5f5;border-collapse:collapse;border-spacing:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;height:100%;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:top;width:100%">
+    <tr style="padding:0;text-align:left;vertical-align:top">
+      <td class="center" align="center" valign="top" style="-moz-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;hyphens:none;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+        <center data-parsed="" style="min-width:700px;width:100%">
+          <!-- Max Width for Outlook Fix -->
+          <!--[if mso]>                     <table height="100%" cellpadding="0" cellspacing="0" border="0" style="padding:0px;margin:0px;">                    <tr><td colspan="3" style="padding:0px;margin:0px;font-size:20px;height:20px;" height="20">&nbsp;</td></tr>                    <tr>                       <td style="padding:0px;margin:0px;">&nbsp;</td>                       <td style="padding:0px;margin:0px;" width="700">             <![endif]-->
+          <table align="center" class="container float-center" style="Margin:0 auto;background:0 0;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:700px;max-width:700px">
+              <tbody>
+                <tr style="padding:0;text-align:left;vertical-align:top">
+                  <td style="-moz-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;hyphens:none;line-height:1.4;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+   <table align="center" class="container float-center" style="Margin:0 auto;background:0 0;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:700px;max-width:700px">
+     <tr>
+    <td>
+     </td>
+   </tr>
+   <tr>
+    <td style="padding-top: 10px;">
+     <!----><table cellpadding="0" cellspacing="0" width="100%" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td valign="top" style="width: 50%; padding-right: 3px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><p class="text-left" style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:12px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+	<a href="https://view.email.variety.com/?qs=f10250bdb0b42128713f15739a7be77f501b38d7c4fd5b091958f3409fb9ab733388cf093a157050649af42153c56fee95bf79117b244b0dbbd0fbfd6b5dc9406d5cd0bb7ec8fc12" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:12px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">View on web</a></p></td></tr></table><!----></td><td valign="top" style="width: 50%; padding-left: 3px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><p class="text-right" style="Margin:0;Margin-bottom:10px;color:#555;font-family:Georgia,serif;font-size:12px;font-weight:300;line-height:24px;margin:0;margin-bottom:10px;padding:0;text-align:right">
+	<a href="https://click.email.variety.com/?qs=210bc29800340797e27c347acd8b9b742fec646d066902c1c489e77b6ef501f813c35165dd856d98000c74b39380a3d4a98708ae85545f20" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:12px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">New reader? Subscribe</a></p></td></tr></table><!----></td></tr></table></td></tr></table></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table cellpadding="0" cellspacing="0" width="100%">
+ 
+  <tr>
+   <td align="center">
+    <img alt="" src="http://image.email.variety.com/lib/fe9613727467027977/m/2/76d8dd4f-3082-4153-afa8-d353a681935a.jpg" usemap="#map1540316886186"><map id="map1540316886186" name="map1540316886186"><area alt="About" coords="228.00001525878906,29,307.00001525878906,60" href="https://click.email.variety.com/?qs=210bc298003407974c9019f7c45833c4426abfa2618d540b1cd86f1d0b95f45e59521e83767eed9423d2a042e2ac0cb6d9db107fa53940a4" shape="rect" target="_self" title="About"><area alt="Agenda" coords="334.00001525878906,29,427.00001525878906,61" href="https://click.email.variety.com/?qs=210bc298003407974c9019f7c45833c4426abfa2618d540b1cd86f1d0b95f45e59521e83767eed9423d2a042e2ac0cb6d9db107fa53940a4" shape="rect" target="_self" title="Agenda">
+<area alt="Lineup" coords="453.00001525878906,27,533.0000152587891,58" href="https://click.email.variety.com/?qs=210bc298003407971b216b0beb587a1e83c5b26ba7fb33284b16c9599b64cbaaaf6fb693140f5f2dcc3aeec95939c16123f44c02b562261a" shape="rect" target="_blank" title="Lineup">
+<area alt="Tickets" coords="559.0000152587891,29,654.0000152587891,58" href="https://click.email.variety.com/?qs=210bc2980034079751a67c7c6388c81a33b76c690021fc10ad10c5c39b829f4e4af6dc85a933a7dab57679e6e106ce3cd072523007811d57" shape="rect" target="_blank" title="Tickets"><area alt="Variety Live Media" coords="36.00001525878906,15,182.00001525878906,78" href="https://click.email.variety.com/?qs=210bc298003407977587fccbc99b710708ff1972dc0afdbfecfcc776cbd119068e656d68c34d9ee2a49f0c1553be6c2213ee901332c732af" shape="rect" target="_blank" title="Variety Live Media"></map></td></tr></table></td></tr></table><!----></td>
+   </tr>
+   <tr>
+    <td style="background-color:#fff;padding-top: 5px;padding-left:0px;padding-right:0px;padding-bottom:10px;">
+     <!----><table cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFFFFF; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 30px; " class="stylingblock-content-wrapper camarker-inner"><div style="text-align: center;">
+	<span style="font-size:22px;"><span style="color:#243842;"><span style="font-family:Arial,Helvetica,sans-serif;"><b><a data-linkto="https://" href="https://click.email.variety.com/?qs=210bc29800340797cbcafb42fcdcd43fa3688aae13d92cebf831efedef6788716d55b1e8023d29f4b30a9cb9262818861ca360457b90aea3" style="color:#243842;text-decoration:none;" title="Variety's Entertainment Marketing Summit&nbsp;Presented By DeloittePre-Sale Rate Available&nbsp;Now">Variety's Entertainment Marketing Summit&nbsp;<br>
+	Presented By Deloitte</a></b></span></span></span><br>
+	<span style="font-size:21px;"><span style="color:#243842;"><span style="font-family:Arial,Helvetica,sans-serif;"><b><a data-linkto="https://" href="https://click.email.variety.com/?qs=210bc29800340797cbcafb42fcdcd43fa3688aae13d92cebf831efedef6788716d55b1e8023d29f4b30a9cb9262818861ca360457b90aea3" style="color:#243842;text-decoration:none;" title="Variety's Entertainment Marketing Summit&nbsp;Presented By DeloittePre-Sale Rate Available&nbsp;Now">Pre-Sale Rate Available&nbsp;Now</a></b></span></span></span></div></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center">
+<a href="https://click.email.variety.com/?qs=210bc29800340797352f3be6ee6eed0365886362730d5bfdfbfcda8461676920a957aa3f72a60ea95dbe20e2c4cf3fc44ef9e8913bd64fa5" title="" data-linkto="https://"><img data-assetid="12428" src="http://image.email.variety.com/lib/fe9613727467027977/m/3/6fd5f8dd-5599-4a65-bfcd-dc6a98df5bf1.png" height="1499" width="700" style="display: block; padding: 2px; text-align: center; height: 1499px; width: 700px; border: 0px;"></a></td></tr></table></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 20px 0px 25px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><table border="0" cellspacing="0" cellpadding="0"><tr>
+<td class="innertd buttonblock" bgcolor="#243842" style=" border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background-color: #243842;">
+<a target="_blank" class="buttonstyles" style=" font-size: 18px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; background-color: #243842; border: 1px solid transparent; padding: 10px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;" href="https://click.email.variety.com/?qs=210bc29800340797352f3be6ee6eed0365886362730d5bfdfbfcda8461676920a957aa3f72a60ea95dbe20e2c4cf3fc44ef9e8913bd64fa5" title="" data-linkto="https://">Register Now</a></td></tr></table></td></tr></table></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFFFFF; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><div style="text-align: center;">
+	<br>
+	<span style="color:#243842;"><span style="font-family:Arial,Helvetica,sans-serif;"><b><span style="font-size:20px;"># E N T E R T A I N M E N T M A R K E T I N G</span></b></span></span><br>
+	<br>
+	<b><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#243842;">Partnership Inquiries: Sean Soper </span><a alias="ssoper@variety.com" conversion="false" data-linkto="mailto:" href="mailto:ssoper@variety.com?subject=" style="color:#000000;text-decoration:underline;" title="ssoper@variety.com"><span style="color:#243842;">ssoper@variety.com</span></a><br>
+	<span style="color:#243842;">Group Ticket Rate Inquiries: Whitney Cinkala </span><a alias="wcinkala@variety.com" conversion="false" data-linkto="mailto:" href="mailto:wcinkala@variety.com?subject=" style="color:#000000;text-decoration:underline;" title="wcinkala@variety.com"><span style="color:#243842;">wcinkala@variety.com</span></a><br>
+	<span style="color:#243842;">Programming Inquiries: Susanne Ault </span><a alias="susanne.ault@variety.com" conversion="false" data-linkto="mailto:" href="mailto:susanne.ault@variety.com?subject=" style="color:#000000;text-decoration:underline;" title="susanne.ault@variety.com"><span style="color:#243842;">susanne.ault@variety.com</span></a></span></b><br>
+	<span style="color:#243842;">&nbsp;</span></div></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="background-color: #000000; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 10px 10px 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 33%; padding-right: 4px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><br>
+&nbsp;</td></tr></table><!----></td><td valign="top" class="responsive-td" style="width: 33%; padding-left: 2px; padding-right: 2px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#FFFFFF;"><span style="font-size:16px;"><b><i>PRESENTING PARTNER</i></b></span></span></span></td></tr></table><!----></td><td valign="top" class="responsive-td" style="width: 33%; padding-left: 4px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><br>
+&nbsp;</td></tr></table><!----></td></tr></table></td></tr></table></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="background-color: #000000; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 10px 10px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td valign="top" style="width: 33%; padding-right: 4px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><br>
+&nbsp;</td></tr></table><!----></td><td valign="top" style="width: 33%; padding-left: 2px; padding-right: 2px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://click.email.variety.com/?qs=210bc29800340797dec91e2d8a5ef86a88bee68c12a0c48c941e6f5e68f72aca9a01802563715eaeb4358e9a926319266fe42b13d5667a56" title="" data-linkto="https://"><img data-assetid="6504" src="http://image.email.variety.com/lib/fe9613727467027977/m/2/eabe4be1-377e-4c54-9097-308dca04959b.png" height="28" width="150" style="display: block; padding: 10px 0px 0px; text-align: center; height: 28px; width: 150px; border: 0px;"></a></td></tr></table></td></tr></table><!----></td><td valign="top" style="width: 34%; padding-left: 4px;"><!---->
+<table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><br>
+&nbsp;</td></tr></table><!----></td></tr></table></td></tr></table></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="background-color: #000000; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 10px 10px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td valign="top" style="width: 33%; padding-right: 4px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><br>
+&nbsp;</td></tr></table><!----></td><td valign="top" style="width: 33%; padding-left: 2px; padding-right: 2px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="background-color: #000000; border: 9px solid #000000; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><div style="text-align: center;">
+	<span style="font-family:Arial,Helvetica,sans-serif;"><font color="#ffffff"><span style="font-size: 16px;"><b><i>SUPPORTING PARTNERS</i></b></span></font></span></div></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://click.email.variety.com/?qs=210bc298003407979f6738f00f7171682629815a61366ef2ead3931fa9bca5837c723184ba70737882aba2b708cf07b2a262e4016087ae69" title="" data-linkto="https://"><img data-assetid="6356" src="http://image.email.variety.com/lib/fe9613727467027977/m/2/162a9991-617e-4219-902c-dc2c873af9fb.png" height="36" width="109" style="display: block; padding: 10px 0px; text-align: center; height: 36px; width: 109px; border: 0px;"></a></td></tr></table></td></tr></table><!----><!---->
+<table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://click.email.variety.com/?qs=210bc2980034079723cad8b5b30cceca89d3f1749e0b38677f75d8ac93ed916e4582a4f8ea0059d081fe2a66a2279a8a4778225185db1731" title="" data-linkto="http://"><img data-assetid="1047" src="http://image.email.variety.com/lib/fe9613727467027977/m/1/369a2bf7-2a99-4e10-8c26-9f141ac0b3bd.png" height="50" width="50" style="display: block; padding: 10px 0px; text-align: center; height: 50px; width: 50px; border: 0px;"></a></td></tr></table></td></tr></table><!----></td><td valign="top" style="width: 34%; padding-left: 4px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr>
+<td class="stylingblock-content-wrapper camarker-inner"><br>
+&nbsp;</td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 11px 0px 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://click.email.variety.com/?qs=210bc29800340797392d60abb202942b5273d14b84e94ad9d2ddf3cbbbe45f4a871ef859810e8a26c5949447c9a2a1e8a2a4b9069dcec563" title="" data-linkto="https://"></a></td></tr></table></td></tr></table><!----></td></tr></table></td></tr></table></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="background-color: #000000; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 10px 10px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td>
+<table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td valign="top" style="width: 33%; padding-right: 4px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><br>
+&nbsp;</td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://click.email.variety.com/?qs=210bc29800340797eb9da8c4172e3d81a10119b2c24b4b6b1b5865db7224c567fba629a8b288bd117e218007142644474c5c30635ff77300" title="" data-linkto="https://"><img data-assetid="9310" src="http://image.email.variety.com/lib/fe9613727467027977/m/3/381e825c-2e32-4209-b94a-20240aa8147e.png" height="30" width="102" style="display: block; padding: 7px; text-align: center; height: 30px; width: 102px; border: 0px;"></a></td></tr></table></td></tr></table><!----></td><td valign="top" style="width: 33%; padding-left: 2px; padding-right: 2px;"><!---->
+<table cellpadding="0" cellspacing="0" width="100%" style="background-color: #000000; border: 9px solid #000000; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><div style="text-align: center;">
+	<span style="font-family:Arial,Helvetica,sans-serif;"><font color="#ffffff"><span style="font-size: 16px;"><b><i>MEDIA PARTNERS</i></b></span></font></span></div></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://click.email.variety.com/?qs=210bc29800340797587f1ee92449869cf7acff2cae40e819987d83c0d3133c5040fac9ddd40c58f3cbaf6b8625618587e5325101b43496c3" title="" data-linkto="http://"><img data-assetid="8556" src="http://image.email.variety.com/lib/fe9613727467027977/m/3/9f808d1e-707c-47fd-bf72-36958066ca21.png" height="19" width="139" style="display: block; padding: 10px 0px; text-align: center; height: 19px; width: 139px; border: 0px;"></a></td></tr></table></td></tr></table><!----></td>
+<td valign="top" style="width: 34%; padding-left: 4px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><br>
+&nbsp;</td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://click.email.variety.com/?qs=210bc29800340797cd689ef2d6ec853c2c8292ae791751987ff0e2be16843241d8f6e5cdc2357ea35d2565ce3bdcb58b618629d541cef486" title="" data-linkto="https://"><img data-assetid="5462" src="http://image.email.variety.com/lib/fe9613727467027977/m/2/71a40b40-66d3-4439-ae84-543ef739d665.png" height="28" width="80" style="display: block; padding: 10px 0px; text-align: center; height: 28px; width: 80px; border: 0px;"></a></td></tr></table></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr>
+<td style="padding: 11px 0px 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="https://click.email.variety.com/?qs=210bc29800340797392d60abb202942b5273d14b84e94ad9d2ddf3cbbbe45f4a871ef859810e8a26c5949447c9a2a1e8a2a4b9069dcec563" title="" data-linkto="https://"></a></td></tr></table></td></tr></table><!----></td></tr></table></td></tr></table></td></tr></table><!----></td>
+   </tr>
+   <tr>
+    <td>
+     <!----><table cellpadding="0" cellspacing="0" width="100%" style="background-color: #000000; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 20px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td valign="top" style="width: 60%; padding-right: 3px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><a href="https://click.email.variety.com/?qs=210bc29800340797c28abad70c3e9e349ddf7c8e4cfb9f4093960a370a8e9b14eb09be22b53545975b3edd4001d7da3580449e30efc9e468" style="Margin:0;color:#2D2CA2;font-family:Helvetica,Arial,sans-serif;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none">
+<img alt="" height="36" src="http://image.email.variety.com/lib/fe9613727467027977/m/2/949450ef-e41d-47d9-9eec-d5af0ef33fe7.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:125px;outline:0;text-decoration:none;width:auto" width="125"></a></td></tr></table><!----></td><td valign="top" style="width: 40%; padding-left: 3px;"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table class="row" style="background:0 0;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+ 
+  <tr style="padding:0;text-align:left;vertical-align:middle">
+   <th class="icon" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;height:25px;line-height:1.4;margin:0 auto;padding:0;padding-left:10px;padding-right:10px;text-align:left;width:25px">
+    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+     
+      <tr style="padding:0;text-align:left;vertical-align:middle">
+       <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left">
+        <a href="https://click.email.variety.com/?qs=210bc298003407973c68b290be7d90daf77f4182b2d64a7599cec6bf6a5a49f8c9e12951512acd2b322cca63fd1bef6cdeaeb7b33a527e86" style="Margin:0;border:1px solid #2F2F2F;border-radius:50%;color:#2D2CA2;display:block;font-family:Helvetica,Arial,sans-serif;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none;width:35px"><img alt="" height="34" src="http://image.email.variety.com/lib/fe9613727467027977/m/1/footer_social_facebook.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto" width="34"></a></th></tr></table></th>
+<th class="icon" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;height:25px;line-height:1.4;margin:0 auto;padding:0;padding-left:10px;padding-right:10px;text-align:left;width:25px">
+    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+     
+      <tr style="padding:0;text-align:left;vertical-align:middle">
+       <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left">
+        <a href="https://click.email.variety.com/?qs=210bc2980034079750914da654f6ab7d02073aaf329772e451cc2d28dd847a9df29fdfa94d1c7bdc080c36007903b2505f26fd1492e664ad" style="Margin:0;border:1px solid #2F2F2F;border-radius:50%;color:#2D2CA2;display:block;font-family:Helvetica,Arial,sans-serif;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none;width:35px"><img alt="" height="34" src="http://image.email.variety.com/lib/fe9613727467027977/m/1/footer_social_twitter.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto" width="34"></a></th></tr></table></th>
+<th class="icon" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;height:25px;line-height:1.4;margin:0 auto;padding:0;padding-left:10px;padding-right:10px;text-align:left;width:25px">
+    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+     
+      <tr style="padding:0;text-align:left;vertical-align:middle">
+       <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left">
+        <a href="https://click.email.variety.com/?qs=210bc29800340797d7c3a787fa273c0ec24372f3afb516ae2dcf65d7489f020e77e6a00531f520c80dc466ff883f1b01dc26d8e80d673159" style="Margin:0;border:1px solid #2F2F2F;border-radius:50%;color:#2D2CA2;display:block;font-family:Helvetica,Arial,sans-serif;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none;width:35px"><img alt="" height="34" src="http://image.email.variety.com/lib/fe9613727467027977/m/1/footer_social_instagram.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto" width="34"></a></th></tr></table></th>
+<th class="icon" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;height:25px;line-height:1.4;margin:0 auto;padding:0;padding-left:10px;padding-right:20px;text-align:left;width:25px">
+    <table style="border-collapse:collapse;border-spacing:0;max-width:36px;padding:0;text-align:left;vertical-align:top;width:100%">
+     
+      <tr style="padding:0;text-align:left;vertical-align:middle">
+       <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left">
+        <a href="https://click.email.variety.com/?qs=210bc29800340797651073a461db1ef0dacaa549c72893e83150e8ebd6e2f3e0ca2f74e4cebf94026584b4ea555a23aa26bf30b5680dcd22" style="Margin:0;border:1px solid #2F2F2F;border-radius:50%;color:#2D2CA2;display:block;font-family:Helvetica,Arial,sans-serif;font-weight:200;line-height:1.4;margin:0;padding:0;text-align:left;text-decoration:none;width:35px"><img alt="" height="34" src="http://image.email.variety.com/lib/fe9613727467027977/m/1/footer_social_youtube.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto" width="34"></a></th></tr></table></th></tr></table></td></tr></table><!----></td></tr></table></td></tr></table></td></tr></table><!----></td>
+   </tr>
+   <tr>
+     <td>
+                         <!-- Footer Legal Copy -->
+                  <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- Footer -->
+<table class="row footer-copy" style="background:0 0;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                    
+                      <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0 auto;padding:0;padding-bottom:20px;padding-left:20px;padding-right:20px;padding-top:20px;text-align:left;width:660px">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                            <tr style="padding:0;text-align:left;vertical-align:top">
+                              <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0;padding-top:0;text-align:left">
+                                <p style="Margin:0;Margin-bottom:10px;color:grey;font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:300;line-height:16px;margin:0;margin-bottom:0;padding:0;text-align:center">This email was sent to  by Variety. Please add email@email.variety.com to your address book to ensure delivery to your inbox.</p>
+                                <p style="Margin:0;Margin-bottom:10px;color:grey;font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:300;line-height:16px;margin:0;margin-bottom:0;padding:0;text-align:center">Visit the <a href="https://click.email.variety.com/?qs=210bc29800340797e27c347acd8b9b742fec646d066902c1c489e77b6ef501f813c35165dd856d98000c74b39380a3d4a98708ae85545f20" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">Preferences Center</a>                                  to update your profile and customize what email alerts and newsletters you receive.</p>
+                                <p style="Margin:0;Margin-bottom:10px;color:grey;font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:300;line-height:16px;margin:0;margin-bottom:0;padding:0;text-align:center">Copyright © 2020 Variety Media, LLC, a subsidiary of Penske Business Media, LLC.</p>
+                                <p style="Margin:0;Margin-bottom:10px;color:grey;font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:300;line-height:16px;margin:0;margin-bottom:0;padding:0;text-align:center">11175 Santa Monica Boulevard Los Angeles, CA, 90025</p><br>
+                                <p style="Margin:0;Margin-bottom:10px;color:grey;font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:300;line-height:16px;margin:0;margin-bottom:0;padding:0;text-align:center"><a href="https://view.email.variety.com/?qs=f10250bdb0b42128713f15739a7be77f501b38d7c4fd5b091958f3409fb9ab733388cf093a157050649af42153c56fee95bf79117b244b0dbbd0fbfd6b5dc9406d5cd0bb7ec8fc12" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">View in Browser</a> |
+                                  <a href="https://click.email.variety.com/?qs=210bc2980034079796a1f1ae4111050d1cea428afb90f4f47348a3543231424464f30a64fe3c966cb1e20bed9178dcd1093e3ebda19eea45" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">Privacy Policy</a>                                  | <a href="https://click.email.variety.com/?qs=210bc29800340797954d0dfa5237112848847465bb70a3e185b2b92b11aab0fbe76a71a1a18a12227bc804861b25a9d4fcbd7b7ed6ad4ef9" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">Your California Privacy Rights</a>                                  | 
+<a href="https://click.email.variety.com/?qs=210bc29800340797d5f62c1c3475ae78a95689143f6947ffcb981344fcec96c19d52a533027dcea2a285ce60044ea4422e4b943e3096c239" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">Ad Choices</a>                                  | <a href="https://click.email.variety.com/?qs=210bc29800340797de1fbe71b3c762788b6a51fc5c86e8fdb991a2ae952b688ea221a90131b5c3293587c1ae5aa90ac6fdb34e0ec8a5b0e8" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">Terms of Use</a>                                  | 
+<a href="https://click.email.variety.com/?qs=210bc29800340797e27c347acd8b9b742fec646d066902c1c489e77b6ef501f813c35165dd856d98000c74b39380a3d4a98708ae85545f20" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none"> </a></p>
+                                <div style="display:none"><a href="https://click.email.variety.com/profile_center.aspx?qs=bc9d098d48d51001a71b5a36dbef856405b1bfa73f0fdf6a094534cc04180c95172b76a9dd3e8c390f0e2cd9be2d73faf88ac0eaec5cee0f5af38727c3a0fb7d" style="Margin:0;color:#3c43b2!important;font-family:Helvetica;font-size:11px;font-weight:300;line-height:16px;margin:0;padding:0;text-align:center;text-decoration:none">Update Profile</a></div>
+                              </th>
+                              <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:14px;font-weight:300;line-height:1.4;margin:0;padding:0!important;padding-top:0;text-align:left;visibility:hidden;width:0"></th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    
+                  </table>
+<!-- //Footer --></td></tr></table>
+     </td>
+   </tr>
+  </table>
+                    </td>
+              </tr>
+            </tbody>
+          </table>
+                  <!--[if mso]>                      </td>                      <td style="padding:0px;margin:0px;">&nbsp;</td>                  </tr>                  <tr><td colspan="3" style="padding:0px;margin:0px;font-size:20px;height:20px;" height="20">&nbsp;</td></tr>              </table>              <![endif]-->
+        </center>
+      </td>
+    </tr>
+  </table>
+  <!-- prevent Gmail on iOS font size manipulation -->
+  <div style="display:none;white-space:nowrap;font:15px courier;line-height:0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+</body>
+</html>
+<img src="https://click.email.variety.com/open.aspx?ffcb10-fec015787d610c7c-fe561272726c00747410-fe9613727467027977-ff9c1671-fe911373706d057875-ff6416717d" width="1" height="1">

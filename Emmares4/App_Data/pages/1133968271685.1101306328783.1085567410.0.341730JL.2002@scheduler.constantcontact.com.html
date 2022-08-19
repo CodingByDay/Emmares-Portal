@@ -1,0 +1,803 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if gte mso 9]>
+<style id="ol-styles">
+/* OUTLOOK-SPECIFIC STYLES */
+li {
+text-indent: -1em;
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+ul, ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+sup {
+font-size: 85% !important;
+}
+sub {
+font-size: 85% !important;
+}
+</style>
+<![endif]-->
+<style id="template-styles-head" data-premailer="ignore">
+.footer-main-width {
+width: 610px!important;
+max-width: 610px;
+}
+table {
+border-collapse: collapse;
+table-layout: fixed;
+}
+.bgimage {
+table-layout: auto;
+}
+.preheader-container {
+color: transparent;
+display: none;
+font-size: 1px;
+line-height: 1px;
+max-height: 0px;
+max-width: 0px;
+opacity: 0;
+overflow: hidden;
+}
+/* LIST AND p STYLE OVERRIDES */
+.editor-text p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+.editor-text ul,
+.editor-text ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+.editor-text li {
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+/* ==================================================
+CLIENT/BROWSER SPECIFIC OVERRIDES
+================================================== */
+/* IE: correctly scale images with w/h attbs */
+img {
+-ms-interpolation-mode: bicubic;
+}
+/* Text Link Style Reset */
+a {
+text-decoration: underline;
+}
+/* iOS: Autolink styles inherited */
+a[x-apple-data-detectors] {
+text-decoration: underline !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+color: inherit !important;
+}
+/* FF/Chrome: Smooth font rendering */
+.editor-text, .MainTextFullWidth {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+/* Gmail/Web viewport fix */
+u + .body .template-body {
+width: 610px;
+}
+@media only screen and (max-width:480px) {
+u + .body .template-body {
+width: 100% !important;
+}
+}
+/* Office365/Outlook.com image reset */
+[office365] button, [office365] .divider-base div, [office365] .spacer-base div, [office365] .editor-image div { display: block !important; }
+</style>
+<style>@media only screen and (max-width:480px) {
+table {
+border-collapse: collapse;
+}
+.main-width {
+width: 100% !important;
+}
+.mobile-hidden {
+display: none !important;
+}
+td.OneColumnMobile {
+display: block !important;
+}
+.OneColumnMobile {
+width: 100% !important;
+}
+td.editor-col .editor-text {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-button-container {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-social td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .block-margin {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col td.block-margin .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.editor-button td > table tr > td {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-button td > table tr > td td {
+padding: 9px 15px 10px 15px !important;
+}
+.layout {
+padding: 15px 9px 15px 9px !important;
+}
+.layout-container-border {
+padding: 0px 0px 0px 0px !important;
+}
+.layout-container {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-image img {
+width: auto !important; margin-left: auto !important; margin-right: auto !important;
+}
+.editor-image .image-cell {
+padding-bottom: 15px !important;
+}
+.editor-text {
+font-size: 16px !important;
+}
+.section-headline-text {
+font-size: 24px !important;
+}
+.headline-text {
+font-size: 24px !important;
+}
+.subheadline-text {
+font-size: 20px !important;
+}
+.feature {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.layout-outer {
+padding: 0px 20px !important;
+}
+.feature-heading-text {
+font-size: 20px !important;
+}
+.feature-text {
+font-size: 16px !important;
+}
+.split.editor-col {
+margin-top: 0px !important;
+}
+.split.editor-col ~ .split.editor-col {
+margin-top: 10px !important;
+}
+.split-layout-margin {
+padding: 0px 20px !important;
+}
+.article {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.article-heading-text {
+font-size: 20px !important;
+}
+.article-text {
+font-size: 16px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.cpn-heading-text {
+font-size: 28px !important;
+}
+.editor-cpn-heading-text {
+font-size: 28px !important;
+}
+td.col-divided .editor-col {
+border-right: 0px solid #C0C0C0 !important; border-bottom: 1px solid #C0C0C0 !important;
+}
+td.col-divided td.editor-col:last-of-type {
+border-bottom: 0 !important;
+}
+.col-divided {
+padding: 0 20px !important;
+}
+td.col-divided .editor-col .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .block-margin {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.action-block .poll-answer {
+width: 100% !important; display: block !important;
+}
+.action-block .poll-button {
+width: 100% !important;
+}
+div.MobileFooter {
+font-size: 11px !important;
+}
+td.FooterMobile {
+padding: 0px 10px 0px 10px !important;
+}
+td.MainCenter {
+width: 100% !important;
+}
+table.MainSide {
+display: none !important;
+}
+img.MainSide {
+display: none !important;
+}
+td.MainSide {
+display: none !important;
+}
+.rsvp-button-inner {
+padding: 0px 0px 10px 0px !important;
+}
+.rsvp-button-outer {
+width: 100% !important; max-width: 100% !important;
+}
+.action-block .poll-answer {
+width: 100% !important; display: block !important;
+}
+.action-block .poll-button {
+width: 100% !important;
+}
+div.MobileFooter {
+font-size: 11px !important;
+}
+td.FooterMobile {
+padding: 0px 10px 0px 10px !important;
+}
+td.MainCenter {
+width: 100% !important;
+}
+table.MainSide {
+display: none !important;
+}
+img.MainSide {
+display: none !important;
+}
+td.MainSide {
+display: none !important;
+}
+.rsvp-button-inner {
+padding: 0px 0px 10px 0px !important;
+}
+.rsvp-button-outer {
+width: 100% !important; max-width: 100% !important;
+}
+.footer-main-width {
+width: 100% !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-column {
+display: block !important;
+}
+.footer-mobile-stack {
+display: block !important;
+}
+.footer-mobile-stack-padding {
+padding-top: 3px;
+}
+}
+@media only screen and (max-width:320px) {
+.layout {
+padding: 0px 0px 0px 0px !important;
+}
+}
+@media screen {
+@font-face {
+font-family: ''; font-style: normal; font-weight: 400; src: local(''), local(''), url() format(''); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+}
+</style>
+</head>
+<body class="body" align="center" style="width: 100%; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #000000; margin: 0px; padding: 0px;" bgcolor="#000000">
+<table class="template-body" border="0" cellpadding="0" cellspacing="0" style="text-align: center; min-width: 100%;" width="100%">
+<tr>
+<td class="preheader-container">
+<div>
+<div id="preheader" style="display: none; font-size: 1px; color: transparent; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+<span data-entity-ref="preheader">A Writer Returns Home to Learn More About Kurt Vonnegut and Herself</span>
+</div>
+<img src="http://r20.rs6.net/on.jsp?ca=897db4d2-a99a-4a09-a44a-5ae3473d3d88&a=1101306328783&c=f3930636-98f9-11e9-bbe7-d4ae52754055&ch=f3943862-98f9-11e9-bbe7-d4ae52754055" alt="">
+</div>
+</td>
+</tr>
+<tr>
+<td class="template-shell-container" align="center">
+<div class="bgcolor" style="background-color: #000000;">
+<table class="bgimage" width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #000000;" bgcolor="#000000">
+<tbody>
+<tr>
+<td align="center">
+<table class="main-width" width="610" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 610px;">
+<tbody>
+<tr>
+<td class="layout" align="center" valign="top" style="padding: 15px 5px;">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="layout-container-border" align="center" valign="top" style="background-color: #C0C0C0; padding: 0px;" bgcolor="#C0C0C0">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #C0C0C0;" bgcolor="#C0C0C0">
+<tbody>
+<tr>
+<td class="layout-container" align="center" valign="top" style="background-color: #FFFFFF; padding: 0;" bgcolor="#FFFFFF">
+<div class="">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="logo editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image logo-container content-image editor-image-vspace-on" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 10px; padding-bottom: 10px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=001LoKtwIlIphXx3Y8mshH-xYBT_i3hZoJNFKdG3KzYyeJfKtB1NJAZDUahIWKqxV2ZQXOdOji9n_sel1m6KBlmgaHy2OdGqVfZcLXLytyn9Vy7WVtKncMNuD-8KDQbKfIbNwAOwm_7k780u8vgbIL788H3VZjSSRZ5&c=uIfB6SqzqsRVNsWHyWAmbP9qA7QMliPwGgbXsxXeS5Ynf6iyxUUlig==&ch=LIN31esvMFOcHjzKwlH9lZ4-Xynr7S_OiPP9A8hxXsZ4KFqD63sfeQ==">
+<img alt="https://mlsvc01-prod.s3.amazonaws.com/fc6f8fa6001/68374a37-1b9e-4097-92ac-687389d60339.jpg" class="" style="display: block; height: auto; max-width: 100%;" width="215" border="0" hspace="0" vspace="0" src="https://mlsvc01-prod.s3.amazonaws.com/fc6f8fa6001/68374a37-1b9e-4097-92ac-687389d60339.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="headline editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text headline-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 28px; color: #777777; text-align: center; display: block; word-wrap: break-word; line-height: 1.2; font-weight: bold; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div><span style="font-size: 22px;">Explore your Literary Imagination</span></div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="center-text section-headline about editor-col OneColumnMobile" width="100%" align="left" valign="top" style="background-color: #777777; text-align: center;" bgcolor="#777777">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text center-text section-headline about-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; text-align: center; display: block; word-wrap: break-word; line-height: 1.2; background-color: #777777; padding: 10px 20px;" bgcolor="#777777">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div>A new article from Literary Traveler</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image editor-image  editor-image-vspace-on" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 10px; padding-bottom: 10px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=001LoKtwIlIphXx3Y8mshH-xYBT_i3hZoJNFKdG3KzYyeJfKtB1NJAZDcEkl-Hy_mv5FJWVzuD7T444SAHxK-ayjajAhTsXeGP5RUGyFzcloYmGFZq-b7aVHJ1CvlHkDcd6ci0cb5gyp2ti_sSTdjdzdcjz8MOeAlMdODN6gEb7vgLNm7FQQHT_G3ygcoIu52IyZT0oV2u0v25yJQVTz2W5j_vWQR2heT8adhRUNtET0bCCd4ZXHxEJSzyqU1WvJlVv4l2Hlha8pX_Hqij4CMIxuDwWk8SSP54C&c=uIfB6SqzqsRVNsWHyWAmbP9qA7QMliPwGgbXsxXeS5Ynf6iyxUUlig==&ch=LIN31esvMFOcHjzKwlH9lZ4-Xynr7S_OiPP9A8hxXsZ4KFqD63sfeQ==">
+<img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="372" border="0" hspace="0" vspace="0" src="https://www.literarytraveler.com/wp-content/uploads/2020/02/museum-study-1536x2048.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="spacer editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-spacer">
+<table class="editor-spacer" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-container" align="center" valign="top">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-base" style="padding-bottom: 10px; height: 1px; line-height: 1px;" width="100%" align="center" valign="top">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="spacer editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-spacer">
+<table class="editor-spacer" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-container" align="center" valign="top">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-base" style="padding-bottom: 10px; height: 1px; line-height: 1px;" width="100%" align="center" valign="top">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="feature editor-col OneColumnMobile" width="100%" align="left" valign="top" style="background-color: #FFFFFF;" bgcolor="#FFFFFF">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text feature-heading-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 18px; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; font-weight: bold; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div style="text-align: center;" align="center"><span style="font-size: 18px;">Child of Indianapolis: Rediscovering my hometown through </span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 18px;">Kurt Vonnegut and Cat&#x2019;s Cradle</span></div>
+<div style="text-align: center;" align="center">
+<span style="font-size: 18px;">by </span>Katherine Mclaughlin</div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text feature-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 16px; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div>I&#x2019;m from Indianapolis, but when I turned 18 I moved away. I wanted to attend college and study writing in the most vibrant, cultured place I could think of: New York City. Brooklyn welcomed me with open arms, and since moving here I&#x2019;m pretty much the same. I function as normal, but I&#x2019;ll always be a Midwest Transplant. Like my hair I tried to dye blonde, roots never change. My hair is brown and my home is Indiana.</div>
+<div><br></div>
+<div>I think our hometowns are a little like third parents. They raise us, they make us. Like family, you don&#x2019;t choose them. Everyone from there becomes a brother or a sister. You&#x2019;re not close with every person, but you&#x2019;re connected to each one.</div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="spacer editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-spacer">
+<table class="editor-spacer" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-container" align="center" valign="top">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-base" style="padding-bottom: 10px; height: 1px; line-height: 1px;" width="100%" align="center" valign="top">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="article editor-col OneColumnMobile" width="40%" align="left" valign="top">
+<div><div class="column-resize-bar">
+<span class="line"></span>
+<span class="grabber"></span>
+</div></div>
+<div class="gl-contains-image">
+<table class="editor-image content-image editor-image-vspace-on editor-image-hspace-on" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="left" valign="top" style="padding: 10px 10px 10px 20px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=001LoKtwIlIphXx3Y8mshH-xYBT_i3hZoJNFKdG3KzYyeJfKtB1NJAZDcEkl-Hy_mv5FJWVzuD7T444SAHxK-ayjajAhTsXeGP5RUGyFzcloYmGFZq-b7aVHJ1CvlHkDcd6ci0cb5gyp2ti_sSTdjdzdcjz8MOeAlMdODN6gEb7vgLNm7FQQHT_G3ygcoIu52IyZT0oV2u0v25yJQVTz2W5j_vWQR2heT8adhRUNtET0bCCd4ZXHxEJSzyqU1WvJlVv4l2Hlha8pX_Hqij4CMIxuDwWk8SSP54C&c=uIfB6SqzqsRVNsWHyWAmbP9qA7QMliPwGgbXsxXeS5Ynf6iyxUUlig==&ch=LIN31esvMFOcHjzKwlH9lZ4-Xynr7S_OiPP9A8hxXsZ4KFqD63sfeQ==">
+<img alt="" class="" style="display: block; height: auto; max-width: 100%;" width="209" border="0" hspace="0" vspace="0" src="https://www.literarytraveler.com/wp-content/uploads/2020/02/n_meridian_street-1536x2048.jpg">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class="article editor-col OneColumnMobile" width="60%" align="left" valign="top">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text article-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 16px; color: #000000; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div>The son of an architect, but the child of Indianapolis, Kurt Vonnegut is one of the most respected and influential authors of our time. He&#x2019;s famous for his minimalistic and humorous writing, and often symbolic commentary on the world in which we live. During his life, he published 14 novels, three short story collections, and five works of non-fiction. Up until this past December, I hadn&#x2019;t read any of them.</div>
+<div><br></div>
+<div>When I was home for a break from school I found a copy of Kurt&#x2019;s fourth novel, Cat&#x2019;s Cradle, in my family&#x2019;s mid-century modern home. I often feel like I don&#x2019;t fully understand my heritage, and Kurt Vonnegut seems to be one of the proudest and most knowledgeable members of the Hoosier Clan. I thought if I read his novel and visited places that were important to him, maybe I could learn something about myself, too. It would be like rummaging through a dusty attic, discovering family stories and secrets that have always been available if you&#x2019;re only brave enough to go upstairs....</div>
+<div><br></div>
+<div><a href="http://r20.rs6.net/tn.jsp?f=001LoKtwIlIphXx3Y8mshH-xYBT_i3hZoJNFKdG3KzYyeJfKtB1NJAZDcEkl-Hy_mv5FJWVzuD7T444SAHxK-ayjajAhTsXeGP5RUGyFzcloYmGFZq-b7aVHJ1CvlHkDcd6ci0cb5gyp2ti_sSTdjdzdcjz8MOeAlMdODN6gEb7vgLNm7FQQHT_G3ygcoIu52IyZT0oV2u0v25yJQVTz2W5j_vWQR2heT8adhRUNtET0bCCd4ZXHxEJSzyqU1WvJlVv4l2Hlha8pX_Hqij4CMIxuDwWk8SSP54C&c=uIfB6SqzqsRVNsWHyWAmbP9qA7QMliPwGgbXsxXeS5Ynf6iyxUUlig==&ch=LIN31esvMFOcHjzKwlH9lZ4-Xynr7S_OiPP9A8hxXsZ4KFqD63sfeQ==" target="_blank" style="font-weight: normal; font-style: normal; text-decoration: underline;">Read more...</a></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="spacer editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-spacer">
+<table class="editor-spacer" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-container" align="center" valign="top">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="spacer-base" style="padding-bottom: 10px; height: 1px; line-height: 1px;" width="100%" align="center" valign="top">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="social editor-col OneColumnMobile" width="100%" align="left" valign="top" style="background-color: #000000;" bgcolor="#000000">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text social-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; text-align: center; display: block; word-wrap: break-word; line-height: 1.2; text-decoration: none; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div>Company Name | Phone | Address | Website</div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="gl-contains-social-button">
+<table class="editor-social" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; min-width: 100%;">
+<tbody>
+<tr>
+<td class=" social-container social-container" align="center" style="padding: 0px 20px 10px;">
+<div class="galileo-ap-content-editor">
+<a href="http://r20.rs6.net/tn.jsp?f=001LoKtwIlIphXx3Y8mshH-xYBT_i3hZoJNFKdG3KzYyeJfKtB1NJAZDfANwXa-5J785fPBzkbX1LJqL_W56iFt-p8hgiuOBVBRWtPVR9yz-3Dw_zMtDvQFaIeDfgW0bgFuKIAOLSotBPnFaCSeQSFWqJd9sAsAuDma-uRVql_vWYk=&c=uIfB6SqzqsRVNsWHyWAmbP9qA7QMliPwGgbXsxXeS5Ynf6iyxUUlig==&ch=LIN31esvMFOcHjzKwlH9lZ4-Xynr7S_OiPP9A8hxXsZ4KFqD63sfeQ==" style="display: inline-block; text-decoration: none;">
+<img alt="Facebook" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/facebook-visit-default-circle.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=001LoKtwIlIphXx3Y8mshH-xYBT_i3hZoJNFKdG3KzYyeJfKtB1NJAZDdGRf39QnlaFDrqWhLCJGyd6T43qm08A-JEUSM4M3cY0nMS74n75RPD4T2D2F21Iz2TojP7Q8UuFgkFNo8a4VqA1GImzBDo3vmBchgtVm3oM&c=uIfB6SqzqsRVNsWHyWAmbP9qA7QMliPwGgbXsxXeS5Ynf6iyxUUlig==&ch=LIN31esvMFOcHjzKwlH9lZ4-Xynr7S_OiPP9A8hxXsZ4KFqD63sfeQ==" style="display: inline-block; text-decoration: none;">
+<img alt="Twitter" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/twitter-visit-default-circle.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=001LoKtwIlIphXx3Y8mshH-xYBT_i3hZoJNFKdG3KzYyeJfKtB1NJAZDfANwXa-5J78rtxQoZOPAxLQQ79kMaLS8Xx3UhS0KGU-ff2w06s8ZZUNU5InuhA5j7RLrp0U5sbCMV1pV2nn9yUuWYTffnbmqhdp5QufiE4lj5WtKoJ82hA=&c=uIfB6SqzqsRVNsWHyWAmbP9qA7QMliPwGgbXsxXeS5Ynf6iyxUUlig==&ch=LIN31esvMFOcHjzKwlH9lZ4-Xynr7S_OiPP9A8hxXsZ4KFqD63sfeQ==" style="display: inline-block; text-decoration: none;">
+<img alt="Instagram" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/instagram-visit-default-circle.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=001LoKtwIlIphXx3Y8mshH-xYBT_i3hZoJNFKdG3KzYyeJfKtB1NJAZDfANwXa-5J78VYF8ghb70OsXgCTrsuBiDZtc4hDDDGmX5mt2hoeQbWWt80fROE71x7tgL5xsNvmPYmd5rFf-YPuebvipFTwZF4sULTxDMZkOi6yyP6JLzAJGlFVh-bhrLg==&c=uIfB6SqzqsRVNsWHyWAmbP9qA7QMliPwGgbXsxXeS5Ynf6iyxUUlig==&ch=LIN31esvMFOcHjzKwlH9lZ4-Xynr7S_OiPP9A8hxXsZ4KFqD63sfeQ==" style="display: inline-block; text-decoration: none;">
+<img alt="LinkedIn" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/linkedin-visit-default-circle.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=001LoKtwIlIphXx3Y8mshH-xYBT_i3hZoJNFKdG3KzYyeJfKtB1NJAZDWStpS00AE7OGPNw9-tgfdnL5d3fPDwBjSrvFIaSWVhJ-l6Pd1QBrwDjcUrX8hxnGT3AL9q-WAG3dmpmFp8C6K8ObUARiqZowT74E9PRwQlitDRUn-XCXCc=&c=uIfB6SqzqsRVNsWHyWAmbP9qA7QMliPwGgbXsxXeS5Ynf6iyxUUlig==&ch=LIN31esvMFOcHjzKwlH9lZ4-Xynr7S_OiPP9A8hxXsZ4KFqD63sfeQ==" style="display: inline-block; text-decoration: none;">
+<img alt="YouTube" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/youtube-visit-default-circle.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<table class="footer-container" width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff; margin-left: auto; margin-right: auto; table-layout: auto !important" bgcolor="#ffffff">
+  <tr>
+    <td width="100%" align="center" valign="top" style="width: 100%;">
+      <div class="footer-max-main-width" align="center" style="margin-left: auto; margin-right: auto; max-width: 100%;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="footer-layout" align="center" valign="top" style="padding: 16px 0px;">
+              <table class="footer-main-width" style="width: 580px;" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                    
+                    <span class="footer-column">Literary Traveler<span class="footer-mobile-hidden"> | </span></span><span class="footer-column">PO Box 1254<span class="footer-mobile-hidden">, </span></span><span class="footer-column"></span><span class="footer-column"></span><span class="footer-column">West Concord, MA 01742-2968</span><span class="footer-column"></span>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-row" align="center" valign="top" style="padding: 10px 0px;">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          <a href="https://visitor.constantcontact.com/do?p=un&m=001yp30wpRnfPKB3T7lpFyoag%3D&ch=f3943862-98f9-11e9-bbe7-d4ae52754055&ca=897db4d2-a99a-4a09-a44a-5ae3473d3d88" style="color: #5d5d5d"> </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          <a href="https://visitor.constantcontact.com/do?p=oo&m=001yp30wpRnfPKB3T7lpFyoag%3D&ch=f3943862-98f9-11e9-bbe7-d4ae52754055&ca=897db4d2-a99a-4a09-a44a-5ae3473d3d88" style="color: #5d5d5d">Update Profile</a> |
+                          
+                          <a class="footer-about-provider" href="http://www.constantcontact.com/legal/about-constant-contact" style="color: #5d5d5d">About Constant Contact</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          Sent by
+                          
+                          <a href="mailto:francis@literarytraveler.com" style="color: #5d5d5d; text-decoration: none">francis@literarytraveler.com</a>
+                          
+
+                          
+                          
+                          <span class="footer-column">in collaboration with</span>
+                          
+                          
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                    
+                    
+                    <table width="240" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td align="center" valign="top" style="padding: 0px 0px 3px 10px;">
+                          <a href="http://www.constantcontact.com/index.jsp?cc=nge&rmc=VF19_3GE" style="color: #5d5d5d; text-decoration: none">
+                            <img alt="Trusted Email from Constant Contact - Try it FREE today." width="211" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/ui/images1/logo_ctct_2x.png"></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-cta-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 9px;">
+                          <a href="http://www.constantcontact.com/index.jsp?cc=nge&rmc=VF19_3GE" style="color: #5d5d5d; text-decoration: none">Try email marketing for free today!</a>
+                        </td>
+                      </tr>
+                    </table>
+                    
+                    
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table></body>
+</html>

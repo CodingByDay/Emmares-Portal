@@ -1,0 +1,484 @@
+﻿<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        body{
+            background-color: #f6f9fc!important;
+        }
+        table {
+            table-layout: fixed;
+        }
+         #backgroundTable {
+            margin: 0 auto !important;
+        }
+        #backgroundTable, #headerTable, #contentCell, #footerTable, #contentTableOuter{
+            background-color: #f6f9fc!important;
+            padding: 0!important;
+        }
+        #contentTableOuter, table#contentTableOuter {
+            padding: 0 !important;
+            border: 0 none !important;
+        }
+        #contentCell {
+            background-color: #f6f9fc!important;
+            padding: 0 !important;
+        }
+        #contentTableInner, #contentTableOuter, #templateTable{
+            max-width: 600px;
+        }
+
+        #contentTableOuter{
+            background-color: transparent!important;
+            padding: 0!important;
+            border: none!important;
+            -webkit-box-shadow: none!important;
+            -moz-box-shadow: none!important;
+            box-shadow: none!important;
+        }
+        #backgroundTable, #headerTable, #templateTable, #footerTable{
+            background-color: #f6f9fc!important;
+        }
+        .table-items__centered td, .table-items__centered td[valign="top"]{
+            /*padding-left:10px!important;*/
+            /*padding-right:10px!important;*/
+            text-align:center!important;
+        }
+        @media screen and (max-width: 650px){
+            img {
+                width: auto !important;
+            }
+            .cell img.cell-icon{
+                width: 110px!important;
+                height: 110px!important;
+            }
+        }
+        @media only screen and (max-width:596px) {
+            table.body img {
+                height: auto ;
+            }
+            table.body center {
+                min-width: 0 !important;
+            }
+            th.small-12 {
+                display: inline-block !important;
+                width: 100% !important;
+            }
+            table.body img {
+                width: auto !important;
+            }
+        }
+        @media only screen and (max-width:596px) {
+            .logo,.small-text-center {
+                text-align: center !important;
+            }
+            .content-inside{
+                padding-bottom: 0px!important;
+                padding-top: 0px!important;
+            }
+            .content-inside.first, .content-inside.last{
+                display:none!important;
+            }
+            .btn-top {
+                display: none !important;
+            }
+        }
+        @media only screen and (max-width:487px) {
+            .btn-bottom {
+                display: inline-block !important;
+            }
+            .presenter-block{
+                width:100%!important;
+                margin-bottom:20px;
+            }
+        }
+        @media only screen and (max-width:430px) {
+            .table-items tr td{
+                display: block!important;
+                text-align: center;
+                width:auto!important;
+            }
+            .bg-image{
+                height:auto!important;
+                background-position: center -600px, center top!important;
+            }
+            .big-header-title{
+                text-align: center;
+            }
+            .big-header-title p{
+                margin: 0!important;
+                text-align: center!important;
+            }
+            .top-td-height{
+                height:0!important;
+            }
+
+        }
+        @media only screen and (max-width:420px) {
+            .date-time-item{
+                display: block;
+            }
+        }
+
+        @media(max-width: 400px){
+            .footer-link{
+                text-align: center;
+            }
+            .footer-link a{
+                display: block;
+                width: 70px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <table align="center" bgcolor="#f6f9fc" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; background-color: #f6f9fc!important; font-family:sans-serif; height:100% !important; margin:0; padding:0; width:100% !important">
+      <tbody>
+        <tr>
+          <td align="center" valign="top" id="bodyCell" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; height:100% !important; margin:0; padding:0; width:100% !important" height="100%" width="100%">
+            <table border="0" cellpadding="0" cellspacing="0" id="templateTable" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; width:600px; -webkit-font-smoothing:antialiased" width="600">
+              <tbody>
+                <tr>
+                  <td align="center" valign="top" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="headerTable" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444; font-family:sans-serif; font-size:10px; line-height:120%; text-align:right; border-collapse:separate !important; padding-right:0px">
+                      <tbody>
+                        <tr>
+                          <td style="height:20px;"> </td>
+                        </tr>
+                        <tr>
+                          <td class="bodyContent" width="100%" colspan="12" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444; font-family:sans-serif; font-size:15px; line-height:150%; text-align:left">
+                            <table align="center" class="container bg-image" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; Margin:0 auto; background-color:#dbfbdc; background-image:url(https://f.hubspotusercontent20.net/hubfs/5442029/promo_email%20%28mobile%29%20%2810%29-2.png), url(https://f.hubspotusercontent20.net/hubfs/5442029/promo_email%20%28mobile%29%20%2811%29-2.png); background-position:center top; background-repeat:no-repeat; background-size:cover; border-collapse:collapse; border-spacing:0; float:none; margin:0 auto; padding-left:15px!important; padding-right:15px!important; text-align:center; vertical-align:top; width:100%" bgcolor="#dbfbdc" width="100%">
+                              <tbody>
+                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                  <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; -moz-hyphens:none; -webkit-hyphens:none; Margin:0; border-collapse:collapse !important; color:#4e4e4e; font-family:Arial,sans-serif; font-size:15px; font-weight:400; hyphens:none; line-height:19px; margin:0; padding:0; text-align:left; vertical-align:top; word-wrap:break-word" align="left">
+                                    <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; height:100%; border-collapse:collapse; border-spacing:0; display:table; padding:0; position:relative; text-align:left; vertical-align:top; width:100%" height="100%" align="left" width="100%">
+                                      <tbody>
+                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                          <th class="small-12 columns" style="Margin: 0 auto; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0;padding-bottom: 0px; text-align: left; ">
+                                            <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; padding:0; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                              <tbody>
+                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                  <th style="Margin: 0; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0; padding: 0;">
+                                                    <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; width:100%" width="100%">
+                                                      <tbody>
+                                                        <tr>
+                                                          <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt"> </td>
+                                                          <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt">
+                                                            <center>
+                                                              <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important">
+                                                                <tbody>
+                                                                  <tr>
+                                                                    <td valign="middle;" class="top-td-height" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; height:0px" height="0">
+
+                                                                                                 
+
+                                                                                            </td>
+                                                                  </tr>
+                                                                </tbody>
+                                                              </table>
+                                                            </center>
+                                                          </td>
+                                                          <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt"> </td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                    <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; width:100%" width="100%">
+                                                      <tbody>
+                                                        <tr>
+                                                          <td class="big-header-title webinar-title" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; font-family:Arial,sans-serif; font-size:25px !important; font-weight:400; line-height:1.4; padding-bottom:25px; padding-top:10px; padding-left:30px; padding-right:30px"><a href="http://cloudberrylab.com/link.aspx?o=aHR0cHM6Ly93d3cubXNwMzYwLmNvbS9iYWNrdXAuYXNweD91dG1fY2FtcGFpZ249cHJvZHVjdF9iYWNrdXAmdXRtX3NvdXJjZT1lbWFpbCZ1dG1fbWVkaXVtPWVtYWlsJnV0bV90ZXJtPWFkbWluJnV0bV9jb250ZW50PUNsb3VkQmVycnlfQmFja3VwXzdfMV9yZWxlYXNl&e=f81eee74-53d0-4e74-9c8a-0ed5f417d60b" target="_blank" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; text-decoration:none"><font color="#FFFFFF" size="5">
+                                                                <p style="font-size: 20px; margin-bottom: 10px; line-height: 1.25; text-align: center;"><span style="color: #ff7527; font-family: arial, helvetica, sans-serif;">NEW PRODUCT RELEASE</span></p>
+                                                                <p style="font-size: 24px; line-height: 1.25; text-align: center;"><span style="font-family: arial, helvetica, sans-serif; color: #20407b;"><span style="font-size: 30px;"><strong>CloudBerry Backup 7.1</strong><br></span></span><span style="font-family: arial, helvetica, sans-serif; color: #20407b;"><span style="font-size: 30px;"></span></span></p>
+                                                              </font></a></td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                    <center class="btn-top">
+                                                      <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; margin:0!important; Margin:0!important; text-align:center; background-color:#fd7222; width:192px; height:44px" align="center" bgcolor="#fd7222" width="192" height="44"><a class="btn-bottom" href="http://cloudberrylab.com/link.aspx?o=aHR0cHM6Ly93d3cubXNwMzYwLmNvbS9iYWNrdXAuYXNweD91dG1fY2FtcGFpZ249cHJvZHVjdF9iYWNrdXAmdXRtX3NvdXJjZT1lbWFpbCZ1dG1fbWVkaXVtPWVtYWlsJnV0bV90ZXJtPWFkbWluJnV0bV9jb250ZW50PUNsb3VkQmVycnlfQmFja3VwXzdfMV9yZWxlYXNl&e=f81eee74-53d0-4e74-9c8a-0ed5f417d60b" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; width:100%; height:100%; font-family:Arial,sans-serif; font-size:16px; font-weight:400; color:#ffffff!important; text-decoration:none; Margin:0!important; margin:0!important; display:inline-block; text-align:center; line-height:44px; padding:0" align="center" target="_blank"><font color="#FFFFFF">Download 7.1</font></a></td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </center>
+                                                  </th>
+                                                  <th style=" Margin: 0; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
+                                                </tr>
+                                                <tr>
+                                                  <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; height:20px" height="20"></td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </th>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" valign="top" id="contentCell" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; padding:0px; background-color:#ffffff" bgcolor="#ffffff">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="contentTableOuter" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:separate !important; background-color:#ffffff; padding:0px" bgcolor="#ffffff">
+                      <tbody>
+                        <tr>
+                          <td align="center" valign="top" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt">
+                            <table border="0" cellpadding="0" cellspacing="0" id="contentTableInner" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; width:600px" width="600">
+                              <tbody>
+                                <tr>
+                                  <td align="left" valign="top" class="bodyContent" width="100%" colspan="12" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444; font-family:sans-serif; font-size:15px; line-height:150%; text-align:left">
+                                    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important">
+                                      <tbody>
+                                        <tr>
+                                          <td valign="top" colspan="12" width="100.0%" class=" column" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left; padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em; color:#444444" align="left">
+                                            <center>
+                                              <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important">
+                                                <tbody>
+                                                  <tr>
+                                                    <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt">
+                                                      <table align="center" class="container" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; Margin:0 auto; background-color:#ffffff; border-collapse:collapse; border-spacing:0; float:none; margin:0 auto; padding:40px !important; text-align:center; vertical-align:top; width:100%" bgcolor="#ffffff" width="100%">
+                                                        <tbody>
+                                                          <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                            </tr><tr>
+                                                              <td style="height: 34px;">
+                                                                                     
+                                                                                </td>
+                                                            </tr>
+                                                            <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; -moz-hyphens:none; -webkit-hyphens:none; Margin:0; border-collapse:collapse !important; color:#4e4e4e; font-family:Arial,sans-serif; font-size:15px; font-weight:400; hyphens:none; line-height:19px; margin:0; padding:0; text-align:left; vertical-align:top; word-wrap:break-word" align="left">
+                                                              <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; display:table; padding:0; position:relative; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                                                <tbody>
+                                                                  <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                                    <th class="small-12 columns content-inside first" style="Margin: 0 auto; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 0 !important; padding-right: 0 !important; text-align: left; width: 20px;">
+                                                                      <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; padding:0; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                                                        <tbody>
+                                                                          <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                                            <th style="Margin: 0; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;"></th>
+                                                                          </tr>
+                                                                        </tbody>
+                                                                      </table>
+                                                                    </th>
+                                                                    <th class="small-12 columns content-inside" style="Margin: 0 auto; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 6px; text-align: left; ">
+                                                                      <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; padding:0; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                                                        <tbody>
+                                                                          <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                                            <th style="padding-left:10px;padding-right:10px;Margin: 0; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0; text-align: left;">
+                                                                              <p style="margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%"><span>Hello,</span></p>
+                                                                              <p style="margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; line-height:1.5"><span>MSP360 is very excited to announce the release of Standalone </span><a target="_blank" data-stringify-link="https://hg.t.hubspotemail.net/e2t/tc/VWcJ9S7l-zV3W5RWP552ndwKSVZjc4S4rHzbdN7Rflx55nxG7V3Zsc37CgTdtW6gh7lK5T3KtmW86k6Gx86W0llTk1zJ4CNssSW3Br4f688j-4kW8xLFmf7lyPwkW4LL2c2605hjjW7CJSFL2WQTCGW91hlg28D5VYyW6rjNjw1tcJTfW7SP06y6Bmn63Vns-4f4t-ZCHW1zD_R64lGRsWW1ScVN72TJcThW1MfKWD34LFxVW2N8JkG1hXPYVW946FcW5K4HyLW3Q-K6j649fZgW4QpTMK4PynXTW7qx9012FVl42W1QP-pb4yxlgGW5_G4R-5mzrM5W2Q4gWK4qsr9jW5mgZc421KXZqW3xKNz53z3_lCW4GYQr02gJzx5W2xY1QN4xzH3KW11klP33BNwFHW5zBP6N1Qdw1zW27rRjK7Mvz2DW3t9jBj4zYLqWW399fTD3cX81GW8cwHgm4bYjRv3d_X1" data-sk="tooltip_parent" href="http://cloudberrylab.com/link.aspx?o=aHR0cHM6Ly93d3cubXNwMzYwLmNvbS9yZXNvdXJjZXMvYmxvZy9jbG91ZGJlcnJ5LWJhY2t1cC03LTEtZ3JhbmRmYXRoZXItZmF0aGVyLXNvbi1yZXRlbnRpb24tcG9saWN5LWFubm91bmNlbWVudC8/dXRtX2NhbXBhaWduPXByb2R1Y3RfYmFja3VwJnV0bV9zb3VyY2U9ZW1haWwmdXRtX21lZGl1bT1lbWFpbCZ1dG1fdGVybT1hZG1pbiZ1dG1fY29udGVudD1DbG91ZEJlcnJ5X0JhY2t1cF83XzFfcmVsZWFzZQ==&e=f81eee74-53d0-4e74-9c8a-0ed5f417d60b" rel="noopener noreferrer" delay="150" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%" data-hs-link-id="0">CloudBerry Backup version 7.1</a><span>! This new release introduces many new features and fixes that our customers will love. However, the latest feature is the long-awaited </span><strong data-stringify-type="bold">Grandfather-Father-Son retention policy</strong><span>.</span></p>
+                                                                              <p style="margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%"><span>Grandfather-Father-Son, or GFS for short, is a backup retention policy that is based on storing several full backups. </span><strong data-stringify-type="bold">Weekly</strong><span> (son), </span><strong data-stringify-type="bold">monthly</strong><span> (father), and</span><strong data-stringify-type="bold"> yearly</strong><span> (grandfather)</span><strong data-stringify-type="bold">.</strong></p>
+                                                                              <p style="margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%"><span>This backup retention feature also provides an additional level of security and allows you to create a flexible archival strategy to optimize the number of full backups at the same time.</span></p>
+                                                                              <p style="margin-bottom: 1em; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; line-height:1.5"><a target="_blank" data-stringify-link="https://hg.t.hubspotemail.net/e2t/tc/VWcJ9S7l-zV3W5RWP552ndwKSVZjc4S4rHzbdN7RflyB3p_9rV1-WJV7CgMV0W8xvYcf2C1-3qW6CKKBV4sTzVnW4KjnGv4szSJpW8WJbrV1jBB1JW5F-7h-4bgTVdW5Hl5vq2v31VDVjFvvW8xpqnQW118Tt06KbM4HW7K24nK3VRWKzW148dm67Qc-WsW76zmDb5MRCxDW1t-gYJ4pqbf_W590g6w2X7zyfW7W9JKK8k6vMcW6WcnvX7X1wbzN3dbx9RMdY2KW4h-dFV7D42njN6CQ-Hfc9jB2W1BR1YP5ssFmsW3GCc5X3y-yN4W4p_fxQ84HyxnW8QrRSz6fMSxdW4xRF2z3XVvhJW1gv8VJ4XZsWqW6cKQC05hgmFZV91dKj7SkQ_L3fNy1" data-sk="tooltip_parent" href="http://cloudberrylab.com/link.aspx?o=aHR0cHM6Ly93d3cubXNwMzYwLmNvbS9yZXNvdXJjZXMvYmxvZy9jbG91ZGJlcnJ5LWJhY2t1cC03LTEtZ3JhbmRmYXRoZXItZmF0aGVyLXNvbi1yZXRlbnRpb24tcG9saWN5LWFubm91bmNlbWVudC8/dXRtX2NhbXBhaWduPXByb2R1Y3RfYmFja3VwJnV0bV9zb3VyY2U9ZW1haWwmdXRtX21lZGl1bT1lbWFpbCZ1dG1fdGVybT1hZG1pbiZ1dG1fY29udGVudD1DbG91ZEJlcnJ5X0JhY2t1cF83XzFfcmVsZWFzZQ==&e=f81eee74-53d0-4e74-9c8a-0ed5f417d60b" rel="noopener noreferrer" delay="150" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%" data-hs-link-id="1">Read this blog post</a><span> for more details on the release. It explains the concept of GFS, reviews how it works in CloudBerry Backup, and guides you through the backup plan setup process.</span></p>
+                                                                              <center>
+                                                                                <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important;margin-top:29px;">
+                                                                                  <tbody>
+                                                                                    <tr>
+                                                                                      <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; margin:0!important; Margin:0!important; text-align:center; background-color:#ff7527; width:192px; height:44px;padding-right: 15px;padding-left: 15px;" align="center" bgcolor="#ff7527" width="192" height="44"><a class="btn-bottom" href="http://cloudberrylab.com/link.aspx?o=aHR0cHM6Ly93d3cubXNwMzYwLmNvbS9iYWNrdXAuYXNweD91dG1fY2FtcGFpZ249cHJvZHVjdF9iYWNrdXAmdXRtX3NvdXJjZT1lbWFpbCZ1dG1fbWVkaXVtPWVtYWlsJnV0bV90ZXJtPWFkbWluJnV0bV9jb250ZW50PUNsb3VkQmVycnlfQmFja3VwXzdfMV9yZWxlYXNl&e=f81eee74-53d0-4e74-9c8a-0ed5f417d60b" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; width:100%; height:100%; font-family:Arial,sans-serif; font-size:16px; font-weight:400; color:#ffffff!important; text-decoration:none; Margin:0!important; margin:0!important; display:inline-block; text-align:center; line-height:44px; padding:0" align="center" target="_blank"><font color="#FFFFFF">Download 7.1</font></a></td>
+                                                                                    </tr>
+                                                                                  </tbody>
+                                                                                </table>
+                                                                              </center>
+                                                                            </th>
+                                                                          </tr>
+                                                                        </tbody>
+                                                                      </table>
+                                                                    </th>
+                                                                    <th class="small-12 columns content-inside last" style="Margin: 0 auto; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 0 !important; padding-right: 0 !important; text-align: left; width:30px;">
+                                                                      <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; padding:0; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                                                        <tbody>
+                                                                          <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                                            <th style="Margin: 0; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;"></th>
+                                                                          </tr>
+                                                                        </tbody>
+                                                                      </table>
+                                                                    </th>
+                                                                  </tr>
+                                                                </tbody>
+                                                              </table>
+                                                            </td>
+                                                          </tbody></table></td></tr>
+                                                        </tbody>
+                                                      </table>
+                                                      <table align="center" class="container" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; Margin:0 auto; background-color:#ffffff; border-collapse:collapse; border-spacing:0; float:none; margin:0 auto; padding:0; text-align:center; vertical-align:top; width:100%" bgcolor="#ffffff" width="100%">
+                                                        <tbody>
+                                                          <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                            <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; -moz-hyphens:none; -webkit-hyphens:none; Margin:0; border-collapse:collapse !important; color:#4e4e4e; font-family:Arial,sans-serif; font-size:15px; font-weight:400; hyphens:none; line-height:19px; margin:0; padding:0; text-align:left; vertical-align:top; word-wrap:break-word" align="left">
+                                                              <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; display:table; padding:0; position:relative; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                                                <tbody>
+                                                                  <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                                    <th class="small-12 columns" style="Margin: 0 auto; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 26px; text-align: left; width: 564px;"></th>
+                                                                  </tr>
+                                                                </tbody>
+                                                              </table>
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </center></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" valign="top" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="footerTable" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; color:#999999; font-family:sans-serif; font-size:12px; line-height:120%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:center" align="center">
+                      <tbody>
+                        <tr>
+                          <td align="left" valign="top" class="bodyContent" width="100%" colspan="12" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; color:#444444; font-family:sans-serif; font-size:15px; line-height:150%; text-align:left">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important">
+                              <tbody>
+                                <tr>
+                                  <td valign="top" colspan="12" width="100.0%" class=" column" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; width:100.0%; text-align:left; padding:0; font-family:sans-serif; font-size:15px; line-height:1.5em; color:#444444" align="left">
+                                    <table align="center" class="container" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; Margin:0 auto; background:0 0 !important; border-collapse:collapse; border-spacing:0; float:none; margin:0 auto; padding:0; text-align:center; vertical-align:top; width:100%" width="100%">
+                                      <tbody>
+                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                          <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; -moz-hyphens:none; -webkit-hyphens:none; Margin:0; border-collapse:collapse !important; color:#4e4e4e; font-family:Arial,sans-serif; font-size:15px; font-weight:400; hyphens:none; line-height:19px; margin:0; padding:0; text-align:left; vertical-align:top; word-wrap:break-word" align="left">
+                                            <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; display:table; padding:0; position:relative; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                              <tbody>
+                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                  <th class="small-12 columns" style="Margin: 0 auto; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 0 !important; padding-right: 0 !important; text-align: left; width: 564px;">
+                                                    <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; padding:0; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                                      <tbody>
+                                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                          <th style="Margin: 0; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+                                                            <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; padding:0; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                                              <tbody>
+                                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                                  <td height="24px" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; -moz-hyphens:none; -webkit-hyphens:none; Margin:0; border-collapse:collapse !important; color:#4e4e4e; font-family:Arial,sans-serif; font-size:24px; font-weight:400; hyphens:none; line-height:24px; margin:0; padding:0; text-align:left; vertical-align:top; word-wrap:break-word" align="left"> </td>
+                                                                </tr>
+                                                              </tbody>
+                                                            </table>
+                                                            <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse !important; width:100%" width="100%">
+                                                              <tbody>
+                                                                <tr>
+                                                                  <td class="footer-link" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; vertical-align:middle; text-align:left; width:33.33%" align="left" width="33.33%"><a href="http://cloudberrylab.com/link.aspx?o=aHR0cHM6Ly93d3cubXNwMzYwLmNvbS9yZXNvdXJjZXMvP3V0bV9jYW1wYWlnbj1wcm9kdWN0X2JhY2t1cCZ1dG1fc291cmNlPWVtYWlsJnV0bV9tZWRpdW09ZW1haWwmdXRtX3Rlcm09YWRtaW4mdXRtX2NvbnRlbnQ9Q2xvdWRCZXJyeV9CYWNrdXBfN18xX3JlbGVhc2U=&e=f81eee74-53d0-4e74-9c8a-0ed5f417d60b" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; display:block; text-align:center; border-radius:3px; border:1px solid #687581; padding:4px 10px; color:#687581; display:inline-block; font-family:Arial,sans-serif; font-weight:400; line-height:1.3; margin:0; text-decoration:none" align="center" target="_blank">
+                                                                                                Visit our Blog
+                                                                                            </a></td>
+                                                                  <td class="footer-link" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; vertical-align:middle; text-align:center; width:33.33%" align="center" width="33.33%"><a href="http://cloudberrylab.com/link.aspx?o=aHR0cHM6Ly9mb3J1bS5tc3AzNjAuY29tLz91dG1fY2FtcGFpZ249cHJvZHVjdF9iYWNrdXAmdXRtX3NvdXJjZT1lbWFpbCZ1dG1fbWVkaXVtPWVtYWlsJnV0bV90ZXJtPWFkbWluJnV0bV9jb250ZW50PUNsb3VkQmVycnlfQmFja3VwXzdfMV9yZWxlYXNl&e=f81eee74-53d0-4e74-9c8a-0ed5f417d60b" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; display:block; text-align:center; border-radius:3px; border:1px solid #687581; padding:4px 10px; color:#687581; display:inline-block; font-family:Arial,sans-serif; font-weight:400; line-height:1.3; text-decoration:none" align="center" target="_blank">
+                                                                                                Join the Forum
+                                                                                            </a></td>
+                                                                  <td class="footer-link" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; vertical-align:middle; text-align:right; width:33.33%" align="right" width="33.33%"><a href="http://cloudberrylab.com/link.aspx?o=aHR0cHM6Ly93d3cubXNwMzYwLmNvbS9jb250YWN0LmFzcHg/dXRtX2NhbXBhaWduPXByb2R1Y3RfYmFja3VwJnV0bV9zb3VyY2U9ZW1haWwmdXRtX21lZGl1bT1lbWFpbCZ1dG1fdGVybT1hZG1pbiZ1dG1fY29udGVudD1DbG91ZEJlcnJ5X0JhY2t1cF83XzFfcmVsZWFzZQ==&e=f81eee74-53d0-4e74-9c8a-0ed5f417d60b" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; display:block; text-align:center; border-radius:3px; border:1px solid #687581; padding:4px 10px; color:#687581; display:inline-block; font-family:Arial,sans-serif; font-weight:400; line-height:1.3; text-decoration:none" align="center" target="_blank">
+                                                                                                Contact us
+                                                                                            </a></td>
+                                                                </tr>
+                                                              </tbody>
+                                                            </table>
+                                                            <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; padding:0; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                                              <tbody>
+                                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                                  <td height="24px" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; -moz-hyphens:none; -webkit-hyphens:none; Margin:0; border-collapse:collapse !important; color:#4e4e4e; font-family:Arial,sans-serif; font-size:24px; font-weight:400; hyphens:none; line-height:24px; margin:0; padding:0; text-align:left; vertical-align:top; word-wrap:break-word" align="left"> </td>
+                                                                </tr>
+                                                              </tbody>
+                                                            </table>
+                                                            <hr style="Margin: 20px auto; background-color: #dfebf6; border: 0; clear: both; height: 1px; margin: 0 auto !important; max-width: 100%; outline: 0;">
+                                                            <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; padding:0; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                                              <tbody>
+                                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                                  <td height="2px" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; -moz-hyphens:none; -webkit-hyphens:none; Margin:0; border-collapse:collapse !important; color:#4e4e4e; font-family:Arial,sans-serif; font-size:2px; font-weight:400; hyphens:none; line-height:2px; margin:0; padding:0; text-align:left; vertical-align:top; word-wrap:break-word" align="left"> </td>
+                                                                </tr>
+                                                              </tbody>
+                                                            </table>
+                                                          </th>
+                                                          <th style="Margin: 0; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </th>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <table align="center" class="container" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; Margin:0 auto; border-collapse:collapse; border-spacing:0; float:none; margin:0 auto; padding:0; text-align:center; vertical-align:top; width:100%" width="100%">
+                                      <tbody>
+                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                          <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; -moz-hyphens:none; -webkit-hyphens:none; Margin:0; border-collapse:collapse !important; color:#4e4e4e; font-family:Arial,sans-serif; font-size:15px; font-weight:400; hyphens:none; line-height:19px; margin:0; padding:0; text-align:left; vertical-align:top; word-wrap:break-word" align="left">
+                                            <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; display:table; padding:0; position:relative; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                              <tbody>
+                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                  <th class="small-12 columns" style="Margin: 0 auto; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 0 !important; padding-right: 0 !important; text-align: left; width: 33.3333%;">
+                                                    <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; padding:0; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                                      <tbody>
+                                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                          <th style="Margin: 0; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+                                                            <p class="small-text-center" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; Margin:0; Margin-bottom:10px; color:#959595!important; font-family:Arial,sans-serif; font-size:13px; font-weight:400; line-height:19px; margin:0; margin-bottom:10px; padding:0; text-align:left" align="left">MSP360, 6425 Living Place 200 Pittsburgh, PA, 15206, USA</p>
+                                                          </th>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </th>
+                                                  <th class="small-12 columns" style="Margin: 0 auto; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; text-align: center; width: 33.3333%;">
+                                                    <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; padding:0; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                                      <tbody>
+                                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                          <th style="Margin: 0; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+                                                            <p class="small-text-center" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; Margin:0; Margin-bottom:10px; color:#4e4e4e; font-family:Arial,sans-serif; font-size:13px; font-weight:400; line-height:19px; margin:0; margin-bottom:10px; padding:0; text-align:center" align="center"><a href="http://cloudberrylab.com/link.aspx?o=aHR0cHM6Ly93d3cubXNwMzYwLmNvbS8/dXRtX2NhbXBhaWduPXByb2R1Y3RfYmFja3VwJnV0bV9zb3VyY2U9ZW1haWwmdXRtX21lZGl1bT1lbWFpbCZ1dG1fdGVybT1hZG1pbiZ1dG1fY29udGVudD1DbG91ZEJlcnJ5X0JhY2t1cF83XzFfcmVsZWFzZQ==&e=f81eee74-53d0-4e74-9c8a-0ed5f417d60b" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; Margin:0; color:#959595!important; font-family:Arial,sans-serif; font-size:13px; font-weight:400; line-height:1.3; margin:0; padding:0; text-align:left; text-decoration:underline" align="left" target="_blank"><img src="https://cdn2.hubspot.net/hubfs/5442029/Resources/Logos%20-%20CloudBerry%20Lab/CloudBerry_is_now_MSP360_white_bg-3.png" alt="CloudBerry_is_now_MSP360_white_bg-3" style="vertical-align:bottom; -ms-interpolation-mode:bicubic; width:100px!important" width="100"></a></p>
+                                                          </th>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </th>
+                                                  <th class="small-12 columns" style="Margin: 0 auto; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0 auto; padding: 0; padding-bottom: 16px; padding-left: 0 !important; padding-right: 0 !important; text-align: left; width: 33.3333%;">
+                                                    <table style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; border-spacing:0; padding:0; text-align:left; vertical-align:top; width:100%" align="left" width="100%">
+                                                      <tbody>
+                                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                          <th style="Margin: 0; color: #4e4e4e; font-family: Arial,sans-serif; font-size: 15px; font-weight: 400; line-height: 19px; margin: 0; padding: 0; text-align: left;">
+                                                            <p class="small-text-center" style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; Margin:0; Margin-bottom:10px; color:#4e4e4e; font-family:Arial,sans-serif; font-size:13px; font-weight:400; line-height:19px; margin:0; margin-bottom:10px; padding:0; text-align:right" align="right"><a href="http://www.msp360.com/ </p>
+                                                          </th>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </th>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-table-lspace:0pt; mso-table-rspace:0pt"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          
+        
+      
+    
+  </body>
+</html>
+

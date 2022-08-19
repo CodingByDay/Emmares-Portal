@@ -1,0 +1,625 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Hotwire</title>
+
+<!-- RESETS -->
+<style type="text/css">
+    div, button { display: block !important; }
+    html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; box-sizing: border-box;}
+    body{ padding:0; margin:0; width:100%; margin-left:0px !important; margin-right:0px !important; }
+    table th { margin:0 !important; padding:0 !important; vertical-align:top !important; font-weight: normal !important; }
+    v\:* { behavior: url(#default#VML); display:block;}
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; }
+    .ExternalClass * { line-height:100%; }
+</style>
+<!-- /RESETS -->
+
+<!-- GENERAL MEDIA QUERY -->
+<style type="text/css">
+@media screen and (max-width: 638px) {
+    /* general */
+    .gmailfix {display:none; display:none!important;}
+    .block {display:block !important;}
+    .blockhead {display: table-header-group !important; }
+    .blockfoot {display: table-footer-group !important; }
+    .hide {display:none !important;}
+    .show {display: block !important; width: auto !important; overflow: visible !important; float: none !important; max-height: inherit !important; line-height: inherit !important;}
+    .centertable {margin:0 auto !important;}
+    .bcollapse {border-collapse:collapse !important;}
+    .aligncenter {text-align:center !important;}
+    .alignleft {text-align:left !important;}
+    .alignright {text-align:right !important;}
+    .floatl {float: left !important;}
+    .floatr {float: right !important;}
+    .width310 {width:310px !important;}
+    .width312 {width:312px !important;}
+    .width320 {width:320px !important;}
+    .hauto   {height:auto !important;}
+    .wauto {width:auto !important;}
+}
+</style>
+<!-- /GENERAL MEDIA QUERY -->
+
+<!-- MODULE MEDIA QUERY -->
+<style type="text/css">@media screen and (max-width: 638px) {
+    /* WIDTHS */
+    .width17 { width: 17px !important; }
+    .width20 { width: 20px !important; }
+    .width22 { width: 22px !important; }
+    .width43 { width: 43px !important; }
+    .width62 { width: 62px !important; }
+    .width65 { width: 65px !important; }
+    .width81 { width: 81px !important; }
+    .width91 { width: 91px !important; }
+    .width111 { width: 111px !important; }
+    .width114 { width: 114px !important; }
+    .width150 { width: 150px !important; }
+    .width190 { width: 190px !important; }
+    .width196 { width: 196px !important; }
+    .width200 { width: 200px !important; }
+    .width211 { width: 211px !important; }
+    .width246 { width: 246px !important; }
+    .width262 { width: 262px !important; }
+    .width266 { width: 266px !important; }
+    .width270 { width: 270px !important; }
+    .width272 { width: 272px !important; }
+    .width290 { width: 290px !important; }
+    .width292 { width: 292px !important; }
+    .width293 { width: 293px !important; }
+    .width308 { width: 308px !important; }
+    .maxwidth200 { max-width: 200px !important; }
+    .maxwidth312 { max-width: 312px !important; }
+    
+    /* HEIGHT */
+    .height92 { height: 92px !important; }
+    .height150 { height: 150px !important; }
+    .height219 { height: 219px !important; }
+    .height248 { height: 248px !important; }
+    .height334 { height: 334px !important; }
+    .height348 { height: 348px !important; }
+
+	/* FONT-SIZE */
+	.font10 { font-size: 10px !important; }
+    .font11 { font-size: 11px !important; }
+    .font12 { font-size: 12px !important; }
+    .font13 { font-size: 13px !important; }
+    .font14 { font-size: 14px !important; }
+    .font15 { font-size: 15px !important; }
+    .font16 { font-size: 16px !important; }
+	.font17 { font-size: 17px !important; }
+    .font18 { font-size: 18px !important; }
+    .font19 { font-size: 19px !important; }
+    .font20 { font-size: 20px !important; }
+    .font21 { font-size: 21px !important; }
+    .font22 { font-size: 22px !important; }
+    .font23 { font-size: 23px !important; }
+    .font24 { font-size: 24px !important; }
+    .font25 { font-size: 25px !important; }
+    .font26 { font-size: 26px !important; }
+    .font27 { font-size: 27px !important; }
+    .font28 { font-size: 28px !important; }
+	.font29 { font-size: 29px !important; }
+    .font30 { font-size: 30px !important; }
+    .font31 { font-size: 31px !important; }
+	.font32 { font-size: 32px !important; }
+
+    /* LINE-HEIGHT */
+    .line12 { line-height: 12px !important; }
+    .line14 { line-height: 14px !important; }
+    .line16 { line-height: 16px !important; }
+    .line18 { line-height: 18px !important; }
+    .line20 { line-height: 20px !important }
+    .line22 { line-height: 22px !important; }
+    .line24 { line-height: 24px !important; }
+    .line26 { line-height: 26px !important; }
+    .line28 { line-height: 28px !important }
+    .line30 { line-height: 30px !important; }
+    .line31 { line-height: 31px !important; }
+    .line32 { line-height: 32px !important; }
+    .line34 { line-height: 34px !important; }
+    .line36 { line-height: 36px !important; }
+
+    /* PADDING / MARGIN */
+    .pt15 { padding-top: 15px !important; }
+    .pt18 { padding-top: 18px !important; }
+    .pt24 { padding-top: 24px !important; }
+    .pr6 { padding-right: 6px !important; }
+    .pr10 { padding-right: 10px !important; }
+    .pr20 { padding-right: 20px !important; }
+    .pb5 { padding-bottom: 5px !important; }
+    .pb10 { padding-bottom: 10px !important; }
+    .pb12 { padding-bottom: 12px !important; }
+    .pb24 { padding-bottom: 24px !important; }
+    .pb40 { padding-bottom: 40px !important; }
+    .pl3 { padding-left: 3px !important; }
+    .pl7 { padding-left: 7px !important; }
+    .pl8 { padding-left: 8px !important; }
+    .pl18 { padding-left: 18px !important; }
+    .pl20 { padding-left: 20px !important; }
+    .pl22 { padding-left: 22px !important; }
+    .plr18 { padding: 0 18px !important; }
+    .plr20 { padding: 0 20px !important; }
+	.mr20 { margin-right: 20px !important; }
+	.ml20 { margin-left: 20px !important; }
+
+	/* BORDER */
+	.bbot { border-bottom: 1px solid #d4d4d4 !important; }
+	.borderbote9 { border-bottom: 1px solid #e9e9e9 !important; }
+
+	/* COLOR */
+	.bgf8 { background-color: #f8f8f8 !important; }
+    .bgwhite { background-color: #ffffff !important; }
+
+	/* MODULE SPECIFIC */
+    /* MOD7CSS*/
+    .mod7bg {
+        background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod7_bg_d.jpg) !important;
+    }
+
+    /* MOD9ACSS*/
+    .mod9abg {
+        background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod9a_bg_d.jpg) !important;
+    }
+
+    /* MOD9CCSS*/
+    .mod9cbg {
+        height: 166px !important;
+        background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod9c_bg_m.jpg) !important;
+    }
+
+    /* MOD10CSS */
+    .mod10bg { background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod10_bg.jpg) !important; }
+
+    /* MOD18CSS */
+    .mod18ctamob { padding: 11px 112px !important; }
+    .mod18bg1 { background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod18_bg_m.jpg) !important; }
+    .mod18bg2 { background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod18_bg_m.jpg) !important; }
+    .mod18bg3 { background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod18_bg_m.jpg) !important; }
+
+    /* MOD19CSS */
+    .mod19ctamob { padding: 11px 112px !important; }
+    .mod19bg1 { background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod18_bg_m.jpg) !important; }
+    .mod19bg2 { background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod18_bg_m.jpg) !important; }
+    .mod19bg3 { background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod18_bg_m.jpg) !important; }
+
+    /* MOD20CSS */
+    .mod20ctamob { padding: 11px 112px !important; }
+
+    /* MOD27CSS */
+    .mod27cta { padding: 4px 0 10px 0; }
+    .mod27ctamob { 
+        padding: 11px 0px !important;
+        width: 290px !important;
+        max-width: 290px !important;
+    }
+
+    /* MOD28CSS */
+    .mod28cta { padding: 4px 0 10px 0; }
+    .mod28ctamob { 
+        padding: 11px 0px !important;
+        width: 290px !important;
+        max-width: 290px !important;
+    }
+
+    /* MOD29ACSS */
+    .mod29actamob { 
+        padding: 11px 0px !important;
+        width: 290px !important;
+        max-width: 290px !important;
+    }
+
+    /* MOD29CCSS */
+    .mod29ccta { padding: 12px 0 10px 0; }
+    .mod29cctamob { 
+        padding: 11px 0px !important;
+        width: 290px !important;
+        max-width: 290px !important;
+    }
+
+    /*MOD29D*/
+    .mod29dcta { padding: 14px 0 10px 0; }
+    .mod29dctamob { 
+        padding: 11px 0px !important;
+        width: 290px !important;
+        max-width: 290px !important;
+    }
+
+    /* MOD31CSS */
+    .mod31bg {
+        height: 243px !important;
+        background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod31_bg_m.jpg) !important; 
+    }
+
+    /* MOD34CSS */
+    .mod34ctamob { padding: 11px 18px !important; }
+    .mod34cta { margin-left: -2px !important; }
+
+    /* MOD35CSS */
+    .mod35bg { background: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod35_bg_m.jpg) !important; }
+    .mod35ctamob { padding: 11px 18px !important; }
+    .mod35cta { margin-left: -2px !important; }
+
+    /* MOD38ACSS */
+    .mod38abg {
+    	height: 156px !important;
+    	background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod38a_bg_m.jpg) !important;
+    }
+
+    /* MOD39CSS */
+    .mod39bg {
+    	height: 173px !important;
+    	background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod39_bg_m.jpg) !important;
+    }
+
+    /* MOD40CSS */
+    .mod40abg {
+    	height: 170px !important;
+    	background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod40a_bg_m.jpg) !important;
+    }
+
+    /* MOD57CSS */
+    .mod57arw { padding: 4px 0px 4px 2px; }
+
+    /* MOD58CSS */
+    .mod58bg {
+        height: 145px !important;
+        background-image: url(https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/images/mod58_bg_m.png) !important;
+    }
+}</style>
+<!-- /MODULE MEDIA QUERY -->
+
+<!--[if gte mso 9]>
+<style type="text/css">
+    .lhfix {mso-line-height-rule: exactly;}
+    .supFix {mso-text-raise: 60%;}
+    .bcollapse { border-collapse: collapse !important; }
+    .resetBorder { border: none !important; }
+    div {mso-line-height-rule: 100%;}
+</style>
+<![endif]-->
+<!--[if gte mso 9]><xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+</head>
+<body bgcolor="#ffffff" style="margin:0; padding:0; width:100% !important; background-color:#ffffff;"><table cellpadding="0" cellspacing="0" style="border: 0px; padding: 0px; margin: 0px; position: absolute; display: none; float: left">
+<tr>
+<td height="1" style="font-size: 1px; line-height: 1px; padding: 0px;">
+<img src="https://e.Hotwire.com/pub/as?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXHkMX%3Dw&_ei_=ElhRBsBHHFN-MFDxFI-xOrhfG1jhLgkTFvWZtvuIAbfD5ySuW8JHQHgrzhaGMWNd5O5Dm8pd__ktV6tb6bPG1NwqwysiX_YgC9SKzzwvX0KvbHsUlaNAOEH0t4OOM59YevBoK3zDZgL5fUeD-SKg6xLKx3VYQnB3NHFLC-wAthA.">
+<!--Start BK pixel--><img src="https://tags.bluekai.com/site/51608?e_id_s=72a72f772be37d3246fdc278b2045388cbdd7e676bb35b4b09ba579f066270fa&e_id_m=ed899f1e7f9bfa4cf0af14fbcedd0079" height="1" width="1"><br><br><!--End BK pixel-->
+</td>
+</tr>
+</table>
+
+<div align="center" style="background-color:#ffffff;">
+<!--Gmail App 5.1 Scaling Fix-->
+<div class="gmailfix" style="white-space:nowrap; font:15px courier; line-height:0;">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</div>
+
+<!-- MOD1HTMLSTART -->
+<!-- MOD1HTMLSTART -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="table-layout:fixed;" class="hide"><tr><td width="100%" align="center" style="vertical-align:top;" bgcolor="#ffffff">
+<table cellspacing="0" cellpadding="0" border="0"><tr><td width="640" class="width320" align="center">
+
+<div style="line-height:20px;" class="lhfix">&nbsp;</div>
+<table cellpadding="0" cellspacing="0" border="0" width="620" align="center">
+<tr>
+    <td align="left" valign="top">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:14px; color:#767676;"><a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRTAY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ." style="text-decoration: none; color: #767676;">Hurry, this email-exclusive offer ends 10/13!</a></div>
+    </td>
+    <td align="right" valign="top">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:14px; color:#767676;">
+          <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRTCY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjW_OjOqB-BYBTnUS2W6qaiAx4vVYkjSMhnjREU0nn-xjHH1s-DM56A-2dtjtYOdq8E6BC0QRSwx_Xi8-JOuO0fnj3cl1P4mEfKMMMsotkbLTO52jX7PkbaSFEBuYxg08VhBEVieK21z88bLzv5e3nwzWZV7PAQLpUkJL2Hw." style="text-decoration: underline; color: #767676;">View online</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRURY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ." style="text-decoration: underline; color: #767676;">Manage my alerts</a>
+        </div>
+    </td>
+</tr>
+</table>
+<div style="line-height:27px;" class="lhfix">&nbsp;</div>
+
+</td></tr></table>
+</td></tr></table>
+<!-- /MOD1HTMLEND --><!-- /MOD1HTMLEND -->
+
+<!-- MOD2HTMLSTART -->
+<!-- MOD2HTMLSTART -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="table-layout:fixed; border-bottom: 1px solid #d4d4d4;"><tr><td width="100%" align="center" style="vertical-align:top;" bgcolor="#ffffff">
+<table cellspacing="0" cellpadding="0" border="0"><tr><td width="640" class="width320" align="center">
+
+<div style="line-height:10px;" class="lhfix line20">&nbsp;</div>
+<table cellpadding="0" cellspacing="0" border="0" width="640" class="width320">
+<tr>
+    <td width="10" class="width20"></td>
+    <td align="left" valign="middle" style="vertical-align: middle;">
+        <a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRUTY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/2/images/sprite_logo.png" width="160" height="33" border="0" style="display:block; font-family:Arial, sans-serif; font-size:20px; color:#e64142;" alt="hotwire&reg;" class="width91 hauto"></a>
+    </td>
+    <td align="right" valign="middle" style="vertical-align: middle;">
+        <div style="line-height:5px;" class="lhfix">&nbsp;</div>
+        <div style="line-height:5px;" class="lhfix hide">&nbsp;</div>
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:16px; line-height:18px; color:#333333; font-weight: bold;">
+            <a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRUWY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ." style="text-decoration:none; color: #333333;">Hotels</a>
+            <span class="hide">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRUAY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ." style="text-decoration:none; color: #333333;" class="pl8">Cars</a>
+            <span class="hide">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRUCY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ." style="text-decoration:none; color: #333333;" class="pl8">Flights</a>
+            <span class="hide">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRWRY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ." style="text-decoration:none; color: #333333;" class="hide">Vacations</a>
+        </div>
+    </td>
+    <td width="10" class="width20"></td>
+</tr>
+</table>
+<div style="line-height:34px;" class="lhfix line28">&nbsp;</div>
+
+</td></tr></table>
+</td></tr></table>
+
+<!-- /MOD2HTMLEND --><!-- /MOD2HTMLEND -->
+
+<!-- EMPTY CONTAINER -->
+
+<!--<div style="line-height:20px;" class="lhfix">&nbsp;</div>-->
+<!-- /EMPTY CONTAINER -->
+
+<!-- MOD60BHTMLSTART -->
+<!-- MOD60BHTMLSTART -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="table-layout:fixed;" bgcolor="#ffffff"><tr><td width="100%" align="center" style="vertical-align:top;">    
+<table cellspacing="0" cellpadding="0" border="0"><tr><td width="640" class="width312" align="center" bgcolor="#e64142">
+
+<div style="line-height:15px;" class="lhfix">&nbsp;</div>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+    <td align="right" valign="middle" style="vertical-align: middle;">
+        <a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRWTY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjVzKxH7Y8bK99H6KhggiCFyLkjbTWJK6aeSj4X3lRaNCGAITujwFWf02xeDxhP5G42CmOXKTPZv_tPKkSDu4LuhcSBsiXUKoTt3BHRl6-SW2YS6RRIMNzJHNCOsF9eDSq6NJ9X-Xr2Db34WJJmxWanM48oxxpyw4snSXl8B0IBGu8C55nKEIfXbeUquwPm7Sc4ElkCrby1HY20yH_cM."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/60b/images/email_icon_30_30.png" width="30" height="30" border="0" style="display:block; font-family:Helvetica, sans-serif; font-size:20px; color:#ffffff;" alt="i"></a>
+    </td>
+    <td width="8"></td>
+    <td align="left" valign="middle" style="vertical-align: middle;">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:15px; line-height:17px; color:#ffffff; letter-spacing: .15em; text-transform: uppercase;">
+            <a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRWTY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjVzKxH7Y8bK99H6KhggiCFyLkjbTWJK6aeSj4X3lRaNCGAITujwFWf02xeDxhP5G42CmOXKTPZv_tPKkSDu4LuhcSBsiXUKoTt3BHRl6-SW2YS6RRIMNzJHNCOsF9eDSq6NJ9X-Xr2Db34WJJmxWanM48oxxpyw4snSXl8B0IBGu8C55nKEIfXbeUquwPm7Sc4ElkCrby1HY20yH_cM." style="color:#ffffff; text-decoration:none;"><strong>EMAIL&#45;EXCLUSIVE OFFER</strong></a>
+        </div>
+    </td>
+</tr>
+</table>
+<div style="line-height:15px;" class="lhfix">&nbsp;</div>
+
+</td></tr></table>
+</td></tr></table>
+<div style="line-height:20px;" class="lhfix">&nbsp;</div>
+<!-- /MOD60BHTMLEND --><!-- /MOD60BHTMLEND-->
+
+<!-- MOD38cHTMLSTART -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="table-layout:fixed;" bgcolor="#ffffff"><tr><td width="100%" align="center" style="vertical-align:top;">    
+<table cellspacing="0" cellpadding="0" border="0"><tr><td width="640" class="width312" align="center">
+
+<div style="line-height:8px;" class="lhfix">&nbsp;</div>
+<div style="font-family: Arial, Helvetica, sans-serif; font-size:32px; line-height:38px; color:#e64142;" class="lhfix plr20">
+    <a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRWWY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjVzKxH7Y8bK99H6KhggiCFyLkjbTWJK6aeSj4X3lRaNCGAITujwFWf02xeDxhP5G42CmOXKTPZv_tPKkSDu4LuhcSBsiXUKoTt3BHRl6-SW2YS6RRIMNzJHNCOsF9eDSq6NJ9X-Xr2Db34WJJmxWanM48oxxpyw4snSXl8B0IBGu8C55nKEIfXbeUquwPm7Sc4ElkCrby1HY20yH_cM." style="color:#e64142; text-decoration:none;"><strong>Spin the wheel,<span class="block"></span> save a fortune</strong></a>
+</div>
+<div style="line-height:15px;" class="lhfix">&nbsp;</div>
+
+</td></tr></table>
+</td></tr></table><!-- /MOD38cHTMLEND-->
+
+<!-- MOD60BHTMLSTART -->
+<!-- MOD60BHTMLSTART -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="table-layout:fixed;" bgcolor="#ffffff"><tr><td width="100%" align="center" style="vertical-align:top;">    
+<table cellspacing="0" cellpadding="0" border="0"><tr><td width="640" class="width312" align="center" bgcolor="#ffffff">
+
+<div style="line-height:10px;" class="lhfix">&nbsp;</div>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+    <td align="right" valign="middle" style="vertical-align: middle;">
+        <a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRWTY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjVzKxH7Y8bK99H6KhggiCFyLkjbTWJK6aeSj4X3lRaNCGAITujwFWf02xeDxhP5G42CmOXKTPZv_tPKkSDu4LuhcSBsiXUKoTt3BHRl6-SW2YS6RRIMNzJHNCOsF9eDSq6NJ9X-Xr2Db34WJJmxWanM48oxxpyw4snSXl8B0IBGu8C55nKEIfXbeUquwPm7Sc4ElkCrby1HY20yH_cM."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/60b/images/clock_icon.png" width="15" height="15" border="0" style="display:block; font-family:Helvetica, sans-serif; font-size:20px; color:#ffffff;" alt="i"></a>
+    </td>
+    <td width="8"></td>
+    <td align="left" valign="middle" style="vertical-align: middle;">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:15px; line-height:17px; color:#ffffff; letter-spacing: .1em;"><strong style="color: rgb(0, 0, 0); text-decoration: none;">72<a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRWTY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjVzKxH7Y8bK99H6KhggiCFyLkjbTWJK6aeSj4X3lRaNCGAITujwFWf02xeDxhP5G42CmOXKTPZv_tPKkSDu4LuhcSBsiXUKoTt3BHRl6-SW2YS6RRIMNzJHNCOsF9eDSq6NJ9X-Xr2Db34WJJmxWanM48oxxpyw4snSXl8B0IBGu8C55nKEIfXbeUquwPm7Sc4ElkCrby1HY20yH_cM." style="color:#000000; text-decoration:none;">-HOURS ONLY</a></strong></div>
+    </td>
+</tr>
+</table>
+<div style="line-height:10px;" class="lhfix">&nbsp;</div>
+
+</td></tr></table>
+</td></tr></table>
+<div style="line-height:5px;" class="lhfix">&nbsp;</div>
+<!-- /MOD60BHTMLEND --><!-- /MOD60BHTMLEND-->
+
+<!-- MOD11DHTMLSTART -->
+<!-- MOD11DHTMLSTART -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="table-layout:fixed;" bgcolor="#ffffff"><tr><td width="100%" align="center" style="vertical-align:top;">    
+<table cellspacing="0" cellpadding="0" border="0"><tr><td width="640" class="width312" align="center">
+
+<a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRWAY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjVzKxH7Y8bK99H6KhggiCFyLkjbTWJK6aeSj4X3lRaNCGAITujwFWf02xeDxhP5G42CmOXKTPZv_tPKkSDu4LuhcSBsiXUKoTt3BHRl6-SW2YS6RRIMNzJHNCOsF9eDSq6NJ9X-Xr2Db34WJJmxWanM48oxxpyw4snSXl8B0IBGu8C55nKEIfXbeUquwPm7Sc4ElkCrby1HY20yH_cM."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/11d/images/V2_V4_wheel_d_0529.gif" width="484" height="272" border="0" style="display:block; font-family:Helvetica, sans-serif; font-size:20px; color:#ffffff;" alt="" class="hide"></a>
+
+<!--[if !mso]><!-->
+<div class="show" style="display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0;">
+    <a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRWAY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjVzKxH7Y8bK99H6KhggiCFyLkjbTWJK6aeSj4X3lRaNCGAITujwFWf02xeDxhP5G42CmOXKTPZv_tPKkSDu4LuhcSBsiXUKoTt3BHRl6-SW2YS6RRIMNzJHNCOsF9eDSq6NJ9X-Xr2Db34WJJmxWanM48oxxpyw4snSXl8B0IBGu8C55nKEIfXbeUquwPm7Sc4ElkCrby1HY20yH_cM."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/11d/images/V2_V4_wheel_m0529.gif" width="310" height="190" border="0" style="display:block; font-family:Helvetica, sans-serif; font-size:20px; color:#ffffff;" alt=""></a>
+</div>
+<!--<![endif]-->
+
+</td></tr></table>
+</td></tr></table>
+<div style="line-height:20px;" class="lhfix">&nbsp;</div>
+<!-- /MOD11DAHTMLEND --><!-- /MOD11DHTMLEND-->
+
+<!-- MOD37AHTMLSTART -->
+<!-- MOD37HTMLSTART -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="table-layout:fixed;" bgcolor="#ffffff"><tr><td width="100%" align="center" style="vertical-align:top;">
+<table cellspacing="0" cellpadding="0" border="0"><tr><td width="640" class="width312" align="center" bgcolor="#ffffff">
+
+<!-- border cta -->
+<!--[if gte mso 9]>
+<style type="text/css">
+    .mod37bcta { padding: 12px 24px !important; background-color:#e64142 !important; }
+</style>
+<![endif]-->
+<table cellpadding="0" cellspacing="0" border="0"><tr><td>
+<div class="mod37bcta">
+  <a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRWCY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjVzKxH7Y8bK99H6KhggiCFyLkjbTWJK6aeSj4X3lRaNCGAITujwFWf02xeDxhP5G42CmOXKTPZv_tPKkSDu4LuhcSBsiXUKoTt3BHRl6-SW2YS6RRIMNzJHNCOsF9eDSq6NJ9X-Xr2Db34WJJmxWanM48oxxpyw4snSXl8B0IBGu8C55nKEIfXbeUquwPm7Sc4ElkCrby1HY20yH_cM." style="background-color:#e64142; border: 1px solid #e64142; border-radius: 2px; color: #ffffff; display: inline-block; font-family: Arial, Helvetica, sans-serif; font-size: 17px; font-weight: bold; line-height: 20px; padding: 12px 24px; text-align: center; text-decoration: none;">
+          Click&nbsp;to&nbsp;redeem&nbsp;your&nbsp;savings
+  </a>
+</div>
+    <div style="line-height:20px;" class="lhfix">&nbsp;</div>
+</td></tr></table>
+<!-- /border cta -->
+
+</td></tr></table>
+</td></tr></table>
+<!-- /MOD37HTMLEND --><!-- /MOD37AHTMLEND-->
+
+<!-- MOD59HTMLSTART -->
+<!-- MOD59HTMLSTART -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="table-layout:fixed;"><tbody><tr><td width="100%" align="center" style="vertical-align:top;">    
+<table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td width="640" class="width312" align="center" bgcolor="ffffff">
+
+<div style="font-family: Arial, Helvetica, sans-serif; font-size:11px; line-height:13px; color:#333333;"><a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRYRY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjVzKxH7Y8bK99H6KhggiCFyLkjbTWJK6aeSj4X3lRaNCGAITujwFWf02xeDxhP5G42CmOXKTPZv_tPKkSDu4LuhcSBsiXUKoTt3BHRl6-SW2YS6RRIMNzJHNCOsF9eDSq6NJ9X-Xr2Db34WJJmxWanM48oxxpyw4snSXl8B0IBGu8C55nKEIfXbeUquwPm7Sc4ElkCrby1HY20yH_cM." style="color:#000000; text-decoration:none;">Book by 11:59pm (PST) on 10/13/19; travel anytime. <span class="block"></span>Minimum $100 (USD) Hot Rate<span style="vertical-align: 4px; font-size: 55%; line-height: 55%;">&reg;</span> Car booking.</a></div>
+<div class="lhfix" style="line-height:20px;">&nbsp;</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<div class="lhfix" style="line-height:5px;">&nbsp;</div>
+<!-- /MOD59HTMLEND --><!-- /MOD59HTML END -->
+<!-- MOD36HTMLSTART -->
+<!-- MOD36HTMLSTART -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="table-layout:fixed;" bgcolor="#f0f0f0"><tr><td width="100%" align="center" style="vertical-align:top;">    
+<table cellspacing="0" cellpadding="0" border="0"><tr><td width="640" class="width320 borderbote9" align="center">
+
+<div style="line-height:18px;" class="lhfix">&nbsp;</div>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+    <td width="18" class="hide"></td>
+    <th align="center" valign="top" style="font-weight: normal;" class="width320 block">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:13px; line-height:15px; color:#333333;">
+            <strong>Connect with us</strong>
+        </div>
+        <div style="line-height:15px;" class="lhfix">&nbsp;</div>
+        <table cellpadding="0" cellspacing="0" border="0" class="centertable">
+        <tr>
+            <td width="31" valign="top">
+                <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRYTY&_ei_=ElhRBsBHHFN-MFDxFI-xOrheyO9uVs_KkAPLSsaGncEV-RS3lMlrHs9SSy0yio7bVhpqOyeaJQOPskEq1cgR68JFNOsBZVr10w4r6-vntR_liycp4q74khQSfgA7A2a-mkvK7fDwLrkwi6qHYukk6fyyBfer-aAzreyILT-w53JiBs1CH7RnB0."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/36/images/sprite_facebook.png" width="31" height="31" border="0" style="display:block; font-family:Arial, sans-serif; font-size:8px; color:#767676;" alt="Facebook"></a>
+            </td>
+            <td width="14"></td>
+            <td width="31" valign="top">
+                <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRYWY&_ei_=ElhRBsBHHFN-MFDxFI-xOrheyO9uVs_KkAPLSsaGncEV-RS3lMlrHs9SSy0yio7bVhpqOyeaJQOPskEq1cgR68JFNOsBZVr10w4r6-vntR_liycp4q74khQSfgA7A2a-mkvK7fDwLrkwi6qHYukk6fyyBfer-aAzreyILT-w53JiBs1CH7RnB0."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/36/images/sprite_instagram.png" width="31" height="31" border="0" style="display:block; font-family:Arial, sans-serif; font-size:8px; color:#767676;" alt="Instagram"></a>
+            </td>
+            <td width="14"></td>
+            <td width="35" valign="top">
+                <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRYAY&_ei_=ElhRBsBHHFN-MFDxFI-xOrheyO9uVs_KkAPLSsaGncEV-RS3lMlrHs9SSy0yio7bVhpqOyeaJQOPskEq1cgR68JFNOsBZVr10w4r6-vntR_liycp4q74khQSfgA7A2a-mkvK7fDwLrkwi6qHYukk6fyyBfer-aAzreyILT-w53JiBs1CH7RnB0."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/36/images/sprite_twitter.png" width="35" height="31" border="0" style="display:block; font-family:Arial, sans-serif; font-size:8px; color:#767676;" alt="Twitter"></a>
+            </td>
+            <td width="13"></td>
+            <td width="34" valign="top">
+                <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRYCY&_ei_=ElhRBsBHHFN-MFDxFI-xOrheyO9uVs_KkAPLSsaGncEV-RS3lMlrHs9SSy0yio7bVhpqOyeaJQOPskEq1cgR68JFNOsBZVr10w4r6-vntR_liycp4q74khQSfgA7A2a-mkvK7fDwLrkwi6qHYukk6fyyBfer-aAzreyILT-w53JiBs1CH7RnB0."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/36/images/sprite_blog.png" width="34" height="30" border="0" style="display:block; font-family:Arial, sans-serif; font-size:8px; color:#767676;" alt="Blog"></a>
+            </td>
+            <td width="15"></td>
+            <td width="30" valign="top">
+                <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRARY&_ei_=ElhRBsBHHFN-MFDxFI-xOrheyO9uVs_KkAPLSsaGncEV-RS3lMlrHs9SSy0yio7bVhpqOyeaJQOPskEq1cgR68JFNOsBZVr10w4r6-vntR_liycp4q74khQSfgA7A2a-mkvK7fDwLrkwi6qHYukk6fyyBfer-aAzreyILT-w53JiBs1CH7RnB0."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/36/images/sprite_pinterest.png" width="30" height="32" border="0" style="display:block; font-family:Arial, sans-serif; font-size:8px; color:#767676;" alt="Pinterest"></a>
+            </td>
+        </tr>
+        </table>
+    </th>
+    <th width="98" class="width320 block"><div style="line-height:28px;" class="lhfix">&nbsp;</div></th>
+    <th align="center" valign="top" style="font-weight: normal;" class="width320 block">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:13px; line-height:15px; color:#333333;">
+            <strong>Download the FREE App </strong>
+        </div>
+        <div style="line-height:13px;" class="lhfix">&nbsp;</div>
+        <table cellpadding="0" cellspacing="0" border="0" class="centertable">
+        <tr>
+            <td align="right" valign="top">
+                <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRATY&_ei_=ElhRBsBHHFN-MFDxFI-xOrheyO9uVs_KkAPLSsaGncEV-RS3lMlrHs9SSy0yio7bVhpqOyeaJQOPskEq1cgR68JFNOsBZVr10w4r6-vntR_liycp4q74khQSfgA7A2a-mkvK7fDwLrkwi6qHYukk6fyyBfer-aAzreyILT-w53JiBs1CH7RnB0."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/36/images/sprite_app_ios.png" width="115" height="34" border="0" style="display:block; font-family:Arial, sans-serif; font-size:8px; color:#000000;" alt="Download on the App Store"></a>
+            </td>
+            <td width="11"></td>
+            <td align="left" valign="top">
+                <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRAWY&_ei_=ElhRBsBHHFN-MFDxFI-xOrheyO9uVs_KkAPLSsaGncEV-RS3lMlrHs9SSy0yio7bVhpqOyeaJQOPskEq1cgR68JFNOsBZVr10w4r6-vntR_liycp4q74khQSfgA7A2a-mkvK7fDwLrkwi6qHYukk6fyyBfer-aAzreyILT-w53JiBs1CH7RnB0."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/36/images/sprite_app_google.png" width="115" height="34" border="0" style="display:block; font-family:Arial, sans-serif; font-size:8px; color:#000000;" alt="GET IT ON Google Play"></a>
+            </td>
+        </tr>
+        </table>
+    </th>
+</tr>
+</table>
+<div style="line-height:24px;" class="lhfix">&nbsp;</div>
+<table cellpadding="0" cellspacing="0" border="0" class="hide"><tr><td width="640" bgcolor="#d4d4d4" height="1" style="line-height:1px;"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/36/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="table-layout:fixed;" bgcolor="#f0f0f0" class="bgf8"><tr><td width="100%" align="center" style="vertical-align:top;">    
+<table cellspacing="0" cellpadding="0" border="0"><tr><td width="640" class="width320 borderbote9" align="center">
+<div style="line-height:21px;" class="lhfix">&nbsp;</div>
+<table cellpadding="0" cellspacing="0" border="0" width="640" class="width320">
+<tr>
+    <td width="14" class="hide"></td>
+    <th align="left" valign="top" style="font-weight: normal;" class="width320 block">
+        <a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRAAY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/modular_templates/merch/mystery_car/36/images/sprite_logo.png" width="110" height="23" border="0" style="display:block; font-family:Arial, sans-serif; font-size:20px; color:#e64142;" alt="hotwire&reg;" class="hauto centertable pr6"></a>
+    </th>
+    <th width="1" style="font-weight: normal;" class="width320 block"><div style="line-height:30px;" class="lhfix">&nbsp;</div></th>
+    <th align="right" valign="top" style="font-weight: normal;" class="width320 block aligncenter">
+        <div style="line-height:4px;" class="lhfix hide">&nbsp;</div>
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:13px; line-height:15px; color:#333333;">
+            <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRACY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ." style="text-decoration:underline; color: #333333;">Customer Care</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hide">&nbsp;</span>
+            <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRBRY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ." style="text-decoration:underline; color: #333333;" class="pr10">Privacy Policy</a>
+            <span class="hide">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="block pt15 pb12">
+                <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRBTY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ." style="text-decoration:underline; color: #333333;">Terms of Use</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hide">&nbsp;&nbsp;</span>
+                <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRBWY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ." style="text-decoration:underline; color: #333333;">Update Zip Code</a>
+            </span>
+
+        </div>
+    </th>
+</tr>
+</table>
+<div style="line-height:20px;" class="lhfix">&nbsp;</div>
+</td></tr></table>
+</td></tr></table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%" style="table-layout:fixed;"><tr><td width="100%" align="center" style="vertical-align:top;">    
+<table cellspacing="0" cellpadding="0" border="0"><tr><td width="640" class="width320" align="center">
+<div style="line-height:20px;" class="lhfix line30">&nbsp;</div>
+<table border="0" cellpadding="0" cellspacing="0"><tr><td colspan="2"><a href="http://news.hotwire.com/click?s=164816&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" rel="nofollow"><img src="http://news.hotwire.com/imp?s=164816&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" border="0" width="600" style="width: 100%; max-width: 600px !important;"></a></td></tr><tr><td align="left"><a style="display: block; max-width: 116px;  max-height: 15px;" href="http://news.hotwire.com/click?s=164819&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" rel="nofollow"><img src="http://news.hotwire.com/imp?s=164819&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" border="0"></a></td><td align="right"><a style="display: block; max-width: 19px;  max-height: 15px;" href="http://news.hotwire.com/click?s=631059&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" rel="nofollow"><img src="http://news.hotwire.com/imp?s=631059&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" border="0"></a></td></tr></table>
+<div style="line-height:20px;" class="lhfix line30">&nbsp;</div>
+<table border="0" cellpadding="0" cellspacing="0"><tr><td colspan="2"><a href="http://news.hotwire.com/click?s=706696&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" rel="nofollow"><img src="http://news.hotwire.com/imp?s=706696&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" border="0" width="600" style="width: 100%; max-width: 600px !important;"></a></td></tr><tr><td align="left"><a style="display: block; max-width: 116px;  max-height: 15px;" href="http://news.hotwire.com/click?s=706697&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" rel="nofollow"><img src="http://news.hotwire.com/imp?s=706697&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" border="0"></a></td><td align="right"><a style="display: block; max-width: 19px;  max-height: 15px;" href="http://news.hotwire.com/click?s=706699&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" rel="nofollow"><img src="http://news.hotwire.com/imp?s=706699&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" border="0"></a></td></tr></table>
+<div style="line-height:20px;" class="lhfix line30">&nbsp;</div><table cellpadding="0" cellspacing="0" border="0" width="640" class="width320">
+<tr>
+    <td width="14" class=""></td>
+    <td align="left" valign="top">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:14px; color:#b8b8b8;">
+            <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRBAY&_ei_=ElhRBsBHHFN-MFDxFI-xOrjDschK30oFlooJDkDKhsfgbl21FcsExLm1EOtfEdjfQrSN0GoqyfXiEHT1VKQmAR6sl83QEV1FYn1tIu55jhMjyCfobWOjmoDRhL_6_pvJipQMt0flTOBN6j5uli8-l8Uoqx2xa8YwbP6daBq6HCYHX3PmZc6yB-NASZYmEn5arbZr2n-21pDb8c1xfcWDh7g7OIPiLQ_BZUZGgkZWAFMO5kT2f5J42KPZRaR4baQ." style="color:#b8b8b8; text-decoration: underline;"> </a>
+            <br><br>
+        </div>
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size:11px; line-height:13px; color:#b8b8b8;">
+            <!-- PLACEHOLDER LEGAL -->
+              Offer: Click on the image to receive an instant discount off a Hot Rate<span style="vertical-align: 4px; font-size: 55%; line-height: 55%;">&reg;</span> Car when booking on Hotwire. The price of the qualifying booking must be at least $100 including taxes and fees. Supplies are limited. Limit one discount per user account and per hotel booking. Discount may not be combined with any other offer or coupon. This offer is valid for U.S. customers only. Bookings are subject to availability and all applicable terms and conditions. Discount is not transferable or redeemable for cash. Hotwire may revoke or change this offer at any time. Not redeemable on Android mobile app.<br>
+             <br>
+              This commercial message is from Hotwire, Inc. Please do not reply to this message, as we cannot respond to messages sent to this address. You may reach Hotwire at <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRBCY&_ei_=ElhRBsBHHFN-MFDxFI-xOrheyO9uVs_KkAPLSsaGncEV-RS3lMlrHs9SSy0yio7bVhpqOyeaJQOPskEq1cgR68JFNOsBZVr10w4r6-vntR_liycp4q74khQSfgA7A2a-mkvK7fDwLrkwi6qHYukk6fyyBfer-aAzreyILT-w53JiBs1CH7RnB0." style="text-decoration:underline; color:#b8b8b8;">Contact Us</a> or via postal mail at: Hotwire, <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRCRY&_ei_=ElhRBsBHHFN-MFDxFI-xOrheyO9uVs_KkAPLSsaGncEV-RS3lMlrHs9SSy0yio7bVhpqOyeaJQOPskEq1cgR68JFNOsBZVr10w4r6-vntR_liycp4q74khQSfgA7A2a-mkvK7fDwLrkwi6qHYukk6fyyBfer-aAzreyILT-w53JiBs1CH7RnB0." style="text-decoration:none; color:#b8b8b8; cursor: pointer;">PO Box 26285, San Francisco, CA 94126</a>
+              <br>
+              <br>
+              &copy; 2019 Hotwire, Inc. All rights reserved. Hotwire, the Hotwire logo, Hot Fare, and Hot Rate are either registered trademarks or trademarks of Hotwire, Inc. Other product and company names shown may be trademarks of their respective owners. CST 2053390-40; NST 20003-0209.
+              <div style="-webkit-text-size-adjust:none;font-family:sans-serif;font-size:8pt;color:#ffffff;">(NID: N-PC-101319) (VID: V-PAMTest-STO) (HWID: <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRCRY&_ei_=ElhRBsBHHFN-MFDxFI-xOrheyO9uVs_KkAPLSsaGncEV-RS3lMlrHs9SSy0yio7bVhpqOyeaJQOPskEq1cgR68JFNOsBZVr10w4r6-vntR_liycp4q74khQSfgA7A2a-mkvK7fDwLrkwi6qHYukk6fyyBfer-aAzreyILT-w53JiBs1CH7RnB0." style="color:#ffffff; text-decoration:none;">30001793532)</a> (MD: <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGmfdRs1Hndefs9gkPHzeEKS3hn71zbfitd5Am1OR2PhSKPKO6Aq6MciokPJ9pWlbKBVXtpKX%3DWUWTRCRY&_ei_=ElhRBsBHHFN-MFDxFI-xOrheyO9uVs_KkAPLSsaGncEV-RS3lMlrHs9SSy0yio7bVhpqOyeaJQOPskEq1cgR68JFNOsBZVr10w4r6-vntR_liycp4q74khQSfgA7A2a-mkvK7fDwLrkwi6qHYukk6fyyBfer-aAzreyILT-w53JiBs1CH7RnB0." style="color:#ffffff; text-decoration:none;">2019-10-13</a>)
+              </div> 
+            <!-- /PLACEHOLDER LEGAL -->
+            <br><br><br><br><br><br>
+        </div>
+    </td>
+    <td width="14"></td>
+</tr>
+</table>
+<div style="line-height:20px;" class="lhfix">&nbsp;</div>
+
+</td></tr></table>
+</td></tr></table>
+<!-- /MOD36HTMLEND --><!-- /MOD36HTMLEND -->
+   
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="40" height="6"><tbody><tr><td><img src="http://news.hotwire.com/imp?s=124150500&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150501&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150502&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150503&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150504&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150505&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150506&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150507&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150508&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150509&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150510&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150511&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150512&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150513&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150514&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150515&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150516&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150517&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150518&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td><td><img src="http://news.hotwire.com/imp?s=124150519&li=${.now?string(" yyyymmdd")}&e="&p=hwire.13207365"" width="2" height="6" border="0"></td></tr></tbody></table><img border="0" src="https://r.turn.com/r/beacon?b2=_UL0V6pZsbLmOfCzuAMtuz5FejdaK6n5otoI1ekkl2txQYH5ToBkDwYGXz83TXOT8V24QzMx9pz1AgmfQtQFNw&cid="></body>
+</html>
+
+
+

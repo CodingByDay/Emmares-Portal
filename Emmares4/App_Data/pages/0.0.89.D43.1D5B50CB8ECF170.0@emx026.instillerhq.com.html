@@ -1,0 +1,1414 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">
+/* Specifically for iOS, Android and Webmail. This style sheet will be stripped out by most Desktop clients */
+ /****** EMAIL CLIENT BUG FIXES - BEST NOT TO CHANGE THESE ********/
+  
+  .ExternalClass {
+    width: 100%;
+  }
+  /* Forces Outlook.com to display emails at full width */
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+  /* Forces Outlook.com to display normal line spacing, here is more on that: http://www.emailonacid.com/forum/viewthread/43/ */
+  
+  body {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+  }
+  /* Prevents Webkit and Windows Mobile platforms from changing default font sizes. */
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+  }
+  /* Resets all body margins and padding to 0 for good measure */
+  
+  table td {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: 0px none;
+    vertical-align: top;
+  }
+  
+  }
+/* ///////// RESET STYLES ///////// */
+    body{
+        margin:0;
+        padding:0;
+    }
+
+    img{
+        border:0 none;
+        height:auto;
+        line-height:100%;
+        outline:none;
+        text-decoration:none;
+    }
+
+    a img{
+        border:0 none;
+    }
+
+    .imageFix{
+        display:block;
+    }
+
+    table, td{
+        border-collapse:collapse;
+    }
+
+    #bodyTable{
+        height:100% !important;
+        margin:0;
+        padding:0;
+        width:100% !important;
+    }
+
+table {
+        border: 0
+}
+h1, h2, h3, h4, h5, h6 {
+        color: #063a74;
+}
+a, img {
+        border: 0;
+        outline: 0;
+}
+#outlook a {
+        padding: 0;
+}
+/* Outlook fix */
+.ReadMsgBody, .ExternalClass {
+        width: 100%; line height: 100%;
+}
+/* Hotmail fix */
+.yshortcuts, a .yshortcuts, a .yshortcuts:hover, a .yshortcuts:active, a .yshortcuts:focus {
+        background-color: transparent !important;
+        border: none !important;
+        color: inherit !important;
+}
+body {
+        background: #ffffff;
+        font-family: sans-serif;
+        font-size: 14px;
+}
+/*AOL and Hotmail */
+.appleLinks a {
+        color: rgb(0, 19, 137);
+        text-decoration: none;
+}
+/* iOS Links */
+.show {
+        display: none
+}
+.mobileHide2 {
+        display: none !important;
+        visibility: hidden !important;
+}
+a {
+        color: white;
+        text-decoration: none;
+}
+
+/* Mobile Media Queries */
+@media only screen and (max-width: 480px) {
+.stack {
+        width: 100%;
+        display: inherit;
+        margin: 0 auto;
+}
+.partnerimage {
+        width: 60px !important;
+}
+.mobileHide2 {
+        display: none !important;
+        visibility: hidden !important;
+}
+body, table, td, p, a, li, blockquote {
+        -webkit-text-size-adjust: none !important;
+}
+body {
+        width: 100% !important;
+        min-width: 100% !important;
+}
+body[yahoo] h1 {
+        line-height: 120% !important;
+        margin-top: 12px !important;
+}
+body[yahoo] h2 {
+        line-height: 120% !important;
+        font-size: 19px !important;
+        margin-bottom: 15px !important;
+}
+body[yahoo] .p {
+        font-size: 15px !important;
+        line-height: 125% !important;
+}
+body[yahoo] .button {
+        margin: 0 !important;
+        margin-bottom: 15px !important;
+}
+body[yahoo] .mobileSectionDivider {
+        margin-bottom: 18px !important;
+}
+body[yahoo] .topBar {
+        display: none;
+}
+body[yahoo] .right {
+        margin: 0 0 0.9em 0 !important;
+}
+body[yahoo] .left {
+        margin-bottom: 0 !important;
+}
+body[yahoo] .mobile {
+        margin-bottom: 0 !important;
+}
+body[yahoo] .mobileHide {
+        display: none !important;
+        visibility: hidden !important;
+}
+body[yahoo] .mobileshow {
+        font-size: 14px !important;
+        line-height: 125% !important;
+        text-align: center !important;
+}
+body[yahoo] .h2.footer {
+        margin: 0.9em 0 0.7em 0 !important;
+}
+table[class="content"] {
+        width: 100% !important;
+}
+table[class="whiteSpace"] {
+        height: 10px !important;
+}
+table[class="mobileHide"] {
+        display: none !important;
+        visibility: hidden !important;
+}
+table[class="footer"] {
+        border: 0 !important;
+}
+td[class="col-1-2"] {
+        padding: 0px 0px 0px 0px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        display: block !important;
+        
+}
+td[class="col-1-2b"] {
+        padding: 0px 10px 0px 10px !important;
+        margin: 0 !important;
+        
+        display: block !important;
+}
+td[class="col-1-2 image"] {
+        padding: 0 0 0px 10px !important;
+        margin: 0 !important;
+        width: 335px !important;
+        height: auto !important;
+        display: block !important;
+}
+td[class="col-1-4"] {
+        padding: 0px 0px 0px 0px !important;
+        margin: 0 !important;
+        width: 260px !important;
+        display: block !important;
+}
+td[class="col-1-2 footer"] {
+        display: block;
+        width: auto !important;
+        padding: 0px 10px 14px 10px !important;
+        margin-bottom: 0px !important;
+}
+table[class="mobileDivider"] {
+        width: 100% !important;
+        display: block !important;
+}
+table[class="Banner"] img {
+        display: none !important;
+        visibility: hidden !important;
+}
+table[class="Banner"] {
+        background: url(https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3209/headerbgc.jpg) no-repeat;
+        background-color: #063a74;
+        width: 314px !important;
+        height: 56px !important;
+        text-align: left !important;
+}
+.mobi_header img {
+        display: inline !important;
+        visibility: visible !important;
+        padding: 10px 10px 10px 10px !important;
+}
+.fanfocus {
+        width: 314px !important;
+        padding-left: 0px;
+        padding-right: 0px;
+}
+.fanfocus-hide {
+        display: none
+}
+.hide {
+        display: none
+}
+.show {
+        display: block
+}
+.mobiletwocol {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        width: 294px;
+}
+.resizethis-a {
+        width: 53px;
+        height: 42px
+}
+.resizethis-b {
+        width: 52px;
+        height: 42px
+}
+.sponsors img {
+        width: 83px;
+        height: 34px;
+}
+.footerimage img {
+        width: 83px;
+        height: 34px
+}
+.bannerresize {
+        height: 63px;
+        width: 314px
+}
+.bannerresize2 {
+        height: 42px;
+        width: 314px
+}
+.resize-this-3 {
+        width: 314px;
+        height: 48px;
+}
+.resize-this-4 {
+        width: 300px;
+        height: 26px;
+}
+}
+/*END Mobile Media Queries */
+#bodyCell {
+        padding: 20px;
+}
+#templateContainer {
+        width: 640px;
+}
+.templateColumnContainer {
+        width: 240px;
+}
+#templateColumns {
+        /*@editable*/
+        background-color: #ffffff;
+}
+.leftColumnContent {
+        /*@editable*/
+        color: #505050;
+        /*@editable*/
+        font-family: Helvetica;
+        /*@editable*/
+        font-size: 14px;
+        /*@editable*/
+        padding-top: 0;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        /*@editable*/
+        text-align: center;
+        width: 314px;
+}
+.leftColumnContent a:link, .leftColumnContent a:visited, /* Yahoo! Mail Override */ .leftColumnContent a .yshortcuts /* Yahoo! Mail Override */ {
+        /*@editable*/
+        color: #EB4102;
+        /*@editable*/
+        font-weight: normal;
+        /*@editable*/
+        text-decoration: underline;
+}
+.centerColumnContent {
+        /*@editable*/
+        color: #505050;
+        /*@editable*/
+        font-family: Helvetica;
+        /*@editable*/
+        font-size: 14px;
+        /*@editable*/
+        padding-top: 0;
+        padding-right: 10px;
+        padding-bottom: 0px;
+        padding-left: 10px;
+        /*@editable*/
+        text-align: center;
+}
+.centerColumnContent a:link, .centerColumnContent a:visited, /* Yahoo! Mail Override */ .centerColumnContent a .yshortcuts /* Yahoo! Mail Override */ {
+        /*@editable*/
+        color: #EB4102;
+        /*@editable*/
+        font-weight: normal;
+        /*@editable*/
+        text-decoration: underline;
+}
+.rightColumnContent {
+        /*@editable*/
+        color: #505050;
+        /*@editable*/
+        font-family: Helvetica;
+        /*@editable*/
+        font-size: 14px;
+        /*@editable*/
+        padding-top: 0;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        /*@editable*/
+        text-align: center;
+}
+.rightColumnContent a:link, .rightColumnContent a:visited, /* Yahoo! Mail Override */ .rightColumnContent a .yshortcuts /* Yahoo! Mail Override */ {
+        /*@editable*/
+        color: #EB4102;
+        /*@editable*/
+        font-weight: normal;
+        /*@editable*/
+        text-decoration: underline;
+}
+.leftColumnContent img, .rightColumnContent img {
+        display: inline;
+        height: auto;
+}
+
+@media only screen and (max-width: 480px) {
+#templateContainer {
+        /*@editable*/
+        width: 100% !important;
+}
+.templateColumnContainer {
+        display: block !important;
+        width: 314px;
+}
+.columnImage {
+        height: auto !important;
+        /*@editable*/
+        max-width: 295px !important;/*@editable*/
+}
+.image-for-resize {
+        width: 100%
+}
+.mobilePadding { width: 100%; padding: 10px;}
+}
+</style><style type="text/css">
+/* ///////// CLIENT-SPECIFIC STYLES ///////// */
+#outlook a {
+	padding: 0;
+} /* Force Outlook to provide a "view in browser" message */
+.ReadMsgBody {
+	width: 100%;
+}
+.hideDesktop{
+display:none;
+}
+a:hover { color: #000000 !important; }
+a:focus { color: #000000 !important; }
+a:visited { color: #000000 !important; }
+
+.ExternalClass {
+	width: 100%;
+} /* Force Hotmail to display emails at full width */
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+	line-height: 125%;
+} /* Force Hotmail to display normal line spacing */
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	font-family: arial;
+} /* Prevent WebKit and Windows mobile changing default text sizes */
+table, td {
+	mso-table-lspace: 0pt;
+	mso-table-rspace: 0pt;
+} /* Remove spacing between tables in Outlook 2007 and up */
+img {
+	-ms-interpolation-mode: bicubic;
+} /* Allow smoother rendering of resized image in Internet Explorer */
+.appleLinks a {color: #000000 !important; text-decoration: none !important;
+font-family: 'Open Sans', sans-serif !important;
+}
+/* ///////// RESET STYLES ///////// */
+body {
+	margin: 0;
+	padding: 0;
+
+}
+img {
+	border: 0;
+	height: auto;
+	line-height: 100%;
+	outline: none;
+	text-decoration: none;
+}
+table {
+	border-collapse: collapse !important;
+}
+body, #bodyTable, #bodyCell {
+	height: 100% !important;
+	margin: 0;
+	padding: 0;
+	width: 100% !important;
+	
+}
+/* ///////// TEMPLATE STYLES ///////// */
+
+			/* ========== Page Styles ========== */
+
+#bodyCell {
+	padding: 0px;
+}
+#templateContainer {
+	width: 600px;
+}
+/**
+			* @tab Page
+			* @section background style
+			* @tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
+			* @theme page
+			*/
+body, #bodyTable {
+	/*@editable*/ background-color: #ffffff;
+}
+/**
+			* @tab Page
+			* @section background style
+			* @tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
+			* @theme page
+			*/
+#bodyCell {
+	/*@editable*/ border-top: none;
+	background-color: #ffffff;
+}
+/**
+			* @tab Page
+			* @section email border
+			* @tip Set the border for your email.
+			*/
+#templateContainer {
+	background-color: #ffffff;
+}
+
+@media screen and (max-width:480px) {
+	table[class="column"] {
+	width: 100% !important;
+	background-color: #ffffff;
+}
+}
+/**
+			* @tab Page
+			* @section heading 1
+			* @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+			* @style heading 1
+			*/
+h1 {
+	/*@editable*/ color: #202020 !important;
+	display: block;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 26px;
+	/*@editable*/ font-style: normal;
+	/*@editable*/ font-weight: bold;
+	/*@editable*/ line-height: 100%;
+	/*@editable*/ letter-spacing: normal;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	margin-left: 0;
+	/*@editable*/ text-align: left;
+}
+/**
+			* @tab Page
+			* @section heading 2
+			* @tip Set the styling for all second-level headings in your emails.
+			* @style heading 2
+			*/
+h2 {
+	/*@editable*/ color: #404040 !important;
+	display: block;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 20px;
+	/*@editable*/ font-style: normal;
+	/*@editable*/ font-weight: bold;
+	/*@editable*/ line-height: 100%;
+	/*@editable*/ letter-spacing: normal;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	margin-left: 0;
+	/*@editable*/ text-align: left;
+}
+/**
+			* @tab Page
+			* @section heading 3
+			* @tip Set the styling for all third-level headings in your emails.
+			* @style heading 3
+			*/
+h3 {
+	/*@editable*/ color: #606060 !important;
+	display: block;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 16px;
+	/*@editable*/ font-style: italic;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ line-height: 100%;
+	/*@editable*/ letter-spacing: normal;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	margin-left: 0;
+	/*@editable*/ text-align: left;
+}
+/**
+			* @tab Page
+			* @section heading 4
+			* @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+			* @style heading 4
+			*/
+h4 {
+	/*@editable*/ color: #808080 !important;
+	display: block;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 14px;
+	/*@editable*/ font-style: italic;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ line-height: 100%;
+	/*@editable*/ letter-spacing: normal;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	margin-left: 0;
+	/*@editable*/ text-align: left;
+}
+/* ========== Header Styles ========== */
+
+			/**
+			* @tab Header
+			* @section preheader style
+			* @tip Set the background color and bottom border for your email's preheader area.
+			* @theme header
+			*/
+#templatePreheader {
+	/*@editable*/ background-color: #ffffff;
+}
+/**
+			* @tab Header
+			* @section preheader text
+			* @tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
+			*/
+.preheaderContent {
+	/*@editable*/ color: #000000;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 10px;
+	/*@editable*/ line-height: 100%;
+	/*@editable*/ text-align: center;
+}
+/**
+			* @tab Header
+			* @section preheader link
+			* @tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
+			*/
+.preheaderContent a:link, .preheaderContent a:visited, /* Yahoo! Mail Override */ .preheaderContent a .yshortcuts /* Yahoo! Mail Override */ {
+	/*@editable*/ color: #000000;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ text-decoration: underline;
+}
+table[class="remove"] {
+display: none !important;
+}
+td[class="remove"] {
+display: none !important;
+}
+/**
+			* @tab Header
+			* @section header style
+			* @tip Set the background color and borders for your email's header area.
+			* @theme header
+			*/
+#templateHeader {
+	/*@editable*/ background-color: #ffffff;
+}
+/**
+			* @tab Header
+			* @section header text
+			* @tip Set the styling for your email's header text. Choose a size and color that is easy to read.
+			*/
+.headerContent {
+	/*@editable*/ color: #505050;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 20px;
+	/*@editable*/ font-weight: bold;
+	/*@editable*/ line-height: 100%;
+	/*@editable*/ padding-top: 0;
+	/*@editable*/ padding-right: 0;
+	/*@editable*/ padding-bottom: 0;
+	/*@editable*/ padding-left: 0;
+	/*@editable*/ text-align: left;
+	/*@editable*/ vertical-align: middle;
+}
+/**
+			* @tab Header
+			* @section header link
+			* @tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
+			*/
+.headerContent a:link, .headerContent a:visited, /* Yahoo! Mail Override */ .headerContent a .yshortcuts /* Yahoo! Mail Override */ {
+	/*@editable*/ color: #000000 !important;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ text-decoration: underline;
+}
+#headerImage {
+
+	max-width: 600px;
+}
+/* ========== Body Styles ========== */
+
+			/**
+			* @tab Body
+			* @section body style
+			* @tip Set the background color and borders for your email's body area.
+			*/
+#templateBody {
+	/*@editable*/ background-color: #ffffff;
+}
+/**
+			* @tab Body
+			* @section body text
+			* @tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
+			* @theme main
+			*/
+.bodyContent {
+	/*@editable*/ color: #505050;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 14px;
+
+	/*@editable*/ text-align: left;
+	background-color: #ffffff;
+}
+/**
+			* @tab Body
+			* @section body link
+			* @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+			*/
+.bodyContent a:link, .bodyContent a:visited, /* Yahoo! Mail Override */ .bodyContent a .yshortcuts /* Yahoo! Mail Override */ {
+	/*@editable*/ color: #000000;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ text-decoration: underline;
+}
+.bodyContent img {
+	display: inline;
+	height: auto;
+	max-width: 294px;
+}
+/* ========== Footer Styles ========== */
+
+			/**
+			* @tab Footer
+			* @section footer style
+			* @tip Set the background color and borders for your email's footer area.
+			* @theme footer
+			*/
+#templateFooter {
+	/*@editable*/ background-color: #ffffff;
+}
+/**
+			* @tab Footer
+			* @section footer text
+			* @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
+			* @theme footer
+			*/
+.footerContent {
+	/*@editable*/ color: #808080;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 10px;
+	/*@editable*/ line-height: 150%;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	/*@editable*/ text-align: left;
+}
+/**
+			* @tab Footer
+			* @section footer link
+			* @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+			*/
+.footerContent a:link, .footerContent a:visited, /* Yahoo! Mail Override */ .footerContent a .yshortcuts, .footerContent a span /* Yahoo! Mail Override */ {
+	/*@editable*/ color: #606060;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ text-decoration: underline;
+}
+
+/* ///////// MOBILE STYLES ///////// */
+
+@media only screen and (max-width: 480px) {
+	
+		table[class="column"] {
+	width: 100% !important;
+	background-color: #ffffff;
+}
+.sponsorimage {
+	width: 125px;
+	height: auto;
+}
+.buttonPadding { padding-left: 10px; padding-right:10px;}
+.mainbuttons { padding-top: 10px; padding-bottom: 10px; width:100%; display:block;}
+.smallButtons { padding: 10px; height: auto; max-width:100%; display:block}
+
+.bodyContent img {
+	display: inline;
+	height: auto;
+	max-width: 100%;
+}
+/* /////// CLIENT-SPECIFIC MOBILE STYLES /////// */
+				
+.hidemobile {
+	display: none;
+}
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none !important;
+} /* Prevent Webkit platforms from changing default text sizes */
+body {
+	width: 100% !important;
+	min-width: 100% !important;
+} /* Prevent iOS Mail from adding padding to the body */
+/* /////// MOBILE RESET STYLES /////// */
+#bodyCell {
+	padding: 0px !important;
+}
+/* /////// MOBILE TEMPLATE STYLES /////// */
+
+				/* ======== Page Styles ======== */
+
+				/**
+				* @tab Mobile Styles
+				* @section template width
+				* @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.
+				*/
+#templateContainer {
+	max-width: 600px !important;
+	/*@editable*/ width: 100% !important;
+}
+/**
+				* @tab Mobile Styles
+				* @section heading 1
+				* @tip Make the first-level headings larger in size for better readability on small screens.
+				*/
+h1 {
+	/*@editable*/ font-size: 24px !important;
+	/*@editable*/ line-height: 100% !important;
+}
+/**
+				* @tab Mobile Styles
+				* @section heading 2
+				* @tip Make the second-level headings larger in size for better readability on small screens.
+				*/
+h2 {
+	/*@editable*/ font-size: 20px !important;
+	/*@editable*/ line-height: 100% !important;
+}
+/**
+				* @tab Mobile Styles
+				* @section heading 3
+				* @tip Make the third-level headings larger in size for better readability on small screens.
+				*/
+h3 {
+	/*@editable*/ font-size: 18px !important;
+	/*@editable*/ line-height: 100% !important;
+}
+/**
+				* @tab Mobile Styles
+				* @section heading 4
+				* @tip Make the fourth-level headings larger in size for better readability on small screens.
+				*/
+h4 {
+	/*@editable*/ font-size: 16px !important;
+	/*@editable*/ line-height: 100% !important;
+}
+/* ======== Header Styles ======== */
+
+#templatePreheader {
+	display: none !important;
+} /* Hide the template preheader to save space */
+/**
+				* @tab Mobile Styles
+				* @section header image
+				* @tip Make the main header image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.
+				*/
+#headerImage {
+	
+	/*@editable*/ max-width: 600px !important;
+	/*@editable*/ width: 100% !important;
+}
+/**
+				* @tab Mobile Styles
+				* @section header text
+				* @tip Make the header content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+				*/
+.headerContent {
+	/*@editable*/ font-size: 20px !important;
+	/*@editable*/ line-height: 100% !important;
+}
+/* ======== Body Styles ======== */
+
+				/**
+				* @tab Mobile Styles
+				* @section body text
+				* @tip Make the body content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+				*/
+.bodyContent {
+	/*@editable*/ font-size: 14px !important;
+	/*@editable*/ line-height: 100% !important;
+	padding: 0 !important;
+}
+/* ======== Footer Styles ======== */
+
+				/**
+				* @tab Mobile Styles
+				* @section footer text
+				* @tip Make the body content text larger in size for better readability on small screens.
+				*/
+.footerContent {
+	/*@editable*/ font-size: 14px !important;
+	/*@editable*/ line-height: 100% !important;
+}
+.footerContent a {
+	display: block !important;
+} /* Place footer social and utility links on their own lines, for easier access */
+}
+.bodyContent1 {/*@editable*/
+	color: #505050;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 14px;
+	/*@editable*/ line-height: 100%;
+	/*@editable*/ text-align: left;
+}
+.bodyContent1 {/*@editable*/
+	font-size: 18px !important;
+	/*@editable*/ line-height: 100% !important;
+}
+@media only screen and (max-width:480px){
+	html{-webkit-text-size-adjust:none!important}
+body{min-width:320px !important;}
+*[class=hide] {display: none !important;}
+*[class=mobilecontainer] {width: 320px !important; height: auto !important;border-collapse: collapse; min-width: 320px !important; max-width: 320px !important;}
+*[class=wrapto100pc] {width: 100% !important; height: auto !important; display: block !important;border-collapse: collapse;}
+
+*[class=hero-image] {width:100% !important; height: auto !important; display: block !important;border-collapse: collapse;}
+tr[class~=mobileshowtr] {display: block !important; font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 100% !important; }
+table[class~=mobileshowtable] {display: block !important; font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 100% !important; }
+td[class~=mobileshowtd] {display: block !important; font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 100% !important;}
+img[class~=mobileshowimg] {display: block !important; font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 100% !important; height:auto !important; }
+img[class~=mobileshowimg1] {display: block !important; font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 50% !important; height:auto !important; }
+td[class=content-border] {width: 10px !important; border-collapse: collapse;}
+img[class=content-border] {width: 10px !important; height: 10px !important;}
+*[class=content-wrap] {width: 100% !important; height: auto !important; display: block !important;border-collapse: collapse; padding-top: 5px !important; padding-bottom: 5px !important;}
+*[class=inner-content] { padding-top: 5px !important; padding-bottom: 5px !important;}
+*[class=content-spacer] {width: 100% !important; height: 10px !important; display: block !important; border-collapse: collapse;}
+*[class=content-spacer1] {width: 100% !important; height: 6px !important; display: block !important; border-collapse: collapse;}
+*[class=mid-spacer] {height: 10px !important;}
+*[class=mobileshow93] {font-family: Arial, Helvetica, sans-serif !important; font-size: 10px !important; color: #ffffff !important; font-weight: bold !important; max-height: 100% !important; line-height: 1.5 !important; width: 93px !important; display: inline !important;}
+*[class=mobileshow72] {font-family: Arial, Helvetica, sans-serif !important; font-size: 10px !important; color: #ffffff !important; font-weight: bold !important; max-height: 100% !important; line-height: 1.5 !important; width: 72px !important; display: inline !important;}
+td[class~=mobileshow10] {font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 10px !important; display: inline !important;}
+td[class~=mobileshow14] {font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 14px !important; display: inline !important;}
+td[class~=mobileshow121] {font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 121px !important; display: inline !important;}
+td[class~=explore] { font-size: 10px !important; width: 93px !important;}
+td[class~=buy] { font-size: 10px !important; width: 72px !important;}
+td[class~=logo] {width: 121px !important;}
+td[class~=article-copy] {width: 100% !important; padding-left: 10px !important; padding-right: 10px !important; padding-bottom: 10px !important;}
+td[class=mobile-copy] { text-align: left !important; }
+*[class=show] { display:block !important; }
+*[class=setwidth1] { display:block !important; width: 170px !important; }
+*[class=setwidth2] { display:block !important; width: 27px !important; height:auto !important;}
+*[class=content-height] { display:block !important; height: 25px !important; }
+} @media screen and (max-width:480px) {
+	table[class="column"] {
+	width: 100% !important;
+	background-color: #ffffff;
+}
+td[class="3story"] {
+	padding: 15px 15px !important;
+}
+
+  td[class="pattern"] .col{
+            width: 100%;
+            display: block;
+        }
+        td[class="pattern"] .col-left,
+       
+
+.columnImage{
+					height:auto !important;
+					/*@editable*/ max-width:480px !important;
+					/*@editable*/ width:100% !important;
+					margin-bottom: 10px;
+				}
+}
+/**
+			* @tab Page
+			* @section heading 1
+			* @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+			* @style heading 1
+			*/
+h1 {
+	/*@editable*/ color: #202020 !important;
+	display: block;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 26px;
+	/*@editable*/ font-style: normal;
+	/*@editable*/ font-weight: bold;
+	/*@editable*/ line-height: 100%;
+	/*@editable*/ letter-spacing: normal;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	margin-left: 0;
+	/*@editable*/ text-align: left;
+}
+/**
+			* @tab Page
+			* @section heading 2
+			* @tip Set the styling for all second-level headings in your emails.
+			* @style heading 2
+			*/
+h2 {
+	/*@editable*/ color: #404040 !important;
+	display: block;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 20px;
+	/*@editable*/ font-style: normal;
+	/*@editable*/ font-weight: bold;
+	/*@editable*/ line-height: 100%;
+	/*@editable*/ letter-spacing: normal;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	margin-left: 0;
+	/*@editable*/ text-align: left;
+}
+/**
+			* @tab Page
+			* @section heading 3
+			* @tip Set the styling for all third-level headings in your emails.
+			* @style heading 3
+			*/
+h3 {
+	/*@editable*/ color: #606060 !important;
+	display: block;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 16px;
+	/*@editable*/ font-style: italic;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ line-height: 100%;
+	/*@editable*/ letter-spacing: normal;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	margin-left: 0;
+	/*@editable*/ text-align: left;
+}
+/**
+			* @tab Page
+			* @section heading 4
+			* @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+			* @style heading 4
+			*/
+h4 {
+	/*@editable*/ color: #808080 !important;
+	display: block;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 14px;
+	/*@editable*/ font-style: italic;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ line-height: 100%;
+	/*@editable*/ letter-spacing: normal;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+	margin-left: 0;
+	/*@editable*/ text-align: left;
+}
+/* ========== Header Styles ========== */
+
+			/**
+			* @tab Header
+			* @section preheader style
+			* @tip Set the background color and bottom border for your email's preheader area.
+			* @theme header
+			*/
+#templatePreheader {
+	/*@editable*/ background-color: #ffffff;
+}
+/**
+			* @tab Header
+			* @section preheader text
+			* @tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
+			*/
+.preheaderContent {
+	/*@editable*/ color: #808080;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 10px;
+	/*@editable*/ line-height: 125%;
+	/*@editable*/ text-align: center;
+}
+/**
+			* @tab Header
+			* @section preheader link
+			* @tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
+			*/
+.preheaderContent a:link, .preheaderContent a:visited, /* Yahoo! Mail Override */ .preheaderContent a .yshortcuts /* Yahoo! Mail Override */ {
+	/*@editable*/ color: #606060;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ text-decoration: underline;
+}
+table[class="remove"] {
+display: none !important;
+}
+td[class="remove"] {
+display: none !important;
+}
+/**
+			* @tab Header
+			* @section header style
+			* @tip Set the background color and borders for your email's header area.
+			* @theme header
+			*/
+#templateHeader {
+	/*@editable*/ background-color: #ffffff;
+}
+/**
+			* @tab Header
+			* @section header text
+			* @tip Set the styling for your email's header text. Choose a size and color that is easy to read.
+			*/
+.headerContent {
+	/*@editable*/ color: #505050;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 20px;
+	/*@editable*/ font-weight: bold;
+	/*@editable*/ line-height: 100%;
+	/*@editable*/ padding-top: 0;
+
+	/*@editable*/ padding-right: 0;
+	/*@editable*/ padding-bottom: 0;
+	/*@editable*/ padding-left: 0;
+	/*@editable*/ text-align: left;
+	/*@editable*/ vertical-align: middle;
+}
+/**
+			* @tab Header
+			* @section header link
+			* @tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
+			*/
+.headerContent a:link, .headerContent a:visited, /* Yahoo! Mail Override */ .headerContent a .yshortcuts /* Yahoo! Mail Override */ {
+	/*@editable*/ color: #000000 !important;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ text-decoration: underline;
+}
+#headerImage {
+
+	max-width: 600px;
+}
+/* ========== Body Styles ========== */
+
+			/**
+			* @tab Body
+			* @section body style
+			* @tip Set the background color and borders for your email's body area.
+			*/
+#templateBody {
+	/*@editable*/ background-color: #ffffff;
+}
+/**
+			* @tab Body
+			* @section body text
+			* @tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
+			* @theme main
+			*/
+.bodyContent {
+	/*@editable*/ color: #505050;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 14px;
+	/*@editable*/ line-height: 150%;
+	/*@editable*/ text-align: left;
+	background-color: #ffffff;
+}
+/**
+			* @tab Body
+			* @section body link
+			* @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+			*/
+.bodyContent a:link, .bodyContent a:visited, /* Yahoo! Mail Override */ .bodyContent a .yshortcuts /* Yahoo! Mail Override */ {
+	/*@editable*/ color: #000000;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ text-decoration: underline;
+}
+.bodyContent img {
+	display: inline;
+	height: auto;
+	max-width: 294px;
+}
+/* ========== Footer Styles ========== */
+
+			/**
+			* @tab Footer
+			* @section footer style
+			* @tip Set the background color and borders for your email's footer area.
+			* @theme footer
+			*/
+#templateFooter {
+	/*@editable*/ background-color: #ffffff;
+}
+/**
+			* @tab Footer
+			* @section footer text
+			* @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
+			* @theme footer
+			*/
+.footerContent {
+	/*@editable*/ color: #808080;
+	/*@editable*/ font-family: Helvetica, Arial, sans-serif;
+	/*@editable*/ font-size: 10px;
+	/*@editable*/ line-height: 150%;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	/*@editable*/ text-align: left;
+}
+/**
+			* @tab Footer
+			* @section footer link
+			* @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+			*/
+.footerContent a:link, .footerContent a:visited, /* Yahoo! Mail Override */ .footerContent a .yshortcuts, .footerContent a span /* Yahoo! Mail Override */ {
+	/*@editable*/ color: #606060;
+	/*@editable*/ font-weight: normal;
+	/*@editable*/ text-decoration: underline;
+}
+
+/* ///////// MOBILE STYLES ///////// */
+
+@media only screen and (max-width: 480px) {
+td[class="small-templet_fullsize_image"] img {
+	width: 100% !important;
+	height: auto !important;
+	max-width: 100% !important;
+	min-width: 124px !important;
+}	
+		table[class="column"] {
+	width: 100% !important;
+	background-color: #ffffff;
+}
+.sponsorimage {
+	width: 125px;
+	height: auto;
+}
+
+.mainbuttons { padding-top: 10px; padding-bottom: 10px; width:100%; display:block;}
+.smallButtons { padding: 10px; height: auto; max-width:100%; display:block}
+
+.bodyContent img {
+	display: inline;
+	height: auto;
+	max-width: 100%;
+}
+/* /////// CLIENT-SPECIFIC MOBILE STYLES /////// */
+				
+.hidemobile {
+	display: none;
+}
+body, table, td, p, a, li, blockquote {
+	-webkit-text-size-adjust: none !important;
+} /* Prevent Webkit platforms from changing default text sizes */
+body {
+	width: 100% !important;
+	min-width: 100% !important;
+} /* Prevent iOS Mail from adding padding to the body */
+/* /////// MOBILE RESET STYLES /////// */
+#bodyCell {
+	padding: 0px !important;
+}
+/* /////// MOBILE TEMPLATE STYLES /////// */
+
+				/* ======== Page Styles ======== */
+
+				/**
+				* @tab Mobile Styles
+				* @section template width
+				* @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.
+				*/
+#templateContainer {
+	max-width: 600px !important;
+	/*@editable*/ width: 100% !important;
+}
+/**
+				* @tab Mobile Styles
+				* @section heading 1
+				* @tip Make the first-level headings larger in size for better readability on small screens.
+				*/
+h1 {
+	/*@editable*/ font-size: 24px !important;
+	/*@editable*/ line-height: 100% !important;
+}
+/**
+				* @tab Mobile Styles
+				* @section heading 2
+				* @tip Make the second-level headings larger in size for better readability on small screens.
+				*/
+h2 {
+	/*@editable*/ font-size: 20px !important;
+	/*@editable*/ line-height: 100% !important;
+}
+/**
+				* @tab Mobile Styles
+				* @section heading 3
+				* @tip Make the third-level headings larger in size for better readability on small screens.
+				*/
+h3 {
+	/*@editable*/ font-size: 18px !important;
+	/*@editable*/ line-height: 100% !important;
+}
+/**
+				* @tab Mobile Styles
+				* @section heading 4
+				* @tip Make the fourth-level headings larger in size for better readability on small screens.
+				*/
+h4 {
+	/*@editable*/ font-size: 16px !important;
+	/*@editable*/ line-height: 100% !important;
+}
+/* ======== Header Styles ======== */
+
+#templatePreheader {
+	display: none !important;
+} /* Hide the template preheader to save space */
+/**
+				* @tab Mobile Styles
+				* @section header image
+				* @tip Make the main header image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.
+				*/
+#headerImage {
+
+	/*@editable*/ max-width: 600px !important;
+	/*@editable*/ width: 100% !important;
+}
+/**
+				* @tab Mobile Styles
+				* @section header text
+				* @tip Make the header content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+				*/
+.headerContent {
+	/*@editable*/ font-size: 20px !important;
+	/*@editable*/ line-height: 125% !important;
+}
+/* ======== Body Styles ======== */
+
+				/**
+				* @tab Mobile Styles
+				* @section body text
+				* @tip Make the body content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+				*/
+.bodyContent {
+	/*@editable*/ font-size: 14px !important;
+	/*@editable*/ line-height: 125% !important;
+	padding: 0 !important;
+}
+/* ======== Footer Styles ======== */
+
+				/**
+				* @tab Mobile Styles
+				* @section footer text
+				* @tip Make the body content text larger in size for better readability on small screens.
+				*/
+.footerContent {
+	/*@editable*/ font-size: 14px !important;
+	/*@editable*/ line-height: 115% !important;
+}
+.footerContent a {
+	display: block !important;
+} /* Place footer social and utility links on their own lines, for easier access */
+}
+.hideDesktop{
+display:none;
+}
+</style><title>EFL</title></head><body style="margin: 0pt auto; padding: 0pt; background: rgb(255, 255, 255) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; color: rgb(255, 255, 255); width: 100% ! important;" yahoo="fix" alink="#EDEDED">
+<div style="margin: 0pt; padding: 0pt; background: rgb(255, 255, 255) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; width: 100% ! important; font-family: 'Helvetica Neue',Helvetica,sans-serif; font-size: 14px; text-align: left;">
+<center>
+<table class="content" style="margin: 0pt auto; padding: 0pt;" align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="660"><tbody><tr><td class="wrapper" align="right" valign="top" width="660">
+<table class="mobileHide2" align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="col-1-2" style="padding: 0pt 10px;" align="left" valign="top">
+<table style="" align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="mobileHide2" style="padding: 10px; color: rgb(255, 255, 255); font-size: 9pt;" align="left" valign="middle" width="67%">
+<div align="right"></div>
+</td>
+</tr></tbody></table></td>
+</tr></tbody></table><!-- BEGIN PRELOADER // --><table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #e5e5e5;border-collapse: collapse !important;"><tr><td valign="top" class="bodyContent" mc:edit="body_content" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #505050;font-family: Helvetica;font-size: 11px;line-height: 150%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;text-align: center;"><span style="font-family: Arial; color: white;"><span class="hideDesktop" style="color: gray;"></span></span></td>
+                                        </tr></table><!-- // END PRELOADER --><table class="content" style="margin: 0pt auto; padding: 0pt;" align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="660"><tbody><tr><td class="wrapper" align="center" valign="top" width="660">
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="col-1-2" style="padding: 0pt 0px;" align="left" valign="top"><!--Header Preview-->
+<img alt="EFL" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3209/skybet18102019c.png" style="border: 0pt none ; height: auto; width: 100%; display: block; max-width: 100%; margin-bottom: 0pt ! important; padding-bottom: 0pt ! important;" border="0" width="660"><!--Spacerstart--></td>
+</tr></tbody></table><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="col-1-2" style="padding: 0pt 0px;" align="left" valign="top"><!--Header Preview--><img alt="EFL" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3209/ifollow12122019.gif" style="border: 0pt none ; height: auto; width: 100%; display: block; max-width: 100%; margin-bottom: 0pt ! important; padding-bottom: 0pt ! important;" border="0" width="660"><!--Spacerstart--></td>
+</tr></tbody></table><table style="display: block; text-align: left; width: 100%; margin-left: auto; margin-right: auto; background-color: rgb(255, 255, 255); border-collapse: collapse ! important;" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="vertical-align: top; background-color: rgb(255, 255, 255);" height="10">
+<div align="center">
+<table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt ! important; margin-left: 0pt;" align="left" height="10" valign="top" width="100%">
+</td>
+</tr></tbody></table></div>
+</td>
+</tr><tr><td style="margin: 0pt 0px 0pt 0px; padding: 0px 10px 0px 10px; font-family: Arial; font-size: 15px; font-style: normal; font-weight: normal; line-height: 100%; letter-spacing: normal; text-align: center; color: rgb(89, 89, 89) ! important;" width="100%"><br><span style=" text-decoration: none; color: rgb(0, 19, 137); font-weight: bold; font-size: 22px; font-family: Arial; line-height: 120%; text-transform: uppercase;">the countdown to christmas is on<br></span><br><img class="stack" alt="countdown" src="https://img1.niftyimages.com/6e4/tljh/gvfo" height="auto" width="407"><br><span style=" text-decoration: none; color: rgb(0, 19, 137); font-weight: bold; font-size: 20px; font-family: Arial; line-height: 120%;"><br>
+      Bradford City fans can now gift iFollow subscriptions to loved ones, friends &amp; family and colleagues with the new gift feature added to the iFollow service.<br></span><span style=" text-decoration: none; color: rgb(0, 19, 137); font-weight: normal; font-family: Arial; line-height: 120%;"><br>
+      The “Buy as a Gift” feature enables fans based anywhere in the world to purchase any pass type of their choice, as a gift for an individual they choose. <br><br></span><a href="https://clicks.online.efl.com/email/S-85519@2115061@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@"><img class="stack" alt="purchase a gift today" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3209/ifollow12122019b.png" height="auto" width="325"></a></td>
+</tr></tbody></table><table style="display: block; text-align: left; width: 100%; margin-left: auto; margin-right: auto; background-color: rgb(255, 255, 255); border-collapse: collapse ! important;" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="vertical-align: top; background-color: rgb(255, 255, 255);" height="0">
+<div align="center">
+<table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt ! important; margin-left: 0pt;" align="left" height="0" valign="top" width="100%">
+</td>
+</tr></tbody></table></div>
+</td>
+</tr></tbody></table><table style="display: block; text-align: left; width: 100%; margin-left: auto; margin-right: auto; background-color: rgb(255, 255, 255); border-collapse: collapse ! important;" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="vertical-align: top; background-color: rgb(255, 255, 255);" height="10">
+<div align="center">
+<table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt ! important; margin-left: 0pt;" align="left" height="10" valign="top" width="100%">
+</td>
+</tr></tbody></table></div>
+</td>
+</tr></tbody></table><table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt ! important; margin-left: 0pt;" align="left" height="10" valign="top" width="100%">
+</td>
+</tr></tbody></table><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="col-1-2b" style="padding: 0pt 0px;" align="left" valign="top"><!--Header Preview--><!--Spacerstart--><table class="mobileHide2" style="text-align: left; width: 100%; margin-left: auto; margin-right: auto; background-color: rgb(255, 255, 255); border-collapse: collapse ! important;" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="vertical-align: top; background-color: rgb(255, 255, 255);" height="10"></td>
+                                </tr></tbody></table><table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody></tbody><tbody><tr><td style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt ! important; margin-left: 0pt;" align="left" valign="top" width="100%"></td>
+                                </tr></tbody></table><!--Sub Story End--><!--Spacerstart--><!--Spacerend--><!--Sub Story One--><!--Spacerstart--><!--Spacerend--><!--Sub Story One--><!--Sub Story End--><!--Spacerstart--><table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="50%" align="center"><tbody></tbody><tbody><tr><td style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt ! important; margin-left: 0pt; text-align: center;" align="center" valign="top" width="15%"><div align="right"><a href="https://clicks.online.efl.com/email/S-85519@2115070@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@"><img alt="Facebook" class="partnerimage" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3209/efl030616facebok.jpg" style="border: 0pt none ; height: auto; width: 100%; display: block; max-width: 70px; margin-bottom: 0pt ! important; padding-bottom: 0pt ! important; text-align: center;" border="0" width="70"></a></div></td>
+                                  <td style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt ! important; margin-left: 0pt; text-align: center;" align="left" valign="top" width="15%"><div align="center"><a href="https://clicks.online.efl.com/email/S-85519@2115071@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@"><img alt="Twitter" class="partnerimage" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3209/efl030616twitter.jpg" style="border: 0pt none ; height: auto; width: 100%; display: block; max-width: 70px; margin-bottom: 0pt ! important; padding-bottom: 0pt ! important; text-align: center;" border="0" width="70"></a></div></td>
+                                  <td style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt ! important; margin-left: 0pt; text-align: center;" align="left" valign="top" width="15%"><div align="left"><a href="https://clicks.online.efl.com/email/S-85519@2115073@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@"><img alt="Instagram" class="partnerimage" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3209/instagramv22016.jpg" style="border: 0pt none ; height: auto; width: 100%; display: block; max-width: 70px; margin-bottom: 0pt ! important; padding-bottom: 0pt ! important; text-align: center;" border="0" width="70"></a></div></td>
+                                
+                                </tr></tbody></table><!--Spacerstart--><table style="text-align: left; width: 100%; margin-left: auto; margin-right: auto; background-color: rgb(255, 255, 255); border-collapse: collapse ! important;" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="vertical-align: top; background-color: rgb(255, 255, 255);" height="10">
+<div align="center">
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody></tbody><tbody><tr><td style="margin-top: 0pt; margin-right: 0pt; margin-bottom: 0pt ! important; margin-left: 0pt;" align="left" height="10" valign="top" width="100%">
+<center> </center>
+</td>
+</tr></tbody></table><span style="margin: 0pt 0pt 0px; display: block; font-family: Arial; font-size: 12px; font-style: normal; font-weight: normal; line-height: 150%; letter-spacing: normal; text-align: center; color: rgb(255, 255, 255) ! important;"><span style="color: rgb(89, 89, 89);">EFL
+Operations Centre<br>
+Tel:<span class="appleLinks"> 01772 300800</span>
+Fax:<span class="appleLinks"> 01772 300801</span> <br><span class="appleLinks">enquiries@efl.com</span>
+<br><br>
+You received this email as a registered subscriber of the EFL. EFL is
+the brand name of The Football League Limited. Registered in England
+No. 80612. Registered Office: EFL House, 10-12 West Cliff, Preston, Lancashire, PR1 8HU. All rights reserved as per the website. If you do
+not wish to receive this kind of communication, you can <a href="https://clicks.online.efl.com/email/S-85519@2115074@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" style="color: rgb(89, 89, 89); font-weight: normal; text-decoration: underline;"><strong>update
+your preferences here</strong></a>.<br style=""><br></span> <span style="font-family: arial,helvetica,sans-serif;"><span style="color: gray;"><span style="color: rgb(78, 78, 78);"><span style=""><a href="https://clicks.online.efl.com/email/S-85519@2115075@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" style="color: rgb(89, 89, 89); font-weight: normal; text-decoration: none;"><strong>Terms
+of Use</strong></a><strong> |</strong> <strong><a href="https://clicks.online.efl.com/email/S-85519@2115076@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" style="color: rgb(89, 89, 89); font-weight: bold; text-decoration: none;">Privacy
+Policy</a></strong><strong>
+| <a style="color: rgb(89, 89, 89); text-decoration: none;" href="https://clicks.online.efl.com/profile/S-85519@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@1"> </a></strong></span></span></span></span></span><br></div>
+</td>
+</tr></tbody></table><!--Spacerend--></td>
+                        </tr></tbody></table></td>
+</tr></tbody></table><div align="center"></div>
+</td>
+</tr></tbody></table></center>
+</div>
+<img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3209/s725209jw5ldqsbxrgn3h6ky7p47i8pvuhf4lk9spaigxm.1yu9a.jpg" alt="open" height="1" width="1"><a href="https://clicks.online.efl.com/profile/S-85519@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@16" class="system_detection_link" style="mso-hide:all;display:none;max-height:0px;max-width:0px;overflow:hidden;opacity:0;font-size:1px;line-height:1px;"></a><img src="https://clicks.online.efl.com/email/S-85519@@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@1yu9A.jpg" alt="open" height="1" width="1"></body></html>
+

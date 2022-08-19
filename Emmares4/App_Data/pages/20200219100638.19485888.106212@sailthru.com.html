@@ -1,0 +1,663 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta property="og:title" content="">
+<meta property="og:image" content="">
+<meta property="og:description" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="">
+<meta property="twitter:image" content="">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="date=no">
+<meta name="format-detection" content="address=no">
+<meta name="format-detection" content="email=no">
+<style type="text/css">
+a[x-apple-data-detectors] {
+color: inherit !important;
+text-decoration: none !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+border-bottom: none !important;
+}
+@font-face {
+font-family: 'atizatext';
+src: url('https://static.axios.com/fonts/atizatext-regular-webfont.eot');
+src: url('https://static.axios.com/fonts/atizatext-regular-webfont.eot?#iefix') format('embedded-opentype'),
+url('https://static.axios.com/fonts/atizatext-regular-webfont.woff2') format('woff2'),
+url('https://static.axios.com/fonts/atizatext-regular-webfont.woff') format('woff'),
+url('https://static.axios.com/fonts/atizatext-regular-webfont.ttf') format('truetype'),
+url('https://static.axios.com/fonts/atizatext-regular-webfont.svg#atizatext') format('svg');
+font-weight: 300;
+font-style: normal;
+}
+@font-face {
+font-family: 'atizabold';
+src: url('https://static.axios.com/fonts/atizatext-bold-webfont.eot');
+src: url('https://static.axios.com/fonts/atizatext-bold-webfont.eot?#iefix') format('embedded-opentype'),
+url('https://static.axios.com/fonts/atizatext-bold-webfont.woff2') format('woff2'),
+url('https://static.axios.com/fonts/atizatext-bold-webfont.woff') format('woff'),
+url('https://static.axios.com/fonts/atizatext-bold-webfont.ttf') format('truetype'),
+url('https://static.axios.com/fonts/atizatext-bold-webfont.svg#atizatext') format('svg');
+font-weight: 300;
+font-style: normal;
+}
+@font-face {
+font-family: 'gordita';
+src: url('https://static.axios.com/fonts/gorditaregular-webfont.eot');
+src: url('https://static.axios.com/fonts/gorditaregular-webfont.eot?#iefix') format('embedded-opentype'),
+url('https://static.axios.com/fonts/gorditaregular-webfont.woff2') format('woff2'),
+url('https://static.axios.com/fonts/gorditaregular-webfont.woff') format('woff'),
+url('https://static.axios.com/fonts/gorditaregular-webfont.ttf') format('truetype'),
+url('https://static.axios.com/fonts/gorditaregular-webfont.svg#gorditaregular') format('svg');
+font-weight: 300;
+font-style: normal;
+}
+@font-face {
+font-family: 'gorditamedium';
+src: url('https://static.axios.com/fonts/gorditamedium-webfont.eot');
+src: url('https://static.axios.com/fonts/gorditamedium-webfont.eot?#iefix') format('embedded-opentype'),
+url('https://static.axios.com/fonts/gorditamedium-webfont.woff2') format('woff2'),
+url('https://static.axios.com/fonts/gorditamedium-webfont.woff') format('woff'),
+url('https://static.axios.com/fonts/gorditamedium-webfont.ttf') format('truetype'),
+url('https://static.axios.com/fonts/gorditamedium-webfont.svg#gorditamedium') format('svg');
+font-weight: 500;
+font-style: normal;
+}
+@font-face {
+font-family: 'gorditabold';
+src: url('https://static.axios.com/fonts/gorditabold-webfont.eot');
+src: url('https://static.axios.com/fonts/gorditabold-webfont.eot?#iefix') format('embedded-opentype'),
+url('https://static.axios.com/fonts/gorditabold-webfont.woff2') format('woff2'),
+url('https://static.axios.com/fonts/gorditabold-webfont.woff') format('woff'),
+url('https://static.axios.com/fonts/gorditabold-webfont.ttf') format('truetype'),
+url('https://static.axios.com/fonts/gorditabold-webfont.svg#gorditabold') format('svg');
+font-weight: 500;
+font-style: normal;
+}
+p {
+margin-top: 0px;
+margin-bottom: 1em;
+}
+p strong {
+font-family: Georgia, serif;
+font-weight: 700;
+}
+.main-header,
+.bodytext {
+font-family: Arial, Helvetica, sans-serif;
+}
+.post-text a {
+border-bottom: 1px solid #008dc8;
+text-decoration: none;
+}
+.post-text a:hover {
+color: #008dc8;
+}
+.post-text ul li {
+margin-bottom: 10px;
+}
+a {
+color: #222222;
+}
+.gmailfix {
+display:none;
+display:none!important;
+}
+@media (max-width: 600px) {
+.hed {
+font-size: 26px !important;
+-webkit-text-size-adjust: 100%;
+}
+.main-header {
+font-size: 34px !important;
+}
+.post-text {
+font-size: 17px !important;
+-webkit-text-size-adjust: none !important;
+}
+}
+</style>
+<link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
+<!--[if mso]>
+<style type="text/css">
+.bodytext, .main-header  {font-family: Arial, Helvetica, Helvetica, sans-serif !important;}
+.post-text {font-family: Georgia, Palatino Linotype, serif !important;}
+.ol-adpad {padding-bottom: 10px !important;}
+a {color: #222222; text-decoration:underline !important;}
+</style>
+<![endif]-->
+<!--[if gte mso 7]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml><![endif]-->
+</head>
+<body style="background-color: #f5f5f5; margin: 0 auto; padding: 0; text-align: center;">
+<div style="display:none;font-size:1px;color:#222222;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
+Top of the Morning | Wednesday, February 19, 2020
+</div>
+<table cellpadding="0" cellspacing="0" width="100%" style="background-color: #f6f6f6;text-align: center">
+<tr>
+<td style="max-width: 600px;">
+<!--[if mso]>
+<table style="width:600px;"><tr><td>
+<![endif]-->
+<table style="max-width: 600px; width: 100%; margin: 0 auto; text-align: left; background: #fff;" cellspacing="0" cellpadding="0">
+<tr>
+<td height="20" style="height: 20px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+<table cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td style="padding-left: 3.5%">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuYXhpb3MuY29tP3V0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecB12c1fc4e" title="AXIOS" target="_blank"><img src="https://static.axios.com/img-email/axios-retina.png" alt="Axios" width="83" border="0"></a>  <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5heGlvcy5jb20_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecB9f4aa18a"><img src="https://link.axios.com/img/5d7dee06b43a617d1933d4ecblneo.29yc/92ffb6be.gif" alt="" border="0"></a>
+</td>
+<td style="padding-right: 3.5%;" align="right">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP3V0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecB5741ef64" target="_blank" class="bodytext" style="color: #222222; font-size: 13px; font-family: 'gordita', Arial, Helvetica, sans-serif;text-decoration:underline;">View in browser</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="30" style="height: 30px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align: center; line-height: 1.3;">
+<span class="bodytext" style="font-size: 11px; letter-spacing:1.4px; color: #222222; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; text-transform: uppercase;">Presented By Uber
+</span>
+</td>
+</tr>
+<tr>
+<td height="16" style="height: 16px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align: center; line-height: 1;">
+<span class="main-header" style="font-size: 44px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #008dc8; letter-spacing: -1px; line-height: 1;">Pro Rata</span>
+</td>
+</tr>
+<tr>
+<td style="text-align: center; line-height: 1.5; padding-bottom:35px;padding-top:10px;">
+<span class="bodytext" style="font-size: 13px; color: #222222; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; ">By
+Kia Kokalitcheva
+<span style="margin: 0 6px;">&middot;</span>Feb 19, 2020</span>
+</td>
+</tr>
+<tr>
+<td class="post-text" style="font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px; padding: 0 3.5%;">
+<p><em>Welcome back! Dan is still on vacation and I'm bringing you today's news from my San Francisco apartment in the much-too-early-hours of the morning. As always, send me your best gossip, tips, and scoops at <a href="mailto:kia@axios.com" target="_blank">kia@axios.com</a></em><a href="mailto:kia@axios.com" target="_blank"></a> <em>or on Twitter</em> <em><a href="https://link.axios.com/click/19476249.117833/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbWtpYWxpa2V0aGVjYXI_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/58c8039a6ce954764f8b47f6B042cf000" target="_blank">@imkialikethecar</a>. Let's go... </em></p>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed " style="font-size: 27px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">
+Top of the Morning
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://images.axios.com/BDjWe00fIaNpuqsPxiQhqauEMq4=/0x0:1920x1080/1920x1080/2020/02/19/1582122054209.jpg" width="600" style="width:100%" id="item00" alt="">
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;"></td>
+</tr>
+<tr>
+<td style="padding: 0 3.5%; line-height: 1.3;">
+<span class="bodytext" style="font-size: 13px; color: #848484;">
+<p>Photo Illustration: Eniola Odetunde/Axios. Photos: Charles Eshelman, Steve Jennings, and Chip Somodevilla/Getty Images</p>
+</span>
+</td>
+</tr>
+<tr>
+<td height="15" style="height: 15px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75; font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<p><strong>Founders Fund has raised $3 billion</strong> for a pair of new funds, so expect a slew of headlines about how "Peter Thiel's venture capital firm" is now flush with cash, <em>Dan writes.</em></p><p><strong>Behind the scenes:</strong> Thiel is essential to Founders Fund, but he's not autocratic. Instead, Axios has learned that he's one of three people with veto power over most FF investments, and is unable to do a deal without the approval of the other two. </p><p><strong>Driving the news: </strong>FF raised $1.2 billion for its seventh flagship fund, and $1.5 billion for its first growth-stage fund. The total increases to $3 billion once commitments from FF's own partners are included.</p><ul><li>The growth fund is expected to write checks of at least $100 million, with return expectations of at least 3x. If an existing portfolio company is seeking a large check, but FF doesn't believe the new money can return a triple, it won't invest.</li><li>Return expectations for the flagship fund are at least 5x.</li></ul><p><strong>Between the lines:</strong> The FF process is quite different from how most venture capital firms approve new deals — which typically involve majority or super-majority votes by general partners (in this case, Thiel, Keith Rabois and Brian Singerman).</p><ul><li><strong>For deals under $1.5 million,</strong> any two investment team members can cut a check. This includes general partners, partners, and FF's five principals.</li><li><strong>For deals between $1.5 million and $5 million,</strong> it takes one partner plus one general partner.</li><li><strong>For deals between $5 million and $10 million, </strong>it's one partner and two general partners.</li><li><strong>For deals over $10 million</strong>, two partners and all three general partners must approve. </li><li><strong>The same rules apply</strong> whether it is a brand new deal or a follow-on investment for an existing portfolio company.</li><li><strong>General partners must meet with company founders</strong>, either in person or virtually, before making their final decisions. That means any startup receiving more than $10 million must have met or at least spoken with Thiel, Rabois, and Singerman.</li></ul><p><strong>Singerman tells Axios </strong>that while individual vetoes do occasionally happen, they're rare:</p><div style="margin: 20px 40px; font-style: italic; font-size: 16px;">"It's not like a deal is being worked on and then I get an email asking if I'll go along with it. We're discussing it as it progresses, which includes talking to the founders, and usually have reached a consensus so the vote becomes a formality. .... Sometimes we begin with only one of the three of us in support, and all end up in support, or sometimes it goes the other way."</div><p><strong>The bottom line: </strong>Thiel is one of the most consequential figures in Silicon Valley, even if few have publicly followed his support of President Trump. But he doesn't deserve all the credit (or blame) for Founders Fund investments. <strong><em><a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuYXhpb3MuY29tL3BldGVyLXRoaWVsLWZvdW5kZXJzLWZ1bmQtMTczMWVjYjEtODkyNC00NWRjLTk5NWYtYWRjNDhjMDUyMWRjLmh0bWw_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecB3ed73303" target="_blank">Read full story here</a>.</em></strong></p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px 3.5% 25px 3.5%;">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci5waHA_dT1odHRwczovL3d3dy5heGlvcy5jb20vbmV3c2xldHRlcnMvYXhpb3MtcHJvLXJhdGEtYzMxMzdlOTYtMjFkOS00YTg3LWE4YTMtZjVkZjYyNTMwNWRiLmh0bWw_Y2h1bmslM0QwJTI2dXRtX3Rlcm0lM0RmYnNvY2lhbHNoYXJlJTIzc3RvcnkwJnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecB4d154756" style="display: inline-block;"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/facebook@2x.png" alt="Share on Facebook"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQ_dGV4dD1Ub3AlMjBvZiUyMHRoZSUyME1vcm5pbmcmaGFzaHRhZ3M9cHJvcmF0YSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNEMCUyNnV0bV90ZXJtJTNEdHdzb2NpYWxzaGFyZSUyM3N0b3J5MCZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB13357f92" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/twitter@2x.png" alt="Tweet this Story"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP21pbmk9dHJ1ZSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNEMCUyNTI2dXRtX3Rlcm0lMjUzRGxpc29jaWFsc2hhcmUlMjUyM3N0b3J5MCZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecBf67e4f15" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/linkedin@2x.png" alt="Post to LinkedIn"></a>
+<a href="mailto:?subject=From Axios: Top of the Morning&body=publish-axios.com%40emmares.net%20has%20shared%20an%20Axios%20story%20with%20you%3A%0A%0ATop of the Morning%0Ahttps%3A%2F%2Fwww.axios.com%2Fnewsletters%2Faxios-pro-rata-c3137e96-21d9-4a87-a8a3-f5df625305db.html%3Fchunk%3D0%26utm_term%3Demshare#story0" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/email@2x.png" alt="Email this Story"></a>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed " style="font-size: 27px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">
+Also ...
+</span>
+</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75; font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<p>
+<strong>Kits for sale:</strong> Yesterday, meal kit company Blue Apron <a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuYnVzaW5lc3N3aXJlLmNvbS9uZXdzL2hvbWUvMjAyMDAyMTgwMDYwODkvZW4vP3V0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecB98e652fa" target="_blank">announced</a> it’s evaluating “strategic alternatives”— in other words: a potential sale, financing, etc. I spoke with CEO Linda Kozlowski...</p><ul><li><strong>What’s working:</strong> Blue Apron has been making changes to its products, including more meal options, kits for weekly meal prep, and healthier choices, which Kozlowski says have been successful with customers.</li><li><strong>What it needs:</strong> Help with marketing and distribution of its products. She wouldn’t share exact figures on customer acquisition costs or churn, but said those have improved, including getting down to a 12-month payback period and increasing average revenue and orders per customer. </li></ul><p><strong>2020 election:</strong> Also yesterday, Michael Bloomberg's campaign said that the former NYC mayor would sell his eponymous company if elected as U.S. president. Dan had some thoughts, all the way from Florida… </p><div style="margin: 20px 40px; font-style: italic; font-size: 16px;">"It is ludicrous. For starters, just imagine the conflicts inherent in the president-elect seeking to sell a personal business. Can foreign buyers participate? How about U.S. PE funds with lots of foreign LPs? What if two bidders come in with a similar price? Is he paying a Wall Street bank?"</div><div style="margin: 20px 40px; font-style: italic; font-size: 16px;">"Why not just let Congress decide when it launches its inevitable investigation. Oh, never mind that he's supposed to be setting up a new administration, or the reality that there may not be any viable bidders for a company that likely would be valued well north of $50 billion."</div><p><strong>🎧 Podcast: </strong>Pro Rata producer Naomi Shavin and Axios reporter Erica Pandey discuss the fallout from China's 2018 ban on importing waste and the technological and economic shifts that could help recycling in the U.S. <em><a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuYXhpb3MuY29tL3Byby1yYXRhLXBvZGNhc3QtdXMtcmVjeWNsaW5nLWNoaW5hLWZiZDQxYjI0LTU4MjYtNDFkNy04MDliLTAwZTcyNmJhY2E3OS5odG1sP3V0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecB0f35763c" target="_blank">Listen here.</a></em></p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px 3.5% 25px 3.5%;">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci5waHA_dT1odHRwczovL3d3dy5heGlvcy5jb20vbmV3c2xldHRlcnMvYXhpb3MtcHJvLXJhdGEtYzMxMzdlOTYtMjFkOS00YTg3LWE4YTMtZjVkZjYyNTMwNWRiLmh0bWw_Y2h1bmslM0QxJTI2dXRtX3Rlcm0lM0RmYnNvY2lhbHNoYXJlJTIzc3RvcnkxJnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecC31b7e12b" style="display: inline-block;"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/facebook@2x.png" alt="Share on Facebook"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQ_dGV4dD1BbHNvJTIwLi4uJmhhc2h0YWdzPXByb3JhdGEmdXJsPWh0dHBzOi8vd3d3LmF4aW9zLmNvbS9uZXdzbGV0dGVycy9heGlvcy1wcm8tcmF0YS1jMzEzN2U5Ni0yMWQ5LTRhODctYThhMy1mNWRmNjI1MzA1ZGIuaHRtbD9jaHVuayUzRDElMjZ1dG1fdGVybSUzRHR3c29jaWFsc2hhcmUlMjNzdG9yeTEmdXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecC685b9875" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/twitter@2x.png" alt="Tweet this Story"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP21pbmk9dHJ1ZSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNEMSUyNTI2dXRtX3Rlcm0lMjUzRGxpc29jaWFsc2hhcmUlMjUyM3N0b3J5MSZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecCd92dbf2e" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/linkedin@2x.png" alt="Post to LinkedIn"></a>
+<a href="mailto:?subject=From Axios: Also ...&body=publish-axios.com%40emmares.net%20has%20shared%20an%20Axios%20story%20with%20you%3A%0A%0AAlso ...%0Ahttps%3A%2F%2Fwww.axios.com%2Fnewsletters%2Faxios-pro-rata-c3137e96-21d9-4a87-a8a3-f5df625305db.html%3Fchunk%3D1%26utm_term%3Demshare#story1" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/email@2x.png" alt="Email this Story"></a>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed " style="font-size: 27px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">
+The BFD
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://images.axios.com/ar6aDSDS-Nd8T7ttCplBa_wThvQ=/0x507:4719x3161/1920x1080/2020/02/19/1582122177961.jpg" width="600" style="width:100%" id="item02" alt="">
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;"></td>
+</tr>
+<tr>
+<td style="padding: 0 3.5%; line-height: 1.3;">
+<span class="bodytext" style="font-size: 13px; color: #848484;">
+<p>Photo: Don Emmert/AFP via Getty Images</p>
+</span>
+</td>
+</tr>
+<tr>
+<td height="15" style="height: 15px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75; font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<p><strong>LendingClub,</strong> an online personal lender, has agreed to buy U.S. digital lender Radius Bank in a cash-and-stock deal valued at $185 million. The deal is expected to close in 12 to 15 months pending regulatory review. </p><ul><li><strong>Why it’s the BFD</strong>: It’s the first time a U.S. fintech company has bought a regulated bank, though a number have attempted to obtain charters. </li><li><strong>The bottom line:</strong> “The deal will allow San Francisco-based LendingClub to offer new products to its clients, diversify its earnings and reduce or eliminate the use of institutional funding sources.” — <a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuY25iYy5jb20vMjAyMC8wMi8xOC9sZW5kaW5nY2x1Yi1idXlzLXJhZGl1cy1iYW5rLWluLWZpcnN0LWZpbnRlY2gtdGFrZW92ZXItb2YtYS1iYW5rLmh0bWw_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecBf695fb70" target="_blank">Hugh Son, CNBC</a></li></ul>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px 3.5% 25px 3.5%;">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci5waHA_dT1odHRwczovL3d3dy5heGlvcy5jb20vbmV3c2xldHRlcnMvYXhpb3MtcHJvLXJhdGEtYzMxMzdlOTYtMjFkOS00YTg3LWE4YTMtZjVkZjYyNTMwNWRiLmh0bWw_Y2h1bmslM0QyJTI2dXRtX3Rlcm0lM0RmYnNvY2lhbHNoYXJlJTIzc3RvcnkyJnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecD3e29d430" style="display: inline-block;"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/facebook@2x.png" alt="Share on Facebook"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQ_dGV4dD1UaGUlMjBCRkQmaGFzaHRhZ3M9cHJvcmF0YSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNEMiUyNnV0bV90ZXJtJTNEdHdzb2NpYWxzaGFyZSUyM3N0b3J5MiZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecD41774679" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/twitter@2x.png" alt="Tweet this Story"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP21pbmk9dHJ1ZSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNEMiUyNTI2dXRtX3Rlcm0lMjUzRGxpc29jaWFsc2hhcmUlMjUyM3N0b3J5MiZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecD5967f04b" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/linkedin@2x.png" alt="Post to LinkedIn"></a>
+<a href="mailto:?subject=From Axios: The BFD&body=publish-axios.com%40emmares.net%20has%20shared%20an%20Axios%20story%20with%20you%3A%0A%0AThe BFD%0Ahttps%3A%2F%2Fwww.axios.com%2Fnewsletters%2Faxios-pro-rata-c3137e96-21d9-4a87-a8a3-f5df625305db.html%3Fchunk%3D2%26utm_term%3Demshare#story2" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/email@2x.png" alt="Email this Story"></a>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td class="ol-adpad" style="padding: 20px 3.5% 0 3.5%;">
+<p class="bodytext" style="-webkit-text-size-adjust: 100%; margin-bottom: 0 !important; font-size: 11px !important; letter-spacing: 1.4px; color: #008dc8; text-transform: uppercase; font-weight:700;">A message from Uber</p>
+</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed" style="font-size: 27px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">How Uber’s innovative technology is raising the bar on safety</span>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td>
+<img src="https://tpc.googlesyndication.com/pageadimg/imgad?id=CICAgKCnoor43wEQARgBKAEyCCR5ZAHL-peE" alt="" width="600" style="width:100%">
+</td>
+</tr>
+<tr>
+<td height="15" style="height: 15px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75;  font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<p><strong>Uber is committed to your safety,</strong> beginning with background checks and ongoing screening for everyone who drives with Uber.</p><p>And that’s just the start. <a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly9hZC5kb3VibGVjbGljay5uZXQvZGRtL3RyYWNrY2xrL04xOTc4MDEuMjYwMjMwMkFYSU9TL0IyMzU5MjIxNC4yNjQ5MjQzNjQ7ZGNfdHJrX2FpZD00NTg5NjMxMzU7ZGNfdHJrX2NpZD0xMjY1MTgwOTU7ZGNfbGF0PTtkY19yZGlkPTt0YWdfZm9yX2NoaWxkX2RpcmVjdGVkX3RyZWF0bWVudD07dGZ1YT0_YXhpb3NfYWRsaW5rPTE/5d7dee06b43a617d1933d4ecBbb56b064" target="_blank">See how Uber improved</a> its Real-Time ID Check to confirm drivers based on how they blink, smile and turn their heads.</p> 
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed " style="font-size: 27px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">
+Venture Capital Deals
+</span>
+</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75; font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<p><strong>•</strong> <strong>Mitsubishi UFJ Financial Group</strong> is investing more than $700 million in <strong>Grab</strong>, a Southeast Asian ride-hailing company, according to Bloomberg. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvYlhBbz91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB7e7ea247" target="_blank">http://axios.link/bXAo</a> </p><p><strong>•</strong> <strong>Udemy</strong>, a San Francisco-based online education company, has raised $50 million in Series E funding from <strong>Benesse Holdings</strong> at a valuation of $2 billion. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvc3d0YT91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB0622d6da" target="_blank">http://axios.link/swta</a></p><p><strong>•</strong> <strong>Whatfix</strong>, a San Jose-based provider of digital enterprise tools, has raised $32 million in Series C funding led by <strong>Sequoia Capital India</strong>, with Eight Roads Ventures, a global proprietary investment firm backed by Fidelity, F-Prime Capital, and Cisco Investments, also participating. <a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93aGF0Zml4LmNvbS8_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecBf7f1bae8" target="_blank">www.whatfix.com</a></p><p><strong>•</strong> <strong>iMerit</strong>, a Los Gatos, Calif.-based data annotation and enrichment company, has raised $20 million in Series B funding led by <strong>CDC Group</strong>, with existing investors also participating. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5pbWVyaXQubmV0Lz91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB06abf011" target="_blank">www.imerit.net</a> </p><p><strong>•</strong> <strong>Aisera</strong>, a Palo Alto, Ca.-based robotic process automation startup, has raised $20 million in Series B funding led by <strong>Norwest Venture Partners</strong>, with Menlo Ventures, True Ventures, Khosla Ventures, First Round Capital, Ram Shriram and Maynard Webb Investment also participating. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvMkVqcT91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecBdbea6801" target="_blank">http://axios.link/2Ejq</a> </p><p><strong>•</strong> <strong>Huntress Labs</strong>, an Elliott City, Md.-based cybersecurity startup, has raised $18 million in Series A funding from <strong>ForgePoint Capital​</strong>. <a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly9odW50cmVzc2xhYnMuY29tL2luZGV4Lmh0bWw_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecB4ae638a9" target="_blank">www.huntresslabs.com</a></p><p><strong>⛽️ Carbon Clean Solutions</strong>, a London-based carbon dioxide separation technology company, has raised $16 million in funding from WAVE Equity Partners, Chevron Technology Ventures, and Marubeni Corporation. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvbW1KZD91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB8b816b96" target="_blank">http://axios.link/mmJd</a> </p><p><strong>•</strong> <strong>Algo</strong>, a Troy, Mich.-based supply chain technology company, has raised $15 million in funding from <strong>Integrity Growth Partners</strong>. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5hbGdvLmNvbS8_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecBf3c28917" target="_blank">www.algo.com</a> </p><p><strong>•</strong> <strong>Ordway</strong>, a Washington, D.C.-based maker of billing and revenue automation software, has raised $10 million in Series A funding led by <strong>CRV</strong>, with Clocktower Ventures, Lerer Hippeau and Revolution's Rise of the Rest Seed Fund also participating. <a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cub3Jkd2F5bGFicy5jb20vP3V0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecBcfd46e31" target="_blank">www.ordwaylabs.com</a> </p><p><strong>•</strong> <strong>Blueprint Title</strong>, a Nashville-based maker of software tools for real estate transactions, has raised $8.5 million in Series A financing led by <strong>Santander Innoventures</strong>, with Greycroft, Liberty Mutual Strategic Ventures, Mucker Capital, Tribeca Early Stage Partners, and others also participating. <a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly9ibHVlcHJpbnR0aXRsZS5jb20vP3V0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecB7dc74446" target="_blank">www.blueprinttitle.com</a></p><p><strong>•</strong> <strong>Copper.co</strong>, a London-based custodian for digital assets, has raised $8 million in Series A funding from Target Global, LocalGlobe, and MMC Ventures. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvUUp6TD91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB946716d8" target="_blank">http://axios.link/QJzL</a> </p><p><strong>•</strong> <strong>OnSiteIQ</strong>, a New York-based provider of visual documentation and risk assessment tools for construction projects, has raised $4.5 million in Series A funding led by Bullpen Capital, with Anthemis Group and MetaProp also participating. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5vbnNpdGVpcS5pby8_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecBe8244299" target="_blank">www.onsiteiq.io</a></p><p><strong>•</strong> <strong>Arize AI</strong>, a Berkeley, Calif.-based startup building AI tools for businesses, has raised $4 million in funding led by <strong>Foundation Capital</strong>, with Trinity Ventures and Brett Wilson also participating. It also acquired MonitorML. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvZk5PWT91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecBfb03a1a1" target="_blank">http://axios.link/fNOY</a> </p><p><strong>•</strong> <strong>InVideo</strong>, a San Francisco and India-based maker of online video editing tools, has raised $2.5 million in new funding from <strong>Sequoia Capital India’s Surge</strong>, with Anand Chandrasekaran and Gokul Rajaram also participating. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvU2dyYT91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB9c4e0ed5" target="_blank">http://axios.link/Sgra</a> </p><p><strong>•</strong> <strong>Starface</strong>, a New York-based skincare brand that makes hydrocolloid pimple patches, has raised $2 million in seed funding led by <strong>BBG</strong>, with Able, Brand Foundry, Amity Supply, NJ Falk, Brian Spaly, and Roth Martin also participating. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvaVdMaT91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecBfb773df7" target="_blank">http://axios.link/iWLi</a> </p><p><strong>•</strong> <strong>Naza Beauty</strong>, a San Francisco-based hair care and salon company, has raised $1 million in seed funding led by <strong>Initialized Capital</strong>. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvRnBkWT91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecBf0b15106" target="_blank">http://axios.link/FpdY</a> </p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px 3.5% 25px 3.5%;">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci5waHA_dT1odHRwczovL3d3dy5heGlvcy5jb20vbmV3c2xldHRlcnMvYXhpb3MtcHJvLXJhdGEtYzMxMzdlOTYtMjFkOS00YTg3LWE4YTMtZjVkZjYyNTMwNWRiLmh0bWw_Y2h1bmslM0QzJTI2dXRtX3Rlcm0lM0RmYnNvY2lhbHNoYXJlJTIzc3RvcnkzJnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecE59b909b1" style="display: inline-block;"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/facebook@2x.png" alt="Share on Facebook"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQ_dGV4dD1WZW50dXJlJTIwQ2FwaXRhbCUyMERlYWxzJmhhc2h0YWdzPXByb3JhdGEmdXJsPWh0dHBzOi8vd3d3LmF4aW9zLmNvbS9uZXdzbGV0dGVycy9heGlvcy1wcm8tcmF0YS1jMzEzN2U5Ni0yMWQ5LTRhODctYThhMy1mNWRmNjI1MzA1ZGIuaHRtbD9jaHVuayUzRDMlMjZ1dG1fdGVybSUzRHR3c29jaWFsc2hhcmUlMjNzdG9yeTMmdXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecE66bf94e4" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/twitter@2x.png" alt="Tweet this Story"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP21pbmk9dHJ1ZSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNEMyUyNTI2dXRtX3Rlcm0lMjUzRGxpc29jaWFsc2hhcmUlMjUyM3N0b3J5MyZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecE426b6760" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/linkedin@2x.png" alt="Post to LinkedIn"></a>
+<a href="mailto:?subject=From Axios: Venture Capital Deals&body=publish-axios.com%40emmares.net%20has%20shared%20an%20Axios%20story%20with%20you%3A%0A%0AVenture Capital Deals%0Ahttps%3A%2F%2Fwww.axios.com%2Fnewsletters%2Faxios-pro-rata-c3137e96-21d9-4a87-a8a3-f5df625305db.html%3Fchunk%3D3%26utm_term%3Demshare#story3" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/email@2x.png" alt="Email this Story"></a>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed " style="font-size: 27px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">
+Private Equity Deals
+</span>
+</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75; font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<p><strong>•</strong> <strong>Valence Surface Technologies</strong>, a portfolio company of ATL Partners and British Columbia Investment Management Corporation, has acquired <strong>Fountain Plating Co</strong>, a Springfield, Mass.-based provider of product finishing services for aircraft engine and critical components for the aerospace and defense industries. </p><p><strong>•</strong> <strong>Sky Island Capital</strong>, a Dallas‐based lower middle market private equity firm, has made a majority investment in <strong>Polished Metals Limited</strong>, a Hillside, N.J.-based polisher and supplier of architectural and ornamental metals. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5wb2xpc2hlZG1ldGFscy5jb20vP3V0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecB1f4c1a0a" target="_blank">www.polishedmetals.com</a></p><p><strong>•</strong> <strong>Semios</strong>, a Canada-based agriculture tech company, has raised $75 million in private equity funding led by <strong>Morningside Group</strong>. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5zZW1pb3MuY29tLz91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB708a287d" target="_blank">www.semios.com</a> </p><p><strong>•</strong> <strong>Amherst Residential</strong> has agreed to acquired <strong>Front Yard Residential</strong>, a U.S. Virgin Islands-based Real estate investment trust company, in a transaction valued at approximately $2.3 billion. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvMk1Vaj91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB8099608b" target="_blank">http://axios.link/2MUj</a> </p><p><strong>•</strong> <strong>Duo Bank of Canada</strong>, backed by Stephen Smith, Centerbridge Partners and Ontario Teachers’ Pension Plan, has agreed to acquire <strong>Fairstone Financial Holdings</strong> from J.C. Flowers &amp; Co., Värde Partners, and other investors. <a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFpcnN0b25lLmNhLz91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB281bd656" target="_blank">www.fairstone.ca</a> </p><p><strong>•</strong> <strong>Knowlton Development Corporation</strong>, backed by Cornell Capital, CDPQ, Investissement Québec and HarbourVest Partners, has agreed to acquire <strong>Zobele Group</strong>, an Italy-based manufacturer of home and air care products. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy56b2JlbGUuY29tLz91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecBe72fb98c" target="_blank">www.zobele.com</a></p><p><strong>•</strong> <strong>CDPQ</strong> will boost its stake in <strong>Cirque du Soleil</strong> to about 20% and purchase its founder’s shares. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvNkt6Mz91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB35ea056e" target="_blank">http://axios.link/6Kz3</a> </p><p><strong>•</strong> <strong>Endless</strong> has sold <strong>Antler</strong>, a London-based luggage company, to <strong>ATR Holdings</strong>, an associated company of Strandbags. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvODBZQz91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecBe293ddb3" target="_blank">http://axios.link/80YC</a> </p><p><strong>•</strong> <strong>Iridium Technology</strong>, backed by Polaris Growth Fund, has acquired <strong>DFTech</strong>, an Irvine, Calif.-based provider of data and analytics software to law firms. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5pcmlkaXVtLXRlY2hub2xvZ3kuY29tLz91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB03abdb1e" target="_blank">www.iridium-technology.com</a> </p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px 3.5% 25px 3.5%;">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci5waHA_dT1odHRwczovL3d3dy5heGlvcy5jb20vbmV3c2xldHRlcnMvYXhpb3MtcHJvLXJhdGEtYzMxMzdlOTYtMjFkOS00YTg3LWE4YTMtZjVkZjYyNTMwNWRiLmh0bWw_Y2h1bmslM0Q0JTI2dXRtX3Rlcm0lM0RmYnNvY2lhbHNoYXJlJTIzc3Rvcnk0JnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecF3e91d032" style="display: inline-block;"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/facebook@2x.png" alt="Share on Facebook"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQ_dGV4dD1Qcml2YXRlJTIwRXF1aXR5JTIwRGVhbHMmaGFzaHRhZ3M9cHJvcmF0YSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNENCUyNnV0bV90ZXJtJTNEdHdzb2NpYWxzaGFyZSUyM3N0b3J5NCZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecF220a1de5" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/twitter@2x.png" alt="Tweet this Story"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP21pbmk9dHJ1ZSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNENCUyNTI2dXRtX3Rlcm0lMjUzRGxpc29jaWFsc2hhcmUlMjUyM3N0b3J5NCZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecFd4ecf2cf" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/linkedin@2x.png" alt="Post to LinkedIn"></a>
+<a href="mailto:?subject=From Axios: Private Equity Deals&body=publish-axios.com%40emmares.net%20has%20shared%20an%20Axios%20story%20with%20you%3A%0A%0APrivate Equity Deals%0Ahttps%3A%2F%2Fwww.axios.com%2Fnewsletters%2Faxios-pro-rata-c3137e96-21d9-4a87-a8a3-f5df625305db.html%3Fchunk%3D4%26utm_term%3Demshare#story4" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/email@2x.png" alt="Email this Story"></a>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed " style="font-size: 27px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">
+Public Offerings
+</span>
+</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75; font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<p><strong>🚑 Passage Bio</strong>, a Philadelphia-based preclinical biotech developing gene therapies for rare CNS disorders, announced plans to raise $126 million by offering 7.4 million shares at a price range of $16 to $18. At the midpoint of the proposed range, Passage Bio would command a fully diluted market value of $713 million. It plans to list on the Nasdaq under the symbol PASG. JPMorgan, Goldman Sachs and Cowen are the joint bookrunners on the deal. It is expected to price during the week of Feb. 24, 2020. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvd1lpdD91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB55404520" target="_blank">http://axios.link/wYit</a></p><p><strong>•</strong> <strong>FreeCast</strong>, an Orlando-based company that provides an integrated platform for video streaming services, filed on Tuesday with the SEC to raise up to $17 million in an IPO. It plans to list on the Nasdaq, but has not selected a symbol. Alexander Capital is the sole bookrunner on the deal. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvM0haMD91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecBec1844a4" target="_blank">http://axios.link/3HZ0</a> </p><p><strong>•</strong> <strong>MingZhu Logistics Holdings</strong>, a China-based company that provides trucking services and logistics, announced plans to raise $13 million by offering 3 million shares at a price range of $4.00 to $4.50. At the midpoint of the proposed range, it would command a fully diluted market value of $52 million. It plans to list on the Nasdaq under the symbol YGMZ. ViewTrade is the sole bookrunner on the deal. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvejhIeT91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB871a2f6c" target="_blank">http://axios.link/z8Hy</a> </p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px 3.5% 25px 3.5%;">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci5waHA_dT1odHRwczovL3d3dy5heGlvcy5jb20vbmV3c2xldHRlcnMvYXhpb3MtcHJvLXJhdGEtYzMxMzdlOTYtMjFkOS00YTg3LWE4YTMtZjVkZjYyNTMwNWRiLmh0bWw_Y2h1bmslM0Q1JTI2dXRtX3Rlcm0lM0RmYnNvY2lhbHNoYXJlJTIzc3Rvcnk1JnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecG5841b14e" style="display: inline-block;"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/facebook@2x.png" alt="Share on Facebook"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQ_dGV4dD1QdWJsaWMlMjBPZmZlcmluZ3MmaGFzaHRhZ3M9cHJvcmF0YSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNENSUyNnV0bV90ZXJtJTNEdHdzb2NpYWxzaGFyZSUyM3N0b3J5NSZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecGf326f259" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/twitter@2x.png" alt="Tweet this Story"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP21pbmk9dHJ1ZSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNENSUyNTI2dXRtX3Rlcm0lMjUzRGxpc29jaWFsc2hhcmUlMjUyM3N0b3J5NSZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecG970341af" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/linkedin@2x.png" alt="Post to LinkedIn"></a>
+<a href="mailto:?subject=From Axios: Public Offerings&body=publish-axios.com%40emmares.net%20has%20shared%20an%20Axios%20story%20with%20you%3A%0A%0APublic Offerings%0Ahttps%3A%2F%2Fwww.axios.com%2Fnewsletters%2Faxios-pro-rata-c3137e96-21d9-4a87-a8a3-f5df625305db.html%3Fchunk%3D5%26utm_term%3Demshare#story5" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/email@2x.png" alt="Email this Story"></a>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed " style="font-size: 27px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">
+Liquidity Events
+</span>
+</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75; font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<p><strong>•</strong> <strong>Twitter</strong> has acquired <strong>Chroma Labs</strong>, a San Mateo, Calif.-based maker of social media editing tools. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvV1YxNT91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB86f57a18" target="_blank">http://axios.link/WV15</a> </p><p><strong>•</strong> <strong>Ally Financial</strong> has agreed to acquire <strong>CardWorks</strong>, a Woodbury, NY-based consumer finance lender, for $2.65 billion, including about $1.35 billion of cash and $1.30 billion in common stock. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvZmdCVz91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecBa1e54acc" target="_blank">http://axios.link/fgBW</a></p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px 3.5% 25px 3.5%;">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci5waHA_dT1odHRwczovL3d3dy5heGlvcy5jb20vbmV3c2xldHRlcnMvYXhpb3MtcHJvLXJhdGEtYzMxMzdlOTYtMjFkOS00YTg3LWE4YTMtZjVkZjYyNTMwNWRiLmh0bWw_Y2h1bmslM0Q2JTI2dXRtX3Rlcm0lM0RmYnNvY2lhbHNoYXJlJTIzc3Rvcnk2JnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecH8a567465" style="display: inline-block;"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/facebook@2x.png" alt="Share on Facebook"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQ_dGV4dD1MaXF1aWRpdHklMjBFdmVudHMmaGFzaHRhZ3M9cHJvcmF0YSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNENiUyNnV0bV90ZXJtJTNEdHdzb2NpYWxzaGFyZSUyM3N0b3J5NiZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecH41079d38" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/twitter@2x.png" alt="Tweet this Story"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP21pbmk9dHJ1ZSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNENiUyNTI2dXRtX3Rlcm0lMjUzRGxpc29jaWFsc2hhcmUlMjUyM3N0b3J5NiZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecH2643b25e" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/linkedin@2x.png" alt="Post to LinkedIn"></a>
+<a href="mailto:?subject=From Axios: Liquidity Events&body=publish-axios.com%40emmares.net%20has%20shared%20an%20Axios%20story%20with%20you%3A%0A%0ALiquidity Events%0Ahttps%3A%2F%2Fwww.axios.com%2Fnewsletters%2Faxios-pro-rata-c3137e96-21d9-4a87-a8a3-f5df625305db.html%3Fchunk%3D6%26utm_term%3Demshare#story6" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/email@2x.png" alt="Email this Story"></a>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed " style="font-size: 27px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">
+More M&amp;A
+</span>
+</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75; font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<p><strong>•</strong> <strong>BitGo</strong> has agreed to acquire <strong>Harbor</strong>, a San Francisco-based provider of digital investment management tools for alternative assets. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvcFdzNT91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecBc86d517b" target="_blank">http://axios.link/pWs5</a> </p><p><strong>•</strong> <strong>IQ-EQ </strong>has acquired <strong>Blue River Partners</strong>, a Dallas-based provider of outsourced services to alternative asset managers. </p><p><strong>•</strong> <strong>Embracer</strong> has agreed to acquire <strong>Saber Interactive</strong>, a U.S. video game maker, for up to $525 million, with an initial $150 million and an earn-out of a maximum $375 million in a mix of cash and shares. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL2F4aW9zLmxpbmsvc0M4MT91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecB6442a0a4" target="_blank">http://axios.link/sC81</a> </p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px 3.5% 25px 3.5%;">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci5waHA_dT1odHRwczovL3d3dy5heGlvcy5jb20vbmV3c2xldHRlcnMvYXhpb3MtcHJvLXJhdGEtYzMxMzdlOTYtMjFkOS00YTg3LWE4YTMtZjVkZjYyNTMwNWRiLmh0bWw_Y2h1bmslM0Q3JTI2dXRtX3Rlcm0lM0RmYnNvY2lhbHNoYXJlJTIzc3Rvcnk3JnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecIcceffe3d" style="display: inline-block;"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/facebook@2x.png" alt="Share on Facebook"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQ_dGV4dD1Nb3JlJTIwTSUyNkEmaGFzaHRhZ3M9cHJvcmF0YSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNENyUyNnV0bV90ZXJtJTNEdHdzb2NpYWxzaGFyZSUyM3N0b3J5NyZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecId768e46e" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/twitter@2x.png" alt="Tweet this Story"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP21pbmk9dHJ1ZSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNENyUyNTI2dXRtX3Rlcm0lMjUzRGxpc29jaWFsc2hhcmUlMjUyM3N0b3J5NyZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecIaac8e742" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/linkedin@2x.png" alt="Post to LinkedIn"></a>
+<a href="mailto:?subject=From Axios: More M&amp;A&body=publish-axios.com%40emmares.net%20has%20shared%20an%20Axios%20story%20with%20you%3A%0A%0AMore M&amp;A%0Ahttps%3A%2F%2Fwww.axios.com%2Fnewsletters%2Faxios-pro-rata-c3137e96-21d9-4a87-a8a3-f5df625305db.html%3Fchunk%3D7%26utm_term%3Demshare#story7" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/email@2x.png" alt="Email this Story"></a>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed " style="font-size: 27px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">
+Fundraising
+</span>
+</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75; font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<p><strong>•</strong> <strong>ForgePoint Capital</strong>, a San Francisco-based VC firm focused on cybersecurity, has raised $450 million for its second fund. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5mb3JnZXBvaW50Y2FwLmNvbS8_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecBb8ecbdd1" target="_blank">www.forgepointcap.com</a> </p><p><strong>•</strong> <strong>Align Capital Partners</strong>, a Dallas and Cleveland-based private equity firm, has raised $450 million for its second private flagship fund. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5hbGlnbmNwLmNvbS8_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecB9e4e39b9" target="_blank">www.aligncp.com</a> </p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px 3.5% 25px 3.5%;">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci5waHA_dT1odHRwczovL3d3dy5heGlvcy5jb20vbmV3c2xldHRlcnMvYXhpb3MtcHJvLXJhdGEtYzMxMzdlOTYtMjFkOS00YTg3LWE4YTMtZjVkZjYyNTMwNWRiLmh0bWw_Y2h1bmslM0Q4JTI2dXRtX3Rlcm0lM0RmYnNvY2lhbHNoYXJlJTIzc3Rvcnk4JnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecJd486c9d4" style="display: inline-block;"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/facebook@2x.png" alt="Share on Facebook"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQ_dGV4dD1GdW5kcmFpc2luZyZoYXNodGFncz1wcm9yYXRhJnVybD1odHRwczovL3d3dy5heGlvcy5jb20vbmV3c2xldHRlcnMvYXhpb3MtcHJvLXJhdGEtYzMxMzdlOTYtMjFkOS00YTg3LWE4YTMtZjVkZjYyNTMwNWRiLmh0bWw_Y2h1bmslM0Q4JTI2dXRtX3Rlcm0lM0R0d3NvY2lhbHNoYXJlJTIzc3Rvcnk4JnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecJb84dcc79" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/twitter@2x.png" alt="Tweet this Story"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP21pbmk9dHJ1ZSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNEOCUyNTI2dXRtX3Rlcm0lMjUzRGxpc29jaWFsc2hhcmUlMjUyM3N0b3J5OCZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecJf210cf78" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/linkedin@2x.png" alt="Post to LinkedIn"></a>
+<a href="mailto:?subject=From Axios: Fundraising&body=publish-axios.com%40emmares.net%20has%20shared%20an%20Axios%20story%20with%20you%3A%0A%0AFundraising%0Ahttps%3A%2F%2Fwww.axios.com%2Fnewsletters%2Faxios-pro-rata-c3137e96-21d9-4a87-a8a3-f5df625305db.html%3Fchunk%3D8%26utm_term%3Demshare#story8" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/email@2x.png" alt="Email this Story"></a>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed " style="font-size: 27px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">
+It&#x27;s Personnel
+</span>
+</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75; font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<p><strong>•</strong> <strong>Greg Rosen</strong> is re-joining <strong>BoxGroup</strong> as a venture partner based in San Francisco. He was previously at BoxGroup for three years before leaving for Benchmark and Bedrock. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5ib3hncm91cC5jb20vP3V0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecBc8001b16" target="_blank">www.boxgroup.com</a> </p><p><strong>•</strong> <strong>Giorgia Scelzo, Marci Teichman, </strong>and<strong> Vanessa Kuhlo</strong>r have joined <strong>Silicon Valley Bank</strong>’s NYC startup banking team. <a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuc3ZiLmNvbS8_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecB6d97675a" target="_blank">www.svb.com</a> </p><p><strong>•</strong> <strong>Uzair Dossani, Evan Eason </strong>and<strong> Kevin Gregory</strong> have joined <strong>Intermediate Capital Group</strong>’s North American mid-market private equity team, based in New York. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5pY2dhbS5jb20vP3V0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecB22eb79a0" target="_blank">www.icgam.com</a> </p><p><strong>•</strong> <strong>Andres Navia</strong> has joined <strong>Poseidon Investment Management </strong>as portfolio manager. <a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5wb3NlaWRvbi5wYXJ0bmVycy8_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecBa422f222" target="_blank">www.poseidon.partners</a> </p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px 3.5% 25px 3.5%;">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci5waHA_dT1odHRwczovL3d3dy5heGlvcy5jb20vbmV3c2xldHRlcnMvYXhpb3MtcHJvLXJhdGEtYzMxMzdlOTYtMjFkOS00YTg3LWE4YTMtZjVkZjYyNTMwNWRiLmh0bWw_Y2h1bmslM0Q5JTI2dXRtX3Rlcm0lM0RmYnNvY2lhbHNoYXJlJTIzc3Rvcnk5JnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecKf8cebb13" style="display: inline-block;"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/facebook@2x.png" alt="Share on Facebook"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQ_dGV4dD1JdCUyN3MlMjBQZXJzb25uZWwmaGFzaHRhZ3M9cHJvcmF0YSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNEOSUyNnV0bV90ZXJtJTNEdHdzb2NpYWxzaGFyZSUyM3N0b3J5OSZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecKff55194c" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/twitter@2x.png" alt="Tweet this Story"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP21pbmk9dHJ1ZSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNEOSUyNTI2dXRtX3Rlcm0lMjUzRGxpc29jaWFsc2hhcmUlMjUyM3N0b3J5OSZ1dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecK60eda2e1" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/linkedin@2x.png" alt="Post to LinkedIn"></a>
+<a href="mailto:?subject=From Axios: It&#x27;s Personnel&body=publish-axios.com%40emmares.net%20has%20shared%20an%20Axios%20story%20with%20you%3A%0A%0AIt&#x27;s Personnel%0Ahttps%3A%2F%2Fwww.axios.com%2Fnewsletters%2Faxios-pro-rata-c3137e96-21d9-4a87-a8a3-f5df625305db.html%3Fchunk%3D9%26utm_term%3Demshare#story9" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/email@2x.png" alt="Email this Story"></a>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed " style="font-size: 27px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">
+Final Numbers
+</span>
+</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75; font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<img src="https://graphics.axios.com/2020-12-18-vc-deals/fallbacks/2020-12-18-vc-deals-fallback.png" style="max-width: 100%;" width="558"><div class="bodytext" style="font-size:13px; font-family:'Gordita',Arial,Helvetica,sans-serif; color:#848484; margin-bottom:20px;">Reproduced from <a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuY2JpbnNpZ2h0cy5jb20vcmVwb3J0cy9DQi1JbnNpZ2h0c19GaW50ZWNoLVJlcG9ydC1RNC0yMDE5LnBkZj91dG1fc291cmNlPW5ld3NsZXR0ZXImdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249bmV3c2xldHRlcl9heGlvc3Byb3JhdGEmc3RyZWFtPXRvcA/5d7dee06b43a617d1933d4ecBb512f55e" target="_blank">CB Insights</a>; Chart: Axios Visuals</div>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px 3.5% 25px 3.5%;">
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3NoYXJlci5waHA_dT1odHRwczovL3d3dy5heGlvcy5jb20vbmV3c2xldHRlcnMvYXhpb3MtcHJvLXJhdGEtYzMxMzdlOTYtMjFkOS00YTg3LWE4YTMtZjVkZjYyNTMwNWRiLmh0bWw_Y2h1bmslM0QxMCUyNnV0bV90ZXJtJTNEZmJzb2NpYWxzaGFyZSUyM3N0b3J5MTAmdXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecLb052501d" style="display: inline-block;"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/facebook@2x.png" alt="Share on Facebook"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly90d2l0dGVyLmNvbS9pbnRlbnQvdHdlZXQ_dGV4dD1GaW5hbCUyME51bWJlcnMmaGFzaHRhZ3M9cHJvcmF0YSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNEMTAlMjZ1dG1fdGVybSUzRHR3c29jaWFsc2hhcmUlMjNzdG9yeTEwJnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecL3e6a5fbe" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/twitter@2x.png" alt="Tweet this Story"></a>
+<a href="https://link.axios.com/click/19485888.106212/aHR0cDovL3d3dy5saW5rZWRpbi5jb20vc2hhcmVBcnRpY2xlP21pbmk9dHJ1ZSZ1cmw9aHR0cHM6Ly93d3cuYXhpb3MuY29tL25ld3NsZXR0ZXJzL2F4aW9zLXByby1yYXRhLWMzMTM3ZTk2LTIxZDktNGE4Ny1hOGEzLWY1ZGY2MjUzMDVkYi5odG1sP2NodW5rJTNEMTAlMjUyNnV0bV90ZXJtJTI1M0RsaXNvY2lhbHNoYXJlJTI1MjNzdG9yeTEwJnV0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecL6e4f77d1" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/linkedin@2x.png" alt="Post to LinkedIn"></a>
+<a href="mailto:?subject=From Axios: Final Numbers&body=publish-axios.com%40emmares.net%20has%20shared%20an%20Axios%20story%20with%20you%3A%0A%0AFinal Numbers%0Ahttps%3A%2F%2Fwww.axios.com%2Fnewsletters%2Faxios-pro-rata-c3137e96-21d9-4a87-a8a3-f5df625305db.html%3Fchunk%3D10%26utm_term%3Demshare#story10" style="display: inline-block; margin-left: 7px"><img width="32" height="32" style="border: none" target="_blank" src="https://static.axios.com/img-email/social/email@2x.png" alt="Email this Story"></a>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+<tr>
+<td height="20" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td class="ol-adpad" style="padding: 20px 3.5% 0 3.5%;">
+<p class="bodytext" style="-webkit-text-size-adjust: 100%; margin-bottom: 0 !important; font-size: 11px !important; letter-spacing: 1.4px; color: #008dc8; text-transform: uppercase; font-weight:700;">A message from Uber
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding: 20px 3.5%; line-height: 1.5;">
+<span class="bodytext hed" style="font-size: 26px; font-family: 'gorditamedium', Arial, Helvetica, sans-serif; color: #222222; letter-spacing: -0.1px; line-height: 1.5;">What’s coming to Uber’s suite of safety tools</span>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td>
+<img src="https://tpc.googlesyndication.com/pageadimg/imgad?id=CICAgKCnp7mx5gEQARgBKAEyCAnn4mMmT0oN" alt="" width="600" style="width:100%">
+</td>
+</tr>
+<tr>
+<td height="15" style="height: 15px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td class="post-text" style="padding: 0 3.5%; line-height: 1.75;  font-size: 17px; font-family: Georgia, serif; line-height: 1.75; color: #222222; letter-spacing: -0.1px;">
+<p>Upgrades coming to Uber’s suite of safety tools are designed to help make rides safer by giving riders and drivers the ability to:</p><ul><li>Verify rides before you get in with a unique PIN.</li><li>Report a safety incident while on-trip.</li><li>Text 911 directly from the app, where it’s supported.</li></ul><p><a href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly9hZC5kb3VibGVjbGljay5uZXQvZGRtL3RyYWNrY2xrL04xOTc4MDEuMjYwMjMwMkFYSU9TL0IyMzU5MjIxNC4yNjQ5MjQzNjQ7ZGNfdHJrX2FpZD00NTg5NjMxMzU7ZGNfdHJrX2NpZD0xMjY1MTgwOTU7ZGNfbGF0PTtkY19yZGlkPTt0YWdfZm9yX2NoaWxkX2RpcmVjdGVkX3RyZWF0bWVudD07dGZ1YT0_YXhpb3NfYWRsaW5rPTE/5d7dee06b43a617d1933d4ecCbb56b064" target="_blank">Get more details.</a></p>
+</td>
+</tr>
+<tr>
+<td height="10" style="height: 10px; font-size: 0; border-bottom: 10px solid #f5f5f5;">&nbsp;</td>
+</tr>
+</table>
+<!-- End email content -->
+<!-- Start footer -->
+<table style="max-width:600px; margin: 0 auto; width: 100%;" cellspacing="0" cellpadding="0">
+<tr>
+<td height="20" style="height: 20px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" style="padding: 0 5%; line-height: 1.75;">
+<span class="bodytext" style="font-size: 12px; line-height: 1.75; color: #222222;">
+<p>Axios thanks our partners for supporting our newsletters.
+<br> Sponsorship has no influence on editorial content.</p>
+</span>
+<span class="bodytext" style="font-size: 12px; line-height: 1.75; color: #222222;">
+Axios, 3100 Clarendon B&zwnj;lvd, Suite 1300, Arlington VA 22201
+</span>
+</td>
+</tr>
+<tr>
+<td height="20" style="height: 20px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" style="padding: 0 5%; line-height: 1.2;">
+<span class="bodytext" style="font-size: 12px; line-height: 1.2; color: #222222;">
+You received this email because you signed up for newsletters from Axios.<br>
+<a href="https://link.axios.com/oc/5d7dee06b43a617d1933d4ecblneo.29yc/47362abd" style="color: #222222;"> </a>
+</span>
+</td>
+</tr>
+<tr>
+<td height="20" style="height: 20px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td align="center" style="padding: 0 5%; line-height: 1.2;">
+<span class="bodytext" style="font-size: 12px; line-height: 1.2; color: #222222;">
+Was this email forwarded to you?<br>
+<a href="https://link.axios.com/join/5fx/prorata-signup?utm_source=forwarded_email" style="color: #222222;">Sign up now</a> to get Axios in your inbox.
+</span>
+</td>
+</tr>
+<tr>
+<td height="20" style="height: 20px; font-size: 0;">&nbsp;</td>
+</tr>
+<tr>
+<td height="30" align="center">
+<p class="bodytext" style="font-size: 12px; line-height: 1.75; color: #222222;">Follow Axios on social media:</p>
+<a target="_blank" href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2F4aW9zbmV3cy8_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecB8996349e"><img src="https://static.axios.com/img-email/facebook@2x.png" height="16" alt="Axios on Facebook" style="border: 0; padding-right: 28px;"></a>
+<a target="_blank" href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cudHdpdHRlci5jb20vYXhpb3MvP3V0bV9zb3VyY2U9bmV3c2xldHRlciZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1uZXdzbGV0dGVyX2F4aW9zcHJvcmF0YSZzdHJlYW09dG9w/5d7dee06b43a617d1933d4ecBfb7b2aa1"><img src="https://static.axios.com/img-email/twitter@2x.png" height="16" alt="Axios on Twitter" style="border: 0; padding-right: 20px;"></a>
+<a target="_blank" href="https://link.axios.com/click/19485888.106212/aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9heGlvcy8_dXRtX3NvdXJjZT1uZXdzbGV0dGVyJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPW5ld3NsZXR0ZXJfYXhpb3Nwcm9yYXRhJnN0cmVhbT10b3A/5d7dee06b43a617d1933d4ecB1e646844"><img src="https://static.axios.com/img-email/instagram@2x.png" height="16" alt="Axios on Instagram" style="border: 0"></a>
+</td>
+</tr>
+<tr>
+<td height="20" style="height: 20px; font-size: 0;">&nbsp;</td>
+</tr>
+<!--<tr>
+<td align="center" style="padding: 0 5%; line-height: 1.75;">
+<span class="bodytext"  style="font-size: 12px; line-height: 1.75px; color: #222222;">
+View in browser at <a href="https://link.axios.com/view/5d7dee06b43a617d1933d4ecblneo.29yc/e0769997" target="_blank" style="color: #222222; letter-spacing: 1px;">https://link.axios.com/view/5d7dee06b43a617d1933d4ecblneo.29yc/e0769997</a>
+</span>
+</td>
+</tr>-->
+<tr>
+<td height="70" style="height: 70px; font-size: 0;">&nbsp;</td>
+</tr>
+</table>
+<!-- End footer -->
+<!--[if mso]>
+</td></tr></table>
+<![endif]-->
+</td></tr></table>
+<div class="gmailfix" style="white-space:nowrap; font:15px courier; line-height:0;">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</div>
+</body>
+</html>

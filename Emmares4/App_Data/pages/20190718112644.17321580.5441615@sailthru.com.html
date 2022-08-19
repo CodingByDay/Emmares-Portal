@@ -1,0 +1,453 @@
+﻿<!-- %%[
+Set @subscriberrow = LookupRows("birthday_email_opens_referral_top25","email",_subscriberkey)
+IF ROWCOUNT(@subscriberrow) == 1 THEN
+Set @signup_date = Field(Row(@subscriberrow, 1), "date_subscribed")
+Set @subscriber_number = Field(Row(@subscriberrow, 1), "subscriber_number")
+Set @total_opens = Field(Row(@subscriberrow, 1), "total_opens")
+Set @total_minutes = Field(Row(@subscriberrow, 1), "total_minutes")
+Set @best_month = Field(Row(@subscriberrow, 1), "best_month")
+Set @best_month_total_opens = Field(Row(@subscriberrow, 1), "best_month_total_opens")
+Set @opens_last_year = Field(Row(@subscriberrow, 1), "opens_last_year")
+Set @percentile = Field(Row(@subscriberrow, 1), "percentile")
+Set @total_referrals = Field(Row(@subscriberrow, 1), "total_referrals")
+Set @skimmbassador = Field(Row(@subscriberrow, 1), "skimmbassador")
+ENDIF
+IF NOT EMPTY (skimmbassador) THEN
+set @skimmbassador_intro = ' SB'
+ENDIF
+Var @de_sub
+Set @de_sub = LookupRows("Ent.subscribers_data_production","email",emailaddr)
+IF rowcount(@de_sub) >= 1 THEN
+Set @referral = Field(Row(@de_sub, 1), "referral_code")
+ENDIF
+/* Place the follow code in the spots where values from data extensions are desired: */
+/* For example, to place the signup date... */
+/* %%=V(@signup_date)=%% */
+]%% -->
+<!--
+%%=V(@subscriber_number)=%%
+@|signup_date|@
+@|ds_opens|@
+%%=V(@total_minutes)=%%
+%%=V(@total_referrals)=%%
+-->
+<!DOCTYPE html>
+<!--
+DITCH THE TABLES !! This email was coded without any html tables (for layout). You should try it, too.
+Developed by Chris Towler
+Shoutouts to Mark Robbins https://github.com/M-J-Robbins/get-off-the-table
+-->
+<html lang="en">
+<head>
+<custom name="opencounter" type="tracking"></custom>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width" initial-scale="1">
+<meta name="x-apple-disable-message-reformatting">
+<!--[if !mso]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<![endif]-->
+<title></title>
+<style type="text/css">
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+src: local('Montserrat Regular'), local('Montserrat-Regular'), url(http://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459WlhzQ.woff) format('woff');
+mso-font-alt: 'Helvetica';
+}
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+src: local('Montserrat Medium'), local('Montserrat-Medium'), url(http://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_ZpC3gnD-A.woff) format('woff');
+mso-font-alt: 'Helvetica';
+}
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(http://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_bZF3gnD-A.woff) format('woff');
+mso-font-alt: 'Helvetica';
+}
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+src: local('Montserrat Bold'), local('Montserrat-Bold'), url(http://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_dJE3gnD-A.woff) format('woff');
+mso-font-alt: 'Helvetica';
+}
+@font-face {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url(http://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_c5H3gnD-A.woff) format('woff');
+mso-font-alt: 'Helvetica';
+}
+@font-face {
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+src: local('Open Sans regular'), local('Open-Sans-Regular'), url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap) format('woff');
+mso-font-alt: 'sans-serif';
+}
+</style>
+<style>
+* {-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+body {-moz-osx-font-smoothing: grayscale;text-rendering: optimizeLegibility;Margin:0px;}
+div[style*="margin: 16px 0"] {margin: 0 !important;}
+img {-ms-interpolation-mode: bicubic;max-width: 100%;border: 0;}
+*[x-apple-data-detectors] {color: inherit !important;text-decoration: none !important;}
+.x-gmail-data-detectors,.x-gmail-data-detectors *,.aBn{border-bottom: 0 !important;cursor: default !important;}
+</style>
+<style>
+* {
+font-family: Open Sans, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+font-size: 17px;
+line-height: 30px;
+}
+span {
+font-size: inherit !important;
+font-weight: inherit !important;
+text-decoration: none !important;
+border-bottom: 0px !important;
+}
+.body {
+width:100%;
+max-width:800px;
+margin:0 auto;text-align:center;
+mso-element-frame-width:800px;
+mso-element:para-border-div;
+mso-element-left:center;
+mso-element-wrap:no-wrap-beside;
+}
+.header {
+mso-padding-alt: 0px 0px;
+text-align: center;
+}
+.heading {
+font-family: Montserrat,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+font-size: 35px;
+line-height: 40px;
+font-weight: 500;
+Margin: 20px auto;
+text-align: center;
+max-width:100%;
+}
+.heading--bold {
+font-family: Montserrat, Helvetica, Arial, sans-serif;
+font-weight: 700;
+}
+.heading--big {
+font-family: Montserrat, Helvetica, Arial, sans-serif;
+font-size:40px;
+line-height:45px;
+font-weight: 900;
+}
+.heading--small {
+font-size: 22px;
+line-height: 26px;
+}
+.heading--huge {
+font-size: 60px;
+line-height:60px;
+font-weight: 900;
+font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
+.copy {
+text-align: center;
+Margin: 10px auto;
+padding: 0px 15px;
+}
+.bold {
+font-weight: bold;
+}
+.copy--footer {
+color: #a8a8a8;
+font-size: 10px;
+line-height: 13px;
+text-align: center;
+Margin: 10px auto;
+padding: 0px 15px;
+}
+.img {
+display:block;
+height:auto;
+border: 0;
+max-width: 100%;
+}
+.img--logo {
+width:154px;
+padding:0;
+padding-bottom: 14px;
+}
+.link {
+display: inline;
+text-decoration: none;
+font: inherit;
+color: #00b2a9;
+}
+.link--img {
+border: 0;
+display: inline-block;
+}
+.hr {
+border: 0;
+border-bottom: 1px;
+border-color: #ddd;
+border-style: solid;
+Margin: 25px 0;
+}
+.center {
+margin-left: auto;
+margin-right: auto;
+}
+.text-center {
+text-align: center;
+}
+.vertical-center {
+vertical-align: middle;
+}
+.teal {
+color: #00b2a9;
+}
+.light-teal {
+color: #51D6D0;
+}
+.white {
+color: #ffffff !important;
+}
+.left {
+float: left;
+}
+.right {
+float: right;
+}
+.bracket {
+padding-right: 10px;
+padding-left: 10px;
+mso-hide:all;
+}
+.mt-0 {
+Margin-top: 0px;
+}
+.mb-0 {
+Margin-bottom: 0px;
+}
+.rule {
+padding-top: 20px;
+padding-bottom: 20px;
+mso-padding-alt: 20px 0px;
+}
+</style>
+<!--[if (mso)]>
+<style type="text/css">
+p, h3 { font-family: sans-serif !important; }
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+line-height: 100%;
+}
+.footer {
+text-align: center;
+color: #a8a8a8;
+font-size: 12px;
+line-height: 14px;
+}
+</style>
+<![endif]-->
+</head>
+<body>
+<div style="mso-element-wrap:no-wrap-beside;line-height:0;">&nbsp;</div>
+<!--[if gte mso 12]><br><br><![endif]-->
+<div role="presentation" class="body" style="width:100%;max-width:800px;padding-bottom: 30px;Margin-bottom:0px;">
+<header class="header">
+<!--[if gte mso 12]><br><![endif]-->
+<a class="link link--img" href="https://link.theskimm.com/click/17321580.5441615/aHR0cDovL3d3dy50aGVza2ltbS5jb20vaW52aXRlL3YyL25ldz9lbWFpbD0lJV9zdWJzY3JpYmVya2V5JSUmdXRtX3NvdXJjZT1lbWFpbCZ1dG1fbWVkaXVtPWludml0ZSZ1dG1fY2FtcGFpZ249YmlydGhkYXk/5d14f55c1708b164416adfccBeb28ef7e" target="_blank" style="display:block;max-width:100%;">
+<img class="img center" width="800" alt="theSkimm" src="https://media-cdn.theskimm.com/dailyskimm/campaigns/birthday/bday_logo.png" style="max-width:100%;padding:0px 0px 50px;mso-padding-alt:0px 0px 50px;">
+</a>
+<h1 class="heading heading--big mb-0" style="font-size:40px;line-height:45px;text-align:center;font-weight:900;Margin:0px;font-family:Montserrat,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;word-break:break-word;color:#00b2a9;">IT'S OUR BIRTHDAYYY</h1>
+<!--[if gte mso 12]><br><![endif]-->
+<p class="copy text-center" style="font-family:-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;Margin-bottom:0px;text-align:center;font-weight:400">
+We're turning 7 tomorrow. Pinch us please.
+</p>
+<!--[if (gte mso 12)]><br clear="all"/><![endif]-->
+<p class="copy text-center" style="font-family:-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;Margin-bottom:0px;text-align:center;font-weight:400">
+We've accomplished a lot in the past 7 years and you've helped make it all possible.
+</p>
+<!--[if (gte mso 12)]><br clear="all"/><![endif]-->
+<p class="copy text-center" style="font-family:-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;Margin-bottom:0px;text-align:center;font-weight:400">
+So grab a glass and let's toast to you...
+</p>
+<!--[if (gte mso 12)]><br clear="all"/><![endif]-->
+</header>
+</div>
+<div role="presentation" class="body" style="max-width:800px;">
+<!-- REPEATED SECTION -->
+<!-- BEGIN RULE -->
+<!--[if (gte mso 12)]><hr style="color:#00b2a9;border-top:0;"/><![endif]--><!--[if (lt mso 12)]><!---->
+<img class="rule" src="https://cdn.theskimm.com/birthday/tealRule.png" alt="" width="100%" height="2" maxwidth="100%" style="max-height:2px;height:2px;width:100%;max-width:100%;display:block;border:0;font-size: 16px">
+<!--<![endif]-->
+<!-- END RULE -->
+<!--[if (gte mso 12)]><br clear="all"/><br clear="all"/><![endif]-->
+<!-- GIF IMAGE -->
+<img class="img center" src="https://media-cdn.theskimm.com/dailyskimm/campaigns/birthday/morning.gif" alt="Morning" style="margin-left:auto;margin-right:auto;min-height:220px;max-width:100%;display:block;border:0;font-size: 16px;Margin-top:30px;">
+<!-- END GIF IMAGE -->
+<h2 class="heading heading--huge" style="color:#ff4e4a;font-family:Montserrat,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:900;font-size:60px;line-height:60px;text-align:center;word-break:break-word;text-transform: uppercase;">
+3
+</h2>
+<h2 class="heading heading--bold" style="font-size:30px;line-height:30px;font-family:Montserrat,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:700;text-align:center;">
+Mornings Spent Together
+</h2>
+<p class="copy" style="padding-bottom:20px;text-align:center;">
+We're proud to share bed head with you. Let's keep this going.
+</p>
+<!--[if (gte mso 12)]><br clear="all"/><![endif]-->
+<!-- END REPEATED SECTION -->
+<!-- REPEATED SECTION -->
+<!-- BEGIN RULE -->
+<!--[if (gte mso 12)]><hr style="color:#00b2a9;border-top:0;"/><![endif]--><!--[if (lt mso 12)]><!---->
+<img class="rule" src="https://cdn.theskimm.com/birthday/tealRule.png" alt="" width="100%" height="2" maxwidth="100%" style="max-height:2px;height:2px;width:100%;max-width:100%;display:block;border:0;font-size: 16px">
+<!--<![endif]-->
+<!-- END RULE -->
+<!--[if (gte mso 12)]><br clear="all"/><br clear="all"/><![endif]-->
+<!-- GIF IMAGE -->
+<img class="img center" src="https://media-cdn.theskimm.com/dailyskimm/campaigns/birthday/calendar.gif" alt="Calendar" style="margin-left:auto;margin-right:auto;min-height:220px;max-width:100%;display:block;border:0;font-size: 16px;Margin-top:30px;">
+<!-- END GIF IMAGE -->
+<h2 class="heading heading--huge" style="color:#ff4e4a;font-family:Montserrat,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:900;font-size:60px;line-height:60px;text-align:center;word-break:break-word;text-transform: uppercase;">
+July
+</h2>
+<h2 class="heading heading--bold" style="font-size:30px;line-height:40px;font-family:Montserrat,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:700;text-align:center;">
+Best Month of the Past Year
+</h2>
+<p class="copy" style="padding-bottom:20px;text-align:center;">
+That month looks really good on you. And we’re not just saying that.
+</p>
+<!--[if (gte mso 12)]><br clear="all"/><![endif]-->
+<!-- END REPEATED SECTION -->
+<!-- BEGIN page break -->
+<!--[if (gte mso 12)]>
+</div>
+<table>
+<tr>
+<td style="font-size:0; height:0; line-height:0;">&nbsp;</td>
+</tr>
+</table>
+<div role="presentation" class="body" style="max-width:800px;Margin:0px auto;">
+<![endif]-->
+<!-- END page break -->
+<!-- REPEATED SECTION -->
+<!-- BEGIN RULE -->
+<!--[if (gte mso 12)]><hr style="color:#00b2a9;border-top:0;"/><![endif]--><!--[if (lt mso 12)]><!---->
+<img class="rule" src="https://cdn.theskimm.com/birthday/tealRule.png" alt="" width="100%" height="2" maxwidth="100%" style="max-height:2px;height:2px;width:100%;max-width:100%;display:block;border:0;font-size: 16px">
+<!--<![endif]-->
+<!-- END RULE -->
+<!-- GIF IMAGE -->
+<img class="img center" src="https://media-cdn.theskimm.com/dailyskimm/campaigns/birthday/number.gif" alt="Skimm’rs Who Voted in 2019" style="margin-left:auto;margin-right:auto;min-height:220px;max-width:100%;display:block;border:0;font-size: 16px;">
+<!-- END GIF IMAGE -->
+<h2 class="heading heading--huge" style="color:#ff4e4a;font-family:Montserrat,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:900;font-size:60px;line-height:60px;text-align:center;word-break:break-word;">
+200,000
+</h2>
+<h2 class="heading heading--bold" style="font-size:30px;line-height:40px;font-family:Montserrat,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:700;text-align:center;">
+Skimm’rs Who Voted in 2018
+</h2>
+<p class="copy" style="padding-bottom:20px;text-align:center;">
+You showed up. You had No Excuses. You made your voice heard. And our community was hundreds of thousands strong at the polls in the 2018 Midterm Elections. 
+</p>
+<!--[if (gte mso 12)]><br clear="all"/><![endif]-->
+<!-- END REPEATED SECTION -->
+<!-- REPEATED SECTION -->
+<!-- BEGIN RULE -->
+<!--[if (gte mso 12)]><hr style="color:#00b2a9;border-top:0;"/><![endif]--><!--[if (lt mso 12)]><!---->
+<img class="rule" src="https://cdn.theskimm.com/birthday/tealRule.png" alt="" width="100%" height="2" maxwidth="100%" style="max-height:2px;height:2px;width:100%;max-width:100%;display:block;border:0;font-size: 16px">
+<!--<![endif]-->
+<!-- END RULE -->
+<!-- GIF IMAGE -->
+<img class="img center" src="https://media-cdn.theskimm.com/dailyskimm/campaigns/birthday/book.gif" alt="Skimm’rs Who Voted in 2019" style="margin-left:auto;margin-right:auto;min-height:220px;max-width:100%;display:block;border:0;font-size: 16px;">
+<!-- END GIF IMAGE -->
+<h2 class="heading heading--huge" style="color:#ff4e4a;font-family:Montserrat,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:900;font-size:60px;line-height:60px;text-align:center;word-break:break-word;">
+15,171
+</h2>
+<h2 class="heading heading--bold" style="font-size:30px;line-height:40px;font-family:Montserrat,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:700;text-align:center;">
+Book Squad
+</h2>
+<p class="copy" style="padding-bottom:20px;text-align:center;">
+So... we released our first book "How to Skimm Your Life." And with the outreach of our incredible book squad we hit #1 on the New York Times Best Seller list. Still. Freaking. Out. We also got to make this thing personal and meet a ton of you on our book tour. Thanks for coming out, we'll never forget it.
+</p>
+<!--[if (gte mso 12)]><br clear="all"/><![endif]-->
+<!-- END REPEATED SECTION -->
+<!-- REPEATED SECTION -->
+<!-- BEGIN RULE -->
+<!--[if (gte mso 12)]><hr style="color:#00b2a9;border-top:0;"/><![endif]--><!--[if (lt mso 12)]><!---->
+<img class="rule" src="https://cdn.theskimm.com/birthday/tealRule.png" alt="" width="100%" height="2" maxwidth="100%" style="max-height:2px;height:2px;width:100%;max-width:100%;display:block;border:0;font-size: 16px">
+<!--<![endif]-->
+<!-- END RULE -->
+<!-- GIF IMAGE -->
+<img class="img center" src="https://media-cdn.theskimm.com/dailyskimm/campaigns/birthday/world.gif" alt="Skimm’r Community" style="margin-left:auto;margin-right:auto;min-height:220px;max-width:100%;display:block;border:0;font-size: 16px;">
+<!-- END GIF IMAGE -->
+<h2 class="heading heading--huge" style="color:#ff4e4a;font-family:Montserrat,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:900;font-size:55px;line-height:60px;text-align:center;word-break:break-word;">
+7,000,000+
+</h2>
+<h2 class="heading heading--bold" style="font-size:30px;line-height:40px;font-family:Montserrat,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:700;text-align:center;">
+Skimm’r Community
+</h2>
+<p class="copy" style="padding-bottom:20px;text-align:center;">
+We started a new section in the newsletter to feature all the impressive things our community does on a daily basis. We've featured Skimm'rs from Mexico to Australia. From Guinness World Record holders to Peace Corps volunteers. You've written and published your first books, run marathons, finished grad school, been promoted, gotten raises, started businesses, and climbed Kilimanjaro. You’ve worked at orgs that provide mental health resources, and that help try to end hunger in the US. You're out there achieving your goals, breaking records, and changing the world.
+</p>
+<!--[if (gte mso 12)]><br clear="all"/><![endif]-->
+<!-- END REPEATED SECTION -->
+<!-- BEGIN RULE -->
+<!--[if (gte mso 12)]><hr style="color:#00b2a9;border-top:0;"/><![endif]--><!--[if (lt mso 12)]><!---->
+<img class="rule" src="https://cdn.theskimm.com/birthday/tealRule.png" alt="" width="100%" height="2" maxwidth="100%" style="max-height:2px;height:2px;width:100%;max-width:100%;display:block;border:0;font-size: 16px">
+<!--<![endif]-->
+<!-- END RULE -->
+<!--[if (gte mso 12)]><br clear="all"/><br clear="all"/><![endif]-->
+<!--[if (gte mso 12)]><br clear="all"/><![endif]-->
+<p class="copy" style="padding-bottom:15px;text-align:center;">
+We're so excited to get to year 7 at theSkimm. And we’re only here because of you. You've let us try (and fail) and try again. This year, we put out a daily podcast, <a href="https://link.theskimm.com/click/17321580.5441615/aHR0cHM6Ly9wb2RjYXN0cy5hcHBsZS5jb20vdXMvcG9kY2FzdC9za2ltbS10aGlzL2lkMTQ1NDAyMTE1NQ/5d14f55c1708b164416adfccB7fda97b8" target="_blank" align="center" style="color:#00b2a9;">Skimm This</a>, and our first-ever book on adulting, <a href="https://link.theskimm.com/click/17321580.5441615/aHR0cHM6Ly90aGVza2ltbS5jb20vYm9vaw/5d14f55c1708b164416adfccB825858ac" target="_blank" align="center" style="color:#00b2a9;"> "How to Skimm Your Life."</a> We talked with you about the importance of voting and how to own your finances. And what excites us, is how much more we still have in store for you.
+</p>
+<p class="copy" style="padding-bottom:15px;text-align:center;">
+To say thanks, we want to give you all the gifts. <strong>Today we’re giving away $3,000. And tomorrow we’re going big and giving away $10,000.</strong> All you need to do is <a href="https://link.theskimm.com/click/17321580.5441615/aHR0cHM6Ly93d3cudGhlc2tpbW0uY29tL2ludml0ZS92Mi9uZXc_ZW1haWw9cHVibGlzaC10aGVza2ltbS5jb21AZW1tYXJlcy5uZXQ/5d14f55c1708b164416adfccBd571e23e" target="_blank" align="center" style="color:#00b2a9;">share the Daily Skimm.</a> Every person you get to sign up each day is an entry to win. Use the link in the button below.
+</p>
+<!--[if (gte mso 12)]><br clear="all"/><![endif]-->
+<br>
+<a href="https://link.theskimm.com/click/17321580.5441615/aHR0cHM6Ly93d3cudGhlc2tpbW0uY29tL2ludml0ZS92Mi9uZXc_ZW1haWw9cHVibGlzaC10aGVza2ltbS5jb21AZW1tYXJlcy5uZXQ/5d14f55c1708b164416adfccCd571e23e" target="_blank" align="center" style="margin-left:auto;margin-right:auto;display:block;text-align:center;text-decoration:none;Margin-bottom:30px;">
+<img class="img center" src="https://media-cdn.theskimm.com/dailyskimm/campaigns/birthday/share_to_win_v2.png" alt="Share to win" width="315" height="auto" maxwidth="100%" style="width:315px;margin-left:auto;margin-right:auto;max-width:100%;border:0;font-size: 16px">
+</a>
+<!--[if (gte mso 12)]><br clear="all"/><br clear="all"/><![endif]-->
+<p class="copy" style="padding-bottom:15px;text-align:center;font-size:12px;">
+Questions?  <a href="https://link.theskimm.com/click/17321580.5441615/aHR0cHM6Ly90aGVza2ltbS5jb20vZ2VuZXJhbC9mcmlkYXktdGVybXMtY29uZGl0aW9ucw/5d14f55c1708b164416adfccBe5b02483" target="_blank" align="center" style="color:#00b2a9;font-size:12px;">Answers.</a>
+</p>
+<!-- BEGIN RULE -->
+<!--[if (gte mso 12)]><hr style="color:#00b2a9;border-top:0;"/><![endif]--><!--[if (lt mso 12)]><!---->
+<img class="rule" src="https://cdn.theskimm.com/birthday/tealRule.png" alt="" width="100%" height="2" maxwidth="100%" style="max-height:2px;height:2px;width:100%;max-width:100%;display:block;border:0;font-size: 16px">
+<!--<![endif]-->
+<!-- END RULE -->
+<img class="img center" src="https://media-cdn.theskimm.com/dailyskimm/campaigns/birthday/thank_you_v2.gif" alt="Thank You!" width="430" height="auto" maxwidth="100%" style="margin-left:auto;margin-right:auto;max-width:100%;display:block;border:0;font-size: 16px;Margin-top:40px;">
+<!-- BEGIN page break -->
+<!--[if (gte mso 12)]>
+</div>
+<table>
+<tr>
+<td style="font-size:0; height:0; line-height:0;">&nbsp;</td>
+</tr>
+</table>
+<div role="presentation" class="body" style="max-width:800px;Margin:0px auto;">
+<![endif]-->
+<!-- END page break -->
+<br clear="all">
+<footer class="footer">
+<p class="copy"><br></p>
+<p class="copy--footer" style="text-align:center">
+Copyright ⓒ July 18, 2019 theSkimm, All rights reserved.
+</p>
+<p class="copy--footer" style="text-align:center">
+Our mailing address is<br>
+theSkimm Inc. <a class="copy--footer" style="padding:0px;text-decoration:none;">50 West 23rd St. Suite 5B<br>
+New York, NY, 10010, United States</a>
+</p>
+<p class="copy copy--footer text-center" style="text-align:center">
+<a class="link" style="color:#00b2a9;text-decoration:none;" href="https://link.theskimm.com/click/17321580.5441615/aHR0cDovL3BhZ2VzLm1vcm5pbmc3LnRoZXNraW1tLmNvbS9wYWdlLmFzcHg_UVM9NDcyNTI5ZWM2MGJkZjMyYTU0MmM4ZDY3NzI5NmU3NjE5YTgzZmE0NjI1YmNkY2E1/5d14f55c1708b164416adfccB8946eadd" target="_blank"> </a>
+</p></footer>
+</div>
+<p><small>If you believe this has been sent to you in error, please safely <a href="https://link.theskimm.com/oc/5d14f55c1708b164416adfccab9f0.38mrz/385c8acf"> </a>.</small></p>
+</body>
+</html>
+<a href="https://link.theskimm.com/click/17321580.5441615/aHR0cDovL3d3dy50aGVza2ltbS5jb20/5d14f55c1708b164416adfccB77b7409f"><img src="https://link.theskimm.com/img/5d14f55c1708b164416adfccab9f0.38mrz/1cc1b962.gif" alt="" border="0"></a>

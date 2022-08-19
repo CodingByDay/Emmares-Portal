@@ -1,0 +1,690 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if gte mso 9]>
+<style id="ol-styles">
+/* OUTLOOK-SPECIFIC STYLES */
+li {
+text-indent: -1em;
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+ul, ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+sup {
+font-size: 85% !important;
+}
+sub {
+font-size: 85% !important;
+}
+</style>
+<![endif]-->
+<style id="template-styles-head" data-premailer="ignore">
+.footer-main-width {
+width: 612px!important;
+max-width: 612px;
+}
+table {
+border-collapse: collapse;
+table-layout: fixed;
+}
+.bgimage {
+table-layout: auto;
+}
+.preheader-container {
+color: transparent;
+display: none;
+font-size: 1px;
+line-height: 1px;
+max-height: 0px;
+max-width: 0px;
+opacity: 0;
+overflow: hidden;
+}
+/* LIST AND p STYLE OVERRIDES */
+.editor-text p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+.editor-text ul,
+.editor-text ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+.editor-text li {
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+/* ==================================================
+CLIENT/BROWSER SPECIFIC OVERRIDES
+================================================== */
+/* IE: correctly scale images with w/h attbs */
+img {
+-ms-interpolation-mode: bicubic;
+}
+/* Text Link Style Reset */
+a {
+text-decoration: underline;
+}
+/* iOS: Autolink styles inherited */
+a[x-apple-data-detectors] {
+text-decoration: underline !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+color: inherit !important;
+}
+/* FF/Chrome: Smooth font rendering */
+.editor-text, .MainTextFullWidth {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+/* Gmail/Web viewport fix */
+u + .body .template-body {
+width: 612px;
+}
+@media only screen and (max-width:480px) {
+u + .body .template-body {
+width: 100% !important;
+}
+}
+/* Office365/Outlook.com image reset */
+[office365] button, [office365] .divider-base div, [office365] .spacer-base div, [office365] .editor-image div { display: block !important; }
+</style>
+<style>@media only screen and (max-width:480px) {
+table {
+border-collapse: collapse;
+}
+.main-width {
+width: 100% !important;
+}
+.mobile-hidden {
+display: none !important;
+}
+td.OneColumnMobile {
+display: block !important;
+}
+.OneColumnMobile {
+width: 100% !important;
+}
+td.editor-col .editor-text {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-button-container {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-social td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .block-margin {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col td.block-margin .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.editor-button td > table tr > td {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-button td > table tr > td td {
+padding: 9px 15px 10px 15px !important;
+}
+.layout {
+padding: 15px 9px 15px 9px !important;
+}
+.layout-container-border {
+padding: 1px 1px 1px 1px !important;
+}
+.layout-container {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-image img {
+width: auto !important; margin-left: auto !important; margin-right: auto !important;
+}
+.editor-image .image-cell {
+padding-bottom: 15px !important;
+}
+.editor-text {
+font-size: 16px !important;
+}
+.editor-divider {
+padding: 10px 0px 10px 0px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.editor-spacer td.spacer-height {
+padding-bottom: 9px !important;
+}
+.section-headline-text {
+font-size: 24px !important;
+}
+.headline-text {
+font-size: 24px !important;
+}
+.subheadline-text {
+font-size: 20px !important;
+}
+.feature {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.layout-outer {
+padding: 0px 20px !important;
+}
+.feature-heading-text {
+font-size: 20px !important;
+}
+.feature-text {
+font-size: 16px !important;
+}
+.split.editor-col {
+margin-top: 0px !important;
+}
+.split.editor-col ~ .split.editor-col {
+margin-top: 10px !important;
+}
+.split-layout-margin {
+padding: 0px 20px !important;
+}
+.article {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.article-heading-text {
+font-size: 20px !important;
+}
+.article-text {
+font-size: 16px !important;
+}
+.social-container {
+text-align: center !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.cpn-heading-text {
+font-size: 28px !important;
+}
+.editor-cpn-heading-text {
+font-size: 28px !important;
+}
+td.col-divided .editor-col {
+border-right: 0px solid #FFFFFF !important; border-bottom: 1px solid #FFFFFF !important;
+}
+td.col-divided td.editor-col:last-of-type {
+border-bottom: 0 !important;
+}
+.col-divided {
+padding: 0 20px !important;
+}
+td.col-divided .editor-col .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.col-divided .editor-col .block-margin {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.action-block .poll-answer {
+width: 100% !important; display: block !important;
+}
+.action-block .poll-button {
+width: 100% !important;
+}
+div.MobileFooter {
+font-size: 11px !important;
+}
+td.FooterMobile {
+padding: 0px 10px 0px 10px !important;
+}
+td.MainCenter {
+width: 100% !important;
+}
+table.MainSide {
+display: none !important;
+}
+img.MainSide {
+display: none !important;
+}
+td.MainSide {
+display: none !important;
+}
+.rsvp-button-inner {
+padding: 0px 0px 10px 0px !important;
+}
+.rsvp-button-outer {
+width: 100% !important; max-width: 100% !important;
+}
+.footer-main-width {
+width: 100% !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-column {
+display: block !important;
+}
+.footer-mobile-stack {
+display: block !important;
+}
+.footer-mobile-stack-padding {
+padding-top: 3px;
+}
+}
+@media only screen and (max-width:320px) {
+.layout {
+padding: 0px 0px 0px 0px !important;
+}
+}
+@media screen {
+@font-face {
+font-family: 'Roboto'; font-style: normal; font-weight: 400; src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+}
+</style>
+</head>
+<body class="body" align="center" style="width: 100%; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #E2E1E6; margin: 0px; padding: 0px;" bgcolor="#E2E1E6">
+<table class="template-body" border="0" cellpadding="0" cellspacing="0" style="text-align: center; min-width: 100%;" width="100%">
+<tr>
+<td class="preheader-container">
+<div>
+<div id="preheader" style="display: none; font-size: 1px; color: transparent; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+<span data-entity-ref="preheader"></span>
+</div>
+<img src="http://r20.rs6.net/on.jsp?ca=bf78e16d-181a-4c35-b565-7e689fae4ca7&a=1103629101749&c=02e35956-d6fd-11e9-b48b-d4ae5292c4bc&ch=02e491e0-d6fd-11e9-b48b-d4ae5292c4bc" alt="">
+</div>
+</td>
+</tr>
+<tr>
+<td class="template-shell-container" align="center">
+<div class="bgcolor" style="background-color: #E2E1E6;">
+<table class="bgimage" width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #E2E1E6;" bgcolor="#E2E1E6">
+<tbody>
+<tr>
+<td align="center">
+<table class="main-width" width="612" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 612px;">
+<tbody>
+<tr>
+<td class="layout" align="center" valign="top" style="padding: 15px 5px;">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="layout-container-border" align="center" valign="top" style="background-color: #FFFFFF; padding: 1px;" bgcolor="#FFFFFF">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF;" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td class="layout-container" align="center" valign="top" style="background-color: #FFFFFF; padding: 0px;" bgcolor="#FFFFFF">
+<div class="">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image editor-image" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="publish-container">  <img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="600" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/24b406cf-cdf1-44a0-a34f-d1797f74f0e9.png">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image editor-image  editor-image-vspace-on" style="min-width: 100%;" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 10px; padding-bottom: 10px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=001JQtHzAFxpAV5IPBv15v3MxMZ0DkVJaQWXCN0qVGOJwlZ7Yg_887Dmdqu_9veRRUVXiY1m3YxR95h-ww5UKuTRmgfF3g1k1XsuBswUZH7CG2HLkkM9WDqDUhN3X-IregzIxDsJ28bYJCJPfeoX7aepYlskJ2Z1Qztxv0hRBC8-gKzMq8lW3PKogAynUjUvwYHwJUqvh6LWauCYd2oL5NBf3_sYK0p5CEzOD7tYeHGBiJW7iXmRHMZfc1vhqJIESArWoFrQ0dQqZTVotvXgOPkJnRPgIJ4dPa3NUAGrcpUcPc7nncsqp5HBA==&c=gccAmuEECW-tI05aFqjeA7ohYlpyjeImEnrtm11H-OFaS88xhxrNWg==&ch=oepsQLpHQjqLfRtEUjuHZugWYOF7GTs1LjOW6myfd5KWw9Zj6CHP8g==">
+<img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="576" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/4e216804-07bb-446b-93fc-6f6c5395428a.png">
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-text">
+<table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text editor-text " align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Big&#xa0;Apple&#xa0;Film Festival, a proud partner of MovieMaker Magazine, presents a</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">2-day&#xa0;virtual summit with top agents and managers for writers and filmmakers currently seeking representation. The event takes place APRIL 21-22.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">The purpose of this informational summit is to provide insight and strategies for acquiring representation.&#xa0;Questions will be taken in advance and pre-selected, and</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">loglines/synopses of all participant's projects will be requested in</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">advance and forwarded to our speakers.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">15% discount on All-Access Passes available until APRIL 20th with code: MovieMakerPartnerEvent2021</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">PARTICIPATING AGENTS AND MANAGERS:</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">ADAM HARRIS (Agent, William Morris Agency)</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Adam Harris is an agent in WME's TV department based out of Los Angeles, where he has worked since 2013.&#xa0;&#xa0;He represents talent, production companies and filmmakers, primarily by packaging and selling TV shows and documentaries. Adam specializes in working with strong diverse voices both in front of and behind the camera, and is passionate about telling stories that can lead to change and amplify messages from different</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">perspectives.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">ROY ASHTON (Partner, The Gersh Agency)</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Roy Ashton is the Head of the TV Literary &amp; Packaging Dept. at The Gersh Agency, with offices in Los Angeles and New York. Prior to joining Gersh as Partner, Ashton spent 13 years at Creative Artists Agency. He functions in all areas of television, helping clients sell and package television projects at the major networks, major cable, and premium cable outlets.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Clients include showrunners, writers, production companies, directors,</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">distributors, authors, and actors from all over the globe.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">RIMA GREER (President, Above the Line Agency)</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Rima Greer is president of Above the Line Agency. Based in Beverly Hills, Above the Line Agency represents writers, directors and actors. She began her career at the Writers Guild of America, William Morris Agency and Writers &amp; Artists Agency. Rima has worked as a Hollywood agent for over 35 years. Ms. Greer has also been involved in over 70 produced films and episodes, including studio projects like JUMANJI, CHARLIE'S ANGELS, BACKDRAFT and CONSTANTINE.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">KATHY MURAVIOV (President, The Muraviov Company)</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Kathy Muraviov is president of The Muraviov Company. Prior to launching her management company, Kathy Muraviov spent over 20 years as Script Services manager at NBC Universal Studios.&#xa0;&#xa0;In January, 2004, Kathy left Universal to start her own business of managing screenwriters. Her roster of screenwriters currently have a handful of options in place (she had 6 projects optioned in March alone), and maintains an extraordinary roster of clients from all over the U.S., Canada, the UK, and Australia.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">RJ MILLARD (President, Obscured Pictures)</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">R.J. Millard is a sales agent, and president of Obscured Pictures, as well as the former VP of Publicity at Focus Features, SVP Marketing and Publicity at Samuel Goldwyn Films/Roadside Attractions/IDP Distribution and Press Officer, New Media Development at the Sundance Film Festival. With over 20 years of experience in the industry, his work includes working with filmmakers and producers on securing distribution deals, representing filmmakers at domestic and international film markets, and film festival strategies. RJ's clients have included Bleecker Street Films, Amazon Studios, Focus Features, IMAX, Roadside Attractions, A24, IFC Films, Broad Green Pictures and more. RJ has run awards campaigns for multiple Academy Award nominated films, as well as numerous Golden Globe and Film Independent Spirit Award nominated films.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">PETER BRODERICK (President, Paradigm Consulting)</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Peter Broderick is one of the world's leading Distribution Strategists. He spearheads the distribution of exceptional documentary films and has consulted on over 1400 films around the world. As President of Paradigm Consulting, he helps filmmakers and media companies maximize distribution, audiences, and revenues. Peter was President of Next Wave Films, which supplied finishing funds and other support to filmmakers from the US and abroad, helping to launch the careers of outstanding directors including Christopher Nolan and Amir Bar-Lev. Now focused on the revolution in film distribution, Peter gives keynotes and presentations internationally including at Cannes, Sundance, Toronto and IDFA.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Peter's producing credits include: "Following", directed by Academy Award nominee Christopher Nolan, "Blood, Guts, Bullets and Octane" directed by Film Independent Spirit Award nominee Joe Carnahan, "Manic" starring Golden Globe nominees Joseph Gordon-Levitt and Zooey Deschanel, "Killing for Love" distributed by Sundance Selects, "Prodigal Sons", released theatrically by First Run Features, and more</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">LILLIAN LASALLE (President, Sweet 180 Management)</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Lillian LaSalle is president of New York based Sweet 180 Management, representing directors, showrunners, producers, and screenwriters, playwrights and actors. In addition to managing talent, she is also an accomplished producer. Lillian is the recipient of the 2016 Peabody "Futures of Media" Award for Producing. She has produced feature films</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">including Loggerheads, which premiered in competition at The Sundance Film Festival and Sweet Land, which won the Independent Spirit Award for Best First Feature for writer/director Ali Selim.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">SARA ALEXANDER (President, Alexander Creatives)</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Sara Alexander is the owner of Alexander Creatives, a New York based management company representing artists for film, television, commercials, branded entertainment and new media. Alexander Creatives represents Directors, Producers, Writers, as well as DPs, Production Designers, Costume Designers, Editors and 1st ADs.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Literary content representation includes screenplays, books to film, and television series.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">MICHAEL KLEIN (Manager/Producer, Magnolia Entertainment)</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Michael Klein is a literary manager and producer who recently joined Magnolia Entertainment. Before joining, he operated his own management/production company for over a decade. He manages filmmakers&#xa0;from across the globe who work in both film and television. Clients have written and directed for Netflix, Amazon, Hulu, Disney, Apple, Blumhouse, Sony, Fox, Warner Brothers, Paramount, Universal, Lionsgate, to name a few. He's excited to be working with Magnolia Entertainment, who represent an esteemed roster of talent, including Rosamund Pike, Rachel McAdams, Dev Patel, and Daniel Espinosa.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">LEE STOBBY (Founder, Stobby Entertainment)</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">Lee Stobby is a literary manager, producer and principal of Lee Stobby Entertainment who has over 10 years of management and producing experience.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">&#xa0;&#xa0;&#xa0;&#xa0;</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 12px; color: rgb(14, 14, 14); font-family: Roboto, sans-serif;">His clients have written for numerous feature film projects and series, including JOHN WICK: CHAPTER 3 and currently JOHN WICK 4, Netflix's STRANGER THINGS and ARMY OF THE DEAD, the CW's LEGACIES, as well as clients who have sold scripts to Lionsgate, CW and more.</span></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-button">
+<table class="editor-button" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; min-width: 100%;">
+<tbody>
+<tr>
+<td class="editor-button-container editor-button-container " style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: normal; color: #FFFFFF; text-decoration: none; padding: 10px 20px;">
+<table class="galileo-ap-content-editor" style="width: 100%; min-width: 100%;">
+<tbody>
+<tr>
+<td align="center" valign="top" class="MainTextFullWidthTD" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: normal; color: #FFFFFF; text-decoration: none; padding: 0px;">
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: rgb(0, 49, 247); width: initial; moz-border-radius: 5px; border-radius: 5px; border-spacing: 0; min-width: initial; padding: 0; border: none;" bgcolor="0031F7">
+<tbody>
+<tr>
+<td align="center" valign="top" class="MainTextFullWidthTD" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; font-weight: normal; color: #FFFFFF; text-decoration: none; padding: 9px 15px 10px;">
+<div>
+<div class="MainTextFullWidth"><a href="http://r20.rs6.net/tn.jsp?f=001JQtHzAFxpAV5IPBv15v3MxMZ0DkVJaQWXCN0qVGOJwlZ7Yg_887Dmdqu_9veRRUVXiY1m3YxR95h-ww5UKuTRmgfF3g1k1XsuBswUZH7CG2HLkkM9WDqDUhN3X-IregzIxDsJ28bYJCJPfeoX7aepYlskJ2Z1Qztxv0hRBC8-gKzMq8lW3PKogAynUjUvwYHwJUqvh6LWauCYd2oL5NBf3_sYK0p5CEzOD7tYeHGBiJW7iXmRHMZfc1vhqJIESArWoFrQ0dQqZTVotvXgOPkJnRPgIJ4dPa3NUAGrcpUcPc7nncsqp5HBA==&c=gccAmuEECW-tI05aFqjeA7ohYlpyjeImEnrtm11H-OFaS88xhxrNWg==&ch=oepsQLpHQjqLfRtEUjuHZugWYOF7GTs1LjOW6myfd5KWw9Zj6CHP8g==" style="font-weight: bold; font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; color: #FFFFFF; text-decoration: none;">REGISTER</a></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="65%" align="" valign="top">
+<div><div class="column-resize-bar">
+<span class="line"></span>
+<span class="grabber"></span>
+</div></div>
+<div class="gl-contains-text">
+<table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text editor-text " align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 10px 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div><span style="color: rgb(26, 25, 26); font-family: Roboto, sans-serif;">Share on Social</span></div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="gl-contains-social-button">
+<table class="editor-social" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; min-width: 100%;">
+<tbody>
+<tr>
+<td class=" social-container" align="left" style="padding: 0px 10px 10px 20px;">
+<div class="galileo-ap-content-editor" style="">
+<a href="http://r20.rs6.net/tn.jsp?f=001JQtHzAFxpAV5IPBv15v3MxMZ0DkVJaQWXCN0qVGOJwlZ7Yg_887Dmdqu_9veRRUVLPQWrF17SYpV2pN4gyvTqQwKPoZ7PksvMYCkbPksdIO0FLnJWKT46rASnj2Ck3q2GN6itcfeh36uoYpWKT7maUWqU9-F16Q7lmAuHPC3KWI9vNYuCmZxMO3R_QqwoI3ClStQNUYpX9Xj-pLaW_UZe5ltGungPHwglCqLG1KTidxe8OPmTgB9lIzoIan-AwqNmbofdwBk0Zn53d3eYbxlpjUiLpaMDGCfiGU3vsGA_wa876QKDW4pkQ==&c=gccAmuEECW-tI05aFqjeA7ohYlpyjeImEnrtm11H-OFaS88xhxrNWg==&ch=oepsQLpHQjqLfRtEUjuHZugWYOF7GTs1LjOW6myfd5KWw9Zj6CHP8g==" style="display: inline-block; text-decoration: none;">
+<img alt="Facebook" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/facebook-visit-default-circle.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=001JQtHzAFxpAV5IPBv15v3MxMZ0DkVJaQWXCN0qVGOJwlZ7Yg_887Dmdqu_9veRRUVYiS1Zf8pwjW7BTPmFEQuOA0tzPjMRXDDwbVkCogSuXqAg12XjKPerCNBORMIdIonEwNJrkzcfZkLSNVPffKr90x1xegCVSS7oTbBAA2js-JU-Da_Rm_NHvw41_FExRmrGhlssDZhnGoXhqmZkMj1RivdtMYrDeyH6LareFUMiMuPD0_6U5LEUj-czOU7vuFAzsIn35Qd9ptnDKfWOtC3p80QWDtAiavaTngFrG-kU6Y=&c=gccAmuEECW-tI05aFqjeA7ohYlpyjeImEnrtm11H-OFaS88xhxrNWg==&ch=oepsQLpHQjqLfRtEUjuHZugWYOF7GTs1LjOW6myfd5KWw9Zj6CHP8g==" style="display: inline-block; text-decoration: none;">
+<img alt="Twitter" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/twitter-visit-default-circle.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class=" editor-col OneColumnMobile" width="35%" align="" valign="top">
+<div class="gl-contains-text">
+<table width="100%" style="min-width: 100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text " align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px 10px 10px;">
+<div><table class="editor-image OneColumnMobile" style="mso-table-rspace: 5.75pt;" align="right" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="mobile-hidden" width="15" height="1" align="center" valign="top" style="height: 1px; line-height: 1px; padding: 0px;">
+<img alt="" width="15" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: auto; max-width: 100%;">
+</td>
+<td class="image-cell " align="center" valign="top" style="padding: 0px;">
+<div class="publish-container">
+<a href="http://r20.rs6.net/tn.jsp?f=001JQtHzAFxpAV5IPBv15v3MxMZ0DkVJaQWXCN0qVGOJwlZ7Yg_887Dmdqu_9veRRUV0zn2XSbogoXbh38PJGAqS2wUuuywXbgkCI04bo3LhrPOlXCJ4uvfY8pr-nUZFBVHjYmD3m5VTHFBc5gUClBHPnIdCdVzz8_jrNEL9vT0iNzrcRK6D4BSeWzeCUmJHChifvkbWk3TtKSIJTSU1Ii9U2es9H_Ptb3XmU0f6borU2z6krjlPC3OrQ8oiC0v7r3cplaP1kmZFSSdyX0Xx4JH4b7dlIbdKV56&c=gccAmuEECW-tI05aFqjeA7ohYlpyjeImEnrtm11H-OFaS88xhxrNWg==&ch=oepsQLpHQjqLfRtEUjuHZugWYOF7GTs1LjOW6myfd5KWw9Zj6CHP8g==" style="color: #0403F4; font-weight: normal; font-style: normal; text-decoration: underline;">
+<img alt="" class="" style="display: block; height: auto !important; max-width: 100% !important;" width="32" border="0" hspace="0" vspace="0" src="https://files.constantcontact.com/5baab65f001/5e063faa-ca81-4c7e-aa1c-cea3af512a42.jpg">
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="mobile-hidden" width="5" height="5" align="center" valign="top" style="height: 1px; line-height: 1px; padding: 0px;">
+<img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: auto; max-width: 100%;">
+</td>
+<td class="mobile-hidden" height="5" align="center" valign="top" style="height: 5px; line-height: 1px; padding: 0px;">
+<img alt="" width="1" height="5" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: auto; max-width: 100%;">
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="text-container galileo-ap-content-editor"><div><div><a href="http://r20.rs6.net/tn.jsp?f=001JQtHzAFxpAV5IPBv15v3MxMZ0DkVJaQWXCN0qVGOJwlZ7Yg_887Dmdqu_9veRRUV0zn2XSbogoXbh38PJGAqS2wUuuywXbgkCI04bo3LhrPOlXCJ4uvfY8pr-nUZFBVHjYmD3m5VTHFBc5gUClBHPnIdCdVzz8_jrNEL9vT0iNzrcRK6D4BSeWzeCUmJHChifvkbWk3TtKSIJTSU1Ii9U2es9H_Ptb3XmU0f6borU2z6krjlPC3OrQ8oiC0v7r3cplaP1kmZFSSdyX0Xx4JH4b7dlIbdKV56&c=gccAmuEECW-tI05aFqjeA7ohYlpyjeImEnrtm11H-OFaS88xhxrNWg==&ch=oepsQLpHQjqLfRtEUjuHZugWYOF7GTs1LjOW6myfd5KWw9Zj6CHP8g==" rel="noopener noreferrer" target="_blank" style="color: rgb(0, 0, 0); text-decoration: underline; font-family: Roboto, sans-serif; font-weight: normal; font-style: normal;">bigapplefilmfestival.com</a></div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<table class="footer-container" width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff; margin-left: auto; margin-right: auto; table-layout: auto !important" bgcolor="#ffffff">
+  <tr>
+    <td width="100%" align="center" valign="top" style="width: 100%;">
+      <div class="footer-max-main-width" align="center" style="margin-left: auto; margin-right: auto; max-width: 100%;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="footer-layout" align="center" valign="top" style="padding: 16px 0px;">
+              <table class="footer-main-width" style="width: 580px;" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                    
+                    <span class="footer-column">MovieMaker Magazine<span class="footer-mobile-hidden"> | </span></span><span class="footer-column">P.O. Box 91565<span class="footer-mobile-hidden">, </span></span><span class="footer-column"></span><span class="footer-column"></span><span class="footer-column">Long Beach, CA 90809</span><span class="footer-column"></span>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-row" align="center" valign="top" style="padding: 10px 0px;">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          <a href="https://visitor.constantcontact.com/do?p=un&m=0014I3m3feNbThrdAdxd9WN3Q%3D&ch=02e491e0-d6fd-11e9-b48b-d4ae5292c4bc&ca=bf78e16d-181a-4c35-b565-7e689fae4ca7" style="color: #5d5d5d"> </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          <a href="https://visitor.constantcontact.com/do?p=oo&m=0014I3m3feNbThrdAdxd9WN3Q%3D&ch=02e491e0-d6fd-11e9-b48b-d4ae5292c4bc&ca=bf78e16d-181a-4c35-b565-7e689fae4ca7" style="color: #5d5d5d">Update Profile</a> |
+                          
+                          <a class="footer-about-provider" href="https://www.constantcontact.com/legal/customer-contact-data-notice" style="color: #5d5d5d">Customer Contact Data Notice</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          Sent by
+                          
+                          <a href="mailto:newsletter@moviemaker.com" style="color: #5d5d5d; text-decoration: none">newsletter@moviemaker.com</a>
+                          
+
+                          
+                          
+                          <span class="footer-column">powered by</span>
+                          
+                          
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                    
+                    
+                    <a href="http://www.constantcontact.com/index.jsp?cc=nge&rmc=VF19_3GE" style="color: #5d5d5d; text-decoration: none">
+                    <img alt="Trusted Email from Constant Contact - Try it FREE today." width="160" border="0" hspace="0" vspace="0" src="https://static.ctctcdn.com/letters/images/CTCTFooter/Logo_Blue_Orange.png">
+                    </a>
+                    <div class="footer-cta-text" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 9px; line-height: 2">
+                    <a href="http://www.constantcontact.com/index.jsp?cc=nge&rmc=VF19_3GE" style="color: #5d5d5d; text-decoration: none">Try email marketing for free today!</a>
+                    </div>
+                    
+                    
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table></body>
+</html>

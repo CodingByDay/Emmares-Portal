@@ -1,0 +1,1231 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!--[if gte mso 9]><xml>
+  <o:OfficeDocumentSettings>
+  <o:AllowPNG></o:AllowPNG>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+  </xml><![endif]--><!--[if gt mso 15]>
+  <style type="text/css" media="all">
+  /* Outlook 2016 Height Fix */
+  table, tr, td {border-collapse: collapse;}
+  tr { font-size:0px; line-height:0px; border-collapse: collapse; }
+  </style>
+  <![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="date=no">
+<meta name="format-detection" content="telephone=no">
+<title>Dense Discovery – Issue 63</title>
+<style media="screen" type="text/css">
+
+
+  /* ------------ REMOVE START ---------------- */
+
+
+  body {
+    margin: 0;
+    padding: 0;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+
+  table {
+    border-spacing: 0;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+  }
+
+  table td {
+    border-collapse: collapse;
+  }
+
+
+  h1 {
+    mso-line-height-rule:exactly;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 23px;
+    color: #000000;
+    margin:0;
+    padding: 0;
+  }
+
+  h2 {
+    mso-line-height-rule:exactly;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 600;
+    color: #000000;
+    margin:0;
+    padding: 0 0 15px 0;
+  }
+
+  h3, h3 a {
+    mso-line-height-rule:exactly;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 400;
+    color: #707070 !important;
+    margin:0;
+    padding: 0 0 5px 0;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 400;
+    color: #000000;
+    padding: 0;
+    Margin: 0;
+    Margin-bottom: 15px;
+  }
+
+  b, strong {
+    font-weight: 600;
+  }
+
+  a, a:link, a:visited {
+    color: #000000 !important;
+    text-decoration: underline;
+  }
+
+  a.h1byline {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: 400;
+    float: right;
+    text-decoration: none;
+  }
+
+  a.btn {
+    display: inline-block;
+    padding: 3px 8px;
+    text-decoration: none !important;
+    text-align: center;
+  }
+
+  a.btn-grey {
+    background: #afafaf;
+    color: #ffffff !important;
+  }
+
+  a.btn-black {
+    background: #000000;
+    color: #ffffff !important;
+  }
+
+  .grey, a.grey  {
+    color: #707070 !important;
+  }
+
+  .small {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .large {
+    font-size: 21px;
+    line-height: 30px;
+  }
+
+  .img {
+    display:block;
+    max-height:900px;
+    max-width:416px;
+    width:100%;
+  }
+
+  .img-line {
+    margin-bottom: 2px;
+  }
+
+  .box-red {background:#efe2f3;}
+  .box-red h3, .box-red h3 a, .box-red .grey, .box-red .grey a {color: #837089 !important}
+
+  .box-yellow {background:#f8eccf}
+  .box-yellow .h1byline, .box-yellow h3, .box-yellow h3 a {color: #6d6b57 !important}
+
+  /* TABLE FORMATTING */
+
+  .header, .body, .footer {
+    width: 640px;
+    max-width: 640px;
+  }
+
+  .header {
+    padding-top: 20px;
+  }
+
+
+  .footer-logo-top {
+    padding-top: 30px;
+  }
+
+  .tighten {
+    font-size: 1px;
+    line-height: 1px;
+  }
+
+  .line {
+    border-bottom: 2px solid #efefef;
+    display: block;
+    height: 2px;
+    margin-bottom: 15px;
+  }
+
+  .box-yellow .line {
+    border-bottom: 2px solid #e3d9c2;
+    margin-bottom: 5px;
+  }
+
+  .padt25 {padding-top: 25px}
+  .padt20 {padding-top: 20px}
+  .padt15 {padding-top: 15px}
+  .padt10 {padding-top: 10px}
+  .padt5 {padding-top: 5px}
+
+  .padr20 {padding-right: 20px}
+  .padr10 {padding-right: 10px}
+
+  .padb20 {padding-bottom: 20px}
+  .padb15 {padding-bottom: 15px}
+  .padb10 {padding-bottom: 10px}
+  .padb5 {padding-bottom: 5px}
+  .padb0 {padding-bottom: 0}
+
+  .marb0 {Margin-bottom: 0}
+  .marb5 {Margin-bottom: 5px}
+  .marb10 {Margin-bottom: 10px}
+
+  .padl20 {padding-left: 20px}
+  .padl10 {padding-left: 10px}
+
+  .headline {
+    border-bottom: 2px solid #FFFFFF;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+  }
+
+  .spacer {
+    font-size: 1px;
+    line-height: 1;
+    padding-top: 25px;
+  }
+
+  .share {
+    border: 1px dashed #5f5f5f;
+    background: #f8f8f8;
+    text-align: center;
+    padding: 15px 5px;
+  }
+
+  .browser {
+    text-align: right;
+  }
+
+  /* ------------ REMOVE END ---------------- */
+
+
+
+
+  @media screen and (max-width:599px) {
+
+    .force-row, .container, .header, .body, .footer  {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    .padl20 {padding-left: 12px !important}
+    .padr20 {padding-right: 12px !important}
+    .padl10 {padding-left: 12px !important}
+    .padr10 {padding-right: 12px !important}
+
+    .padt20 {padding-top: 12px !important}
+
+    .mobt0 {padding-top: 0 !important}
+    .mobb15 {margin-bottom: 15px !important}
+
+
+    .headline {
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+
+    .large, h1 {
+      font-size: 19px !important;
+      line-height: 27px !important;
+    }
+
+    .spacer {padding-top: 15px !important;}
+
+    .browser {display: none !important;}
+
+    .align-left {text-align: left}
+
+    a.h1byline {
+      line-height: 12px !important;
+      padding-top: 8px;
+      font-size: 10px !important;
+    }
+
+  }
+
+  </style>
+<!--[if mso]>
+  <style type="text/css">
+  body, table, td, h1, h2, h3, p {font-family: Arial, sans-serif !important;}
+  </style>
+  <![endif]--><style media="screen" type="text/css">
+
+  .ios-footer a {
+    color: #aaaaaa !important;
+    text-decoration: underline;
+  }
+
+
+  .yshortcuts a {
+    border-bottom: none !important;
+  }
+
+  .ExternalClass {
+    width: 100%;
+  }
+
+  .ExternalClass,
+  .ExternalClass p,
+  .ExternalClass span,
+  .ExternalClass font,
+  .ExternalClass td,
+  .ExternalClass div {
+    line-height: 100%;
+  }
+
+  .ReadMsgBody {
+    width: 100%;
+    background-color: #ebebeb;
+  }
+
+  img {
+    -ms-interpolation-mode: bicubic;
+  }
+
+  a[href^="x-apple-data-detectors:"],
+  a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+
+  </style>
+</head>
+<body bgcolor="#FFFFFF" style="margin: 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+
+
+
+
+
+
+  <!-- HEADER -->
+  <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="100%"><tbody><tr><td align="center" bgcolor="#ffd024" style="border-collapse: collapse;" valign="top">
+
+
+        <!-- 600px container -->
+        <table border="0" cellpadding="0" cellspacing="0" class="header mobt0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 640px;max-width: 640px;padding-top: 20px;" width="640"><tbody>
+<tr><td align="left" style="border-collapse: collapse;">
+
+            <!--[if mso]>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr><td width="35%" valign="top"><![endif]-->
+
+            <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padb5 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-bottom: 5px;padding-left: 20px;" valign="top">
+
+                  <p class="marb5" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 5px;">
+                    Ideas do not have to be correct in order to be good; it’s only necessary that, if they do fail, they do so in an interesting way.
+                  </p>
+
+                  <p class="marb0" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 0;">
+                    <b style="font-weight: 600;">– Robert Rosen</b>
+                  </p>
+
+                </td></tr></tbody></table>
+
+            <!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+            <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td align="right" class="padt20 padr20 padb5 padl10" style="border-collapse: collapse;padding-top: 20px;padding-right: 20px;padding-bottom: 5px;padding-left: 10px;" valign="top">
+
+                  <p class="marb5" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 5px;">
+                    <img src="https://www.densediscovery.com/archive/63/head.jpg" alt="❏" width="386" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+                  </p>
+
+                  <p class="marb0 mobb15 align-left" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 0;">
+                    Featured illustrator: <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/74dffe02-c407-4c8d-af65-74a7eee12f91/event" style="text-decoration: underline;color: #000000 !important;">Muhammed Sajid</a>
+                  </p>
+
+
+                </td></tr></tbody></table>
+
+            <!--[if mso]></td></tr></table><![endif]-->
+
+            </td></tr>
+
+
+          <tr><td align="left" class="tighten" style="border-collapse: collapse;font-size: 1px;line-height: 1px;" valign="bottom"><a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/e03dd6c2-cd9f-4de2-9744-dd9e001889ba/event" style="text-decoration: underline;color: #000000 !important;"><img src="https://www.densediscovery.com/archive/logo-top.png" height="auto" width="163" alt="Dense Discovery" style="float: left;display: block;-ms-interpolation-mode: bicubic;"></a></td></tr>
+</tbody></table>
+
+
+
+      </td></tr></tbody></table>
+
+
+
+
+
+
+
+
+  <!-- BODY-->
+  <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="100%"><tbody><tr><td align="center" bgcolor="#FFFFFF" style="background-color: #FFFFFF;border-collapse: collapse;" valign="top">
+
+
+
+        <!-- 600px container (white background) -->
+        <table border="0" cellpadding="0" cellspacing="0" class="body" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 640px;max-width: 640px;" width="640"><tbody>
+<tr><td align="left" class="tighten" style="border-collapse: collapse;font-size: 1px;line-height: 1px;" valign="top"><a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/e03dd6c2-cd9f-4de2-9744-dd9e001889ba/event" style="text-decoration: underline;color: #000000 !important;"><img src="https://www.densediscovery.com/archive/logo-bottom.png" height="auto" width="163" alt="Dense Discovery" style="display: block;-ms-interpolation-mode: bicubic;"></a></td></tr>
+
+          <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+
+
+          <!-- INTRO Start -->
+          <tr><td align="left" style="border-collapse: collapse;">
+
+            <!--[if mso]>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr><td width="50%" valign="top"><![endif]-->
+
+            <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                  <h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">
+                    Welcome to Issue 63!
+                  </h1>
+
+                </td></tr></tbody></table>
+
+            <!--[if mso]></td><td width="50%" valign="top" class="browser"><![endif]-->
+
+            <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row browser" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;text-align: right;" width="320"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                  <p class="small grey" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #707070 !important;padding: 0;margin: 0;margin-bottom: 15px;"><a class="grey" href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/ad4052d4-620d-4947-9c2e-2630e3227a10/event" style="text-decoration: underline;color: #707070 !important;">View/share online</a> →</p>
+
+                </td></tr></tbody></table>
+
+            <!--[if mso]></td></tr></table><![endif]-->
+
+            </td></tr>
+
+
+          <tr><td align="left" class="padt20 padl20 padr20 padb10" style="border-collapse: collapse;padding-top: 20px;padding-right: 20px;padding-bottom: 10px;padding-left: 20px;">
+
+              <p class="large" style="font-size: 21px;line-height: 30px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+
+              Keeping my notes short this week as I’m knee-deep in Indesign, preparing the next issue of Offscreen for print. If you’re a subscriber, look out for an email from Offscreen confirming the charge for the next issue or reminding you to update your payment details. Please also make sure your shipping address is up to date! (If you are not subscribed to Offscreen yet, <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/31085228-6d07-43c1-884f-53d14c688388/event" style="text-decoration: underline;color: #000000 !important;"> </a>.) <br><br>I’m hoping to kick off the printing on December 2nd, with a mid December release/shipping date. Unfortunately, that’s a little later than I had hoped and means not everyone will receive their copy before Christmas. But that’s the nature of publishing and juggling the many loose ends as a tiny one-person team. Now back to wrestling <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/91a4c236-5a69-46ed-8045-1fc36014cece/event" style="text-decoration: underline;color: #000000 !important;">rags, widows and orphans</a> in Indesign...
+
+
+                – <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/caceee26-aab0-4b14-9f37-885858acd8be/event" style="text-decoration: underline;color: #000000 !important;">Kai</a>
+
+
+
+
+
+              </p>
+
+              <p class="small grey padt20" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #707070 !important;padding: 0;margin: 0;margin-bottom: 15px;padding-top: 20px;">Dense Discovery is currently read by over 22,200 subscribers. Support us by (1) <a class="grey" href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/9ed85ff3-16b2-41e0-aae6-53b04f2aea5a/event" style="text-decoration: underline;color: #707070 !important;">Sponsoring an issue</a>, (2) <a class="grey" href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/8b0d979a-71a3-434c-9271-d63d12692baf/event" style="text-decoration: underline;color: #707070 !important;">Booking a classified ad</a>, or (3) <a class="grey" href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/ad4052d4-620d-4947-9c2e-2630e3227a10/event" style="text-decoration: underline;color: #707070 !important;">Sharing this issue</a> with friends and colleagues.</p>
+
+            </td></tr>
+          <!-- INTRO End -->
+
+
+
+
+
+
+
+
+          <!-- SPONSOR Start  FORMAT B-->
+
+          <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+          <tr><td align="left" class="headline box-yellow" style="border-collapse: collapse;background: #f8eccf;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+              <h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Tired of Scheduling Hassles?  <a class="h1byline" href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/9ed85ff3-16b2-41e0-aae6-53b04f2aea5a/event" style="text-decoration: none;display: inline-block;font-size: 12px;line-height: 25px;font-weight: 400;float: right;color: #6d6b57 !important;">SPONSOR</a>
+</h1>
+
+            </td></tr>
+
+          <tr><td align="left" class="box-yellow" style="border-collapse: collapse;background: #f8eccf;">
+
+            <!--[if mso]>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr><td width="35%" valign="top"><![endif]-->
+
+            <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt20 padr10 padl20 padb5" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-bottom: 5px;padding-left: 20px;" valign="top">
+
+                  <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+                    <img src="https://www.densediscovery.com/archive/63/sponsor.jpg" alt="❏" width="194" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+                  </p>
+
+                </td></tr></tbody></table>
+
+            <!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+            <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 padb5 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-bottom: 5px;padding-left: 10px;" valign="top">
+
+                  <h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/8650dba8-1ccd-4133-a4c9-83e758add909/event" style="text-decoration: underline;color: #000000 !important;">Woven Calendar</a> →</h2>
+
+                  <h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #6d6b57 !important;">All-in-one calendar – smart, collaborative, fast.</h3>
+
+                  <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Want a calendar that takes the hassle out of scheduling? Woven, the all-in-one-calendar that makes the most of your time. Smart templates, scheduling links, group polls and more. Eliminate email back &amp; forth; manage time with ease. Works with G-Cal and G-Suite. It’s free.</p>
+
+                </td></tr></tbody></table>
+
+            <!--[if mso]></td></tr></table><![endif]-->
+
+            </td></tr>
+
+          <!-- SPONSOR End -->
+
+
+
+          <!-- DIGITAL Start -->
+
+          <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+          <tr><td align="left" class="headline" style="border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+              <h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Apps &amp; Sites</h1>
+
+            </td></tr>
+
+
+            <tr><td align="left" style="border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="35%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                    <h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/50b4b7c0-0ad5-4434-b2f8-99e2d766054d/event" style="text-decoration: underline;color: #000000 !important;">I Done This</a> →</h2>
+
+                    <h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Team progress updates</h3>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">With I Done This team members respond to a daily reminder to submit a brief summary of what they’ve worked on any given day, creating a progress log and performance overview for managers.</p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+              </td></tr>
+
+
+
+            <tr><td align="left" style="border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="35%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                      <h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/3fb3b06e-a8ec-4c10-a346-390fd302a35b/event" style="text-decoration: underline;color: #000000 !important;">LICEcap</a> →</h2>
+
+                    <h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">GIF screencasts</h3>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">LICEcap (available for Windows and Mac) can capture an area of your screen and save it directly to either GIF or a lossless LCF format.</p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+              </td></tr>
+
+
+            <tr><td align="left" style="border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr><td width="35%" valign="top"><![endif]-->
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                      <h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/e3f3659f-1c48-4920-b537-cfaa13b4d2e7/event" style="text-decoration: underline;color: #000000 !important;">Noto</a> →</h2>
+
+                      <h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Writing app</h3>
+
+                    </td></tr></tbody></table>
+
+                <!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+                <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                      <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Add Noto to the long list of writing and note-taking apps for MacOS and iOS. It seems to work similarly to Apple’s own Notes app with a more visually appealing way to organise your notes.</p>
+
+                    </td></tr></tbody></table>
+
+                <!--[if mso]></td></tr></table><![endif]-->
+
+                </td></tr>
+
+              <tr><td align="left" style="border-collapse: collapse;">
+
+                <!--[if mso]>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr><td width="35%" valign="top"><![endif]-->
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                      <h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/398dc368-91ce-438d-add1-83d3a6e4cf86/event" style="text-decoration: underline;color: #000000 !important;">Speaking.io</a> →</h2>
+
+                      <h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Guide to public speaking</h3>
+
+                    </td></tr></tbody></table>
+
+                <!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+                <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                      <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">A comprehensive guide with lots of tips for public speaking – from planning and designing your slides to practicing and delivering your talk.</p>
+
+                    </td></tr></tbody></table>
+
+                <!--[if mso]></td></tr></table><![endif]-->
+
+                </td></tr>
+
+            <!-- DIGITAL End -->
+
+
+
+
+            <!-- BOX PROJECT Start -->
+
+            <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+            <tr><td align="left" class="headline box-red" style="border-collapse: collapse;background: #efe2f3;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+                <h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Indie Mag of the Week</h1>
+
+              </td></tr>
+
+            <tr><td align="left" class="box-red" style="border-collapse: collapse;background: #efe2f3;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="35%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt20 padr10 padb5 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-bottom: 5px;padding-left: 20px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;"><img src="https://www.densediscovery.com/archive/63/mag.gif" alt="❏" width="290" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;"></p>
+
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt15 padr20 padl10 padb5 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-bottom: 5px;padding-left: 10px;" valign="top">
+
+                  <h2 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;">
+<a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/28a96caf-9b43-40eb-82e0-b60b3521ee51/event" style="text-decoration: underline;color: #000000 !important;">Bikevibe</a> →</h2>
+
+                  <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Bikevibe is a semiannual journal documenting cycling culture in cities all over the world.</p>
+
+                  <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+                    – Latest Issue: <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/d4a24cd5-3155-49b3-b1b1-3fc16e3e6669/event" style="text-decoration: underline;color: #000000 !important;">8</a> (Lisbon)<br>
+                    – Frequency: 2 issues/year<br>
+                    – Formats: print only<br>
+                    – Origin: Norway
+                  </p>
+
+                  <p class="small grey" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #837089 !important;padding: 0;margin: 0;margin-bottom: 15px;">We’re giving away five copies to randomly selected DD readers. Keep an eye on your inbox to find out if you’re among them!</p>
+
+
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+
+              </td></tr>
+
+
+            <!-- BOX PROJECT End -->
+
+
+
+
+            <!-- ACCESSORIES Start -->
+
+            <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+            <tr><td align="left" class="headline" style="border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+                <h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Goods &amp; Accessories <a class="h1byline grey browser" href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/95a8bfbd-be49-40f2-a8e7-66a155a94428/event" style="text-decoration: none;text-align: right;display: inline-block;font-size: 12px;line-height: 25px;font-weight: 400;float: right;color: #707070 !important;">CONSUME RESPONSIBLY</a>
+</h1>
+
+              </td></tr>
+
+
+            <tr><td align="left" style="border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="50%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+                      <img src="https://www.densediscovery.com/archive/63/bag.jpg" alt="❏" width="290" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+                    </p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="50%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt15 padr10 padl20 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                    <h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/28c2294c-6a4e-4bb6-a516-d00d8d939a2f/event" style="text-decoration: underline;color: #000000 !important;">Patagonia Black Hole 25L</a> →</h2>
+
+                    <h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Reliable daily carry</h3>
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">This has been my daily backpack (and day hike pack) for the last five+ years: the  Black Hole Pack 25L is made with a tough 100% recycled polyester fabric, 100% recycled polyester lining and 100% recycled nylon webbing. After such extensive usage, the waterproofing layer has started to come off on the top of my bag, but my local Patagonia shop already reassured me that they’ll fix it free of charge whenever I’m ready to spare it for a few weeks. 👌</p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+              </td></tr>
+
+
+
+            <tr><td align="left" style="border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="50%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+                      <img src="https://www.densediscovery.com/archive/63/book.jpg" alt="❏" width="290" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+                    </p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="50%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="320"><tbody><tr><td class="padt15 padr10 padl20 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                    <h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/d5a071c0-3c67-4873-9a8f-085a79607031/event" style="text-decoration: underline;color: #000000 !important;">The Art of Frugal Hedonism</a> →</h2>
+
+                    <h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Spending less while enjoying everything more</h3>
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">I really enjoyed reading this book. It’s a fun, at times wacky, easy-to-read guide on how to escape the work-to-spend cycle and adjust your consumption habits to enjoy more free time. Best of all, it doesn’t read like a typical self-help book because it doesn’t take itself too seriously. (It’s written by Australian authors, after all.)</p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+              </td></tr>
+
+
+
+
+            <!-- ACCESSORIES End -->
+
+
+
+
+
+            <!-- BOX TWEET Start -->
+
+            <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+            <tr><td align="left" class="headline" style="background: #d1eaf4;border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+                <h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Overheard on Twitter</h1>
+
+              </td></tr>
+
+
+            <tr>
+<td align="left" class="padt15 padr20 padl20 padb5" style="background: #d1eaf4;border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-bottom: 5px;padding-left: 20px;">
+
+                <p class="large" style="font-size: 21px;line-height: 30px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+                If women were allowed to get mad and men were allowed to get sad we’d all be a lot happier overall.
+                </p>
+
+                <h2 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;">– <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/22bca3a3-1312-4a14-896b-393b5f152f53/event" style="text-decoration: underline;color: #000000 !important;">@emrazz</a>
+</h2>
+
+              </td>
+
+            <!-- BOX TWEET End -->
+
+
+
+            <!-- PERUSAL Start -->
+</tr>
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+            <tr><td align="left" class="headline" style="border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+                <h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Food For Thought</h1>
+
+              </td></tr>
+
+
+
+
+            <tr><td align="left" style="border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="35%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                    <h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/1c1a16e3-8b75-4fa0-b75a-44a97f7c3fd7/event" style="text-decoration: underline;color: #000000 !important;">What obligation do social media platforms have to the greater good?</a> →</h2>
+
+                    <h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Watch</h3>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">A very important message about public spaces and how social media has become a dangerous, private substitute: “I think we really need digital environments that we all actually have some real ownership of, environments that respect the diversity of human existence and that give us some say and some input into the process. (...) Facebook right now is like the 1970s New York: the public spaces are decaying, there’s trash in the streets, people are kind of mentally and emotionally warming themselves over burning garbage.”</p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+              </td></tr>
+
+
+            <tr><td align="left" style="border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="35%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                    <h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/a153c62d-8a09-4359-9ed1-c345b5a5ac6a/event" style="text-decoration: underline;color: #000000 !important;">Everything is Amazing, But Nothing is Ours</a> →</h2>
+
+                    <h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Read</h3>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                      <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">This short essay really made me think about digital services, the disappearance of files, and our changing understanding of ownership: “So long as everything works, trading ownership for access is an attractive deal: everything under the hood just gets magic-ed away, and provided for us as a service. No files, no updates, no maintenance; just access. (...) Access feels like the real thing, until it’s taken away from you.”</p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+              </td></tr>
+
+            <tr><td align="left" style="border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="35%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                    <h2 class="padb5" style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 600;color: #000000;margin: 0;padding: 0 0 15px 0;padding-bottom: 5px;">
+<a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/97033452-8967-48b8-962d-924e846ab142/event" style="text-decoration: underline;color: #000000 !important;">Techno-fix futures will only accelerate climate chaos – don’t believe the hype</a> →</h2>
+
+                    <h3 style="mso-line-height-rule: exactly;font-size: 16px;line-height: 23px;font-weight: 400;margin: 0;padding: 0 0 5px 0;color: #707070 !important;">Read</h3>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="65%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">The little optimism that’s left in the Western world often hinges on “technological progress [that] will allow us to address climate and ecological breakdown while also dramatically increasing production and consumption.” However, “the ways we work, travel, eat, and even think are all locked into systems that perpetuate the use of fossil fuels, encroach on the natural world, and exploit wealth and resources from the Global South.” Our only hope lies in unprecedented system change.</p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+              </td></tr>
+
+
+
+            <!-- PERUSAL End -->
+
+
+
+            <!-- BOX VISUAL INSP Start -->
+
+            <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+            <tr><td align="left" class="headline" style="background: #f2f2f2;border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+                <h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Aesthetically Pleasing</h1>
+
+              </td></tr>
+
+            <tr><td align="left" style="background: #f2f2f2;border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="65%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt20 padr10 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                    <p class="marb0" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 0;">
+                      <img src="https://www.densediscovery.com/archive/63/brand1.jpg" alt="❏" width="386" height="auto" class="img img-line" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;margin-bottom: 2px;">
+                      <img src="https://www.densediscovery.com/archive/63/brand2.jpg" alt="❏" width="386" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+                    </p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="35%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Only just saw <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/9c0fb0d5-ac29-4872-b513-8c3e2e2c8bd0/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Chobani’s brand refresh</b></a> from 2017, and it’s just lovely. What a great <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/5a2b41b7-7abb-49c8-993b-f3b6e91f3cca/event" style="text-decoration: underline;color: #000000 !important;">company</a>.</p>
+
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+              </td></tr>
+
+            <tr><td align="left" style="background: #f2f2f2;border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="65%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt20 padr10 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                    <p class="marb0" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 0;">
+                      <img src="https://www.densediscovery.com/archive/63/art1.jpg" alt="❏" width="386" height="auto" class="img img-line" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;margin-bottom: 2px;">
+                        <img src="https://www.densediscovery.com/archive/63/art2.jpg" alt="❏" width="386" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+                    </p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="35%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">I just spent 30 minutes browsing through <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/c252c7b0-17ac-4730-9b71-8ed703fefcbd/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">beeple’s</b></a> mysterious, dystopian fantasy world. Check out their <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/8782a463-1cd7-473c-9618-0754a2224061/event" style="text-decoration: underline;color: #000000 !important;">prints</a>.</p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+              </td></tr>
+
+
+
+            <tr><td align="left" style="background: #f2f2f2;border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="65%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt20 padr10 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                    <p class="marb0" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 0;">
+                      <img src="https://www.densediscovery.com/archive/63/font1.jpg" alt="❏" width="386" height="auto" class="img img-line" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;margin-bottom: 2px;">
+                        <img src="https://www.densediscovery.com/archive/63/font2.jpg" alt="❏" width="386" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+                    </p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="35%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">I’ve never had this much fun playing with a font in a browser: built to maximise versatility, control, and performance, <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/ab4a2e72-4e50-4009-9513-4cba3be4bb6e/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Recursive</b></a> is a five-axis variable font.</p>
+
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+
+              </td></tr>
+
+
+
+
+            <tr><td align="left" class="padb5" style="background: #f2f2f2;border-collapse: collapse;padding-bottom: 5px;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="65%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt20 padr10 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+                      <img src="https://www.densediscovery.com/archive/63/painting1.jpg" alt="❏" width="386" height="auto" class="img img-line" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;margin-bottom: 2px;">
+                      <img src="https://www.densediscovery.com/archive/63/painting2.jpg" alt="❏" width="386" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+                    </p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="35%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">The series <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/7f9370ae-ea82-4cb7-9737-b26a0e9bcce5/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Not longer Life</b></a> reinterprets and reproduces paintings from classic masters such as Monet or Caravaggio, contextualising them in the current situation.</p>
+
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+              </td></tr>
+
+
+
+            <!-- BOX VISUAL INSP End -->
+
+
+
+            <!-- CLASSIFIEDS Start -->
+
+            <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+            <tr><td align="left" class="headline" style="border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+                <h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">Classifieds</h1>
+
+              </td></tr>
+
+
+
+            <tr><td align="left" style="border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="75%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="448"><tbody><tr><td class="padt15 padr10 padl20" style="border-collapse: collapse;padding-top: 15px;padding-right: 10px;padding-left: 20px;" valign="top">
+
+                      <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">A single, unified ecommerce solution that serves the needs of customers in 176 different countries – it’s possible. <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/7826bc01-061e-42dc-8e62-96730d7d3a28/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Faculty built it for Samsung</b></a>.</p>
+
+                      <div class="line" style="border-bottom: 2px solid #efefef;display: block;height: 2px;margin-bottom: 15px;"><br></div>
+
+                      <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;"><a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/ad5f2956-6351-4869-a140-9f45ae07c827/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Strangers</b></a> is a members-only, non-fiction book club launching in January. We mostly read and brood about the roles of technology in society. Serious readers wanted. </p>
+
+                      <div class="line" style="border-bottom: 2px solid #efefef;display: block;height: 2px;margin-bottom: 15px;"><br></div>
+
+                      <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">In one sweet Dash Day you can wipe out your entire todo list and allow yourself to move onto the next stage of your work with a clean slate. <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/64c39d07-8641-421e-bfa4-c279ee61f172/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">Use code DASH MY TODOS to get 25% off!</b></a></p>
+
+                      <div class="line" style="border-bottom: 2px solid #efefef;display: block;height: 2px;margin-bottom: 15px;"><br></div>
+
+                      <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Feed your curiosity and make better sense of the world, <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/845f993f-0c9a-43f4-ae99-8328dadd3c6a/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">join Sentiers</b></a> for its eclectic mix of tech, society, cities, systems, the environment, history, sci-fi, design, and more. </p>
+
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="25%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="180"><tbody><tr><td class="padt15 padr20 padl10" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                    <p class="grey" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #707070 !important;padding: 0;margin: 0;margin-bottom: 15px;">Classifieds are paid ads that support DD and are seen by 22,200 subscribers each week.</p>
+                    <p class="padb5" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;padding-bottom: 5px;"><a class="btn btn-grey" href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/8b0d979a-71a3-434c-9271-d63d12692baf/event" style="text-decoration: none !important;display: inline-block;padding: 3px 8px;text-align: center;background: #afafaf;color: #ffffff !important;"><b style="font-weight: 600;">Book yours →</b></a> </p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+              </td></tr>
+
+            <!-- CLASSIFIEDS End -->
+
+            <!-- BOX GIF Start -->
+
+            <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+            <tr><td align="left" class="headline" style="background: #def1ef;border-collapse: collapse;border-bottom: 2px solid #FFFFFF;padding-top: 15px;padding-right: 20px;padding-left: 20px;padding-bottom: 15px;">
+
+                <h1 style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;">The Week in a GIF</h1>
+
+              </td></tr>
+
+
+            <tr><td align="left" style="background: #def1ef;border-collapse: collapse;">
+
+              <!--[if mso]>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr><td width="65%" valign="top"><![endif]-->
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt20 padr10 padb5 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 10px;padding-bottom: 5px;padding-left: 20px;" valign="top">
+
+                    <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+                      <img src="https://www.densediscovery.com/archive/63/gif.gif" alt="❏" width="386" height="auto" class="img" style="-ms-interpolation-mode: bicubic;display: block;max-height: 900px;max-width: 416px;width: 100%;">
+                    </p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td><td width="35%" valign="top"><![endif]-->
+
+              <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt15 padr20 padb5  padl10 mobt0" style="border-collapse: collapse;padding-top: 15px;padding-right: 20px;padding-bottom: 5px;padding-left: 10px;" valign="top">
+
+                    <p class="marb5" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 5px;">Email us the URL to your favourite GIF and we might feature it here in a future issue.</p>
+
+                    <p class="small" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;"><a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/572790dd-112f-4a1e-8040-5eff2ac2215f/event" style="text-decoration: underline;color: #000000 !important;">new@densediscovery.com</a></p>
+
+                  </td></tr></tbody></table>
+
+              <!--[if mso]></td></tr></table><![endif]-->
+
+
+              </td></tr>
+
+
+            <!-- BOX GIF End -->
+
+
+            <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+            <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+</tbody></table>
+<!--/600px container -->
+
+
+
+
+      </td></tr></tbody></table>
+<!--/100% background wrapper-->
+
+
+
+
+
+
+
+
+  <!-- FOOTER -->
+  <table bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="100%"><tbody><tr><td align="center" bgcolor="#555555" style="background-color: #f2f2f2;border-collapse: collapse;" valign="top">
+
+
+        <!-- 600px container -->
+        <table border="0" cellpadding="0" cellspacing="0" class="footer" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 640px;max-width: 640px;" width="640"><tbody>
+<tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+          <tr><td align="left" style="border-collapse: collapse;">
+
+              <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="100%"><tbody><tr><td class="padt20 padr20 padl20" style="text-align: center;border-collapse: collapse;padding-top: 20px;padding-right: 20px;padding-left: 20px;" valign="top">
+
+                      <h1 class="padb15" style="mso-line-height-rule: exactly;font-size: 21px;font-weight: 600;line-height: 23px;color: #000000;margin: 0;padding: 0;padding-bottom: 15px;">Enjoyed this issue? Share it: </h1>
+
+                      <p class="share" style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 15px 5px;margin: 0;margin-bottom: 15px;border: 1px dashed #5f5f5f;background: #f8f8f8;text-align: center;">
+                        <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/ad4052d4-620d-4947-9c2e-2630e3227a10/event" style="text-decoration: underline;color: #000000 !important;"><b style="font-weight: 600;">www.densediscovery.com/issues/63</b></a>
+                      </p>
+
+                      <a class="small" href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/e905a421-061f-4b97-903e-3c255df24ee1/event" style="text-decoration: underline;font-size: 14px;line-height: 19px;color: #000000 !important;">Share on Twitter</a> →   
+
+                      <a class="small" href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/af59a66e-8244-4044-86a3-d82d1c5b9f68/event" style="text-decoration: underline;font-size: 14px;line-height: 19px;color: #000000 !important;">Forward via email</a> →
+
+
+                  </td></tr></tbody></table>
+
+            </td></tr>
+
+          <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+
+          <tr><td align="left" style="border-collapse: collapse;">
+
+            <!--[if mso]>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr><td width="65%" valign="top"><![endif]-->
+
+            <table align="left" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="416"><tbody><tr><td class="padt20 padr20 padb5 padl20" style="border-collapse: collapse;padding-top: 20px;padding-right: 20px;padding-bottom: 5px;padding-left: 20px;" valign="top">
+
+                  <p class="small" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Dense Discovery aims to promote an inclusive, diverse tech community guided by ethical principles. If you believe anything in this newsletter contradicts these efforts, please reply with your concerns. We read every email but only reply to those requiring a response.</p>
+
+                  <p class="small" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Our office is located in Fitzroy, Melbourne, the traditional lands of the Wurundjeri people. We acknowledge that sovereignty was never ceded and pay our respects to elders past, present, and emerging.</p>
+
+                  <p class="small" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">Send us your suggestions for GIFs, apps, accessories, visual inspiration, etc. to <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/572790dd-112f-4a1e-8040-5eff2ac2215f/event" style="text-decoration: underline;color: #000000 !important;">new@densediscovery.com</a></p>
+
+                </td></tr></tbody></table>
+
+
+            <!--[if mso]></td><td width="35%" valign="top"><![endif]-->
+
+            <table align="right" border="0" cellpadding="0" cellspacing="0" class="force-row" style="border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width="224"><tbody><tr><td class="padt20 padr20 padl10 mobt0" style="border-collapse: collapse;padding-top: 20px;padding-right: 20px;padding-left: 10px;" valign="top">
+
+                  <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+                    <a href="http://click.densediscovery.com/ <br>
+                    <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/1c5e4dc6-eb72-4dbd-b04a-513e440952ad/event" style="text-decoration: underline;color: #000000 !important;">Browse older issues</a>
+                  </p>
+
+                  <p style="font-size: 16px;line-height: 23px;font-weight: 400;color: #000000;padding: 0;margin: 0;margin-bottom: 15px;">
+                    <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/9ed85ff3-16b2-41e0-aae6-53b04f2aea5a/event" style="text-decoration: underline;color: #000000 !important;">Sponsor an issue</a><br>
+                    <a href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/8b0d979a-71a3-434c-9271-d63d12692baf/event" style="text-decoration: underline;color: #000000 !important;">Book a classified ad</a>
+                  </p>
+
+                  <p class="small grey" style="font-size: 14px;line-height: 19px;font-weight: 400;color: #707070 !important;padding: 0;margin: 0;margin-bottom: 15px;">Published by:<br><a class="grey" href="http://click.densediscovery.com/click/dbacc973-0609-477f-b596-67dabe5f4163/caceee26-aab0-4b14-9f37-885858acd8be/event" style="text-decoration: underline;color: #707070 !important;">Kai Brach</a><br>Offscreen Media<br>149a Brunswick St<br> Fitzroy VIC 3065<br> Australia</p>
+
+                </td></tr></tbody></table>
+
+            <!--[if mso]></td></tr></table><![endif]-->
+
+            </td></tr>
+
+          <tr><td class="spacer" style="border-collapse: collapse;font-size: 1px;line-height: 1;padding-top: 25px;"> </td></tr>
+</tbody></table>
+
+
+
+      </td></tr></tbody></table>
+
+
+
+  <div><img src="http://click.densediscovery.com/open/dbacc973-0609-477f-b596-67dabe5f4163/event" alt="_t" width="1" height="1"></div>
+</body>
+</html>

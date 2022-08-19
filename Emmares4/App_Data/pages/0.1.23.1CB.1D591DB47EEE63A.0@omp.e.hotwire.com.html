@@ -1,0 +1,584 @@
+﻿<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    
+ <style type="text/css">
+      /* CSS reset */
+      body {
+        width: 100% !important;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      table, td {border-collapse: collapse;}
+      img {display:block;}
+      h1,h2 {font-weight:400; margin-bottom:0;}
+
+      /* Outlook */
+      #outlook a  {
+        padding: 0;
+      }
+
+      /* Hotmail */
+      .ExternalClass * {
+        line-height: 100%
+      }
+      .ExternalClass {
+        width: 100%;
+      }
+      #backgroundTable  {
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
+        line-height:  100% !important;
+      }
+    </style>
+    <style>
+      /* @media (max-device-width: 640px) { */
+      @media (max-width: 640px) {
+        table[id="container-table"] {
+          width:320px !important;
+        }
+
+        /* main navigation rules */
+        table[id="header-nav-table"] {
+          width:320px !important;
+          /*position:fixed;*/
+          background-color:#fff;
+          border-bottom:solid 1px #ddd;
+          /*opacity:.95;*/
+        }
+		/*
+        table[id="content-table"] {
+          margin-top:50px;
+        }
+		*/
+		td[class="arrow-footer-link"],
+        td[class="flight-col"],
+        td[class="package-col"],
+        td[class="desktop-spacer"],
+        th[class="desktop-spacer"],
+        th[class="flight-col"],
+        th[class="package-col"] {
+          display:none;
+        }
+        th[class="spacer-col"] {
+          width:5px !important;
+        }
+        th[class="logo-col"] {
+          width:120px !important;
+        }
+        th[class="hotel-col"] {
+          width:45px !important;
+        }
+        th[class="hotel-icon-col"] {
+          width:45px !important;
+        }
+        th[class="car-col"] {
+          width:40px !important;
+        }
+        th[class="car-icon-col"] {
+          width:45px !important;
+        }
+        /* /main navigation rules */
+
+        /* main content rules */
+        table[id="title-table"],
+        table[id="full-col-table"],
+        table[id="left-col-table"],
+        table[id="right-col-table"],
+        table[id="footer-table"] {
+          width:100% !important;
+		  
+        }
+
+        
+        table[id="app-link-table"]{
+          width:48% !important;
+          font-size:10pt !important;
+          background-color:#f5f5f5 !important;
+        }
+		
+		table[id="fb-link-table"] {
+          width:52% !important;
+          font-size:10pt !important;
+          background-color:#f5f5f5 !important;
+		  
+        }
+		td[id="fb-link-table-copy"] {
+          display:none !important;
+        }
+		
+		table[id="hotwire-links-table"]{
+          width:100% !important;
+          background-color:#f5f5f5 !important;
+		 
+        }
+		td[id="footer-bottom-spacer"]{
+         display:none;
+		 
+        }
+		
+		
+		
+		table[id="mobile-link-table"] {
+          width:100% !important;
+          font-size:10pt !important;
+          background-color:#fff !important;
+        }
+		
+		
+		table[id="mobile-link-table-links"] {
+          font-size:10pt !important;
+        }
+		table[id="mobile-link-table-left-col"] {
+          width:100% !important;
+		  
+        }
+		
+        tr[id="table-padding"] {
+          display:none;
+        }
+a[class=non-mobile], 
+		  table[class=non-mobile], 
+		  td[class=non-mobile], 
+		span[class=non-mobile], 
+		img[class=non-mobile] {
+          display:none;
+        }
+      }
+
+    </style>
+
+    <style>
+      @media (max-width: 640px) {
+
+        *[class].width299 {width:299px !important;}
+        *[class].width318 {width:318px !important;}
+        *[class].width320 {width:320px !important;}
+
+        *[class].hide {display:none !important;}
+
+        .feature-mobile {
+          width: 320px !important;
+          min-width: 320px !important;
+        }
+        .fill-width-mobile {
+          width: 100% !important;
+          min-width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .feature-img-mobile {
+          width: 320px !important;
+          height: auto !important;
+        }
+
+        .hide-on-mobile {
+          display: none !important;
+        }
+
+        .show-on-mobile {
+          padding-top: 0px !important;
+          padding-bottom: 0px !important;
+          width: auto !important;
+          height: auto !important;
+          display: block !important;
+          overflow: visible !important;
+          float: none !important;
+          max-height: none !important;
+        }
+
+        .mobile-no-padding {
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+        }
+
+        h1, h2, h3, p {
+          -webkit-text-size-adjust: none !important;
+        }
+
+        .half-width-mobile {
+          width: 47% !important;
+        }
+
+        .logo-mobile {
+          width: 130px !important;
+          height: auto !important;
+        }
+
+      }
+
+
+    </style>
+
+  </head>
+
+  <body bgcolor="#FFFFFF" style="padding:0px; margin:0px"><table cellpadding="0" cellspacing="0" style="border: 0px; padding: 0px; margin: 0px; position: absolute; display: none; float: left">
+<tr>
+<td height="1" style="font-size: 1px; line-height: 1px; padding: 0px;">
+<img src="https://e.Hotwire.com/pub/as?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXHkMX%3Dw&_ei_=ElsgAJSvzo1ZP5uJsKo9H8TevThPWzDKR7epMd_XfO9t_nqxFiCi-o7InYAQDT71rLtDfJspPxTYn9E1B35wo8mDvD6uio3t3TO2HVePsPghYjFoQNVJBsQHs1QUU3i1BfRQs0P8lGDs7B6Kixcirbo4_CgCDB5bVtrzcL5hLBiS.">
+<!--Start BK pixel--><img src="https://tags.bluekai.com/site/51608?e_id_s=72a72f772be37d3246fdc278b2045388cbdd7e676bb35b4b09ba579f066270fa&e_id_m=ed899f1e7f9bfa4cf0af14fbcedd0079" height="1" width="1"><br><br><!--End BK pixel-->
+</td>
+</tr>
+</table>
+
+
+
+    <table id="yahoo-fix-table" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="table-layout: fixed; margin: 0 auto !important;">
+      <tr>
+        <td style="min-width: 640px;" align="center" class="feature-mobile">
+
+          <table bgcolor="#FFFFFF" id="container-table" width="640" align="center" cellpadding="0" cellspacing="0" border="0" style="min-width: 640px; max-width: 640px; table-layout: fixed; -webkit-text-size-adjust:none; font-family:sans-serif; font-size:11px; color:#434343; margin: 0 auto !important;" class="feature-mobile">
+
+            <tr>
+              <td style="border-bottom: 1px solid #eeeeee;">
+                <table bgcolor="#FFFFFF" id="header-nav-table" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="-webkit-text-size-adjust:none;font-family:sans-serif;font-size:11px;color:#434343;">
+                  <tr>
+                    <td align="center" style="font-size:5px; line-height: 5px;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="-webkit-text-size-adjust:none;font-family:sans-serif;font-size:11px;color:#434343;">
+                      <a href="#" style="color:#434343; text-decoration:none; font-weight:bold;">Save more on winter travel.</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size:5px; line-height: 5px;">&nbsp;</td>
+                  </tr>
+                  <tr height="60">
+                    <td style="border-top: 5px solid #c90404; border-bottom: 1px solid #d5d5d5;"><table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;" width="100%">
+   <tbody>
+      <tr>
+         <td class="half-width-mobile" style="text-align: center;" valign="middle" width="240"><a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYABRY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZpCAbAyIlQdmm78c6_pibVqI81kfrbj492KevP--6boV--W51WtPuJgLmMadAw-Zfqi4Znqbtr1_gOczro3L7PiWxfY0iV4jKZcGPD6NgIiC3_gMAG0BGxW1T1ubg6T5s3CKzyvas2U6NAnRybFLOBwcp6cjag7ZCMTTwGG."><img alt="hotwire" border="0" class="logo-mobile" height="33" src="http://static.cdn.responsys.net/i2/responsysimages/content/hwire/cl-2015-hotwire-logo.gif" style="display: inline; border: none;" width="149"> </a></td>
+         <td width="85"><a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYABTY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZpCAbAyIlQdmm78c6_pibVqI81kfrbj492KevP--6boV--W51WtPuJgLmMadAw-Zfqi4Znqbtr1_gOczro3L7PiWxfY0iV4jKZcGPD6NgIiC3_gMAG0BGxW1T1ubg6T5s3CKzyvas2U6NAnRybFLOBwcp6cjag7ZCMTTwGG." style="color: #555555; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; text-decoration: none;">Hotels </a></td>
+         <td width="78"><a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYABWY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZpCAbAyIlQdmm78c6_pibVqI81kfrbj492KevP--6boV--W51WtPuJgLmMadAw-Zfqi4Znqbtr1_gOczro3L7PiWxfY0iV4jKZcGPD6NgIiC3_gMAG0BGxW1T1ubg6T5s3CKzyvas2U6NAnRybFLOBwcp6cjag7ZCMTTwGG." style="color: #555555; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; text-decoration: none;">Cars </a></td>
+         <td width="85"><a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYABAY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZpCAbAyIlQdmm78c6_pibVqI81kfrbj492KevP--6boV--W51WtPuJgLmMadAw-Zfqi4Znqbtr1_gOczro3L7PiWxfY0iV4jKZcGPD6NgIiC3_gMAG0BGxW1T1ubg6T5s3CKzyvas2U6NAnRybFLOBwcp6cjag7ZCMTTwGG." style="color:#e64142; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; text-decoration: none;">Flights </a></td>
+         <td class="hide-on-mobile" style="white-space:nowrap" width="130"><a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYABCY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZpCAbAyIlQdmm78c6_pibVqI81kfrbj492KevP--6boV--W51WtPuJgLmMadAw-Zfqi4Znqbtr1_gOczro3L7PiWxfY0iV4jKZcGPD6NgIiC3_gMAG0BGxW1T1ubg6T5s3CKzyvas2U6NAnRybFLOBwcp6cjag7ZCMTTwGG." style="color: #555555; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; text-decoration: none;">Vacations </a></td>
+      </tr>
+   </tbody>
+</table>
+</td>
+                  </tr>
+
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 0px; padding-right: 0px;" class="mobile-no-padding">
+
+                <table id="content-table" width="640" align="center" cellpadding="0" cellspacing="0" border="0" style="-webkit-text-size-adjust:none;font-family:sans-serif; font-size:11px; max-width: 640px; min-width: 640px; border-collapse: collapse; table-layout: fixed;" class="fill-width-mobile">
+					<tr>
+                    	<td width="640" height="10" style="line-height:0px;" class="fill-width-mobile"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td>
+                    </tr>
+                  <tr>
+                    <td align="left" style="font-size:0px; line-height:0px"><a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYABAY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZr29GxfDqWpDduYG9v6OOjaqod9Rdn49Rr3pX7se6o8L0GHMDcPt9_uMhstTfmWnK1-ftvKAaEtkjDju0Resd7jRhd6rWHagDXNbCzfbUX-SJ5oxlJmMt5kjMOErY2bM2SbZc-4TRIO5nMpG1gFnUt6nuauQ8sj70." style="color:#e64142; text-decoration: none;"><img align="absbottom" alt="Don't stay grounded this winter - Warm up with great Hot Rate® deals - Find a flight" class="hide-on-mobile" height="650" src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/hero_d.png" style="display: block; margin: 0; border: 0; font-family: Helvetica, Arial, sans-serif; font-size: 30px; color: #000000;" width="640"> <!--[if !mso]><!--> </a>
+
+<div class="show-on-mobile" style="display:none; width: 0px; height: 0px; overflow: hidden; float:left; max-height: 0px;"><a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYABAY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZr29GxfDqWpDduYG9v6OOjaqod9Rdn49Rr3pX7se6o8L0GHMDcPt9_uMhstTfmWnK1-ftvKAaEtkjDju0Resd7jRhd6rWHagDXNbCzfbUX-SJ5oxlJmMt5kjMOErY2bM2SbZc-4TRIO5nMpG1gFnUt6nuauQ8sj70." style="color:#434343; text-decoration: none;"><img align="absbottom" alt="Don't stay grounded this winter - Warm up with great Hot Rate® deals - Find a flight" class="feature-img-mobile" height="446" src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/hero_m.png" style="display: block; margin: 0; border: 0; font-family: Helvetica, Arial, sans-serif; font-size: 30px; color: #000000;" width="320"> </a>
+</div>
+<a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYABAY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZr29GxfDqWpDduYG9v6OOjaqod9Rdn49Rr3pX7se6o8L0GHMDcPt9_uMhstTfmWnK1-ftvKAaEtkjDju0Resd7jRhd6rWHagDXNbCzfbUX-SJ5oxlJmMt5kjMOErY2bM2SbZc-4TRIO5nMpG1gFnUt6nuauQ8sj70." style="color:#434343; text-decoration: none;"> <!--<![endif]--> </a></td>
+                  </tr>
+                  	<td width="640" height="10" style="line-height:0px;" class="fill-width-mobile"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td>
+                  <tr>
+                  </tr>
+
+                </table>
+
+                            <!--CROSS SELL-->
+                                        <!--CARS-->
+                                        <table width="640" cellpadding="0" cellspacing="0" border="0" align="center" class="width320">
+                                        <tr>
+                                          <td width="640" height="1" bgcolor="#d0d0d0" style="line-height:0px;" class="width320"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td>
+                            </tr>
+                                        <tr>
+                                          <td width="640" class="width320">
+                                              <table width="640" cellpadding="0" cellspacing="0" border="0" align="left" class="width320">
+                                                <tr>
+                                                  <td width="1" bgcolor="#d0d0d0" style="line-height:0px;"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td>
+                                                    <td width="319" class="hide"><a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYACRY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZr29GxfDqWpDduYG9v6OOjaqod9Rdn49Rr3pX7se6o8L0GHMDcPt9_uMhstTfmWnK1-ftvKAaEtkjDju0Resd7jRhd6rWHagDXNbCzfbUX-SJ5oxlJmMt5kjMOErY2bM2SbZc-4TRIO5nMpG1gFnUt6nuauQ8sj70."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/cs_cars.jpg" width="319" height="128" border="0" style="display:block;"></a></td>
+                                                    
+                                                    <td width="319" height="128" align="left" valign="top" class="width318">
+                                                      <div style="display:none; width: 0px; height: 0px; overflow: hidden; float:left; max-height: 0px;" class="show-on-mobile">
+                                                        <img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/cs_cars_r.jpg" align="absbottom" width="318" height="128" style="display: block; margin: 0; border: 0; font-family: Helvetica, Arial, sans-serif; font-size: 30px; color: #000000;" class="feature-img-mobile">
+                                                      </div>
+                                                        <table cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                             <td width="21"></td>
+                                                             <td width="298" height="128" align="left" valign="top" class="width299"><table border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="19" style="line-height:0px;" width="1"><img border="0" height="1" src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" style="display:block;" width="1">
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div style="font-family:Helvetica, Arial, sans-serif; font-size:21px; color:#e64142; line-height:25px; font-weight:bold;"><a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYACRY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZr29GxfDqWpDduYG9v6OOjaqod9Rdn49Rr3pX7se6o8L0GHMDcPt9_uMhstTfmWnK1-ftvKAaEtkjDju0Resd7jRhd6rWHagDXNbCzfbUX-SJ5oxlJmMt5kjMOErY2bM2SbZc-4TRIO5nMpG1gFnUt6nuauQ8sj70." style="color:#e64142; line-height:25px; text-decoration:none;">Did someone say road trip?</a>
+</div>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="5" style="line-height:0px;" width="1"><img border="0" height="1" src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" style="display:block;" width="1">
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div style="font-family:Helvetica, Arial, sans-serif; font-size:14px; color:#333333; line-height:18px;">Save on cars with our incredible deals.</div>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="11" style="line-height:0px;" width="1"><img border="0" height="1" src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" style="display:block;" width="1">
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--CTA-->
+<table border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td align="center" bgcolor="#e64142;" height="27" valign="middle" width="106"><a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYACRY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZr29GxfDqWpDduYG9v6OOjaqod9Rdn49Rr3pX7se6o8L0GHMDcPt9_uMhstTfmWnK1-ftvKAaEtkjDju0Resd7jRhd6rWHagDXNbCzfbUX-SJ5oxlJmMt5kjMOErY2bM2SbZc-4TRIO5nMpG1gFnUt6nuauQ8sj70." style="font-family: Helvetica, Arial, sans-serif; font-size:14px; color:#ffffff; line-height:14px; text-decoration:none;">Find a car</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--/CTA--></td>
+                                                        </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td width="1" bgcolor="#d0d0d0" style="line-height:0px;"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td>
+                                                </tr>
+                                                </table>
+                                            </td>
+                                        </tr><tr>
+                                          <td width="640" height="1" bgcolor="#d0d0d0" style="line-height:0px;" class="width320"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td>
+                            </tr>
+                                        </table>
+                                        <!--/CARS-->
+                                        <table cellpadding="0" cellspacing="0" border="0"><tr><td width="1" height="15" style="line-height:0px;"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td></tr></table>
+                                        <!--HOTELS-->
+                                        <table width="640" cellpadding="0" cellspacing="0" border="0" align="center" class="width320">
+                                        <tr>
+                                          <td width="640" height="1" bgcolor="#d0d0d0" style="line-height:0px;" class="width320"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td>
+                            </tr>
+                                        <tr>
+                                          <td width="640" class="width320">
+                                              <table width="640" cellpadding="0" cellspacing="0" border="0" align="left" class="width320">
+                                                <tr>
+                                                  <td width="1" bgcolor="#d0d0d0" style="line-height:0px;"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td>
+                                                    <td width="319" class="hide"><a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYACTY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZr29GxfDqWpDduYG9v6OOjaqod9Rdn49Rr3pX7se6o8L0GHMDcPt9_uMhstTfmWnK1-ftvKAaEtkjDju0Resd7jRhd6rWHagDXNbCzfbUX-SJ5oxlJmMt5kjMOErY2bM2SbZc-4TRIO5nMpG1gFnUt6nuauQ8sj70."><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/cs_hotels.jpg" width="319" height="128" border="0" style="display:block;"></a></td>
+                                                    <td width="319" height="128" align="left" valign="top" class="width318">
+                                                        <div style="display:none; width: 0px; height: 0px; overflow: hidden; float:left; max-height: 0px;" class="show-on-mobile">
+                                                          <img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/cs_hotels_r.jpg" align="absbottom" width="318" height="128" style="display: block; margin: 0; border: 0; font-family: Helvetica, Arial, sans-serif; font-size: 30px; color: #000000;" class="feature-img-mobile">
+                                                        </div>
+                                                        <table cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                             <td width="21"></td>
+                                                             <td width="298" height="128" align="left" valign="top" class="width299"><table border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="19" style="line-height:0px;" width="1"><img border="0" height="1" src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" style="display:block;" width="1">
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div style="font-family:Helvetica, Arial, sans-serif; font-size:21px; color:##e64142; line-height:25px; font-weight:bold;"><a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYACTY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZr29GxfDqWpDduYG9v6OOjaqod9Rdn49Rr3pX7se6o8L0GHMDcPt9_uMhstTfmWnK1-ftvKAaEtkjDju0Resd7jRhd6rWHagDXNbCzfbUX-SJ5oxlJmMt5kjMOErY2bM2SbZc-4TRIO5nMpG1gFnUt6nuauQ8sj70." style="color:#e64142; line-height:25px; text-decoration:none;">Live the suite life.</a>
+</div>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="5" style="line-height:0px;" width="1"><img border="0" height="1" src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" style="display:block;" width="1">
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div style="font-family:Helvetica, Arial, sans-serif; font-size:14px; color:#333333; line-height:18px;">Save on hotels with our incredible deals.</div>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td height="11" style="line-height:0px;" width="1"><img border="0" height="1" src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" style="display:block;" width="1">
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--CTA-->
+<table border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td align="center" bgcolor="#e64142;" height="27" valign="middle" width="106"><a href="https://e.Hotwire.com/pub/acc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYACTY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZr29GxfDqWpDduYG9v6OOjaqod9Rdn49Rr3pX7se6o8L0GHMDcPt9_uMhstTfmWnK1-ftvKAaEtkjDju0Resd7jRhd6rWHagDXNbCzfbUX-SJ5oxlJmMt5kjMOErY2bM2SbZc-4TRIO5nMpG1gFnUt6nuauQ8sj70." style="font-family: Helvetica, Arial, sans-serif; font-size:14px; color:#ffffff; line-height:14px; text-decoration:none;">Find a hotel</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--/CTA--></td>
+                                                        </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td width="1" bgcolor="#d0d0d0" style="line-height:0px;"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td>
+                                                </tr>
+                                                </table>
+                                            </td>
+                                        </tr><tr>
+                                          <td width="640" height="1" bgcolor="#d0d0d0" style="line-height:0px;" class="width320"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td>
+                            </tr>
+                                        </table>
+                                        <!--/HOTELS-->
+                                        <!--/CROSS SELL-->
+                                        <table cellpadding="0" cellspacing="0" border="0"><tr><td width="1" height="5" style="line-height:0px;"><img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/postcard-monthly_donotuse/20151117_holiday_air_pc/images/sp.gif" width="1" height="1" border="0" style="display:block;"></td></tr></table>
+                <!-- End of Content table -->
+
+              </td>
+            </tr>
+
+            <tr>
+              <td style="background-color: #eaeaea; padding-top: 0px; padding-left: 0px; padding-right: 0px;">
+                
+
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #eaeaea;" class="feature-mobile">
+      <tr>
+        <td style="background-color: #eaeaea;padding-top: 10px; padding-bottom: 10px;">
+
+          <table cellpadding="0" cellspacing="0" border="0" align="left" width="305" style="background-color: #eaeaea;" class="feature-mobile">
+            <tr valign="top">
+              <td style="padding-bottom: 10px; padding-top: 10px;" align="center">
+                <h4 style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; margin-top: 0px; margin-bottom: 10px; text-align: center;">
+                  Download the free app
+                </h4>
+                <table cellpadding="0" cellspacing="0" border="0" align="center">
+                  <tr>
+                    <td>
+                      <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYACWY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8TevThPWzDKR7epMd_XfO9t_nqxFiCi-o7InYAQDT71rLtDfJspPxTYn9E1B35wo8mDvD6uio3t3TO2HVePsPghYjFoQNVJBsQHs1QUU3i1BfRQs0P8lGDs7B6Kixcirbo4_CgCDB5bVtrzcL5hLBiS.">
+                        <img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/MasterFiles/global-footer-app-connect.images/apple.gif" width="122" height="34" alt="Download on the App Store" style="border: none;">
+                      </a>
+                    </td>
+                    <td>
+                      <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYACAY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8TevThPWzDKR7epMd_XfO9t_nqxFiCi-o7InYAQDT71rLtDfJspPxTYn9E1B35wo8mDvD6uio3t3TO2HVePsPghYjFoQNVJBsQHs1QUU3i1BfRQs0P8lGDs7B6Kixcirbo4_CgCDB5bVtrzcL5hLBiS.">
+                        <img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/MasterFiles/global-footer-app-connect.images/google.gif" width="108" height="34" alt="GET IT ON Google Play" style="border: none;">
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+          </table>
+
+          <table cellpadding="0" cellspacing="0" border="0" align="left" width="305" class="feature-mobile">
+            <tr valign="top">
+              <td style="padding-bottom: 10px; padding-top: 10px;" align="center">
+                <h4 style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; margin-top: 0px; margin-bottom: 10px; text-align: center;">
+                  Connect with us
+                </h4>
+
+                <table cellpadding="0" cellspacing="0" border="0" align="center">
+                  <tr>
+                    <td>
+                      <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYACCY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8TevThPWzDKR7epMd_XfO9t_nqxFiCi-o7InYAQDT71rLtDfJspPxTYn9E1B35wo8mDvD6uio3t3TO2HVePsPghYjFoQNVJBsQHs1QUU3i1BfRQs0P8lGDs7B6Kixcirbo4_CgCDB5bVtrzcL5hLBiS.">
+                        <img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/MasterFiles/global-footer-app-connect.images/twitter.gif" width="53" height="39" alt="Twitter" style="border: none;">
+                      </a>
+                    </td>
+                    <td>
+                      <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYADRY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8TevThPWzDKR7epMd_XfO9t_nqxFiCi-o7InYAQDT71rLtDfJspPxTYn9E1B35wo8mDvD6uio3t3TO2HVePsPghYjFoQNVJBsQHs1QUU3i1BfRQs0P8lGDs7B6Kixcirbo4_CgCDB5bVtrzcL5hLBiS.">
+                        <img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/MasterFiles/global-footer-app-connect.images/facebook.gif" width="53" height="39" alt="Facebook" style="border: none;">
+                      </a>
+                    </td>
+                    <td>
+                      <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYADTY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8TevThPWzDKR7epMd_XfO9t_nqxFiCi-o7InYAQDT71rLtDfJspPxTYn9E1B35wo8mDvD6uio3t3TO2HVePsPghYjFoQNVJBsQHs1QUU3i1BfRQs0P8lGDs7B6Kixcirbo4_CgCDB5bVtrzcL5hLBiS.">
+                        <img src="https://static.cdn.responsys.net/i2/responsysimages/hwire/contentlibrary/oldcontent/MasterFiles/global-footer-app-connect.images/pinterest.gif" width="47" height="40" alt="Pinterest" style="border: none;">
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+    </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="min-width: 640px; max-width: 640px;" class="feature-mobile">
+                
+    
+    <table cellpadding="0" cellspacing="0" border="0" align="left" width="400" style="" class="feature-mobile">
+      <tr valign="top">
+        <td style="padding-bottom: 10px; padding-top: 10px;">
+          <p style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; margin-top: 0px; margin-bottom: 10px; text-align: center;">
+            <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYADWY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZpCAbAyIlQdmm78c6_pibVqI81kfrbj492KevP--6boV--W51WtPuJgLmMadAw-Zfqi4Znqbtr1_gOczro3L7PiWxfY0iV4jKZcGPD6NgIiC3_gMAG0BGxW1T1ubg6T5s3CKzyvas2U6NAnRybFLOBwcp6cjag7ZCMTTwGG." style="color: #000000;">Customer Care </a>
+          </p>
+        </td>
+        <td style="padding-bottom: 10px; padding-top: 10px;">
+          <p style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; margin-top: 0px; margin-bottom: 10px; text-align: center;">
+            <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYADAY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZpCAbAyIlQdmm78c6_pibVqI81kfrbj492KevP--6boV--W51WtPuJgLmMadAw-Zfqi4Znqbtr1_gOczro3L7PisZF2vei3HxAU9k8c7LphnYO9Qch8byr84NYMztBk5x9YdV3YFDq9gm3tcWQ1N7eZ7IIF1-npeldWFijNNeRvUMc." style="color: #000000;">Term of Use</a>
+          </p>
+        </td>
+        <td style="padding-bottom: 10px; padding-top: 10px;">
+          <p style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; margin-top: 0px; margin-bottom: 10px; text-align: center;">
+            <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYADCY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZpCAbAyIlQdmm78c6_pibVqI81kfrbj492KevP--6boV--W51WtPuJgLmMadAw-Zfqi4Znqbtr1_gOczro3L7PiWxfY0iV4jKZcGPD6NgIiC3_gMAG0BGxW1T1ubg6T5s3CKzyvas2U6NAnRybFLOBwcp6cjag7ZCMTTwGG." style="color: #000000;">Update Zip Code</a>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table cellpadding="0" cellspacing="0" border="0" align="left" width="200" style="" class="feature-mobile">
+      <tr valign="top">
+        <td style="padding-bottom: 10px; padding-top: 10px;">
+          <p style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; margin-top: 0px; margin-bottom: 10px; text-align: center;">
+            <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYBRRY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZpCAbAyIlQdmm78c6_pibVqI81kfrbj492KevP--6boV--W51WtPuJgLmMadAw-Zfqi4Znqbtr1_gOczro3L7PiWxfY0iV4jKZcGPD6NgIiC3_gMAG0BGxW1T1ubg6T5s3CKzyvas2U6NAnRybFLOBwcp6cjag7ZCMTTwGG." style="color: #000000;">Privacy Policy</a>
+          </p>
+        </td>
+        <td style="padding-bottom: 10px; padding-top: 10px;">
+          <p style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; margin-top: 0px; margin-bottom: 10px; text-align: center;">
+            <a href="https://e.Hotwire.com/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGzbN0fTNzezg9v66MCUl2DF30zbzcveAP3SwW6yypJ3NRfaeeEWbaF70CengUsOHBAzfsGVXtpKX%3DWUWYBRTY&_ei_=ElsgAJSvzo1ZP5uJsKo9H8QKP6UFC0d8jYI2R6SB6cdXd-tcwwz8dna7qrbLrHOUmItsM2qtRs7Z3hkvZitUbZpCAbAyIlQdmm78c6_pibVqI81kfrbj492KevP--6boV--W51WtPuJgLmMadAw-Zfqi4Znqbtr1_gOczro3L7PiWxfY0iV4jKZcGPD6NgIiC3_gMAG0BGxW1T1ubg6T5s3CKzyvas2U6NAnRybFLOBwcp6cjag7ZCMTTwGG." style="color: #000000;"> </a>
+          </p>
+        </td>
+      </tr>
+    </table>
+              </td>
+            </tr>
+
+
+            <!-- Legal copy -->
+            <tr>
+              <td style="padding-top: 15px; padding-left: 10px; padding-right: 10px; padding-bottom: 40px;">
+                <div style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #b4b4b4; margin-top: 0px; margin-bottom: 5px; line-height: 12px; text-align: left;">
+                  
+    <table id="footer-table" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="-webkit-text-size-adjust:none;font-family:sans-serif;font-size:11pt;color:#999999;">    
+                  <tr>
+                  	<td style="-webkit-text-size-adjust:none;font-family:sans-serif;font-size:8pt;color:#999999; background-color:#FFFFFF">
+                    
+                    This commercial message is from Hotwire, Inc. Please do not reply to this message, as we cannot respond to messages sent to this address. You may reach Hotwire at <a href=" https://www.hotwire.com/helpcenter/contact.jsp?" style="font-family: Arial; font-size: 8pt; color: #434343; text-decoration: underline;">Contact Us</a> or via postal mail at: Hotwire, PO Box 26285, San Francisco, CA 94126
+                     <br><br>
+
+&copy; 2019 Hotwire, Inc. All rights reserved. Hotwire, the Hotwire logo, Hot Fare, and Hot Rate are either registered trademarks or trademarks of Hotwire, Inc. Other product and company names shown may be trademarks of their respective owners. CST 2053390-40; NST 20003-0209.
+
+
+                    </td>
+                    </tr>
+                    <tr>
+                  	<td style="-webkit-text-size-adjust:none;font-family:sans-serif;font-size:8pt;color:#FFFFFF;">
+                    (NID: N-PC-110219) (VID: V-PC-110219-V2) (HWID: <a href="#" style="color:#FFFFFF; text-decoration:none;">30001793532)</a> (MD: <a href="#" style="color:#FFFFFF; text-decoration:none;">11/2/2019</a>)
+                    </td>
+                    </tr>
+                </table>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+
+        </td>
+      </tr>
+    </table> <!-- end yahoo fix centered table -->
+    <div style="display:none; white-space:nowrap; font:15px courier; color:#ffffff;">
+      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    </div><img border="0" src="https://r.turn.com/r/beacon?b2=_UL0V6pZsbLmOfCzuAMtuz5FejdaK6n5otoI1ekkl2txQYH5ToBkDwYGXz83TXOT8V24QzMx9pz1AgmfQtQFNw&cid=">
+<img src="https://sslwidget.criteo.com/event?a=19574&v=4.1.0&p0=e%3Dce%26m%3D%5B%5D&p1=e%3Dexd%26site_type%3Dd%26ui_comingFrom%3Demail&p2=e%3Dvh&p3=e%3Ddis&adce=1&rt=gif" width="1" height="1">
+  </body>
+</html>
+
+
+

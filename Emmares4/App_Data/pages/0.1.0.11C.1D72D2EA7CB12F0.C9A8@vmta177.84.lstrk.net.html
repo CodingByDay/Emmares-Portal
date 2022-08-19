@@ -1,0 +1,797 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<!--[if (gte mso 9)|(IE)]><html  xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" /><![endif]-->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style type="text/css">
+			/* Reset Styles */
+			#outlook a {
+			padding: 0;
+			}
+			body {
+			width: 100% !important;
+			-webkit-text-size-adjust: none;
+			-ms-text-size-adjust: none;
+			margin: 0;
+			padding: 0;
+			}
+			.ReadMsgBody {
+			width: 100%;
+			}
+			.ExternalClass {
+			width: 100%;
+			}
+			.backgroundTable {
+			margin: 0 auto;
+			padding: 0;
+			width: 100% !important;
+			}
+			table td {
+			border-collapse: collapse;
+			}
+			.ExternalClass * {
+			line-height: 115%;
+			}
+			th {
+			margin: 0 !important;
+			font-weight: normal;
+			vertical-align: top !important;
+			}
+			/* Link Fixes */
+			a[x-apple-data-detectors] {
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+			}
+			/* All Your Font Jazz */
+			/* Mobile Styles */
+			@media only screen and (max-width : 480px) {
+			/* General Styles */
+			.container {
+			width: 100% !important;
+			overflow: hidden;
+			min-width: 0px !important;
+			}
+			.hide {
+			display: none !important;
+			}
+			.display-ib {
+			display: inline-block;
+			}
+			.display-b {
+			display: block;
+			}
+			.full-width {
+			width: 100% !important;
+			height: auto;
+			min-width: 0 !Important;
+			}
+			.half-width {
+			width: 50% !important;
+			height: auto;
+			}
+			.float-l {
+			float: left;
+			}
+			.float-r {
+			float: right;
+			}
+			.height-auto {
+			height: auto !important;
+			}
+			.stack th {
+			width: 100% !important;
+			display: block !important;
+			}
+			/* Images */
+			.full-img img {
+			width: 100% !important;
+			height: auto;
+			min-width: 0px !important;
+			}
+			/* Buttons */
+			.full-btn {
+			width: 100% !important;
+			height: auto;
+			border-left: 0 none !important;
+			border-right: 0 none !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+			}
+			/* Text */
+			.center {
+			text-align: center !important;
+			margin: 0 auto;
+			float: none;
+			}
+			.left {
+			text-align: left !important;
+			}
+			.right {
+			text-align: right !important;
+			}
+			.copy-14 {
+			font-size: 14px !important;
+			}
+			.copy-18 {
+			font-size: 18px !important;
+			}
+			.copy-21 {
+			font-size: 21px !important;
+			}
+			.copy-24 {
+			font-size: 24px !important;
+			}
+			/* Borders */
+			.border-t {
+			border-top: 1px solid #cccccc;
+			}
+			.border-b {
+			border-bottom: 1px solid #cccccc;
+			}
+			.border-0 {
+			border: 0 none !important;
+			}
+			.border-t-0 {
+			border-top: 0 none !important;
+			}
+			.border-r-0 {
+			border-right: 0 none !important;
+			}
+			.border-b-0 {
+			border-bottom: 0 none !important;
+			}
+			.border-l-0 {
+			border-left: 0 none !important;
+			}
+			.border-r-0 {
+			border-right: 0 none !important;
+			}
+			/* Padding */
+			.pad-lr-10 {
+			padding-left: 10px !important;
+			padding-right: 10px !important;
+			}
+			.pad-lr-20 {
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+			}
+			.pad-lr-30 {
+			padding-left: 30px !important;
+			padding-right: 30px !important;
+			}
+			.pad-0 {
+			padding: 0 !important;
+			}
+			.pad-l-0 {
+			padding-left: 0 !important;
+			}
+			.pad-r-0 {
+			padding-right: 0 !important;
+			}
+			.pad-t-0 {
+			padding-top: 0 !important;
+			}
+			.pad-t-10 {
+			padding-top: 10px !important;
+			}
+			.pad-t-15 {
+			padding-top: 15px !important;
+			}
+			.pad-t-20 {
+			padding-top: 20px !important;
+			}
+			.pad-t-30 {
+			padding-top: 30px !important;
+			}
+			.pad-b-0 {
+			padding-bottom: 0 !important;
+			}
+			.pad-b-10 {
+			padding-bottom: 10px !important;
+			}
+			.pad-b-15 {
+			padding-bottom: 15px !important;
+			}
+			.pad-b-20 {
+			padding-bottom: 20px !important;
+			}
+			.pad-b-30 {
+			padding-bottom: 30px !important;
+			}
+			/* Mobile Show */
+			.mobile-show, .mobile-show tbody, .mobile-show tr, .mobile-show td {
+			width: 100% !important;
+			max-height: inherit !important;
+			overflow: visible !important;
+			display: block !important;
+			float: none !important;
+			}
+			.mobile-show table {
+			display: table !important;
+			width: 100% !important;
+			}
+			.mobile-show tbody {
+			display: table !important;
+			}
+			.mobile-show tr {
+			display: table-row !important;
+			}
+			.mobile-show td {
+			display: table-cell !important;
+			}
+			/* Footer Nav */
+			.footer-nav, .footer-nav tbody, .footer-nav tr, .footer-nav td {
+			width: 100% !important;
+			max-height: inherit !important;
+			overflow: visible !important;
+			display: block !important;
+			float: none !important;
+			}
+			.footer-nav table {
+			display: table !important;
+			width: 100% !important;
+			}
+			.footer-nav tbody {
+			display: table !important;
+			}
+			.footer-nav tr {
+			display: table-row !important;
+			}
+			.footer-nav td {
+			display: table-cell !important;
+			}
+			.footer-nav a {
+			display: block !important;
+			width: 100%;
+			padding: 15px 0 !important;
+			border-top: 1px solid #ffffff !important;
+			border-right: 0 !important;
+			border-left: 0 !important;
+			}
+			/* Reset Styles */
+			body {
+			margin: 0 auto !important;
+			}
+			div[style*="margin: 16px 0"] {
+			margin: 0 !important;
+			}
+			/********* SOLUTION STYLES **********/
+			/******* SOLUTION STYLES END ********/
+			/* SCA Shopping Cart */
+			.cart-img img {
+			width: 150px;
+			height: auto;
+			}
+			.cart-img-small, .cart-img-small img {
+			width: 100px;
+			height: auto;
+			}
+			/********** CUSTOM STYLES ***********/
+			.width-85 {
+			width: 85% !important;
+			}
+			.width-30px {
+			width: 30px !important;
+			}
+			/******** CUSTOM STYLES END *********/
+			}
+		</style>
+		<!--[if gte mso 9]>
+<xml>
+    <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+	</head>
+	<body style="zoom: 100%;" data-new-gr-c-s-check-loaded="14.994.0" data-gr-ext-installed="">
+		<table class="full-width" align="center" width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0" style="min-width:100%; table-layout:fixed;">
+			<tbody>
+				<tr>
+					<td class="pad-0" align="center" style="padding:0 10px;">
+					<table class="container full-width" width="640" align="center" cellpadding="0" cellspacing="0" border="0" style="width:640px; min-width:640px;">
+						<tbody>
+							<tr>
+								<td align="center"><!-- PREHEADER -->
+								<table class="hide" width="640" cellpadding="0" cellspacing="0" border="0">
+									<tbody>
+										<tr>
+											<td style="font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#3f3f3f; text-align:left; padding:20px 5px;">Thanks for signing up!</td>
+											<td style="font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#3f3f3f; text-align:right; padding:20px 5px;"><a href="http://enews.ajmadison.com/q/j8z12q2NZY6ckoR2NHy7qS5pmkcEiiY3tFOz02AVm91Bua7Q6lTzivhL3" title="View in Browser" target="_blank" style="color:#3f3f3f; text-decoration:underline;"><strong style="font-weight:normal;">View in Browser</strong></a></td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- END PREHEADER -->
+								<!-- NAVIGATION/PRICE MATCH/CALL AN EXPERT -->
+								<table class="full-width" width="100%" cellpadding="0" cellspacing="0" border="0" style="min-width:100%;">
+									<tbody>
+										<tr>
+											<td class="pad-t-20 pad-b-15" style="font-size:0px; padding:0 20px 20px 20px;">
+											<table class="full-width" width="170" align="left" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:170px; min-width:170px;">
+												<tbody>
+													<tr>
+														<td><a href="http://enews.ajmadison.com/q/qWoIbkChLOa0X6uBbgJUxOuNxVtTAT5yqR5ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIgt6B-fxUcqZL1JZwu7hPG_oLfiQ" title="AJ Madison" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Template/logo.png" class="center" alt="AJ Madison" width="170" border="0" style="display:block; min-width:170px;"></a></td>
+													</tr>
+												</tbody>
+											</table>
+											<table class="center" width="247" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:247px; min-width:247px;">
+												<tbody>
+													<tr>
+														<td class="pad-t-15" style="padding-top:32px;"><a href="http://enews.ajmadison.com/q/t2z-N5WQjut0XHlZi4ttij24nhaS9HpUCqrZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIX3Q3mxe0caaL2IP4kDZ5FlF91Pw" title="Price Match Guarantee" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Template/pricematch.png" class="center" alt="Price Match Guarantee" width="117" border="0" style="display:block; min-width:117px;"></a></td>
+														<td class="pad-t-10" style="padding-top:32px;"><a href="tel:800-570-3355" title="Call An Expert" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Template/callexpert.png" alt="Call An Expert" width="130" border="0" style="display:block; min-width:130px;"></a></td>
+													</tr>
+												</tbody>
+											</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- END NAVIGATION/PRICE MATCH/CALL AN EXPERT -->
+								<!-- BLUE BANNER -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<tbody>
+										<tr>
+											<td class="" align="center" style="padding-bottom:1px;">
+											<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#20419b" style="background-color:#20419b;">
+												<tbody>
+													<tr>
+														<td class="pad-lr-10" align="center" style="font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#ffffff; text-align:center; padding:10px 0;"> <span><span style="color:rgb(255, 255, 255)"><span style="font-size:18px"><span fontvalue="Helvetica Neue" style="font-family:helvetica neue,helvetica,arial,sans-serif"><a data-cke-saved-href="http://enews.ajmadison.com/q/tdKiYMXm3ca0XULuIQh5RwN5pws2oAkEnwgZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIP7ilBL0RebzL7D3rJaD3pDj-5rQ" href="https://www.ajmadison.com/help-center/article/national-delivery/" target="_blank" title="Free Nationwide Delivery on All Orders Over $599!" style="color: rgb(255, 255, 255); text-decoration-line: none;">FREE NATIONWIDE DELIVERY ON THOUSANDS OF APPLIANCES</a>*&nbsp;</span></span></span></span></td>
+													</tr>
+												</tbody>
+											</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- END BLUE BANNER -->
+								<!-- NAVIGATION -->
+								<table class="hide" width="640" cellpadding="0" cellspacing="0" border="0" bgcolor="#5bba48" style="background-color:#5bba48; width:640px;">
+									<tbody>
+										<tr>
+											<td align="center">
+											<table class="hide" cellpadding="0" cellspacing="0" border="0">
+												<tbody>
+													<tr>
+														<td align="center" style="font-family:Helvetica, Arial, sans-serif; font-size:13px; color:#ffffff;"><a href="http://enews.ajmadison.com/q/i3dBeWCXvAK0XDjA0OqeHPSUCUfqjiKraBrZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI-JvsdmKxfbgLZV8elcPPApfia5A" title="REFRIGERATORS" target="_blank" style="font-size:13px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">REFRIGERATORS</a>| <a href="http://enews.ajmadison.com/q/2Me7RM8Y5Om0XizbgTzT1w2O46WgpRDXnfzZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIDSvySnIMertLf8YfsnYQMDw0q-g" title="COOKING" target="_blank" style="font-size:13px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">COOKING</a>| <a href="http://enews.ajmadison.com/q/4RESTBPNzar0X1Wrg_KJNPSzfwdHqCiZEdlZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIVLYm7Vj5d4JL0972KgBEQ91S3Lg" title="DISHWASHERS" target="_blank" style="font-size:13px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">DISHWASHERS</a>| <a href="http://enews.ajmadison.com/q/ABy8R6tidUJ0XuPsnuK6WKjdxsBRvethqaRZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIdijBggTIco7LiBlNniAy6vHYpyQ" title="WASHERS & DRYERS" target="_blank" style="font-size:13px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">WASHERS &amp; DRYERS</a>| <a href="http://enews.ajmadison.com/q/YsVFhV5gPGN0Xtr6vGscUTYuZONT6vn6TWSZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI5HKhhGT-e4pLKy3kjgdgSwuRzqQ" title="DEALS" target="_blank" style="font-size:13px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">DEALS</a></td>
+													</tr>
+												</tbody>
+											</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- END NAVIGATION -->
+								<!-- LARGE HERO -->
+								<table class="full-width" width="100%" cellpadding="0" cellspacing="0" border="0" style="min-width:100%;">
+									<tbody>
+										<tr>
+											<td class="full-img" align="center" style="color:#3f3f3f; font-family:Helvetica, Arial, sans-serif; font-size:22px; padding-top:1px;"><a href="http://enews.ajmadison.com/q/aIts2_bNevi0XR9Wq_eeKx_QVx8ZwrpviUHZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIPgLKn0XPd4LLT3en9IoaS6T4Dwg" title="Start Shopping" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Welcome/1-hero.jpg" alt="Your Appliance Authority - Start Shopping" width="640" height="260" style="display:block; min-width:640px;" border="0"></a></td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- END LARGE HERO -->
+								<!-- COPY -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<tbody>
+										<tr>
+											<td class="pad-lr-20 pad-t-30 pad-b-30" style="padding:50px 70px;">
+											<p style="text-align: center;">&nbsp;</p>
+											<table width="100%" border="0" cellpadding="0" cellspacing="0">
+												<tbody>
+													<tr>
+														<td class="pad-b-10" align="center" style="color:#5bba48; font-family:Helvetica, Arial, sans-serif; font-size:22px; padding-bottom:20px;">Enjoy all the perks.</td>
+													</tr>
+													<tr>
+														<td class="pad-b-20" align="center" style="color:#3f3f3f; font-family:Helvetica, Arial, sans-serif; font-size:16px; line-height:28px; text-align:left; padding-bottom:30px;">There are many reasons to love shopping with AJ Madison. Not only do you get the comfort of shopping with an authorized online dealer for more than 100 brands, but you&rsquo;ll&nbsp;also&nbsp;get:</td>
+													</tr>
+												</tbody>
+											</table>
+											<table class="stack" width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tbody>
+													<tr>
+														<th class="full-width" width="270" align="center" valign="top" style="font-weight:normal; width:270px;">
+														<table class="width-85" width="100%" border="0" cellpadding="0" cellspacing="0">
+															<tbody>
+																<tr>
+																	<td width="20" valign="top" style="color:#5bba48; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; text-align:left; font-weight:bold; padding-bottom:20px; width:20px;">&bull;</td>
+																	<td valign="top" style="color:#333333; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; text-align:left;  padding-bottom:20px;"><strong>Price match guarantee</strong></td>
+																</tr>
+																<tr>
+																	<td width="20" valign="top" style="color:#5bba48; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; text-align:left; font-weight:bold; padding-bottom:20px; width:20px;">&bull;</td>
+																	<td valign="top" style="color:#333333; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; text-align:left;  padding-bottom:20px;"><strong>12-month interest-free financing</strong></td>
+																</tr>
+																<tr>
+																	<td width="20" valign="top" style="color:#5bba48; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; text-align:left; font-weight:bold; padding-bottom:20px; width:20px;">&bull;</td>
+																	<td valign="top" style="color:#333333; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; text-align:left; padding-bottom:20px;"><strong>Quick Ship delivery in 2-3 days</strong><br>
+																	on thousands of top rated appliances</td>
+																</tr>
+															</tbody>
+														</table>
+														</th>
+														<th align="center" valign="top" style="font-weight:normal">
+														<table class="width-85" width="100%" border="0" cellpadding="0" cellspacing="0">
+															<tbody>
+																<tr>
+																	<td width="20" valign="top" style="color:#5bba48; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; text-align:left; font-weight:bold; padding-bottom:20px; width:20px;">&bull;</td>
+																	<td valign="top" style="color:#333333; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; text-align:left; padding-bottom:20px;"><strong>Free nationwide delivery</strong><br>
+																	on most items every day</td>
+																</tr>
+																<tr>
+																	<td width="20" valign="top" style="color:#5bba48; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; text-align:left; font-weight:bold; padding-bottom:20px; width:20px;">&bull;</td>
+																	<td valign="top" style="color:#333333; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:20px; text-align:left; padding-bottom:20px;">And <strong>practical advice</strong> from the appliance&nbsp;authority experts</td>
+																</tr>
+															</tbody>
+														</table>
+														</th>
+													</tr>
+												</tbody>
+											</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- END COPY -->
+								<!-- COPY -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<tbody>
+										<tr>
+											<td class="pad-lr-20 pad-t-30 pad-b-10" style="padding:0 30px 20px;">
+											<table width="100%" border="0" cellpadding="0" cellspacing="0">
+												<tbody>
+													<tr>
+														<td class="copy-18 pad-b-10" align="center" style="color:#5bba48; font-family:Helvetica, Arial, sans-serif; font-size:22px; text-transform:uppercase; padding-bottom:20px;">all the brands you know&nbsp;and&nbsp;trust</td>
+													</tr>
+													<tr>
+														<td align="center" style="color:#3f3f3f; font-family:Helvetica, Arial, sans-serif; font-size:16px; line-height:28px; text-align:center;">With unbeatable prices, expert advice, and a wide range of major brand names and appliances, there&rsquo;s nowhere better to shop for your&nbsp;next&nbsp;appliance.</td>
+													</tr>
+												</tbody>
+											</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- END COPY -->
+								<!-- BRANDS -->
+								<table width="100%" border="0" cellpadding="0" cellspacing="0">
+									<tbody>
+										<tr>
+											<td class="pad-l-0 pad-r-0" align="center" style="padding:0 105px 20px 105px;"><!-- 2 Column to 1 Column -->
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tbody>
+													<tr>
+														<td style="font-size:0px;">
+														<table class="full-width" width="238" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:238px;">
+															<tbody>
+																<tr>
+																	<td align="center">
+																	<table border="0" cellpadding="0" cellspacing="0">
+																		<tbody>
+																			<tr>
+																				<td width="102" style="width:102px;"><a href="http://enews.ajmadison.com/q/tPbHtvXL90d0XjCW0JS_KE_kVC25vmv7i_jZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIB4h6nGAReLqLfDKH52DtIhQeJcg" title="GE Appliances" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Welcome/1-ge.png" alt="GE Appliances" width="102" height="60" class="center" style="display:block;" border="0"></a></td>
+																				<td class="width-30px" width="50" style="width:50px;">&nbsp;</td>
+																				<td width="86" align="center" style="width:86px;"><a href="http://enews.ajmadison.com/q/gKDKtyd2VGW0XeM95pBB0oibGBldWmAULk0ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIzCCSRbqlcIVLkTm12US_fV8whmg" title="LG" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Welcome/1-lg.png" alt="LG" width="86" height="60" class="center" style="display:block;" border="0"></a></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<table class="full-width" width="142" align="left" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:142px">
+															<tbody>
+																<tr>
+																	<td class="pad-t-20" width="142" align="center" style="width:142px;"><a href="http://enews.ajmadison.com/q/_6khSrXG9tr0XTGuQtZNRxNdXSmWbCxuY0EZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIyQi8lX_GcZ4L4Rdfuxf3_q8kJtA" title="Samsung" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Welcome/1-samsung.png" alt="Samsung" width="142" height="60" class="center" style="display:block;" border="0"></a></td>
+																</tr>
+															</tbody>
+														</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- 2 Column to 1 Column END --></td>
+										</tr>
+										<tr>
+											<td class="pad-l-0 pad-r-0" align="center" style="padding:0 70px 20px 70px;"><!-- 2 Column to 1 Column -->
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tbody>
+													<tr>
+														<td style="font-size:0px;">
+														<table class="full-width" width="288" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:288px;">
+															<tbody>
+																<tr>
+																	<td align="center">
+																	<table border="0" cellpadding="0" cellspacing="0">
+																		<tbody>
+																			<tr>
+																				<td width="126" style="width:126px;"><a href="http://enews.ajmadison.com/q/pqjhfTB5_Km0XkskYKM382Y0pqfbkI5dRhOZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIBAoni8dddoxLVKgKkLlzW9QQLLw" title="Bosch" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Welcome/1-bosch.png" alt="Bosch" width="126" height="60" class="center" style="display:block;" border="0"></a></td>
+																				<td class="width-30px" width="50" style="width:50px;">&nbsp;</td>
+																				<td width="112" align="center" style="width:112px;"><a href="http://enews.ajmadison.com/q/E9TTww9KkKZ0XEA0zidAjX9PW6pey_YgUnyZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOITp1NFbLod5kLrIOoBC08IhE6cRQ" title="Whirlpool" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Welcome/1-whirlpool.png" alt="Whirlpool" width="112" height="60" class="center" style="display:block;" border="0"></a></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<table class="full-width" width="162" align="left" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:162px;">
+															<tbody>
+																<tr>
+																	<td class="pad-t-20" width="162" align="center" style="width:162px;"><a href="http://enews.ajmadison.com/q/nLCC2SetxcE0XG3RzuyMMX6KPVQ7By4AT0nZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIS2yXJYLUd7cLC0AWla8yWfEttnw" title="Frigidaire" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Welcome/1-frigidaire.png" alt="Frigidaire" width="162" height="60" class="center" style="display:block;" border="0"></a></td>
+																</tr>
+															</tbody>
+														</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- 2 Column to 1 Column END --></td>
+										</tr>
+										<tr>
+											<td align="center" style="padding-bottom:30px;">
+											<table border="0" cellpadding="0" cellspacing="0">
+												<tbody>
+													<tr>
+														<td width="122" style="width:122px;"><a href="http://enews.ajmadison.com/q/0YaVkfV13Ml0XlrqFuC1yagCApR5x0Y_De-ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIymDgI9SecpELAN-Wbld2Nlcph6A" title="Miele" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Welcome/1-miele.png" alt="Miele" width="122" height="60" class="center" style="display:block;" border="0"></a></td>
+														<td class="width-30px" width="50" style="width:50px;">&nbsp;</td>
+														<td width="134" align="center" style="width:112px;"><a href="http://enews.ajmadison.com/q/iBy-fNUmN7-0XRGKfBlskL8dQTj7wbp3PXpZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIlBaz5cC1eKDLex3uMlbVSQ5QXuw" title="Electrolux" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Welcome/1-electrolux.png" alt="Electrolux" width="134" height="60" class="center" style="display:block;" border="0"></a></td>
+													</tr>
+												</tbody>
+											</table>
+											</td>
+										</tr>
+										<tr>
+											<td class="pad-b-30" align="center" style="padding-bottom:40px;"><!-- Button - CTA -->
+											<table cellpadding="0" cellspacing="0" border="0">
+												<tbody>
+													<tr>
+														<td align="center" bgcolor="#053a80" style="font-family: Helvetica, Arial, sans-serif; font-size:15px; border-radius:8px"><a href="http://enews.ajmadison.com/q/N01eAha36Tl0XXCqfHFwyFgtGXhdv4B974ZZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI13ZFBDBmfZWL7JqCPSviSb9d3TQ" title="Shop All Brands" target="_blank" style="color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:15px; background-color: #053a80; border:1px solid #053a80; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;border-radius:8px"><strong>SHOP ALL BRANDS</strong></a></td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- Button - CTA --></td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- END BRANDS -->
+								<!-- THREE COLUMN RECOMMENDATIONS // LTK - WELCOME - MESSAGE 1  -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<tbody>
+										<tr>
+											<td class="copy-18 pad-t-40" align="center" style="color:#5bba48; font-family:Helvetica, Arial, sans-serif; font-size:22px; padding:50px 0 20px; text-transform:uppercase;"> get started on your next&nbsp;project </td>
+										</tr>
+										<tr>
+											<td class="pad-lr-10" style="font-size:0px; padding: 20px 40px 30px;">
+											<table class="full-width" width="355" align="left" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:355px;">
+												<tbody>
+													<tr>
+														<td style="font-size:0px;">
+														<table class="full-width" width="150" align="left" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:150px;">
+															<tbody>
+																<tr>
+																	<td style="font-size:0px;">
+																	<table class="half-width float-l" width="150" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:150px;">
+																		<tbody>
+																			<tr>
+																				<td class="full-img"><!--product1-->
+																				<a href="http://enews.ajmadison.com/q/mB2r04BCsk00XfPet57dSDVy0urXFaD2JhVZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIGf-FcopZcpMLsR0kUEUJJtRn-jQ" target="_blank" title="Product">
+																				<img src="https://recs.listrakbi.com/image/ece8ce4b-d2da-4bca-9b1f-bac71091bc3f/03940bcf-09e2-4be7-a892-355c25d33f3d/66f05908-6d42-434b-9ec7-18c3a83f6bb0/70/92/300/470/email/" width="150" height="235" border="0" alt="Product" style="display:block;">
+																				</a>
+																				<!--/product1--></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	<table class="half-width float-r" width="150" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:150px`;">
+																		<tbody>
+																			<tr>
+																				<td class="full-img pad-t-0" style="padding:10px 0 0;"><!--product4-->
+																				<a href="http://enews.ajmadison.com/q/5qyD-L0A3Ey0XYCL1_aQEeHrmi8wC6HGDgAZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI3V5aXR8rdLpLzdVW3va9KCN1fUg" target="_blank" title="Product">
+																				<img src="https://recs.listrakbi.com/image/ece8ce4b-d2da-4bca-9b1f-bac71091bc3f/03940bcf-09e2-4be7-a892-355c25d33f3d/66f05908-6d42-434b-9ec7-18c3a83f6bb0/70/665/300/470/email/" width="150" height="235" border="0" alt="Product" style="display:block;">
+																				</a>
+																				<!--/product4--></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<table class="full-width" width="150" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:150px;">
+															<tbody>
+																<tr>
+																	<td style="font-size:0px;">
+																	<table class="half-width float-l" width="150" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:150px;">
+																		<tbody>
+																			<tr>
+																				<td class="pad-t-10 full-img"><!--product2-->
+																				<a href="http://enews.ajmadison.com/q/frltJS-9yzn0XujQ9i6cS3p8QVMQ_vS6dRMZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIhzSFF3CycKiLBg1w9_3EbfIc1jQ" target="_blank" title="Product">
+																				<img src="https://recs.listrakbi.com/image/ece8ce4b-d2da-4bca-9b1f-bac71091bc3f/03940bcf-09e2-4be7-a892-355c25d33f3d/66f05908-6d42-434b-9ec7-18c3a83f6bb0/440/95/300/470/email/" width="150" height="235" border="0" alt="Product" style="display:block;">
+																				</a>
+																				<!--/product2--></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	<table class="half-width float-r" width="150" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:150px;">
+																		<tbody>
+																			<tr>
+																				<td class="pad-t-10 full-img" style="padding:10px 0 0;"><!--product5-->
+																				<a href="http://enews.ajmadison.com/q/iVlvZJgmw4C0X7-AvFZSHySueGqScS6-wdPZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI5oiihPeAdbWLuxz3FZbkV1OaJqg" target="_blank" title="Product">
+																				<img src="https://recs.listrakbi.com/image/ece8ce4b-d2da-4bca-9b1f-bac71091bc3f/03940bcf-09e2-4be7-a892-355c25d33f3d/66f05908-6d42-434b-9ec7-18c3a83f6bb0/440/665/300/470/email/" width="150" height="235" border="0" alt="Product" style="display:block;">
+																				</a>
+																				<!--/product5--></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<table class="full-width" width="150" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:150px;">
+												<tbody>
+													<tr>
+														<td style="font-size:0px;">
+														<table class="half-width float-l" width="150" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:150px;">
+															<tbody>
+																<tr>
+																	<td class="pad-t-10 full-img"><!--product3-->
+																	<a href="http://enews.ajmadison.com/q/BI4inDVPExW0X2jeQqlYSLVRJu974dD8K_OZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI4IFHWfpoe77LdaviUFA95FuCATw" target="_blank" title="Product">
+																	<img src="https://recs.listrakbi.com/image/ece8ce4b-d2da-4bca-9b1f-bac71091bc3f/03940bcf-09e2-4be7-a892-355c25d33f3d/66f05908-6d42-434b-9ec7-18c3a83f6bb0/820/99/300/470/email/" width="150" height="235" border="0" alt="Product" style="display:block;">
+																	</a>
+																	<!--/product3--></td>
+																</tr>
+															</tbody>
+														</table>
+														<table class="half-width float-r" width="150" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:150px;">
+															<tbody>
+																<tr>
+																	<td class="pad-t-10 full-img" style="padding:10px 0 0;"><!--product6-->
+																	<a href="http://enews.ajmadison.com/q/1ivLoI1utxW0XKU9Q2tc0qickyaq-XdT5WRZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIEdMWIDG9erNLvP9o5sIzBvxHSHg" target="_blank" title="Product">
+																	<img src="https://recs.listrakbi.com/image/ece8ce4b-d2da-4bca-9b1f-bac71091bc3f/03940bcf-09e2-4be7-a892-355c25d33f3d/66f05908-6d42-434b-9ec7-18c3a83f6bb0/820/665/300/470/email/" width="150" height="235" border="0" alt="Product" style="display:block;">
+																	</a>
+																	<!--/product6-->
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- THREE COLUMN RECOMMENDATIONS -->
+								<!-- REDUNDANT NAVIGATION -->
+								<table class="footer-nav" width="640" cellpadding="0" cellspacing="0" border="0" bgcolor="#5bba48" style="background-color:#5bba48; width:640px;">
+									<tbody>
+										<tr style="mso-hide:all; width:0; max-height:0; overflow:hidden; display:none; float:left;">
+											<td align="center">
+											<table cellpadding="0" cellspacing="0" border="0">
+												<tbody>
+													<tr style="mso-hide:all; width:0; max-height:0; overflow:hidden; display:none; float:left;">
+														<td align="center" style="font-family:Helvetica, Arial, sans-serif; font-size:15px; color:#ffffff;"><a href="http://enews.ajmadison.com/q/Bl9HKx4w4oy0XD2LdTE7EKHzIaYfQnAQlqQZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIWt2P_Aoje7uLlwN9GerzYwFrchw" title="REFRIGERATORS" target="_blank" style="font-size:15px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">REFRIGERATORS</a> <a href="http://enews.ajmadison.com/q/6cuxeJSDoZ80XnkC-s0em56u9cfrHl1bXeuZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIgVqCquSccIBLlltqMChGyMYFbig" title="COOKING" target="_blank" style="font-size:15px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">COOKING</a> <a href="http://enews.ajmadison.com/q/Vrkwp8h9XYO0Xiznngl6tKi4Y_FnT9tATVzZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIY--5rsh-coDLvUKqh9uGDgWPusQ" title="DISHWASHERS" target="_blank" style="font-size:15px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">DISHWASHERS</a> <a href="http://enews.ajmadison.com/q/LzPktUx2sVy0Xrv_GdYcWVhl9LdHaoexLPsZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI4Nkdn7XtcasLc7Wr5Q7HyxeDYFQ" title="WASHERS & DRYERS" target="_blank" style="font-size:15px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">WASHERS &amp; DRYERS</a> <a href="http://enews.ajmadison.com/q/S_XrQD1DAmE0XEnlppESZK9cLDA_K6jH0COZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIpAnb2VQ6eYpLENcykOMZD66QI0w" title="DEALS" target="_blank" style="font-size:15px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">DEALS</a> <a href="http://enews.ajmadison.com/q/ZZks2WS2Mla0XnLuEYf3RlNwJLxugO6Z-bMZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIKfyOhUvxfY7LZ0Y-UKCesLin9hg" title="BROOKLYN SHOWROOM" target="_blank" style="font-size:15px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">BROOKLYN SHOWROOM</a> <a href="http://enews.ajmadison.com/q/tuxiZndiBua0XDbH_IaxPnLHBHIslI2uFBsZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIshlFilFwcKtLFnkskSe5L3bIYTQ" title="FINANCING" target="_blank" style="font-size:15px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">FINANCING</a> <a href="http://enews.ajmadison.com/q/9f3eingPCSv0XmW4L0-8V5K2mMohJtBk4Z-ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIBfGXacW5cphLEUdyCLI5fhgXwnw" title="REBATE CENTER" target="_blank" style="font-size:15px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">REBATE CENTER</a> <a href="http://enews.ajmadison.com/q/ctM9j1Tc4e70Xvh1VLwDJShHHSI2EicnfU9ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIMlpX-fDCdoALKgFrnjiobyDJbXw" title="KITCHEN PACKAGES" target="_blank" style="font-size:15px; color:#ffffff; text-decoration:none; display:inline-block; white-space:nowrap; padding:10px; border:1px solid #5bba48; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">KITCHEN PACKAGES</a></td>
+													</tr>
+												</tbody>
+											</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- END REDUNDANT NAVIGATION -->
+								<!-- FOOTER -->
+								<table class="full-width" width="100%" cellpadding="0" cellspacing="0" border="0" style="min-width:100%;">
+									<tbody>
+										<tr>
+											<td bgcolor="#e6e6e6">
+											<table width="100%" border="0" cellpadding="0" cellspacing="0">
+												<!-- SOCIAL ICON SECTION -->
+												<tbody>
+													<tr>
+														<td align="center" style="color:#3f3f3f; font-family:Helvetica, Arial, sans-serif; font-size:25px; padding:24px 0 18px;"> Connect with us </td>
+													</tr>
+													<tr>
+														<td align="center">
+														<table align="center" cellpadding="0" cellspacing="0" border="0">
+															<tbody>
+																<tr>
+																	<td align="center" style="padding:0 8px 24px 8px;"><a href="http://enews.ajmadison.com/q/aalkfD_UoBd0XotgcW607QYyWD1ymZDy6a-ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIqAWn62P6fKPLEopnuMylA_qgErw" title="Instagram" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Template/insta2.png" alt="Instagram" width="36" height="36" border="0" style="display:block; min-width:36px;"></a></td>
+																	<td align="center" style="padding:0 8px 24px 8px;"><a href="http://enews.ajmadison.com/q/2NUmWO_uoCY0XKYyhUwDqj9De4XXbIXVglfZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOILSSTmzJgepSLAa2aCsRzuly0lmw" title="Facebook" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Template/fb2.png" alt="Facebook" width="36" height="36" border="0" style="display:block; min-width:36px;"></a></td>
+																	<td align="center" style="padding:0 8px 24px 8px;"><a href="http://enews.ajmadison.com/q/0lFc5-NOBsf0XYa5pyL_zrlz_syoi4FSB6eZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIbzFkLKZAcYtLk0VifE-4fz28wbA" title="YouTube" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Template/yt2.png" alt="YouTube" width="36" height="36" border="0" style="display:block; min-width:36px;"></a></td>
+																	<td align="center" style="padding:0 8px 24px 8px;"><a href="http://enews.ajmadison.com/q/00ohXbu7d7m0XwPO7huXHs31pduFQnsaD1yZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIxYoXKfYvcqDL4qiIRxj5TaMWLHw" title="Blog" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Template/blog.png" alt="Blog" width="36" height="36" border="0" style="display:block; min-width:36px;"></a></td>
+																</tr>
+															</tbody>
+														</table>
+														<!-- END SOCIAL ICON SECTION -->
+														<table class="full-width" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="min-width:100%;">
+															<tbody>
+																<tr>
+																	<td align="center" style="border-top:1px solid #cccccc; padding-top:30px; padding-bottom:10px;">
+																	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+																		<tbody>
+																			<tr>
+																				<td class="pad-lr-20" style="font-size:0px; padding:0 62px;">
+																				<table class="full-width" width="284" align="left" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:284px">
+																					<tbody>
+																						<tr>
+																							<td class="full-img"><a href="http://enews.ajmadison.com/q/giVi7qZwskJ0X089wtGJ0PiNcBCA-__DK-qZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIaIRKDWwHdb8L-zZOpFnzLrWiFQg" title="AJ Madison Pro" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Template/footerlogo.png" width="284" height="76" alt="AJ Madison Pro" border="0" style="display:block"></a></td>
+																						</tr>
+																					</tbody>
+																				</table>
+																				<table class="full-width" width="174" align="right" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:174px;">
+																					<tbody>
+																						<tr>
+																							<td class="height-auto pad-t-20" valign="bottom" height="76" style="vertical-align:bottom;"><a href="http://enews.ajmadison.com/q/jJzoClB3hsW0XGOhbG5d1i5WAR30eAFajytZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIIeoellVheJuLlg6HU8owsuSHrFg" title="GSA Contract Holder" target="_blank"><img src="https://mediacdn.espssl.com/8097/Shared/Template/gsalogo.png" class="center" alt="GSA Contract Holder" width="174" border="0" style="display:block"></a></td>
+																						</tr>
+																					</tbody>
+																				</table>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="copy13 contentPadding20" align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:14px; color:#3f3f3f; padding:24px 0 35px 0; text-align:center;">
+																	<p> You're receiving this email because you subscribed at&nbsp;<a href="http://enews.ajmadison.com/q/UdOnYyI9e6y0X12VNQx5E5fV2egbIyNsRErZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOI0R64oyLIdpALkCCQx0kpM89EfsA" title="ajmadison.com" target="_blank" style="color:#3f3f3f; text-decoration:none;">ajmadison.com</a>.<br>
+																	We promise to use your information only according to our <a href="http://enews.ajmadison.com/q/iZX_e7rs67c0Xm2dRNqVs1X3D4Vl9PPABJVZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOICyZoTgKFeZuLs8GfiYvrAWgsnYA" title="Privacy Policy" target="_blank" style="color:#3f3f3f; text-decoration:underline;">privacy&nbsp;policy</a>.</p>
+																	<p>
+																	&copy; 2021 AJ Madison Inc.<br>
+																	<a href="http://enews.ajmadison.com/q/dIsCXL3exj40XsmV1rqHEjfd-AartbOq6r1ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIuYKCBqrucrFLnNWMc-pJ_YbmDig" title="3605 13TH Avenue Brooklyn, NY 11218" target="_blank" style="color:#3f3f3f; text-decoration:none;">3605 13TH Avenue Brooklyn, NY 11218</a> <br>
+																	<a href="tel:800-570-3355" title="(800) 570-3355" target="_blank" style="color:#3f3f3f; text-decoration:none;">(800) 570-3355</a> | <a href="mailto:sales@ajmadison.com" title="sales@ajmadison.com" target="_blank" style="color:#3f3f3f; text-decoration:none;">sales@ajmadison.com</a> <br>
+																	<br>
+																	<a href="http://enews.ajmadison.com/q/2LH_6z6Y9wtpY6w6LWIvArVTIYSNXOQCLRnHQnzBIV60P-GBZtjwgUhBk" title="  from future emails.
+																	<!-- MOBILE BROWSER LINK -->
+																	</p>
+																	<table class="mobile-show" width="100%" cellpadding="0" cellspacing="0" border="0">
+																		<tbody>
+																			<tr style="mso-hide:all; width:0; max-height:0; overflow:hidden; display:none; float:left;">
+																				<td align="center" style="padding-top:20px;"><a href="http://enews.ajmadison.com/q/lekxTLTYKpsvY8aTrMKtaeZi4YkKsqghykxkt6B44Za3aSGQUDrnloQPD" title="View in Browser" target="_blank" style="color:#3f3f3f;"><strong style="font-weight:normal;">View in Browser</strong></a></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																	<!-- END MOBILE BROWSER LINK --></td>
+																</tr>
+															</tbody>
+														</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- END FOOTER --></td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- GMAIL FIX - DO NOT REMOVE -->
+					<table class="hide" width="650" align="center" cellpadding="0" cellspacing="0" border="0" style="display:none; width:650px; min-width:650px; max-width:650px;">
+						<tbody>
+							<tr>
+								<td><img src="https://mediacdn.espssl.com/1/Shared/2014/LCS/Boilerplate/spacer.gif" width="650" height="20" border="0" style="display: block; min-width: 650px; max-width: 650px;"></td>
+							</tr>
+						</tbody>
+					</table>
+					<div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					&nbsp; &nbsp; &nbsp;
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+					<!-- END GMAIL FIX - DO NOT REMOVE --></td>
+				</tr>
+			</tbody>
+		</table>
+	
+<img src="http://enews.ajmadison.com/q/nS1ihUSuatmd9hN_xs0E5viEBy8vOjvBOs" alt="" width="20" height="1"></body>
+</html>

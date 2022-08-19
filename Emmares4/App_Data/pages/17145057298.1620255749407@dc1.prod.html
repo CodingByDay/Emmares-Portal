@@ -1,0 +1,687 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+<meta charset="utf-8">
+<!-- utf-8 works for most cases -->
+<meta content="width=device-width" name="viewport">
+<!-- Forcing initial-scale shouldn't be necessary -->
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<!-- Use the latest (edge) version of IE rendering engine -->
+<meta name="x-apple-disable-message-reformatting">
+<!-- Disable auto-scale in iOS 10 Mail entirely -->
+<meta content="telephone=no,address=no,email=no,date=no,url=no" name="format-detection">
+<!-- Tell iOS not to automatically link certain text strings. -->
+
+<!-- The title tag shows in email notifications, like Android 4.4. -->
+<!-- Web Font / @font-face : BEGIN -->
+<!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+<!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+<!--[if mso]>
+<DI_LF/>        <style>
+<DI_LF/>            * {
+<DI_LF/>                font-family: sans-serif !important;
+<DI_LF/>            }
+<DI_LF/>        </style>
+<DI_LF/>    <![endif]-->
+<!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+<!--[if !mso]><!-->
+<!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+<!--<![endif]-->
+<!-- Web Font / @font-face : END -->
+<!-- CSS Reset : BEGIN -->
+<style>
+/* What it does: Remove spaces around the email design added by some email clients. */ 
+ /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */ 
+ html, 
+ body { 
+ margin: 0 !important; 
+ padding: 0 !important; 
+ height: 100% !important; 
+ width: 100% !important; 
+ } 
+ /* What it does: Stops email clients resizing small text. */ 
+ * { 
+ -ms-text-size-adjust: 100%; 
+ -webkit-text-size-adjust: 100%; 
+ } 
+ /* What it does: Centers email on Android 4.4 */ 
+ div[style*="margin: 16px 0"] { 
+ margin: 0 !important; 
+ } 
+ /* What it does: Stops Outlook from adding extra spacing to tables. */ 
+ table, 
+ td { 
+ mso-table-lspace: 0pt !important; 
+ mso-table-rspace: 0pt !important; 
+ } 
+ /* What it does: Replaces default bold style. */ 
+ th { 
+ font-weight: normal; 
+ } 
+ /* What it does: Fixes webkit padding issue. */ 
+ table { 
+ border-spacing: 0 !important; 
+ border-collapse: collapse !important; 
+ table-layout: fixed !important; 
+ margin: 0 auto !important; 
+ } 
+ /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */ 
+ a { 
+ text-decoration: none; 
+ } 
+ /* What it does: Uses a better rendering method when resizing images in IE. */ 
+ img { 
+ -ms-interpolation-mode: bicubic; 
+ } 
+ /* What it does: A work-around for email clients meddling in triggered links. */ 
+ a[x-apple-data-detectors], /* iOS */ 
+ .unstyle-auto-detected-links a, 
+ .aBn { 
+ border-bottom: 0 !important; 
+ cursor: default !important; 
+ color: inherit !important; 
+ text-decoration: none !important; 
+ font-size: inherit !important; 
+ font-family: inherit !important; 
+ font-weight: inherit !important; 
+ line-height: inherit !important; 
+ } 
+ /* What it does: Prevents Gmail from changing the text color in conversation threads. */ 
+ .im { 
+ color: inherit !important; 
+ } 
+ /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */ 
+ .a6S { 
+ display: none !important; 
+ opacity: 0.01 !important; 
+ } 
+ /* If the above doesn't work, add a .g-img class to any image in question. */ 
+ img.g-img + div { 
+ display: none !important; 
+ } 
+ /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89 */ 
+ /* Create one of these media queries for each additional viewport size you'd like to fix */ 
+ /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */ 
+ @media only screen and (min-device-width: 320px) and (max-device-width: 374px) { 
+ u ~ div .email-container { 
+ min-width: 320px !important; 
+ } 
+ } 
+ /* iPhone 6, 6S, 7, 8, and X */ 
+ @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { 
+ u ~ div .email-container { 
+ min-width: 375px !important; 
+ } 
+ } 
+ /* iPhone 6+, 7+, and 8+ */ 
+ @media only screen and (min-device-width: 414px) { 
+ u ~ div .email-container { 
+ min-width: 414px !important; 
+ } 
+ } 
+ a:active, 
+ a:visited { 
+ color: #000000; 
+ } 
+</style>
+<!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+<!--[if gte mso 9]>
+<DI_LF/>    <xml>
+<DI_LF/>        <o:OfficeDocumentSettings>
+<DI_LF/>            <o:AllowPNG/>
+<DI_LF/>            <o:PixelsPerInch>96</o:PixelsPerInch>
+<DI_LF/>        </o:OfficeDocumentSettings>
+<DI_LF/>    </xml>
+<DI_LF/>    <![endif]-->
+<!-- CSS Reset : END -->
+<!-- Progressive Enhancements : BEGIN -->
+<style>
+/ * What it does: Hover styles for buttons */ 
+ .button-td, 
+ .button-a { 
+ transition: all 100ms ease-in; 
+ } 
+ .button-td-primary, 
+ .button-a-primary { 
+ background: #ffffff !important; 
+ border-color: #CD9834 !important; 
+ border-width: 3px !important; 
+ border-radius: 0px !important; 
+ } 
+ /* .button-td-primary:hover, 
+ .button-a-primary:hover { 
+ background: #555555 !important; 
+ border-color: #555555 !important; 
+ }*/ 
+ .button-td-primary:hover, 
+ .button-a-primary:hover { 
+ background: #CD9834 !important; 
+ /*border-color: #CD9834 !important;*/ 
+ } 
+ /* Media Queries */ 
+ @media screen and (max-width: 600px) { 
+ .email-container { 
+ width: 100% !important; 
+ margin: auto !important; 
+ } 
+ /* What it does: Forces table cells into full-width rows. */ 
+ .stack-column, 
+ .stack-column-center { 
+ display: block !important; 
+ width: 100% !important; 
+ max-width: 100% !important; 
+ direction: ltr !important; 
+ } 
+ /* And center justify these ones. */ 
+ .stack-column-center { 
+ text-align: center !important; 
+ } 
+ /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */ 
+ .center-on-narrow { 
+ text-align: center !important; 
+ display: block !important; 
+ margin-left: auto !important; 
+ margin-right: auto !important; 
+ float: none !important; 
+ } 
+ table.center-on-narrow { 
+ display: inline-block !important; 
+ } 
+ /* What it does: Adjust typography on small screens to improve readability */ 
+ .email-container p { 
+ font-size: 16px !important; 
+ } 
+ } 
+ .auto-style1 { 
+ width: 100%; 
+ height: 21px; 
+ } 
+</style>
+<!-- Progressive Enhancements : END -->
+</head>
+<!--
+<DI_LF/>  The email background color (#222222) is defined in three places:
+<DI_LF/>  1. body tag: for most email clients
+<DI_LF/>  2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+<DI_LF/>  3. mso conditional: For Windows 10 Mail
+<DI_LF/>-->
+<body style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #ffffff;" width="100%">
+
+<center style="width: 100%; background-color: #ffffff;">
+<!--[if mso | IE]>
+<DI_LF/>    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;">
+<DI_LF/>    <tr>
+<DI_LF/>    <td>
+<DI_LF/>    <![endif]-->
+<!-- Visually Hidden Preheader Text : BEGIN -->
+<div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+  New Roads lead to spring adventures 
+</div>
+<!-- Visually Hidden Preheader Text : END -->
+<!-- Create white space after the desired preview text so email clients dont pull other distracting text into the inbox preview. Extend as necessary. -->
+<!-- Preview Text Spacing Hack : BEGIN -->
+<div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+  &zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160;&zwnj;&#160; 
+</div>
+<!-- Preview Text Spacing Hack : END -->
+<!-- Email Body : BEGIN -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto;" width="600">
+<!-- Email Header : BEGIN -->
+<tr>
+<td style="padding: 20px 0; text-align: center">
+<img alt="CHEVROLET" border="0" src="http://img.delivery.net/cm50content/19625/201000/chevy-logo.jpg" style="height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #ffffff;" width="150"> 
+ </td>
+</tr>
+<!-- Email Header : END -->
+<!-- Hero Image, Flush : BEGIN -->
+<tr>
+<td style="background-color: #ffffff;">
+<img alt="NEW ROADS MAGAZINE" border="0" class="g-img" src="http://img.delivery.net/cm50content/19625/201000/header.jpg" style="width: 100%; max-width: 600px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" width="600"> 
+ </td>
+</tr>
+<!-- Hero Image, Flush : END -->
+<!-- 1 Column Text + Button : BEGIN -->
+<tr>
+<td style="background-color: #ffffff;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding: 20px; font-family: Arial; font-size: 16px; line-height: 21px; color: #555555;">
+<p style="margin: 0 0 10px;"><i>New Roads</i> magazine is the one place where you&#8217;ll find fascinating, fun, and educational stories about everything from our vehicle lineup to the amazing people behind the scenes at Chevy.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- 1 Column Text + Button : END -->
+<!-- Hero Image, Flush : BEGIN -->
+<tr>
+<td style="background-color: #ffffff;">
+<img alt="BASE CAMP" border="0" class="g-img" src="http://img.delivery.net/cm50content/19625/201000/story01-basecamp.jpg" style="width: 100%; max-width: 600px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" width="600"> 
+ </td>
+</tr>
+<!-- Hero Image, Flush : END -->
+<!-- 1 Column Text + Button : BEGIN -->
+<tr>
+<td style="background-color: #ffffff;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding: 20px; font-family: Arial; font-size: 16px; line-height: 21px; color: #555555;">
+<h1 style="margin: 0 0 10px; font-size: 22px; line-height: 27px; color: #333333; font-weight: normal;">Base Camp</h1>
+<p style="margin: 0 0 10px;">The Tonto National Forest offers 900 miles of trails, 2,600 miles of roads, and endless adventures. It&#8217;s perfect for a solo backpacking excursion with the Chevrolet Trailblazer ACTIV.</p>
+</td>
+</tr>
+<tr>
+<td style="padding: 0 20px 20px;">
+<!-- Button : BEGIN -->
+<table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: auto;">
+<tr>
+<td class="button-td button-td-primary">
+<!--                                            <a class="button-a button-a-primary" href="https://www.chevrolet.com/new-roads/crossovers-suvs/camping-in-trailblazer" style="background: #ffffff; border: 1px solid #f26522; font-family: Roboto,Helvetica,sans-serif; font-size: 16px; line-height: 16px; font-weight:bold; text-decoration: none; padding: 13px 17px; color: #000000; display: block; border-radius: 4px;">Read the story</a>-->
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqkY.6hFW.bW89MQ%5F%5FDKVeFSQ0" class="button-a button-a-primary" style="background: #ffffff; border: 1px solid #f26522; font-family: Roboto,Helvetica,sans-serif; font-size: 16px; line-height: 16px; font-weight:bold; text-decoration: none; padding: 13px 17px; color: #000000; display: block;">Read the story</a> 
+ </td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- 1 Column Text + Button : END -->
+<!-- Thumbnail Left, Text Right : BEGIN -->
+<tr>
+<td dir="ltr" style="padding: 10px 0px;; background-color: #ffffff;" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<!-- Column : BEGIN -->
+<td class="stack-column-center" width="49.995%">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td dir="ltr" style="padding: 0 0px;" valign="top">
+<img alt="2021 CHEVROLET SILVERADO 1500" border="0" src="http://img.delivery.net/cm50content/19625/201000/story02-multiflex.jpg" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;" width="310"> 
+ </td>
+</tr>
+</table>
+</td>
+<!-- Column : END -->
+<!-- Column : BEGIN -->
+<td class="stack-column-center" width="49.995%">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td dir="ltr" style="font-family: Arial; font-size: 16px; line-height: 21px; color: #555555; font-weight: normal;padding: 10px 20px; text-align: left;" valign="top">
+<h1 style="margin: 0 0 10px 0; font-family: Arial; font-size: 22px; line-height: 27px; color: #333333; font-weight: normal;">Watch Us Flex</h1>
+<p style="margin: 0 0 30px 0;">The 2021 Chevy Silverado 1500 is full of cool and useful features. But the Multi-Flex Tailgate steals the show. Its multiple configurations make loading and unloading a breeze.</p>
+<!-- Button : BEGIN -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:left;">
+<tr>
+<td class="button-td button-td-primary">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqka.6hFW.bW89MQ%5F%5FDLQOFSY0" class="button-a button-a-primary" style="background: #ffffff; border: 1px solid #f26522; font-family: Roboto,Helvetica,sans-serif; font-size: 16px; line-height: 16px; font-weight:bold; text-decoration: none; padding: 13px 17px; color: #000000; display: block;">Check it out</a> 
+ </td>
+</tr>
+<!--                                               <tr>
+<DI_LF/>                                                    <td>&nbsp;</td>
+<DI_LF/>                                               </tr>-->
+<!-- Clear Spacer : BEGIN -->
+<tr>
+<td aria-hidden="true" height="20" style="font-size: 0px; line-height: 0px;">&#160; 
+ </td>
+</tr>
+<!-- Clear Spacer : END -->
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+<!-- Column : END -->
+</tr>
+</table>
+</td>
+</tr>
+<!-- Thumbnail Left, Text Right : END -->
+<!-- Hero Image, Flush : BEGIN -->
+<tr>
+<td style="background-color: #ffffff;">
+<img alt="TELVA MCGRUDER" border="0" class="g-img" src="http://img.delivery.net/cm50content/19625/201000/story03-telva.jpg" style="width: 100%; max-width: 600px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; font-weight:bold; color: #555555; margin: auto; display: block;" width="600"> 
+ </td>
+</tr>
+<!-- Hero Image, Flush : END -->
+<!-- 1 Column Text + Button : BEGIN -->
+<tr>
+<td style="background-color: #ffffff;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding: 20px; font-family: Arial; font-size: 16px; line-height: 21px; color: #555555;">
+<h1 style="margin: 0 0 10px; font-size: 22px; line-height: 27px; color: #333333; font-weight: normal;">Meet Telva McGruder</h1>
+<p style="margin: 0 0 10px;">Martial arts, community service, and STEM are just a few of the things that motivate Telva McGruder, GM&#8217;s chief diversity, equity, and inclusion officer.</p>
+</td>
+</tr>
+<tr>
+<td style="padding: 0 20px 20px;">
+<!-- Button : BEGIN -->
+<table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: auto;">
+<tr>
+<td class="button-td button-td-primary">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqkc.6hFW.bW89MQ%5F%5FDLXCFSa0" class="button-a button-a-primary" style="background: #ffffff; border: 1px solid #f26522; font-family: Roboto,Helvetica,sans-serif; font-size: 16px; line-height: 16px; font-weight:bold; text-decoration: none; padding: 13px 17px; color: #000000; display: block;">Find out more</a> 
+ </td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- 1 Column Text + Button : END -->
+<!-- Clear Spacer : BEGIN -->
+<tr>
+<td aria-hidden="true" height="20" style="font-size: 0px; line-height: 0px;">&#160; 
+ </td>
+</tr>
+<!-- Clear Spacer : END -->
+<!-- Hero Image, Flush : BEGIN -->
+<tr>
+<td style="background-color: #ffffff;">
+<img alt="TREK" border="0" class="g-img" src="http://img.delivery.net/cm50content/19625/201000/story04-tech-trek.jpg" style="width: 100%; max-width: 600px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" width="600"> 
+ </td>
+</tr>
+<!-- Hero Image, Flush : END -->
+<!-- 1 Column Text + Button : BEGIN -->
+<tr>
+<td style="background-color: #ffffff;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding: 20px; font-family: Arial; font-size: 16px; line-height: 21px; color: #555555;">
+<h1 style="margin: 0 0 10px; font-size: 22px; line-height: 27px; color: #333333; font-weight: normal;">Take a Tech Trek</h1>
+<p style="margin: 0 0 10px;">Escaping the rat race is nothing new. For decades, people have been leaving the weekday chaos behind for more remote, peaceful landscapes. But with the All-New 2021 Chevy Tahoe and a surplus of tech-driven tools, the wilderness weekend getaway has evolved big-time.</p>
+</td>
+</tr>
+<tr>
+<td style="padding: 0 20px 20px;">
+<!-- Button : BEGIN -->
+<table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: auto;">
+<tr>
+<td class="button-td button-td-primary">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqke.6hFW.bW89MQ%5F%5FDLdWFSc0" class="button-a button-a-primary" style="background: #ffffff; border: 1px solid #f26522; font-family: Roboto,Helvetica,sans-serif; font-size: 16px; line-height: 16px; font-weight:bold; text-decoration: none; padding: 13px 17px; color: #000000; display: block;">See the tech</a> 
+ </td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- 1 Column Text + Button : END -->
+<!-- Thumbnail Right, Text Left : BEGIN -->
+<tr>
+<td dir="rtl" style="padding: 10px 0px; background-color: #ffffff;" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<!-- Column : BEGIN -->
+<td class="stack-column-center" width="49.995%">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td dir="ltr" style="padding: 0 0px;" valign="top">
+<img alt="ELECTRIC" border="0" src="http://img.delivery.net/cm50content/19625/201000/story05-future-electric.jpg" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;" width="310"> 
+ </td>
+</tr>
+</table>
+</td>
+<!-- Column : END -->
+<!-- Column : BEGIN -->
+<td class="stack-column-center" width="49.995%">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td dir="ltr" style="font-family: Arial; font-size: 16px; line-height: 21px; color: #555555; font-weight: normal; padding: 10px 20px; text-align: left;" valign="top">
+<h1 style="margin: 0 0 10px 0; font-family: Arial; font-size: 22px; line-height: 27px; color: #333333; font-weight: normal;">Future Electric</h1>
+<p style="margin: 0 0 30px 0;">The future is all about electric vehicles, and Chevy is leveraging partnerships to build the charging infrastructure to support it.</p>
+<!-- Button : BEGIN -->
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:left;">
+<tr>
+<td class="button-td button-td-primary">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqkg.6hFW.bW89MQ%5F%5FDMEKFSe0" class="button-a button-a-primary" style="background: #ffffff; border: 1px solid #f26522; font-family: Roboto,Helvetica,sans-serif; font-size: 16px; line-height: 16px; font-weight:bold; text-decoration: none; padding: 13px 17px; color: #000000; display: block;">Read about the plan</a> 
+ </td>
+</tr>
+<!--                                               <tr>
+<DI_LF/>                                                    <td>&nbsp;</td>
+<DI_LF/>                                               </tr>-->
+<!-- Clear Spacer : BEGIN -->
+<tr>
+<td aria-hidden="true" height="20" style="font-size: 0px; line-height: 0px;">&#160; 
+ </td>
+</tr>
+<!-- Clear Spacer : END -->
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+<!-- Column : END -->
+</tr>
+</table>
+</td>
+</tr>
+<!-- Thumbnail Right, Text Left : END -->
+<!-- Hero Image, Flush : BEGIN -->
+<tr>
+<td style="background-color: #ffffff;">
+<img alt="SUV" border="0" class="g-img" src="http://img.delivery.net/cm50content/19625/201000/story06-suv-quiz.jpg" style="width: 100%; max-width: 600px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" width="600"> 
+ </td>
+</tr>
+<!-- Hero Image, Flush : END -->
+<!-- 1 Column Text + Button : BEGIN -->
+<tr>
+<td style="background-color: #ffffff;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding: 20px; font-family: Arial; font-size: 16px; line-height: 21px; color: #555555;">
+<h1 style="margin: 0 0 10px; font-size: 22px; line-height: 27px; color: #333333; font-weight: normal;">Which SUV Fits You?</h1>
+<p style="margin: 0 0 10px;">Big family? Just the two of you? Tell us a little about your needs, personal style, and driving requirements, and we&#8217;ll tell you which of our seven Chevy SUVs fits you best.</p>
+</td>
+</tr>
+<tr>
+<td style="padding: 0 20px 20px;">
+<!-- Button : BEGIN -->
+<table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: auto;">
+<tr>
+<td class="button-td button-td-primary">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqki.6hFW.bW89MQ%5F%5FDMKeFTA0" class="button-a button-a-primary" style="background: #ffffff; border: 1px solid #f26522; font-family: Roboto,Helvetica,sans-serif; font-size: 16px; line-height: 16px; font-weight:bold; text-decoration: none; padding: 13px 17px; color: #000000; display: block;">Find your SUV</a> 
+ </td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- 1 Column Text + Button : END -->
+<!-- Clear Spacer : BEGIN -->
+<tr>
+<td aria-hidden="true" height="10" style="font-size: 0px; line-height: 0px;">&#160; 
+ </td>
+</tr>
+<!-- Clear Spacer : END -->
+<!-- 1 Column HR : BEGIN -->
+<tr>
+<td style="width:100%;">
+<hr style="width:100%;">
+</td>
+</tr>
+<!-- 1 Column HR : END -->
+<!-- 1 Column Text + Button : BEGIN -->
+<tr>
+<td style="background-color: #ffffff;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding: 0px 20px; font-family: Arial; font-size: 16px; line-height: 21px; color: #555555;">
+<h1 style="font-size: 22px; line-height: 27px; color: #333333; font-weight: normal;">Want more information?</h1>
+<p style="margin: 0 0 10px;"><a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqkk.6hFW.bW89MQ%5F%5FDMRSFTC0" style="text-decoration:underline; color: #555555;">Sign up</a> to receive more information on your favorite Chevy vehicles.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- 1 Column Text + Button : END -->
+<!-- 6 Even Columns : BEGIN -->
+<tr>
+<td style="padding: 10px; background-color: #ffffff;">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td class="stack-column-center" valign="top" width="16.66%">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding: 10px; text-align: center">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqkm.6hFW.bW89MQ%5F%5FDMYGFTE0">
+ <img alt="BOLT EV" border="0" src="http://img.delivery.net/cm50content/19625/201000/jelly01-boltev.jpg" style="width: 100%; max-width: 170px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;" width="75"> 
+</a> 
+ </td>
+</tr>
+</table>
+</td>
+<td class="stack-column-center" valign="top" width="16.66%">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding: 10px; text-align: center">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqko.6hFW.bW89MQ%5F%5FDMeaFTG0">
+ <img alt="TRAILBLAZER" border="0" src="http://img.delivery.net/cm50content/19625/201000/jelly02-trailblazer.jpg" style="width: 100%; max-width: 170px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;" width="75"> 
+</a> 
+ </td>
+</tr>
+</table>
+</td>
+<td class="stack-column-center" valign="top" width="16.66%">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding: 10px; text-align: center">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqkq.6hFW.bW89MQ%5F%5FDNFOFTI0">
+ <img alt="BLAZER" border="0" src="http://img.delivery.net/cm50content/19625/201000/jelly03-blazer.jpg" style="width: 100%; max-width: 170px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;" width="75"> 
+</a> 
+ </td>
+</tr>
+</table>
+</td>
+<td class="stack-column-center" valign="top" width="16.66%">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding: 10px; text-align: center">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqks.6hFW.bW89MQ%5F%5FDNMCFTK0">
+ <img alt="TAHOE" border="0" src="http://img.delivery.net/cm50content/19625/201000/jelly04-tahoe.jpg" style="width: 100%; max-width: 170px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;" width="75"> 
+</a> 
+ </td>
+</tr>
+</table>
+</td>
+<td class="stack-column-center" valign="top" width="16.66%">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding: 10px; text-align: center">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqku.6hFW.bW89MQ%5F%5FDNSWFTM0">
+ <img alt="SILVERADO" border="0" src="http://img.delivery.net/cm50content/19625/201000/jelly05-silverado.jpg" style="width: 100%; max-width: 170px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;" width="75"> 
+</a> 
+ </td>
+</tr>
+</table>
+</td>
+<td class="stack-column-center" valign="top" width="16.66%">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+<tr>
+<td style="padding: 10px; text-align: center">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqkw.6hFW.bW89MQ%5F%5FDNZKFTO0">
+ <img alt="CORVETTE" border="0" src="http://img.delivery.net/cm50content/19625/201000/jelly06-corvette.jpg" style="width: 100%; max-width: 170px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;" width="75"> 
+</a> 
+ </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- 6 Even Columns : END -->
+<!-- Clear Spacer : BEGIN -->
+<tr>
+<td aria-hidden="true" height="10" style="font-size: 0px; line-height: 0px;">&#160; 
+ </td>
+</tr>
+<!-- Clear Spacer : END -->
+</table>
+<!-- Email Body : END -->
+<!-- Email Footer : BEGIN -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto;" width="600">
+<tr>
+<td style="width:100%;">
+<hr style="width:100%;">
+</td>
+</tr>
+<!-- Clear Spacer : BEGIN -->
+<tr>
+<td aria-hidden="true" height="5" style="font-size: 0px; line-height: 0px;">&#160; 
+ </td>
+</tr>
+<!-- Clear Spacer : END -->
+<tr>
+<td style="width:100%; text-align:right;">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqky.6hFW.bW89MQ%5F%5FDNfeFTQ0" title="Facebook"><img alt="FACEBOOK" src="http://img.delivery.net/cm50content/19625/201000/social-facebook.jpg"></a> 
+ <a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqk%5F.6hFW.bW89MQ%5F%5FDLJaFSW0" title="Instagram"><img alt="INSTAGRAM" src="http://img.delivery.net/cm50content/19625/201000/social-instagram.jpg"></a> 
+ <a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eql0.6hFW.bW89MQ%5F%5FDGRQFRI0" title="Twitter"><img alt="TWITTER" src="http://img.delivery.net/cm50content/19625/201000/social-twitter.jpg"></a> 
+ <a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eql2.6hFW.bW89MQ%5F%5FDGYEFRK0" title="You Tube"><img alt="YOUTUBE" src="http://img.delivery.net/cm50content/19625/201000/social-youtube.jpg"></a> 
+ </td>
+</tr>
+<tr>
+<td style="padding: 5px 20px;width: 100%;font-size: 12px; line-height:15px; font-family: Arial, Helvetica, sans-serif; mso-height-rule: exactly; text-align: left; color: #888888;">
+  Add <a class='' style='color: #888888;' target='_blank' href="mailto:Your.Chevrolet.Team@emails.chevrolet.com">Your.Chevrolet.Team@emails.chevrolet.com</a> to your address book. 
+ </td>
+</tr>
+<tr>
+<td style="padding: 5px 20px;width: 100%;font-size: 12px; line-height:15px; font-family: Arial, Helvetica, sans-serif; mso-height-rule: exactly; text-align: left; color: #888888;">
+  You are receiving this email advertisement because you expressed an interest in Chevrolet. 
+ </td>
+</tr>
+<tr>
+<td class="auto-style1" style="padding: 5px 20px;font-size: 12px; line-height:15px; font-family: Arial, Helvetica, sans-serif; mso-height-rule: exactly; text-align: left; color: #888888;">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eql4.6hFW.bW89MQ%5F%5FDGeYFRM0" style="text-decoration:underline; color: #888888;">Contact&#160;Us</a> 
+  | <a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eql6.6hFW.bW89MSZpPXB1Ymxpc2hAZW1tYXJlcy5uZXQ%5FdeIHfI00" style="text-decoration:underline; color: #888888;"> </a> 
+  | <a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eql8.6hFW.bW89MQ%5F%5FDHMAFRQ0" style="text-decoration:underline; color: #888888;">Copyright&#160;&amp;&#160;Trademark&#160;Information</a> 
+  | <a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqlA.6hFW.bW89MQ%5F%5FDIJaFRZ0" style="text-decoration:underline; color: #888888;">GM&#160;Privacy&#160;Statement</a> 
+ </td>
+</tr>
+<tr>
+<td style="padding: 5px 20px;width: 100%;font-size: 12px; line-height:15px; font-family: Arial, Helvetica, sans-serif; mso-height-rule: exactly; text-align: left; color: #888888;">
+<a href="http://emails.chevrolet.com/r/r?2.1.3Lq.2lB.1E2lOQ.FzxD0I..H.eqlC.6hFW.bW89MQ%5F%5FDIQOFRb0" style="text-decoration:underline; color: #888888;">Chevrolet</a> | 100 Renaissance Center | 482.A00.MAR | Detroit, MI 48265 | 1&#8209;800&#8209;222&#8209;1020 
+ </td>
+</tr>
+<tr>
+<td style="padding: 5px 20px;width: 100%;font-size: 12px; line-height:15px; font-family: Arial, Helvetica, sans-serif; mso-height-rule: exactly; text-align: left; color: #888888;">
+  &#169; 2021 General Motors. All Rights Reserved. 
+ </td>
+</tr>
+</table>
+<!-- Email Footer : END -->
+<!--[if mso | IE]>
+<DI_LF/>    </td>
+<DI_LF/>    </tr>
+<DI_LF/>    </table>
+<DI_LF/>    <![endif]-->
+</center>
+
+
+<br>
+<br>
+<br>
+<font color="#666666" face="Verdana,Helvetica" originaltag="yes" size="1"></font><table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size:0; line-height:0; display:none !important;">
+<div style="display:none;font-size:0px;color:#ffffff;line-height:0px;max-height:0px;max-width:0px;opacity:0;overflow:hidden">
+<img width="1" height="1" src="http://open.delivery.net/o?2.2.3Lq.2lB.1E2lOQ.FzxD0I..H..6hFW.ZD0wJm1vPTE%5FDDaGFQc0" alt=" ">
+</div>
+</td>
+</tr>
+</table>
+<br>
+</body>
+</html>

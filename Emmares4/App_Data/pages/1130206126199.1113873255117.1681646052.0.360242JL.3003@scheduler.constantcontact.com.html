@@ -1,0 +1,829 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if gte mso 9]>
+<style id="ol-styles">
+/* OUTLOOK-SPECIFIC STYLES */
+li {
+text-indent: -1em;
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+ul, ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+sup {
+font-size: 85% !important;
+}
+sub {
+font-size: 85% !important;
+}
+</style>
+<![endif]-->
+<style id="template-styles-head" data-premailer="ignore">
+.footer-main-width {
+width: 610px!important;
+max-width: 610px;
+}
+table {
+border-collapse: collapse;
+table-layout: fixed;
+}
+.bgimage {
+table-layout: auto;
+}
+.preheader-container {
+color: transparent;
+display: none;
+font-size: 1px;
+line-height: 1px;
+max-height: 0px;
+max-width: 0px;
+opacity: 0;
+overflow: hidden;
+}
+/* LIST AND p STYLE OVERRIDES */
+.editor-text p {
+margin: 0;
+padding: 0;
+margin-bottom: 0;
+}
+.editor-text ul,
+.editor-text ol {
+padding: 0;
+margin: 0 0 0 40px;
+}
+.editor-text li {
+padding: 0;
+margin: 0;
+line-height: 1.2;
+}
+/* ==================================================
+CLIENT/BROWSER SPECIFIC OVERRIDES
+================================================== */
+/* IE: correctly scale images with w/h attbs */
+img {
+-ms-interpolation-mode: bicubic;
+}
+/* Text Link Style Reset */
+a {
+text-decoration: underline;
+}
+/* iOS: Autolink styles inherited */
+a[x-apple-data-detectors] {
+text-decoration: underline !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+color: inherit !important;
+}
+/* FF/Chrome: Smooth font rendering */
+.editor-text, .MainTextFullWidth {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+/* Gmail/Web viewport fix */
+u + .body .template-body {
+width: 610px;
+}
+@media only screen and (max-width:480px) {
+u + .body .template-body {
+width: 100% !important;
+}
+}
+/* Office365/Outlook.com image reset */
+[office365] button, [office365] .divider-base div, [office365] .spacer-base div, [office365] .editor-image div { display: block !important; }
+</style>
+<style>@media only screen and (max-width:480px) {
+table {
+border-collapse: collapse;
+}
+.main-width {
+width: 100% !important;
+}
+.mobile-hidden {
+display: none !important;
+}
+td.OneColumnMobile {
+display: block !important;
+}
+.OneColumnMobile {
+width: 100% !important;
+}
+td.editor-col .editor-text {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-image.editor-image-hspace-on td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-button-container {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .editor-social td {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col .block-margin {
+padding-left: 20px !important; padding-right: 20px !important;
+}
+td.editor-col td.block-margin .editor-text {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-image.editor-image-hspace-on td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-button-container {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+td.editor-col td.block-margin .editor-social td {
+padding-left: 0px !important; padding-right: 0px !important;
+}
+.editor-button td > table tr > td {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-button td > table tr > td td {
+padding: 9px 15px 10px 15px !important;
+}
+.layout {
+padding: 15px 9px 15px 9px !important;
+}
+.layout-container-border {
+padding: 0px 0px 0px 0px !important;
+}
+.layout-container {
+padding: 0px 0px 0px 0px !important;
+}
+.editor-image img {
+width: auto !important; margin-left: auto !important; margin-right: auto !important;
+}
+.editor-image .image-cell {
+padding-bottom: 15px !important;
+}
+.editor-text {
+font-size: 16px !important;
+}
+.section-headline-text {
+font-size: 24px !important;
+}
+.headline-text {
+font-size: 24px !important;
+}
+.subheadline-text {
+font-size: 20px !important;
+}
+.feature {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.layout-outer {
+padding: 0px 20px !important;
+}
+.feature-heading-text {
+font-size: 20px !important;
+}
+.feature-text {
+font-size: 16px !important;
+}
+.split.editor-col {
+margin-top: 0px !important;
+}
+.split.editor-col ~ .split.editor-col {
+margin-top: 10px !important;
+}
+.split-layout-margin {
+padding: 0px 20px !important;
+}
+.article {
+padding-top: 0px !important; padding-bottom: 0px !important;
+}
+.article-heading-text {
+font-size: 20px !important;
+}
+.article-text {
+font-size: 16px !important;
+}
+.social-text {
+font-size: 14px !important;
+}
+.cpn-heading-text {
+font-size: 28px !important;
+}
+.action-block .poll-answer {
+width: 100% !important; display: block !important;
+}
+.action-block .poll-button {
+width: 100% !important;
+}
+div.MobileFooter {
+font-size: 11px !important;
+}
+td.FooterMobile {
+padding: 0px 10px 0px 10px !important;
+}
+td.MainCenter {
+width: 100% !important;
+}
+table.MainSide {
+display: none !important;
+}
+img.MainSide {
+display: none !important;
+}
+td.MainSide {
+display: none !important;
+}
+.rsvp-button-inner {
+padding: 0px 0px 10px 0px !important;
+}
+.rsvp-button-outer {
+width: 100% !important; max-width: 100% !important;
+}
+.footer-main-width {
+width: 100% !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-mobile-hidden {
+display: none !important;
+}
+.footer-column {
+display: block !important;
+}
+.footer-mobile-stack {
+display: block !important;
+}
+.footer-mobile-stack-padding {
+padding-top: 3px;
+}
+}
+@media only screen and (max-width:320px) {
+.layout {
+padding: 0px 0px 0px 0px !important;
+}
+}
+</style>
+</head>
+<body class="body" align="center" style="width: 100%; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #FFFFFF; margin: 0px; padding: 0px;" bgcolor="#FFFFFF">
+<table class="template-body" border="0" cellpadding="0" cellspacing="0" style="text-align: center; min-width: 100%;" width="100%">
+<tr>
+<td class="preheader-container">
+<div>
+<div id="preheader" style="display: none; font-size: 1px; color: transparent; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+<span data-entity-ref="preheader"></span>
+</div>
+<img src="http://r20.rs6.net/on.jsp?ca=aae0a6d6-1435-41d8-9ba1-33f05dd973cf&a=1113873255117&c=63300e9a-aea7-11e9-97f4-d4ae528eab9a&ch=6331107e-aea7-11e9-97f4-d4ae528eab9a" alt="">
+</div>
+</td>
+</tr>
+<tr>
+<td class="template-shell-container" align="center">
+<div class="bgcolor" style="background-color: #FFFFFF;">
+<table class="bgimage" width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #FFFFFF;" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td align="center">
+<table class="main-width" width="610" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 610px;">
+<tbody>
+<tr>
+<td class="layout" align="center" valign="top" style="padding: 15px 5px;">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="layout-container-border" align="center" valign="top" style="background-color: #3C245E; padding: 0px;" bgcolor="#3C245E">
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color: #3C245E;" bgcolor="#3C245E">
+<tbody>
+<tr>
+<td class="layout-container" align="center" valign="top" style="background-color: #ffffff; padding: 0;" bgcolor="#ffffff">
+<div class="">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="two-column editor-col OneColumnMobile" width="50%" align="left" valign="top">
+<div><div class="column-resize-bar">
+<span class="line"></span>
+<span class="grabber"></span>
+</div></div>
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text " align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; color: #8f8d91; text-align: left; display: block; word-wrap: break-word; padding: 10px 10px 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div><br></div>
+<div><br></div>
+<div>
+<span style="font-size: 24px; color: rgb(63, 22, 102); font-weight: bold; font-family: Calibri, Helvetica, Arial, sans-serif;">&#xfeff;CIRE TRAVEL</span><span style="font-size: 24px; color: rgb(63, 22, 102); font-family: Calibri, Helvetica, Arial, sans-serif;"> INTELLIGENCE</span>
+</div>
+<div><span style="font-size: 14px; color: rgb(0, 0, 0);">News from a travel industry insider</span></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class="two-column editor-col OneColumnMobile" width="50%" align="left" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image content-image editor-image-hspace-on" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="right" valign="top" style="padding: 0px 20px 0px 10px;">
+<div class="publish-container">  <img alt="CIRE Travel Logo" class="" style="display: block; height: auto; max-width: 100%;" width="208" border="0" hspace="0" vspace="0" src="http://files.constantcontact.com/dca05085301/8f33c712-8bcb-4992-aa4a-e2e1c28e5132.jpg">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="divider-container editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-divider">
+<table class="editor-divider" width="100%" cellpadding="0" cellspacing="0" border="0" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="divider-container" align="center" valign="top">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-content-editor" style="cursor: default; min-width: 100%;">
+<tbody>
+<tr>
+<td class="divider-base divider-solid" width="100%" align="center" valign="top" style="padding: 7px 0px 10px;">
+<table style="width: 100%; min-width: 100%; height: 1px;" cellpadding="0" cellspacing="0" border="0" align="center">
+<tbody>
+<tr>
+<td height="1" align="center" style="padding-bottom: 9px; background-color: rgb(184, 154, 91); border-bottom-style: none; height: 1px; line-height: 1px;" bgcolor="B89A5B">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="content editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-image">
+<table class="editor-image content-image editor-image-vspace-on" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td align="center" valign="top" style="padding-top: 10px; padding-bottom: 10px;">
+<div class="publish-container">  <img alt="" class="" style="display: block; height: auto; max-width: 100%;" width="600" border="0" hspace="0" vspace="0" src="http://files.constantcontact.com/dca05085301/dac3eb77-b351-4544-8c8d-60b92afc4e4d.jpg">
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="headline editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text headline-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 36px; color: #6fbadd; text-align: center; display: block; word-wrap: break-word; font-weight: bold; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div style="text-align: left;" align="left"><a href="http://r20.rs6.net/tn.jsp?f=001ltpNxxpP5JYZvN-7_HaZ2MCsabZRRlOqkjLOLZsq6ve4c2426sqeEyEnR4kwgP9wVqwBayt5YdcVWi4q_MB5O1wEvPPWeJQzZumoSxnRpngi9Q5Bn85mUW4I6hMJXApBuDTdaFbC9do7yVebMyg39g==&c=T8H2O6fVno1ynj4Tmt_A8-qvcCI5jTWxIORSrZeqv9hEXQj-fWl9vg==&ch=yld3_c0GZJv5uzXrGzhtj_E7502kHiPvW6R-xbyy5p1w6KgQxbfUTQ==" target="_blank" style="font-size: 20px; color: rgb(63, 22, 102); text-decoration: none; font-weight: bold; font-family: Calibri, Helvetica, Arial, sans-serif; font-style: normal;">It&#x2019;s smart, interesting and fun&#x2026; just like working with CIRE Travel</a></div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text editor-text " align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; color: #8f8d91; text-align: left; display: block; word-wrap: break-word; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div><span style="font-size: 14px; color: rgb(95, 95, 95); font-weight: normal; font-family: Calibri, Helvetica, Arial, sans-serif;">You can look forward to the next Travel Intelligence edition coming to your inbox soon. We&#x2019;re looking forward to sharing our industry insider intel, smartest travel tips and favorite places all over the world with you.</span></div>
+<div><span style="font-size: 14px; color: rgb(95, 95, 95); font-weight: normal; font-family: Calibri, Helvetica, Arial, sans-serif;">&#xa0;</span></div>
+<div>
+<span style="font-size: 14px; color: rgb(107, 107, 107); font-family: Calibri, Helvetica, Arial, sans-serif;">If you need help booking an upcoming trip, please call us at </span><span style="font-size: 14px; color: rgb(60, 36, 94); font-family: Calibri, Helvetica, Arial, sans-serif; font-weight: bold;">(212) 339-2957.</span>
+</div>
+<div><br></div>
+<div>
+<span style="font-size: 14px; color: rgb(95, 95, 95); font-weight: normal; font-family: Calibri, Helvetica, Arial, sans-serif;">In the meantime, feel free to visit our </span><a href="http://r20.rs6.net/tn.jsp?f=001ltpNxxpP5JYZvN-7_HaZ2MCsabZRRlOqkjLOLZsq6ve4c2426sqeEysJ8S23spjFAMhqZ2gHO6jfps2pW43TAB_WEcMha48No0XOLMcbgIsOvcXci8N9qWXKcWQPd0lxCuOy00XBDAigZNElirHN6TUwwpS69AUcBYQt9K84Lk8=&c=T8H2O6fVno1ynj4Tmt_A8-qvcCI5jTWxIORSrZeqv9hEXQj-fWl9vg==&ch=yld3_c0GZJv5uzXrGzhtj_E7502kHiPvW6R-xbyy5p1w6KgQxbfUTQ==" target="_blank" style="font-size: 14px; color: rgb(60, 36, 94); font-weight: bold; font-family: Calibri, Helvetica, Arial, sans-serif; font-style: normal; text-decoration: underline;">Travel Lounge</a><a href="http://r20.rs6.net/tn.jsp?f=001ltpNxxpP5JYZvN-7_HaZ2MCsabZRRlOqkjLOLZsq6ve4c2426sqeEysJ8S23spjFAMhqZ2gHO6jfps2pW43TAB_WEcMha48No0XOLMcbgIsOvcXci8N9qWXKcWQPd0lxCuOy00XBDAigZNElirHN6TUwwpS69AUcBYQt9K84Lk8=&c=T8H2O6fVno1ynj4Tmt_A8-qvcCI5jTWxIORSrZeqv9hEXQj-fWl9vg==&ch=yld3_c0GZJv5uzXrGzhtj_E7502kHiPvW6R-xbyy5p1w6KgQxbfUTQ==" target="_blank" style="font-size: 14px; color: rgb(60, 36, 94); font-weight: bold; font-family: Calibri, Helvetica, Arial, sans-serif; text-decoration: none; font-style: normal;">.&#xa0;</a>
+</div>
+<div><span style="font-size: 14px; color: rgb(60, 36, 94); text-decoration: none; font-family: Calibri, Helvetica, Arial, sans-serif; font-weight: bold;">&#xfeff;</span></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="divider-container editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-divider">
+<table class="editor-divider" width="100%" cellpadding="0" cellspacing="0" border="0" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="divider-container" align="center" valign="top">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-content-editor" style="cursor: default; min-width: 100%;">
+<tbody>
+<tr>
+<td class="divider-base divider-solid" width="100%" align="center" valign="top" style="padding: 7px 0px 0px;">
+<table style="width: 100%; min-width: 100%; height: 1px;" cellpadding="0" cellspacing="0" border="0" align="center">
+<tbody>
+<tr>
+<td height="1" align="center" style="padding-bottom: 9px; background-color: rgb(184, 154, 91); border-bottom-style: none; height: 1px; line-height: 1px;" bgcolor="B89A5B">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top" style="background-color: rgb(184, 154, 91);" bgcolor="B89A5B">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text editor-text " align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; color: #8f8d91; text-align: left; display: block; word-wrap: break-word; padding: 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div style="text-align: center;" align="center"><a href="http://r20.rs6.net/tn.jsp?f=001ltpNxxpP5JYZvN-7_HaZ2MCsabZRRlOqkjLOLZsq6ve4c2426sqeEyEnR4kwgP9wVqwBayt5YdcVWi4q_MB5O1wEvPPWeJQzZumoSxnRpngi9Q5Bn85mUW4I6hMJXApBuDTdaFbC9do7yVebMyg39g==&c=T8H2O6fVno1ynj4Tmt_A8-qvcCI5jTWxIORSrZeqv9hEXQj-fWl9vg==&ch=yld3_c0GZJv5uzXrGzhtj_E7502kHiPvW6R-xbyy5p1w6KgQxbfUTQ==" target="_blank" style="color: rgb(255, 255, 255); text-decoration: none; font-weight: bold; font-style: normal;"> CIRE Travel</a></div>
+<div style="text-align: center;" align="center"><span style="color: rgb(255, 255, 255); font-style: italic;">A Division of Tzell</span></div>
+<div style="text-align: center;" align="center"><span style="color: rgb(255, 255, 255); font-style: italic;">&#xfeff;</span></div>
+<div style="text-align: center;" align="center"><a href="mailto:ehrubant@CIREtravel.com" target="_blank" style="color: rgb(255, 255, 255); text-decoration: none; font-weight: bold; font-style: normal;">ehrubant@CIREtravel.com</a></div>
+<div style="text-align: center;" align="center"><br></div>
+<div style="text-align: center;" align="center"><span style="font-size: 14px; color: rgb(255, 255, 255); font-family: Calibri, Helvetica, Arial, sans-serif;">CIRE Travel is a travel agency specializing in corporate and leisure travel planning.</span></div>
+<div style="text-align: center;" align="center"><span style="font-size: 14px; color: rgb(255, 255, 255); font-family: Calibri, Helvetica, Arial, sans-serif;">&#xfeff;CIRE&#x2019;s travel advisors, who are renowned for their concierge-style service, manage every detail from air to ground and everything in between.&#xa0;CIRE Travel has offices in New York City, Los Angeles and Boston but serve clients from around the world.</span></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="divider-container editor-col OneColumnMobile" width="100%" align="left" valign="top">
+<div class="gl-contains-divider">
+<table class="editor-divider" width="100%" cellpadding="0" cellspacing="0" border="0" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="divider-container" align="center" valign="top">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-content-editor" style="cursor: default; min-width: 100%;">
+<tbody>
+<tr>
+<td class="divider-base divider-solid" width="100%" align="center" valign="top" style="padding: 0px 0px 9px;">
+<table style="width: 100%; min-width: 100%; height: 1px;" cellpadding="0" cellspacing="0" border="0" align="center">
+<tbody>
+<tr>
+<td height="1" align="center" style="padding-bottom: 9px; background-color: rgb(184, 154, 91); border-bottom-style: none; height: 1px; line-height: 1px;" bgcolor="B89A5B">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/sys/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="40%" align="" valign="top">
+<div><div class="column-resize-bar">
+<span class="line"></span>
+<span class="grabber"></span>
+</div></div>
+<div class="gl-contains-social-button">
+<table class="editor-social" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%; min-width: 100%;">
+<tbody>
+<tr>
+<td class="" align="center" style="padding: 0px 10px 10px 20px;">
+<div class="galileo-ap-content-editor">
+<a href="http://r20.rs6.net/tn.jsp?f=001ltpNxxpP5JYZvN-7_HaZ2MCsabZRRlOqkjLOLZsq6ve4c2426sqeE1zuUhzpXg6d9Mgrx6x3WiVZoNGFrOEBwUOuehPrduzVeEv2npgA5ByxpoYzVFUz3NW_8yClYJaWaJfJXmJcrXW_7mcHxJBMTAtSc34Hv_nDyWv3wW4iMSk=&c=T8H2O6fVno1ynj4Tmt_A8-qvcCI5jTWxIORSrZeqv9hEXQj-fWl9vg==&ch=yld3_c0GZJv5uzXrGzhtj_E7502kHiPvW6R-xbyy5p1w6KgQxbfUTQ==" style="display: inline-block; text-decoration: none;">
+<img alt="Instagram" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/instagram-visit-gray.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=001ltpNxxpP5JYZvN-7_HaZ2MCsabZRRlOqkjLOLZsq6ve4c2426sqeE077k8UTy-WVi56603-_YfoKAvZc9E_05JOLQRg-kUBXCJVq5EDvfOUY_fb9hOu5jbBUeudCCMOZG-zDow1NgtxEZQTCJuht2Yu82o1oHezIydNcUZwiLnC65LuaUaqN2kIj_ll7QWe6NCnwRl7xUT4=&c=T8H2O6fVno1ynj4Tmt_A8-qvcCI5jTWxIORSrZeqv9hEXQj-fWl9vg==&ch=yld3_c0GZJv5uzXrGzhtj_E7502kHiPvW6R-xbyy5p1w6KgQxbfUTQ==" style="display: inline-block; text-decoration: none;">
+<img alt="Facebook" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/facebook-visit-gray.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=001ltpNxxpP5JYZvN-7_HaZ2MCsabZRRlOqkjLOLZsq6ve4c2426sqeE4Y1USD1Gq9NYqVaLTJ5BZ62Wv4E_T5mkLhZ4oxjrRKOimTWO5q6YD5EaxyB2HBI0q6vsDoURW9-9EMrZ_uC6IxKXAg8Y8nipz7LBINFkO-d&c=T8H2O6fVno1ynj4Tmt_A8-qvcCI5jTWxIORSrZeqv9hEXQj-fWl9vg==&ch=yld3_c0GZJv5uzXrGzhtj_E7502kHiPvW6R-xbyy5p1w6KgQxbfUTQ==" style="display: inline-block; text-decoration: none;">
+<img alt="Twitter" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/twitter-visit-gray.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+<a href="http://r20.rs6.net/tn.jsp?f=001ltpNxxpP5JYZvN-7_HaZ2MCsabZRRlOqkjLOLZsq6ve4c2426sqeEyA3HFO0PGSn0Cbv10cMr7mMlyw7tUMcI7SgB8zLVIwjvtNF7QJGW-Fi3cqdY52VGGVOpzeJNkye5jy6-kk8GeQi4NFYIzd9dv2jJYQGAUl1clFAvF3F1so=&c=T8H2O6fVno1ynj4Tmt_A8-qvcCI5jTWxIORSrZeqv9hEXQj-fWl9vg==&ch=yld3_c0GZJv5uzXrGzhtj_E7502kHiPvW6R-xbyy5p1w6KgQxbfUTQ==" style="display: inline-block; text-decoration: none;">
+<img alt="LinkedIn" width="32" border="0" src="https://imgssl.constantcontact.com/galileo/images/templates/Galileo-SocialMedia/linkedin-visit-gray.png" style="display: inline-block; margin: 0; padding: 0;"> &#x200c;
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class=" editor-col OneColumnMobile" width="60%" align="" valign="top">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text editor-text " align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; color: #8f8d91; text-align: left; display: block; word-wrap: break-word; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div><div style="text-align: center;" align="center"><span style="font-size: 14px; color: rgb(76, 76, 76); font-family: Calibri, Helvetica, Arial, sans-serif;">&#xa9; 2019 CIRE Travel. All rights reserved.</span></div></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class=" editor-col OneColumnMobile" width="100%" align="" valign="top">
+<div class="gl-contains-divider">
+<table class="editor-divider" width="100%" cellpadding="0" cellspacing="0" border="0" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="" align="center" valign="top">
+<table width="100%" class="galileo-ap-content-editor" style="cursor: default; min-width: 100%;">
+<tbody>
+<tr>
+<td class="divider-base divider-solid" width="100%" align="center" valign="top" style="padding: 9px 0px;">
+<table cellpadding="0" cellspacing="0" border="0" align="center" style="width: 93%; min-width: 93%; height: 1px;">
+<tbody>
+<tr>
+<td height="1" align="center" style="padding-bottom: 0px; border-bottom-style: none; height: 1px; line-height: 1px; background-color: #3C245E;" bgcolor="#3C245E">
+<div><img alt="" width="5" height="1" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/letters/images/1101116784221/S.gif" style="display: block; height: 1px; width: 5px;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="two-column editor-col OneColumnMobile" width="50%" align="left" valign="top">
+<div><div class="column-resize-bar">
+<span class="line"></span>
+<span class="grabber"></span>
+</div></div>
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text two-column-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; color: #8f8d91; text-align: left; display: block; word-wrap: break-word; padding: 10px 10px 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div style="text-align: center;" align="center"><span style="color: rgb(60, 36, 94); font-weight: bold;">NEW YORK</span></div>
+<div style="text-align: center;" align="center">
+<span style="color: rgb(99, 100, 102);">1633 Broadway, 35</span><sup style="color: rgb(99, 100, 102); line-height: 0; font-size: 70%; mso-text-raise: 30%;">th</sup><span style="color: rgb(99, 100, 102);">&#xa0;Floor</span>
+</div>
+<div style="text-align: center;" align="center"><span style="color: rgb(99, 100, 102);">New York, NY 10019</span></div>
+<div style="text-align: center;" align="center"><br></div>
+<div style="text-align: center;" align="center"><span style="color: rgb(63, 22, 102);">(212) 339-2957</span></div>
+<div style="text-align: center;" align="center"><span style="color: rgb(63, 22, 102);">&#xfeff;</span></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class="two-column editor-col OneColumnMobile" width="50%" align="left" valign="top">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text two-column-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; color: #8f8d91; text-align: left; display: block; word-wrap: break-word; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div style="text-align: center;" align="center"><span style="color: rgb(60, 36, 94); font-weight: bold;">LOS ANGELES</span></div>
+<div style="text-align: center;" align="center">11111 Santa Monica Blvd, Suite 1600</div>
+<div style="text-align: center;" align="center">Los Angeles, CA 90025</div>
+<div style="text-align: center;" align="center"><br></div>
+<div style="text-align: center;" align="center"><span style="color: rgb(63, 22, 102);">(310) 691-7499</span></div>
+<div style="text-align: center;" align="center"><span style="color: rgb(63, 22, 102);">&#xfeff;</span></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="galileo-ap-layout-editor" style="min-width: 100%;">
+<tbody>
+<tr>
+<td class="two-column editor-col OneColumnMobile" width="50%" align="left" valign="top">
+<div><div class="column-resize-bar">
+<span class="line"></span>
+<span class="grabber"></span>
+</div></div>
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text two-column-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; color: #8f8d91; text-align: left; display: block; word-wrap: break-word; padding: 10px 10px 10px 20px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div style="text-align: center;" align="center"><span style="color: rgb(60, 36, 94); font-weight: bold;">BOSTON</span></div>
+<div style="text-align: center;" align="center">One Appleton Street, 2nd Floor</div>
+<div style="text-align: center;" align="center">Boston, MA 02116</div>
+<div style="text-align: center;" align="center"><br></div>
+<div style="text-align: center;" align="center"><span style="color: rgb(63, 22, 102);">(617) 297-9474</span></div>
+<div style="text-align: center;" align="center"><span style="color: rgb(63, 22, 102);">&#xfeff;</span></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td class="two-column editor-col OneColumnMobile" width="50%" align="left" valign="top">
+<div class="gl-contains-text">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="editor-text two-column-text" align="left" valign="top" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 14px; color: #8f8d91; text-align: left; display: block; word-wrap: break-word; padding: 10px 20px 10px 10px;">
+<div></div>
+<div class="text-container galileo-ap-content-editor"><div>
+<div style="text-align: center;" align="center"><span style="color: rgb(60, 36, 94); font-weight: bold;">MAINE</span></div>
+<div style="text-align: center;" align="center"><span style="color: rgb(99, 100, 102);">P.O. Box 1028</span></div>
+<div style="text-align: center;" align="center"><span style="color: rgb(99, 100, 102);">Kennebunkport, ME 0404</span></div>
+<div style="text-align: center;" align="center"><br></div>
+<div style="text-align: center;" align="center"><span style="color: rgb(63, 22, 102);">(207) 805-3110</span></div>
+<div style="text-align: center;" align="center"><span style="color: rgb(63, 22, 102);">&#xfeff;</span></div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table>
+<table class="footer-container" width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff; margin-left: auto; margin-right: auto; table-layout: auto !important" bgcolor="#ffffff">
+  <tr>
+    <td width="100%" align="center" valign="top" style="width: 100%;">
+      <div class="footer-max-main-width" align="center" style="margin-left: auto; margin-right: auto; max-width: 100%;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="footer-layout" align="center" valign="top" style="padding: 16px 0px;">
+              <table class="footer-main-width" style="width: 580px;" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                    
+                    <span class="footer-column">CIRE Travel<span class="footer-mobile-hidden"> | </span></span><span class="footer-column">1633 Broadway, 35th Floor<span class="footer-mobile-hidden">, </span></span><span class="footer-column"></span><span class="footer-column"></span><span class="footer-column">New York, NY 10019</span><span class="footer-column"></span>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-row" align="center" valign="top" style="padding: 10px 0px;">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          <a href="https://visitor.constantcontact.com/do?p=un&m=001j1Cf8ZyfkJuvHluyM6pavg%3D&ch=6331107e-aea7-11e9-97f4-d4ae528eab9a&ca=aae0a6d6-1435-41d8-9ba1-33f05dd973cf" style="color: #5d5d5d"> </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          <a href="https://visitor.constantcontact.com/do?p=oo&m=001j1Cf8ZyfkJuvHluyM6pavg%3D&ch=6331107e-aea7-11e9-97f4-d4ae528eab9a&ca=aae0a6d6-1435-41d8-9ba1-33f05dd973cf" style="color: #5d5d5d">Update Profile</a> |
+                          
+                          <a class="footer-about-provider" href="http://www.constantcontact.com/legal/about-constant-contact" style="color: #5d5d5d">About Constant Contact</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                          Sent by
+                          
+                          <a href="mailto:ehrubant@ciretravel.com" style="color: #5d5d5d; text-decoration: none">ehrubant@ciretravel.com</a>
+                          
+
+                          
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
+                    
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table></body>
+</html>

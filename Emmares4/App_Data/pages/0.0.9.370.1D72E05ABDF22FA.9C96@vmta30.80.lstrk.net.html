@@ -1,0 +1,604 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+			/* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+			#outlook a {
+			padding:0;
+			}
+			body {
+			width: 100% !important;
+			-webkit-text-size-adjust: none;
+			-ms-text-size-adjust: none;
+			margin: 0;
+			padding: 0;
+			}
+			.ReadMsgBody {
+			width:100%;
+			}
+			.ExternalClass {
+			width:100%;
+			}
+			.ExternalClass, .ExternalClass p,
+			.ExternalClass span, .ExternalClass font,
+			.ExternalClass td, .ExternalClass div {
+			line-height: 100%;
+			}
+			body, table, td, p, a, li, blockquote {
+			-webkit-text-size-adjust:100%;
+			-ms-text-size-adjust:100%;
+			}
+			table, td {
+			mso-table-lspace:0pt;
+			mso-table-rspace:0pt;
+			border-collapse: collapse;
+			border:none;
+			}
+			img {
+			-ms-interpolation-mode:bicubic;
+			}
+			/* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+			body{margin:0; padding:0;}
+			img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+			table{border-collapse:collapse !important;}
+			body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+			.backgroundTable {
+			margin: 0 auto;
+			padding: 0;
+			width: 100% !important;
+			}
+			.ExternalClass * {
+			line-height: 115%;
+			}
+			.footer a {
+			color: #999999 !important;
+			}
+			@media only screen and (max-width: 480px) {
+                /* Banner Styles */
+         .pad-t-10 {padding-top: 10px !important;}
+        .pad-t-20 {padding-top: 20px !important;}
+        .pad-b-10 {padding-bottom: 10px !important;}
+        .pad-b-20 {padding-bottom: 20px !important;}
+        .center, .center img {text-align: center !important;margin: 0 auto;float: none;}
+        .stack th {width:100% !important; display:block !important;}
+        .pad-b-20 {padding-bottom: 20px !important;}
+        .pad-lr-20 {padding-left:20px !important;padding-right:20px !important;}
+        .full-btn {width: 100% !important;height: auto;border-left: 0 none !important;
+        border-right: 0 none !important;padding-left: 0 !important;padding-right: 0 !important;}
+        .height-auto {height: auto !important;}
+        .full-img img {width: 100% !important;height: auto;}
+        .copy-mobile {font-size:6.5vw !important;}
+        /* Banner Styles END */
+			div[id="gmail-app"] {
+			display: none!important;
+			font-size: 0px!important;
+			}
+			/* General Styles */
+			.wrapper {
+			width: 100% !important;
+			overflow: hidden;
+			}
+			.mobileHide {
+			display: none !important;
+			}
+			.displayInlineBlock {
+			display: inline-block;
+			}
+			.displayBlock {
+			display: block;
+			}
+			.fullWidth {
+			width: 100% !important;
+			height: auto;
+			}
+			.halfWidth {
+			width: 50% !important;
+			height: auto;
+			}
+			.floatLeft {
+			float: left;
+			}
+			.floatRight {
+			float: right;
+			}
+			.heightAuto {
+			height: auto;
+			}
+			/* Images */
+			.fullWidthImg img {
+			width: 100% !important;
+			height: auto;
+			}
+			.logoImg img {
+			width: 55% !important;
+			height: auto;
+			}
+			.fullImg {
+			width: 100% !important;
+			}
+			/* Text */
+			.mobileAlignCenter {
+			text-align: center !important;
+			margin: auto;
+			float: none;
+			}
+			.mobileAlignLeft {
+			text-align: left !important;
+			}
+			.copy13 {
+			font-size: 13px !important;
+			line-height: 1.5 !important;
+			}
+			.copy14 {
+			font-size: 14px !important;
+			line-height: 1.5 !important;
+			}
+			.copy16 {
+			font-size: 16px !important;
+			line-height: 1.5 !important;
+			}
+			.copy18 {
+			font-size: 18px !important;
+			line-height: 1.5 !important;
+			}
+			.copy21 {
+			font-size: 21px !important;
+			line-height: 1.5 !important;
+			}
+			.copy24 {
+			font-size: 24px !important;
+			line-height: 1.5 !important;
+			}
+			.copy30 {
+			font-size: 30px !important;
+			line-height: 1.5 !important;
+			}
+			/* Borders */
+			.borderTop {
+			border-top: 1px solid #cccccc;
+			}
+			.borderTopBold {
+			border-top: 2px solid #559EBF;
+			}
+			.borderBottom {
+			border-bottom: 1px solid #cccccc;
+			}
+			.borderBottomBold {
+			border-bottom: 2px solid #559EBF;
+			}
+			.borderNone {
+			border: 0 none !important;
+			}
+			.borderTopNone {
+			border-top: 0 none !important;
+			}
+			.borderRightNone {
+			border-right: 0 none !important;
+			}
+			.borderBottomNone {
+			border-bottom: 0 none !important;
+			}
+			.borderLeftNone {
+			border-left: 0 none !important;
+			}
+			/* Padding */
+			.contentPadding {
+			padding-left: 10px !important;
+			padding-right: 10px !important;
+			}
+			.contentPadding20 {
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+			}
+			.paddingNone {
+			padding: 0 !important;
+			}
+			.paddingLeft0 {
+			padding-left: 0 !important;
+			}
+			.paddingRight0 {
+			padding-right: 0 !important;
+			}
+			.paddingTop0 {
+			padding-top: 0 !important;
+			}
+			.paddingTop2 {
+			padding-top: 2px !important;
+			}
+			.paddingTop5 {
+			padding-top: 5px !important;
+			}
+			.paddingTop10 {
+			padding-top: 10px !important;
+			}
+			.paddingTop15 {
+			padding-top: 15px !important;
+			}
+			.paddingTop20 {
+			padding-top: 20px !important;
+			}
+			.paddingTop25 {
+			padding-top: 25px !important;
+			}
+			.paddingTop30 {
+			padding-top: 30px !important;
+			}
+			.paddingBottom0 {
+			padding-bottom: 0 !important;
+			}
+			.paddingBottom2 {
+			padding-bottom: 2px !important;
+			}
+			.paddingBottom5 {
+			padding-bottom: 5px !important;
+			}
+			.paddingBottom10 {
+			padding-bottom: 10px !important;
+			}
+			.paddingBottom15 {
+			padding-bottom: 15px !important;
+			}
+			.paddingBottom20 {
+			padding-bottom: 20px !important;
+			}
+			.paddingBottom25 {
+			padding-bottom: 25px !important;
+			}
+			.paddingBottom30 {
+			padding-bottom: 30px !important;
+			}
+			/*** Footer Nav ***/
+			.footerNav a {
+			display: block !important;
+			width: 100%;
+			padding: 15px 0 !important;
+			border-top: 1px solid #CCCCCC !important;
+			border-right: 0 !important;
+			border-left: 0 !important;
+			}
+			/* Mobile Show */
+			.mobileShow, .mobileShow tbody, .mobileShow tr, .mobileShow td {
+			width: auto !important;
+			max-height: inherit !important;
+			overflow: visible !important;
+			display: block !important;
+			float: none !important;
+			}
+			.mobileShow img {
+			width: 100% !important;
+			height: auto !important;
+			max-height: inherit !important;
+			overflow: visible !important;
+			display: block !important;
+			float: none !important;
+			}
+			}
+		</style>
+</head>
+<body style="margin: 0px; padding: 0px; width: 100%; height: 100%; background: none 0% 0% repeat scroll rgb(242, 242, 242); zoom: 100%;">
+<div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;">Don&#8217;t wait, your offer expires soon!</div>
+<div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
+<table style="width: 100%; height: 100%;" class="bodyTbl" height="100%" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f2f2f2">
+<tbody>
+<tr>
+<td valign="top" bgcolor="#f2f2f2" align="center">
+<table class="wrapper container" width="650" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody>
+<!-- Promo Banner -->
+<tr>
+<td align="center">
+<!-- PROMO BANNER -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+	<tbody>
+		<tr>
+			<td class="" align="center" style="background-color:#000000;">
+			<!-- 2 Column to 1 Column -->
+			<table class="stack" width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+				<tbody>
+					<tr>
+						<th width="70%" class="" align="center" style="font-weight:normal;">
+						<!-- Headline -->
+						<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" role="presentation">
+							<tbody>
+								<tr>
+									<td class="pad-lr-20 center pad-b-10 pad-t-20 copy-mobile" style="font-family:Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif; font-size:16px; color:#ffffff; text-align:right; font-weight:400; padding:25px 0;letter-spacing: 0.03em;font-style: normal;">Use code: WCMME20LR97 for <b>$20 OFF</b> of $250+*!</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- Headline END -->
+						</th>
+						<th width="30%" class="" align="center" style="font-weight:normal;">
+						<!-- Full Width Image -->
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+							<tbody>
+								<tr>
+									<td class="full-img center pad-b-10" align="left"><a href="http://enews.jomashop.com/q/x3vHHufPGHSxjxl7ndYKRRIjLEYuUcRTpZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQL0XXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAHLPi97XRfaOVmb9f0hJQ7Bi34A" title="Activate Offer" target="_blank" style="white-space: nowrap;"><img src="https://mediacdn.espssl.com/6166/Shared/GXP/Template/cta.png" alt="Activate Offer" width="200" border="0" style="font-family:Arial, Helvetica, sans-serif; font-size:30px; display:block;color:#ffffff;max-width:300px;"></a></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- Full Width Image END -->
+						</th>
+					</tr>
+				</tbody>
+			</table>
+			<!-- 2 Column to 1 Column END -->
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!-- PROMO BANNER END-->
+</td>
+</tr>
+<!-- Promo Banner END -->
+<tr>
+<td class="logoImg" style="padding-top: 20px; padding-bottom: 20px;" valign="middle" align="center"><a href="http://enews.jomashop.com/q/oaN332aIS3cbAdEfsEs-Xdg4aH44nhBE2ZcOJcHVibGlzaEBlbW1hcmVzLm5L0XldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAIvw-uerJe7IMfTND37sLvCb4PA" target="_blank" title="Logo"><img src="https://mediacdn.espssl.com/6166/trigger/welcome_03/images/jomashopLogo.gif" alt="Logo" class="responsiveImg" style="display: block;" width="304" border="0"></a></td>
+</tr>
+<tr>
+<td class="mobileHide" style="padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;" bgcolor="#000000">
+<!-- /////// Navigation //////// -->
+<table class="nav" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr>
+<td class="col" valign="middle" align="center"><a href="http://enews.jomashop.com/q/Gz4VVFEReVayJHV3I2P0LgFrbIL0XPEiXyeyZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiA_XevaAvgeYKO3YNHlNpCR_lzrQ" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #ffffff; text-decoration: none;" title="Mens Watches">MENS WATCHES</a></td>
+<td class="col" valign="middle" align="center"><a href="http://enews.jomashop.com/q/JxyyyrwP-yBycCMEhwmU6EycRCmX_L0XSXPVZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAUEppReeueZGu687WpgL9DVROaw" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #ffffff; text-decoration: none;" title="Ladies Watches">LADIES WATCHES</a></td>
+<td class="col" valign="middle" align="center"><a href="http://enews.jomashop.com/q/DQMqqtXQkqqGWttNhOwDP_ZL0XUtI6AP4U6kZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAJfRstoX3cJpSaJIEvitlVSHwbg" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #ffffff; text-decoration: none;" title="Watches by Brand">WATCHES BY BRAND</a></td>
+<td class="col" valign="middle" align="center"><a href="http://enews.jomashop.com/q/kuJ55KRT05cIYF2NeLj8Gwv0ZOa5HakMLZcOJcHVibGlzaEBlbW1hcmVL0XzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAczSUu6OCc7A0szyqXdp5-Hcwlg" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #ffffff; text-decoration: none;" title="Jewelry">JEWELRY</a></td>
+<td class="col" valign="middle" align="center"><a href="http://enews.jomashop.com/q/yn4CC5Ib4C941ry_HANPSFvwzJ8VMPEoIZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXL0XEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAU2D7D01aeY122L_w3D_nK1dk-Q" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #ffffff; text-decoration: none;" title="Fashion">FASHION</a></td>
+<td class="col" valign="middle" align="center"><a href="http://enews.jomashop.com/q/AqoLL9PedL7H4quQ_eyeL0XgM8XFx3ZKYK9TZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiA3a6ITNIcfqb70XUbCZgJqNmqig" target="_blank" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #ffffff; text-decoration: none;" title="Gifts">GIFTS</a></td>
+</tr>
+</tbody>
+</table>
+<!-- /////// End Navigation //////// -->
+</td>
+</tr>
+<tr>
+<td class="contentPadding" style="padding: 10px 20px; border-bottom: solid 1px #cccccc;" bgcolor="#FFFFFF">
+<!-- /////// Free Shipping //////// -->
+<table class="fullWidth" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr>
+<td class="mobileAlignCenter displayBlock copy13" style="font-family: Georgia, Times New Roman, Times, serif; font-size: 14px; font-style:italic; color: #333333;" valign="middle" align="left">Free Shipping On All Orders <strong style="color: #cc0000;">Over $100</strong>. US&nbsp;Only.
+</td>
+<td class="mobileAlignCenter displayBlock paddingTop5" style="font-family: Georgia, Times New Roman, Times, serif; font-size: 14px; font-style:italic; color: #333333;" valign="middle" align="right">
+<a href="http://enews.jomashop.com/q/XsBvvT8PavaOYvnwpXeVcmQz54ZrmMGjfZcOJcHVibGL0XlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAq7HeA8x9f6R7jZy2CcGLPa-13A" target="_blank" style="text-decoration:none; color: #333333;" title="Offers">Shop Today's <strong>Sales</strong> &gt;</a>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /////// End Free Shipping //////// -->
+</td>
+</tr>
+<tr>
+<td class="paddingTop30" style="padding: 60px 20px 20px; font-family: Helvetica, Arial, sans-serif; font-size: 26px; color: #333333;" valign="middle" bgcolor="#ffffff" align="center">LAST CHANCE TO USE YOUR COUPON</td>
+</tr>
+<tr>
+<td style="padding: 10px; font-family: Georgia, Times New Roman, serif; font-style:italic; font-size: 56px; color: #c59a61;" valign="middle" bgcolor="#ffffff" align="center"><strong>$20</strong> off</td>
+</tr>
+<tr>
+<td style="padding: 20px; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.4; color: #333333;" valign="middle" bgcolor="#ffffff" align="center">your first order of <strong style="font-size: 18px;">$250</strong> or more. <br>
+Enter your exclusive coupon code at checkout: </td>
+</tr>
+<tr>
+<td style="padding: 20px; font-family: Helvetica, Arial, sans-serif; font-size: 36px; color: #333333;" valign="middle" bgcolor="#ffffff" align="center">&mdash; &nbsp; <span><span><strong style="border: 0px; color: rgb(55, 71, 79); font-size: 13px; margin: 0px; padding: 0px; box-sizing: inherit; font-family: Roboto, Arial, Helvetica, sans-serif; letter-spacing: 0.26px; background-color: rgb(255, 255, 255); -webkit-tap-highlight-color: transparent !important;">WCMME20LR97</strong></span></span> &nbsp; &mdash;</td>
+</tr>
+<tr>
+<td valign="middle" bgcolor="#FFFFFF" align="center"><a href="http://enews.jomashop.com/q/pptuuh06AuudGsiV86Wmj_PPsbxw-kexdZcOJcHVibGlzaEBlbW1hcmVzLm5lL0XdMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiA8qgyPs4veocLvMafa4r3OfasMA" target="_blank" title="Get My $20 Off"><img src="https://mediacdn.espssl.com/6166/trigger/welcome_03/images/20Btn.gif" alt="Get My $20 Off" class="responsiveImg" style="display: block;" width="265" border="0"></a></td>
+</tr>
+<tr>
+<td class="fullWidthImg" valign="middle" bgcolor="#FFFFFF" align="center"><a href="http://enews.jomashop.com/q/DiLOOdK92Oq4hTmxLSIYhNZL0XYPtmv21_XqZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAO6TEaOUWeaAcr5y-OAsxIT-gxg" target="_blank" title="Offer Info"><img src="https://mediacdn.espssl.com/6166/trigger/welcome_03/images/24hours.jpg" alt="Offer Expires in 24 Hours" class="responsiveImg" style="display: block;" width="650" border="0"></a></td>
+</tr>
+<tr>
+<td style="padding:40px 0;" bgcolor="#FFFFFF">
+<table class="fullWidth" width="540" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody>
+<tr>
+<td class="contentPadding paddingTop10">
+<table class="fullWidth" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" width="270" cellspacing="0" cellpadding="0" border="0" align="left">
+<tbody>
+<tr>
+<td style="font-family: Georgia, Times New Roman, serif; font-style:italic; font-size: 15px; color: #333333;" valign="top" align="center"><img src="https://mediacdn.espssl.com/6166/trigger/welcome_01/images/watchICO.gif" alt="Find your dream watch" style="display: block;" width="57" border="0"><br>
+<a href="http://enews.jomashop.com/q/q2ellNzAol11_k3hNp8kYQP9ZHH7n3_L9ZcOJcHVibGlzaEBlbW1hcmVzLm5ldL0XMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiARMsu3ES7frkMUFh-2TzTCkDPLA" target="_blank" style="color: #333333;" title="Find your dream watch">Find Your <br>
+Dream Watch</a></td>
+<td style="font-family: Georgia, Times New Roman, serif; font-style:italic; font-size: 15px; color: #333333;" valign="top" align="center"><img src="https://mediacdn.espssl.com/6166/trigger/welcome_01/images/purseICO.gif" alt="Shop Handbags" style="display: block;" width="57" border="0"><br>
+<a href="http://enews.jomashop.com/q/yxeAAXuF1ABHYGZo5D39jM7lRj5ZF4XyLZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXL0XEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAcGM_JZgEeLtm9x2P-TIa0nRnPQ" target="_blank" style="color: #333333;" title="Shop handbags and accessories">Shop Handbags<br>
+&amp; Accessories</a></td>
+</tr>
+</tbody>
+</table>
+<!--[if (gte mso 9)|(IE)]></td><td valign="top"><![endif]-->
+<table class="fullWidth" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" width="270" cellspacing="0" cellpadding="0" border="0" align="right">
+<tbody>
+<tr>
+<td class="paddingTop20" style="font-family: Georgia, Times New Roman, serif; font-style:italic; font-size: 15px; color: #333333;" valign="top" align="center"><img src="https://mediacdn.espssl.com/6166/trigger/welcome_01/images/penICO.gif" alt="Shop Fine Pens" style="display: block;" width="57" border="0"><br>
+<a href="http://enews.jomashop.com/q/Fu1WWs_YzWHCTDNv2yvbdk8DWL0XXE4_tlVFZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiALTps7U3yf79A4H16MCjhSik-bg" target="_blank" style="color: #333333;" title="Shop fine pens">Shop Fine <br>
+Pens</a></td>
+<td class="paddingTop20" style="font-family: Georgia, Times New Roman, serif; font-style:italic; font-size: 15px; color: #333333;" valign="top" align="center"><img src="https://mediacdn.espssl.com/6166/trigger/welcome_01/images/jewelryICO.gif" alt="Shop Crystals and Jewelry" style="display: block;" width="57" border="0"><br>
+<a href="http://enews.jomashop.com/q/1RhggQzVcg1L0XPskgx2S8QYgYbnkCfkxVUEZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAGJxLs96_fJf6FHM8SHy27xyYSQ" target="_blank" style="color: #333333;" title="Shop crystals and jewelry">Shop Crystals <br>
+&amp; Jewelry</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<!-- Recs -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#fffffe">
+<tbody>
+<tr>
+<td align="center">
+<table class="fullWidth" width="600" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody>
+<tr>
+<td style="border-top:2px solid #40465c; border-bottom:2px solid #40465c; padding:40px 0;" align="center">
+<table class="fullWidth" width="580" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr>
+<td class="copy21 paddingTop0 paddingBottom15 contentPadding20" style="padding:10px 0 25px; font-family: Georgia, Times New Roman, serif; font-style:italic; font-size: 24px; font-weight:bold; color: #c59a61; text-align:center;">Check Out What&rsquo;s Trending</td>
+</tr>
+</tbody>
+</table>
+<!-- 3 Column to 2 Column -->
+<table class="fullWidth" width="600" cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width: 600px;">
+<tr>
+<td style="font-size:0px;">
+<table class="mobileAlignCenter fullWidth" align="left" cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+<tr>
+<td class="contentPadding fullWidthImg">
+<!--product1-->
+<a href="http://enews.jomashop.com/q/IV5UUIo0DUm98e_HNSS8VQhu5nlfL0XfcITmZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiA3ywtse1_fLKne4zsnZl-l9soLw" target="_blank" title="Product">
+<img src="https://recs.listrakbi.com/image/3418ac58-3a58-464e-98aa-d57d6f637fe3/1962af6d-e988-48ec-8e0b-f9604b95114c/ce2323f1-ca2e-4a0b-9b8b-c8b97f4b5ffd/0/0/230/300/email/" width="190" border="0" alt="Product" style="display:block;">
+</a>
+<!--/product1-->
+</td>
+<td class="mobileHide" width="15" style="width: 15px;"></td>
+<td class="contentPadding fullWidthImg">
+<!--product2-->
+<a href="http://enews.jomashop.com/q/NeZCCavdHCGL--ADSP8BKI-afrXxBubWLL0XZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiA-DCth4UEfprOQc3U8MwfTvw0rw" target="_blank" title="Product">
+<img src="https://recs.listrakbi.com/image/3418ac58-3a58-464e-98aa-d57d6f637fe3/1962af6d-e988-48ec-8e0b-f9604b95114c/ce2323f1-ca2e-4a0b-9b8b-c8b97f4b5ffd/230/0/230/300/email/" width="190" border="0" alt="Product" style="display:block;">
+</a>
+<!--/product2-->
+</td>
+</tr>
+<tr>
+<td class="contentPadding fullWidthImg" style="padding: 20px 0 0;">
+<!--product3-->
+<a href="http://enews.jomashop.com/q/KNH22ZNIJ2jtl-uIc18ZK0hP2OiGTXL0XPASZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiA17-qyrXqfKYG5AEZ5oXR9NO7qA" target="_blank" title="Product">
+<img src="https://recs.listrakbi.com/image/3418ac58-3a58-464e-98aa-d57d6f637fe3/1962af6d-e988-48ec-8e0b-f9604b95114c/ce2323f1-ca2e-4a0b-9b8b-c8b97f4b5ffd/460/0/230/300/email/" width="190" border="0" alt="Product" style="display:block;">
+</a>
+<!--/product3-->
+</td>
+<td class="mobileHide" width="15" style="width: 15px;"></td>
+<td class="contentPadding fullWidthImg" style="padding: 20px 0 0;">
+<!--product4-->
+<a href="http://enews.jomashop.com/q/oLLpp9iTbps0TiKEt-4OQRpGhHeitxUPDZcOJcHVibGlzaEBlbW1hcmVzLm5L0XldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAuR-4IIEYdJ4Bqe0rWEueY70bug" target="_blank" title="Product">
+<img src="https://recs.listrakbi.com/image/3418ac58-3a58-464e-98aa-d57d6f637fe3/1962af6d-e988-48ec-8e0b-f9604b95114c/ce2323f1-ca2e-4a0b-9b8b-c8b97f4b5ffd/0/300/230/300/email/" width="190" border="0" alt="Product" style="display:block;">
+</a>
+<!--/product4-->
+</td>
+</tr>
+</table>
+<!--[if (gte mso 9)|(IE)]></td><td valign="top"><![endif]-->
+<table class="fullWidth mobileAlignCenter" width="190" align="right" cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width: 190px;">
+<tr>
+<td class="paddingTop20">
+<table class="halfWidth" align="left" cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+<tr>
+<td class="contentPadding fullWidthImg">
+<!--product5-->
+<a href="http://enews.jomashop.com/q/_sJNNxMPJNZMdie2rZ44QsDAM3_9vjmaVZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOL0XIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiA9IQFaz0jfpwvnAdz0HXXRPCABw" target="_blank" title="Product">
+<img src="https://recs.listrakbi.com/image/3418ac58-3a58-464e-98aa-d57d6f637fe3/1962af6d-e988-48ec-8e0b-f9604b95114c/ce2323f1-ca2e-4a0b-9b8b-c8b97f4b5ffd/230/300/230/300/email/" width="190" border="0" alt="Product" style="display:block;">
+</a>
+<!--/product5-->
+</td>
+</tr>
+</table>
+<table class="halfWidth" align="right" cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+<tr>
+<td class="contentPadding fullWidthImg paddingTop0" style="padding: 20px 0 0;">
+<!--product6-->
+<a href="http://enews.jomashop.com/q/p5ahhLWFdhzztk1fxy81YZmb1JQU_6RJ_ZcOJcHVibGlzaEBlbW1hcmVzLm5lL0XdMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAeq3henQsdaol7kT4-ZDqGn6p4w" target="_blank" title="Product">
+<img src="https://recs.listrakbi.com/image/3418ac58-3a58-464e-98aa-d57d6f637fe3/1962af6d-e988-48ec-8e0b-f9604b95114c/ce2323f1-ca2e-4a0b-9b8b-c8b97f4b5ffd/460/300/230/300/email/" width="190" border="0" alt="Product" style="display:block;">
+</a>
+<!--/product6-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- 3 Column to 2 Column END -->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Recs END -->
+</td>
+</tr>
+<tr>
+<td class="contentPadding" style="padding: 30px 0; font-family: Helvetica, Arial, sans-serif; font-size: 11px; color: #000000; line-height: 2;" valign="middle" bgcolor="#FFFFFF" align="center">
+Tell us about your interests!&nbsp;&nbsp;<a href="http://enews.jomashop.com/q/NNGeezFw-eZwk0QTpYjb9g_nBI1qnQhS7L0XZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiA4-O6TcpIeZ9plqhMPEyizOfnuA" target="_blank" style="color: #000000;" title="Email Preferences">CLICK HERE</a><br>
+</td>
+</tr>
+<tr>
+<td class="contentPadding" style="padding-top: 24px; padding-bottom: 30px;">
+<!-- /////// Sharing //////// -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr>
+<td class="fullWidth displayBlock mobileAlignCenter" width="50%" valign="middle" align="left">
+<table class="mobileAlignCenter" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr>
+<td width="34"><a href="http://enews.jomashop.com/q/xbzjjoyfUjLtiwUU_xD9QVB9mnDnUgMq4ZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQL0XXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAPUnv2WS-cZaq1hg1UiqhATlN7Q" target="_blank" title="Watch Trade-In"><img src="https://mediacdn.espssl.com/6166/Shared/WelcomeSeries/trade_in2.gif" alt="Trade in your watch" style="display: block;" width="28" border="0"></a></td>
+<td>
+<span style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #333333;"><a href="http://enews.jomashop.com/q/NqEccnnR4cwTqg6EW17HY_FC0a1rYSpO3L0XZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAktXnA7FIcbgK6vrEuPPg4ZbR5Q" target="_blank" style="text-decoration:none; color: #bea35b;" title="Watch Trade-In">We now offer Trade-Ins. <span style="white-space:nowrap;">Details &gt;</span></a></span>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class="paddingTop10 fullWidth displayBlock mobileAlignCenter" width="50%" valign="middle" align="right">
+<table class="mobileAlignCenter" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr>
+<td style="padding-right: 6px; padding-left: 6px;"><a href="http://enews.jomashop.com/q/0t611hNA61L0XArC16Uh6JrhvL41o_P7pHtaZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAXjoU0pYxdLp_crXRe9ESk1o-Fg" target="_blank" title="Facebook"><img src="https://mediacdn.espssl.com/6166/trigger/welcome_01/images/fbIco.gif" alt="Facebook" style="display: block;" width="23" border="0"></a></td>
+<td style="padding-right: 6px; padding-left: 6px;"><a href="http://enews.jomashop.com/q/cBj883UHL8gRv5LbFgzPlSQsia__Gm5rlZcOJcHVibGlzaEBL0XlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAT-R_Vh4pc5r_RUD6m0GQDUvgfQ" target="_blank" title="Twitter"><img src="https://mediacdn.espssl.com/6166/trigger/welcome_01/images/twIco.gif" alt="Twitter" style="display: block;" width="28" border="0"></a></td>
+<td style="padding-right: 6px; padding-left: 6px;"><a href="http://enews.jomashop.com/q/GVCtt_EiMtq4ftjVCOwcPQhWC2L0XwDA1vhNZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiA3HTw7DIndKrABWDwXFrTpNhw8g" target="_blank" title="Pinterest"><img src="https://mediacdn.espssl.com/6166/trigger/welcome_01/images/pnIco.gif" alt="Pinterest" style="display: block;" width="25" border="0"></a></td>
+<td style="padding-right: 6px; padding-left: 6px;"><a href="http://enews.jomashop.com/q/wZAbbSeKjbZ0M0VsPsjb9E57lzraEo4nQZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hL0XQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiA4ckdu2k4f6zUI57rFlS0DOXNHw" target="_blank" title="Instagram"><img src="https://mediacdn.espssl.com/6166/trigger/inIco.gif" alt="Instagram" style="display: block; border-width: 0px; border-style: solid; left: 1119.88px; top: 1934.44px;" align="" width="24" height="26"></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /////// End Sharing //////// -->
+</td>
+</tr>
+<tr>
+<td style="padding-bottom: 50px; font-family: Helvetica, Arial, sans-serif; font-size: 10px; color: #999999;" valign="middle" align="center">
+<!-- /////// Disclaimer //////// -->
+*$20 off valid on orders of $250 or more. Valid on first purchase only. Not valid on past orders. This limited time offer is redeemable online or by phone at <a href="tel:877-834-1435" title="Phone" target="_blank" style="color: #999999; text-decoration:none;"><strong style="font-weight:normal;">877-834-1434</strong></a> and cannot be combined with any other<br>
+coupons, discounts, or promotions. This one time use coupon expires in 24 hours. Offer is not valid on previous purchases.<br>
+Other exclusions may apply. This email was sent by:<br>
+<a href="http://enews.jomashop.com/q/5sIIIt4WcIa53gfL0Xo8O70YDhCIwbjWGWJqZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiAYweqSYqzeK194wNM5rAkImcDqA" target="_blank" style="text-decoration:none; color: #999999;" title="Address">Jomashop.com 140 58th St. | Brooklyn | NY | 11220</a> <br>Disclaimer: Jomashop is not responsible for typographical errors.<br>
+<br>
+<a href="http://enews.jomashop.com/q/BJdLLc8XjLLvLxX1EdYiRL0XDwjYz-CD24sXZcOJcHVibGlzaEBlbW1hcmVzLm5ldMOIR1hQXEdYUC1PZmZlcsOJV0NNTUUyMExSOTfDiADbNCQO6zcqABLkntOx38zwm3QA" target="_blank" style="color: #999999; font-family: Helvetica, Arial, sans-serif; font-size: 10px;" title=" <br><br><a href="http://enews.jomashop.com/q/T2Emu6qifbZci2dob_NEWIaV4q3DBC73-1yHroSgEt7pwigQZZ22TCfen" title="View in Browser" target="_blank" style="white-space: nowrap;color:#999999;text-decoration: underline;">View in Browser</a>
+<!-- /////// End Disclaimer //////// -->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="mobileHide" style="display:none; width:650px; min-width:650px; max-width:650px;" width="650" cellspacing="0" cellpadding="0" border="0" align="center">
+<tbody>
+<tr>
+<td><img src="https://mediacdn.espssl.com/1/Shared/2014/LCS/Boilerplate/spacer.gif" alt="" style="display: block; min-width: 650px; max-width: 650px;" height="20" width="650" border="0"></td>
+</tr>
+</tbody>
+</table>
+<div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+<img src="http://enews.jomashop.com/q/BGFzzNoRIzBPssSjMWnhjhlseHc_O45j90" alt="" width="20" height="1"></body>
+</html>

@@ -1,0 +1,323 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQMGVlJADQcFXVdSDwk="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(21)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(21)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(21)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(21)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(21)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(16);n.exports={generateTraceHeader:r}},{}],11:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(12),u=t(10).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(15),w=t(14),v=window.XMLHttpRequest;s.features.xhr=!0,t(9),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],12:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=https://apps.foxnews.com/newsletter/t,r.port=n.port;var o=n.hrefhttps://apps.foxnews.com/newsletter/.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],13:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],14:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],15:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],16:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],18:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],19:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],20:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],21:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:x,userAgent:d};t(13),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(20)},{}]},{},["loader",2,11,4,3]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fox News First</title>
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,900' rel='stylesheet' type='text/css'>
+<style type="text/css">
+@media only screen and (max-width: 620px) {
+  .body-content td {
+      width: 320px !important;
+  }
+  div.m.video a:after {
+      width: 64px;
+      height: 64px;
+  }
+}
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust:none;
+    margin:0;
+    padding:0;
+    font-size:16px;
+}
+img {
+    display:block;
+    border:0 !important;
+}
+table td {
+    border-collapse:collapse;
+}
+ul, li { margin:0; padding:0; }
+ul { list-style-position: inside; }
+p, li {
+    margin:0;
+    padding:0;
+    color:#222222;
+    font-family:"Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size:18px;
+    line-height:24px;
+    margin-bottom:16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color:#222222;
+    font-size:24px;
+    line-height:100%;
+    margin: 0 0 8px 0;
+}
+a, a:link {
+    color:#003366;
+    text-decoration: underline;
+}
+body, #body_style {
+    background:#f6f8fa;
+    min-height:1000px;
+    color:#111111;
+    font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size:12px;
+}
+a:visited { text-decoration:none; }
+a:focus { text-decoration:none; }
+a:hover { text-decoration:none; }
+
+/* custom styles */
+.ad-container {
+    text-align: right;
+    margin: 15px;
+    position: relative;
+    height: 31px;
+    display: none;
+} 
+.ad-container .ad-box {
+    position: absolute;
+    right: 0;
+}
+.pre-body p {
+    margin-bottom: 0;
+}
+.pre-body a {
+    text-decoration: underline;
+}
+.pre-body a:hover {
+    text-decoration: none;
+}
+.pre-body p,
+.post-body p {
+    color: #999999;
+    font-size: 12px;
+    line-height: 18px;
+}
+.post-body a {
+    text-decoration: underline;
+}
+.body-content tbody{
+    display: block;
+    margin: 32px 24px;
+    width: auto;
+}
+.body-content td {
+   width: 600px;
+}
+.greeting a {
+    color: #003366;
+    background: #edf6ff;
+    border-bottom: 2px solid #a7c6e5;
+}
+.greeting a:hover {
+    background: #edf6ff;
+}
+.story {
+    padding-bottom: 32px;
+}
+.more a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.show-title,
+.show-time,
+.show-desc {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 0;
+}
+.show-times {
+    padding-top: 32px;
+}
+.show-time {
+    color: #666666;
+}
+.post-body a:hover {
+    text-decoration: none;
+}
+.on-this-day {
+    padding-top: 32px;
+    text-align: center;
+}
+.on-this-day .title {
+    margin-bottom: 16px;
+}
+.otd-date:last-of-type .otd-dek {
+    margin-bottom: 0;
+}
+.m.video a:after {
+    background: url("https://static.foxnews.com/static/orion/styles/img/fox-news/s/overlays/video.svg") center/contain no-repeat;
+    content: '';
+    display: block;
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+</style>
+</head>
+<body style="background:#f6f8fa; min-height:1000px; color:#222222; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px" alink="#003366" link="#003366" bgcolor="#f6f8fa" background-color="#f6f8fa" background="#f6f8fa" text="#222222" yahoo="fix">
+
+  <!-- FULL BLEED BG -->
+  <table class="email-body" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#f6f8fa" background-color="#f6f8fa" background="#f6f8fa">
+  <tr><td>
+
+    <!-- PRE BODY -->
+    <table class="pre-body" cellpadding="12px" cellspacing="0" border="0" width="100%" align="center">
+      <tr>
+        <td>
+          <!-- header -->
+          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tr>
+              <td align="center">
+                <p>Having trouble viewing? <a href="http://inbox.foxnews.com/dm?id=1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25" target="_blank">View in Browser</a></p>
+              </td>
+            </tr>
+          </table>
+          <!-- -->
+        </td>
+      </tr>
+    </table>
+    <!-- PRE BODY -->
+
+  </td></tr>
+
+  <tr><td>
+
+    <!-- MAIN BODY -->
+    <table class="main-body" cellpadding="0" cellspacing="0" border="0" bgcolor="white" align="center">
+      <tr>
+        <td>
+          <!-- header -->
+          <table class="header" cellpadding="12px" cellspacing="0" border="0" width="100%" bgcolor="#003366">
+            <tr>
+              <td>
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#003366">
+                  <tr>
+                    <td>
+                      <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BCF5:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&"><img src="http://global.fncstatic.com/static/orion/styles/img/fox-news/newsletters/fox-news-logo.gif" alt="Fox News"></a>
+                    </td>
+                    <td align="right">
+                      <span style="color:white; font-size:14px;">Friday, June 28, 2019</span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- header -->
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <!-- BG ARROWS -->
+          <table class="arrows" cellpadding="0" cellspacing="0" border="0" background="http://global.fncstatic.com/static/orion/styles/img/fox-news/newsletters/arrow.gif" style="background-repeat:repeat-x; border-left:1px solid #cedfef; border-right:1px solid #cedfef;" width="100%">
+            <tr>
+              <td height="3" align="center" valign="middle"></td>
+            </tr>
+          </table>
+          <!-- BG ARROWS -->
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <!-- NEWSLETTER TITLE -->
+          <table cellpadding="12px" cellspacing="0" border="0" width="100%" style="border:1px solid #cedfef; border-top: 0;">
+            <tr>
+              <td align="center" valign="middle">
+                                <div class="ad-container">
+                  <div class="ad-box">
+                    <a href='http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BCF6:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&'>
+                      <img src='https://pubads.g.doubleclick.net/gampad/ad?iu=/4145/fnc/newsletter/fox-news-first&sz=88x31&c=1219978044'>
+                    </a>
+                  </div>
+                </div>
+                <img src="http://global.fncstatic.com/static/orion/styles/img/fox-news/newsletters/fox-news-first.png" alt="Fox News First">
+              </td>
+            </tr>
+          </table>
+          <!-- NEWSLETTER TITLE -->
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <!-- body content -->
+          <table class="body-content" cellpadding="0" cellspacing="0" border="0" width="100%" style="border:1px solid #cedfef; border-top: 0;">
+            <tr>
+              <td>
+               <div class="m" style="margin-bottom:12px;"><img src="https://static.foxnews.com/foxnews.com/content/uploads/2019/06/DOTCOM_1280X720_KAMALA_GRILLS_JOE.png" alt="" style="width: 100%;"></div>
+<p><strong>Good morning and welcome to <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BCF7:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">Fox News First</a>.</strong> Here's what you need to know as you start your day ...</p>
+<p><strong>Harris puts Biden's race record on trial in Round 2 of Dem primary debate</strong><br>
+Democratic presidential primary front-runner Joe Biden ran into a <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BCF8:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">formidable challenge at Thursday night’s debate from U.S. Sen. Kamala Harris, who tapped into her prosecutor toolbox to put his race record on trial</a> following the controversy over his comments on segregationist senators. In perhaps the most heated moment of the night, Harris told Biden she doesn’t believe he is a “racist” but considers his recent comments about being able to work with segregationist senators early in his career “hurtful.”</p>
+<div class="m video" style="margin-bottom:12px; position: relative;"><a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BCF9:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&"><img src="https://media2.foxnews.com/BrightCove/694940094001/2019/06/28/694940094001_6053294054001_6053293689001-vs.jpg" style="width: 100%;"></a></div>
+<p>Biden has said he disagreed with the senators on segregation, but was still able to work with them in the Senate. But that explanation did not deter Harris during Thursday's debate. “You worked with them to oppose busing,” Harris said, referring to efforts to limit orders for school desegregation by busing. In an emotional moment, she told her own story of being bussed as a little girl in California. Biden fired back that Harris’ comments were a “mischaracterization of my position across the board.”</p>
+<div class="m video" style="margin-bottom:12px; position: relative;"><a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BCFA:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&"><img src="https://media2.foxnews.com/BrightCove/694940094001/2019/06/28/694940094001_6053308101001_6053303124001-vs.jpg" style="width: 100%;"></a></div>
+<p>Biden, though, mostly kept his focus on the candidate he really wants to face -- President Trump. He repeatedly invoked the name and record of his popular running-mate Barack Obama and brushed back swipes at his age from long-shot candidate Rep. Eric Swalwell, who repeatedly called on him to "pass the torch." It's unclear whether the clash with Harris might damage Biden -- considering most prior controversies have not dinged his poll numbers -- or simply give Harris some needed momentum.</p>
+<div class="m" style="margin-bottom:12px;"><img src="https://static.foxnews.com/foxnews.com/content/uploads/2019/06/Sanders062819.jpg" alt="" style="width: 100%;"></div>
+<p>Meanwhile, Sen. Bernie Sanders avoided any direct clash with Biden. He spent much of the night defending his big-government agenda against questions from moderators and criticism from more centrist leaning – and lower-polling – candidates. Several rivals took issue with some of Sanders’ socialistic policies, like "Medicare-for-all" and free college tuition. South Bend, Ind., Mayor Pete Buttigieg broke with Sanders in saying while he supports free college for children of low and middle income, “I just don’t believe it makes sense to ask working-class families to subsidize even the children of billionaires.”</p>
+<div class="m video" style="margin-bottom:12px; position: relative;"><a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BCFB:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&"><img src="https://media2.foxnews.com/BrightCove/694940094001/2019/06/28/694940094001_6053282631001_6053279533001-vs.jpg" style="width: 100%;"></a></div>
+<p>Still, the debate also made clear how Democrats have moved to the left on issues relating to immigration. All 10 Democrats raised their hands when asked if their government health care plan would cover illegal immigrants. Pollster Frank Luntz summed it up this way on "The Ingraham Angle" on Thursday: <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BCFC:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">"This is not your parents' Democratic Party."</a> <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BCFD:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">Click here for former Clinton strategist Mark Penn's list of winners and losers</a> from Thursday night's Democratic debate.</p>
+<div class="m" style="margin-bottom:12px;"><img src="https://static.foxnews.com/foxnews.com/content/uploads/2019/06/Trumpg20062819.jpg" alt="" style="width: 100%;"></div>
+<p><strong>Trump likes what he saw in the Democratic debate from afar</strong><br>
+At one time, some pundits were predicting that Democrats could defeat President Trump and the Republican Party on health care. However, thanks to the Democratic Party's stance on health care for illegal immigrants, Trump and Republicans are feeling very confident. While attending the G-20 Summit in Osaka, Japan, the president said Democratic White House contenders’ <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BCFE:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">willingness to extend government health care to illegal immigrants in America will get him reelected</a>. Trump tweeted: “All Democrats just raised their hands for giving millions of illegal aliens unlimited healthcare. How about taking care of American Citizens first!?” He then added: “That’s the end of that race!”</p>
+<div class="m" style="margin-bottom:12px;"><img src="https://static.foxnews.com/foxnews.com/content/uploads/2019/06/94745984-mackenzie-Lueck.jpg" alt="" style="width: 100%;"></div>
+<p><strong>Friends of missing Utah student spot activity on Instagram account</strong><br>
+The search for missing Utah student Mackenzie Lueck has taken a peculiar twist. Friends of Lueck told Fox News that <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BCFF:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">they noticed activity on her Instagram account on Wednesday</a> and turned the information over to authorities. Lueck’s personal Instagram account liked a page called “fatherless,” around noon, and her friends quickly took screengrabs to document the activity and turn over to police. The @fatherless handle had more than 47,000 followers as of early Friday but was following only 15 accounts — not including that of Lueck.</p>
+<div class="m video" style="margin-bottom:12px; position: relative;"><a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD00:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&"><img src="https://media2.foxnews.com/BrightCove/694940094001/2019/06/27/694940094001_6053232559001_6053237404001-vs.jpg" style="width: 100%;"></a></div>
+<p>The 23-year-old woman was last seen meeting an unknown individual around 3 a.m. June 17 at a park in Salt Lake City after being dropped off by a Lyft driver. She hailed the ride after flying in from Los Angeles – where she had attended her grandmother’s funeral. While the Lyft driver has been cleared,<a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD01:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank"> police searched the Salt Lake City home of the man they said is a "person of interest"</a> for about 19 hours the past two days. Police said they are also looking for a mattress and box spring removed from the home last week.</p>
+<div class="m" style="margin-bottom:12px;"><img src="https://static.foxnews.com/foxnews.com/content/uploads/2019/06/gallagher062819.jpg" alt="" style="width: 100%;"></div>
+<p><strong>Iraqi general: Accused Navy SEAL did not stab ISIS prisoner</strong><br>
+The Iraqi general at the scene of an alleged murder of an Islamic State prisoner in Iraq in 2017 testified in a deposition video played in court Thursday that <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD02:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">Navy SEAL Eddie Gallagher never stabbed the teenage detainee</a>. In a recording made earlier this month, Maj. Gen. Abbas al-Jubouri testified he never saw Gallagher stab the detainee in the neck. Gallagher served alongside Abbas’ unit in an advise-and-assist capacity in Mosul. Abbas told the defense lawyer if had he witnessed improper conduct from SEALs, he would have taken action. Last week, a Navy SEAL, Special Operator 1st Class Corey Scott, testified that Abbas’ unit tortured, raped and murdered prisoners. Scott said he killed the ISIS prisoner by putting his thumb over the detainee’s breathing tube in order to save him from falling into the hands of Abbas’ unit.</p>
+<div class="m" style="margin-bottom:12px;"><img src="https://static.foxnews.com/foxnews.com/content/uploads/2019/06/FranceFIFA062819.jpg" alt="" style="width: 100%;"></div>
+<p><strong>France highly motivated in Women's World Cup showdown with Team USA</strong><br>
+The United States has its ranking and its trophies, and that's all the motivation France needs. The Americans face the French on Friday night at the Women's World Cup, a match that's been described as a final in the quarterfinals. It really has it all: The defending champions against the upstart hosts. The City of Lights. A sellout crowd. "They've got a great trophy cabinet and we still have everything to prove," French captain Amandine Henry said. The only downside? The country is in the midst of a heat wave and temperatures are expected to soar into the 90s, although a 9 p.m. local time start should bring some cooling. France is seeking to become the first nation to simultaneously hold the men's and women's World Cup trophies. (The men won last year in Russia.) The United States already has three FIFA Women's World Cup trophies, most of any nation.</p>
+<p><strong><a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD03:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">CLICK HERE TO GET THE FOX NEWS APP</a>.</strong></p>
+<p><strong>TODAY'S MUST-READS</strong><br>
+Acting Homeland Security chief <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD04:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">denies leaking info on ICE raids: 'It's just not true.'</a><br>
+Trump tells Putin not to ‘meddle in the election,’ his tone was criticized.<br>
+What is 2020 candidate <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD05:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">Marianne Williamson's net worth</a>?</p>
+<p><strong>MINDING YOUR BUSINESS</strong><br>
+Supreme Court <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD06:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">blocks citizenship question on 2020 census</a> for now.<br><a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD07:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">Apple's iPhone designer Jony Ive</a> to exit company.<br>
+These US <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD08:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">cities have the most seniors age 65 and over working</a>.</p>
+<p><strong>#TheFlashback: <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD09:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">CLICK HERE</a> to find out what happened on "<a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD0A:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">This Day in History</a>."</strong></p>
+<p><strong>SOME PARTING WORDS</strong></p>
+<div class="m video" style="margin-bottom:12px; position: relative;"><a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD0B:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&"><img src="https://media2.foxnews.com/BrightCove/694940094001/2019/06/28/694940094001_6053270691001_6053272364001-vs.jpg" style="width: 100%;"></a></div>
+<p><strong>Sean Hannity says there is one clear winner in the Democratic primary debate: President Trump.</strong></p>
+<p><em>Not signed up yet for Fox News First? <a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD0C:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank">Click here</a> to find out what you're missing.</em></p>
+<p><em><a href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD0D:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&" target="_blank"><strong>CLICK HERE</strong></a> to find out what's on Fox News today!</em></p>
+<p><em>Fox News First is compiled by Fox News' Bryan Robinson. Thank you for joining us! Enjoy your day and weekend! We'll see you in your inbox first thing Monday morning.</em></p>              </td>
+            </tr>
+          </table>
+          <!-- body content -->
+        </td>
+      </tr>
+    </table>
+    <!-- MAIN BODY -->
+
+  </td></tr>
+
+  <tr><td>
+
+    <!-- POST BODY -->
+    <table class="post-body" cellpadding="14px" cellspacing="0" border="0" align="center">
+      <tr>
+        <td style="padding: 16px; font-family: 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;" align="center"><p style="color: #999999; font-size: 12px; line-height: 18px; margin: 0 0 16px;">
+	<a style="color: #003366; text-decoration: underline; font-weight: normal;" href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD0E:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&"></a> | 
+	<a style="color: #003366; text-decoration: underline; font-weight: normal;" href="http://inbox.foxnews.com/u?id=1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25"></a> | <a style="color: #003366; text-decoration: underline; font-weight: normal;" href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD0F:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&">Contact Us</a>
+</p>
+<p style="color: #999999; font-size: 12px; line-height: 18px; margin: 0 0 16px;">
+	<a style="color: #003366; text-decoration: underline; font-weight: normal;" href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD10:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&">Privacy Policy</a> | <a style="color: #003366; text-decoration: underline; font-weight: normal;" href="http://inbox.foxnews.com/t?r=6055&c=2063&l=14&ctl=BD11:1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25&">Terms of Use</a>
+</p>
+<p style="color: #999999; font-size: 12px; line-height: 18px; margin: 0 0 16px;">&#169;2019 Fox News Network, LLC. All Rights Reserved. <br> 1211 Avenue of the Americas, New York, NY, 10036.</p></td>
+      </tr>
+    </table>
+    <!-- POST BODY -->
+
+  </td></tr>
+  </table>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6d10dcb7c1","applicationID":"54596088","transactionName":"blVTZENSWUZYUUxdDlcfZEJYHFlQTkFUURVNVUMfV10aU1ZKVlEWSh1XWUNAQxhXV09HDVxERVVDHUddSQ==","queueTime":0,"applicationTime":326,"atts":"QhJQEgtISkg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!--STARTTTAG-->
+<img src="http://inbox.foxnews.com/t?c=2063&r=6055&l=14&t=10&e=1E11477C6981198E6186115AF63EE0F6EAF63EFC5B153D25" width="1" height="1" border="0">
+<!--ENDTTAG-->
+
+</html>

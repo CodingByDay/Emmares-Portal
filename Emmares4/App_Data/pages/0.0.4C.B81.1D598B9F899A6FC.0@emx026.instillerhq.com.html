@@ -1,0 +1,1096 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml><![endif]--><title>EFL</title><style type="text/css">
+			/* ///////// CLIENT-SPECIFIC STYLES ///////// */
+			#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+			.ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+			.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
+			body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+			table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+			img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
+
+			/* ///////// RESET STYLES ///////// */
+			body{margin:0; padding:0;}
+			img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+			table{border-collapse:collapse !important;}
+			body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+			.appleLinksWhite a {color: #FFFFFF !important; text-decoration: none;}
+			.appleLinksBlack a {color: #232323 !important; text-decoration: none;}
+			.appleLinksRed a {color: #ed2127 !important; text-decoration: none;}
+			.appleLinksBlue a {color: #222c53 !important; text-decoration: none;}
+			.appleLinksGrey a {color: #595959 !important; text-decoration: none;}
+			
+			/* ///////// TEMPLATE STYLES ///////// */
+
+			/* ========== Page Styles ========== */
+
+			#bodyCell{padding:20px;}
+			#templateContainer{width:600px;}
+
+			/**
+			* @tab Page
+			* @section background style
+			* @tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
+			* @theme page
+			*/
+			body, #bodyTable{
+				/*@editable*/ background-color:#ffffff;
+			}
+
+			/**
+			* @tab Page
+			* @section background style
+			* @tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
+			* @theme page
+			*/
+			#bodyCell{
+			}
+
+			/**
+			* @tab Page
+			* @section email border
+			* @tip Set the border for your email.
+			*/
+			#templateContainer{
+			}
+
+			/**
+			* @tab Page
+			* @section heading 1
+			* @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+			* @style heading 1
+			*/
+			h1{
+				/*@editable*/ color:#202020 !important;
+				display:block;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:26px;
+				/*@editable*/ font-style:normal;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				/*@editable*/ letter-spacing:normal;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tab Page
+			* @section heading 2
+			* @tip Set the styling for all second-level headings in your emails.
+			* @style heading 2
+			*/
+			h2{
+				/*@editable*/ color:#404040 !important;
+				display:block;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:20px;
+				/*@editable*/ font-style:normal;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				/*@editable*/ letter-spacing:normal;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tab Page
+			* @section heading 3
+			* @tip Set the styling for all third-level headings in your emails.
+			* @style heading 3
+			*/
+			h3{
+				/*@editable*/ color:#606060 !important;
+				display:block;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:16px;
+				/*@editable*/ font-style:italic;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ line-height:100%;
+				/*@editable*/ letter-spacing:normal;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tab Page
+			* @section heading 4
+			* @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+			* @style heading 4
+			*/
+			h4{
+				/*@editable*/ color:#808080 !important;
+				display:block;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:14px;
+				/*@editable*/ font-style:italic;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ line-height:100%;
+				/*@editable*/ letter-spacing:normal;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				/*@editable*/ text-align:left;
+			}
+
+			/* ========== Header Styles ========== */
+
+			/**
+			* @tab Header
+			* @section preheader style
+			* @tip Set the background color and bottom border for your email's preheader area.
+			* @theme header
+			*/
+			#templatePreheader{
+				/*@editable*/ background-color:#ffffff;
+			}
+
+			/**
+			* @tab Header
+			* @section preheader text
+			* @tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
+			*/
+			.preheaderContent{
+				/*@editable*/ color:#808080;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:10px;
+				/*@editable*/ line-height:125%;
+				/*@editable*/ text-align:center;
+			}
+
+			/**
+			* @tab Header
+			* @section preheader link
+			* @tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
+			*/
+			.preheaderContent a:link, .preheaderContent a:visited, /* Yahoo! Mail Override */ .preheaderContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#606060;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:none;
+			}
+
+			/**
+			* @tab Header
+			* @section header style
+			* @tip Set the background color and borders for your email's header area.
+			* @theme header
+			*/
+			#templateHeader{
+				/*@editable*/ background-color:#F4F4F4;
+			}
+
+			/**
+			* @tab Header
+			* @section header text
+			* @tip Set the styling for your email's header text. Choose a size and color that is easy to read.
+			*/
+			.headerContent{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:20px;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				/*@editable*/ padding-top:0;
+				/*@editable*/ padding-right:0;
+				/*@editable*/ padding-bottom:0;
+				/*@editable*/ padding-left:0;
+				/*@editable*/ text-align:left;
+				/*@editable*/ vertical-align:middle;
+			}
+
+			/**
+			* @tab Header
+			* @section header link
+			* @tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
+			*/
+			.headerContent a:link, .headerContent a:visited, /* Yahoo! Mail Override */ .headerContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#EB4102;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:none;
+			}
+
+			#headerImage{
+				height:auto;
+				max-width:600px;
+			}
+
+			/* ========== Body Styles ========== */
+
+			/**
+			* @tab Body
+			* @section body style
+			* @tip Set the background color and borders for your email's body area.
+			*/
+			#templateBody{
+				/*@editable*/ background-color:#F4F4F4;
+			}
+
+			/**
+			* @tab Body
+			* @section body text
+			* @tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
+			* @theme main
+			*/
+			.bodyContent{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:16px;
+				/*@editable*/ line-height:150%;
+				padding-top:20px;
+				padding-right:20px;
+				padding-bottom:20px;
+				padding-left:20px;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tab Body
+			* @section body link
+			* @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+			*/
+			.bodyContent a:link, .bodyContent a:visited, /* Yahoo! Mail Override */ .bodyContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#EB4102;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:none;
+			}
+
+			.bodyContent img{
+				display:inline;
+				height:auto;
+				max-width:560px;
+			}
+
+			/* ========== Column Styles ========== */
+
+			.templateColumnContainer{width:260px;}
+
+			/**
+			* @tab Columns
+			* @section column style
+			* @tip Set the background color and borders for your email's column area.
+			*/
+			#templateColumns{
+				/*@editable*/ background-color:#F4F4F4;
+			}
+
+			/**
+			* @tab Columns
+			* @section left column text
+			* @tip Set the styling for your email's left column content text. Choose a size and color that is easy to read.
+			*/
+			.leftColumnContent{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:14px;
+				/*@editable*/ line-height:150%;
+				padding-top:0;
+				padding-right:20px;
+				padding-bottom:20px;
+				padding-left:20px;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tab Columns
+			* @section left column link
+			* @tip Set the styling for your email's left column content links. Choose a color that helps them stand out from your text.
+			*/
+			.leftColumnContent a:link, .leftColumnContent a:visited, /* Yahoo! Mail Override */ .leftColumnContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#EB4102;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:none;
+			}
+
+			/**
+			* @tab Columns
+			* @section right column text
+			* @tip Set the styling for your email's right column content text. Choose a size and color that is easy to read.
+			*/
+			.rightColumnContent{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:14px;
+				/*@editable*/ line-height:150%;
+				padding-top:0;
+				padding-right:20px;
+				padding-bottom:20px;
+				padding-left:20px;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tab Columns
+			* @section right column link
+			* @tip Set the styling for your email's right column content links. Choose a color that helps them stand out from your text.
+			*/
+			.rightColumnContent a:link, .rightColumnContent a:visited, /* Yahoo! Mail Override */ .rightColumnContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#EB4102;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:none;
+			}
+
+			.leftColumnContent img, .rightColumnContent img{
+				display:inline;
+				height:auto;
+				max-width:260px;
+			}
+			
+			/* ========== Column Styles 2 ========== */
+
+			.templateColumnContainer2{width:200px;}
+
+			/**
+			* @tab Columns
+			* @section column style
+			* @tip Set the background color and borders for your email's column area.
+			*/
+			#templateColumns2{
+				/*@editable*/ background-color:#ffffff;
+			}
+
+			/**
+			* @tab Columns
+			* @section left column text
+			* @tip Set the styling for your email's left column content text. Choose a size and color that is easy to read.
+			*/
+			.leftColumnContent2{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:14px;
+				/*@editable*/ line-height:150%;
+				padding-top:0;
+				padding-right:0px;
+				padding-bottom:0px;
+				padding-left:0px;
+				/*@editable*/ text-align:center;
+			}
+
+			/**
+			* @tab Columns
+			* @section left column link
+			* @tip Set the styling for your email's left column content links. Choose a color that helps them stand out from your text.
+			*/
+			.leftColumnContent a:link, .leftColumnContent a:visited, /* Yahoo! Mail Override */ .leftColumnContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#EB4102;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:none;
+			}
+
+			/**
+			* @tab Columns
+			* @section center column text
+			* @tip Set the styling for your email's center column content text. Choose a size and color that is easy to read.
+			*/
+			.centerColumnContent2{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:14px;
+				/*@editable*/ line-height:150%;
+				padding-top:0;
+				padding-right:0px;
+				padding-bottom:0px;
+				padding-left:0px;
+				/*@editable*/ text-align:center;
+			}
+
+			/**
+			* @tab Columns
+			* @section center column link
+			* @tip Set the styling for your email's center column content links. Choose a color that helps them stand out from your text.
+			*/
+			.centerColumnContent a:link, .centerColumnContent a:visited, /* Yahoo! Mail Override */ .centerColumnContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#EB4102;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:none;
+			}
+
+			/**
+			* @tab Columns
+			* @section right column text
+			* @tip Set the styling for your email's right column content text. Choose a size and color that is easy to read.
+			*/
+			.rightColumnContent2{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:14px;
+				/*@editable*/ line-height:150%;
+				padding-top:0;
+				padding-right:0px;
+				padding-bottom:0px;
+				padding-left:0px;
+				/*@editable*/ text-align:center;
+			}
+
+			/**
+			* @tab Columns
+			* @section right column link
+			* @tip Set the styling for your email's right column content links. Choose a color that helps them stand out from your text.
+			*/
+			.rightColumnContent a:link, .rightColumnContent a:visited, /* Yahoo! Mail Override */ .rightColumnContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#EB4102;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:none;
+			}
+
+			.leftColumnContent img, .rightColumnContent img{
+				display:inline;
+				height:auto;
+				max-width:260px;
+			}
+
+			/* ========== Footer Styles ========== */
+
+			/**
+			* @tab Footer
+			* @section footer style
+			* @tip Set the background color and borders for your email's footer area.
+			* @theme footer
+			*/
+			#templateFooter{
+				/*@editable*/ background-color:#F4F4F4;
+			}
+
+			/**
+			* @tab Footer
+			* @section footer text
+			* @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
+			* @theme footer
+			*/
+			.footerContent{
+				/*@editable*/ color:#808080;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:10px;
+				/*@editable*/ line-height:150%;
+				padding-top:20px;
+				padding-right:20px;
+				padding-bottom:20px;
+				padding-left:20px;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tab Footer
+			* @section footer link
+			* @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+			*/
+			.footerContent a:link, .footerContent a:visited, /* Yahoo! Mail Override */ .footerContent a .yshortcuts, .footerContent a span /* Yahoo! Mail Override */{
+				/*@editable*/ color:#606060;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:none;
+			}
+
+			/* ///////// MOBILE STYLES ///////// */
+
+            @media only screen and (max-width: 480px){
+				/* /////// CLIENT-SPECIFIC MOBILE STYLES /////// */
+				body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
+                body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
+
+				/* /////// MOBILE RESET STYLES /////// */
+				#bodyCell{padding:10px !important;}
+
+				/* /////// MOBILE TEMPLATE STYLES /////// */
+
+				/* ======== Page Styles ======== */
+
+				/**
+				* @tab Mobile Styles
+				* @section template width
+				* @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.
+				*/
+				#templateContainer{
+					max-width:600px !important;
+					/*@editable*/ width:100% !important;
+				}
+
+				/**
+				* @tab Mobile Styles
+				* @section heading 1
+				* @tip Make the first-level headings larger in size for better readability on small screens.
+				*/
+				h1{
+					/*@editable*/ font-size:24px !important;
+					/*@editable*/ line-height:100% !important;
+				}
+
+				/**
+				* @tab Mobile Styles
+				* @section heading 2
+				* @tip Make the second-level headings larger in size for better readability on small screens.
+				*/
+				h2{
+					/*@editable*/ font-size:20px !important;
+					/*@editable*/ line-height:100% !important;
+				}
+
+				/**
+				* @tab Mobile Styles
+				* @section heading 3
+				* @tip Make the third-level headings larger in size for better readability on small screens.
+				*/
+				h3{
+					/*@editable*/ font-size:18px !important;
+					/*@editable*/ line-height:100% !important;
+				}
+
+				/**
+				* @tab Mobile Styles
+				* @section heading 4
+				* @tip Make the fourth-level headings larger in size for better readability on small screens.
+				*/
+				h4{
+					/*@editable*/ font-size:16px !important;
+					/*@editable*/ line-height:100% !important;
+				}
+
+				/* ======== Header Styles ======== */
+
+				#templatePreheader{display:none !important;} /* Hide the template preheader to save space */
+
+				/**
+				* @tab Mobile Styles
+				* @section header image
+				* @tip Make the main header image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.
+				*/
+				#headerImage{
+					height:auto !important;
+					/*@editable*/ max-width:600px !important;
+					/*@editable*/ width:100% !important;
+				}
+
+				/**
+				* @tab Mobile Styles
+				* @section header text
+				* @tip Make the header content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+				*/
+				.headerContent{
+					/*@editable*/ font-size:20px !important;
+					/*@editable*/ line-height:125% !important;
+				}
+
+				/* ======== Body Styles ======== */
+
+				/**
+				* @tab Mobile Styles
+				* @section body text
+				* @tip Make the body content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+				*/
+				.bodyContent{
+					/*@editable*/ font-size:18px !important;
+					/*@editable*/ line-height:125% !important;
+				}
+
+				/* ======== Column Styles ======== */
+
+				.templateColumnContainer{display:block !important; width:100% !important;}
+
+				/**
+				* @tab Mobile Styles
+				* @section column image
+				* @tip Make the column image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.
+				*/
+				.columnImage{
+					width: 260px !important;
+height: 183px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImageNext{
+					width: 200px !important;
+height: 91px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImage3{
+					width: 260px !important;
+height: 168px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImage4{
+					width: 260px !important;
+height: 69px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImage5{
+					width: 260px !important;
+height: 260px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImageB{
+					width: 260px !important;
+height: 169px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImage6{
+					width: 147px !important;
+height: 56px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImage7{
+					width: 260px !important;
+height: 26px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImageUpNext{
+					width: 145px !important;
+height: 25px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImage8{
+					width: 260px !important;
+height: 228px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImage9{
+					width: 173px !important;
+height: 65px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImage10{
+					width: 260px !important;
+height: 73px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImage11{
+					width: 222px !important;
+height: 48px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImage12{
+					width: 260px !important;
+height: 129px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+				
+				.columnImage13{
+					width: 200px !important;
+height: 46px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+				}
+
+				/**
+				* @tab Mobile Styles
+				* @section left column text
+				* @tip Make the left column content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+				*/
+				.leftColumnContent{
+					/*@editable*/ font-size:16px !important;
+					/*@editable*/ line-height:125% !important;
+				}
+
+				/**
+				* @tab Mobile Styles
+				* @section right column text
+				* @tip Make the right column content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+				*/
+				.rightColumnContent{
+					/*@editable*/ font-size:16px !important;
+					/*@editable*/ line-height:125% !important;
+				}
+				
+				/* ======== Column Styles 2 ======== */
+
+				.templateColumnContainer2{display:block !important; width:100% !important;}
+
+				/**
+				* @tab Mobile Styles
+				* @section column image
+				* @tip Make the column image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.
+				*/
+				.columnImage{
+					height:auto !important;
+					/*@editable*/ max-width:480px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				.columnImageNext{
+					height:auto !important;
+					/*@editable*/ max-width:480px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				.columnImage2{
+					height:auto !important;
+					/*@editable*/ max-width:480px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				.columnImage3{
+					height:auto !important;
+					/*@editable*/ max-width:480px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				.columnImage4{
+					height:auto !important;
+					/*@editable*/ max-width:480px !important;
+					/*@editable*/ width:100% !important;
+				}
+
+.columnImage5{
+					height:auto !important;
+					/*@editable*/ max-width:480px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				.columnImageB{
+					height:auto !important;
+					/*@editable*/ max-width:480px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				.columnImage6{
+					height:auto !important;
+					/*@editable*/ max-width:200px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				.columnImage7{
+					height:auto !important;
+					/*@editable*/ max-width:260px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				.columnImage8{
+					height:auto !important;
+					/*@editable*/ max-width:260px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				.columnImage9{
+					height:auto !important;
+					/*@editable*/ max-width:260px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				.columnImage10{
+					height:auto !important;
+					/*@editable*/ max-width:260px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				.columnImage11{
+					height:auto !important;
+					/*@editable*/ max-width:260px !important;
+					/*@editable*/ width:100% !important;
+				}
+				.columnImage12{
+					height:auto !important;
+					/*@editable*/ max-width:260px !important;
+					/*@editable*/ width:100% !important;
+				}
+				
+				.columnImage13{
+					height:auto !important;
+					/*@editable*/ max-width:260px !important;
+					/*@editable*/ width:100% !important;
+				}
+
+.columnImageUpNext{
+					height:auto !important;
+					/*@editable*/ max-width:160px !important;
+					/*@editable*/ width:100% !important;
+				}
+
+				/**
+				* @tab Mobile Styles
+				* @section left column text
+				* @tip Make the left column content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+				*/
+				.leftColumnContent2{
+					/*@editable*/ font-size:16px !important;
+					/*@editable*/ line-height:125% !important;
+				}
+
+				/**
+				* @tab Mobile Styles
+				* @section center column text
+				* @tip Make the center column content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+				*/
+				.centerColumnContent2{
+					/*@editable*/ font-size:16px !important;
+					/*@editable*/ line-height:125% !important;
+				}
+
+				/**
+				* @tab Mobile Styles
+				* @section right column text
+				* @tip Make the right column content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+				*/
+				.rightColumnContent2{
+					/*@editable*/ font-size:16px !important;
+					/*@editable*/ line-height:125% !important;
+				}
+
+				/* ======== Footer Styles ======== */
+
+				/**
+				* @tab Mobile Styles
+				* @section footer text
+				* @tip Make the body content text larger in size for better readability on small screens.
+				*/
+				.footerContent{
+					/*@editable*/ font-size:14px !important;
+					/*@editable*/ line-height:115% !important;
+				}
+
+				.footerContent a{display:block !important;} /* Place footer social and utility links on their own lines, for easier access */
+			}
+			.socialimg {
+width: 70px !important;
+height: 65px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+}
+.buttonimg {
+width: 160px !important;
+height: 24px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+}
+
+.buttonimg1 {
+width: 122px !important;
+height: 51px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+}
+
+.buttonimg2 {
+width: 230px !important;
+height: 22px !important;
+display: inherit;
+margin: 0 auto;
+text-align: center !important;
+}
+			@media only screen and (max-width:736px){
+	html{-webkit-text-size-adjust:none!important}
+body{min-width:320px !important;}
+*[class=hide] {display: none !important;}
+*[class=mobilecontainer] {width: 320px !important; height: auto !important;border-collapse: collapse; min-width: 320px !important; max-width: 320px !important;}
+*[class=wrapto100pc] {width: 100% !important; height: auto !important; display: block !important;border-collapse: collapse;}
+*[class=hero-image] {width:100% !important; height: auto !important; display: block !important;border-collapse: collapse;}
+tr[class~=mobileshowtr] {display: block !important; font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 100% !important; }
+table[class~=mobileshowtable] {display: block !important; font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 100% !important; }
+td[class~=mobileshowtd] {display: block !important; font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 100% !important;}
+img[class~=mobileshowimg] {display: block !important; font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 100% !important; height:auto !important; }
+img[class~=mobileshowimg1] {display: block !important; font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 50% !important; height:auto !important; }
+td[class=content-border] {width: 10px !important; border-collapse: collapse;}
+img[class=content-border] {width: 10px !important; height: 10px !important;}
+*[class=content-wrap] {width: 100% !important; height: auto !important; display: block !important;border-collapse: collapse; padding-top: 5px !important; padding-bottom: 5px !important;}
+*[class=inner-content] { padding-top: 5px !important; padding-bottom: 5px !important;}
+*[class=content-spacer] {width: 100% !important; height: 10px !important; display: block !important; border-collapse: collapse;}
+*[class=content-spacer1] {width: 100% !important; height: 6px !important; display: block !important; border-collapse: collapse;}
+*[class=mid-spacer] {height: 10px !important;}
+*[class=mobileshow93] {font-family: Arial, Helvetica, sans-serif !important; font-size: 10px !important; color: #ffffff !important; font-weight: bold !important; max-height: 100% !important; line-height: 1.5 !important; width: 93px !important; display: inline !important;}
+*[class=mobileshow72] {font-family: Arial, Helvetica, sans-serif !important; font-size: 10px !important; color: #ffffff !important; font-weight: bold !important; max-height: 100% !important; line-height: 1.5 !important; width: 72px !important; display: inline !important;}
+td[class~=mobileshow10] {font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 10px !important; display: inline !important;}
+td[class~=mobileshow14] {font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 14px !important; display: inline !important;}
+td[class~=mobileshow121] {font-size: 12px !important; max-height: 100% !important; line-height: 1.5 !important; width: 121px !important; display: inline !important;}
+td[class~=explore] { font-size: 10px !important; width: 93px !important;}
+td[class~=buy] { font-size: 10px !important; width: 72px !important;}
+td[class~=logo] {width: 121px !important;}
+td[class~=article-copy] {width: 100% !important; padding-left: 10px !important; padding-right: 10px !important; padding-bottom: 10px !important;}
+td[class=mobile-copy] { text-align: left !important; }
+*[class=show] { display:block !important; }
+*[class=setwidth1] { display:block !important; width: 170px !important; }
+*[class=setwidth2] { display:block !important; width: 27px !important; height:auto !important;}
+*[class=content-height] { display:block !important; height: 25px !important; }
+}
+.hideDesktop{
+display:none;
+}
+.socialimgTeam {
+width: 43px !important;
+height: 53px !important;
+display: inherit;
+margin: 0 auto;
+text-align: left !important;
+}
+.clublimg {
+width: 90px !important;
+height: 100px !important;
+display: inherit;
+margin: 0 auto;
+text-align: right !important;
+}
+.myteamimg {
+width: 141px !important;
+height: 45px !important;
+display: inherit;
+margin: 0 auto;
+text-align: left !important;
+}
+		</style><style id="ed-header-styles">/*Auto-added by email designer*/
+
+a {
+  color: #5BC0DE;
+  text-decoration: none;
+}</style></head><body offset="0" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;margin: 0;padding: 0;background-color: #ffffff;height: 100% !important;width: 100% !important;" topmargin="0" marginwidth="0" marginheight="0" leftmargin="0">             
+    	<center>
+        	<table id="bodyTable" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 0;background-color: #ffffff;border-collapse: collapse !important;height: 100% !important;width: 100% !important;" width="100%" height="100%" cellspacing="0" cellpadding="0" border="0" align="center"><tbody><tr><td id="bodyCell" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 20px;height: 100% !important;width: 100% !important;" valign="top" align="center">
+                    	<!-- BEGIN TEMPLATE // -->
+                    	<table id="templateContainer" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 600px;border-collapse: collapse !important;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" valign="top" align="center">
+                                </td>
+                            </tr><tr><td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" valign="top" align="center"></td>
+                            </tr><tr><td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" valign="top" align="center"><!-- Wrapper -->
+<table align="center"><tbody><tr><td data-ed-zone="Main content area" valign="top"><!-- BEGIN PREHEADER // -->
+                                    <table id="templatePreheader" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:20px;" mc:edit="preheader_content00" valign="top"><span class="appleLinksBlue"><span style="color:#222c53; font-size:12px; font-weight:normal; font-family:Arial,Helvetica,sans-serif; line-height:120%;">Problem viewing this email? <a href="http://clicks.online.efl.com/profile/S-84756@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@11" style="color:#222c53; font-weight: bold; text-decoration: underline;">click here</a> to view online.</span></span>
+                                            </td>
+                                        </tr></tbody></table><!-- // END PREHEADER --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div style="max-width: 600px;" data-ed-info="Main Image" data-ed-default="true">
+                                        <table style="text-align: left; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center;"><a link-description="5 Things You May Have Missed From The Weekend Action" href="http://clicks.online.efl.com/email/S-84756@1976646@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/efl11112019a.png" style=" width: 100%; display:block; max-width: 600px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="" alt="5 Things You May Have Missed From The Weekend Action" width="600"></a></td>
+</tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div style="max-width: 600px;" data-ed-info="Championship" data-ed-default="true">
+<table id="templateColumns" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #b19539;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr mc:repeatable=""><th class="templateColumnContainer" style="padding-top: 0px;width: 260px;" valign="top" align="center">
+                                            	<table style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="20" border="0"><tbody><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"> <a href="http://clicks.online.efl.com/email/S-84756@1976616@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank" link-description="skybet Championship"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/efl11112019bb.png" alt="skybet Championship" class="columnImage3" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="260" height="168"></a></th>
+                                                    </tr><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"><span class="appleLinksWhite"><span style="color:#ffffff; font-size:16px; font-weight:normal; font-family:Arial,Helvetica,sans-serif; line-height:120%;">Stoke’s win moves them just three points from safety at the bottom</span></span><table style="text-align: center; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center; padding-top: 20px;"><a link-description="View Table" href="http://clicks.online.efl.com/email/S-84756@1976617@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img alt="View Table" class="buttonimg" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/roundup21102019d.png" width="160" height="24"></a></td>
+</tr></tbody></table></th>
+                                                    </tr></tbody></table></th>
+                                        	<th class="templateColumnContainer" style="padding-top: 0px;width: 260px;" valign="top" align="center">
+                                            	<table style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="20" border="0"><tbody><tr><th class="rightColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"> <a href="http://clicks.online.efl.com/email/S-84756@1976647@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank" link-description="skybet Championship"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/efl11112019c.png" alt="skybet Championship" class="columnImage3" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="260" height="168"></a></th>
+                                                    </tr><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"><span class="appleLinksWhite"><span style="color:#ffffff; font-size:16px; font-weight:normal; font-family:Arial,Helvetica,sans-serif; line-height:120%;">Sam Clucas stunner helps new Stoke boss Michael O’Neill get off to the perfect start</span></span><table style="text-align: center; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center; padding-top: 20px;"><a link-description="Watch Now" href="http://clicks.online.efl.com/email/S-84756@1976648@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img alt="Watch Now" class="buttonimg" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/watch29102019.png" width="160" height="24"></a></td>
+</tr></tbody></table></th>
+                                                    </tr></tbody></table></th>
+                                        </tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div style="max-width: 600px;" data-ed-info="Championship" data-ed-default="true">
+<table id="templateColumns" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #b19539;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr mc:repeatable=""><th class="templateColumnContainer" style="padding-top: 0px;width: 260px;" valign="top" align="center">
+                                            	<table style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="20" border="0"><tbody><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"> <a href="http://clicks.online.efl.com/email/S-84756@1976649@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank" link-description="skybet Championship"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/efl11112019d.png" alt="skybet Championship" class="columnImage3" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="260" height="168"></a></th>
+                                                    </tr><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"><span class="appleLinksWhite"><span style="color:#ffffff; font-size:16px; font-weight:normal; font-family:Arial,Helvetica,sans-serif; line-height:120%;">Late goal gives Millwall the win in London derby against Charlton</span></span><table style="text-align: center; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center; padding-top: 20px;"><a link-description="View Table" href="http://clicks.online.efl.com/email/S-84756@1976650@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img alt="Watch Now" class="buttonimg" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/watch29102019.png" width="160" height="24"></a></td>
+</tr></tbody></table></th>
+                                                    </tr></tbody></table></th>
+                                        	<th class="templateColumnContainer" style="padding-top: 0px;width: 260px;" valign="top" align="center">
+                                            	<table style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="20" border="0"><tbody><tr><th class="rightColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"> <a href="http://clicks.online.efl.com/email/S-84756@1976651@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank" link-description="skybet Championship"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/efl11112019e.png" alt="skybet Championship" class="columnImage3" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="260" height="168"></a></th>
+                                                    </tr><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"><span class="appleLinksWhite"><span style="color:#ffffff; font-size:16px; font-weight:normal; font-family:Arial,Helvetica,sans-serif; line-height:120%;">Josh Brownhill rocket gives Bristol City the win in the Severnside derby</span></span><table style="text-align: center; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center; padding-top: 20px;"><a link-description="Watch Now" href="http://clicks.online.efl.com/email/S-84756@1976652@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img alt="Watch Now" class="buttonimg" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/watch29102019.png" width="160" height="24"></a></td>
+</tr></tbody></table></th>
+                                                    </tr></tbody></table></th>
+                                        </tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div style="max-width: 600px;" data-ed-info="Championship" data-ed-default="true">
+<table id="templateColumns" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #ffffff;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr mc:repeatable=""><th class="templateColumnContainer" style="padding-top: 0px;width: 260px;" valign="center" align="center">
+                                            	<table style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="20" border="0"><tbody><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 20px;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"> <a link-description="Team of the week" href="http://clicks.online.efl.com/email/S-84756@1976653@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/efl11112019i.png" alt="Team of the week" class="columnImage5" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="260" height="260"></a></th>
+                                                    </tr></tbody></table></th>
+                                        	<th class="templateColumnContainer" style="padding-top: 0px;width: 260px;" valign="center" align="center">
+                                            	<table style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="20" border="0"><tbody><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"><table style="text-align: center; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center; padding-bottom: 20px;"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/team22102019b.png" alt="Team of the week" class="columnImage6" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="147" height="56"></td>
+</tr></tbody></table><span class="appleLinksBlue"><span style="color:#222c53; font-size:16px; font-weight:normal; font-family:Arial,Helvetica,sans-serif; line-height:120%;">The EFL Team of the Week has been announced – it’s an all Championship line up this week as League One and League Two clubs were in FA Cup action.</span></span><table style="text-align: center; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center; padding-top: 20px;"><a href="http://clicks.online.efl.com/email/S-84756@1976654@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank" link-description="View Team"><img alt="View Team" class="buttonimg" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/team22102019c.png" width="160" height="24"></a></td>
+</tr></tbody></table></th>
+                                                    </tr></tbody></table></th>
+                                        </tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div style="max-width: 600px;" data-ed-info="Footer Text Block" data-ed-default="true">
+<table id="templateBody" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #000c8f;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="bodyContent" mc:edit="body_content" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #505050;font-family: Helvetica;font-size: 16px;line-height: 150%;padding-top: 20px;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;" valign="top"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/best23102019.png" alt="Best of Social" class="columnImage7" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="260" height="26"></td>
+                                        </tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div style="max-width: 600px;" data-ed-info="Championship" data-ed-default="true" data-custom-html="true"><table id="templateColumns" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #000c8f;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr mc:repeatable=""><th class="templateColumnContainer" style="padding-top: 0px;width: 260px;" valign="top" align="center">
+                                            	<table style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="20" border="0"><tbody><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"> <a link-description="Best of social..." href="http://clicks.online.efl.com/email/S-84756@1976655@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/efl11112019f.png" alt="Best of social..." class="columnImage3" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="260" height="168"></a></th>
+                                                    </tr><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"><span class="appleLinksWhite"><span style="color:#ffffff; font-size:16px; font-weight:normal; font-family:Arial,Helvetica,sans-serif; line-height:120%;">#RemembranceSunday #EFL</span></span>
+                                                      <table style="text-align: center; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center; padding-top: 20px;"><a link-description="See Tweet" href="http://clicks.online.efl.com/email/S-84756@1976656@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img alt="See Tweet" class="buttonimg" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/bestbutton23102019b.png" width="160" height="24"></a></td>
+</tr></tbody></table></th>
+                                                    </tr></tbody></table></th>
+                                        	<th class="templateColumnContainer" style="padding-top: 0px;width: 260px;" valign="top" align="center">
+                                            	<table style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="20" border="0"><tbody><tr><th class="rightColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"> <a link-description="Best of social..." href="http://clicks.online.efl.com/email/S-84756@1976657@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/efl11112019g.png" alt="Best of social..." class="columnImage3" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="260" height="168"></a></th>
+                                                    </tr><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"><span class="appleLinksWhite"><span style="color:#ffffff; font-size:16px; font-weight:normal; font-family:Arial,Helvetica,sans-serif; line-height:120%;">Marcus Rashford's STUNNING free-kick against Chelsea has been named Goal of the Round for Round Four! </span></span><table style="text-align: center; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center; padding-top: 20px;"><a href="http://clicks.online.efl.com/email/S-84756@1976658@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank" link-description="See Tweet"><img alt="See Tweet" class="buttonimg" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/bestbutton23102019b.png" width="160" height="24"></a></td>
+</tr></tbody></table></th>
+                                                    </tr></tbody></table></th>
+                                        </tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div style="max-width: 600px;" data-ed-info="Footer Text Block" data-ed-default="true">
+<table id="templateBody" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #ffffff;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="bodyContent" mc:edit="body_content" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #505050;font-family: Helvetica;font-size: 16px;line-height: 150%;padding-top: 20px;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;" valign="top"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/upnexttitle23102019.png" alt="Best of Social" class="columnImageUpNext" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="145" height="25"></td>
+                                        </tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div style="max-width: 600px;" data-ed-info="Footer Text Block" data-ed-default="true">
+<table id="templateColumns2" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr mc:repeatable=""><th class="templateColumnContainer2" style="padding-top:0px;" valign="top" align="center">
+                                            	<table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="leftColumnContent2"><a href="http://clicks.online.efl.com/email/S-84756@1976620@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/next23102019a.png" alt="skybet Championship" class="columnImageNext" style="max-width:200px;" mc:label="left_column_image" mc:edit="left_column_image" width="200" height="91"></a></td>
+                                                    </tr></tbody></table></th>
+                                        	<th class="templateColumnContainer2" style="padding-top:0px;" valign="top" align="center">
+                                            	<table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="centerColumnContent2"><a href="http://clicks.online.efl.com/email/S-84756@1976621@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/next23102019b.png" alt="skybet League One" class="columnImageNext" style="max-width:200px;" mc:label="left_column_image" mc:edit="left_column_image" width="200" height="91"></a></td>
+                                                    </tr></tbody></table></th>
+                                        	<th class="templateColumnContainer2" style="padding-top:0px;" valign="top" align="center">
+                                            	<table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="rightColumnContent2"><a href="http://clicks.online.efl.com/email/S-84756@1976622@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/next23102019c.png" alt="skybet League Two" class="columnImageNext" style="max-width:200px;" mc:label="left_column_image" mc:edit="left_column_image" width="200" height="91"></a></td>
+                                                    </tr></tbody></table></th>
+                                        </tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div data-ed-info="Spacer" data-ed-default="true">
+                                        <table style="text-align: left; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center;"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/spacer12092019.png" style=" width: 100%; display:block; max-width: 600px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="" alt="Sub Story" width="600"></td>
+</tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div style="max-width: 600px;" data-ed-info="Championship" data-ed-default="true">
+<table id="templateColumns" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #000c8f;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr mc:repeatable=""><th class="templateColumnContainer" style="padding-top: 0px;width: 260px;" valign="center" align="center">
+                                            	<table style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="20" border="0"><tbody><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 20px;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"> <a link-description="Referee Appointments" href="http://clicks.online.efl.com/email/S-84756@1976659@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/efl11112019h.png" alt="Referee Appointments" class="columnImageB" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="260" height="169"></a></th>
+                                                    </tr></tbody></table></th>
+                                        	<th class="templateColumnContainer" style="padding-top: 0px;width: 260px;" valign="center" align="center">
+                                            	<table style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="20" border="0"><tbody><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"><table style="text-align: center; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center; padding-bottom: 20px;padding-top: 20px;"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/referee23102019b.png" alt="Team of the week" class="columnImage13" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="200" height="46"></td>
+</tr></tbody></table><span class="appleLinksWhite"><span style="color:#ffffff; font-size:16px; font-weight:normal; font-family:Arial,Helvetica,sans-serif; line-height:120%;"> Find out who is officiating your team this week.</span></span><table style="text-align: center; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center; padding-top: 20px;"><a link-description="See Appointments" href="http://clicks.online.efl.com/email/S-84756@1976660@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img alt="See Appointments" class="buttonimg2" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/referee23102019c.png" width="230" height="22"></a></td>
+</tr></tbody></table></th>
+                                                    </tr></tbody></table></th>
+                                        </tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div data-ed-info="Spacer" data-ed-default="true">
+                                        <table style="text-align: left; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center;"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/spacer12092019.png" style=" width: 100%; display:block; max-width: 600px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="" alt="Sub Story" width="600"></td>
+</tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div style="max-width: 600px;" data-ed-info="Championship" data-ed-default="true">
+<table id="templateColumns" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #ffffff;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr mc:repeatable=""><th class="templateColumnContainer" style="padding-top: 0px;width: 260px;" valign="center" align="center">
+                                            	<table style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="20" border="0"><tbody><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 20px;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"> <a link-description="iFollow" href="http://clicks.online.efl.com/email/S-84756@1976623@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/ifollow23102019a.png" alt="iFollow" class="columnImage5" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="260" height="228"></a></th>
+                                                    </tr></tbody></table></th>
+                                        	<th class="templateColumnContainer" style="padding-top: 0px;width: 260px;" valign="center" align="center">
+                                            	<table style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="20" border="0"><tbody><tr><th class="leftColumnContent" style="color: #505050;font-family: Helvetica;font-size: 14px;line-height: 150%;padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;"><table style="text-align: center; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center; padding-bottom: 0px;"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/ifollow23102019b.png" alt="iFollow" class="columnImage9" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="173" height="65"></td>
+</tr><tr><td style="vertical-align: middle; text-align: center; padding-bottom: 0px;"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/follow29102019.png" alt="Watch your team this weekend" class="columnImage10" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="260" height="73"></td>
+</tr><tr><td style="vertical-align: middle; text-align: center; padding-bottom: 0px;"><a link-description="Buy Match Pass" href="http://clicks.online.efl.com/email/S-84756@1976624@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/ifollow23102019d.png" alt="Buy Match Pass" class="columnImage11" style="max-width: 260px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;display: inline;" mc:label="left_column_image" mc:edit="left_column_image" width="222" height="48"></a></td>
+</tr></tbody></table><table style="text-align: center; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center; padding-top: 0px;"><a link-description="ios" href="http://clicks.online.efl.com/email/S-84756@1976625@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img alt="ios" class="buttonimg1" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/ifollow23102019e.png" width="122" height="51"></a></td><td style="vertical-align: middle; text-align: center; padding-top: 0px;"><a link-description="Google Play" href="http://clicks.online.efl.com/email/S-84756@1976626@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" target="_blank"><img alt="Google Play" class="buttonimg1" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/ifollow23102019f.png" width="122" height="51"></a></td>
+</tr></tbody></table></th>
+                                                    </tr></tbody></table></th>
+                                        </tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div data-ed-info="Spacer" data-ed-default="true">
+                                        <table style="text-align: left; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center;"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/spacer12092019.png" style=" width: 100%; display:block; max-width: 600px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="" alt="Sub Story" width="600"></td>
+</tr></tbody></table></div><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div data-ed-info="Spacer" data-ed-default="true">
+                                        <table style="text-align: left; width: 100%; margin-left: auto; margin-right: auto;" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="vertical-align: middle; text-align: center;"><img src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/footer23102019a.png" style=" width: 100%; display:block; max-width: 600px;-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="" alt="Sub Story" width="600"></td>
+</tr></tbody></table></div></td>
+    </tr></tbody></table><!-- End Wrapper --></td>
+                            </tr><tr><td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" valign="top" align="center"><!-- BEGIN BODY // --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div style="max-width: 600px;" data-ed-info="Social Block" data-ed-default="true" data-custom-html="true"><table id="templateBody" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #ffffff;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="bodyContent" mc:edit="body_content" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #505050;font-family: Helvetica;font-size: 16px;line-height: 150%;padding-top: 10px;padding-right: 20px;padding-bottom: 10px;padding-left: 20px;text-align: center;" valign="top"><a href="http://clicks.online.efl.com/email/S-84756@1976627@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@"><img class="socialimg" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/efl030616facebok.jpg" alt="" width="70" height="65"></a><a href="http://clicks.online.efl.com/email/S-84756@1976628@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@"><img class="socialimg" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/efl030616twitter.jpg" alt="" width="70" height="65"></a><a href="http://clicks.online.efl.com/email/S-84756@1976629@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@"><img class="socialimg" src="https://mailerdocs.s3.amazonaws.com/football_league/email_assets/3166/instagramv22016.jpg" alt="" width="70" height="65"></a></td>
+                                        </tr></tbody></table></div><!-- // END BODY --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><div style="max-width: 600px;" data-ed-info="Footer Text Block" data-ed-default="true">
+<table id="templateBody" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color: #ffffff;border-collapse: collapse !important;" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="bodyContent" mc:edit="body_content" style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;color: #505050;font-family: Helvetica;font-size: 16px;line-height: 150%;padding-top: 20px;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;text-align: center;" valign="top"><span class="appleLinksGrey"><span style="color:#595959; font-size:12px; font-weight:normal; font-family:Arial,Helvetica,sans-serif; line-height:120%;">EFL Operations Centre<br>
+Tel: <a href="tel:01772%20325800" style="color:#595959; font-weight: normal; text-decoration: none;">01772 325800</a> Fax: <a href="tel:01772%20325801" style="color:#595959; font-weight: normal; text-decoration: none;">01772 325801</a><br><a href="mailto:enquiries@efl.com" style="color:#595959; font-weight: normal; text-decoration: none;">enquiries@efl.com</a><br><br>
+You received this email as a registered subscriber of the EFL. EFL is the brand name of The Football League Limited. Registered in England No. 80612. Registered Office: EFL House, 10-12 West Cliff, Preston, Lancashire, PR1 8HU. All rights reserved as per the website. If you do not wish to receive this kind of communication, you can <a href="http://clicks.online.efl.com/email/S-84756@1976630@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" style="color:#595959; font-weight: bold; text-decoration: underline;">update your preferences here</a>.<br><br><a href="http://clicks.online.efl.com/email/S-84756@1976631@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" style="color:#595959; font-weight: bold; text-decoration: none;">Terms of Use</a> | <a href="http://clicks.online.efl.com/email/S-84756@1976632@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@" style="color:#595959; font-weight: bold; text-decoration: none;">Privacy Policy</a> | <a href="http://clicks.online.efl.com/profile/S-84756@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@1" style="color:#595959; font-weight: bold; text-decoration: none;"> </a></span></span></td>
+                                        </tr></tbody></table></div></td>
+                            </tr><tr><td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" valign="top" align="center">
+                                </td>
+                            </tr></tbody></table><!-- // END TEMPLATE --></td>
+                </tr></tbody></table></center>
+    <a href="http://clicks.online.efl.com/profile/S-84756@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@16" class="system_detection_link" style="mso-hide:all;display:none;max-height:0px;max-width:0px;overflow:hidden;opacity:0;font-size:1px;line-height:1px;"></a><img src="http://clicks.online.efl.com/email/S-84756@@oA7AOY6A7h-8-Ap2-BAhpRnrbIqHufoFDS07-0WD21c.@1yu9A.jpg" alt="open" height="1" width="1"></body></html>
+
