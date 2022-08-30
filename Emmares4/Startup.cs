@@ -112,37 +112,20 @@ namespace Emmares4
 
             options.DefaultFileNames.Clear();
 
-            options.DefaultFileNames.Add("searchpage.html");
-            
-
+            options.DefaultFileNames.Add("searchpage.html");          
             app.UseDefaultFiles(options);
-
             app.UseStaticFiles();
-
-            app.UseStaticFiles(new StaticFileOptions()
-            {
-                FileProvider = new PhysicalFileProvider(
-                Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
-                RequestPath = new PathString("/lib")
-            });
-
-            app.UseAuthentication();
-            
+            app.UseAuthentication();            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-
                     name: "default",
-
                     template: "{controller=SearchaAPI}/{action=get_search}/{q?}");
-
-
             });
 
       
 
             Paths.ContentRootDir = env.ContentRootPath;
-
             Log.Write("Configuring static files.");         
 
         }
